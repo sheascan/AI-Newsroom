@@ -1,0 +1,12 @@
+__pycache__/
+*.mp3
+*.wav
+*.eml
+*.html
+*.json
+data/inputs/*
+data/outputs/*
+data/cache/*
+music/*
+.env
+.DS_Store
