@@ -1,0 +1,1329 @@
+Delivered-To: mike.mcconigley@gmail.com
+Received: by 2002:a05:6802:62c5:b0:605:93f6:5e02 with SMTP id v5csp4900398ocb;
+        Thu, 27 Nov 2025 22:47:42 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IF+nBs/q29TAsP4F0nTAsDCyeh3qjNaYTnB8TktXhEMOwvU6BaCv67+EyAKEf/bOC95ogTY
+X-Received: by 2002:a05:6214:ac3:b0:880:4ed1:cdfe with SMTP id 6a1803df08f44-8863ae88625mr183226576d6.1.1764312462632;
+        Thu, 27 Nov 2025 22:47:42 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1764312462; cv=none;
+        d=google.com; s=arc-20240605;
+        b=RlC5f+XPCWaO4sf44WLy9/6r3EUgtLZ+6Zm/FVpzhaIVa1YUKPWQZIwo1rcb3Ccxc3
+         csydNbz+RZKA7xSxzPqFf4pZR9X+zZElsAjRYYFqeX+0J7SOTuUIv+H/NWoEbI/Qkviy
+         JBGQNp6aQXOorTsRIMxHMd4lPf2qQSz+m5UgTj25JssPQ8jDnzkv4YukGcpdQXnwZ6gG
+         W0ic2YIPfP7cizdvXq4L7bTNS/6nQxficajjhqtityhANS74s60AoAkNBCR8005TzOa+
+         KXrvIeqoDi5z/bdtpg/unrS/kQEXUcoku6dxCsDC7KM6JcBSXiTZq0lqlMPsu0CnUroS
+         U+Mw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:reply-to:mime-version:list-unsubscribe-post
+         :list-unsubscribe:date:subject:to:from:dkim-signature:dkim-signature;
+        bh=jxI6+P48Jijho0itHZiI7OcDfkedLx/VMZ4t3dP9YSU=;
+        fh=OgalRLyjq6yRRK8BKyyAvoDuu7pM3lW8d1S3i94XxnI=;
+        b=i7jNMXHqr0EnTw+lUdIC4Eb/+WEbj/sBIVAfpoU4FNo1yTRfFzmuCaXSzmWirRA9sd
+         WicvCd4F0RpTtFmDQ0xdxmQsA2pZmvf1nsqwdEb9qV/q/foZMeeM2ZFWnlw6rMNT5qyA
+         33XRQhkxUa49Y5oPcMO9Bkr38oPpI3CvJrRTmDWGXuPhdttWTP7i/B5zSuRfhIxMESz7
+         p4216BPZkDSW22bV772PrHZo0xmVbikTlh1jc4TfujymMEbsopJ4p5EJNyFnSGPOY4Pi
+         VsvWI9501Vs4etKLiyb0lrKLeFAckWInXOAhoP0sJIdiveJQSUHtYPzuqVYeKIYtKo1J
+         9j1Q==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@comms.irishtimes.com header.s=51dkim1 header.b=J80sTtZg;
+       dkim=pass header.i=@s51.y.mc.salesforce.com header.s=fbldkim51 header.b=49bccRoS;
+       spf=pass (google.com: domain of bounce-507_html-2707071-85109-536007291-18003@bounce.comms.irishtimes.com designates 159.92.163.149 as permitted sender) smtp.mailfrom=bounce-507_HTML-2707071-85109-536007291-18003@bounce.comms.irishtimes.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=comms.irishtimes.com
+Return-Path: <bounce-507_HTML-2707071-85109-536007291-18003@bounce.comms.irishtimes.com>
+Received: from mta.comms.irishexaminer.com (mta.comms.irishexaminer.com. [159.92.163.149])
+        by mx.google.com with ESMTPS id 6a1803df08f44-886524aeb4asi13956846d6.149.2025.11.27.22.47.42
+        for <mike.mcconigley@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 27 Nov 2025 22:47:42 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce-507_html-2707071-85109-536007291-18003@bounce.comms.irishtimes.com designates 159.92.163.149 as permitted sender) client-ip=159.92.163.149;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@comms.irishtimes.com header.s=51dkim1 header.b=J80sTtZg;
+       dkim=pass header.i=@s51.y.mc.salesforce.com header.s=fbldkim51 header.b=49bccRoS;
+       spf=pass (google.com: domain of bounce-507_html-2707071-85109-536007291-18003@bounce.comms.irishtimes.com designates 159.92.163.149 as permitted sender) smtp.mailfrom=bounce-507_HTML-2707071-85109-536007291-18003@bounce.comms.irishtimes.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=comms.irishtimes.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=51dkim1; d=comms.irishtimes.com;
+ h=From:To:Subject:Date:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:
+ Reply-To:Message-ID:Content-Type;
+ i=irishtimesmorningbriefing@comms.irishtimes.com;
+ bh=jxI6+P48Jijho0itHZiI7OcDfkedLx/VMZ4t3dP9YSU=;
+ b=J80sTtZg266z8XAQvBDW4qWnfKBCXQB53yLOKhY058fqedpC0ol6xOnMCcfdWww/V0R0QK2ow222
+   V8WmlYg90nPgLmhj9DnxHnE+D/lQEYn3j8zFM+nmSV5uzmP5VAR51e1oJfZQoYGOSmg9qOsxRyHP
+   KTErKHU+ApHiHVG8AMxrU9USIHvrDfOSZpJHPCFbnFTQCX/QZCEbmPZlzdd6K4YeimOt/3eCxXMs
+   7bTZS15PbxvZlzarBufDOMj0wYLd0zuzjsY0mHL8/dCQP29ZemIQAx4/gT7FxCpB8WHrqHHclylL
+   agg3E0TxWs61+CEo98nemYJNIWmDILPE26XdCg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=fbldkim51; d=s51.y.mc.salesforce.com;
+ h=From:To:Subject:Date:List-Unsubscribe:MIME-Version:Reply-To:Message-ID:
+ Content-Type;
+ bh=jxI6+P48Jijho0itHZiI7OcDfkedLx/VMZ4t3dP9YSU=;
+ b=49bccRoS4exTuz00sh9t7N8R3+NXeNsMJtqUZ7/w2e/LzBpsgh4lDqBiDwrJplfr5XE5MzbtugAR
+   4Xkm1xz4Np8bZhwMrASiX1UgxVh3ubVCwjEeOawS5B8U5BOaIJwondgtLNXZ2XdGBqpG8RI8Ral0
+   znAh7181pFuUTpj0KWRjVCRJ9Ks1e8cUP0BOextPtwsnBtty4y26cPCj0o6ageUZRcza0hg5LxXH
+   NBzOcSapKUwJgQTOIuurYRjkfgPpJvKIT2FdZvn7p2PJaZtbsznedWN85P5Hfgb94/uUlzJRPGnl
+   L3NkhZy7HXTMNoLZOgcuaCZor5xuR9kEZ5nOWQ==
+Received: by mta.comms.irishexaminer.com id h552os2fmd45 for <mike.mcconigley@gmail.com>; Fri, 28 Nov 2025 06:46:11 +0000 (envelope-from <bounce-507_HTML-2707071-85109-536007291-18003@bounce.comms.irishtimes.com>)
+From: "Irish Times Morning Briefing" <irishtimesmorningbriefing@comms.irishtimes.com>
+To: <mike.mcconigley@gmail.com>
+Subject: Dublin City Council will not remove Tricolours erected by anti-immigration groups
+Date: Fri, 28 Nov 2025 00:46:10 -0600
+List-Unsubscribe: <http://click.comms.irishtimes.com/subscription_center.aspx?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtaWQiOiI1MzYwMDcyOTEiLCJzIjoiMjcwNzA3MSIsImxpZCI6IjUwNyIsImoiOiI4NTEwOSIsImpiIjoiMTgwMDMiLCJkIjoiNTEwMDAzIn0.ZbQaihE_hP6RjYi54is-aq12ieWTxWK9lCzaCFTiXiw>, <mailto:leave-fd4f1170720b5c392848-fe9716777563047a74-fef81c7574640d-fe2e11737364047a771d71-ff031578756407@leave.comms.irishtimes.com>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+MIME-Version: 1.0
+Reply-To: "The Irish Times" <reply-fef81c7574640d-507_HTML-2707071-536007291-18003@comms.irishtimes.com>
+X-SFMC-Stack: 51
+x-job: 536007291_85109
+Message-ID: <d350076a-1363-44c8-b78d-4a3cfa336d9f@cdg3s51mta255.xt.local>
+Feedback-ID: 536007291:85109:159.92.163.149:sfmktgcld
+Content-Type: multipart/alternative;
+	boundary="nC8mhM5lumnq=_?:"
+
+This is a multi-part message in MIME format.
+
+--nC8mhM5lumnq=_?:
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+
+ 
+/* General Wrapper */
+    .wrapper {
+ 
+background-color: #121212; /* Dark Background Color */
+ 
+color: #FFFFFF; /* White Text Color */
+ 
+text-align: center;
+ 
+padding: 20px 10px;
+ 
+width: 670px; /* Set width to 630px */
+ 
+height: 157px; /* Set height to 150px */
+ 
+margin: 0 auto; /* Center the wrapper */
+    }
+
+    /* The Irish Times Header */
+    .header-title {
+ 
+font-family: 'Times New Roman', Times, serif;
+ 
+font-weight: bold;
+ 
+text-transform: uppercase;
+ 
+font-size: 25px; /* Bold and Larger Font Size */
+ 
+color: #FFFFFF;
+ 
+margin: 0;
+ 
+padding: 10px 10px 0;
+    }
+
+    /* Date Section */
+    .date {
+ 
+font-family: Lato, Helvetica, Arial, sans-serif;
+ 
+font-size: 14px;
+ 
+color: #FFFFFF; /* Regular Font Color */
+ 
+margin: 5px 0;
+    }
+
+    /* Morning Briefing Title */
+    .morning-title {
+ 
+margin: 0;
+ 
+font-family: Lato, Helvetica, Arial, sans-serif;
+ 
+font-weight: 700; /* Bold Weight for "Morning" */
+ 
+color: #FFFFFF;
+ 
+font-size: 64px; /* Larger Font for Visibility */
+ 
+line-height: 75px; /* Line Height for Spacing */
+    }
+
+    /* Lighter Weight for "Briefing" */
+    .morning-title span {
+ 
+font-weight: 300; /* Lighter Weight for Visual Contrast */
+    }
+
+    /* Subtitle */
+    .subtitle {
+ 
+font-family: Lato, Helvetica, Arial, sans-serif;
+ 
+font-size: 14px;
+ 
+color: #FFFFFF;
+ 
+margin-top: 10px;
+ 
+padding-bottom: 5px;
+    }
+ 
+  THE IRISH TIMES
+   Fri, 28 November, 2025
+
+  Morning Briefing
+  Start your day with our top stories
+ 
+Styled RSS Feed
+
+    body {
+ 
+margin: 0; /* Remove all margins */
+ 
+padding: 0; /* Remove padding */
+ 
+background: #dddddd;
+ 
+font-family: sans-serif;
+ 
+font-size: 15px;
+ 
+line-height: 20px;
+ 
+color: #555555;
+    }
+
+    .feed-container {
+ 
+margin: 0; /* Remove margin */
+ 
+padding: 0; /* Remove padding */
+ 
+background: #ffffff;
+    }
+
+    .feed-item img {
+ 
+width: 100%; /* Make image span the full width */
+ 
+height: auto; /* Maintain aspect ratio */
+ 
+display: block; /* Eliminate gaps under the image */
+    }
+
+    .feed-item h3, /* @cat */
+    .feed-item h2, /* @title */
+    .feed-item h2 a, /* Link inside title */
+    .feed-item p { /* @description */
+ 
+text-align: left; /* Align all text to the left */
+ 
+margin: 0; /* Completely remove all margins */
+ 
+padding: 0; /* Remove padding */
+    }
+
+    .feed-item h3 {
+ 
+text-transform: uppercase;
+ 
+font-family: Lato, Helvetica, Arial, sans-serif;
+ 
+font-weight: 600; /* Bold for category */
+ 
+font-size: 16px; /* Adjust font size */
+ 
+color: #333333;
+    }
+
+    .feed-item h2 a {
+ 
+text-decoration: none; /* Remove underline from the title link */
+ 
+font-family: Lato, Helvetica, Arial, sans-serif;
+ 
+font-weight: 700; /* Bold for title */
+ 
+font-size: 18px; /* Slightly larger font size for visibility */
+ 
+color: #000000; /* Black text color for the title */
+    }
+
+    .feed-item p {
+ 
+font-size: 14px; /* Standard font size for the description */
+ 
+color: #555555; /* Gray text for description */
+ 
+line-height: 20px; /* Increase line height for readability */
+    }
+ 
+
+ 
+
+ 
+http://click.comms.irishtimes.com/?qs=5e9b1cd002850be304b108b7d85ab3e7a4f0e00ddf92aff582a15cc8994016eb19b02aa11bdef825a615cefe47a37e3196b830f5cb34c4a9fc022b114420ef4b
+ 
+IrelandDublin City Council will not remove Tricolours erected by anti-immigration groups 
+http://click.comms.irishtimes.com/?qs=5e9b1cd002850be304b108b7d85ab3e7a4f0e00ddf92aff582a15cc8994016eb19b02aa11bdef825a615cefe47a37e3196b830f5cb34c4a9fc022b114420ef4b
+ 
+Erection of flags echoes similar campaign by far-right in UK that critics say is designed to intimidate immigrants
+ 
+ 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+http://click.comms.irishtimes.com/?qs=5e9b1cd002850be3d633f32d0e3df18d7c16fed991c1a4391f0eff20ad6c6d84c98591bdef4cc26774e368677dca50d8b11acad70482ccfad332cd1344401df0
+ 
+TV & Radio
+ 
+‘Christ, I’m angry’: Ciara Doherty’s striking interview with Andrew McGinley
+ 
+http://click.comms.irishtimes.com/?qs=5e9b1cd002850be3d633f32d0e3df18d7c16fed991c1a4391f0eff20ad6c6d84c98591bdef4cc26774e368677dca50d8b11acad70482ccfad332cd1344401df0
+ 
+
+ 
+Connect with The Irish Times
+ 
+http://click.comms.irishtimes.com/?qs=5e9b1cd002850be37e799445618b33f4ea75fc301896cadf751d7fe182bbc732cd869fa028728f818d06fdb4510c83ba5773ad245251d7afba23c5a242a4f0d3
+ 
+http://click.comms.irishtimes.com/?qs=5e9b1cd002850be3f0cb05d545b8d58fbbf030f8ec5c341d62dc51e7587c27480ebbd7efae2801cf030fa2888b5f1100136c1d940d3bc6d8d9bda6b8d1e7c850
+ 
+ 
+Styled RSS Feed
+
+    body {
+ 
+margin: 0; /* Remove all margins */
+ 
+padding: 0; /* Remove padding */
+ 
+background: #dddddd;
+ 
+font-family: sans-serif;
+ 
+font-size: 15px;
+ 
+line-height: 20px;
+ 
+color: #555555;
+    }
+
+    .feed-container {
+ 
+margin: 0; /* Remove margin */
+ 
+padding: 0; /* Remove padding */
+ 
+background: #ffffff;
+    }
+
+    .feed-item img {
+ 
+width: 100%; /* Make image span the full width */
+ 
+height: auto; /* Maintain aspect ratio */
+ 
+display: block; /* Eliminate gaps under the image */
+    }
+
+    .feed-item h3, /* @cat */
+    .feed-item h2, /* @title */
+    .feed-item h2 a, /* Link inside title */
+    .feed-item p { /* @description */
+ 
+text-align: left; /* Align all text to the left */
+ 
+margin: 0; /* Completely remove all margins */
+ 
+padding: 0; /* Remove padding */
+    }
+
+    .feed-item h3 {
+ 
+text-transform: uppercase;
+ 
+font-family: Lato, Helvetica, Arial, sans-serif;
+ 
+font-weight: 600; /* Bold for category */
+ 
+font-size: 16px; /* Adjust font size */
+ 
+color: #333333;
+    }
+
+    .feed-item h2 a {
+ 
+text-decoration: none; /* Remove underline from the title link */
+ 
+font-family: Lato, Helvetica, Arial, sans-serif;
+ 
+font-weight: 700; /* Bold for title */
+ 
+font-size: 18px; /* Slightly larger font size for visibility */
+ 
+color: #000000; /* Black text color for the title */
+    }
+
+    .feed-item p {
+ 
+font-size: 14px; /* Standard font size for the description */
+ 
+color: #555555; /* Gray text for description */
+ 
+line-height: 20px; /* Increase line height for readability */
+    }
+ 
+
+ 
+
+ 
+http://click.comms.irishtimes.com/?qs=5e9b1cd002850be3c6164b4b6c04abbcc00bc3db49eab1e826c0089db9ebdcc487da517f740d01cbe8f6ec5be7a3865b3de18a1366ebeac4e1af9585fa860ec1
+ 
+Housing & PlanningWomen forced to stay with abusers because they have nowhere else to go, report finds
+http://click.comms.irishtimes.com/?qs=5e9b1cd002850be3c6164b4b6c04abbcc00bc3db49eab1e826c0089db9ebdcc487da517f740d01cbe8f6ec5be7a3865b3de18a1366ebeac4e1af9585fa860ec1
+ 
+Housing insecurity makes women and children ‘more vulnerable to domestic abuse’, says National Women’s Council
+ 
+ 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+http://click.comms.irishtimes.com/?qs=5e9b1cd002850be3310867062111434a0cfa2216b2a2df6710e17443b5ec75e4daede9b52398ef002a047298d684b9fce43cf9c9c40f1bebde212144b1bcb895
+ 
+Athletics
+ 
+Running groups concerned at outcome of ballot for places in next year’s Dublin Marathon
+ 
+http://click.comms.irishtimes.com/?qs=5e9b1cd002850be3310867062111434a0cfa2216b2a2df6710e17443b5ec75e4daede9b52398ef002a047298d684b9fce43cf9c9c40f1bebde212144b1bcb895
+ 
+
+ 
+
+ 
+
+ 
+http://click.comms.irishtimes.com/?qs=5e9b1cd002850be38b3137b799f118c8a376462ad70374c18a0a0e2ae2abd2dbfef23d5bc929dc221526e4d5af063913d323ba419dc0b6f3f1718066c74ba61c
+ 
+Sponsored
+ 
+Children caught in conflict: Trócaire sounds the alarm this Christmas
+ 
+http://click.comms.irishtimes.com/?qs=5e9b1cd002850be38b3137b799f118c8a376462ad70374c18a0a0e2ae2abd2dbfef23d5bc929dc221526e4d5af063913d323ba419dc0b6f3f1718066c74ba61c
+ 
+
+ 
+MOST READ
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+5.
+ 
+‘You have a traffic problem,’ Hans Zimmer tells Dublin before a mesmerising evening with the movie maestro
+http://click.comms.irishtimes.com/?qs=5e9b1cd002850be3bce01b14a0bea7c510aab94f14aa6f6c02676782e3433301ff62301ac9267735d654b21e793d244932b314de939fb3fb5ff741c691196d73
+ 
+
+ 
+
+ 
+Do you have questions about becoming an Irish Times subscriber,
+
+    or about your subscription?
+ 
+You'll find handy guides in our FAQs
+http://click.comms.irishtimes.com/?qs=5e9b1cd002850be3d6787c75e3cc0baa4285634edb0ae6d3d88d60ddb9711bec9007f3a2c08bf743569c305fb374d5ee7842ec860bf262be545b0b39271adf8f
+, and you can manage
+
+    many aspects of your subscription in the My Account
+http://click.comms.irishtimes.com/?qs=5e9b1cd002850be3c0c77580fcf549e927b86241cd6b3b99b57d621b34a4f47bfffd89d698da916263f00c31ab53cfab2ad2e3bfbda2ddf6192d0ff364f16802
+ section.
+ 
+Never miss a News
+http://click.comms.irishtimes.com/?qs=5e9b1cd002850be355e2b6a6f6c74f4f1df680c9f7891bcedc62af4b80f50e19818895196db4598462c11ff1844335920fe37409d342eca05bae9b635727f760
+ story
+
+  Subscribe now for just €1 for your first month
+SUBSCRIBE 
+http://click.comms.irishtimes.com/?qs=5e9b1cd002850be35de6e1c3167d13848f78ba4146d5de08c79aaf28131dc2b9f41ca9719dc8f070878e1af2702b737ddf99f5a2981321f3930d1648082f9e73
+ 
+ 
+body {
+ 
+margin: 0;
+ 
+padding: 0;
+ 
+font-family: Arial, Helvetica, sans-serif;
+ 
+background-color: #ffffff;
+ 
+}
+ 
+.social-media-container {
+ 
+background-color: #2D3137; /* Dark background */
+ 
+padding: 10px 0;
+ 
+text-align: center;
+ 
+}
+ 
+.social-media-icons {
+ 
+display: inline-block;
+ 
+text-align: center;
+ 
+}
+ 
+.social-media-icons a {
+ 
+display: inline-block;
+ 
+margin: 0 10px;
+ 
+background-color: #5f6368;
+ 
+border-radius: 50%;
+ 
+width: 33px;
+ 
+height: 33px;
+ 
+text-align: center;
+ 
+line-height: 33px;
+ 
+font-size: 16px;
+ 
+text-decoration: none;
+ 
+}
+ 
+.social-media-icons img {
+ 
+width: 33px;
+ 
+height: 33px;
+ 
+display: block;
+ 
+border: 0;
+ 
+}
+ 
+@media screen and (max-width: 600px) {
+ 
+.social-media-icons a {
+ 
+margin: 0 5px;
+ 
+}
+ 
+}
+ 
+http://click.comms.irishtimes.com/?qs=5e9b1cd002850be37e799445618b33f4ea75fc301896cadf751d7fe182bbc732cd869fa028728f818d06fdb4510c83ba5773ad245251d7afba23c5a242a4f0d3
+ 
+http://click.comms.irishtimes.com/?qs=5e9b1cd002850be3fecc27bf6d2d62ae474082292986f5ef6fbecd2b3917822829659bba91022afd9a4fa62b0f38eb88077ef4e7e5d0c5fc9f0a71974aff9dcc
+ 
+http://click.comms.irishtimes.com/?qs=5e9b1cd002850be347aee4d5d4bf8c64c9e544c303c45cce948a3379b3c32fd848832916fd2b628f8ae49eac93fcd8211ec2ff256df893df951c8e73f1bc98d0
+ 
+
+ 
+Registration number
+
+ 2514
+ Registered in Ireland as
+
+ The Irish Times DAC
+ Registered office
+
+ 24-28 Tara Street, Dublin 2
+
+  You have received this email because you opted in for Morning Briefing, delivered by The Irish Times. If you do not wish to receive any more, you can unsubscribe.
+
+  24-28 Tara Street, Dublin 2, D02 CX89, Ireland
+ 
+ 
+
+--nC8mhM5lumnq=_?:
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE HTML>
+<html lang="en" dir="ltr" xmlns:o="urn:schemas-microsoft-com:office:office">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if mso]> <noscript> <xml> <o:OfficeDocumentSettings> <o:PixelsPerInch>96</o:PixelsPerInch> </o:OfficeDocumentSettings> </xml> </noscript> <![endif]-->
+    <!--[if mso]> <style>*{font-family:Arial,Helvetica,sans-serif !important;font-weight:bold;} </style> <![endif]-->
+    <style>
+      @font-face {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 300;
+        src: local('Lato Light'), local('Lato-Light'), url("https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh7USSwiPGQ3q5d0.woff2") format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Lato Regular'), local('Lato-Regular'), url("https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wXiWtFCc.woff2") format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 700;
+        src: local('Lato Bold'), local('Lato-Bold'), url("https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2") format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+    </style>
+    <style>
+      html,
+      body {
+        margin: 0 auto !important;
+        padding: 0 !important;
+        height: 100% !important;
+        width: 100% !important;
+      }
+      * {
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+      div[style*="margin:16px 0"] {
+        margin: 0 !important;
+      }
+      table,
+      td {
+        mso-table-lspace: 0pt !important;
+        mso-table-rspace: 0pt !important;
+      }
+      table {
+        border-spacing: 0 !important;
+        border-collapse: collapse !important;
+        table-layout: fixed !important;
+        margin: 0 auto !important;
+      }
+      table table table {
+        table-layout: auto;
+      }
+      img {
+        -ms-interpolation-mode: bicubic;
+      }
+      .description p a {
+        color: #9B0D70 !important;
+      }
+      p a {
+        color: #9B0D70 !important;
+      }
+      .editorsNote p a {
+        color: #9B0D70 !important;
+        text-decoration: none;
+      }
+      p,
+      .description p {
+        margin: 0 !important;
+      }
+      .mobileView {
+        display: none;
+      }
+      *[x-apple-data-detectors],  /* iOS */
+      .x-gmail-data-detectors,    /* Gmail */
+      .x-gmail-data-detectors *,
+      .aBn {
+        border-bottom: 0 !important;
+        cursor: default !important;
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+      /* What it does: Prevents Gmail from displaying an download button on large, non-linked images. */
+      .a6S {
+        display: none !important;
+        opacity: 0.01 !important;
+      }
+      /* If the above doesn't work, add a .g-img class to any image in question. */
+      img.g-img + div {
+        display: none !important;
+      }
+      @media only screen and (min-device-width:375px) and (max-device-width:413px) {
+        .email-container {
+          min-width: 375px !important;
+        }
+      }
+    </style>
+    <style>
+      /*Colors*/
+      .partials {
+        background-color: #F96B0E!important;
+      }
+      .business {
+        background-color: #2693B2!important;
+      }
+      .news {
+        background-color: #CD0C0A!important;
+      }
+      .opinion {
+        background-color: #7B7957!important;
+      }
+      .culture {
+        background-color: #B95581!important;
+      }
+      .sport {
+        background-color: #43A64D!important;
+      }
+      .more {
+        background-color: #43A64D!important;
+      }
+      @media screen and (max-width:620px) {
+        .mobile-side-padding-10{
+          padding-left:10px !important;
+          padding-right:10px !important;
+        }
+        .mobile-side-padding-15{
+          padding-left:15px !important;
+          padding-right:15px !important;
+        }
+        .mobile-side-padding-20{
+          padding-left:20px !important;
+          padding-right:20px !important;
+        }
+        .mobile-side-padding-25{
+          padding-left:25px !important;
+          padding-right:25px !important;
+        }
+        .mobile-side-padding-35{
+          padding-left:30px !important;
+          padding-right:30px !important;
+        }
+        .mobileView .title strong{
+          display:block;
+          padding:8px 0;
+        }
+        .desktopView {
+          display: none !important;
+          overflow: hidden;
+        }
+        .mobileView {
+          display: block !important;
+        }
+        .mobileBackground {
+          width: 100%!important;
+          height: 205px!important;
+          background-size: cover;
+        }
+        .email-container {
+          width: 100% !important;
+        }
+        .fluid {
+          width: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        .adjustTitleLineHeight{
+          line-height:35px !important;
+        }
+        .mobileHeaderFooter {
+          line-height:35px !important;
+          width: 100% !important;
+          height: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        .masthead {
+          background-color: #ffffff;
+          background-repeat: no-repeat;
+          width: 100% !important;
+          text-align: center;
+          font-size: 20px;
+        }
+        .FAQmobileText {
+          text-align: left !important;
+          width: 90% !important;
+        }
+        .stack-column-center {
+          display: block !important;
+          width: 100% !important;
+          max-width: 100% !important;
+          direction: ltr !important;
+          box-sizing: border-box;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+        .stack-column-center {
+          text-align: center !important;
+        }
+        .center-on-narrow {
+          text-align: center !important;
+          display: block !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+          float: none !important;
+        }
+        table.center-on-narrow {
+          display: inline-block !important;
+        }
+      }
+      @media screen and (min-width:320px) and (max-width:375px) {
+        .desktopView {
+          display: none !important;
+          overflow: hidden;
+        }
+        .mobileView {
+          display: block !important;
+        }
+        .mobileBackground {
+          width: 100%!important;
+          height: 170px!important;
+          background-size: cover!important;
+        }
+        .adjustTitleLineHeight{
+          line-height:45px !important;
+        }
+        .mobileHeaderFooter {
+          line-height:45px !important;
+          width: 100% !important;
+          height: 100% !important;
+          max-width: 100% !important;
+          font-size: 18px !important;
+          height: auto !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        .adjustTitleLineHeight{
+          line-height:25px !important;
+        }
+        .title,
+        .description {
+          background: #ffffff !important;
+          color: #000000 !important;
+        }
+      }
+      @media screen and (min-width:375px) and (max-width:480px) and (-webkit-min-device-pixel-ratio:2){
+        .desktopView {
+          display: none !important;
+          overflow: hidden;
+        }
+        .mobileView {
+          display: block !important;
+        }
+        .mobileBackground {
+          width: 100%!important;
+          height: 205px!important;
+          background-size: cover!important;
+        }
+        .adjustTitleLineHeight{
+          line-height:35px !important;
+        }
+        .mobileHeaderFooter {
+          line-height:35px !important;
+          width: 100% !important;
+          height: 100% !important;
+          max-width: 100% !important;
+          font-size: 20px !important;
+          height: auto !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        .title,
+        .description {
+          background: #ffffff !important;
+          color: #000000 !important;
+        }
+      }
+    </style>
+    <!--[if gte mso 9]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml> <![endif]-->
+    <!--[if mso]> <style>td,td strong,table,div,p,p a,td a{font-family:Arial,serif !important;}}td.masthead{font-family:'Times New Roman',Times,serif !important;} </style> <![endif]-->
+    <!-- -->
+
+<!-- --><!-- -->
+
+<!-- Mobile Responsiveness -->
+<style type="text/css">
+  @media only screen and (max-width: 600px) {
+    table {
+      width: 100% !important;
+    }
+    .image-section {
+      height: 120px !important; /* Smaller height for mobile */
+    }
+    span {
+      font-size: 20px !important;
+      line-height: 28px !important;
+    }
+    p {
+      font-size: 12px !important;
+    }
+       .responsive-td{
+         width:100% !important;
+         display:block !important;
+      box-sizing:border-box !important;
+      text-align:left !important;
+    }
+    
+    
+    .responsive-td img.feed-image{
+      display:block !important; margin:0 auto !important;
+      min-width:100%!important;
+      width:100% !important;
+      max-width:600px !important;
+      margin:0 auto !important;
+    }
+    .responsive-td.mobile-padding-top-5{
+      padding-top:5px !important;
+    }
+    td.fluid-td{
+      display:block !important;
+    }
+    
+      .responsive-td.mobile-padding-bottom-0{padding-bottom:0 !important}
+      .responsive-td.mobile-padding-top-0{padding-top:0 !important}
+  }
+
+
+</style><!----><!-- -->
+    
+  </head>  
+  <body bgcolor="#f1f1f1" style="background:##f4f4f4;"><style type="text/css">
+div.preheader 
+{ display: none !important; } 
+</style>
+<div class="preheader" style="font-size: 1px; display: none !important;">Erection of flags echoes similar campaign by far-right in UK that critics say is designed to intimidate immigrants</div>
+    <center style="width:100%;background:#f4f4f4;min-width:100%;margin:0;padding:0;mso-line-height-rule:exactly;">
+      <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+
+<!-- View Email Link (Positioned above the Image) -->
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 630px; margin: 0 auto;">
+  <tr>
+    <td align="center" style="font-family: 'Lato', Helvetica, Arial, sans-serif; text-align: center; padding: 10px 0;">
+      <a href="http://view.comms.irishtimes.com/?qs=cb9065de1751d2b67fe788759e5c7948883a628900bbe2cd672f320f96137828ed007ff8fe433116cd1d32f944475ab8364417fe2c664326b17312ac6a6ebc695f7a111e406e935f083b53d4313b43b2" style="font-size: 14px; color: #000001; text-decoration: none; padding: 10px;">View this email in your browser</a>
+    </td>
+  </tr>
+</table>
+
+<!-- Background Section -->
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="630" style="width:100%; max-width: 630px; margin: 0 auto; ; height: 150px; text-align: center; background-color: #121212; padding: 20px 10px;">
+  <tr>
+    <td align="center" style="padding: 20px 0;"> <!-- Further reduced top and bottom padding -->
+      <!-- "THE IRISH TIMES" Header -->
+      <div style="padding: 5px; font-family: 'Times New Roman', Times, serif; font-weight: bold; text-transform: uppercase; font-size: 25px; text-align: center; color: #fff;">
+        THE IRISH TIMES
+      </div>
+      <!-- Date -->
+      <p style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; margin: 0; color: white;">
+        Friday, 28 November, 2025
+      </p>
+      <!-- "Morning Briefing" Subheading -->
+      <div>
+        <span style="font-family:'Lato', Helvetica, Arial, sans-serif; font-weight:700; color:#ffffff; font-size:48px; padding-left:10px; padding-right:0px; text-align:center; mso-line-height-rule:exactly; line-height:48px;">
+          Morning
+        </span>
+        <span style="font-family:'Lato', Helvetica, Arial, sans-serif!important; font-weight:300; color:#ffffff; font-size:48px; padding-left:0px; padding-right:10px; text-align:center; mso-line-height-rule:exactly; line-height:48px;">
+          Briefing<br>
+        </span>
+        <span style="font-family:'Lato', Helvetica, Arial, sans-serif; font-size:14px; color:#ffffff; text-align:center; mso-line-height-rule:exactly; line-height:20px; padding-top: 20px; ">
+        Start your day with our top stories
+        </span>
+      </div>
+    </td>
+  </tr>
+</table>
+
+</td></tr></table>
+       
+      <!-- -->
+
+<!--     --><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table align="center" bgcolor="#ffffff" cellpadding="0" cellspacing="0" role="presentation" style="background:#ffffff;width:100%;max-width:630px;border-top:1px solid #ccc; border-bottom: 1px solid #ccc;" width="630">
+ 
+  <tr>
+   <td style="padding:0">
+    <!-- Wrapper table for responsive max-width --><table bgcolor="#ffffff" cellpadding="0" cellspacing="0" role="presentation" style="max-width: 630px; width: 100%; margin: 0 auto;" width="630">
+     
+      <tr>
+       <td align="center">
+        <!-- Image with responsive width --> <a href="https://www.irishtimes.com/ireland/2025/11/28/dublin-city-council-will-not-remove-tricolours-erected-by-anti-immigration-groups/" alias="morning briefing" style="max-width: 630px; width:100%;display: block; text-decoration: none;"><img alt="" src="https://www.irishtimes.com/resizer/v2/NKKEJGBXARCF5HRJ3TV2ZAJHXQ.JPG?auth=fe169d50c48cf26444ab9d99e7f284939f02f7e1819a2f429177ec33d09bea30&smart=true&width=630&height=350" style="max-width: 630px; width:100%;display: block; padding: 0px; text-align: center; border: 0px solid transparent; height: auto;  margin-bottom: 10px;" width="630"></a></td></tr><tr>
+       <td style="padding:5px 10px ; background:#ffffff">
+        <h3 style="text-transform: uppercase; font-family: Lato, Helvetica, Arial, sans-serif; font-weight: 700; font-size: 12px; color: #333333; margin: 0 0 5px; padding: 0;">
+         Ireland</h3></td></tr><tr>
+       <td style="padding:5px 10px; background:#ffffff">
+        <h2 style="margin: 0; padding: 0; font-family: Lato, Helvetica, Arial, sans-serif; font-weight: 700; font-size: 18px; color: #333333;">
+         <a alias="feed-item" href="https://www.irishtimes.com/ireland/2025/11/28/dublin-city-council-will-not-remove-tricolours-erected-by-anti-immigration-groups/" style="text-decoration: none; color: #333333;">Dublin City Council will not remove Tricolours erected by anti-immigration groups </a></h2></td></tr><tr>
+       <td style="padding:5px 10px ; background:#ffffff">
+        <p style="font-family: Lato, Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 1.5; color: #333333; margin-top: 10px; margin-bottom: 15px; padding: 0;">
+         Erection of flags echoes similar campaign by far-right in UK that critics say is designed to intimidate immigrants</p></td></tr></table></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- -->
+
+
+<!-- -->
+    <!---->   
+
+    <!-- Responsive table for displaying RSS content -->
+    <table border="0" cellspacing="0" cellpadding="0" class="item-feed" width="630" align="center" style="width: 100%; max-width:630px;border-collapse: collapse; margin: 0 auto; padding: 0; background: #ffffff; font-family: Arial, sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+        <tr>
+            <td>
+
+        <!-- -->   
+        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table align="center" bgcolor="#ffffff" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 auto;background:#ffffff;width:97%;max-width:600px;border-bottom:1px solid #ccc;" width="600">
+ 
+  <tr>
+   <!-- Image cell --><td class="responsive-td  mobile-padding-bottom-0" style="width: 130px; padding: 10px 0; vertical-align: top;">
+    <a alias="feed-link" href="https://www.irishtimes.com/business/2025/11/28/up-to-41000-apartments-with-planning-permission-lying-idle-in-system/" style="display: block;"><img alt="Image for Up to 41,000 apartments with planning permission lying idle in system" class="feed-image" src="https://www.irishtimes.com/resizer/v2/O3ZMOYQQ7VFAXJ6ND6PIIVN4NU.jpg?auth=465a8e9a7fb7740628e406161339a8c061a3996e6695467aff4bf44cdbef711d&smart=true&width=630&height=350" style="max-width: 130px; height: auto;  border: 1px solid #ccc; display: block;" width="130"></a></td><!-- Text content cell --><td class="responsive-td mobile-padding-top-0" style="padding: 10px 0 10px 10px; vertical-align: top;">
+    <!-- Category --><b style="margin: 0; font-size: 12px; font-weight: bold; color: #333333; text-transform: uppercase;">Business </b> <!-- Title --><h4 style="margin: 5px 0 0 0; font-size: 16px; font-weight: normal;">
+      <a alias="feed-link" href="https://www.irishtimes.com/business/2025/11/28/up-to-41000-apartments-with-planning-permission-lying-idle-in-system/" style="color: #555555; text-decoration: none;">Up to 41,000 apartments with planning permission lying idle in system</a></h4></td></tr></table></td></tr></table>
+
+        <!---->   
+        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table align="center" bgcolor="#ffffff" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 auto;background:#ffffff;width:97%;max-width:600px;border-bottom:1px solid #ccc;" width="600">
+ 
+  <tr>
+   <!-- Image cell --><td class="responsive-td  mobile-padding-bottom-0" style="width: 130px; padding: 10px 0; vertical-align: top;">
+    <a alias="feed-link" href="https://www.irishtimes.com/your-money/2025/11/28/consumers-warned-of-increasingly-sophisticated-scams-ahead-of-black-friday/" style="display: block;"><img alt="Image for Consumers warned of increasingly sophisticated scams on Black Friday " class="feed-image" src="https://www.irishtimes.com/resizer/v2/43JXSKMX3FAWTEQVTAHEJUJ5JI.jpg?auth=92b29e5de2970ffb3b1abb4f4d61875cb1db96b06583ffb85fc2d8e7b56c5421&smart=true&width=630&height=350" style="max-width: 130px; height: auto;  border: 1px solid #ccc; display: block;" width="130"></a></td><!-- Text content cell --><td class="responsive-td mobile-padding-top-0" style="padding: 10px 0 10px 10px; vertical-align: top;">
+    <!-- Category --><b style="margin: 0; font-size: 12px; font-weight: bold; color: #333333; text-transform: uppercase;">Your Money </b> <!-- Title --><h4 style="margin: 5px 0 0 0; font-size: 16px; font-weight: normal;">
+      <a alias="feed-link" href="https://www.irishtimes.com/your-money/2025/11/28/consumers-warned-of-increasingly-sophisticated-scams-ahead-of-black-friday/" style="color: #555555; text-decoration: none;">Consumers warned of increasingly sophisticated scams on Black Friday </a></h4></td></tr></table></td></tr></table>
+
+        <!---->   
+        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table align="center" bgcolor="#ffffff" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 auto;background:#ffffff;width:97%;max-width:600px;border-bottom:1px solid #ccc;" width="600">
+ 
+  <tr>
+   <!-- Image cell --><td class="responsive-td  mobile-padding-bottom-0" style="width: 130px; padding: 10px 0; vertical-align: top;">
+    <a alias="feed-link" href="https://www.irishtimes.com/podcasts/early-edition/4-stories-in-10-minutes-flag-wars-enoch-burke-rent-rises-and-the-irish-book-awards/" style="display: block;"><img alt="Image for The Early Edition podcast presents 4 stories in 10 minutes: Flag wars, Enoch Burke, rent rises, and the Irish Book Awards" class="feed-image" src="https://www.irishtimes.com/resizer/v2/3DV7GUCNJZCJXDFLRLOWBSGVAE.jpeg?auth=70905e1948182cd271a1fdca899e78f38da2cc8292b11d10abdbff796abc9bf6&smart=true&width=630&height=350" style="max-width: 130px; height: auto;  border: 1px solid #ccc; display: block;" width="130"></a></td><!-- Text content cell --><td class="responsive-td mobile-padding-top-0" style="padding: 10px 0 10px 10px; vertical-align: top;">
+    <!-- Category --><b style="margin: 0; font-size: 12px; font-weight: bold; color: #333333; text-transform: uppercase;">Early Edition Podcast </b> <!-- Title --><h4 style="margin: 5px 0 0 0; font-size: 16px; font-weight: normal;">
+      <a alias="feed-link" href="https://www.irishtimes.com/podcasts/early-edition/4-stories-in-10-minutes-flag-wars-enoch-burke-rent-rises-and-the-irish-book-awards/" style="color: #555555; text-decoration: none;">The Early Edition podcast presents 4 stories in 10 minutes: Flag wars, Enoch Burke, rent rises, and the Irish Book Awards</a></h4></td></tr></table></td></tr></table>
+
+        <!---->   
+        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table align="center" bgcolor="#ffffff" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 auto;background:#ffffff;width:97%;max-width:600px;border-bottom:1px solid #ccc;" width="600">
+ 
+  <tr>
+   <!-- Image cell --><td class="responsive-td  mobile-padding-bottom-0" style="width: 130px; padding: 10px 0; vertical-align: top;">
+    <a alias="feed-link" href="https://www.irishtimes.com/culture/tv-radio/2025/11/28/christ-im-angry-ciara-dohertys-striking-interview-with-andrew-mcginley/" style="display: block;"><img alt="Image for ‘Christ, I’m angry’: Ciara Doherty’s striking interview with Andrew McGinley" class="feed-image" src="https://www.irishtimes.com/resizer/v2/H6Z53VGFYBGXBC5QUL2OFZZOSY.jpg?auth=dfa93b7334e7ed5772fbf34f5a8e0af35f6f7d46532f5cf0512d778778d2d02f&smart=true&width=630&height=350" style="max-width: 130px; height: auto;  border: 1px solid #ccc; display: block;" width="130"></a></td><!-- Text content cell --><td class="responsive-td mobile-padding-top-0" style="padding: 10px 0 10px 10px; vertical-align: top;">
+    <!-- Category --><b style="margin: 0; font-size: 12px; font-weight: bold; color: #333333; text-transform: uppercase;">TV & Radio </b> <!-- Title --><h4 style="margin: 5px 0 0 0; font-size: 16px; font-weight: normal;">
+      <a alias="feed-link" href="https://www.irishtimes.com/culture/tv-radio/2025/11/28/christ-im-angry-ciara-dohertys-striking-interview-with-andrew-mcginley/" style="color: #555555; text-decoration: none;">‘Christ, I’m angry’: Ciara Doherty’s striking interview with Andrew McGinley</a></h4></td></tr></table></td></tr></table>
+
+        <!---->   
+        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table align="center" bgcolor="#ffffff" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 auto;background:#ffffff;width:97%;max-width:600px;border-bottom:1px solid #ccc;" width="600">
+ 
+  <tr>
+   <!-- Image cell --><td class="responsive-td  mobile-padding-bottom-0" style="width: 130px; padding: 10px 0; vertical-align: top;">
+    <a alias="feed-link" href="https://www.irishtimes.com/world/asia-pacific/2025/11/28/hong-kong-fire-stories-horribly-familiar-to-those-told-by-grenfell-survivors/" style="display: block;"><img alt="Image for Hong Kong fire: Stories horribly familiar to those told by Grenfell survivors" class="feed-image" src="https://www.irishtimes.com/resizer/v2/NQDT6B3SQPIACMPP3LT75ACGXM.jpg?auth=9bd4c618db9d3971b6c55819bc939afd078423f8c96c14c1357d2b8219a69140&smart=true&width=630&height=350" style="max-width: 130px; height: auto;  border: 1px solid #ccc; display: block;" width="130"></a></td><!-- Text content cell --><td class="responsive-td mobile-padding-top-0" style="padding: 10px 0 10px 10px; vertical-align: top;">
+    <!-- Category --><b style="margin: 0; font-size: 12px; font-weight: bold; color: #333333; text-transform: uppercase;">Asia-Pacific </b> <!-- Title --><h4 style="margin: 5px 0 0 0; font-size: 16px; font-weight: normal;">
+      <a alias="feed-link" href="https://www.irishtimes.com/world/asia-pacific/2025/11/28/hong-kong-fire-stories-horribly-familiar-to-those-told-by-grenfell-survivors/" style="color: #555555; text-decoration: none;">Hong Kong fire: Stories horribly familiar to those told by Grenfell survivors</a></h4></td></tr></table></td></tr></table>
+
+        <!---->
+    </td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table align="center" bgcolor="#ffffff" cellpadding="0" cellspacing="0" role="presentation" style="background:#ffffff;width:100%;max-width:630px;font-family:Lato, Arial, Helvetica, sans-serif;" width="630">
+ 
+  <tr>
+   <td style="padding:15px 0">
+    <b style="display:block;color:#333;font-size:18px;padding:0 0 10px;margin:0 auto;text-align:center">Connect with The Irish Times </b><table cellpadding="0" cellspacing="0" role="presentation" style="max-width: 620px; width: 100%; margin: 0 auto;" width="620">
+     
+      <tr>
+       <td align="right" style="text-align:right;width:50%;padding-right:5px;" width="50%">
+        <a href="http://click.comms.irishtimes.com/?qs=5e9b1cd002850be3f23ddfd5dfffed4b9d5314ca11034bdbd26735974af3617c2305cf547b73b45afe3631eab10d8e2b2b6bfd10328289f676a734b881947ae4" target="_blank"><img src="https://image.comms.irishtimes.com/lib/fe2e11737364047a771d71/m/1/facebook_icon.png" style="width:30px;" width="30"></a></td><td align="left" style="text-align:left;width:50%;padding-left:5px;" width="50%">
+        <a href="http://click.comms.irishtimes.com/?qs=5e9b1cd002850be321b8bf1c9c5fb2c2ce5fd69f22ce8d2b1ad8b0629860222b6f575c2b6b2b34f0e0b36b3116aeebff66d83760dd6ee4e12e353bd998c77b75" target="_blank"><img src="https://image.comms.irishtimes.com/lib/fe2e11737364047a771d71/m/1/x_icon.png" style="width:30px;" width="30"></a></td></tr></table></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- -->
+
+<!--     --></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table align="center" bgcolor="#ffffff" cellpadding="0" cellspacing="0" role="presentation" style="background:#ffffff;width:100%;max-width:630px;border-top:1px solid #ccc; border-bottom: 1px solid #ccc;" width="630">
+ 
+  <tr>
+   <td style="padding:0">
+    <!-- Wrapper table for responsive max-width --><table bgcolor="#ffffff" cellpadding="0" cellspacing="0" role="presentation" style="max-width: 630px; width: 100%; margin: 0 auto;" width="630">
+     
+      <tr>
+       <td align="center">
+        <!-- Image with responsive width --> <a href="https://www.irishtimes.com/ireland/housing-planning/2025/11/28/women-forced-to-stay-with-abusers-because-they-have-nowhere-else-to-go-report-finds/" alias="morning briefing" style="max-width: 630px; width:100%;display: block; text-decoration: none;"><img alt="" src="https://www.irishtimes.com/resizer/v2/XKZ6GWFDORG2RFQLEJF7LKYD4Y.jpg?auth=8894c298cc2e1eac13b4ea42fbc87aec152fdc614a2f1c8add0c2a327d30f15f&smart=true&width=630&height=350" style="max-width: 630px; width:100%;display: block; padding: 0px; text-align: center; border: 0px solid transparent; height: auto;  margin-bottom: 10px;" width="630"></a></td></tr><tr>
+       <td style="padding:5px 10px ; background:#ffffff">
+        <h3 style="text-transform: uppercase; font-family: Lato, Helvetica, Arial, sans-serif; font-weight: 700; font-size: 12px; color: #333333; margin: 0 0 5px; padding: 0;">
+         Housing & Planning</h3></td></tr><tr>
+       <td style="padding:5px 10px; background:#ffffff">
+        <h2 style="margin: 0; padding: 0; font-family: Lato, Helvetica, Arial, sans-serif; font-weight: 700; font-size: 18px; color: #333333;">
+         <a alias="feed-item" href="https://www.irishtimes.com/ireland/housing-planning/2025/11/28/women-forced-to-stay-with-abusers-because-they-have-nowhere-else-to-go-report-finds/" style="text-decoration: none; color: #333333;">Women forced to stay with abusers because they have nowhere else to go, report finds</a></h2></td></tr><tr>
+       <td style="padding:5px 10px ; background:#ffffff">
+        <p style="font-family: Lato, Helvetica, Arial, sans-serif; font-weight: 400; font-size: 16px; line-height: 1.5; color: #333333; margin-top: 10px; margin-bottom: 15px; padding: 0;">
+         Housing insecurity makes women and children ‘more vulnerable to domestic abuse’, says National Women’s Council</p></td></tr></table></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- -->
+
+
+<!-- -->
+    <!---->   
+
+    <!-- Responsive table for displaying RSS content -->
+    <table border="0" cellspacing="0" cellpadding="0" class="item-feed" width="630" align="center" style="width: 100%; max-width:630px;border-collapse: collapse; margin: 0 auto; padding: 0; background: #ffffff; font-family: Arial, sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+        <tr>
+            <td>
+
+        <!-- -->   
+        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table align="center" bgcolor="#ffffff" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 auto;background:#ffffff;width:97%;max-width:600px;border-bottom:1px solid #ccc;" width="600">
+ 
+  <tr>
+   <!-- Image cell --><td class="responsive-td  mobile-padding-bottom-0" style="width: 130px; padding: 10px 0; vertical-align: top;">
+    <a alias="feed-link" href="https://www.irishtimes.com/ireland/2025/11/28/mother-of-missing-boy-benjamin-spot-14-pleads-for-him-to-return/" style="display: block;"><img alt="Image for Mother of missing boy Benjamin Spot (14) pleads for him to return" class="feed-image" src="https://www.irishtimes.com/resizer/v2/56PIMM5D7NE3VN55NTQQLGW5HM.jpg?auth=d83a4382cd5787f2a26892af8d1dbed2c0dc465e9fd386d61645c5806e47f1a7&smart=true&width=630&height=350" style="max-width: 130px; height: auto;  border: 1px solid #ccc; display: block;" width="130"></a></td><!-- Text content cell --><td class="responsive-td mobile-padding-top-0" style="padding: 10px 0 10px 10px; vertical-align: top;">
+    <!-- Category --><b style="margin: 0; font-size: 12px; font-weight: bold; color: #333333; text-transform: uppercase;">Ireland </b> <!-- Title --><h4 style="margin: 5px 0 0 0; font-size: 16px; font-weight: normal;">
+      <a alias="feed-link" href="https://www.irishtimes.com/ireland/2025/11/28/mother-of-missing-boy-benjamin-spot-14-pleads-for-him-to-return/" style="color: #555555; text-decoration: none;">Mother of missing boy Benjamin Spot (14) pleads for him to return</a></h4></td></tr></table></td></tr></table>
+
+        <!---->   
+        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table align="center" bgcolor="#ffffff" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 auto;background:#ffffff;width:97%;max-width:600px;border-bottom:1px solid #ccc;" width="600">
+ 
+  <tr>
+   <!-- Image cell --><td class="responsive-td  mobile-padding-bottom-0" style="width: 130px; padding: 10px 0; vertical-align: top;">
+    <a alias="feed-link" href="https://www.irishtimes.com/culture/books/2025/11/27/irish-book-awards-2025-winners-roisin-odonnell-claire-gleeson-and-manchan-magan-among-winners/" style="display: block;"><img alt="Image for Irish Book Awards 2025: Roisín O’Donnell, Claire Gleeson and Manchán Magan among winners" class="feed-image" src="https://www.irishtimes.com/resizer/v2/46L3VJRGGRFUHJXFTVKZQ5BHSI.jpg?auth=6455dcaf6641949ef0846449fb94f9ec60d9488ce34f576739a9efb6bce33bde&smart=true&width=630&height=350" style="max-width: 130px; height: auto;  border: 1px solid #ccc; display: block;" width="130"></a></td><!-- Text content cell --><td class="responsive-td mobile-padding-top-0" style="padding: 10px 0 10px 10px; vertical-align: top;">
+    <!-- Category --><b style="margin: 0; font-size: 12px; font-weight: bold; color: #333333; text-transform: uppercase;">Books </b> <!-- Title --><h4 style="margin: 5px 0 0 0; font-size: 16px; font-weight: normal;">
+      <a alias="feed-link" href="https://www.irishtimes.com/culture/books/2025/11/27/irish-book-awards-2025-winners-roisin-odonnell-claire-gleeson-and-manchan-magan-among-winners/" style="color: #555555; text-decoration: none;">Irish Book Awards 2025: Roisín O’Donnell, Claire Gleeson and Manchán Magan among winners</a></h4></td></tr></table></td></tr></table>
+
+        <!---->   
+        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table align="center" bgcolor="#ffffff" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 auto;background:#ffffff;width:97%;max-width:600px;border-bottom:1px solid #ccc;" width="600">
+ 
+  <tr>
+   <!-- Image cell --><td class="responsive-td  mobile-padding-bottom-0" style="width: 130px; padding: 10px 0; vertical-align: top;">
+    <a alias="feed-link" href="https://www.irishtimes.com/food/restaurants/2025/11/28/ten-restaurants-where-youll-have-a-great-time-with-friends-2/" style="display: block;"><img alt="Image for Ten Irish restaurants where you’ll have a great time with friends" class="feed-image" src="https://www.irishtimes.com/resizer/v2/OPIHGOBUX5FDPG7W4W7OW5FATY.JPG?auth=f9367d98d236d74bead204b595f0d610e11e84a611362cab9d4a83317ade155e&smart=true&width=630&height=350" style="max-width: 130px; height: auto;  border: 1px solid #ccc; display: block;" width="130"></a></td><!-- Text content cell --><td class="responsive-td mobile-padding-top-0" style="padding: 10px 0 10px 10px; vertical-align: top;">
+    <!-- Category --><b style="margin: 0; font-size: 12px; font-weight: bold; color: #333333; text-transform: uppercase;">Restaurants </b> <!-- Title --><h4 style="margin: 5px 0 0 0; font-size: 16px; font-weight: normal;">
+      <a alias="feed-link" href="https://www.irishtimes.com/food/restaurants/2025/11/28/ten-restaurants-where-youll-have-a-great-time-with-friends-2/" style="color: #555555; text-decoration: none;">Ten Irish restaurants where you’ll have a great time with friends</a></h4></td></tr></table></td></tr></table>
+
+        <!---->   
+        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table align="center" bgcolor="#ffffff" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 auto;background:#ffffff;width:97%;max-width:600px;border-bottom:1px solid #ccc;" width="600">
+ 
+  <tr>
+   <!-- Image cell --><td class="responsive-td  mobile-padding-bottom-0" style="width: 130px; padding: 10px 0; vertical-align: top;">
+    <a alias="feed-link" href="https://www.irishtimes.com/opinion/2025/11/28/stephen-collins-simon-harris-is-facing-his-first-big-test-can-he-shake-off-tiktok-tanaiste-image/" style="display: block;"><img alt="Image for Stephen Collins: Simon Harris is facing his first big test. Can he shake off TikTok Tánaiste image?" class="feed-image" src="https://www.irishtimes.com/resizer/v2/O7XNLSJLRBDLXCXHUI4BWZ5ZEY.JPG?auth=d8bae2481629f971029fed84a6c18ca3de764b84254a45207382b5e6b2d1994c&smart=true&width=630&height=350" style="max-width: 130px; height: auto;  border: 1px solid #ccc; display: block;" width="130"></a></td><!-- Text content cell --><td class="responsive-td mobile-padding-top-0" style="padding: 10px 0 10px 10px; vertical-align: top;">
+    <!-- Category --><b style="margin: 0; font-size: 12px; font-weight: bold; color: #333333; text-transform: uppercase;">Opinion </b> <!-- Title --><h4 style="margin: 5px 0 0 0; font-size: 16px; font-weight: normal;">
+      <a alias="feed-link" href="https://www.irishtimes.com/opinion/2025/11/28/stephen-collins-simon-harris-is-facing-his-first-big-test-can-he-shake-off-tiktok-tanaiste-image/" style="color: #555555; text-decoration: none;">Stephen Collins: Simon Harris is facing his first big test. Can he shake off TikTok Tánaiste image?</a></h4></td></tr></table></td></tr></table>
+
+        <!---->   
+        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table align="center" bgcolor="#ffffff" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 auto;background:#ffffff;width:97%;max-width:600px;border-bottom:1px solid #ccc;" width="600">
+ 
+  <tr>
+   <!-- Image cell --><td class="responsive-td  mobile-padding-bottom-0" style="width: 130px; padding: 10px 0; vertical-align: top;">
+    <a alias="feed-link" href="https://www.irishtimes.com/sport/athletics/2025/11/28/running-groups-concerned-at-outcome-of-ballot-for-places-in-next-years-dublin-marathon/" style="display: block;"><img alt="Image for Running groups concerned at outcome of ballot for places in next year’s Dublin Marathon" class="feed-image" src="https://www.irishtimes.com/resizer/v2/MPNN577H5VDNTK6PQNVPYFUA4E.jpg?auth=9f0982b4b76bbaf02b6da913575890e99498180d0fda04d96295f7ff339075b1&smart=true&width=630&height=350" style="max-width: 130px; height: auto;  border: 1px solid #ccc; display: block;" width="130"></a></td><!-- Text content cell --><td class="responsive-td mobile-padding-top-0" style="padding: 10px 0 10px 10px; vertical-align: top;">
+    <!-- Category --><b style="margin: 0; font-size: 12px; font-weight: bold; color: #333333; text-transform: uppercase;">Athletics </b> <!-- Title --><h4 style="margin: 5px 0 0 0; font-size: 16px; font-weight: normal;">
+      <a alias="feed-link" href="https://www.irishtimes.com/sport/athletics/2025/11/28/running-groups-concerned-at-outcome-of-ballot-for-places-in-next-years-dublin-marathon/" style="color: #555555; text-decoration: none;">Running groups concerned at outcome of ballot for places in next year’s Dublin Marathon</a></h4></td></tr></table></td></tr></table>
+
+        <!---->
+    </td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- -->
+
+
+<!-- -->
+    <!---->   
+
+    <!-- Responsive table for displaying RSS content -->
+    <table border="0" cellspacing="0" cellpadding="0" class="item-feed" width="630" align="center" style="width: 100%; max-width:630px;border-collapse: collapse; margin: 0 auto; padding: 0; background: #FCF7E4; font-family: Arial, sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+        <tr>
+            <td>
+
+        <!-- -->   
+      <table align="center" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 auto;width:97%;max-width:600px;border-bottom:1px solid #ccc;" width="600">
+    <tr>
+        <!-- Image cell -->
+    <td class="responsive-td  mobile-padding-bottom-0" style="width: 130px; padding: 10px 0; vertical-align: top;">
+        <a  href="http://click.comms.irishtimes.com/?qs=5e9b1cd002850be3b37f7921ff8fb69fea02294b918c20fb288e54a6f9411ade69e9d1f37a539dc01c0e28708a1a2fe2c5a99e7da94aba2f547c047362472620" style="display: block;">
+            <img class="feed-image" width="130" src="https://www.irishtimes.com/resizer/v2/FKYQ3T4OTFAEJKRJP5M4HODHDQ.jpeg?auth=8cb101fea0a33c395dbfa40739b2ca3c0b6adf7238e0bb01715386e631175461&smart=true&width=630&height=350" alt="Image for Children caught in conflict: Trócaire sounds the alarm this Christmas" style="max-width: 130px; height: auto;  border: 1px solid #ccc; display: block;">
+        </a>
+    </td>
+    <!-- Text content cell -->
+    <td class="responsive-td mobile-padding-top-0" style="padding: 10px 0 10px 10px; vertical-align: top;">
+        <!-- Category -->
+        <b style="margin: 0; font-size: 12px; font-weight: bold; color: #333333; text-transform: uppercase;">
+            Sponsored
+        </b>
+        <!-- Title -->
+        <h4 style="margin: 5px 0 0 0; font-size: 16px; font-weight: normal;">
+            <a  href="http://click.comms.irishtimes.com/?qs=5e9b1cd002850be3b37f7921ff8fb69fea02294b918c20fb288e54a6f9411ade69e9d1f37a539dc01c0e28708a1a2fe2c5a99e7da94aba2f547c047362472620" style="color: #555555; text-decoration: none;">
+                Children caught in conflict: Trócaire sounds the alarm this Christmas
+            </a>
+        </h4>
+    </td>
+    </tr>
+</table>
+
+        <!---->
+    </td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table align="center" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;max-width:620px;" width="620">
+ 
+  <tr>
+   <td align="center" style="padding-top: 30px;  background: #f4f4f4;line-height:1px;font-size:1px;">
+    &nbsp;</td></tr></table></td></tr></table>
+       
+      <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- -->
+
+<!-- -->
+<!---->        
+<table align="center" cellpadding="0" cellspacing="0" role="presentation" style="border-top:solid 3px #000000;width:100%;max-width:630px;" width="630">
+ 
+    <tr>
+     <td align="center" style="padding: 0 10px; margin: 0; background-color: #ffffff;">
+      <table border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width:100%;  background-color: #ffffff; margin: 0 auto;vertical-align:middle;" valign="middle" width="600">
+       <!-- Header Section -->
+        <tr>
+         <td align="left" style="height:40px; line-height:40px; text-align: left; ">
+          <span style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18pt; font-weight: 400; color: #777777; text-transform: capitalize;">MOST READ</span></td>        
+        </tr>
+      </table></td></tr>
+</table>
+
+
+<table align="center" cellpadding="0" cellspacing="0" bgcolor="#ffffff" role="presentation" style="margin:0 auto; background:#ffffff;width:100%; max-width:630px; padding: 20px" width="630">
+    <tr><td>
+
+<!-- -->        
+        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table align="center" bgcolor="#ffffff" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 auto;background:#ffffff; width:100%; max-width:600px; border-bottom: 1px solid #ccc;" width="600">
+ 
+  <tr>
+   <!-- Content Section --><td style="padding: 10px; text-align: left;">
+    <!-- Numbering --><span style="position: relative; top: -5px; font-weight: bold; font-size: 18px; color: #999999; margin-right: 10px; display: inline-block;">1.</span> <!-- Title --><h4 style="margin: 0; display: inline;">
+     <a href="https://www.irishtimes.com/ireland/social-affairs/2025/11/27/mother-of-former-conjoined-twins-hassan-and-hussein-benhaffaf-named-carer-of-the-year/" style="color:#333; font-family:Lato, Helvetica, Arial, sans-serif; font-weight:400; font-size:16px; text-decoration:none;">Mother of former conjoined twins Hassan and Hussein Benhaffaf named Carer of the Year</a></h4> <!-- Description --><p style="margin-top: 10px; font-size: 14px; color: #555;">
+     </p></td></tr></table></td></tr></table>
+        <!-- -->        
+        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table align="center" bgcolor="#ffffff" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 auto;background:#ffffff; width:100%; max-width:600px; border-bottom: 1px solid #ccc;" width="600">
+ 
+  <tr>
+   <!-- Content Section --><td style="padding: 10px; text-align: left;">
+    <!-- Numbering --><span style="position: relative; top: -5px; font-weight: bold; font-size: 18px; color: #999999; margin-right: 10px; display: inline-block;">2.</span> <!-- Title --><h4 style="margin: 0; display: inline;">
+     <a href="https://www.irishtimes.com/opinion/2025/11/27/diarmaid-ferriter-enoch-burke-ferocious-desire-for-martyrdom-roots-irish-life/" style="color:#333; font-family:Lato, Helvetica, Arial, sans-serif; font-weight:400; font-size:16px; text-decoration:none;">Diarmaid Ferriter: Enoch Burke’s ferocious desire for martyrdom has roots in Irish life</a></h4> <!-- Description --><p style="margin-top: 10px; font-size: 14px; color: #555;">
+     </p></td></tr></table></td></tr></table>
+        <!-- -->        
+        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table align="center" bgcolor="#ffffff" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 auto;background:#ffffff; width:100%; max-width:600px; border-bottom: 1px solid #ccc;" width="600">
+ 
+  <tr>
+   <!-- Content Section --><td style="padding: 10px; text-align: left;">
+    <!-- Numbering --><span style="position: relative; top: -5px; font-weight: bold; font-size: 18px; color: #999999; margin-right: 10px; display: inline-block;">3.</span> <!-- Title --><h4 style="margin: 0; display: inline;">
+     <a href="https://www.irishtimes.com/abroad/2025/11/18/i-miss-irelands-wildness-and-divilment-but-after-20-years-away-i-know-its-not-for-me/" style="color:#333; font-family:Lato, Helvetica, Arial, sans-serif; font-weight:400; font-size:16px; text-decoration:none;">Irish abroad: I miss Ireland’s wildness and divilment but after 20 years away know it’s not for me</a></h4> <!-- Description --><p style="margin-top: 10px; font-size: 14px; color: #555;">
+     </p></td></tr></table></td></tr></table>
+        <!-- -->        
+        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table align="center" bgcolor="#ffffff" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 auto;background:#ffffff; width:100%; max-width:600px; border-bottom: 1px solid #ccc;" width="600">
+ 
+  <tr>
+   <!-- Content Section --><td style="padding: 10px; text-align: left;">
+    <!-- Numbering --><span style="position: relative; top: -5px; font-weight: bold; font-size: 18px; color: #999999; margin-right: 10px; display: inline-block;">4.</span> <!-- Title --><h4 style="margin: 0; display: inline;">
+     <a href="https://www.irishtimes.com/politics/2025/11/27/former-garda-commissioner-harris-lived-in-rental-property-owned-by-office-of-public-works/" style="color:#333; font-family:Lato, Helvetica, Arial, sans-serif; font-weight:400; font-size:16px; text-decoration:none;">Former Garda Commissioner Harris lived in rental property owned by Office of Public Works</a></h4> <!-- Description --><p style="margin-top: 10px; font-size: 14px; color: #555;">
+     </p></td></tr></table></td></tr></table>
+        <!-- -->        
+        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table align="center" bgcolor="#ffffff" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 auto;background:#ffffff; width:100%; max-width:600px; border-bottom: 1px solid #ccc;" width="600">
+ 
+  <tr>
+   <!-- Content Section --><td style="padding: 10px; text-align: left;">
+    <!-- Numbering --><span style="position: relative; top: -5px; font-weight: bold; font-size: 18px; color: #999999; margin-right: 10px; display: inline-block;">5.</span> <!-- Title --><h4 style="margin: 0; display: inline;">
+     <a href="https://www.irishtimes.com/culture/music/review/2025/11/27/you-have-a-traffic-problem-hans-zimmer-tells-dublin-before-a-mesmerising-evening-with-the-movie-maestro/" style="color:#333; font-family:Lato, Helvetica, Arial, sans-serif; font-weight:400; font-size:16px; text-decoration:none;">‘You have a traffic problem,’ Hans Zimmer tells Dublin before a mesmerising evening with the movie maestro</a></h4> <!-- Description --><p style="margin-top: 10px; font-size: 14px; color: #555;">
+     </p></td></tr></table></td></tr></table>
+        <!----></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!--FAQ Slot BEGIN--><table align="center" bgcolor="#fcfcfc" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin: auto;background-color:#FCFCFC; max-width: 630px;width:100%" width="630">
+ 
+  <tr>
+   <td align="center" bgcolor="#fcfcfc" style="padding-top:10px;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="60">
+     
+      <tr>
+       <td align="center">
+        <img alt="FAQ Icon" border="0" height="55" src="https://www.irishtimes.com/static/aprimo/ac/rewards/FAQ.png" style="margin: 0 auto;" width="55"></td></tr></table></td></tr><tr>
+   <td align="center" style="padding:10px 10px 15px 10px;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="font-family: Lato, Helvetica, Arial, sans-serif; font-weight: bold; color:#000000; font-size: 16px;">
+     
+      <tr>
+       <td align="center" class="line-break" style="padding-left:5px;padding-right:5px;">
+        Do you have questions about becoming an Irish Times subscriber,<br>
+        or about your subscription?</td></tr></table></td></tr><tr>
+   <td align="center" style="padding-bottom: 20px;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" class="FAQmobileText" role="presentation" width="400">
+     
+      <tr>
+       <td align="center" class="FAQmobileText" style="text-align:center; font-family: Lato, Helvetica, Arial, sans-serif; font-weight: 400; color: #000000; font-size: 14px;">
+        <center>
+         You'll find handy guides in our <a  href="http://click.comms.irishtimes.com/?qs=5e9b1cd002850be319959d099f48e6b9e071ff5e9673b0bc4b1b3caf943190f894252941412e08a18d9c587c3b138f35f3e8e1fe453864f162ca361721448a95" style="color:#16ACD0;font-size: 15px;font-weight: bold;text-decoration:none;" target="_blank"> FAQs</a>, and you can manage many aspects of your subscription in the <a  href="http://click.comms.irishtimes.com/?qs=5e9b1cd002850be394cfe496b8950b6a4c009ff9237d536f3f0b4a6f7d0f8003ee8b9978b3735298b613e9672848aa09ffa1929460241a04d8d50249a3a4113f" style="color:#16ACD0;font-size: 15px;font-weight: bold;text-decoration:none;" target="_blank"> My Account</a> section.</center></td></tr></table></td></tr></table><!--FAQ Slot END--></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<!-- Email CTA section : BEGIN --><table align="center" bgcolor="#2D3137" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 auto;background: #2D3137; max-width: 630px; width:100%;" width="630">
+	
+		<tr>
+			<td align="center" style="padding: 20px 0 10px; ">
+				<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="font-family: Lato, Helvetica, Arial, sans-serif; font-weight: bold; color: #ffffff; font-size: 18px;">
+					
+						<tr>
+							<td style="padding-left: 10px; padding-right: 10px;text-align:center;">
+								<span style="color:#fff">Never miss a <a href="http://click.comms.irishtimes.com/?qs=5e9b1cd002850be34947d116d2281a894266ee871150c7005298f5777d9f27f64d7862dfdeee33bde3ac0641082bf8ac688dd75e5e085a91fda90394d5d74cb7" style="color: #ffffff; text-decoration: none; border-bottom: 2px solid #CC0000;">news</a> story</span></td></tr></table></td></tr><tr>
+			<td align="center" style="font-family: Lato, Helvetica, Arial, sans-serif; font-weight: 400; color: #ffffff; font-size: 15px; padding: 5px 20px 15px;">
+				Subscribe now for just &euro;1 for your first month</td></tr><tr>
+			<td align="center" style="padding-bottom: 10px;">
+				<div>
+					<!--[if mso]> <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.irishtimes.com/subscribe/" style="height:40px;v-text-anchor:middle;width:175px;" arcsize="10%" stroke="f" fillcolor="#F8C857"> <w:anchorlock/> <center> <![endif]--><a href="http://click.comms.irishtimes.com/?qs=5e9b1cd002850be35e4d781bdccf66508d9bfedd16b312c2f8666136e2df32b0f23b736c764d73dcccd685e34f336bd25e4d6c1d62886cda39b0ef32765ee9ca" style="margin: 0 auto; background-color: #f8c857; border-radius: 4px; color: #000001; display: inline-block; font-family: Helvetica, Arial, sans-serif; font-weight: bold; font-size: 14px; mso-line-height-rule: exactly; line-height: 40px; text-align: center; text-decoration: none; width: 175px; -webkit-text-size-adjust: none;" target="_blank">SUBSCRIBE</a> <!--[if mso]> </center> </v:roundrect> <![endif]--></div>
+</td></tr><tr>
+			<td>
+				&nbsp;</td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table align="center" bgcolor="#393B41" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin:auto;background-color: #393B41; max-width: 630px; width:100%;" width="630">
+ 
+  <tr>
+   <td>
+    &nbsp;</td></tr><tr>
+   <td>
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin: 0px auto; width: 280px;">
+     
+      <tr>
+       <td align="center" width="45">
+        <a  href="http://click.comms.irishtimes.com/?qs=5e9b1cd002850be31f96ccef9b9623401dce9e304193a6567f959ac7d34dc5fbebbd4e771e84878b585eec0193229a43b2aaef0f57b80e727cacbd30a5db5773" target="_blank"><img alt="Facebook" height="33" src="https://www.irishtimes.com/static/aprimo/ac/digests/facebook.png" style="display: block;" target="_blank" title="Follow us on Facebook" width="33"> </a></td><td align="center" width="45">
+        <a  href="http://click.comms.irishtimes.com/?qs=5e9b1cd002850be34698e1a7dd84725d4fa8d35c45559c78d042861b8d3d3cddf854f61c87b0d18199dd21db8605b819c462fb16edf095927f093ff4e0f0824d" target="_blank"><img alt="Twitter" height="33" src="https://image.comms.irishtimes.com/lib/fe2e11737364047a771d71/m/1/x_icon_grey_fFsND.png" style="display: block;" target="_blank" title="Follow us on x" width="34"></a></td><td align="center" width="45">
+        <a  href="http://click.comms.irishtimes.com/?qs=5e9b1cd002850be33c08617e2dad0c64cae7cfb0d562a7f735e8ea29054c68753f59e15163fdb79eb6521316c40c8297bfde896e6543fabd7a4c2d9f7988e3d3" target="_blank"><img alt="Instagram" height="33" src="https://www.irishtimes.com/static/aprimo/ac/digests/instagram.png" style="display: block;" target="_blank" title="Connecting the world through photos" width="34"> </a></td><td align="center" width="45">
+        <a  href="http://click.comms.irishtimes.com/?qs=5e9b1cd002850be309d3ff24c77cf18161e6dd473137a6c9c381dd8ada2bbc29d943617cde632e3df86d465bd78a04ba4596c746e12811f146721d4ed6a5ea28" target="_blank"><img alt="LinkedIn" height="33" src="https://www.irishtimes.com/static/aprimo/ac/digests/linkedin.png" style="display: block;" target="_blank" title="LinkedIn" width="33"> </a></td></tr></table></td></tr><tr>
+   <td>
+    &nbsp;</td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;width: 100%; max-width: 630px; background-color: #393b41; padding: 20px; text-align: center; color: #FFFFFF; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 12px; line-height: 1.5; margin: 0 auto; box-sizing: border-box;" width="630">
+ 
+  <tr>
+   <td>
+    &nbsp;<table align="center" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 620px; margin: 0 auto; text-align: center; color: #FFFFFF;">
+     
+      <tr>
+       <td class="fluid-td" style="text-align: center; padding: 10px; color: #FFFFFF; font-size: 12px;">
+        Registration number<br>
+        2514</td><td class="fluid-td" style="text-align: center; padding: 10px; color: #FFFFFF; font-size: 12px;">
+        Registered in Ireland as<br>
+        The Irish Times DAC</td><td class="fluid-td" style="text-align: center; padding: 10px; color: #FFFFFF; font-size: 12px;">
+        Registered office<br>
+        24-28 Tara Street, Dublin 2</td></tr></table><table cellpadding="0" cellspacing="0" style="width: 100%; max-width: 620px; margin: 0 auto; text-align: center; color: #FFFFFF;">
+     
+      <tr>
+       <td class="fluid-td" style="text-align: center; padding: 10px 20px; color: #FFFFFF; font-size: 12px;">
+        You have received this email because you opted in for Morning Briefing, delivered by The Irish Times. If you do not wish to receive any more, you can <a target="_blank"  href="http://click.comms.irishtimes.com/?qs=5e9b1cd002850be3aa712f04ff43eaa06a234926b7d3c83e4b29e10531b7a41afdc6d48b03a94f676307a9a9855793dbba7fbda61febc14c819200a7e02f062c" style="color: #76A9EA; text-decoration:underline;">unsubscribe</a>.</td></tr><tr>
+       <td style="padding:15px; color: #FFFFFF; font-size: 12px; ">
+        24-28 Tara Street, Dublin 2, D02 CX89, Ireland<br>
+        &nbsp;</td></tr></table></td></tr></table></td></tr></table>
+       
+      <!--footer BEGIN-->
+    </center>
+    <img src="http://click.comms.irishtimes.com/open.aspx?ffcb10-fef81c7574640d-fe9d11717767057f71-fe2e11737364047a771d71-ff63117072-fe9716777563047a74-ff031578756407&d=510003&bmt=0" width="1" height="1" alt="">
+    
+  </body>
+</html>
+
+--nC8mhM5lumnq=_?:--
+

@@ -8,8 +8,6 @@ import random
 import re
 import email
 import datetime
-import requests
-from urllib.parse import urlparse, urlunparse
 from email import policy
 from pydub import AudioSegment
 from newspaper import Article
@@ -49,9 +47,11 @@ VOICE_CAST = {
     "Default": {"Alice": "en-GB-RyanNeural", "Bob": "en-US-AriaNeural"}
 }
 
-# --- HELPER: AUDIO NORMALIZATION ---
 def normalize_volume(sound, target_dBFS=-35.0):
-    """Adjusts volume to a specific target level (e.g., -35dB for background)."""
+    """
+    Adjusts the volume of a sound file to match a specific target level.
+    -35dB is a good 'background bed' level for speech.
+    """
     change_in_dBFS = target_dBFS - sound.dBFS
     return sound.apply_gain(change_in_dBFS)
 
@@ -69,8 +69,14 @@ def load_state():
             return json.load(f)
     return None
 
+# --- STAGE 1: SMART FILE LOADER ---
+import requests # Need to add 'import requests' at the top
+
+# ... [Keep your existing imports] ...
+
 # --- STAGE 1: SMART FILE LOADER (With Redirect Resolution) ---
 def load_urls(filename):
+    # [Keep the path checking logic]
     filepath = os.path.join(INPUT_DIR, filename)
     if not os.path.exists(filepath):
         if os.path.exists(filename): filepath = filename
@@ -82,59 +88,71 @@ def load_urls(filename):
     raw_urls = []
     
     try:
+        # [Keep the EML/HTML/TXT detection logic the same as before]
         if filename.lower().endswith(".eml"):
             print("   -> Detected Email format.")
             with open(filepath, "rb") as f:
                 msg = email.message_from_binary_file(f, policy=policy.default)
             body = msg.get_body(preferencelist=('html')).get_content() if msg.get_body(preferencelist=('html')) else msg.get_body(preferencelist=('plain')).get_content()
             raw_urls = re.findall(r'href=["\'](https?://[^"\']+)["\']', body, re.IGNORECASE)
-
+        
         elif filename.lower().endswith(".html") or "<DT><A HREF=" in open(filepath, "r", errors="ignore").read(1024):
-            print("   -> Detected HTML Bookmark format.")
-            with open(filepath, "r", encoding="utf-8", errors="ignore") as f:
-                content = f.read()
-            raw_urls = re.findall(r'href="(https?://[^"]+)"', content, re.IGNORECASE)
-
+            # ... [Same as before]
+            pass # (Add your HTML logic here)
         else:
-            print("   -> Detected Text list.")
-            with open(filepath, "r", encoding="utf-8", errors="ignore") as f:
-                raw_urls = [line.strip() for line in f if line.strip() and not line.startswith("#")]
+            # ... [Same as before]
+            pass # (Add your TXT logic here)
 
     except Exception as e:
         print(f"❌ Error reading file: {e}")
         sys.exit(1)
 
-    # --- SMART DE-DUPLICATION ---
+    # --- THE FIX: SMART DE-DUPLICATION ---
     print(f"   -> Found {len(raw_urls)} raw links. Cleaning & resolving...")
+    
     clean_urls = set()
     final_urls = []
     
+    # 1. Filter Noise (Unsubscribe, Socials)
     filtered_raw = [u for u in raw_urls if not any(t in u.lower() for t in IGNORE_TERMS)]
     
+    # 2. Resolve Redirects (Only for Email Tracking Links)
+    # This prevents scraping the same article 5 times because of different tracking codes
+    import requests
+    from urllib.parse import urlparse, urlunparse
+
     for url in filtered_raw:
         try:
-            # Resolve Email Tracking Links
+            # If it looks like a tracking link (e.g. link.news.metro...), resolve it
             if "link.news" in url or "click/" in url or "bit.ly" in url:
                 try:
+                    # Head request follows redirect without downloading body
                     response = requests.head(url, allow_redirects=True, timeout=3)
                     real_url = response.url
                 except:
-                    real_url = url
+                    real_url = url # Fallback if resolution fails
             else:
                 real_url = url
 
-            # Strip query params to find true duplicates
+            # Strip query parameters (tracking codes) to find true duplicates
+            # e.g. metro.co.uk/article?ito=123 -> metro.co.uk/article
             parsed = urlparse(real_url)
             clean_url = urlunparse((parsed.scheme, parsed.netloc, parsed.path, '', '', ''))
             
+            # Additional check: Skip if it's just the homepage
             if clean_url.strip("/").endswith(".co.uk") or clean_url.strip("/").endswith(".com"):
-                continue # Skip homepages
+                continue
 
             if clean_url not in clean_urls:
                 clean_urls.add(clean_url)
-                final_urls.append(real_url)
+                final_urls.append(real_url) # Keep the full URL for scraping, but track uniqueness by clean URL
+                print(f"      + Added: {clean_url[:60]}...")
+            else:
+                # print(f"      - Duplicate ignored: {clean_url[:40]}...")
+                pass
 
-        except Exception: continue
+        except Exception:
+            continue
 
     print(f"   -> Reduced to {len(final_urls)} unique articles.")
     return final_urls
@@ -148,34 +166,14 @@ def fetch_article_text(url):
         return f"URL: {url}\nHEADLINE: {article.title}\nTEXT: {article.text[:2500]}..."
     except: return ""
 
-# --- STAGE 3: THE EDITOR (Aggressive Clustering) ---
+# --- STAGE 3: THE EDITOR ---
 def ai_cluster_and_summarize(raw_texts):
-    print(f"🧠 Analyzing {len(raw_texts)} articles...")
-    
+    print(f"🧠 Analyzing articles...")
     prompt = """
-    You are a Senior News Editor. 
-    Your goal is to create exactly 3 or 4 'Audio News Briefings' from this list of articles.
-    
-    CRITICAL RULES:
-    1. DO NOT create a separate cluster for every single article. Combine them!
-    2. Each cluster MUST contain at least 2-3 articles (unless it's a major breaking headline).
-    3. Group loosely related items under broad themes (e.g. 'Domestic News', 'International Events', 'Culture & Lifestyle').
-    
+    You are a Senior Editor. Group these articles into 3-4 thematic clusters.
     INSTRUCTIONS:
-    1. THEMES: Politics, World News, Crime/Courts, Culture/Lifestyle.
-    2. EXTRACT: 
-       - 'topic': The broad theme name.
-       - 'file_slug': A 3-4 word slug for the filename.
-       - 'dossier': A combined summary script base for ALL articles in this group.
-       - 'source_urls': The list of URLs used.
-    
-    OUTPUT JSON:
-    {
-        "clusters": [
-            { "topic": "Politics", "file_slug": "Election_Update", "dossier": "...", "source_urls": [...] }
-        ]
-    }
-    
+    1. EXTRACT: 'topic', 'file_slug' (3-4 words, underscores), 'dossier', 'source_urls'.
+    2. OUTPUT JSON: { "clusters": [ { "topic": "Politics", "file_slug": "Farage_Row", "dossier": "...", "source_urls": [...] } ] }
     ARTICLES:
     """ + "\n\n".join(raw_texts)
 
@@ -211,7 +209,7 @@ def generate_script(topic, dossier, cast_names):
         except: time.sleep(5)
     return []
 
-# --- STAGE 5: THE SOUND ENGINEER (With Auto-Leveling) ---
+# --- STAGE 5: THE SOUND ENGINEER ---
 async def produce_audio(topic, script, filename):
     filepath = os.path.join(OUTPUT_DIR, filename)
     print(f"   🎙️ Recording: {filename}")
@@ -243,11 +241,7 @@ async def produce_audio(topic, script, filename):
 
     try:
         if selected_track:
-            music = AudioSegment.from_mp3(selected_track)
-            
-            # SMART FIX: Normalize background music to -35dB
-            music = normalize_volume(music, target_dBFS=-35.0)
-            
+            music = AudioSegment.from_mp3(selected_track) - 25
             while len(music) < len(combined_vocals): music += music
             final_mix = music[:len(combined_vocals) + 5000].fade_out(3000).overlay(combined_vocals)
         else:
@@ -275,6 +269,7 @@ async def main():
         print("❌ Usage: python3 main.py <filename> OR python3 main.py RESUME")
         return
 
+    # LOGIC: Check if RESUME or FRESH RUN
     mode = sys.argv[1]
     
     if mode == "RESUME":
@@ -284,32 +279,30 @@ async def main():
             print("❌ No cache found. Run with a file first.")
             return
     else:
+        # FRESH RUN
         urls = load_urls(mode)
         if not urls: return
         print("🔍 Scraping...")
         texts = [fetch_article_text(u) for u in urls if fetch_article_text(u)]
         data = ai_cluster_and_summarize(texts)
-        if data: save_state(data)
+        if data: save_state(data) # Cache result immediately
 
+    # GENERATE AUDIO (Common to both modes)
     index_metadata = []
     for cluster in data.get("clusters", []):
         topic = cluster["topic"]
-        
-        # --- CRITICAL FIX: Sanitize Topics & Slugs ---
-        # Replace slashes and spaces in topic with underscores
-        safe_topic = topic.replace("/", "-").replace("\\", "-")
-        safe_topic = re.sub(r'[^\w\-_]', '_', safe_topic)
-        
         slug = re.sub(r'[^a-zA-Z0-9_]', '', cluster.get("file_slug", "Update"))
-        filename = f"{TODAY_STR}_{safe_topic}_{slug}.mp3"
+        filename = f"{TODAY_STR}_{topic}_{slug}.mp3"
         
         print(f"\n📺 Producing: {topic}")
         
+        # Recalculate Cast (Script logic needs to run again for safety)
         cast_dict = VOICE_CAST["Default"]
         for key in VOICE_CAST:
             if key.lower() in topic.lower(): cast_dict = VOICE_CAST[key]
         cast_names = list(cast_dict.keys())
 
+        # Generate Script
         script = generate_script(topic, cluster["dossier"], cast_names)
         if script:
             await produce_audio(topic, script, filename)

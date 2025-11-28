@@ -133,6 +133,7 @@ def load_urls(filename):
             if clean_url not in clean_urls:
                 clean_urls.add(clean_url)
                 final_urls.append(real_url)
+                # print(f"      + Added: {clean_url[:50]}...")
 
         except Exception: continue
 
@@ -272,7 +273,7 @@ def generate_index_html(clusters_metadata):
 # --- MAIN ---
 async def main():
     if len(sys.argv) < 2:
-        print("❌ Usage: python3 main.py <filename> OR python3 main.py RESUME")
+        print("❌ Usage: python3 main_v3.py <filename> OR python3 main_v3.py RESUME")
         return
 
     mode = sys.argv[1]
@@ -294,14 +295,8 @@ async def main():
     index_metadata = []
     for cluster in data.get("clusters", []):
         topic = cluster["topic"]
-        
-        # --- CRITICAL FIX: Sanitize Topics & Slugs ---
-        # Replace slashes and spaces in topic with underscores
-        safe_topic = topic.replace("/", "-").replace("\\", "-")
-        safe_topic = re.sub(r'[^\w\-_]', '_', safe_topic)
-        
         slug = re.sub(r'[^a-zA-Z0-9_]', '', cluster.get("file_slug", "Update"))
-        filename = f"{TODAY_STR}_{safe_topic}_{slug}.mp3"
+        filename = f"{TODAY_STR}_{topic}_{slug}.mp3"
         
         print(f"\n📺 Producing: {topic}")
         
