@@ -93,7 +93,6 @@ def check_and_clean_storage():
         if day_folders:
             oldest = day_folders[0]
             print(f"🗑️  Oldest folder found: {oldest}")
-            # Auto-delete check
             if len(sys.argv) > 1 and sys.argv[1] == "AUTO":
                  try: shutil.rmtree(oldest)
                  except: pass
@@ -197,8 +196,9 @@ def fetch_article_text(url):
         article.parse()
         
         headline = article.title
-        # snippet increased to 500 chars as requested for Stage 2
-        snippet = f"{headline}. {article.text[:500]}..."
+        # snippet is just headline + first 300 chars for clustering
+        snippet = f"{headline}. {article.text[:300]}..."
+        # full text capped at 2500 chars for the scriptwriter later
         full_text = article.text[:2500].replace("\n", " ")
         
         return {
@@ -209,14 +209,44 @@ def fetch_article_text(url):
         }
     except: return None
 
-# --- STAGE 3: THE EDITOR (GEN 7: MAP-REDUCE) ---
+# --- STAGE 3: THE EDITOR (GEN 6: ROBUST) ---
 def ai_cluster_and_summarize(article_objects):
-    print(f"🧠 Analyzing {len(article_objects)} articles...")
+    # 1. Volume Control: Strict Cap
+    if len(article_objects) > 120:
+        print(f"⚠️ High volume ({len(article_objects)}). Capping at 120 for stability.")
+        article_objects = article_objects[:120]
+
+    print(f"🧠 Analyzing {len(article_objects)} articles (Metadata only)...")
     
     # Map ID -> Article
     indexed_articles = {i: obj for i, obj in enumerate(article_objects)}
     
-    # Safety: Unlock Blockers
+    cluster_input = ""
+    for i, obj in indexed_articles.items():
+        cluster_input += f"ID [{i}]: {obj['headline']} - {obj['snippet'][:150]}\n"
+
+    prompt = """
+    You are the Editor. Group these news snippets into 3-5 broad Podcast Episodes.
+    
+    INSTRUCTIONS:
+    1. Group strictly by ID. 
+    2. Ignore minor stories. Focus on major themes.
+    3. OUTPUT JSON ONLY. No markdown.
+    
+    OUTPUT JSON FORMAT:
+    {
+        "clusters": [
+            { 
+              "topic": "Topic_Name", 
+              "file_slug": "Slug_Name",
+              "article_ids": [1, 14, 32] 
+            }
+        ]
+    }
+    
+    NEWS FEED:
+    """ + cluster_input
+
     safety_settings = [
         types.SafetySetting(category="HARM_CATEGORY_HATE_SPEECH", threshold="BLOCK_NONE"),
         types.SafetySetting(category="HARM_CATEGORY_DANGEROUS_CONTENT", threshold="BLOCK_NONE"),
@@ -224,146 +254,86 @@ def ai_cluster_and_summarize(article_objects):
         types.SafetySetting(category="HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold="BLOCK_NONE"),
     ]
 
-    # ----------------------------------------
-    # PHASE A: THE SORTER (Titles -> Broad Themes)
-    # ----------------------------------------
-    print("   -> Phase A: Sorting into broad themes (Titles only)...")
+    cluster_data = {}
+    last_response_text = ""
     
-    # Only send ID and Headline to keep it tiny
-    sort_input = ""
-    for i, obj in indexed_articles.items():
-        sort_input += f"ID [{i}]: {obj['headline']}\n"
-        
-    sort_prompt = """
-    You are a News Sorter. Assign each Article ID to ONE of these broad buckets:
-    [World, Politics, Tech, Sport, Culture, Economy, Science].
-    
-    OUTPUT JSON FORMAT:
-    {
-        "World": [1, 5, 20],
-        "Politics": [2, 8],
-        "Tech": [3]
-    }
-    
-    HEADLINES:
-    """ + sort_input
-
-    sorted_buckets = {}
-    
-    try:
-        response = client.models.generate_content(
-            model="gemini-2.5-flash",
-            contents=sort_prompt,
-            config=types.GenerateContentConfig(
-                response_mime_type="application/json",
-                safety_settings=safety_settings
-            )
-        )
-        if response.text:
-             clean_text = response.text.replace("```json", "").replace("```", "").strip()
-             sorted_buckets = json.loads(clean_text)
-    except Exception as e:
-        print(f"   ⚠️ Phase A Failed: {e}. Falling back to chunked processing.")
-        # Fallback: Just process in chunks of 50
-        sorted_buckets = {}
-        ids = list(indexed_articles.keys())
-        for i in range(0, len(ids), 50):
-            sorted_buckets[f"Batch_{i}"] = ids[i:i+50]
-
-    # ----------------------------------------
-    # PHASE B: THE PLANNER (Snippets -> Clusters)
-    # ----------------------------------------
-    final_clusters = {"clusters": []}
-    
-    for theme, ids in sorted_buckets.items():
-        # Clean IDs
-        valid_ids = []
-        if isinstance(ids, list):
-            for x in ids:
-                try: valid_ids.append(int(x))
-                except: pass
-        
-        if not valid_ids: continue
-        
-        print(f"   -> Phase B: Clustering '{theme}' ({len(valid_ids)} articles)...")
-        
-        # Prepare Snippets for this specific bucket
-        bucket_input = ""
-        for i in valid_ids:
-            if i in indexed_articles:
-                bucket_input += f"ID [{i}]: {indexed_articles[i]['snippet']}\n\n"
-        
-        bucket_prompt = f"""
-        You are the Editor for the '{theme}' desk.
-        Group these {len(valid_ids)} snippets into 1-3 tight Podcast Segments (Episodes).
-        
-        RULES:
-        1. Group by ID.
-        2. MERGE duplicates/related stories.
-        3. IGNORE irrelevant/tiny stories.
-        
-        OUTPUT JSON:
-        {{
-            "clusters": [
-                {{ "topic": "{theme}: Subtopic", "file_slug": "{theme}_Slug", "article_ids": [1, 2] }}
-            ]
-        }}
-        
-        SNIPPETS:
-        {bucket_input}
-        """
-        
+    # 2. Generate Clusters
+    for attempt in range(3):
         try:
-            # We allow higher tokens here because we are processing a subset
             response = client.models.generate_content(
                 model="gemini-2.5-flash",
-                contents=bucket_prompt,
+                contents=prompt,
                 config=types.GenerateContentConfig(
                     response_mime_type="application/json",
+                    max_output_tokens=4000, 
                     safety_settings=safety_settings
                 )
             )
             
             if response.text:
+                last_response_text = response.text # Save for debugging
                 clean_text = response.text.replace("```json", "").replace("```", "").strip()
-                bucket_data = json.loads(clean_text)
+                temp_data = json.loads(clean_text)
                 
-                # Standardize output
-                clusters = []
-                if isinstance(bucket_data, list): clusters = bucket_data
-                elif isinstance(bucket_data, dict): 
-                    # Try to find the list
-                    for k,v in bucket_data.items():
-                        if isinstance(v, list): 
-                            clusters = v
-                            break
+                # Logic to handle different JSON structures
+                if isinstance(temp_data, list):
+                    cluster_data = {"clusters": temp_data}
+                elif isinstance(temp_data, dict):
+                    if "clusters" in temp_data:
+                        cluster_data = temp_data
+                    else:
+                        # Find the first list value in the dict
+                        found = False
+                        for k, v in temp_data.items():
+                            if isinstance(v, list):
+                                cluster_data = {"clusters": v}
+                                found = True
+                                break
+                        if not found: cluster_data = {"clusters": []}
                 
-                # Re-hydrate with FULL TEXT for Stage 4
-                for c in clusters:
-                    full_dossier = ""
-                    source_urls = []
+                if cluster_data.get("clusters"):
+                    break
                     
-                    # Extract IDs flexibly
-                    c_ids = c.get("article_ids") or c.get("ids") or []
-                    for art_id in c_ids:
-                        try: art_id = int(art_id)
-                        except: continue
-                        
-                        if art_id in indexed_articles:
-                            obj = indexed_articles[art_id]
-                            full_dossier += f"HEADLINE: {obj['headline']}\nFACTS: {obj['full_text']}\n\n"
-                            source_urls.append(obj['url'])
-                    
-                    if full_dossier:
-                        final_clusters["clusters"].append({
-                            "topic": c.get("topic", theme),
-                            "file_slug": c.get("file_slug", "News"),
-                            "dossier": full_dossier,
-                            "source_urls": source_urls
-                        })
+        except Exception as e: 
+            print(f"   ⚠️ Gemini Error (Attempt {attempt+1}): {e}")
+            time.sleep(2)
 
-        except Exception as e:
-            print(f"      ⚠️ Failed to cluster {theme}: {e}")
+    # 3. Re-hydrate with Full Text
+    final_clusters = {"clusters": []}
+    
+    if "clusters" in cluster_data:
+        print(f"   -> Editor found {len(cluster_data['clusters'])} potential episodes.")
+        for c in cluster_data["clusters"]:
+            full_dossier = ""
+            source_urls = []
+            
+            # Flexible ID search (article_ids, ids, articles)
+            ids = c.get("article_ids") or c.get("ids") or c.get("articles") or []
+            
+            safe_ids = []
+            for x in ids:
+                try: safe_ids.append(int(x))
+                except: pass
+            
+            for art_id in safe_ids:
+                if art_id in indexed_articles:
+                    obj = indexed_articles[art_id]
+                    full_dossier += f"HEADLINE: {obj['headline']}\nFACTS: {obj['full_text']}\n\n"
+                    source_urls.append(obj['url'])
+            
+            # Only add if we actually found articles
+            if full_dossier and len(full_dossier) > 50:
+                final_clusters["clusters"].append({
+                    "topic": c.get("topic", "News"),
+                    "file_slug": c.get("file_slug", "Update"),
+                    "dossier": full_dossier, 
+                    "source_urls": source_urls
+                })
+    
+    # DEBUG: If empty, show why
+    if not final_clusters["clusters"]:
+        print("   ❌ DEBUG: No clusters formed. Dumping raw AI response for inspection:")
+        print(f"   --- START RAW RESP ---\n{last_response_text[:1000]}\n   --- END RAW RESP ---")
             
     return final_clusters
 
