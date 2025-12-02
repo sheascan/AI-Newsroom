@@ -17,10 +17,6 @@ from newspaper import Article
 from google import genai
 from google.genai import types
 
-# --- NEW IMPORTS FOR COVER ART ---
-from mutagen.mp3 import MP3
-from mutagen.id3 import ID3, APIC, TIT2, TPE1, TALB, error
-
 # --- CONFIGURATION & PATHS ---
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
@@ -65,49 +61,9 @@ def normalize_volume(sound, target_dBFS=-35.0):
     change_in_dBFS = target_dBFS - sound.dBFS
     return sound.apply_gain(change_in_dBFS)
 
-# --- HELPER: BRANDING MANAGER (COVER ART) ---
-def attach_cover_art(mp3_path, topic_title):
-    """Embeds cover.jpg and metadata into the MP3."""
-    cover_path = os.path.join(BASE_DIR, "cover.jpg")
-    
-    if not os.path.exists(cover_path):
-        return # No cover found, skip gracefully
-
-    try:
-        audio = MP3(mp3_path, ID3=ID3)
-        
-        # Add ID3 tag if it doesn't exist
-        try: 
-            audio.add_tags()
-        except error: 
-            pass
-
-        # 1. Add the Cover Image
-        with open(cover_path, 'rb') as albumart:
-            audio.tags.add(
-                APIC(
-                    encoding=3,          # 3 is UTF-8
-                    mime='image/jpeg',   # image/jpeg or image/png
-                    type=3,              # 3 is the cover image
-                    desc=u'Cover',
-                    data=albumart.read()
-                )
-            )
-            
-        # 2. Add Text Metadata
-        audio.tags.add(TIT2(encoding=3, text=topic_title))
-        audio.tags.add(TPE1(encoding=3, text="AI News Anchor"))
-        audio.tags.add(TALB(encoding=3, text=f"Daily Briefing {TODAY_STR}"))
-
-        audio.save()
-        print(f"      🖼️  Cover art attached.")
-        
-    except Exception as e:
-        print(f"      ⚠️ Failed to attach cover: {e}")
-
 # --- HELPER: STORAGE MANAGER ---
 def check_and_clean_storage():
-    """Checks total size of DATA_DIR. If > 1GB, prompts to delete oldest daily folders."""
+    """Checks total size of DATA_DIR. If > 200MB, prompts to delete oldest daily folders."""
     total_size = 0
     for dirpath, dirnames, filenames in os.walk(DATA_DIR):
         for f in filenames:
@@ -137,6 +93,7 @@ def check_and_clean_storage():
         if day_folders:
             oldest = day_folders[0]
             print(f"🗑️  Oldest folder found: {oldest}")
+            # Auto-delete check
             if len(sys.argv) > 1 and sys.argv[1] == "AUTO":
                  try: shutil.rmtree(oldest)
                  except: pass
@@ -240,7 +197,7 @@ def fetch_article_text(url):
         article.parse()
         
         headline = article.title
-        # snippet increased to 500 chars for better context
+        # snippet increased to 500 chars as requested for Stage 2
         snippet = f"{headline}. {article.text[:500]}..."
         full_text = article.text[:2500].replace("\n", " ")
         
@@ -252,12 +209,14 @@ def fetch_article_text(url):
         }
     except: return None
 
-# --- STAGE 3: THE EDITOR (GEN 7.5: MAP-REDUCE + ROUNDUPS) ---
+# --- STAGE 3: THE EDITOR (GEN 7: MAP-REDUCE) ---
 def ai_cluster_and_summarize(article_objects):
     print(f"🧠 Analyzing {len(article_objects)} articles...")
     
+    # Map ID -> Article
     indexed_articles = {i: obj for i, obj in enumerate(article_objects)}
     
+    # Safety: Unlock Blockers
     safety_settings = [
         types.SafetySetting(category="HARM_CATEGORY_HATE_SPEECH", threshold="BLOCK_NONE"),
         types.SafetySetting(category="HARM_CATEGORY_DANGEROUS_CONTENT", threshold="BLOCK_NONE"),
@@ -265,9 +224,12 @@ def ai_cluster_and_summarize(article_objects):
         types.SafetySetting(category="HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold="BLOCK_NONE"),
     ]
 
-    # --- PHASE A: THE SORTER ---
+    # ----------------------------------------
+    # PHASE A: THE SORTER (Titles -> Broad Themes)
+    # ----------------------------------------
     print("   -> Phase A: Sorting into broad themes (Titles only)...")
     
+    # Only send ID and Headline to keep it tiny
     sort_input = ""
     for i, obj in indexed_articles.items():
         sort_input += f"ID [{i}]: {obj['headline']}\n"
@@ -302,15 +264,19 @@ def ai_cluster_and_summarize(article_objects):
              sorted_buckets = json.loads(clean_text)
     except Exception as e:
         print(f"   ⚠️ Phase A Failed: {e}. Falling back to chunked processing.")
+        # Fallback: Just process in chunks of 50
         sorted_buckets = {}
         ids = list(indexed_articles.keys())
         for i in range(0, len(ids), 50):
             sorted_buckets[f"Batch_{i}"] = ids[i:i+50]
 
-    # --- PHASE B: THE PLANNER (WITH ROUNDUP LOGIC) ---
+    # ----------------------------------------
+    # PHASE B: THE PLANNER (Snippets -> Clusters)
+    # ----------------------------------------
     final_clusters = {"clusters": []}
     
     for theme, ids in sorted_buckets.items():
+        # Clean IDs
         valid_ids = []
         if isinstance(ids, list):
             for x in ids:
@@ -321,6 +287,7 @@ def ai_cluster_and_summarize(article_objects):
         
         print(f"   -> Phase B: Clustering '{theme}' ({len(valid_ids)} articles)...")
         
+        # Prepare Snippets for this specific bucket
         bucket_input = ""
         for i in valid_ids:
             if i in indexed_articles:
@@ -328,17 +295,17 @@ def ai_cluster_and_summarize(article_objects):
         
         bucket_prompt = f"""
         You are the Editor for the '{theme}' desk.
-        Group these {len(valid_ids)} snippets into Podcast Segments.
+        Group these {len(valid_ids)} snippets into 1-3 tight Podcast Segments (Episodes).
         
-        CRITICAL RULES:
-        1. **AVOID SINGLETONS:** Do not create a cluster for a single article unless it is a massive breaking event. 
-        2. **CREATE ROUNDUPS:** If you have several unrelated single stories, group them into one cluster called "{theme} News Roundup".
-        3. **MERGE AGGRESSIVELY:** If two stories are remotely related, group them.
+        RULES:
+        1. Group by ID.
+        2. MERGE duplicates/related stories.
+        3. IGNORE irrelevant/tiny stories.
         
         OUTPUT JSON:
         {{
             "clusters": [
-                {{ "topic": "{theme}: Subtopic", "file_slug": "{theme}_Slug", "article_ids": [1, 2, 5] }}
+                {{ "topic": "{theme}: Subtopic", "file_slug": "{theme}_Slug", "article_ids": [1, 2] }}
             ]
         }}
         
@@ -347,6 +314,7 @@ def ai_cluster_and_summarize(article_objects):
         """
         
         try:
+            # We allow higher tokens here because we are processing a subset
             response = client.models.generate_content(
                 model="gemini-2.5-flash",
                 contents=bucket_prompt,
@@ -360,18 +328,22 @@ def ai_cluster_and_summarize(article_objects):
                 clean_text = response.text.replace("```json", "").replace("```", "").strip()
                 bucket_data = json.loads(clean_text)
                 
+                # Standardize output
                 clusters = []
                 if isinstance(bucket_data, list): clusters = bucket_data
                 elif isinstance(bucket_data, dict): 
+                    # Try to find the list
                     for k,v in bucket_data.items():
                         if isinstance(v, list): 
                             clusters = v
                             break
                 
+                # Re-hydrate with FULL TEXT for Stage 4
                 for c in clusters:
                     full_dossier = ""
                     source_urls = []
                     
+                    # Extract IDs flexibly
                     c_ids = c.get("article_ids") or c.get("ids") or []
                     for art_id in c_ids:
                         try: art_id = int(art_id)
@@ -395,37 +367,16 @@ def ai_cluster_and_summarize(article_objects):
             
     return final_clusters
 
-# --- STAGE 4: THE PRODUCER (DYNAMIC DURATION) ---
-def generate_script(topic, dossier, cast_names, source_count):
+# --- STAGE 4: THE PRODUCER ---
+def generate_script(topic, dossier, cast_names):
     host1, host2 = cast_names
-    
-    # DYNAMIC LOGIC: Adjust length based on content volume
-    if source_count <= 2:
-        duration_desc = "3-minute 'Flash Update'"
-        word_count = "400 words"
-        style_note = "Fast-paced, punchy, high energy. No filler."
-    elif source_count <= 5:
-        duration_desc = "7-minute 'Standard Briefing'"
-        word_count = "1000 words"
-        style_note = "Balanced, informative, conversational."
-    else:
-        duration_desc = "12-minute 'Deep Dive'"
-        word_count = "1600 words"
-        style_note = "In-depth analysis, comprehensive, detailed discussion."
-
-    print(f"      📝 Mode: {duration_desc} ({source_count} articles)")
-
     prompt = f"""
-    Write a {duration_desc} podcast script (approx {word_count}).
+    Write a detailed, in-depth 10-minute podcast script (approx 1,500 words).
     TOPIC: {topic}
     HOSTS: {host1} & {host2}.
     
-    STYLE: {style_note}
-    
-    INSTRUCTIONS:
-    1. Use the provided DOSSIER.
-    2. Do NOT make up facts to fill time.
-    3. If the dossier is short, keep the script short and punchy.
+    STYLE: Professional, conversational, deep-dive analysis.
+    CONTENT: Use the provided DOSSIER.
     
     OUTPUT JSON: [ {{"speaker": "{host1}", "text": "..."}}, {{"speaker": "{host2}", "text": "..."}} ]
     DOSSIER: {dossier}
@@ -441,7 +392,7 @@ def generate_script(topic, dossier, cast_names, source_count):
         except: time.sleep(5)
     return []
 
-# --- STAGE 5: THE SOUND ENGINEER (SMART DJ + BRANDING) ---
+# --- STAGE 5: THE SOUND ENGINEER (SMART DJ) ---
 async def produce_audio(topic, script, filename):
     if not os.path.exists(TODAY_OUTPUT_DIR): os.makedirs(TODAY_OUTPUT_DIR)
     
@@ -510,8 +461,6 @@ async def produce_audio(topic, script, filename):
             
     try:
         final_mix.export(filepath, format="mp3")
-        # Apply Cover Art
-        attach_cover_art(filepath, topic)
         print(f"   ✅ Published: {filename}")
         return filename
     except Exception as e: 
@@ -581,11 +530,9 @@ async def main():
     index_metadata = []
     for cluster in data.get("clusters", []):
         topic = cluster["topic"]
-        
-        # CLEAN FILENAMES (UNDERSCORE FIX)
-        safe_topic = re.sub(r'[^\w]+', '_', topic).strip('_')[:25]
-        safe_slug = re.sub(r'[^\w]+', '_', cluster.get("file_slug", "Update")).strip('_')[:25]
-        filename = f"{TODAY_STR}_{safe_topic}_{safe_slug}.mp3"
+        slug = re.sub(r'[^\w]', '', cluster.get("file_slug", "Update"))[:20]
+        safe_topic = re.sub(r'[^\w]', '_', topic)[:20]
+        filename = f"{TODAY_STR}_{safe_topic}_{slug}.mp3"
         
         print(f"\n📺 Studio: Producing '{topic}'...")
         cast_dict = VOICE_CAST["Default"]
@@ -593,10 +540,7 @@ async def main():
             if key.lower() in topic.lower(): cast_dict = VOICE_CAST[key]
         cast_names = list(cast_dict.keys())
 
-        # Determine source count for dynamic duration
-        source_count = len(cluster.get("source_urls", []))
-        
-        script = generate_script(topic, cluster["dossier"], cast_names, source_count)
+        script = generate_script(topic, cluster["dossier"], cast_names)
         if script:
             final_file = await produce_audio(topic, script, filename)
             if final_file:
