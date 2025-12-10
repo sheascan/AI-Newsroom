@@ -15,11 +15,18 @@ SAVE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "inp
 # TARGET LIST: Add the newsletters you want to grab
 # Leave 'subject' as None to match only by sender
 TARGETS = [
+    {"sender": "info@editorial.theguardian.com", "subject": None},
     {"sender": "newsletters@theguardian.com", "subject": "First Edition"},
-    {"sender": "info@editorial.theguardian.com", "subject": "The Guardian Headlines:"},
-    {"sender": "nytdirect@nytimes.com", "subject": "The World:"},
+ #   {"sender": "info@editorial.theguardian.com", "subject": "First Edition"},
+ #   {"sender": "info@editorial.theguardian.com", "subject": "The Guardian Headlines:"},
+    {"sender": "nytdirect@nytimes.com", "subject": "The World:"}, 
+    {"sender": "techpresso@dupple.com", "subject": None},
+    {"sender": "irishtimesinsidepolitics@comms.irishtimes.com", "subject": None},
     {"sender": "irishtimesmorningbriefing@comms.irishtimes.com", "subject": None},
+    {"sender": "irishtimessportsbriefing@comms.irishtimes.com","subject": None},
+    {"sender": "onthemoneytheirishtimes@comms.irishtimes.com","subject": None},
     {"sender": "newsletter@news.metro.co.uk","subject":"Your daily football updates are here"},
+    {"sender": "@news.theregister.co.uk","subject":None},
 ]
 
 def clean_filename(subject):
