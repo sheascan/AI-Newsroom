@@ -1,84 +1,4 @@
 .
-├── archive
-│   ├── main_v2.py
-│   ├── main_v3.py
-│   └── requirements (1).txt
-├── data
-│   ├── arkiv
-│   │   ├── 26Nov_Economic and Fiscal Governance_national_local_budgeting.mp3
-│   │   ├── 26Nov_International Relations and Societal Future_europe_global_challenges.mp3
-│   │   ├── 26Nov_Irish Political Affairs_government_dil_accountability.mp3
-│   │   ├── 26Nov_Social Policy and Regulatory Change_social_regulatory_reforms.mp3
-│   │   ├── 27Nov_AI Innovations & Ethical Debates_AI_Products_Ethics_Impact.mp3
-│   │   ├── 27Nov_Arsenal Club News & Transfers_arsenal_news_transfers.mp3
-│   │   ├── 27Nov_Arsenal FC Previews & Analysis_Arsenal_Team_Updates_Transfers.mp3
-│   │   ├── 27Nov_Arsenal FC Updates_Arsenal_Team_Match_News.mp3
-│   │   ├── 27Nov_Autonomous Systems & Cybersecurity Threats_Robotics_Drones_Security.mp3
-│   │   ├── 27Nov_Crime, Safety & Professional Standards_cyclist_death_suspended_sentence.mp3
-│   │   ├── 27Nov_Crime, Safety & Professional Standards_dc_national_guard_shooting.mp3
-│   │   ├── 27Nov_Crime, Safety & Professional Standards_gynaecologist_misconduct_fine.mp3
-│   │   ├── 27Nov_Crime, Safety & Professional Standards_hong_kong_fatal_fire.mp3
-│   │   ├── 27Nov_Crime, Safety & Professional Standards_pharmacist_fraud_inquiry.mp3
-│   │   ├── 27Nov_Crime, Safety & Professional Standards_tayto_plant_fatality.mp3
-│   │   ├── 27Nov_Culinary & Cultural Experiences_Food_Art_Travel.mp3
-│   │   ├── 27Nov_Culture Lifestyle Games_NYT_Culture_Lifestyle_Puzzles.mp3
-│   │   ├── 27Nov_Culture, Lifestyle & Personal Stories_americans_ireland_thanksgiving.mp3
-│   │   ├── 27Nov_Culture, Lifestyle & Personal Stories_im_a_celeb_review.mp3
-│   │   ├── 27Nov_Culture, Lifestyle & Personal Stories_irish_expat_reflection.mp3
-│   │   ├── 27Nov_Culture, Lifestyle & Personal Stories_yamamori_sushi_review.mp3
-│   │   ├── 27Nov_Geopolitics & Global Events_Global_Geopolitics_Crises.mp3
-│   │   ├── 27Nov_Global & US Politics_Geopolitics_Domestic_Current_Events.mp3
-│   │   ├── 27Nov_Health, Environment & Tech Futures_AI_Climate_Health_Innov.mp3
-│   │   ├── 27Nov_International Politics & Media_Global_Affairs_Media_Scrutiny.mp3
-│   │   ├── 27Nov_International & US Affairs_Global_Crisis_US_Politics.mp3
-│   │   ├── 27Nov_Irish Public & Political Affairs_asylum_fees_waiver.mp3
-│   │   ├── 27Nov_Irish Public & Political Affairs_forged_garda_vetting.mp3
-│   │   ├── 27Nov_Irish Public & Political Affairs_metrolink_ranelagh_challenge.mp3
-│   │   ├── 27Nov_Irish Public & Political Affairs_mount_merrion_steps_cost.mp3
-│   │   ├── 27Nov_Irish Public & Political Affairs_podcast_top_stories.mp3
-│   │   ├── 27Nov_Irish Public & Political Affairs_president_connolly_transition.mp3
-│   │   ├── 27Nov_Irish Public & Political Affairs_rds_laya_naming_row.mp3
-│   │   ├── 27Nov_Major European Club Highlights_euro_club_highlights.mp3
-│   │   ├── 27Nov_Manchester United FC Insights_Man_Utd_Performance_Transfers.mp3
-│   │   ├── 27Nov_Manchester United Performance & Tactics_man_utd_performance.mp3
-│   │   ├── 27Nov_Manchester United Transfer Speculation_man_utd_transfers.mp3
-│   │   ├── 27Nov_Manchester United Updates_Manchester_United_Transfers_Performances.mp3
-│   │   ├── 27Nov_Metro Website & Newsletter Services_Site_Subscription_Management.mp3
-│   │   ├── 27Nov_NYT Company & Platform_NYT_Operations_Platform_Support.mp3
-│   │   ├── 27Nov_NYT Digital Platform & Privacy_NYT_Platform_Privacy_Games.mp3
-│   │   ├── 27Nov_Other Premier League & General Football_Football_League_Overview_Chelsea.mp3
-│   │   ├── 27Nov_Politics_Irish_Domestic_Affairs.mp3
-│   │   ├── 27Nov_Public Health, Social Issues & Conservation_Health_Society_Environment_UK.mp3
-│   │   ├── 27Nov_Sports & Adventure_Global_Sports_Endurance_Challenges.mp3
-│   │   ├── 27Nov_Sports Analysis_Sports_Team_Athlete_Focus.mp3
-│   │   ├── 27Nov_Sports, Culture & Consumer Insights_Football_Strictly_Shopping.mp3
-│   │   ├── 27Nov_Sports, Games & Arts_Sports_Gaming_Culture.mp3
-│   │   ├── 27Nov_Tech Industry Trends & Media_Market_Business_News_Platforms.mp3
-│   │   ├── 27Nov_UK Politics and Economic Policy_UK_Policy_Economy_Politics.mp3
-│   │   ├── 27Nov_UK Politics & Fiscal Policy_UK_Budget_Reeves_Farage.mp3
-│   │   ├── 27Nov_Wider Football Developments_Football_Leagues_Players_Controversy.mp3
-│   │   ├── 27Nov_World News_Global_Incidents.mp3
-│   │   ├── Podcast_Index_26Nov.html
-│   │   ├── Podcast_Index_27Nov (1).html
-│   │   └── Podcast_Index_27Nov.html
-│   ├── cache
-│   │   └── latest_run.json
-│   ├── inputs
-│   │   ├── Dublin City Council will not remove Tricolours erected by anti-immigration groups (1).eml
-│   │   ├── Friday briefing_ How will Ukraine fare this winter as Trump pushes for a controversial peace deal_ _ _ Ukraine _ The Guardian.mhtml
-│   │   ├── The World_ An A.I. boom or bubble_.eml
-│   │   └── Your daily football updates are here (1).eml
-│   └── outputs
-│       ├── 27Nov_Crime_Courts_Justice_System_Report.mp3
-│       ├── 27Nov_Culture_Lifestyle_Culture_Dublin_Life.mp3
-│       ├── 27Nov_Culture___Lifestyle_Irish_Diaspora_Journeys.mp3
-│       ├── 27Nov_Culture___Lifestyle_Irish_Global_Identity.mp3
-│       ├── 27Nov_Politics_Irish_Politics_Update.mp3
-│       ├── 27Nov_World_News_Global_Events_Personal_Impact.mp3
-│       ├── 27Nov_World News_Global_Headlines_Brief.mp3
-│       ├── 27Nov_World_News_Global_Headlines_Brief.mp3
-│       └── Podcast_Index_27Nov.html
-├── main.py
 ├── music
 │   ├── Amazing Grace - 2015_5_31_15_3_7 1.mp3
 │   ├── bbc_fast-flowi_nhu0507504.mp3
@@ -86,6 +6,24 @@
 │   ├── bbc_rainforest_00008089.mp3
 │   ├── bbc_surf---ske_07056062.mp3
 │   ├── bbc_water---wa_07031080.mp3
+│   ├── converted_Amazing Grace - 2015_5_31_15_3_7 1.mp3
+│   ├── converted_bbc_fast-flowi_nhu0507504.mp3
+│   ├── converted_bbc_household-_07067055.mp3
+│   ├── converted_bbc_rainforest_00008089.mp3
+│   ├── converted_bbc_surf---ske_07056062.mp3
+│   ├── converted_bbc_water---wa_07031080.mp3
+│   ├── converted_Danny Boy - PIPES.mp3
+│   ├── converted_Danny Boy - WHISTLE - 2015_5_31_16_1.mp3
+│   ├── converted_Flower of Scotland - 2015_5_31_15_ 1.mp3
+│   ├── converted_Highland Cathedral  - 2015_5_31_14_4.mp3
+│   ├── converted_Maras Wedding 2015_5_31_14_54_36.mp3
+│   ├── converted_pan-flute-dream-calm-background-music-film-acoustic-peaceful-408584.mp3
+│   ├── converted_pan-flute-greensleeves-144616.mp3
+│   ├── converted_Scotland the Brave.mp3
+│   ├── converted_Skye Boat Song - WHISTLE - 2015_5_31.mp3
+│   ├── converted_Tura Lura - PIPES - 2015_5_31_15_6_2.mp3
+│   ├── converted_When Irish Eyes - WHISTLE - 2015_5_3.mp3
+│   ├── converted_Wild Mountain Thyme on whistle 1.mp3
 │   ├── Danny Boy - PIPES.mp3
 │   ├── Danny Boy - WHISTLE - 2015_5_31_16_1.mp3
 │   ├── Flower of Scotland - 2015_5_31_15_ 1.mp3
@@ -94,11 +32,36 @@
 │   ├── pan-flute-dream-calm-background-music-film-acoustic-peaceful-408584.mp3
 │   ├── pan-flute-greensleeves-144616.mp3
 │   ├── Scotland the Brave.mp3
+│   ├── Sharon Shannon feat. Frankie Gavin, Michael McGoldrick & Jim Murray - Billy in the Low Ground： Billy.mp3
+│   ├── Sharon Shannon feat. Frankie Gavin, Michael McGoldrick & Jim Murray - Calum's Road [Audio Stream].mp3
+│   ├── Sharon Shannon feat. Frankie Gavin, Michael McGoldrick & Jim Murray - Summer's Coming： Summer's Comi.mp3
+│   ├── Sharon Shannon feat. Frankie Gavin, Michael McGoldrick & Jim Murray - The Bass Rock： The Bass Rock ⧸.mp3
+│   ├── Sharon Shannon feat. Frankie Gavin, Michael McGoldrick & Jim Murray - The Buck's of Oranmore： King o.mp3
+│   ├── Sharon Shannon feat. Frankie Gavin, Michael McGoldrick & Jim Murray - The Cappatagle Shuffle： Jim Do.mp3
+│   ├── Sharon Shannon feat. Frankie Gavin, Michael McGoldrick & Jim Murray - The Cat's Miaow： The Cat's Mia.mp3
+│   ├── Sharon Shannon feat. Frankie Gavin, Michael McGoldrick & Jim Murray - The Clare Reel： The Clare Reel.mp3
+│   ├── Sharon Shannon feat. Frankie Gavin, Michael McGoldrick & Jim Murray - The Jewels of the Ocean： The J.mp3
+│   ├── Sharon Shannon feat. Frankie Gavin, Michael McGoldrick & Jim Murray - The Road to Corrandulla： The L.mp3
+│   ├── Sharon Shannon feat. Frankie Gavin, Michael McGoldrick & Jim Murray - The Rookery： Paidin O'Rafferty.mp3
+│   ├── Sharon Shannon feat. Steve Earle - The Galway Girl [Audio Stream].mp3
 │   ├── Skye Boat Song - WHISTLE - 2015_5_31.mp3
 │   ├── Tura Lura - PIPES - 2015_5_31_15_6_2.mp3
 │   ├── When Irish Eyes - WHISTLE - 2015_5_3.mp3
 │   └── Wild Mountain Thyme on whistle 1.mp3
+├── check_gemini_models.py
+├── check_gemini_simples.py
+├── cover.jpg
+├── email_harvest.py
+├── main_gen101.py
+├── main_gen102.py
+├── main_gen103.py
+├── main_gen104.py
+├── main_gen105.py
+├── main_gen32.py
+├── main.py -> main_gen104.py
+├── podcast
 ├── requirements.txt
-└── structure.txt
+├── structure.txt
+└── test_audio.mp3
 
-8 directories, 94 files
+2 directories, 63 files
