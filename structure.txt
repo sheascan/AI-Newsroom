@@ -1,4 +1,9 @@
 .
+├── misc-bitz
+│   ├── check_gemini_models.py
+│   ├── check_gemini_simples.py
+│   ├── test_audio.mp3
+│   └── test.py
 ├── music
 │   ├── Amazing Grace - 2015_5_31_15_3_7 1.mp3
 │   ├── bbc_fast-flowi_nhu0507504.mp3
@@ -48,20 +53,13 @@
 │   ├── Tura Lura - PIPES - 2015_5_31_15_6_2.mp3
 │   ├── When Irish Eyes - WHISTLE - 2015_5_3.mp3
 │   └── Wild Mountain Thyme on whistle 1.mp3
-├── check_gemini_models.py
-├── check_gemini_simples.py
 ├── cover.jpg
 ├── email_harvest.py
-├── main_gen101.py
-├── main_gen102.py
-├── main_gen103.py
-├── main_gen104.py
-├── main_gen105.py
-├── main_gen32.py
-├── main.py -> main_gen104.py
+├── main_gen130.py
+├── main.py -> main_gen130.py
 ├── podcast
+├── readme.txt
 ├── requirements.txt
-├── structure.txt
-└── test_audio.mp3
+└── structure.txt
 
-2 directories, 63 files
+3 directories, 60 files
