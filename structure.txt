@@ -1,4 +1,5 @@
 .
+├── Gcloud -> /mnt/chromeos/GoogleDrive/MyDrive/Podcasts/
 ├── misc-bitz
 │   ├── check_gemini_models.py
 │   ├── check_gemini_simples.py
@@ -53,13 +54,33 @@
 │   ├── Tura Lura - PIPES - 2015_5_31_15_6_2.mp3
 │   ├── When Irish Eyes - WHISTLE - 2015_5_3.mp3
 │   └── Wild Mountain Thyme on whistle 1.mp3
+├── tldr_curation
+│   ├── inputs
+│   │   ├── 19Dec_HashiCorp_Wrapped_Powering_Dropbox_Dash_2026_Obser.eml
+│   │   ├── 19Dec_OpenAI_eyes_830M_GPT_52_Codex_Anthropic_opens_Agen.eml
+│   │   ├── 19Dec_Pwning_Mintlify_EC2_Instance_Attestation_GPT_52_Co.eml
+│   │   └── 19Dec_TikTok_signs_deal_GPT_52_Codex_2025_tech_salaries_.eml
+│   ├── templates
+│   │   └── index.html
+│   ├── harvest_tldr.py
+│   └── tldr_picker.py
 ├── cover.jpg
 ├── email_harvest.py
+├── gen_feed.py
 ├── main_gen130.py
-├── main.py -> main_gen130.py
+├── main_gen132.py
+├── main_gen133.py
+├── main_gen134.py
+├── main_gen135.py
+├── main_gen136.py
+├── main_gen137.py
+├── main_gen138.py
+├── main_gen139.py
+├── main.py -> main_gen139.py
 ├── podcast
 ├── readme.txt
 ├── requirements.txt
+├── run_studio.sh
 └── structure.txt
 
-3 directories, 60 files
+7 directories, 77 files

@@ -1,0 +1,1501 @@
+Delivered-To: mike.mcconigley@gmail.com
+Received: by 2002:ac9:40c9:0:b0:605:93f6:5e02 with SMTP id y9csp178166ocg;
+        Fri, 19 Dec 2025 04:19:57 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IFFIKt9ccCCAvtGi5Wk//J1TYQcCnwdCqmA7Isib1aOh/H383/zurITVwNyZkdhKmiit5rE
+X-Received: by 2002:a05:6214:1bcf:b0:87c:282b:aa28 with SMTP id 6a1803df08f44-88c5001fe35mr94978836d6.1.1766146796985;
+        Fri, 19 Dec 2025 04:19:56 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1766146796; cv=none;
+        d=google.com; s=arc-20240605;
+        b=VLHCnwKC8YY7klJC6x1KIyykudlrlFe4ZXfpks4wPEQ0ZGLzIoThJsQHCAcyhlnw7b
+         Bklzo9NS6GS+0aSW8UoNw3UWyEKH+i8nck8LveucOdYQ13aD/NM3/7BJ21ZS6d9xaCYD
+         cHk6fZCpNYeD5vNLtZ6DvW6aqw4NbmDvPFM39Z2WNu15EAJShuBhJyLwUI7YPPNRwfl8
+         LENLFTcW5V5K3j0bcluT0fQLbpyvDHpeO9gKomcnHZQDl7bi6OK0TzvXVLaQaOZrjNAt
+         TVZuxvXcKEhsv973NUiElb4PfztcR8WgXTI3V4QydlSsai7wGzJEDC9DXieP4/rVuy2s
+         DevA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:date:mime-version:list-unsubscribe-post
+         :list-unsubscribe:subject:to:from:dkim-signature:dkim-signature;
+        bh=sjvPUx2V7YlsOtgmWNxCjXRLsfDNPs7uZFJq0xNWi4s=;
+        fh=tUTYCbTOUI69DxYKXGXRz08XnPP7jEKRU6E5rS0DFR4=;
+        b=EXvfT2pEgLJjuLU7HPxTpEo42uxU90OXT1j5B4YPUrgiTOErS+YxD37fmoBr0MSFzl
+         d+a+8WVnhwsvL/bgGT8nrwoDy8Lh8FI43atXbAf0g0yJEKaFJbgAaoLqtkOGUYqA0Ziw
+         XfNxqJU0F+iypMNSkX7E5XCh5APqnW0ltNuP9tJlpb0OaZXp/fqZb4VKSOkVjfs8Zzmt
+         Jl0f07mV8LyNGQf8PZ/zS1/OdoazIVdB+/k2UIUH6LQbSdwWoPNdxVFlSi58k+R8IcWd
+         nXFAxqTMaGXrq6IBWd7PSrI5VXs++k/cwmBBYbtBRI/rc215M/X7/J21K9jor59JP5E/
+         CsDA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=UKoJqaPC;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=qATMHpJ+;
+       spf=pass (google.com: domain of 0100019b368d6c08-9ca4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000@dailyupdate.tldrnewsletter.com designates 54.240.77.25 as permitted sender) smtp.mailfrom=0100019b368d6c08-9ca4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+Return-Path: <0100019b368d6c08-9ca4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000@dailyupdate.tldrnewsletter.com>
+Received: from a77-25.smtp-out.amazonses.com (a77-25.smtp-out.amazonses.com. [54.240.77.25])
+        by mx.google.com with ESMTPS id 6a1803df08f44-88d9871a1c9si28768676d6.379.2025.12.19.04.19.56
+        for <mike.mcconigley@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Fri, 19 Dec 2025 04:19:56 -0800 (PST)
+Received-SPF: pass (google.com: domain of 0100019b368d6c08-9ca4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000@dailyupdate.tldrnewsletter.com designates 54.240.77.25 as permitted sender) client-ip=54.240.77.25;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=UKoJqaPC;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=qATMHpJ+;
+       spf=pass (google.com: domain of 0100019b368d6c08-9ca4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000@dailyupdate.tldrnewsletter.com designates 54.240.77.25 as permitted sender) smtp.mailfrom=0100019b368d6c08-9ca4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ygiuxamnxevikrd5dtfwanslhs6b24mt; d=tldrnewsletter.com;
+	t=1766146796;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type;
+	bh=MuMVoXz/oATEl00p4CBhVtZXAfn/Sd00Zq332uKZQPg=;
+	b=UKoJqaPC6dNnXk5z66spm8TncaXv13AkM7RfOP1Twjp8mkWySWOikF4MNrGDqybF
+	Bc9vkm7NbMSVq2TMA6u+fA97rUeEf2SfReZL0p7L/sD7C65DblHAxgnE3BulAguIDSv
+	+ZZRSeU3r1uL4qURBYEhYHCriQ8P83DCMe6ObHdY=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1766146796;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type:Feedback-ID;
+	bh=MuMVoXz/oATEl00p4CBhVtZXAfn/Sd00Zq332uKZQPg=;
+	b=qATMHpJ+zHf1Lnxvoj5qbNsLHhdDO4VNurKfcPyooR9LJ5AznyGm47phexde5aZO
+	wJWrhiZEIEaxfxrgwYhUD+/ICPcWJGwpJPK3nbqIHrDiCZwCkjy3g/X0GtuzyhuN1Yy
+	3M1AY1RtvYFIo16GLihNlXPUEfgvoAT14o6jRT50=
+From: TLDR Dev <dan@tldrnewsletter.com>
+To: mike.mcconigley@gmail.com
+Subject: Pwning Mintlify =?utf-8?Q?=F0=9F=91=A8=E2=80=8D=F0=9F=92=BB=2C?=
+ EC2 Instance Attestation =?utf-8?Q?=F0=9F=92=BB=2C?= GPT-5.2-Codex
+ =?utf-8?Q?=F0=9F=9A=80=C2=A0?=
+X-Entity-Ref-Id: b275b482-ff71-4e79-8e06-2bc37f1574e3
+X-EmailOctopus-Parent-Id: 64bb75b8-dcc4-11f0-94da-654616935820
+X-EmailOctopus-Parent-Type-Id: campaign
+X-EmailOctopus-List-Id: e8d201ca-3e93-11ed-9a32-0241b9615763
+X-EmailOctopus-List-Contact-Id: 6b0d84e0-a670-11f0-8b4a-c5e0a2ae1fe1
+X-EmailOctopus-Started-Preparing-At: 2025-12-19T12:01:21+00:00
+X-EmailOctopus-Sent-At: 2025-12-19T12:19:56+00:00
+X-EmailOctopus-Team-Id: 66987ef2-4f4c-11e9-a3c9-06b79b628af2
+X-EmailOctopus-Version: 4
+List-Unsubscribe: <https://a.tldrnewsletter.com/unsubscribe?ep=1&l=e8d201ca-3e93-11ed-9a32-0241b9615763&lc=6b0d84e0-a670-11f0-8b4a-c5e0a2ae1fe1&p=64bb75b8-dcc4-11f0-94da-654616935820&pt=campaign&pv=4&spa=1766145681&t=1766146796&s=4e5b82e5539e14d8ac78dfa4b37df7a9bcef9a0d8d676482e25340f8c7490a23>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-EmailOctopus-Ses-Configuration-Set-Name: emailoctopus-a9f7b12f74f3c968d9408897fb35539c
+MIME-Version: 1.0
+Date: Fri, 19 Dec 2025 12:19:56 +0000
+Message-ID: <0100019b368d6c08-9ca4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000@email.amazonses.com>
+Content-Type: multipart/alternative; boundary=gvm5oLui
+Feedback-ID: ::1.us-east-1.Dj5/7DYmgk+n1sSGGXSQSLIthSjNQ0MGtV5Dro1Tr8U=:AmazonSES
+X-SES-Outgoing: 2025.12.19-54.240.77.25
+
+--gvm5oLui
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Daniel, a 16-year-old hacker, along with friends, uncovered
+supply-chain =
+vulnerabilities in Mintlify, an AI documentation
+platform=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0
+
+=
+
+ Sign Up [1] |Advertise [2]|View Online [3]=20
+
+=09=09TLDR=20
+
+=09=
+=09TOGETHER WITH [Fastly] [4]
+
+=C2=A0TLDR DEV 2025-12-19
+
+ BRING YO=
+UR C++ LOGIC TO THE EDGE WITH THE FASTLY COMPUTE SDK
+(SPONSOR) [4]=20
+
+=
+ C++ remains the gold standard for performance-critical applications,
+and=
+ you can now combine its unparalleled control and speed with the
+power of=
+ Fastly's [4] global network and WASM runtime.=C2=A0
+
+The SDK is design=
+ed to feel familiar to C++ developers [4] while
+providing idiomatic bindi=
+ngs to Fastly's powerful edge primitives like
+KV Stores, Config Stores, a=
+nd external service calls. You can use it
+for gaming, IoT, compression, a=
+nd more.
+
+The Fastly C++ SDK is now in Beta for your most demanding wor=
+kloads.
+Dive in and start building [4]
+
+=F0=9F=A7=91=E2=80=8D=
+=F0=9F=92=BB=20
+
+ARTICLES & TUTORIALS
+
+ HOW WE PWNED X (TWITTER), VER=
+CEL, CURSOR, DISCORD, AND HUNDREDS OF
+COMPANIES THROUGH A SUPPLY-CHAIN AT=
+TACK (7 MINUTE READ) [5]=20
+
+ Daniel, a 16-year-old hacker, along with fr=
+iends, uncovered
+supply-chain vulnerabilities in Mintlify, an AI document=
+ation platform
+used by many top companies. Daniel specifically found a cr=
+oss-site
+scripting (XSS) vulnerability that allowed malicious scripts to =
+be
+injected into documentation through SVG files, exploiting Mintlify's=
+
+internal file fetching. This flaw had a widespread impact, affecting
+m=
+ajor customers like Discord, X (Twitter), Vercel, and Cursor, but
+Mintlif=
+y quickly fixed the issue once the hackers notified it.=20
+
+ WHAT IS EC2 =
+INSTANCE ATTESTATION (6 MINUTE READ) [6]=20
+
+ EC2 instance attestation ma=
+kes it easier to validate that only
+trusted software is running on EC2 in=
+stances. It is now available in
+all AWS Commercial Regions, including the=
+ AWS GovCloud (US) Regions.
+EC2 Instance Attestation can unlock more use =
+cases for trusted
+execution environments, like LLM use, since it allows t=
+he utilization
+of GPU features. This article provides a demo that shows h=
+ow a service
+provider can build and deploy a service that can be verified=
+ from
+source code, and how a service consumer can verify those claims by =
+the
+provider.=20
+
+=F0=9F=A7=A0=20
+
+OPINIONS & ADVICE
+
+ YOUR JOB I=
+S TO DELIVER CODE YOU HAVE PROVEN TO WORK (6 MINUTE READ)
+[7]=20
+
+ A so=
+ftware developer's core responsibility is to deliver code that
+has been p=
+roven to work. The practice of submitting large, untested
+pull requests i=
+s a dereliction of duty that unfairly burdens
+reviewers. Proving code wor=
+ks involves two essential steps: thorough
+manual testing to personally ve=
+rify functionality and demonstrate it,
+and bundling automated tests that =
+validate the change.=20
+
+ ONE WEIRD TRICK TO MANAGE ENGINEERING CRISES; S=
+TAKEHOLDERS LOVE IT (5
+MINUTE READ) [8]=20
+
+ Tactical wins address a sp=
+ecific symptom with a specific fix. These
+wins matter because they demons=
+trate traction. Strategic investments
+don't fix individual problems, but =
+instead eliminate entire classes of
+problems. The trick is to sequence ta=
+ctical wins and strategic
+investments to reinforce each other. Transparen=
+cy will help
+stakeholders understand the tradeoffs you are making.=20
+
+=
+=F0=9F=9A=80=20
+
+LAUNCHES & TOOLS
+
+ LLM PATTERNS: ROUTERS, TOOLS GROU=
+PS, AND UNIFIED ENDPOINTS (SPONSOR)
+[9]=20
+
+ What's the best architectu=
+re patterns for production MCP servers?
+This Elastic Path series [9] prov=
+ides practical blueprints, tool
+grouping best practices, and optimized de=
+signs for anyone making
+reliable, high-performance AI systems. Compare pa=
+tterns to find the
+trade-off that best fits your services. Learn how to b=
+uild
+AI-connected infrastructure [9]=20
+
+ INTRODUCING GPT-5.2-CODEX (9 =
+MINUTE READ) [10]=20
+
+ OpenAI has launched GPT-5.2-Codex. This new model =
+improves
+performance on long-horizon tasks, large code changes, and in Wi=
+ndows
+environments. It sets new benchmarks in agentic coding. The model's=
+
+capabilities have already led to the discovery of real-world
+vulnerabi=
+lities.=20
+
+ PILOTING CLAUDE IN CHROME (8 MINUTE READ) [11]=20
+
+ Claude=
+ in Chrome has an integration with Claude Code, where Claude
+Code can tes=
+t code directly in the browser to validate its work.
+Claude can also see =
+client-side errors via console logs.=20
+
+ PICKNPLACE.JS (1 MINUTE READ) [=
+12]=20
+
+ picknplace.js is a simpler alternative to the usual drag-and-dro=
+p
+experience, especially on mobile devices. It streamlines the process
+=
+into a three-step interaction: pick, scroll, then place. When an item
+is =
+picked, an interactive duplicate of the list appears, allowing
+users to e=
+asily position their selection.=20
+
+=F0=9F=8E=81=20
+
+MISCELLANEOUS
+=
+
+ NVME IS NOT A HARD DISK (14 MINUTE READ) [13]=20
+
+ NVMe (nonvolatile =
+memory express) is a storage access and transport
+protocol for flash and =
+next-generation solid-state drives that
+delivers high throughput and fast=
+ response times for all types of
+enterprise workloads. NVME over fabric o=
+ver TCP allows you to make
+storage available even if it is in the wrong b=
+ox. Distributed storage
+may be complicated, but it has a number of very a=
+ttractive use cases.=20
+
+ THE ANATOMY OF LCP =E2=80=93 A DEEP DIVE INTO S=
+UB-PARTS (20 MINUTE READ)
+[14]=20
+
+ Largest Contentful Paint (LCP) is a=
+ Core Web Vitals metric that
+measures when the most meaningful piece of c=
+ontent on a page becomes
+visible. Optimizing it matters because users sho=
+uld see this primary
+content as early as possible. There's more to optimi=
+zing than just
+reducing image file sizes. This article breaks down LCP in=
+to sub-parts
+(Time to First Byte, Resource Load Delay, Resource Load Dura=
+tion, and
+Element Render Delay) to explain exactly where time is being sp=
+ent, so
+readers know how to diagnose slow LCP on sites.=20
+
+=E2=9A=
+=A1=20
+
+QUICK LINKS
+
+ TURN THE PUBLIC WEB INTO LLM-READY DATA WITH FI=
+RECRAWL (SPONSOR) [15]
+
+
+ Introducing /agent by Firecrawl Just descri=
+be what you need - with or
+without a URL then /agent searches, navigates,=
+ and gathers information
+from the widest range of websites, reaching data=
+ no other API can. Try
+out the research preview today. [16]=20
+
+ MINIFI=
+CATION ISN'T OBFUSCATION - CLAUDE CODE PROVES IT (6 MINUTE
+READ) [17]=20
+=
+
+ The minification process in JavaScript doesn't actually secure
+anythi=
+ng, it just makes it hard to read.=20
+
+ A BETTER WAY TO WORK WITH CLAUDE =
+CODE (WEBSITE) [18]=20
+
+ Nimbalyst is a local WYSIWYG editor and session =
+manager that lets
+users iterate with Claude Code with full context.=20
+=
+
+ ONE AGENT ISN'T ENOUGH (12 MINUTE READ) [19]=20
+
+ Agentic coding ofte=
+n struggles with variance, as the stochastic
+nature of LLMs means a singl=
+e agent run might miss the optimal
+solution.=20
+
+ GITHUB WALKS BACK PLA=
+N TO CHARGE FOR SELF-HOSTED RUNNERS (7 MINUTE
+READ) [20]=20
+
+ GitHub re=
+versed its decision to charge for self-hosted Actions
+runners, postponing=
+ the billing change to re-evaluate its approach.=20
+
+Love TLDR? Tell your=
+ friends and get rewards!
+
+ Share your referral link below with friends=
+ to get free TLDR swag!=20
+
+ https://refer.tldr.tech/19465406/3 [21]=20
+=
+
+=09=09 Track your referrals here. [22]=20
+
+Want to advertise in TLDR? =
+=F0=9F=93=B0
+
+ If your company is interested in reaching an audience of=
+ web
+developers and engineering decision makers, you may want to ADVERTIS=
+E
+WITH US [23].=20
+
+Want to work at TLDR? =F0=9F=92=BC
+
+ APPLY HERE=
+ [24], CREATE YOUR OWN ROLE [25] or send a friend's resume
+to jobs@tldr.t=
+ech and get $1k if we hire them! TLDR is one of INC.'S
+BEST BOOTSTRAPPED =
+BUSINESSES [26] of 2025.=20
+
+ If you have any comments or feedback, just =
+respond to this email!=20
+
+Thanks for reading,=20
+Priyam Mohanty, Jenny X=
+u [27] & Ceora Ford=20
+
+ Manage your subscriptions [28] to our other news=
+letters on tech,
+startups, and programming. Or if TLDR Dev isn't for you,=
+ please
+unsubscribe [29].=20
+
+=20
+
+Links:
+------
+[1] https://tldr=
+.tech/dev?utm_source=3Dtldrdev
+[2] https://advertise.tldr.tech/?utm_sourc=
+e=3Dtldrdev&utm_medium=3Dnewsletter&utm_campaign=3Dadvertisetopnav
+[3] ht=
+tps://a.tldrnewsletter.com/web-version?ep=3D1&lc=3D6b0d84e0-a670-11f0-8b4a-=
+c5e0a2ae1fe1&p=3D64bb75b8-dcc4-11f0-94da-654616935820&pt=3Dcampaign&t=3D176=
+6146796&s=3D9885a82d9d995e25245771702b8dbc3904fcab6c30c95d924ef2ea1ec296243=
+e
+[4] https://www.fastly.com/blog/unparalleled-performance-bring-your-log=
+ic-edge?utm_campaign=3DNAMER_Display-Website-Visits_TLDR-Newsletter_EN_Digi=
+tal_Brand-Awareness&utm_source=3DTLDR&utm_medium=3Ddisplay
+[5] https://gi=
+st.github.com/hackermondev/5e2cdc32849405fff6b46957747a2d28?utm_source=3Dtl=
+drdev
+[6] https://blog.richardfan.xyz/2025/12/18/what-is-ec2-instance-att=
+estation.html?utm_source=3Dtldrdev
+[7] https://simonwillison.net/2025/Dec=
+/18/code-proven-to-work/?utm_source=3Dtldrdev
+[8] https://www.brethorstin=
+g.com/blog/2025/12/one-weird-trick-to-manage-engineering-crises;-stakeholde=
+rs-love-it/?utm_source=3Dtldrdev
+[9] https://www.elasticpath.com/blog/mcp=
+-magic-moments-guide-to-llm-patterns?&utm_medium=3Dnewsletter&utm_source=3D=
+TLDR
+[10] https://links.tldrnewsletter.com/GsXHsk
+[11] https://claude.c=
+om/blog/claude-for-chrome?utm_source=3Dtldrdev
+[12] https://jgthms.com/pi=
+cknplace.js/?utm_source=3Dtldrdev
+[13] https://blog.koehntopp.info/2021/0=
+5/25/nvme-is-not-a-hard-disk.html?utm_source=3Dtldrdev
+[14] https://calen=
+dar.perfplanet.com/2025/the-anatomy-of-lcp-a-deep-dive-into-sub-parts/?utm_=
+source=3Dtldrdev
+[15] https://firecrawl.dev/?utm_source=3Dtldrdev
+[16] =
+https://firecrawl.link/adops-tldr-tech-i1rd
+[17] https://martinalderson.c=
+om/posts/minification-isnt-obfuscation-claude-code-proves-it/?utm_source=3D=
+tldrdev
+[18] https://nimbalyst.com/?utm_source=3Dtldrdev
+[19] https://b=
+enr.build/blog/one-agent-isnt-enough?utm_source=3Dtldrdev
+[20] https://ww=
+w.theregister.com/2025/12/17/github_charge_dev_own_hardware/?td=3Drt-3a&utm=
+_source=3Dtldrdev
+[21] https://refer.tldr.tech/19465406/3
+[22] https://=
+hub.sparklp.co/sub_aaa8e06944fa/3
+[23] https://advertise.tldr.tech/?utm_s=
+ource=3Dtldrdev&utm_medium=3Dnewsletter&utm_campaign=3Dadvertisecta
+[24] =
+https://jobs.ashbyhq.com/tldr.tech
+[25] https://jobs.ashbyhq.com/tldr.tec=
+h/c227b917-a6a4-40ce-8950-d3e165357871
+[26] https://www.linkedin.com/feed=
+/update/urn:li:activity:7401699691039830016/
+[27] https://www.linkedin.co=
+m/in/xu-jenny/
+[28] https://tldr.tech/dev/manage?email=3Dmike.mcconigley%=
+40gmail.com
+[29] https://a.tldrnewsletter.com/unsubscribe?ep=3D1&l=3De8d2=
+01ca-3e93-11ed-9a32-0241b9615763&lc=3D6b0d84e0-a670-11f0-8b4a-c5e0a2ae1fe1&=
+p=3D64bb75b8-dcc4-11f0-94da-654616935820&pt=3Dcampaign&pv=3D4&spa=3D1766145=
+681&t=3D1766146796&s=3D4e5b82e5539e14d8ac78dfa4b37df7a9bcef9a0d8d676482e253=
+40f8c7490a23
+--gvm5oLui
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html charset=3DUTF-8"><meta charset=3D"UTF-8"><meta name=3D"v=
+iewport" content=3D"width=3Ddevice-width"><meta name=3D"x-apple-disable-mes=
+sage-reformatting"><title>TLDR Dev</title><meta name=3D"color-scheme" conte=
+nt=3D"light dark"><meta name=3D"supported-color-schemes" content=3D"light d=
+ark"><style type=3D"text/css">
+=09=09=09:root {
+=09=09=09=09color-scheme: light dark; supported-color-schemes: light dark;
+=09=09=09}
+=09=09=09
+=09=09=09*,
+=09=09=09*:after,
+=09=09=09*:before {
+=09=09=09=09-webkit-box-sizing: border-box; -moz-box-sizing: border-box; bo=
+x-sizing: border-box;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+=09=09=09}
+=09=09=09
+=09=09=09html,
+=09=09=09body,
+=09=09=09.document {
+=09=09=09=09width: 100% !important; height: 100% !important; margin: 0; pad=
+ding: 0;
+=09=09=09}
+=09=09=09
+=09=09=09body {
+=09=09=09=09-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: g=
+rayscale; text-rendering: optimizeLegibility;
+=09=09=09}
+=09=09=09
+=09=09=09div[style*=3D"margin: 16px 0"] {
+=09=09=09=09margin: 0 !important;
+=09=09=09}
+=09=09=09
+=09=09=09table,
+=09=09=09td {
+=09=09=09=09mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+=09=09=09}
+=09=09=09
+=09=09=09table {
+=09=09=09=09border-spacing: 0; border-collapse: collapse; table-layout: fix=
+ed; margin: 0 auto;
+=09=09=09}
+=09=09=09
+=09=09=09img {
+=09=09=09=09-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+=09=09=09}
+=09=09=09
+=09=09=09*[x-apple-data-detectors] {
+=09=09=09=09color: inherit !important; text-decoration: none !important;
+=09=09=09}
+=09=09=09
+=09=09=09.x-gmail-data-detectors,
+=09=09=09.x-gmail-data-detectors *,
+=09=09=09.aBn {
+=09=09=09=09border-bottom: 0 !important; cursor: default !important;
+=09=09=09}
+=09=09=09
+=09=09=09.btn {
+=09=09=09=09-webkit-transition: all 200ms ease; transition: all 200ms ease;
+=09=09=09}
+=09=09=09
+=09=09=09.btn:hover {
+=09=09=09=09background-color: #f67575; border-color: #f67575;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+=09=09=09}
+=09=09=09
+=09=09=09@media screen and (max-width: 600px) {
+=09=09=09=09.container {
+=09=09=09=09=09width: 100%; margin: auto;
+=09=09=09=09}
+=09=09=09=09.stack {
+=09=09=09=09=09display: block!important; width: 100%!important; max-width: =
+100%!important;
+=09=09=09=09}
+=09=09=09=09.btn {
+=09=09=09=09=09display: block; width: 100%; text-align: center;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09body,
+=09=09=09p,
+=09=09=09td,
+=09=09=09tr,
+=09=09=09.body,
+=09=09=09table,
+=09=09=09h1,
+=09=09=09h2,
+=09=09=09h3,
+=09=09=09h4,
+=09=09=09h5,
+=09=09=09h6,
+=09=09=09div,
+=09=09=09span {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09body,
+=09=09=09=09p,
+=09=09=09=09td,
+=09=09=09=09tr,
+=09=09=09=09.body,
+=09=09=09=09table,
+=09=09=09=09h1,
+=09=09=09=09h2,
+=09=09=09=09h3,
+=09=09=09=09h4,
+=09=09=09=09h5,
+=09=09=09=09h6,
+=09=09=09=09div,
+=09=09=09=09span {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09a {
+=09=09=09=09color: inherit !important; text-decoration: underline !importan=
+t;
+=09=09=09}
+
+=09=09</style><!--[if mso | ie]>
+=09=09<style type=3D"text/css">
+=09=09=09a {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09a {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09 </style>
+=09=09=09<![endif]--></head><body class=3D"">
+
+
+
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">Daniel, a =
+16-year-old hacker, along with friends, uncovered supply-chain vulnerabilit=
+ies in Mintlify, an AI documentation platform&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;</div>
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align=3D"center" class=3D"document"><tbody><tr><td valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"container" width=3D"600"><tbody><tr class=3D"inner-body"><td>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr class=3D"header"><td bgcolor=3D"" class=3D"containe=
+r">
+
+<table width=3D"100%"><tbody><tr><td class=3D"container">
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"margin-top: 0px;" width=3D"100%"><tbody><tr><td style=
+=3D"padding: 0px;">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div style=3D"text-align: center;">
+<span style=3D"margin-right: 0px;"><a href=3D"https://tracking.tldrnewslett=
+er.com/CL0/https:%2F%2Ftldr.tech%2Fdev%3Futm_source=3Dtldrdev/1/0100019b368=
+d6c08-9ca4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000/c0UDc3C1FLL4zp7Yt2v6YOBzw=
+i6qcuNOIsd1KNezCLE=3D436" rel=3D"noopener noreferrer" target=3D"_blank"><sp=
+an>Sign Up</span></a>
+|<span style=3D"margin-right: 2px; margin-left: 2px;"><a href=3D"https://tr=
+acking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_sour=
+ce=3Dtldrdev%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertisetopnav/1/0=
+100019b368d6c08-9ca4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000/RJ6kkgqUkYdzofh=
+N__kf4tWuK6FHNhoafTybLQM4B0Y=3D436" rel=3D"noopener noreferrer" target=3D"_=
+blank"><span>Advertise</span></a></span>|<span style=3D"margin-left: 2px;">=
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsle=
+tter.com%2Fweb-version%3Fep=3D1%26lc=3D6b0d84e0-a670-11f0-8b4a-c5e0a2ae1fe1=
+%26p=3D64bb75b8-dcc4-11f0-94da-654616935820%26pt=3Dcampaign%26t=3D176614679=
+6%26s=3D9885a82d9d995e25245771702b8dbc3904fcab6c30c95d924ef2ea1ec296243e/1/=
+0100019b368d6c08-9ca4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000/ikJwlBBJalt7-R=
+sGvzfoEb9BvzPRgkpynoPy8LbrQkA=3D436"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"text-=
+align: center;"><span data-darkreader-inline-color=3D"" style=3D"--darkread=
+er-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30=
+px;">T</span><span style=3D"font-size: 30px;"><span data-darkreader-inline-=
+color=3D"" style=3D"color: rgb(232, 192, 96) !important; --darkreader-inlin=
+e-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-colo=
+r=3D"" style=3D"color: rgb(101, 195, 173) !important; --darkreader-inline-c=
+olor:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-=
+color=3D"" style=3D"--darkreader-inline-color:#dd6e6e; color: rgb(220, 107,=
+ 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr id=3D"together-with"><td align=3D"cent=
+er" height=3D"20" style=3D"vertical-align:middle !important;" valign=3D"mid=
+dle" width=3D"100%"><strong style=3D"vertical-align:middle !important; heig=
+ht: 100%;">Together With </strong>
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.fastly.c=
+om%2Fblog%2Funparalleled-performance-bring-your-logic-edge%3Futm_campaign=
+=3DNAMER_Display-Website-Visits_TLDR-Newsletter_EN_Digital_Brand-Awareness%=
+26utm_source=3DTLDR%26utm_medium=3Ddisplay/1/0100019b368d6c08-9ca4a0db-f815=
+-4271-8c1a-ab1b4d1fcde9-000000/tg2xGyC1gsDEd7MZAGJ3f5gKIiNWPygiT45IF0wEr10=
+=3D436"><img src=3D"https://images.tldr.tech/fastly.png" valign=3D"middle" =
+style=3D"vertical-align: middle !important; height: 100%;" alt=3D"Fastly"><=
+/a></td></tr></tbody></table>
+
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody><tr=
+><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0;=
+">
+<div style=3D"text-align: center;">
+
+<h1><strong>&nbsp;TLDR Dev <span id=3D"date">2025-12-19</span></strong></h1=
+>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody><tr=
+ id=3D"sponsy-copy"><td class=3D"container" style=3D"padding: 15px 15px;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.fastly.com%2Fblog%2Funparalleled-performance-bring-=
+your-logic-edge%3Futm_campaign=3DNAMER_Display-Website-Visits_TLDR-Newslett=
+er_EN_Digital_Brand-Awareness%26utm_source=3DTLDR%26utm_medium=3Ddisplay/2/=
+0100019b368d6c08-9ca4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000/ii3Fyg-4LTIziE=
+le7Cpm7CHT8rRSJ-OIlfQxeE71vCU=3D436">
+                                    <span>
+                                        <strong>Bring your C++ logic to the=
+ edge with the Fastly Compute SDK (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    C++ remains the gold standard for perfo=
+rmance-critical applications, and you can now combine its unparalleled cont=
+rol and speed with the power of<a href=3D"https://tracking.tldrnewsletter.c=
+om/CL0/https:%2F%2Fwww.fastly.com%2Fblog%2Funparalleled-performance-bring-y=
+our-logic-edge%3Futm_campaign=3DNAMER_Display-Website-Visits_TLDR-Newslette=
+r_EN_Digital_Brand-Awareness%26utm_source=3DTLDR%26utm_medium=3Ddisplay/3/0=
+100019b368d6c08-9ca4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000/0M66Z2GN5eSvLXc=
+9wbtCGnDgVS1zdeKZT31q7KIZHh0=3D436" rel=3D"noopener noreferrer nofollow" ta=
+rget=3D"_blank"><span> Fastly's</span></a> global network and WASM runtime.=
+&nbsp;
+
+<p></p>
+
+<p>The SDK is<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2=
+Fwww.fastly.com%2Fblog%2Funparalleled-performance-bring-your-logic-edge%3Fu=
+tm_campaign=3DNAMER_Display-Website-Visits_TLDR-Newsletter_EN_Digital_Brand=
+-Awareness%26utm_source=3DTLDR%26utm_medium=3Ddisplay/4/0100019b368d6c08-9c=
+a4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000/kIW6yDZ2cEQkur_aRutKGF4lk5BmH_wYe=
+XSvDMD3JQI=3D436" rel=3D"noopener noreferrer nofollow" target=3D"_blank"><s=
+pan> designed to feel familiar to C++ developers</span></a> while providing=
+ idiomatic bindings to Fastly's powerful edge primitives like KV Stores, Co=
+nfig Stores, and external service calls. You can use it for gaming, IoT, co=
+mpression, and more.</p>
+
+<p>The Fastly C++ SDK is now in Beta for your most demanding workloads. <a =
+href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.fastly.com%=
+2Fblog%2Funparalleled-performance-bring-your-logic-edge%3Futm_campaign=3DNA=
+MER_Display-Website-Visits_TLDR-Newsletter_EN_Digital_Brand-Awareness%26utm=
+_source=3DTLDR%26utm_medium=3Ddisplay/5/0100019b368d6c08-9ca4a0db-f815-4271=
+-8c1a-ab1b4d1fcde9-000000/HONFcqMzWdvW4iU2N9usXraP_HJgpAMwSbQo2IPbKMA=3D436=
+" rel=3D"noopener noreferrer nofollow" target=3D"_blank"><span>Dive in and =
+start building</span></a>
+
+
+</p>
+</span></span></div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=3D""><td class=3D"container">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td style=3D"padding: 0px;">
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=A7=91=E2=80=8D=F0=9F=92=BB</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Articles &amp; Tutorials</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgist.github.com%2Fhackermondev%2F5e2cdc32849405fff6b469=
+57747a2d28%3Futm_source=3Dtldrdev/1/0100019b368d6c08-9ca4a0db-f815-4271-8c1=
+a-ab1b4d1fcde9-000000/JDbGgNQOmJ0CA6QaxP3T36O-taYPbFV8qpqWvaFnWwY=3D436">
+                                    <span>
+                                        <strong>How we pwned X (Twitter), V=
+ercel, Cursor, Discord, and hundreds of companies through a supply-chain at=
+tack (7 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Daniel, a 16-year-old hacker, along wit=
+h friends, uncovered supply-chain vulnerabilities in Mintlify, an AI docume=
+ntation platform used by many top companies. Daniel specifically found a cr=
+oss-site scripting (XSS) vulnerability that allowed malicious scripts to be=
+ injected into documentation through SVG files, exploiting Mintlify's inter=
+nal file fetching. This flaw had a widespread impact, affecting major custo=
+mers like Discord, X (Twitter), Vercel, and Cursor, but Mintlify quickly fi=
+xed the issue once the hackers notified it.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fblog.richardfan.xyz%2F2025%2F12%2F18%2Fwhat-is-ec2-inst=
+ance-attestation.html%3Futm_source=3Dtldrdev/1/0100019b368d6c08-9ca4a0db-f8=
+15-4271-8c1a-ab1b4d1fcde9-000000/EuP1vqKmW21XiGOhZTC5LNMzXldALKhErmo6HOFDYA=
+0=3D436">
+                                    <span>
+                                        <strong>What is EC2 Instance Attest=
+ation (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    EC2 instance attestation makes it easie=
+r to validate that only trusted software is running on EC2 instances. It is=
+ now available in all AWS Commercial Regions, including the AWS GovCloud (U=
+S) Regions. EC2 Instance Attestation can unlock more use cases for trusted =
+execution environments, like LLM use, since it allows the utilization of GP=
+U features. This article provides a demo that shows how a service provider =
+can build and deploy a service that can be verified from source code, and h=
+ow a service consumer can verify those claims by the provider.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=A7=A0</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Opinions &amp; Advice</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fsimonwillison.net%2F2025%2FDec%2F18%2Fcode-proven-to-wo=
+rk%2F%3Futm_source=3Dtldrdev/1/0100019b368d6c08-9ca4a0db-f815-4271-8c1a-ab1=
+b4d1fcde9-000000/4LyP7OW78775hIbNg5ucwWnQkOTcO-o3POPrBIEJ6vM=3D436">
+                                    <span>
+                                        <strong>Your job is to deliver code=
+ you have proven to work (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    A software developer's core responsibil=
+ity is to deliver code that has been proven to work. The practice of submit=
+ting large, untested pull requests is a dereliction of duty that unfairly b=
+urdens reviewers. Proving code works involves two essential steps: thorough=
+ manual testing to personally verify functionality and demonstrate it, and =
+bundling automated tests that validate the change.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.brethorsting.com%2Fblog%2F2025%2F12%2Fone-weird-tri=
+ck-to-manage-engineering-crises;-stakeholders-love-it%2F%3Futm_source=3Dtld=
+rdev/1/0100019b368d6c08-9ca4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000/OSLSHqT=
+Qg5uifjqXcvP2YAJT76bAOKYY7oRTvQn4hkM=3D436">
+                                    <span>
+                                        <strong>One weird trick to manage e=
+ngineering crises; stakeholders love it (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Tactical wins address a specific sympto=
+m with a specific fix. These wins matter because they demonstrate traction.=
+ Strategic investments don't fix individual problems, but instead eliminate=
+ entire classes of problems. The trick is to sequence tactical wins and str=
+ategic investments to reinforce each other. Transparency will help stakehol=
+ders understand the tradeoffs you are making.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=9A=80</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Launches &amp; Tools</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.elasticpath.com%2Fblog%2Fmcp-magic-moments-guide-to=
+-llm-patterns%3F%26utm_medium=3Dnewsletter%26utm_source=3DTLDR/1/0100019b36=
+8d6c08-9ca4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000/l4cfrrHUYdo8xZuzcbwbF2Dh=
+QFZbRLFzf6I6OIpUc5E=3D436">
+                                    <span>
+                                        <strong>LLM patterns: routers, tool=
+s groups, and unified endpoints (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    What's the best architecture patterns f=
+or production MCP servers? This <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.elasticpath.com%2Fblog%2Fmcp-magic-moments-guide-to=
+-llm-patterns%3F%26utm_medium=3Dnewsletter%26utm_source=3DTLDR/2/0100019b36=
+8d6c08-9ca4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000/Xq_u-QwGCQEmJ-w8aBnjgw79=
+fsnuPTk66l9mP5gq7MA=3D436" rel=3D"noopener noreferrer nofollow" target=3D"_=
+blank"><span>Elastic Path series</span></a> provides practical blueprints, =
+tool grouping best practices, and optimized designs for anyone making relia=
+ble, high-performance AI systems. Compare patterns to find the trade-off th=
+at best fits your services. <a href=3D"https://tracking.tldrnewsletter.com/=
+CL0/https:%2F%2Fwww.elasticpath.com%2Fblog%2Fmcp-magic-moments-guide-to-llm=
+-patterns%3F%26utm_medium=3Dnewsletter%26utm_source=3DTLDR/3/0100019b368d6c=
+08-9ca4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000/jfpQNtLN1ChwE2FfXHb-pCXmLb38=
+O_tBkwFIq5Cq8sU=3D436" rel=3D"noopener noreferrer nofollow" target=3D"_blan=
+k"><span>Learn how to build AI-connected infrastructure</span></a>
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FGsXHsk/1/0100019b368d6c08-9c=
+a4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000/VzHYw2K-XZuUPMa2iGzufWYMGqG_p-HiP=
+9PqlY5viAg=3D436">
+                                    <span>
+                                        <strong>Introducing GPT-5.2-Codex (=
+9 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    OpenAI has launched GPT-5.2-Codex. This=
+ new model improves performance on long-horizon tasks, large code changes, =
+and in Windows environments. It sets new benchmarks in agentic coding. The =
+model's capabilities have already led to the discovery of real-world vulner=
+abilities.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fclaude.com%2Fblog%2Fclaude-for-chrome%3Futm_source=3Dtl=
+drdev/1/0100019b368d6c08-9ca4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000/PCXKlC=
+j89mctu0mvA-_uSF_a1gMEawaSZ3O7QRvJacM=3D436">
+                                    <span>
+                                        <strong>Piloting Claude in Chrome (=
+8 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Claude in Chrome has an integration wit=
+h Claude Code, where Claude Code can test code directly in the browser to v=
+alidate its work. Claude can also see client-side errors via console logs.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fjgthms.com%2Fpicknplace.js%2F%3Futm_source=3Dtldrdev/1/=
+0100019b368d6c08-9ca4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000/fLOAQHz3V0fPTo=
+Z1c7Y5wmk-D2d7g95idxqPUCT9s8Y=3D436">
+                                    <span>
+                                        <strong>picknplace.js (1 minute rea=
+d)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    picknplace.js is a simpler alternative =
+to the usual drag-and-drop experience, especially on mobile devices. It str=
+eamlines the process into a three-step interaction: pick, scroll, then plac=
+e. When an item is picked, an interactive duplicate of the list appears, al=
+lowing users to easily position their selection.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=8E=81</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><strong><h1>Miscellaneous</h1></strong><=
+/div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fblog.koehntopp.info%2F2021%2F05%2F25%2Fnvme-is-not-a-ha=
+rd-disk.html%3Futm_source=3Dtldrdev/1/0100019b368d6c08-9ca4a0db-f815-4271-8=
+c1a-ab1b4d1fcde9-000000/K_7knXIsaFMk2m3wQ1TiXlcdaFjAaM_5mGTvh9E4csA=3D436">
+                                    <span>
+                                        <strong>NVME is not a hard disk (14=
+ minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    NVMe (nonvolatile memory express) is a =
+storage access and transport protocol for flash and next-generation solid-s=
+tate drives that delivers high throughput and fast response times for all t=
+ypes of enterprise workloads. NVME over fabric over TCP allows you to make =
+storage available even if it is in the wrong box. Distributed storage may b=
+e complicated, but it has a number of very attractive use cases.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fcalendar.perfplanet.com%2F2025%2Fthe-anatomy-of-lcp-a-d=
+eep-dive-into-sub-parts%2F%3Futm_source=3Dtldrdev/1/0100019b368d6c08-9ca4a0=
+db-f815-4271-8c1a-ab1b4d1fcde9-000000/3TN8rrx1T6tYmPi_kBgum9EIG6RUyLEiQMtxo=
+9UHOUE=3D436">
+                                    <span>
+                                        <strong>The Anatomy of LCP =E2=80=
+=93 A Deep Dive into Sub-Parts (20 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Largest Contentful Paint (LCP) is a Cor=
+e Web Vitals metric that measures when the most meaningful piece of content=
+ on a page becomes visible. Optimizing it matters because users should see =
+this primary content as early as possible. There's more to optimizing than =
+just reducing image file sizes. This article breaks down LCP into sub-parts=
+ (Time to First Byte, Resource Load Delay, Resource Load Duration, and Elem=
+ent Render Delay) to explain exactly where time is being spent, so readers =
+know how to diagnose slow LCP on sites.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=E2=9A=
+=A1</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Ffirecrawl.dev%2F%3Futm_source=3Dtldrdev/1/0100019b368d6=
+c08-9ca4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000/gc_ybvpEkZ5SJPqi129QKkyBc9d=
+fFmf19ld6dBwd-Ws=3D436">
+                                    <span>
+                                        <strong>Turn the public web into LL=
+M-ready data with Firecrawl (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Introducing /agent by Firecrawl Just de=
+scribe what you need - with or without a URL then /agent searches, navigate=
+s, and gathers information from the widest range of websites, reaching data=
+ no other API can. <a href=3D"https://tracking.tldrnewsletter.com/CL0/https=
+:%2F%2Ffirecrawl.link%2Fadops-tldr-tech-i1rd/1/0100019b368d6c08-9ca4a0db-f8=
+15-4271-8c1a-ab1b4d1fcde9-000000/6voAFmHH4t8JHcAZRyb947wiN_qrntthv_CcvkgWT1=
+A=3D436" rel=3D"noopener noreferrer nofollow" target=3D"_blank"><span>Try o=
+ut the research preview today.</span></a>
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fmartinalderson.com%2Fposts%2Fminification-isnt-obfuscat=
+ion-claude-code-proves-it%2F%3Futm_source=3Dtldrdev/1/0100019b368d6c08-9ca4=
+a0db-f815-4271-8c1a-ab1b4d1fcde9-000000/qCLj_plpOq4XBHdwBqQxgPeSTNZojhWwj7m=
+-Xp6pgA4=3D436">
+                                    <span>
+                                        <strong>Minification isn't obfuscat=
+ion - Claude Code proves it (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    The minification process in JavaScript =
+doesn't actually secure anything, it just makes it hard to read.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fnimbalyst.com%2F%3Futm_source=3Dtldrdev/1/0100019b368d6=
+c08-9ca4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000/FJ9_PC6elA0izc0vgdu_GRzMhVU=
+b8PW1PglMcCdAzp4=3D436">
+                                    <span>
+                                        <strong>A Better Way to Work with C=
+laude Code (Website)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Nimbalyst is a local WYSIWYG editor and=
+ session manager that lets users iterate with Claude Code with full context=
+.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fbenr.build%2Fblog%2Fone-agent-isnt-enough%3Futm_source=
+=3Dtldrdev/1/0100019b368d6c08-9ca4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000/-=
+JmTP6RGhIEhTOGbLRXSDANZLsOQNwUCPxu6BtRA4-Q=3D436">
+                                    <span>
+                                        <strong>One Agent Isn't Enough (12 =
+minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Agentic coding often struggles with var=
+iance, as the stochastic nature of LLMs means a single agent run might miss=
+ the optimal solution.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.theregister.com%2F2025%2F12%2F17%2Fgithub_charge_de=
+v_own_hardware%2F%3Ftd=3Drt-3a%26utm_source=3Dtldrdev/1/0100019b368d6c08-9c=
+a4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000/-keI7SSZ9eEpp6xodvxHVhQlEA1Vh5kGS=
+9BaARn8oAM=3D436">
+                                    <span>
+                                        <strong>GitHub walks back plan to c=
+harge for self-hosted runners (7 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    GitHub reversed its decision to charge =
+for self-hosted Actions runners, postponing the billing change to re-evalua=
+te its approach.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"word-break=
+: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class=3D"container" style=3D"padding: 0px 10px 15px;">
+<div class=3D"text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align=3D"left" style=3D"padding: 10px;">
+<div class=3D"text-block">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.t=
+ech%2F19465406%2F3/1/0100019b368d6c08-9ca4a0db-f815-4271-8c1a-ab1b4d1fcde9-=
+000000/5EGtNbgoRF7oYmcR6hZsCIppJ-MM_0DJz08XqrsPxQM=3D436" style=3D"color: #=
+464ba4; text-decoration: underline;">https://refer.tldr.tech/19465406/3</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align=3D"left" style=3D"padding:5px 10px;">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.=
+co%2Fsub_aaa8e06944fa%2F3/1/0100019b368d6c08-9ca4a0db-f815-4271-8c1a-ab1b4d=
+1fcde9-000000/e1FRohTNAJGX_bGc4alUTG7kLkIWc0He4R7YC_z5XiM=3D436" style=3D"f=
+ont-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block; =
+ text-decoration: underline;"><span style=3D"mso-text-raise:13pt; text-deco=
+ration: underline;">Track your referrals here.</span></a>
+</td></tr></tbody></table>
+
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"word-break=
+: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to advertise in TLDR? =F0=9F=93=B0
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+If your company is interested in reaching an audience of web developers and=
+ engineering decision makers, you may want to <a href=3D"https://tracking.t=
+ldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=3Dtld=
+rdev%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertisecta/1/0100019b368d=
+6c08-9ca4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000/qyi2Osw325hyAtzC0jkM-dMBDp=
+P-JolHYqgoJRohbEo=3D436"><strong><span>advertise with us</span></strong></a=
+>.
+</div>
+<br>
+
+<!-- New "Want to work at TLDR?" section -->
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to work at TLDR? =F0=9F=92=BC
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech/1/0100019b368d6c08-9ca4a0db-f815-4271-8c1a-ab1b4d1fcde9-00=
+0000/xCpE1xKJh5pdFY4azMTlJRUZqijN_HtPo4kfCs32J5g=3D436" rel=3D"noopener nor=
+eferrer" style=3D"color: #0000EE; text-decoration: underline;" target=3D"_b=
+lank"><strong>Apply here</strong></a>,
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech%2Fc227b917-a6a4-40ce-8950-d3e165357871/1/0100019b368d6c08-=
+9ca4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000/6lOSdf2-dyAmKQHM9Qj3VRbYmS8-pOj=
+8X56_l4RpdaQ=3D436" rel=3D"noopener noreferrer" style=3D"color: #0000EE; te=
+xt-decoration: underline;" target=3D"_blank"><strong>create your own role</=
+strong></a> or send a friend's resume to <a href=3D"mailto:jobs@tldr.tech" =
+style=3D"color: #0000EE; text-decoration: underline;">jobs@tldr.tech</a> an=
+d get $1k if we hire them! TLDR is one of <a href=3D"https://tracking.tldrn=
+ewsletter.com/CL0/https:%2F%2Fwww.linkedin.com%2Ffeed%2Fupdate%2Furn:li:act=
+ivity:7401699691039830016%2F/1/0100019b368d6c08-9ca4a0db-f815-4271-8c1a-ab1=
+b4d1fcde9-000000/izGsslDASJkygdc3xS4xAkQqqht2xwSmKvdfi4KzdxE=3D436" rel=3D"=
+noopener noreferrer" style=3D"color: #0000EE; text-decoration: underline;" =
+target=3D"_blank"><strong>Inc.'s Best Bootstrapped businesses</strong></a> =
+of 2025.
+</div>
+<br>
+
+<div class=3D"text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<span>Priyam Mohanty</span>, <a href=3D"https://tracking.tldrnewsletter.com=
+/CL0/https:%2F%2Fwww.linkedin.com%2Fin%2Fxu-jenny%2F/1/0100019b368d6c08-9ca=
+4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000/0mxcOe4Db4cBMBrBp38m141CIVro0z4Kpz=
+EW21VP460=3D436"><span>Jenny Xu</span></a> &amp; <span>Ceora Ford</span>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div class=3D"text-block" id=3D"testing-id">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2F=
+dev%2Fmanage%3Femail=3Dmike.mcconigley%2540gmail.com/1/0100019b368d6c08-9ca=
+4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000/-21XrzeOnO3hchBlV0pNj4q2lwLeO3BAN9=
+3utyW9wGQ=3D436">Manage your subscriptions</a> to our other newsletters on =
+tech, startups, and programming. Or if TLDR Dev isn't for you, please <a hr=
+ef=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.=
+com%2Funsubscribe%3Fep=3D1%26l=3De8d201ca-3e93-11ed-9a32-0241b9615763%26lc=
+=3D6b0d84e0-a670-11f0-8b4a-c5e0a2ae1fe1%26p=3D64bb75b8-dcc4-11f0-94da-65461=
+6935820%26pt=3Dcampaign%26pv=3D4%26spa=3D1766145681%26t=3D1766146796%26s=3D=
+4e5b82e5539e14d8ac78dfa4b37df7a9bcef9a0d8d676482e25340f8c7490a23/1/0100019b=
+368d6c08-9ca4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000/JbufetLhflOnG4BJ8yvuWU=
+xjOOlJK0qEM09fZmtzrh0=3D436">unsubscribe</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+
+
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+
+<img alt=3D"" src=3D"http://tracking.tldrnewsletter.com/CI0/0100019b368d6c0=
+8-9ca4a0db-f815-4271-8c1a-ab1b4d1fcde9-000000/bLRASg1D8akK_y8-uhojQ1NLL38h0=
+KMuc_kds5OxZbM=3D436" style=3D"display: none; width: 1px; height: 1px;">
+</body></html>
+--gvm5oLui--

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TLDR Curator</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f4f9; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h1 { color: #333; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .email-block { margin-bottom: 30px; border: 1px solid #e1e1e1; border-radius: 8px; overflow: hidden; }
+        .email-header { background: #007bff; color: white; padding: 10px 15px; font-weight: bold; }
+        .link-item { padding: 12px 15px; border-bottom: 1px solid #eee; display: flex; align-items: flex-start; }
+        .link-item:hover { background-color: #f9faff; }
+        .link-item:last-child { border-bottom: none; }
+        input[type="checkbox"] { margin-top: 5px; margin-right: 15px; transform: scale(1.5); cursor: pointer; }
+        label { cursor: pointer; flex-grow: 1; }
+        .link-title { font-size: 16px; font-weight: 600; color: #2c3e50; display: block; margin-bottom: 4px; }
+        .link-url { font-size: 12px; color: #7f8c8d; word-break: break-all; }
+        .fab { position: fixed; bottom: 30px; right: 30px; }
+        button { background: #28a745; color: white; border: none; padding: 15px 30px; font-size: 18px; border-radius: 50px; cursor: pointer; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4); transition: transform 0.2s; }
+        button:hover { transform: scale(1.05); background: #218838; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗞️ TLDR Curator</h1>
+        <p>Select the stories you want the AI to cover today.</p>
+        
+        <form method="POST">
+            {% if not files %}
+                <p><em>No .eml files found in <code>tldr_curation/inputs/</code></em></p>
+            {% endif %}
+
+            {% for file in files %}
+                <div class="email-block">
+                    <div class="email-header">📄 {{ file.filename }}</div>
+                    {% for link in file.links %}
+                    <div class="link-item">
+                        <input type="checkbox" id="lnk_{{loop.index}}_{{file.filename}}" name="selected_links" value="{{ link.url }}">
+                        <label for="lnk_{{loop.index}}_{{file.filename}}">
+                            <span class="link-title">{{ link.text }}</span>
+                            <span class="link-url">{{ link.url }}</span>
+                        </label>
+                    </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+
+            <div class="fab">
+                <button type="submit">GENERATE INPUT FILE ➔</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

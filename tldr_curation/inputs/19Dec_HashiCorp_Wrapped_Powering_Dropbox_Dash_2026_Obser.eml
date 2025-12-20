@@ -1,0 +1,1476 @@
+Delivered-To: mike.mcconigley@gmail.com
+Received: by 2002:ac9:40c9:0:b0:605:93f6:5e02 with SMTP id y9csp181531ocg;
+        Fri, 19 Dec 2025 04:26:06 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IGL8W1vLiv1VWMgCbRybF2GoDyO7wqB6IIL+/bnYXCHWRhkLO1RBWOCbKxBMdlgcnvO5hyC
+X-Received: by 2002:a05:622a:1b29:b0:4ee:61f8:68d6 with SMTP id d75a77b69052e-4f4abcceca4mr38961081cf.6.1766147166583;
+        Fri, 19 Dec 2025 04:26:06 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1766147166; cv=none;
+        d=google.com; s=arc-20240605;
+        b=gIy76d0aAMwd7Smk33BMHRcOYOhLXJdhZjVa3HXhH/QAR2Nofukr4v4As/XJea7DJ3
+         V2OjEFYjbxZKxDFJW2O3t0ITSkxXZxKToSlKsTxiooWo/9L9o5yCO6Vh3s5CT7PV+CTt
+         6LCnZhm6Nat+nBF2lNm/FvgOC66R4iGie/vQG0eAyv1H/NUUNo2e14TrLK8i0JaWDyp5
+         RC/EXiNToTVT/6xczCDFLIfvMAcFX6avUG9wwXks4C6jvLKFVfy89sc5jRcoWDmOR0w5
+         BBluxdGTvdZezbWvH9M+sOV4PnhyRt0vNt7w8FGCuF61qQsQ6M9ayEBEFfJ0A9ExdKgK
+         +TBw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:date:mime-version:list-unsubscribe-post
+         :list-unsubscribe:subject:to:from:dkim-signature:dkim-signature;
+        bh=/v6zCOb/ZujODYUOclG3AjZRW0KboJkMXdQEpNiVaeU=;
+        fh=tUTYCbTOUI69DxYKXGXRz08XnPP7jEKRU6E5rS0DFR4=;
+        b=et084EeR4+wZhUi9bwdLrlc8YcOTIcn/DM6vovS83iQb9n3wDZb7oGH4qcsA2cpYA+
+         JHzTHDuRD2goDvetJeQoY8vLcGdaurln76A/BBIByF3VWki5CzUYujDroc8weW/c+kvi
+         vfrMYBseqlX9IfMvDr5KGOTqYmMCzoou2QTkMPUP7SHHAecpgu7VZR0UBl0q8mMKXjv2
+         qb5s3ek+Yp2mRhad6xaxoctzSsbmPTOufKCJSRRPDg77/TjyyC4/RnOUnU+e1/57L2bB
+         oRdvB174+T5UBroANzc2+M1LMaQyJqsvx6bMyOm0UC1r8vh7Zoy1aVWvczGSRQY67iLo
+         xNXw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b="L6l/8J6g";
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=XnTaqQGE;
+       spf=pass (google.com: domain of 0100019b36931013-ba6fe8b6-1204-46c2-ba05-11a7bec33cce-000000@dailyupdate.tldrnewsletter.com designates 54.240.38.251 as permitted sender) smtp.mailfrom=0100019b36931013-ba6fe8b6-1204-46c2-ba05-11a7bec33cce-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+Return-Path: <0100019b36931013-ba6fe8b6-1204-46c2-ba05-11a7bec33cce-000000@dailyupdate.tldrnewsletter.com>
+Received: from a38-251.smtp-out.amazonses.com (a38-251.smtp-out.amazonses.com. [54.240.38.251])
+        by mx.google.com with ESMTPS id d75a77b69052e-4f4ac64bfe2si24724781cf.159.2025.12.19.04.26.06
+        for <mike.mcconigley@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Fri, 19 Dec 2025 04:26:06 -0800 (PST)
+Received-SPF: pass (google.com: domain of 0100019b36931013-ba6fe8b6-1204-46c2-ba05-11a7bec33cce-000000@dailyupdate.tldrnewsletter.com designates 54.240.38.251 as permitted sender) client-ip=54.240.38.251;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b="L6l/8J6g";
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=XnTaqQGE;
+       spf=pass (google.com: domain of 0100019b36931013-ba6fe8b6-1204-46c2-ba05-11a7bec33cce-000000@dailyupdate.tldrnewsletter.com designates 54.240.38.251 as permitted sender) smtp.mailfrom=0100019b36931013-ba6fe8b6-1204-46c2-ba05-11a7bec33cce-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ygiuxamnxevikrd5dtfwanslhs6b24mt; d=tldrnewsletter.com;
+	t=1766147166;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type;
+	bh=okym2MUhDdESQJeuyKdSwbOuadEgp292sxNj1rH4AX4=;
+	b=L6l/8J6gsQ6tYrVHmyerR0thTxQ/ryrALYRktB6dy1gLwTIBFrnjctlUoPeyQqmW
+	M5uuM/3Y5mpfun7apn4Gfez9QKgGJVO8gVUlrcyRd/koPxMFRUect8mb3bAmSrF6Y93
+	FSf9LdTelezmRufd7p0b+dfiICQY8XWC1EU4pQks=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1766147166;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type:Feedback-ID;
+	bh=okym2MUhDdESQJeuyKdSwbOuadEgp292sxNj1rH4AX4=;
+	b=XnTaqQGEIHudm/3VlJcs3kE807r3aDvhAUjAXYzfciFlfZn8whWCKae6Uj3l2ntW
+	zC2ienkeXWbR9Ka+a6dYsGka4TJarDMTUmEs2RkC1YTH9raey057memWfThBSGmrGLV
+	dTJCMAt7kie0huAr/T3NHNuhHP6U5DJ+i55m5VJg=
+From: TLDR DevOps <dan@tldrnewsletter.com>
+To: mike.mcconigley@gmail.com
+Subject: HashiCorp Wrapped =?utf-8?Q?=F0=9F=8E=81=2C?= Powering Dropbox Dash
+ =?utf-8?Q?=F0=9F=94=AE=2C?= 2026 Observability Trends
+ =?utf-8?Q?=E2=8C=9B=C2=A0?=
+X-Entity-Ref-Id: 6c56e6cc-b52c-4300-a97e-506491d74826
+X-EmailOctopus-Parent-Id: aaa8cc6c-dcae-11f0-a02e-819b71169679
+X-EmailOctopus-Parent-Type-Id: campaign
+X-EmailOctopus-List-Id: 1c5ddf10-b6dc-11ed-a12f-33c00cd07e37
+X-EmailOctopus-List-Contact-Id: 6b0d473c-a670-11f0-8d7f-0bad7bf21fba
+X-EmailOctopus-Started-Preparing-At: 2025-12-19T12:01:31+00:00
+X-EmailOctopus-Sent-At: 2025-12-19T12:26:06+00:00
+X-EmailOctopus-Team-Id: 66987ef2-4f4c-11e9-a3c9-06b79b628af2
+X-EmailOctopus-Version: 4
+List-Unsubscribe: <https://a.tldrnewsletter.com/unsubscribe?ep=1&l=1c5ddf10-b6dc-11ed-a12f-33c00cd07e37&lc=6b0d473c-a670-11f0-8d7f-0bad7bf21fba&p=aaa8cc6c-dcae-11f0-a02e-819b71169679&pt=campaign&pv=4&spa=1766145691&t=1766147166&s=95b41b21ef9828c82cf8c6d01b88cc0a8c09cc14b142d0d42461f4136a75e1f2>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-EmailOctopus-Ses-Configuration-Set-Name: emailoctopus-a9f7b12f74f3c968d9408897fb35539c
+MIME-Version: 1.0
+Date: Fri, 19 Dec 2025 12:26:06 +0000
+Message-ID: <0100019b36931013-ba6fe8b6-1204-46c2-ba05-11a7bec33cce-000000@email.amazonses.com>
+Content-Type: multipart/alternative; boundary=Y0pYE1ca
+Feedback-ID: ::1.us-east-1.Dj5/7DYmgk+n1sSGGXSQSLIthSjNQ0MGtV5Dro1Tr8U=:AmazonSES
+X-SES-Outgoing: 2025.12.19-54.240.38.251
+
+--Y0pYE1ca
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Dropbox developed a custom feature store to power the AI-driven search
+in=
+ its Dash product, enabling rapid retrieval of relevant
+files=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0
+
+
+ Sign Up [1] |Advertise [2]|View Online [3]=20
+
+=09=09TLDR =
+
+
+=09=09TOGETHER WITH [Bitrise] [4]
+
+TLDR DEVOPS 2025-12-19
+
+ T=
+HE MOBILE BENCHMARKS THAT MATTER IN 2025 (SPONSOR) [4]=20
+
+ How does your=
+ mobile CI/CD compare to top-performing teams? You'll
+find everything you=
+ need to know in this report.
+
+Bitrise analyzed tens of millions of ano=
+nymized mobile builds [4] from
+thousands of teams over three years to rev=
+eal what separates the
+fastest teams from the rest.
+
+WHAT THE DATA SH=
+OWS:
+
+ =09* Build times fell 28% as workflow complexity rose 23%
+ =09=
+* Multi-workflow pipelines surged from 16% to 42% of all builds
+ =09* Tea=
+ms using structured release frameworks ship 2=C3=97 more often
+ =09* The =
+fastest teams adopt new Xcode versions in under 4 weeks, while
+most take =
+19+
+
+Get your free copy [4] for the full benchmarks, expert analysis, a=
+nd
+to see where your team stands.
+
+=F0=9F=93=B1=20
+
+NEWS & TRENDS=
+
+
+ HASHICORP YEAR IN REVIEW 2025: LESSONS IN SIMPLIFYING THE CLOUD (7=
+
+MINUTE READ) [5]=20
+
+ HashiCorp reflects on 2025 cloud complexity driv=
+en by multi-cloud
+sprawl, security and identity challenges, and AI, highl=
+ighting deeper
+IBM and Red Hat integration, lifecycle automation, embedde=
+d security,
+FinOps shift-left, and major product advances across Terrafor=
+m, Vault,
+and HCP.=20
+
+ KUBERNETES V1.35: TIMBERNETES (THE WORLD TREE R=
+ELEASE) (25 MINUTE
+READ) [6]=20
+
+ Kubernetes v1.35 features 60 enhancem=
+ents, including 17 stable, 19
+beta, and 22 alpha features, most notably g=
+raduating in-place updates
+for Pod resources and native workload identity=
+ with automated
+certificate rotation to general availability. The update =
+also removed
+cgroup v1 support, deprecated ipvs mode in kube-proxy, and a=
+nnounced
+the retirement of the Ingress NGINX controller.=20
+
+=
+=F0=9F=9A=80=20
+
+OPINIONS & TUTORIALS
+
+ LET'S TALK ABOUT GITHUB ACTIO=
+NS (6 MINUTE READ) [7]=20
+
+ GitHub rebuilt the core architecture of Actio=
+ns to scale reliably to
+71 million jobs per day, then shipped long-reques=
+ted improvements,
+including YAML anchors, deeper reusable workflows, larg=
+er caches, and
+more inputs. Further UX, scheduling, and parallelism enhan=
+cements have
+been planned for 2026.=20
+
+ CDKTF IS DEPRECATED: WHAT'S NE=
+XT FOR YOUR TEAM? (5 MINUTE READ) [8]=20
+
+ CDK for Terraform (CDKTF), int=
+roduced in July 2020, was officially
+deprecated on December 10, leaving m=
+any teams seeking a replacement
+for cloud infrastructure management. Pulu=
+mi is the simplest and most
+broadly compatible migration path. It offers =
+similar multi-language
+support and built-in conversion tools for CDKTF pr=
+ojects.=20
+
+ YOUR JOB IS TO DELIVER CODE YOU HAVE PROVEN TO WORK (4 MINUT=
+E READ)
+[9]=20
+
+ Engineers are responsible for delivering code that is =
+proven to work,
+not dumping large, untested AI-generated changes onto rev=
+iewers and
+shifting the burden of validation onto others. Proof requires =
+both
+manual testing and automated tests, and even when using coding agent=
+s,
+the human remains accountable for ensuring evidence of correctness
+a=
+ccompanies every PR.=20
+
+=F0=9F=A7=91=E2=80=8D=F0=9F=92=BB=20
+
+RESOURCE=
+S & TOOLS
+
+ APIS THAT HUMANS CAN TRUST AND AI AGENTS CAN UNDERSTAND WIT=
+H SWAGGER
+(SPONSOR) [10]=20
+
+ Are your APIs trusted by humans and usabl=
+e by AI agents? Swagger
+helps make APIs AI-ready! Learn more about Swagge=
+r and try it free for
+14 days [10]. Already got your Swagger? SmartBear i=
+s bringing AI to
+its testing products [11] to strengthen app integrity. =
+
+
+ OPENLIT (GITHUB REPO) [12]=20
+
+ OpenLIT is an open-source platform=
+ for AI engineering that simplifies
+Generative AI and LLM development by =
+providing full-stack,
+OpenTelemetry-native observability for LLMs, vector=
+ databases, and
+GPUs via a single line of code. The platform integrates w=
+ith over 50
+LLM providers, vector databases, agent frameworks, and GPUs. =
+It offers
+tools for prompt management, cost tracking, exception monitorin=
+g, and
+secure API key handling.=20
+
+ HEADSON (GITHUB REPO) [13]=20
+
+ =
+headson is a CLI tool similar to head/tail for JSON and YAML, but
+structu=
+re=E2=80=91aware. It provides a compact preview that shows both the
+shape=
+ and representative values of your data, all within a strict byte
+budget.=
+=20
+
+=F0=9F=8E=81=20
+
+MISCELLANEOUS
+
+ AZURE NETWORKING UPDATES ON S=
+ECURITY, RELIABILITY, AND HIGH
+AVAILABILITY (5 MINUTE READ) [14]=20
+
+ A=
+zure is advancing its networking platform to power the next wave of
+cloud=
+ and AI transformation, with massive backbone scale, AI-optimized
+datacen=
+ter fabrics, zone-resilient networking by default, expanded
+security capa=
+bilities, higher-throughput ExpressRoute and VPN options,
+and deeper Kube=
+rnetes and container networking enhancements to deliver
+resilient, secure=
+, and high-performance connectivity at hyperscale.=20
+
+ OBSERVABILITY TRE=
+NDS FOR 2026: MATURITY, COST CONTROL, AND DRIVING
+BUSINESS VALUE (5 MINUT=
+E READ) [15]=20
+
+ Observability has become mission-critical, with 60% of =
+organizations
+reaching mature or expert levels while focusing on cost con=
+trol,
+expanding business impact reporting, and democratizing data across =
+IT,
+security, and business teams. Mature practices enable compliance,
+c=
+ross-team value, and strategic advantage.=20
+
+ INSIDE THE FEATURE STORE P=
+OWERING REAL-TIME AI IN DROPBOX DASH (7
+MINUTE READ) [16]=20
+
+ Dropbox =
+developed a custom feature store to power the AI-driven
+search in its Das=
+h product, enabling rapid retrieval of relevant files
+by understanding co=
+mplex user queries across company content. This
+hybrid architecture lever=
+aged Feast for orchestration, Spark for
+computation, and Dropbox's in-hou=
+se Dynovault for low-latency lookups,
+alongside a custom Go service that =
+achieved sub-100ms p95 latencies
+for thousands of feature lookups per que=
+ry.=20
+
+=E2=9A=A1=20
+
+QUICK LINKS
+
+ TROUBLESHOOT INTEGRATIONS IN 15=
+ MINUTES WITH PLANVIEW'S BYTE-SIZE
+WEBINARS (SPONSOR) [17]=20
+
+ Dealing=
+ with a fragmented toolchain, heavy manual reporting, and no
+single sourc=
+e of truth? Find solutions to your toughest integration
+challenges in an =
+upcoming Planview Hub Bytes session. Register for
+free [17]=20
+
+ ELASTI=
+C AND MICROSOFT PARTNERSHIP ACHIEVEMENTS IN 2025 (3 MINUTE
+READ) [18]=20
+=
+
+ Elastic highlighted a year of joint innovation with Microsoft,
+delive=
+ring Azure infrastructure, AI, and security integrations, and
+customer su=
+ccesses.=20
+
+ ANNOUNCING SUPPORT FOR GROUP BY, SUM, AND OTHER AGGREGATION=
+ QUERIES
+IN R2 SQL (9 MINUTE READ) [19]=20
+
+ Cloudflare's R2 SQL, a ser=
+verless analytics query engine for R2 Data
+Catalog, now supports aggregat=
+ions or "GROUP BY queries".=20
+
+Love TLDR? Tell your friends and get rewa=
+rds!
+
+ Share your referral link below with friends to get free TLDR swa=
+g!=20
+
+ https://refer.tldr.tech/fa0c1dae/10 [20]=20
+
+=09=09 Track your =
+referrals here. [21]=20
+
+Want to advertise in TLDR? =F0=9F=93=B0
+
+ If=
+ your company is interested in reaching an audience of devops
+professiona=
+ls and decision makers, you may want to ADVERTISE WITH US
+[22].=20
+
+Wan=
+t to work at TLDR? =F0=9F=92=BC
+
+ APPLY HERE [23], CREATE YOUR OWN ROLE=
+ [24] or send a friend's resume
+to jobs@tldr.tech and get $1k if we hire =
+them! TLDR is one of INC.'S
+BEST BOOTSTRAPPED BUSINESSES [25] of 2025. =
+
+
+ If you have any comments or feedback, just respond to this email! =
+
+
+Thanks for reading,=20
+Kunal Desai [26] & Martin Hauskrecht [27]=20
+=
+
+ Manage your subscriptions [28] to our other newsletters on tech,
+star=
+tups, and programming. Or if TLDR DevOps isn't for you, please
+unsubscrib=
+e [29].=20
+
+=20
+
+Links:
+------
+[1] https://tldr.tech/devops?utm_sou=
+rce=3Dtldrdevops
+[2] https://advertise.tldr.tech/?utm_source=3Dtldrdevops=
+&utm_medium=3Dnewsletter&utm_campaign=3Dadvertisetopnav
+[3] https://a.tld=
+rnewsletter.com/web-version?ep=3D1&lc=3D6b0d473c-a670-11f0-8d7f-0bad7bf21fb=
+a&p=3Daaa8cc6c-dcae-11f0-a02e-819b71169679&pt=3Dcampaign&t=3D1766147166&s=
+=3De09b5896a832a1bc55a4271ad41477780e814d076bb00819c0085d0c95fbc753
+[4] h=
+ttps://bitrise.io/insights?utm_medium=3Dpaid_other&utm_source=3Dtldr&utm_ca=
+mpaign=3Dall_report_mobile-insights_all_2025-10-28&utm_content=3Dprimary_pl=
+acement_sponsorship
+[5] https://www.hashicorp.com/en/blog/hashicorp-year-=
+in-review-2025-lessons-in-simplifying-the-cloud?utm_source=3Dtldrdevops
+[=
+6] https://kubernetes.io/blog/2025/12/17/kubernetes-v1-35-release/?utm_sour=
+ce=3Dtldrdevops
+[7] https://github.blog/news-insights/product-news/lets-t=
+alk-about-github-actions/?utm_source=3Dtldrdevops
+[8] https://www.pulumi.=
+com/blog/cdktf-is-deprecated-whats-next-for-your-team/?utm_source=3Dtldrdev=
+ops
+[9] https://simonwillison.net/2025/Dec/18/code-proven-to-work/?utm_so=
+urce=3Dtldrdevops
+[10] https://swagger.io/product/?utm_source=3Dtldr&utm_=
+medium=3Demail_paid&utm_campaign=3Dswagger_trial
+[11] https://smartbear.c=
+om/ai/?utm_source=3Dtldr&utm_medium=3Demail_paid&utm_campaign=3Dai_landing=
+
+[12] https://github.com/openlit/openlit?utm_source=3Dtldrdevops
+[13] h=
+ttps://github.com/kantord/headson?utm_source=3Dtldrdevops
+[14] https://az=
+ure.microsoft.com/en-us/blog/azure-networking-updates-on-security-reliabili=
+ty-and-high-availability/?utm_source=3Dtldrdevops
+[15] https://www.elasti=
+c.co/blog/2026-observability-trends-costs-business-impact?utm_source=3Dtldr=
+devops
+[16] https://dropbox.tech/machine-learning/feature-store-powering-=
+realtime-ai-in-dropbox-dash?utm_source=3Dtldrdevops
+[17] https://www.plan=
+view.com/lp/hub-micro-webinars/?utm_medium=3Dpedm&utm_source=3Dtldr&utm_cam=
+paign=3Dhb_stci_dp-office-of-the-cto_dgabm_ww_x_us_en&utm_content=3Dintegra=
+tion-station-micro-series_webinar
+[18] https://www.elastic.co/blog/elasti=
+c-microsoft-ignite-2025-partnership?utm_source=3Dtldrdevops
+[19] https://=
+blog.cloudflare.com/r2-sql-aggregations/?utm_source=3Dtldrdevops
+[20] htt=
+ps://refer.tldr.tech/fa0c1dae/10
+[21] https://hub.sparklp.co/sub_99428dc5=
+7e85/10
+[22] https://advertise.tldr.tech/?utm_source=3Dtldrdevops&utm_med=
+ium=3Dnewsletter&utm_campaign=3Dadvertisecta
+[23] https://jobs.ashbyhq.co=
+m/tldr.tech
+[24] https://jobs.ashbyhq.com/tldr.tech/c227b917-a6a4-40ce-89=
+50-d3e165357871
+[25] https://www.linkedin.com/feed/update/urn:li:activity=
+:7401699691039830016/
+[26] https://www.linkedin.com/in/kunaljaydesai/
+[=
+27] https://www.linkedin.com/in/martin-hauskrecht/
+[28] https://tldr.tech=
+/devops/manage?email=3Dmike.mcconigley%40gmail.com
+[29] https://a.tldrnew=
+sletter.com/unsubscribe?ep=3D1&l=3D1c5ddf10-b6dc-11ed-a12f-33c00cd07e37&lc=
+=3D6b0d473c-a670-11f0-8d7f-0bad7bf21fba&p=3Daaa8cc6c-dcae-11f0-a02e-819b711=
+69679&pt=3Dcampaign&pv=3D4&spa=3D1766145691&t=3D1766147166&s=3D95b41b21ef98=
+28c82cf8c6d01b88cc0a8c09cc14b142d0d42461f4136a75e1f2
+--Y0pYE1ca
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html charset=3DUTF-8"><meta charset=3D"UTF-8"><meta name=3D"v=
+iewport" content=3D"width=3Ddevice-width"><meta name=3D"x-apple-disable-mes=
+sage-reformatting"><title>TLDR DevOps</title><meta name=3D"color-scheme" co=
+ntent=3D"light dark"><meta name=3D"supported-color-schemes" content=3D"ligh=
+t dark"><style type=3D"text/css">
+=09=09=09:root {
+=09=09=09=09color-scheme: light dark; supported-color-schemes: light dark;
+=09=09=09}
+=09=09=09
+=09=09=09*,
+=09=09=09*:after,
+=09=09=09*:before {
+=09=09=09=09-webkit-box-sizing: border-box; -moz-box-sizing: border-box; bo=
+x-sizing: border-box;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+=09=09=09}
+=09=09=09
+=09=09=09html,
+=09=09=09body,
+=09=09=09.document {
+=09=09=09=09width: 100% !important; height: 100% !important; margin: 0; pad=
+ding: 0;
+=09=09=09}
+=09=09=09
+=09=09=09body {
+=09=09=09=09-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: g=
+rayscale; text-rendering: optimizeLegibility;
+=09=09=09}
+=09=09=09
+=09=09=09div[style*=3D"margin: 16px 0"] {
+=09=09=09=09margin: 0 !important;
+=09=09=09}
+=09=09=09
+=09=09=09table,
+=09=09=09td {
+=09=09=09=09mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+=09=09=09}
+=09=09=09
+=09=09=09table {
+=09=09=09=09border-spacing: 0; border-collapse: collapse; table-layout: fix=
+ed; margin: 0 auto;
+=09=09=09}
+=09=09=09
+=09=09=09img {
+=09=09=09=09-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+=09=09=09}
+=09=09=09
+=09=09=09*[x-apple-data-detectors] {
+=09=09=09=09color: inherit !important; text-decoration: none !important;
+=09=09=09}
+=09=09=09
+=09=09=09.x-gmail-data-detectors,
+=09=09=09.x-gmail-data-detectors *,
+=09=09=09.aBn {
+=09=09=09=09border-bottom: 0 !important; cursor: default !important;
+=09=09=09}
+=09=09=09
+=09=09=09.btn {
+=09=09=09=09-webkit-transition: all 200ms ease; transition: all 200ms ease;
+=09=09=09}
+=09=09=09
+=09=09=09.btn:hover {
+=09=09=09=09background-color: #f67575; border-color: #f67575;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+=09=09=09}
+=09=09=09
+=09=09=09@media screen and (max-width: 600px) {
+=09=09=09=09.container {
+=09=09=09=09=09width: 100%; margin: auto;
+=09=09=09=09}
+=09=09=09=09.stack {
+=09=09=09=09=09display: block!important; width: 100%!important; max-width: =
+100%!important;
+=09=09=09=09}
+=09=09=09=09.btn {
+=09=09=09=09=09display: block; width: 100%; text-align: center;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09body,
+=09=09=09p,
+=09=09=09td,
+=09=09=09tr,
+=09=09=09.body,
+=09=09=09table,
+=09=09=09h1,
+=09=09=09h2,
+=09=09=09h3,
+=09=09=09h4,
+=09=09=09h5,
+=09=09=09h6,
+=09=09=09div,
+=09=09=09span {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09body,
+=09=09=09=09p,
+=09=09=09=09td,
+=09=09=09=09tr,
+=09=09=09=09.body,
+=09=09=09=09table,
+=09=09=09=09h1,
+=09=09=09=09h2,
+=09=09=09=09h3,
+=09=09=09=09h4,
+=09=09=09=09h5,
+=09=09=09=09h6,
+=09=09=09=09div,
+=09=09=09=09span {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09a {
+=09=09=09=09color: inherit !important; text-decoration: underline !importan=
+t;
+=09=09=09}
+
+=09=09</style><!--[if mso | ie]>
+=09=09<style type=3D"text/css">
+=09=09=09a {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09a {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09 </style>
+=09=09=09<![endif]--></head><body class=3D"">
+
+
+
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">Dropbox de=
+veloped a custom feature store to power the AI-driven search in its Dash pr=
+oduct, enabling rapid retrieval of relevant files&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;</div>
+
+
+
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align=3D"center" class=3D"document"><tbody><tr><td valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"container" width=3D"600"><tbody><tr class=3D"inner-body"><td>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr class=3D"header"><td bgcolor=3D"" class=3D"containe=
+r">
+
+<table width=3D"100%"><tbody><tr><td class=3D"container">
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"margin-top: 0px;" width=3D"100%"><tbody><tr><td style=
+=3D"padding: 0px;">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div style=3D"text-align: center;">
+<span style=3D"margin-right: 0px;"><a href=3D"https://tracking.tldrnewslett=
+er.com/CL0/https:%2F%2Ftldr.tech%2Fdevops%3Futm_source=3Dtldrdevops/1/01000=
+19b36931013-ba6fe8b6-1204-46c2-ba05-11a7bec33cce-000000/22MuPnqb5bU32tBhczQ=
+oypUvT5HaBpiv6O62GhuPJtg=3D436" rel=3D"noopener noreferrer" target=3D"_blan=
+k"><span>Sign Up</span></a>
+|<span style=3D"margin-right: 2px; margin-left: 2px;"><a href=3D"https://tr=
+acking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_sour=
+ce=3Dtldrdevops%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertisetopnav/=
+1/0100019b36931013-ba6fe8b6-1204-46c2-ba05-11a7bec33cce-000000/f1eM6WHPhz6T=
+9RYIV5hqD0UjVSGTkW4WLzt0RXCPsc4=3D436" rel=3D"noopener noreferrer" target=
+=3D"_blank"><span>Advertise</span></a></span>|<span style=3D"margin-left: 2=
+px;"><a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrn=
+ewsletter.com%2Fweb-version%3Fep=3D1%26lc=3D6b0d473c-a670-11f0-8d7f-0bad7bf=
+21fba%26p=3Daaa8cc6c-dcae-11f0-a02e-819b71169679%26pt=3Dcampaign%26t=3D1766=
+147166%26s=3De09b5896a832a1bc55a4271ad41477780e814d076bb00819c0085d0c95fbc7=
+53/1/0100019b36931013-ba6fe8b6-1204-46c2-ba05-11a7bec33cce-000000/9v6a1Ji-R=
+_IiWMw39vbtVnGirxqoYrC_BlJzSCHFhOA=3D436"><span>View Online</span></a></spa=
+n>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"text-=
+align: center;"><span data-darkreader-inline-color=3D"" style=3D"--darkread=
+er-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30=
+px;">T</span><span style=3D"font-size: 30px;"><span data-darkreader-inline-=
+color=3D"" style=3D"color: rgb(232, 192, 96) !important; --darkreader-inlin=
+e-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-colo=
+r=3D"" style=3D"color: rgb(101, 195, 173) !important; --darkreader-inline-c=
+olor:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-=
+color=3D"" style=3D"--darkreader-inline-color:#dd6e6e; color: rgb(220, 107,=
+ 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr id=3D"together-with"><td align=3D"cent=
+er" height=3D"20" style=3D"vertical-align:middle !important;" valign=3D"mid=
+dle" width=3D"100%"><strong style=3D"vertical-align:middle !important; heig=
+ht: 100%;">Together With </strong>
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fbitrise.io%2=
+Finsights%3Futm_medium=3Dpaid_other%26utm_source=3Dtldr%26utm_campaign=3Dal=
+l_report_mobile-insights_all_2025-10-28%26utm_content=3Dprimary_placement_s=
+ponsorship/1/0100019b36931013-ba6fe8b6-1204-46c2-ba05-11a7bec33cce-000000/x=
+k6Jy3mtdCpMba8PDdCs23JQBpSnZuCidmqy2Ue4pBA=3D436"><img src=3D"https://image=
+s.tldr.tech/bitrise.png" valign=3D"middle" style=3D"vertical-align: middle =
+!important; height: 100%;" alt=3D"Bitrise"></a></td></tr></tbody></table>
+
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody><tr=
+><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0;=
+">
+<div style=3D"text-align: center;">
+
+<h1><strong>TLDR DevOps <span id=3D"date">2025-12-19</span></strong></h1>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody><tr=
+ id=3D"sponsy-copy"><td class=3D"container" style=3D"padding: 15px 15px;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fbitrise.io%2Finsights%3Futm_medium=3Dpaid_other%26utm_s=
+ource=3Dtldr%26utm_campaign=3Dall_report_mobile-insights_all_2025-10-28%26u=
+tm_content=3Dprimary_placement_sponsorship/2/0100019b36931013-ba6fe8b6-1204=
+-46c2-ba05-11a7bec33cce-000000/eKKC2GiWq7ZlCS6Ty-OjidM0dlDRwTFARzeXtJJ3Xig=
+=3D436">
+                                    <span>
+                                        <strong>The Mobile Benchmarks that =
+matter in 2025 (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    How does your mobile CI/CD compare to t=
+op-performing teams? You'll find everything you need to know in this report=
+.<p></p><p><a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fb=
+itrise.io%2Finsights%3Futm_medium=3Dpaid_other%26utm_source=3Dtldr%26utm_ca=
+mpaign=3Dall_report_mobile-insights_all_2025-10-28%26utm_content=3Dprimary_=
+placement_sponsorship/3/0100019b36931013-ba6fe8b6-1204-46c2-ba05-11a7bec33c=
+ce-000000/ShPC5RJIBQw-RsujPpsIYPyaQz64Ky9943ENyuFC2r4=3D436" rel=3D"noopene=
+r noreferrer nofollow" target=3D"_blank"><span>Bitrise analyzed tens of mil=
+lions of anonymized mobile builds</span></a> from thousands of teams over t=
+hree years to reveal what separates the fastest teams from the rest.</p>
+
+<p><strong>What the data shows:</strong></p>
+
+<ul>
+<li>Build times fell 28% as workflow complexity rose 23%</li>
+<li>Multi-workflow pipelines surged from 16% to 42% of all builds</li>
+<li>Teams using structured release frameworks ship 2=C3=97 more often</li>
+<li>The fastest teams adopt new Xcode versions in under 4 weeks, while most=
+ take 19+</li>
+</ul>
+
+<p><a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fbitrise.i=
+o%2Finsights%3Futm_medium=3Dpaid_other%26utm_source=3Dtldr%26utm_campaign=
+=3Dall_report_mobile-insights_all_2025-10-28%26utm_content=3Dprimary_placem=
+ent_sponsorship/4/0100019b36931013-ba6fe8b6-1204-46c2-ba05-11a7bec33cce-000=
+000/BwO3daswWXklngJcoo-5gdVM15qt3I9i2-1EP4rX1aU=3D436" rel=3D"noopener nore=
+ferrer nofollow" target=3D"_blank"><span>Get your free copy</span></a> for =
+the full benchmarks, expert analysis, and to see where your team stands.
+
+
+</p>
+</span></span></div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=3D""><td class=3D"container">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td style=3D"padding: 0px;">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=93=B1</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>News &amp; Trends</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.hashicorp.com%2Fen%2Fblog%2Fhashicorp-year-in-revie=
+w-2025-lessons-in-simplifying-the-cloud%3Futm_source=3Dtldrdevops/1/0100019=
+b36931013-ba6fe8b6-1204-46c2-ba05-11a7bec33cce-000000/4AHaxKPqi8Dl-Ui8bPQpd=
+BrkpSuuBd814QkudtY7c1E=3D436">
+                                    <span>
+                                        <strong>HashiCorp year in review 20=
+25: Lessons in simplifying the cloud (7 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    HashiCorp reflects on 2025 cloud comple=
+xity driven by multi-cloud sprawl, security and identity challenges, and AI=
+, highlighting deeper IBM and Red Hat integration, lifecycle automation, em=
+bedded security, FinOps shift-left, and major product advances across Terra=
+form, Vault, and HCP.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fkubernetes.io%2Fblog%2F2025%2F12%2F17%2Fkubernetes-v1-3=
+5-release%2F%3Futm_source=3Dtldrdevops/1/0100019b36931013-ba6fe8b6-1204-46c=
+2-ba05-11a7bec33cce-000000/R65LJefRLbbjTDM9Qj0HU242G0NdBcoV35tJuvJjaX8=3D43=
+6">
+                                    <span>
+                                        <strong>Kubernetes v1.35: Timbernet=
+es (The World Tree Release) (25 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Kubernetes v1.35 features 60 enhancemen=
+ts, including 17 stable, 19 beta, and 22 alpha features, most notably gradu=
+ating in-place updates for Pod resources and native workload identity with =
+automated certificate rotation to general availability. The update also rem=
+oved cgroup v1 support, deprecated ipvs mode in kube-proxy, and announced t=
+he retirement of the Ingress NGINX controller.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=9A=80</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Opinions &amp; Tutorials</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgithub.blog%2Fnews-insights%2Fproduct-news%2Flets-talk-=
+about-github-actions%2F%3Futm_source=3Dtldrdevops/1/0100019b36931013-ba6fe8=
+b6-1204-46c2-ba05-11a7bec33cce-000000/Wh25QyZlSxUa-jdfoidLybdADGmRla-IA29jV=
+hNtgbg=3D436">
+                                    <span>
+                                        <strong>Let's talk about GitHub Act=
+ions (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    GitHub rebuilt the core architecture of=
+ Actions to scale reliably to 71 million jobs per day, then shipped long-re=
+quested improvements, including YAML anchors, deeper reusable workflows, la=
+rger caches, and more inputs. Further UX, scheduling, and parallelism enhan=
+cements have been planned for 2026.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.pulumi.com%2Fblog%2Fcdktf-is-deprecated-whats-next-=
+for-your-team%2F%3Futm_source=3Dtldrdevops/1/0100019b36931013-ba6fe8b6-1204=
+-46c2-ba05-11a7bec33cce-000000/wkCn2Zv-bK54-trUkgT09ZcjjL9_BoimMnMxPiSriFA=
+=3D436">
+                                    <span>
+                                        <strong>CDKTF is deprecated: What's=
+ next for your team? (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    CDK for Terraform (CDKTF), introduced i=
+n July 2020, was officially deprecated on December 10, leaving many teams s=
+eeking a replacement for cloud infrastructure management. Pulumi is the sim=
+plest and most broadly compatible migration path. It offers similar multi-l=
+anguage support and built-in conversion tools for CDKTF projects.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fsimonwillison.net%2F2025%2FDec%2F18%2Fcode-proven-to-wo=
+rk%2F%3Futm_source=3Dtldrdevops/1/0100019b36931013-ba6fe8b6-1204-46c2-ba05-=
+11a7bec33cce-000000/v0iNaf-lrrDa6jtv_faQ9gtKRoPpFNhfbYcnjiWxcFw=3D436">
+                                    <span>
+                                        <strong>Your job is to deliver code=
+ you have proven to work (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Engineers are responsible for deliverin=
+g code that is proven to work, not dumping large, untested AI-generated cha=
+nges onto reviewers and shifting the burden of validation onto others. Proo=
+f requires both manual testing and automated tests, and even when using cod=
+ing agents, the human remains accountable for ensuring evidence of correctn=
+ess accompanies every PR.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=A7=91=E2=80=8D=F0=9F=92=BB</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Resources &amp; Tools</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fswagger.io%2Fproduct%2F%3Futm_source=3Dtldr%26utm_mediu=
+m=3Demail_paid%26utm_campaign=3Dswagger_trial/1/0100019b36931013-ba6fe8b6-1=
+204-46c2-ba05-11a7bec33cce-000000/4lA2v1wTrSmk_6zbevAZvGs3vZt74-pxU4pzVh4TT=
+fg=3D436">
+                                    <span>
+                                        <strong>APIs that humans can trust =
+and AI agents can understand with Swagger (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Are your APIs trusted by humans and usa=
+ble by AI agents? Swagger helps make APIs AI-ready! Learn more about Swagge=
+r and<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fswagger=
+.io%2Fproduct%2F%3Futm_source=3Dtldr%26utm_medium=3Demail_paid%26utm_campai=
+gn=3Dswagger_trial/2/0100019b36931013-ba6fe8b6-1204-46c2-ba05-11a7bec33cce-=
+000000/4fSlB7RMOBbYoIN9ij5QVG-SEWF3JOwkvBlluBY6J9I=3D436" rel=3D"noopener n=
+oreferrer nofollow" target=3D"_blank"><span> try it free for 14 days</span>=
+</a>. Already got your Swagger? <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fsmartbear.com%2Fai%2F%3Futm_source=3Dtldr%26utm_medium=
+=3Demail_paid%26utm_campaign=3Dai_landing/1/0100019b36931013-ba6fe8b6-1204-=
+46c2-ba05-11a7bec33cce-000000/yKw2omQanMQwvXbAS6X9vcVEBelu7I9GeTGSO2_G8Kc=
+=3D436" rel=3D"noopener noreferrer nofollow" target=3D"_blank"><span>SmartB=
+ear is bringing AI to its testing products</span></a> to strengthen app int=
+egrity.
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgithub.com%2Fopenlit%2Fopenlit%3Futm_source=3Dtldrdevop=
+s/1/0100019b36931013-ba6fe8b6-1204-46c2-ba05-11a7bec33cce-000000/zCbF4-WOc7=
+EYcheUhfQONmwC3XRrOx-MripxoA1pnZY=3D436">
+                                    <span>
+                                        <strong>OpenLIT (GitHub Repo)</stro=
+ng>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    OpenLIT is an open-source platform for =
+AI engineering that simplifies Generative AI and LLM development by providi=
+ng full-stack, OpenTelemetry-native observability for LLMs, vector database=
+s, and GPUs via a single line of code. The platform integrates with over 50=
+ LLM providers, vector databases, agent frameworks, and GPUs. It offers too=
+ls for prompt management, cost tracking, exception monitoring, and secure A=
+PI key handling.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgithub.com%2Fkantord%2Fheadson%3Futm_source=3Dtldrdevop=
+s/1/0100019b36931013-ba6fe8b6-1204-46c2-ba05-11a7bec33cce-000000/ZZtaGc1vnp=
+pNPsP9CBU9sR0Gy2ki31MKof1kXbJFm7A=3D436">
+                                    <span>
+                                        <strong>headson (GitHub Repo)</stro=
+ng>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    headson is a CLI tool similar to head/t=
+ail for JSON and YAML, but structure=E2=80=91aware. It provides a compact p=
+review that shows both the shape and representative values of your data, al=
+l within a strict byte budget.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=8E=81</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><strong><h1>Miscellaneous</h1></strong><=
+/div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fazure.microsoft.com%2Fen-us%2Fblog%2Fazure-networking-u=
+pdates-on-security-reliability-and-high-availability%2F%3Futm_source=3Dtldr=
+devops/1/0100019b36931013-ba6fe8b6-1204-46c2-ba05-11a7bec33cce-000000/h92_N=
+6xqiddKsGcEOFYDawPrnybZUfR4jY0slOk860g=3D436">
+                                    <span>
+                                        <strong>Azure networking updates on=
+ security, reliability, and high availability (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Azure is advancing its networking platf=
+orm to power the next wave of cloud and AI transformation, with massive bac=
+kbone scale, AI-optimized datacenter fabrics, zone-resilient networking by =
+default, expanded security capabilities, higher-throughput ExpressRoute and=
+ VPN options, and deeper Kubernetes and container networking enhancements t=
+o deliver resilient, secure, and high-performance connectivity at hyperscal=
+e.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.elastic.co%2Fblog%2F2026-observability-trends-costs=
+-business-impact%3Futm_source=3Dtldrdevops/1/0100019b36931013-ba6fe8b6-1204=
+-46c2-ba05-11a7bec33cce-000000/Sf6VwQt02OvXuApvXSPh8h6e1NJAvVbnAO7vi6BHO60=
+=3D436">
+                                    <span>
+                                        <strong>Observability trends for 20=
+26: Maturity, cost control, and driving business value (5 minute read)</str=
+ong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Observability has become mission-critic=
+al, with 60% of organizations reaching mature or expert levels while focusi=
+ng on cost control, expanding business impact reporting, and democratizing =
+data across IT, security, and business teams. Mature practices enable compl=
+iance, cross-team value, and strategic advantage.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fdropbox.tech%2Fmachine-learning%2Ffeature-store-powerin=
+g-realtime-ai-in-dropbox-dash%3Futm_source=3Dtldrdevops/1/0100019b36931013-=
+ba6fe8b6-1204-46c2-ba05-11a7bec33cce-000000/cp9UKjm44fgLmJ5bdwSs7Z5pdcOLNgJ=
+ihyf5iFJ1_5k=3D436">
+                                    <span>
+                                        <strong>Inside the feature store po=
+wering real-time AI in Dropbox Dash (7 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Dropbox developed a custom feature stor=
+e to power the AI-driven search in its Dash product, enabling rapid retriev=
+al of relevant files by understanding complex user queries across company c=
+ontent. This hybrid architecture leveraged Feast for orchestration, Spark f=
+or computation, and Dropbox's in-house Dynovault for low-latency lookups, a=
+longside a custom Go service that achieved sub-100ms p95 latencies for thou=
+sands of feature lookups per query.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=E2=9A=
+=A1</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.planview.com%2Flp%2Fhub-micro-webinars%2F%3Futm_med=
+ium=3Dpedm%26utm_source=3Dtldr%26utm_campaign=3Dhb_stci_dp-office-of-the-ct=
+o_dgabm_ww_x_us_en%26utm_content=3Dintegration-station-micro-series_webinar=
+/1/0100019b36931013-ba6fe8b6-1204-46c2-ba05-11a7bec33cce-000000/YMaZLX2RQOc=
+H1vhvNr6Leh7X1MuqH2Mw8V3VZCDdaLo=3D436">
+                                    <span>
+                                        <strong>Troubleshoot integrations i=
+n 15 minutes with Planview's byte-size webinars (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Dealing with a fragmented toolchain, he=
+avy manual reporting, and no single source of truth? Find solutions to your=
+ toughest integration challenges in an upcoming Planview Hub Bytes session.=
+ <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.planvie=
+w.com%2Flp%2Fhub-micro-webinars%2F%3Futm_medium=3Dpedm%26utm_source=3Dtldr%=
+26utm_campaign=3Dhb_stci_dp-office-of-the-cto_dgabm_ww_x_us_en%26utm_conten=
+t=3Dintegration-station-micro-series_webinar/2/0100019b36931013-ba6fe8b6-12=
+04-46c2-ba05-11a7bec33cce-000000/oYujm320GmHDhsyieJBiWbI3wQVywI1FsAO3x10Eqs=
+Y=3D436" rel=3D"noopener noreferrer nofollow" target=3D"_blank"><span>Regis=
+ter for free</span></a>
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.elastic.co%2Fblog%2Felastic-microsoft-ignite-2025-p=
+artnership%3Futm_source=3Dtldrdevops/1/0100019b36931013-ba6fe8b6-1204-46c2-=
+ba05-11a7bec33cce-000000/S07WvRFHconaSdzB7cccHqcHp-sWCj_Vb5wlXt7TgE8=3D436"=
+>
+                                    <span>
+                                        <strong>Elastic and Microsoft partn=
+ership achievements in 2025 (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Elastic highlighted a year of joint inn=
+ovation with Microsoft, delivering Azure infrastructure, AI, and security i=
+ntegrations, and customer successes.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fblog.cloudflare.com%2Fr2-sql-aggregations%2F%3Futm_sour=
+ce=3Dtldrdevops/1/0100019b36931013-ba6fe8b6-1204-46c2-ba05-11a7bec33cce-000=
+000/6JdC2PWA9MGoKCtshShzYDVbCV19peLIFSBIv1YOGwo=3D436">
+                                    <span>
+                                        <strong>Announcing support for GROU=
+P BY, SUM, and other aggregation queries in R2 SQL (9 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Cloudflare's R2 SQL, a serverless analy=
+tics query engine for R2 Data Catalog, now supports aggregations or "GROUP =
+BY queries".
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"word-break=
+: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class=3D"container" style=3D"padding: 0px 10px 15px;">
+<div class=3D"text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align=3D"left" style=3D"padding: 10px;">
+<div class=3D"text-block">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.t=
+ech%2Ffa0c1dae%2F10/1/0100019b36931013-ba6fe8b6-1204-46c2-ba05-11a7bec33cce=
+-000000/y_l1ascAPqnp8TeA3l5Te7TxgWaANGLg22T7LwCOzoY=3D436" style=3D"color: =
+#464ba4; text-decoration: underline;">https://refer.tldr.tech/fa0c1dae/10</=
+a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align=3D"left" style=3D"padding:5px 10px;">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.=
+co%2Fsub_99428dc57e85%2F10/1/0100019b36931013-ba6fe8b6-1204-46c2-ba05-11a7b=
+ec33cce-000000/O-pDqDbEZCC2SuiEQDY9sp8RLdNSK3T5xGM_Eq0Jg7k=3D436" style=3D"=
+font-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block;=
+  text-decoration: underline;"><span style=3D"mso-text-raise:13pt; text-dec=
+oration: underline;">Track your referrals here.</span></a>
+</td></tr></tbody></table>
+
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"word-break=
+: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to advertise in TLDR? =F0=9F=93=B0
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+If your company is interested in reaching an audience of devops professiona=
+ls and decision makers, you may want to <a href=3D"https://tracking.tldrnew=
+sletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=3Dtldrdevop=
+s%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertisecta/1/0100019b3693101=
+3-ba6fe8b6-1204-46c2-ba05-11a7bec33cce-000000/AK-1XVwK01G0O6j-nIuEgYqCfJu8p=
+9BKRR3DrCX86Sg=3D436"><strong><span>advertise with us</span></strong></a>.
+</div>
+<br>
+
+<!-- New "Want to work at TLDR?" section -->
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to work at TLDR? =F0=9F=92=BC
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech/1/0100019b36931013-ba6fe8b6-1204-46c2-ba05-11a7bec33cce-00=
+0000/-7PevFiE1HxKB1IpB8PAliGshhZLYxGI0NAemTWFC78=3D436" rel=3D"noopener nor=
+eferrer" style=3D"color: #0000EE; text-decoration: underline;" target=3D"_b=
+lank"><strong>Apply here</strong></a>,
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech%2Fc227b917-a6a4-40ce-8950-d3e165357871/1/0100019b36931013-=
+ba6fe8b6-1204-46c2-ba05-11a7bec33cce-000000/OADVDsIDyC_mHylvdKsaJSmHA9DwQr_=
+mUesMtFuvlo0=3D436" rel=3D"noopener noreferrer" style=3D"color: #0000EE; te=
+xt-decoration: underline;" target=3D"_blank"><strong>create your own role</=
+strong></a> or send a friend's resume to <a href=3D"mailto:jobs@tldr.tech" =
+style=3D"color: #0000EE; text-decoration: underline;">jobs@tldr.tech</a> an=
+d get $1k if we hire them! TLDR is one of <a href=3D"https://tracking.tldrn=
+ewsletter.com/CL0/https:%2F%2Fwww.linkedin.com%2Ffeed%2Fupdate%2Furn:li:act=
+ivity:7401699691039830016%2F/1/0100019b36931013-ba6fe8b6-1204-46c2-ba05-11a=
+7bec33cce-000000/ntRBi-tVm9hR4uLHchlaBaVstucMu48yefUkODccDzE=3D436" rel=3D"=
+noopener noreferrer" style=3D"color: #0000EE; text-decoration: underline;" =
+target=3D"_blank"><strong>Inc.'s Best Bootstrapped businesses</strong></a> =
+of 2025.
+</div>
+<br>
+
+<div class=3D"text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.linkedin=
+.com%2Fin%2Fkunaljaydesai%2F/1/0100019b36931013-ba6fe8b6-1204-46c2-ba05-11a=
+7bec33cce-000000/6zslIo-hD6hQsnib2MxhG1LgxkfAWwYd-7DFlLNcPsA=3D436"><span>K=
+unal Desai</span></a> &amp; <a href=3D"https://tracking.tldrnewsletter.com/=
+CL0/https:%2F%2Fwww.linkedin.com%2Fin%2Fmartin-hauskrecht%2F/1/0100019b3693=
+1013-ba6fe8b6-1204-46c2-ba05-11a7bec33cce-000000/zX0-6N-3Or-vGxPimvv9O2ohvW=
+SmHyOxJFAKTBTpgiw=3D436"><span>Martin Hauskrecht</span></a>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div class=3D"text-block" id=3D"testing-id">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2F=
+devops%2Fmanage%3Femail=3Dmike.mcconigley%2540gmail.com/1/0100019b36931013-=
+ba6fe8b6-1204-46c2-ba05-11a7bec33cce-000000/uCtrBiAf6e0oZjKhVqJlBwB_lQchmJG=
+-0zEkho1yEnA=3D436">Manage your subscriptions</a> to our other newsletters =
+on tech, startups, and programming. Or if TLDR DevOps isn't for you, please=
+ <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsl=
+etter.com%2Funsubscribe%3Fep=3D1%26l=3D1c5ddf10-b6dc-11ed-a12f-33c00cd07e37=
+%26lc=3D6b0d473c-a670-11f0-8d7f-0bad7bf21fba%26p=3Daaa8cc6c-dcae-11f0-a02e-=
+819b71169679%26pt=3Dcampaign%26pv=3D4%26spa=3D1766145691%26t=3D1766147166%2=
+6s=3D95b41b21ef9828c82cf8c6d01b88cc0a8c09cc14b142d0d42461f4136a75e1f2/1/010=
+0019b36931013-ba6fe8b6-1204-46c2-ba05-11a7bec33cce-000000/82kKKrVITrYruYBub=
+nyd7mHDUP9bVfKmKvwRWYgnmIw=3D436">unsubscribe</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+
+
+<img alt=3D"" src=3D"http://tracking.tldrnewsletter.com/CI0/0100019b3693101=
+3-ba6fe8b6-1204-46c2-ba05-11a7bec33cce-000000/8rJqS8XOskHmyiw-uBYook6nNKPCF=
+S1tLTcrPrEV1q4=3D436" style=3D"display: none; width: 1px; height: 1px;">
+</body></html>
+--Y0pYE1ca--
