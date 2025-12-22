@@ -3,6 +3,7 @@
 # 1. Activate the brain (Virtual Environment)
 source ~/podcast_studio/venv/bin/activate
 
+echo "🚀 Starting Generation..."
 # 2. Check for the magic word
 if [ "$1" == "RESUME" ]; then
     # If user typed './podcast RESUME', tell Python to load the cache
@@ -11,3 +12,6 @@ else
     # Otherwise, start fresh
     python3 main.py
 fi
+
+echo "🌍 Deploying to Dropbox & RSS..."
+python3 deploy_feed.py

@@ -1,5 +1,317 @@
 .
 ├── Gcloud -> /mnt/chromeos/GoogleDrive/MyDrive/Podcasts/
+├── hosting
+│   ├── 04Dec
+│   │   ├── 04Dec_Culture_Film_TV_Celebrity_Culture_FilmTVCelebrity.mp3
+│   │   ├── 04Dec_Culture_Food_Dining_Scene_Culture_FoodDining.mp3
+│   │   ├── 04Dec_Culture_News_Roundup_Culture_NewsRoundup.mp3
+│   │   ├── 04Dec_Culture_On_Air_Incident_Culture_OnAirIncident.mp3
+│   │   ├── 04Dec_Culture_Social_Policy_Com_Culture_SocialPolicyCommu.mp3
+│   │   ├── 04Dec_Culture_Urban_Development_Culture_UrbanArch.mp3
+│   │   ├── 04Dec_Economy_News_Roundup_Economy_News_Roundup.mp3
+│   │   ├── 04Dec_Irish_Politics_Accelerati_Politics_Irish_Infrastruc.mp3
+│   │   ├── 04Dec_Politics_News_Roundup_Politics_News_Roundup.mp3
+│   │   ├── 04Dec_Sport_AFCON_Premier_Leagu_Sport_AFCON_PLImpact.mp3
+│   │   ├── 04Dec_Sport_Manchester_United_C_Sport_ManUtd_Update.mp3
+│   │   ├── 04Dec_Sport_News_Roundup_Sport_News_Roundup.mp3
+│   │   ├── 04Dec_Sport_Premier_League_Matc_Sport_PremierLeague_Revie.mp3
+│   │   ├── 04Dec_Sport_Rugby_World_Cup_202_Sport_RugbyWC2027_Draw.mp3
+│   │   ├── 04Dec_Tech_News_Roundup_Tech_News_Roundup.mp3
+│   │   ├── 04Dec_UK_Politics_Conservative__Politics_UK_Conservative_.mp3
+│   │   ├── 04Dec_World_News_Roundup_World_News_Roundup.mp3
+│   │   ├── 04Dec_World_Russia_Ukraine_War__World_Russia_Ukraine_War_.mp3
+│   │   ├── 04Dec_World_Syria_s_Assad_Regim_World_Syria_Assad_Human_R.mp3
+│   │   └── Podcast_Index_04Dec.html
+│   ├── 05Dec
+│   │   ├── 05Dec_Culture_Irish_News_Debate_Culture_IrishNewsDebates.mp3
+│   │   ├── 05Dec_Culture_News_Roundup_Culture_News_Roundup.mp3
+│   │   ├── 05Dec_Culture_News_Roundup_Culture_NewsRoundup.mp3
+│   │   ├── 05Dec_Culture_NYT_Puzzle_Games_Culture_NYTPuzzleGames.mp3
+│   │   ├── 05Dec_Culture_Women_s_Football__Culture_WomensFootballFan.mp3
+│   │   ├── 05Dec_Economy_Media_Entertainme_Economy_MediaEntertainmen.mp3
+│   │   ├── 05Dec_Economy_News_Roundup_Economy_News_Roundup.mp3
+│   │   ├── 05Dec_Economy_News_Roundup_Economy_NewsRoundup.mp3
+│   │   ├── 05Dec_Politics_AI_Disinformatio_Politics_AI_Disinformatio.mp3
+│   │   ├── 05Dec_Politics_Courts_Crime_Com_Politics_Courts_Crime_Com.mp3
+│   │   ├── 05Dec_Politics_Local_Governance_Politics_Local_Infrastruc.mp3
+│   │   ├── 05Dec_Politics_National_Securit_Politics_National_Interna.mp3
+│   │   ├── 05Dec_Politics_News_Roundup_Politics_News_Roundup.mp3
+│   │   ├── 05Dec_Science_News_Roundup_Science_News_Roundup.mp3
+│   │   ├── 05Dec_Sport_2025_Women_s_Top_10_Sport_2025_Womens_Top_100.mp3
+│   │   ├── 05Dec_Sport_Arsenal_Performance_Sport_Arsenal_Performance.mp3
+│   │   ├── 05Dec_Sport_FIFA_World_Cup_2026_Sport_FIFA_World_Cup_2026.mp3
+│   │   ├── 05Dec_Sport_Manchester_United_N_Sport_Manchester_United_N.mp3
+│   │   ├── 05Dec_Sport_Manchester_United_R_Sport_Man_Utd_Form_Outloo.mp3
+│   │   ├── 05Dec_Sport_News_Roundup_Sport_News_Roundup.mp3
+│   │   ├── 05Dec_Sport_Premier_League_Revi_Sport_Premier_League_Revi.mp3
+│   │   ├── 05Dec_Tech_AI_Copyright_Content_Tech_AI_Content_Rights.mp3
+│   │   ├── 05Dec_Tech_AI_for_Business_Auto_Tech_AI_Business_Automati.mp3
+│   │   ├── 05Dec_Tech_AI_Powered_Productiv_Tech_AI_Productivity_Docs.mp3
+│   │   ├── 05Dec_Tech_AI_Tools_Ethics_Tech_AI_Tools_Ethics.mp3
+│   │   ├── 05Dec_Tech_Android_Updates_and__Tech_Android_Updates_Feat.mp3
+│   │   ├── 05Dec_Tech_Business_Hardware_In_Tech_Business_Hardware_In.mp3
+│   │   ├── 05Dec_Tech_Cybersecurity_Vulner_Tech_Cybersecurity_Vulner.mp3
+│   │   ├── 05Dec_Tech_Google_s_AI_Advances_Tech_Google_AI_Dev.mp3
+│   │   ├── 05Dec_Tech_Government_Tech_Digi_Tech_Government_Digital_P.mp3
+│   │   ├── 05Dec_Tech_News_Roundup_Tech_News_Roundup.mp3
+│   │   ├── 05Dec_Tech_Open_Source_Project__Tech_Open_Source_Health.mp3
+│   │   ├── 05Dec_Tech_Pioneering_AI_Ventur_Tech_Pioneering_AI_Ventur.mp3
+│   │   ├── 05Dec_Tech_Social_Media_Platfor_Tech_Social_Media_Updates.mp3
+│   │   ├── 05Dec_Tech_The_Techpresso_Ecosy_Tech_Techpresso_AI_Media.mp3
+│   │   ├── 05Dec_Tech_Web_Development_From_Tech_Web_Dev_Foundations.mp3
+│   │   ├── 05Dec_Tech_Windows_Microsoft_St_Tech_Windows_Microsoft_St.mp3
+│   │   ├── 05Dec_World_Legality_of_US_Mili_World_US_Strikes_Legality.mp3
+│   │   ├── 05Dec_World_News_Roundup_World_News_Roundup.mp3
+│   │   ├── 05Dec_World_US_China_Relations__World_US_China_Influence.mp3
+│   │   └── Podcast_Index_05Dec.html
+│   ├── 05DecA
+│   │   ├── 05Dec_Culture_News_Roundup_Culture_News_Roundup.mp3
+│   │   ├── 05Dec_Economy_Media_Entertainme_Economy_MediaEntertainmen.mp3
+│   │   ├── 05Dec_Economy_News_Roundup_Economy_News_Roundup.mp3
+│   │   ├── 05Dec_Economy_News_Roundup_Economy_NewsRoundup.mp3
+│   │   ├── 05Dec_Politics_AI_Disinformatio_Politics_AI_Disinformatio.mp3
+│   │   ├── 05Dec_Tech_AI_Copyright_Content_Tech_AI_Content_Rights.mp3
+│   │   ├── 05Dec_Tech_AI_for_Business_Auto_Tech_AI_Business_Automati.mp3
+│   │   ├── 05Dec_Tech_AI_Powered_Productiv_Tech_AI_Productivity_Docs.mp3
+│   │   ├── 05Dec_Tech_Google_s_AI_Advances_Tech_Google_AI_Dev.mp3
+│   │   ├── 05Dec_Tech_News_Roundup_Tech_News_Roundup.mp3
+│   │   ├── 05Dec_Tech_Pioneering_AI_Ventur_Tech_Pioneering_AI_Ventur.mp3
+│   │   ├── 05Dec_Tech_Social_Media_Platfor_Tech_Social_Media_Updates.mp3
+│   │   ├── 05Dec_Tech_The_Techpresso_Ecosy_Tech_Techpresso_AI_Media.mp3
+│   │   ├── 05Dec_Tech_Web_Development_From_Tech_Web_Dev_Foundations.mp3
+│   │   ├── 05Dec_World_News_Roundup_World_News_Roundup.mp3
+│   │   └── Podcast_Index_05Dec.html
+│   ├── 07Dec
+│   ├── 09Dec
+│   │   └── Filtering_Report_09Dec.html
+│   ├── 10Dec
+│   ├── 10Dec_1
+│   │   ├── 10Dec_celebrity-social-news.mp3
+│   │   ├── 10Dec_cost-of-living-income-inequality.mp3
+│   │   ├── 10Dec_dublin-riots-law-enforcement.mp3
+│   │   ├── 10Dec_edenderry-firebombing-investigation.mp3
+│   │   ├── 10Dec_entertainment-industry-shifts.mp3
+│   │   ├── 10Dec_e-scooter-risks.mp3
+│   │   ├── 10Dec_fianna-fail-leadership.mp3
+│   │   ├── 10Dec_housing-market-and-development.mp3
+│   │   ├── 10Dec_international-relations-defense.mp3
+│   │   ├── 10Dec_International_Relations_U_International_Ukraine.mp3
+│   │   ├── 10Dec_ireland-affairs.mp3
+│   │   ├── 10Dec_irish-broadcasting.mp3
+│   │   ├── 10Dec_irish-economy-social-issues.mp3
+│   │   ├── 10Dec_Irish_Politics_Leadership_Irish_Politics.mp3
+│   │   ├── 10Dec_safeguarding-youth-radicalization.mp3
+│   │   ├── 10Dec_social-media-drones.mp3
+│   │   ├── 10Dec_Sport_Man_Utd_Managerial__Sport_Man_Utd_Managerial_.mp3
+│   │   ├── 10Dec_UK_Politics_and_Policy_As_UK_Politics_Policy.mp3
+│   │   ├── 10Dec_UK_Politics_Electoral_Law_UK_Politics_Electoral_Roy.mp3
+│   │   ├── 10Dec_US_Politics_Trump_s_Appro_US_Politics_Trump.mp3
+│   │   ├── 10Dec_World_2026_FIFA_World_Cup_World_WorldCup_2026.mp3
+│   │   ├── 10Dec_World_Crime_and_Law_Enfor_World_Ireland_Crime.mp3
+│   │   ├── 10Dec_World_Environmental_and_E_World_Environment_Energy.mp3
+│   │   ├── 10Dec_World_European_and_UK_Soc_World_Europe_UK_Social.mp3
+│   │   ├── 10Dec_World_Financial_Settlemen_World_Financial_Settlemen.mp3
+│   │   ├── 10Dec_World_International_Busin_World_Business_Expansion.mp3
+│   │   ├── 10Dec_World_Middle_East_and_Gaz_World_MiddleEast_Gaza.mp3
+│   │   ├── 10Dec_World_Russian_Influence_i_World_Russia_Europe_Influ.mp3
+│   │   ├── 10Dec_World_Space_Exploration_World_Space_Exploration.mp3
+│   │   ├── 10Dec_World_Syria_Conflict_and__World_Syria_Conflict.mp3
+│   │   ├── 10Dec_World_Technology_and_Digi_World_Tech_Digital.mp3
+│   │   ├── 10Dec_World_Ukraine_War_and_Eur_World_Ukraine_Security.mp3
+│   │   ├── 10Dec_World_Unexplained_Death_o_World_Cruise_Death.mp3
+│   │   └── Filtering_Report_10Dec.html
+│   ├── 10Dec_2
+│   │   ├── 10Dec_man-utd-criticisms.mp3
+│   │   ├── 10Dec_man-utd-fallout.mp3
+│   │   ├── 10Dec_News_Update.mp3
+│   │   ├── 10Dec_parenting-consumer-woes.mp3
+│   │   ├── Filtering_Report_10Dec.html
+│   │   └── index.html
+│   ├── 11Dec
+│   │   ├── 11Dec__disney_and_openai_ink_billion_dollar_deal.mp3
+│   │   ├── 11Dec_european_council.mp3
+│   │   ├── 11Dec_fourteen_cases_taken_against_state_over_age_verifi.mp3
+│   │   ├── 11Dec_gordon_darcy_leinster_could_do_worse_than_copy_fre.mp3
+│   │   ├── 11Dec_ira_spy_stakeknife_well_rewarded_financially_and_t.mp3
+│   │   ├── 11Dec__spacex_targets_ipo_at_15_trillion_valuation.mp3
+│   │   ├── 11Dec_storm_bram_failed_to_dampen_spirits_on_the_one_day.mp3
+│   │   ├── 11Dec_techpresso.mp3
+│   │   ├── 11Dec_the_only_other_option_would_be_nursing_homes_older.mp3
+│   │   ├── 11Dec_ukraine_says_fight_for_pokrovsk_continues_as_russi.mp3
+│   │   ├── 11Dec_xhtml_namespace.mp3
+│   │   └── index.html
+│   ├── 11decA
+│   │   ├── 11Dec_Cluster_Group_0.mp3
+│   │   ├── 11Dec_Cluster_Group_10.mp3
+│   │   ├── 11Dec_Cluster_Group_11.mp3
+│   │   ├── 11Dec_Cluster_Group_12.mp3
+│   │   ├── 11Dec_Cluster_Group_13.mp3
+│   │   ├── 11Dec_Cluster_Group_14.mp3
+│   │   ├── 11Dec_Cluster_Group_1.mp3
+│   │   ├── 11Dec_Cluster_Group_5.mp3
+│   │   ├── 11Dec_Cluster_Group_8.mp3
+│   │   ├── 11Dec_Cluster_Group_9.mp3
+│   │   └── index.html
+│   ├── 12Dec
+│   │   ├── 12Dec__disney_and_openai_ink_billion_dollar_deal.mp3
+│   │   ├── 12Dec_irelands_air_traffic_control_operators_not_notifie.mp3
+│   │   ├── 12Dec_xhtml_namespace.mp3
+│   │   └── index.html
+│   ├── 13Dec
+│   │   ├── 13Dec_block_all_ai_browsers_for_the_foreseeable_future_g.mp3
+│   │   ├── 13Dec_capita_seeks_microsoft_help_with_pension_service_f.mp3
+│   │   ├── 13Dec_chinas_reusable_rocket_explodes_but_its_ethernet_f.mp3
+│   │   ├── 13Dec_gardaí_identify_suspected_prime_mover_in_death_of_.mp3
+│   │   ├── 13Dec_how_to_have_a_financially_savvy_new_year.mp3
+│   │   ├── 13Dec_judge_may_force_vizio_to_share_source_code_under_g.mp3
+│   │   ├── 13Dec_shamrock_rovers_defeat_to_breidablik_ends_hopes_of.mp3
+│   │   ├── 13Dec_the_irish_times.mp3
+│   │   ├── 13Dec_xhtml_namespace.mp3
+│   │   ├── 13Dec_x_terminates_european_commission_ad_account_after_.mp3
+│   │   └── index.html
+│   ├── 15Dec
+│   │   ├── arkiv
+│   │   │   ├── 15Dec_body_recovered_in_search_for_missing_teenager_benj.mp3
+│   │   │   ├── 15Dec_drones_over_dublin_bay_what_happened_during_zelens.mp3
+│   │   │   ├── 15Dec_elon_musk_will_actually_have_his_own_office_at_sam.mp3
+│   │   │   ├── 15Dec_incredibly_inspiring_paul_mescal_and_jessie_buckle.mp3
+│   │   │   ├── 15Dec_patientinfo_health_information_and_symptom_checker.mp3
+│   │   │   ├── 15Dec_ruben_amorim_makes_evanilson_admission_after_man_u.mp3
+│   │   │   ├── 15Dec_three_dead_following_weekend_of_carnage_on_co_tipp.mp3
+│   │   │   └── 15Dec_woman_tells_judge_she_doesnt_want_to_be_another_st.mp3
+│   │   ├── 15Dec_body_recovered_in_search_for_missing_teenager_benj.mp3
+│   │   ├── 15Dec_drones_over_dublin_bay_what_happened_during_zelens.mp3
+│   │   ├── 15Dec_elon_musk_will_actually_have_his_own_office_at_sam.mp3
+│   │   ├── 15Dec_patientinfo_health_information_and_symptom_checker.mp3
+│   │   ├── 15Dec_ruben_amorim_makes_evanilson_admission_after_man_u.mp3
+│   │   ├── 15Dec_three_dead_following_weekend_of_carnage_on_co_tipp.mp3
+│   │   ├── 15Dec_woman_tells_judge_she_doesnt_want_to_be_another_st.mp3
+│   │   └── index.html
+│   ├── 16Dec
+│   │   ├── 16Dec_bondi_attack_alleged_gunmen_travelled_to_philippin.mp3
+│   │   ├── 16Dec_dublin_comedian_rachel_galvo_on_using_her_extremel.mp3
+│   │   ├── 16Dec_ireland_weather_thunderstorms_and_gales_on_the_way.mp3
+│   │   ├── 16Dec_mobiles_next_big_thing_is_unraveling_its_going_to_.mp3
+│   │   ├── 16Dec_my_kids_idolise_their_dad_should_i_tell_them_one_r.mp3
+│   │   ├── 16Dec_nasty_monster_man_united_fans_want_ruben_amorim_sa.mp3
+│   │   ├── 16Dec_news_roundup_various_stories.mp3
+│   │   ├── 16Dec_reporting_from_the_frontlines_still_battling_notio.mp3
+│   │   ├── 16Dec_ten_great_rob_reiner_movie_moments_from_co_clares_.mp3
+│   │   └── index.html
+│   ├── 17Dec
+│   │   └── inbox.txt
+│   ├── 18Dec
+│   │   ├── 18Dec_clock_runs_out_on_master_of_good_timing_patrick_mc.mp3
+│   │   ├── 18Dec_corinna_hardgraves_2025_food_awards_including_her_.mp3
+│   │   ├── 18Dec_i_just_went_and_got_some_pizzas_charlie_smyth_stil.mp3
+│   │   ├── 18Dec_in_bondi_on_the_first_night_of_hanukkah_the_intifa.mp3
+│   │   ├── 18Dec_legal_action_taken_against_state_over_alleged_fail.mp3
+│   │   ├── 18Dec_letters_home_im_saying_thanks_to_the_bus_driver_no.mp3
+│   │   ├── 18Dec_news_roundup_various_stories.mp3
+│   │   ├── 18Dec_patients_in_dublin_mental_health_hospital_left_in_.mp3
+│   │   ├── 18Dec_text_message_scams_by_far_the_most_common_route_fo.mp3
+│   │   ├── 18Dec_the_irish_times.mp3
+│   │   ├── 18Dec__the_new_chatgpt_images_is_here.mp3
+│   │   └── index.html
+│   ├── 19Dec
+│   │   ├── 19Dec_200_courses_on_chatgpt_claude.mp3
+│   │   ├── 19Dec_alexa_can_now_answer_your_ring_doorbell_and_talk_t.mp3
+│   │   ├── 19Dec_apple_google_forced_to_issue_emergency_0_day_patch.mp3
+│   │   ├── 19Dec_bruno_fernandes_blasts_man_utd_in_stunning_intervi.mp3
+│   │   ├── 19Dec_chatgpts_mobile_app_hits_new_milestone_of_3b_in_co.mp3
+│   │   ├── 19Dec_google_gemini_is_getting_an_ai_video_detector.mp3
+│   │   ├── 19Dec_judge_calls_for_crackdown_amid_rise_in_violent_beh.mp3
+│   │   ├── 19Dec_lg_will_let_you_delete_the_previously_unremovable_.mp3
+│   │   ├── 19Dec_metrocouk_news_sport_showbiz_celebrities_from_metr.mp3
+│   │   ├── 19Dec_news_roundup_various_stories.mp3
+│   │   ├── 19Dec_sir_jim_ratcliffe_handed_125m_ineos_bailout_heres_.mp3
+│   │   ├── 19Dec_spacexs_starlink_loses_satellite_after_rare_orbita.mp3
+│   │   ├── 19Dec__tiktok_signs_deal_to_sell_us_business.mp3
+│   │   ├── 19Dec_ukraine_deal_eu_leaders_agree_90bn_loan_after_froz.mp3
+│   │   ├── 19Dec_view_email.mp3
+│   │   └── index.html
+│   ├── 20Dec
+│   │   ├── 20Dec_1527_inside_man_uniteds_january_transfer_budget_psr_85m.mp3
+│   │   ├── 20Dec_man_found_dead_in_phoenix_park_was_unidentified_fo.mp3
+│   │   ├── 20Dec_metrocouk_news_sport_showbiz_celebrities_from_metr.mp3
+│   │   ├── 20Dec_news_roundup_various_stories.mp3
+│   │   └── index.html
+│   ├── 21Dec
+│   │   ├── 21Dec_0855_best_offer_ever.mp3
+│   │   ├── 21Dec_0855__blue_origin_sends_first_wheelchair_user_to_space.mp3
+│   │   ├── 21Dec_0855_dublin_city_council_spends_58m_on_homeless_accommo.mp3
+│   │   ├── 21Dec_0855_elon_musks_56b_tesla_pay_package_restored_by_delaw.mp3
+│   │   ├── 21Dec_0855_news_roundup_various_stories.mp3
+│   │   ├── 21Dec_0855_the_switch_from_google_assistant_to_gemini_on_andr.mp3
+│   │   ├── 21Dec_0855_whats_behind_the_trump_administrations_war_on_type.mp3
+│   │   ├── index.html
+│   │   └── manifest.json
+│   ├── final_victory
+│   │   └── feed.xml
+│   ├── live_feed_v1
+│   │   └── podcast_live.xml
+│   ├── live_feed_v2
+│   │   └── briefing_fixed.xml
+│   ├── test_experiment
+│   │   ├── debug.xml
+│   │   └── test_audio_v1.mp3
+│   ├── test_experiment_v2
+│   │   ├── debug_compliant.xml
+│   │   └── test_audio_compliant.mp3
+│   ├── test_v3_final
+│   │   └── success.xml
+│   ├── x-06Dec
+│   │   ├── 06Dec_Culture_Late_Late_Toy_Sho_Culture_Late_Late_Toy_Sho.mp3
+│   │   ├── 06Dec_Culture_Personal_Story_Ho_Culture_PersonalStory_Hom.mp3
+│   │   ├── 06Dec_Culture_The_Long_Read_Culture_The_Long_Read.mp3
+│   │   ├── 06Dec_Economy_Tax_Avoidance_Sch_Economy_TaxAvoidanceSchem.mp3
+│   │   ├── 06Dec_Politics_Irish_Leadership_Politics_Irish_Leadership.mp3
+│   │   ├── 06Dec_Politics_Irish_Social_Unr_Politics_Irish_Social_Imm.mp3
+│   │   ├── 06Dec_Politics_Irish_State_Affa_Politics_Irish_State_Regu.mp3
+│   │   ├── 06Dec_Politics_UK_Health_Servic_Politics_UK_Health_Challe.mp3
+│   │   ├── 06Dec_Sport_Arsenal_s_Premier_L_Sport_Arsenal_Title_Race.mp3
+│   │   ├── 06Dec_Sport_Chelsea_Transfer_Ru_Sport_Chelsea_Transfers.mp3
+│   │   ├── 06Dec_Sport_FIFA_World_Cup_2026_Sport_FIFA_WorldCup_2026_.mp3
+│   │   ├── 06Dec_Sport_Manchester_United_L_Sport_ManUtd_Amorim_Trans.mp3
+│   │   ├── 06Dec_Sport_News_Roundup_Sport_News_Roundup.mp3
+│   │   ├── 06Dec_World_News_Roundup_World_News_Roundup.mp3
+│   │   └── Podcast_Index_06Dec.html
+│   ├── x17Dec
+│   │   ├── 17Dec_apple_google_forced_to_issue_emergency_0_day_patch.mp3
+│   │   ├── 17Dec_expert_analysis_on_irish_politics.mp3
+│   │   ├── 17Dec_ireland_weather_thunderstorms_and_gales_on_the_way.mp3
+│   │   ├── 17Dec_mobiles_next_big_thing_is_unraveling_its_going_to_.mp3
+│   │   ├── 17Dec_nasty_monster_man_united_fans_want_ruben_amorim_sa.mp3
+│   │   ├── 17Dec_new_rail_strategy_aims_to_reinstate_train_line_in_.mp3
+│   │   ├── 17Dec_news_roundup_various_stories.mp3
+│   │   ├── 17Dec_reporting_from_the_frontlines_still_battling_notio.mp3
+│   │   ├── 17Dec_the_irish_times_view_on_anti_semitic_violence_age_.mp3
+│   │   └── index.html
+│   ├── x19Dec
+│   │   ├── 19Dec_bins_waste_and_recycling_london_borough_of_harrow.mp3
+│   │   ├── 19Dec_log_in_the_register.mp3
+│   │   ├── 19Dec_news_roundup_various_stories.mp3
+│   │   ├── 19Dec_sir_jim_ratcliffe_handed_125m_ineos_bailout_heres_.mp3
+│   │   ├── 19Dec_ukraine_deal_eu_leaders_agree_90bn_loan_after_froz.mp3
+│   │   └── index.html
+│   ├── y17dec
+│   │   ├── 17Dec_former_ul_president_asks_high_court_to_block_any_d.mp3
+│   │   ├── 17Dec_i_just_went_and_got_some_pizzas_charlie_smyth_stil.mp3
+│   │   ├── 17Dec_in_bondi_on_the_first_night_of_hanukkah_the_intifa.mp3
+│   │   ├── 17Dec_letters_home_im_saying_thanks_to_the_bus_driver_no.mp3
+│   │   ├── 17Dec_news_roundup_various_stories.mp3
+│   │   ├── 17Dec_patients_in_dublin_mental_health_hospital_left_in_.mp3
+│   │   ├── 17Dec_the_irish_times.mp3
+│   │   └── index.html
+│   ├── y19Dec
+│   │   ├── 19Dec_apple_google_forced_to_issue_emergency_0_day_patch.mp3
+│   │   ├── 19Dec_github_walks_back_plan_to_charge_for_self_hosted_r.mp3
+│   │   ├── 19Dec_news_roundup_various_stories.mp3
+│   │   ├── 19Dec_sphotonix_5d_memory_crystal_cold_storage_lasts_14b.mp3
+│   │   └── index.html
+│   ├── briefing.xml
+│   ├── feed.xml
+│   └── podcast.xml
 ├── misc-bitz
 │   ├── check_gemini_models.py
 │   ├── check_gemini_simples.py
@@ -65,22 +377,19 @@
 │   ├── harvest_tldr.py
 │   └── tldr_picker.py
 ├── cover.jpg
+├── deploy_feed.py
+├── deploy_github.py
+├── deploy_test.py
 ├── email_harvest.py
 ├── gen_feed.py
-├── main_gen130.py
-├── main_gen132.py
-├── main_gen133.py
-├── main_gen134.py
-├── main_gen135.py
-├── main_gen136.py
-├── main_gen137.py
-├── main_gen138.py
 ├── main_gen139.py
-├── main.py -> main_gen139.py
+├── main_gen140.py
+├── main_gen201.py
+├── main.py -> main_gen201.py
 ├── podcast
 ├── readme.txt
 ├── requirements.txt
 ├── run_studio.sh
 └── structure.txt
 
-7 directories, 77 files
+39 directories, 354 files
