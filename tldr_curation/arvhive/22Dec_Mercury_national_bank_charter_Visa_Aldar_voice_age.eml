@@ -1,0 +1,1509 @@
+Delivered-To: mike.mcconigley@gmail.com
+Received: by 2002:ac9:40c9:0:b0:605:93f6:5e02 with SMTP id y9csp1980948ocg;
+        Mon, 22 Dec 2025 06:25:02 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IHVpvQRAXXxbsJ9UED4iB3F2vW7tWBhTN6ZiTmchoCUGpw0ARgVSqsg0SS0tCfmBEiYD7VP
+X-Received: by 2002:a05:622a:1aaa:b0:4f1:cce1:fc0 with SMTP id d75a77b69052e-4f4abd2b121mr193596491cf.37.1766413501788;
+        Mon, 22 Dec 2025 06:25:01 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1766413501; cv=none;
+        d=google.com; s=arc-20240605;
+        b=H/IMn9shrypx7PnyNHK/HaxzCySdPdpPRGN6JD3gtrclTraXK3Szk/uHfVbRkSD/Sv
+         ASPqpsbatfHKSlVvHexBmuBqomqUfSeBKFMdm3Pe8+Z1d4TlVD9QCTXJP4MfPd20kCeP
+         I/rDyGjwdqLm6cVXuG3XhulgIdnU8qV4LxMeuxXRSdKDKAf+FQQBWeqrkaMpI8akfHgH
+         wckxanbtU2J5ArUx/viXtMh7Lx7a847i3qfCwbQ7+XpRklKmCFr8bu6dSyz9KYSUENbW
+         34mGoTNM6+Y6J2GYTOQYHEK6M42+NP3GObMAkT8J97QKkjYhQyrIakFEP1cMd+H7y/BU
+         LcKg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:date:mime-version:list-unsubscribe-post
+         :list-unsubscribe:subject:to:from:dkim-signature:dkim-signature;
+        bh=ZA5jXiwqhR+BDrRkR/8D7eaxrvDTzNA7RTFTsXT3B4k=;
+        fh=tUTYCbTOUI69DxYKXGXRz08XnPP7jEKRU6E5rS0DFR4=;
+        b=je6edZ/eLNhpBd5tWFYvGLkhVta1Ghls9XDI6FIWuwZ3CypN19vBVCUNzw3/5QQ6YS
+         6ATHU2RnustLUIW/74CyTIOUaYK9+TSJdOsqACOKpY1zKspjB3rfhXEtpxU8Yv7nxVSE
+         gyI9aWBtdOkYee8SZakkZ5nd1mLLxe5MB1P0q5q7uSt7Z/sTf8b38Vckr9HiZKM5Lp1/
+         dCETsJYbTl5dZnFkWiTcvo1Z9V5KfF0jbDx+1C0ZoDOB//VDOp33t33sYPEy6rlMJZkq
+         Pa3vsH1kjodOp+9wftGIyuzTm6Fl9P+QNupZCyNGqkVpCqPvr7c9s7dSpJ698Hd3DARp
+         5kEA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=uJxzKPMk;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=WjXkOrcL;
+       spf=pass (google.com: domain of 0100019b467303da-6ba8808a-c73f-443f-9c3c-9093ae0894f3-000000@dailyupdate.tldrnewsletter.com designates 54.240.77.27 as permitted sender) smtp.mailfrom=0100019b467303da-6ba8808a-c73f-443f-9c3c-9093ae0894f3-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+Return-Path: <0100019b467303da-6ba8808a-c73f-443f-9c3c-9093ae0894f3-000000@dailyupdate.tldrnewsletter.com>
+Received: from a77-27.smtp-out.amazonses.com (a77-27.smtp-out.amazonses.com. [54.240.77.27])
+        by mx.google.com with ESMTPS id d75a77b69052e-4f4ac668ef0si116169061cf.230.2025.12.22.06.25.01
+        for <mike.mcconigley@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 22 Dec 2025 06:25:01 -0800 (PST)
+Received-SPF: pass (google.com: domain of 0100019b467303da-6ba8808a-c73f-443f-9c3c-9093ae0894f3-000000@dailyupdate.tldrnewsletter.com designates 54.240.77.27 as permitted sender) client-ip=54.240.77.27;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=uJxzKPMk;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=WjXkOrcL;
+       spf=pass (google.com: domain of 0100019b467303da-6ba8808a-c73f-443f-9c3c-9093ae0894f3-000000@dailyupdate.tldrnewsletter.com designates 54.240.77.27 as permitted sender) smtp.mailfrom=0100019b467303da-6ba8808a-c73f-443f-9c3c-9093ae0894f3-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ygiuxamnxevikrd5dtfwanslhs6b24mt; d=tldrnewsletter.com;
+	t=1766413501;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type;
+	bh=6S0RJ+WcE3NNVnnkgqZl6pbWRNOEguLH+H5/C2UWOYw=;
+	b=uJxzKPMkY94+0jsrXVZax3+fKvLdTIg+HyEwvkpK6+/LTY95REX/OUrCJmf57m+n
+	kFWAqa6QtnM7UOyMqG5kbJZz5Fai0hAW3R8+Gll2gymuo9ZiGnXI0MviiI0AwnXCc9Z
+	RGXVkgdAfDnZR1Lc1sa2wMuFi6Wd8PX5mCwrvxj4=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1766413501;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type:Feedback-ID;
+	bh=6S0RJ+WcE3NNVnnkgqZl6pbWRNOEguLH+H5/C2UWOYw=;
+	b=WjXkOrcLonm1yGKTXVV6eEiFxZ0IKp5Nvly0t3YXuvKVA3y+Fm/vuXl84Xw3u9gv
+	YZ2sD8lowjdX60ru7D5Y/gLpeSaduvp8byhkZ70aChM6RAXkoRpT0WLzPD+SEbc84ll
+	irthTftRIzUEKX8WDsj08EGtqIuV0XCsvVn2DAis=
+From: TLDR Fintech <dan@tldrnewsletter.com>
+To: mike.mcconigley@gmail.com
+Subject: Mercury national bank charter =?utf-8?Q?=F0=9F=8F=A6=2C?= Visa +
+ Aldar voice agentic payment =?utf-8?Q?=F0=9F=92=B2=2C?= State of Fintech
+ 2026 =?utf-8?Q?=F0=9F=94=AE?=
+X-Entity-Ref-Id: 34aede8b-5411-46c2-9451-ce5214ce7dc8
+X-EmailOctopus-Parent-Id: a7a7d556-df2b-11f0-9426-113526ffe887
+X-EmailOctopus-Parent-Type-Id: campaign
+X-EmailOctopus-List-Id: a9f58246-0e2a-11ef-8572-09f6f474b7ba
+X-EmailOctopus-List-Contact-Id: 6b0d1e24-a670-11f0-9f0f-0bad7bf21fba
+X-EmailOctopus-Started-Preparing-At: 2025-12-22T14:02:42+00:00
+X-EmailOctopus-Sent-At: 2025-12-22T14:25:01+00:00
+X-EmailOctopus-Team-Id: 66987ef2-4f4c-11e9-a3c9-06b79b628af2
+X-EmailOctopus-Version: 4
+List-Unsubscribe: <https://a.tldrnewsletter.com/unsubscribe?ep=1&l=a9f58246-0e2a-11ef-8572-09f6f474b7ba&lc=6b0d1e24-a670-11f0-9f0f-0bad7bf21fba&p=a7a7d556-df2b-11f0-9426-113526ffe887&pt=campaign&pv=4&spa=1766412162&t=1766413501&s=310076770fcaac862550d3ba93ca34363d6314a351d7b6c11e3a37ab3a46fa47>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-EmailOctopus-Ses-Configuration-Set-Name: emailoctopus-a9f7b12f74f3c968d9408897fb35539c
+MIME-Version: 1.0
+Date: Mon, 22 Dec 2025 14:25:01 +0000
+Message-ID: <0100019b467303da-6ba8808a-c73f-443f-9c3c-9093ae0894f3-000000@email.amazonses.com>
+Content-Type: multipart/alternative; boundary=wFHC4xwQ
+Feedback-ID: ::1.us-east-1.Dj5/7DYmgk+n1sSGGXSQSLIthSjNQ0MGtV5Dro1Tr8U=:AmazonSES
+X-SES-Outgoing: 2025.12.22-54.240.77.27
+
+--wFHC4xwQ
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Business banking startup Mercury has applied for a national bank
+charter,=
+ a move that would let it offer core banking
+services=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0
+
+
+ Si=
+gn Up [1] |Advertise [2]|View Online [3]=20
+
+=09=09TLDR=20
+
+=09=09TOGET=
+HER WITH [Marqeta] [4]
+
+TLDR FINTECH 2025-12-22
+
+ PAYMENT PROGRAMS =
+THAT SCALE.=C2=A0CUSTOMER EXPERIENCES THAT INSPIRE.
+(SPONSOR) [4]=20
+
+ =
+Don't sacrifice one for the other.=C2=A0 Choose a payments provider who
+c=
+an deliver on both. Choose Marqeta [4].=C2=A0=20
+
+=F0=9F=93=B1=20
+
+NEWS=
+ & TRENDS
+
+ FINTECH FIRM MERCURY APPLIES FOR NATIONAL BANK CHARTER (5 M=
+INUTE
+READ) [5]=20
+
+ Business banking startup Mercury has applied for a=
+ national bank
+charter, a move that would let it offer core banking servi=
+ces directly
+rather than relying on sponsor banks. The company has submit=
+ted
+applications to the Office of the Comptroller of the Currency and the=
+
+Federal Deposit Insurance Corp., positioning itself to operate like a
+=
+traditional lender while retaining software-driven revenue streams. If
+ap=
+proved, Mercury plans to expand into lending and believes the
+charter wou=
+ld remove a lingering trust hurdle as fintech regulation
+loosens under th=
+e current administration.=20
+
+ VISA AND ALDAR COMPLETE END-TO-END VOICE-E=
+NABLED AGENTIC PAYMENT (5
+MINUTE READ) [6]=20
+
+ Visa and Aldar today an=
+nounced a strategic collaboration that marks
+the first live implementatio=
+n of Visa Intelligent Commerce in the
+region, introducing end-to-end, voi=
+ce-enabled agentic payment
+experiences.=20
+
+ BLACKSTONE HOLDS EARLY TAL=
+KS WITH REVOLUT ON WEALTH PARTNERSHIP (2
+MINUTE READ) [7]=20
+
+ Blacksto=
+ne is exploring a potential partnership that would make its
+private-marke=
+t funds available through Revolut's emerging
+private-banking platform. Th=
+e talks are still preliminary, but they
+signal Revolut's push upmarket as=
+ it hires bankers and private capital
+specialists to serve high-net-worth=
+ clients. If finalized, the tie-up
+would underscore how firms led by exec=
+utives like Jon Gray are
+increasingly using fintech distribution to reach=
+ wealthy and retail
+investors, following similar moves by players such as=
+ Trade Republic,
+Apollo, and Robinhood.=20
+
+=F0=9F=9A=80=20
+
+DEEP DIV=
+ES & REPORTS
+
+ STATE OF FINTECH 2026: THE FINTECH COMPOUNDERS (10 MINUT=
+E READ) [8]=20
+
+ What a year 2025 has been. The GENIUS Act passed, Agenti=
+c Commerce
+became a thing, and prediction markets exploded onto the scene=
+. Banks
+had another record year, but a handful of neobanks are now compou=
+nding
+and breathing down their neck. Against all of this, consumers in th=
+e
+West are still spending but quietly suffering from a cost-of-living
+c=
+risis and the rise of financial nihilism.=20
+
+ BNPL USE LINKED TO POORER =
+MENTAL HEALTH, STUDY FINDS (2 MINUTE READ)
+[9]=20
+
+ A Johns Hopkins Uni=
+versity study found that adults in the US who
+report symptoms of depressi=
+on, anxiety, or PTSD were significantly
+more likely to use buy now, pay l=
+ater loans, raising concerns that
+BNPL may be associated with impaired fi=
+nancial decision-making among
+people with mental health challenges.=20
+=
+
+ HOW BANKS LEARNED TO STOP WORRYING AND LOVE STABLECOINS (4 MINUTE
+REA=
+D) [10]=20
+
+ Properly regulated stablecoins complement rather than threat=
+en banks
+by increasing competition, improving efficiency in payments and=
+
+settlement, and ultimately strengthening the traditional banking
+syste=
+m instead of draining deposits.=20
+
+ FIRESIDE CHAT WITH LAYER ON REBUILDI=
+NG SMB ACCOUNTING THROUGH
+VERTICAL SAAS (10 MINUTE READ) [11]=20
+
+ Embe=
+dded, AI-native accounting inside vertical SaaS platforms can
+replace Qui=
+ckBooks by owning distribution, automating bookkeeping end
+to end, and tu=
+rning platforms like POS and invoicing systems into the
+financial home fo=
+r small businesses.=20
+
+=F0=9F=92=BB=20
+
+LAUNCHES & PRODUCTS
+
+ TAKI=
+NG MONTHS TO IMPLEMENT FP&A TOOLS SHOULD BE ILLEGAL=E2=80=A6(SPONSOR)
+[12=
+]=20
+
+ There is a new rising star that is setting the bar for what
+=
+=E2=80=9Ctime-to-value=E2=80=9D should be for FP&A=C2=A0 software. Hint, it=
+'s measured
+in hours, not months. Aleph is an AI-native FP&A platform [12=
+] that
+seamlessly connects your cross-system data, spreadsheets, and stra=
+tegy
+at the speed of startups with the power to support enterprises.
+=
+
+TLDR readers can try out Aleph right now for free [12].
+
+ SOFI LAUNC=
+HES THE FIRST BANK-ISSUED STABLECOIN FOR ENTERPRISE
+PAYMENTS (2 MINUTE RE=
+AD) [13]=20
+
+ SoFiUSD is a US dollar stablecoin issued by its FDIC-insure=
+d national
+bank and backed 1:1 by cash at the Federal Reserve. It offers =
+faster,
+lower-cost settlement and white-labeled stablecoin infrastructure=
+ for
+banks, fintechs, and enterprises.=20
+
+ KLARNA LAUNCHES =E2=80=
+=98AGENTIC PRODUCT PROTOCOL' TO MAKE 100M PRODUCTS
+READABLE BY AI (3 MINU=
+TE READ) [14]=20
+
+ Klarna has introduced an open standard that structures=
+ product data
+so AI-powered shopping agents can discover, compare, and re=
+commend
+items with live pricing and availability. The new protocol gives =
+AI
+systems access to over 100 million products and hundreds of millions=
+
+of price points across multiple markets, while letting merchants
+integ=
+rate once using existing catalog formats like Shopify, Google
+Merchant, o=
+r CSV feeds. The move positions Klarna as core
+infrastructure for agent-d=
+riven commerce, betting that conversational
+AI will increasingly replace =
+traditional search and ads as the front
+door to online shopping.=20
+
+=
+=F0=9F=8E=81=20
+
+MISCELLANEOUS
+
+ DIGITAL ASSETS HAVE VANISHED FROM GO=
+VERNMENT =E2=80=9CVULNERABILITY=E2=80=9D
+LIST, OFFICIALLY ENDING A THREE-=
+YEAR REGULATORY CHOKEHOLD ON US BANKS
+(5 MINUTE READ) [15]=20
+
+ The Fin=
+ancial Stability Oversight Council quietly removed digital
+assets from it=
+s list of systemic financial vulnerabilities in its 2025
+annual report, s=
+ignaling a decisive shift away from treating crypto as
+a contagion risk. =
+Instead, digital assets are now framed as a market
+development to monitor=
+, reflecting rising institutional participation
+through spot ETFs, tokeni=
+zation, and regulated stablecoins.=20
+
+ MONZO TO ACQUIRE DIGITAL MORTGAGE=
+ BROKER HABITO (3 MINUTE READ) [16]=20
+
+ Monzo says the acquisition of Ha=
+bito will turn its app into a fully
+end-to-end mortgage broking experienc=
+e, moving beyond basic tracking
+into advice and applications. Monzo alrea=
+dy supports more than 450,000
+users through its Homeownership feature, wh=
+ich connects any mortgage,
+shows live balances and estimated home values,=
+ and surfaces better
+deals.=20
+
+ MESA SHUTS DOWN CREDIT CARD THAT REWAR=
+DED CARDHOLDERS FOR PAYING
+THEIR MORTGAGES (3 MINUTE READ) [17]=20
+
+ Fi=
+ntech startup Mesa has abruptly closed its Homeowners Card, ending
+a shor=
+t-lived experiment that let users earn points on mortgage
+payments and ev=
+eryday home-related spending. Launched in late 2024
+with $9.2 million in =
+funding, the product aimed to reframe credit card
+rewards around homeowne=
+rship rather than travel or dining, but
+cardholders began reporting wides=
+pread transaction declines before
+accounts were fully shut down. The clos=
+ure highlights how difficult it
+remains to sustainably align credit rewar=
+ds with large, low-margin
+payments like mortgages, even as competitors li=
+ke Bilt prepare to
+enter the space.=20
+
+=E2=9A=A1=20
+
+QUICK LINKS
+=
+
+ INSIDE THE VC ROLL-UP CRAZE RESHAPING SILICON VALLEY (6 MINUTE READ)
+=
+[18]=20
+
+ Venture firms from General Catalyst to Thrive and Lightspeed ar=
+e
+borrowing private equity playbooks to roll up traditional service
+bus=
+inesses and remake them with AI, betting that automation-driven
+efficienc=
+y can unlock outsized returns despite PE-like risk profiles.=20
+
+ INTERAC=
+TIVE BROKERS APPLIES FOR NATIONAL TRUST BANK CHARTER (1 MINUTE
+READ) [19]=
+=20
+
+ More than 30 companies have filed applications to become banks in t=
+he
+US this year, highlighting a broader push by fintechs and financial
+=
+platforms to gain tighter control over regulated infrastructure.=20
+
+ INF=
+ORMED.IQ RAISES $63M FOR AI-POWERED FRAUD PREVENTION AND LOAN
+VERIFICATIO=
+N (2 MINUTE READ) [20]=20
+
+ Informed.IQ company's AI agents analyze billi=
+ons of lending data
+points to rapidly confirm borrower information.=20
+=
+
+Want to advertise in TLDR? =F0=9F=93=B0
+
+ If your company is interes=
+ted in reaching an audience of fintech
+professionals and decision makers,=
+ you may want to ADVERTISE WITH US
+[21].=20
+
+Want to work at TLDR? =
+=F0=9F=92=BC
+
+ APPLY HERE [22], CREATE YOUR OWN ROLE [23] or send a fri=
+end's resume
+to jobs@tldr.tech and get $1k if we hire them! TLDR is one o=
+f INC.'S
+BEST BOOTSTRAPPED BUSINESSES [24] of 2025.=20
+
+ If you have an=
+y comments or feedback, just respond to this email!=20
+
+Thanks for readin=
+g,=20
+Rachita Kumar [25], Matt Cheung [26] & Gabriel Sundaram [27]=20
+
+ M=
+anage your subscriptions [28] to our other newsletters on tech,
+startups,=
+ and programming. Or if TLDR Fintech isn't for you, please
+unsubscribe [2=
+9].=20
+
+=20
+
+Links:
+------
+[1] https://tldr.tech/fintech?utm_source=
+=3Dtldrfintech
+[2] https://advertise.tldr.tech?utm_source=3Dtldrfintech&u=
+tm_medium=3Dnewsletter&utm_campaign=3Dadvertisetopnav
+[3] https://a.tldrn=
+ewsletter.com/web-version?ep=3D1&lc=3D6b0d1e24-a670-11f0-9f0f-0bad7bf21fba&=
+p=3Da7a7d556-df2b-11f0-9426-113526ffe887&pt=3Dcampaign&t=3D1766413501&s=3Dc=
+f602704b3483a2320a79109645338162792b0380bc4ac68642f1304b7a48413
+[4] https=
+://www.marqeta.com/cmp/no-compromise?utm_source=3Dtldr&utm_medium=3Dnewslet=
+ter&utm_campaign=3Dfy25q3_no_compromise&utm_content=3Dtldr_fintech_primary=
+
+[5] https://links.tldrnewsletter.com/hnwBR5
+[6] https://links.tldrnews=
+letter.com/x9VU0x
+[7] https://links.tldrnewsletter.com/egdpMY
+[8] https=
+://www.fintechbrainfood.com/p/state-of-fintech-2026?utm_source=3Dtldrfintec=
+h
+[9] https://www.paymentsdive.com/news/bnpl-connected-to-poor-mental-hea=
+lth-study/808215/?utm_source=3Dtldrfintech
+[10] https://links.tldrnewslet=
+ter.com/oIPPD5
+[11] https://better-tomorrow-ventures.ghost.io/fireside-ch=
+at-with-layer/?utm_source=3Dtldrfintech
+[12] https://www.getaleph.com/dem=
+o?utm_medium=3Demail-media-newsletter&utm_source=3Dtldr-fintech-cpl&utm_cam=
+paign=3Dreach&utm_content=3Dpaid&utm_term=3D12-22-2025
+[13] https://www.c=
+oindesk.com/business/2025/12/18/sofi-unveils-first-bank-issued-stablecoin-f=
+or-enterprise-payments?utm_source=3Dtldrfintech
+[14] https://thefintechti=
+mes.com/klarna-launches-agentic-product-protocol-to-make-100m-products-read=
+able-by-ai/?utm_source=3Dtldrfintech
+[15] https://links.tldrnewsletter.co=
+m/GM5Qhv
+[16] https://links.tldrnewsletter.com/ojPDsz
+[17] https://tech=
+crunch.com/2025/12/14/mesa-shuts-down-credit-card-that-rewarded-cardholders=
+-for-paying-their-mortgages/?utm_source=3Dtldrfintech
+[18] https://www.ne=
+wcomer.co/p/inside-the-vc-roll-up-craze-that?utm_source=3Dtldrfintech
+[19=
+] https://links.tldrnewsletter.com/fZQiTX
+[20] https://links.tldrnewslett=
+er.com/PK9eYF
+[21] https://advertise.tldr.tech/?utm_source=3Dtldrfintech&=
+utm_medium=3Dnewsletter&utm_campaign=3Dadvertisecta
+[22] https://jobs.ash=
+byhq.com/tldr.tech
+[23] https://jobs.ashbyhq.com/tldr.tech/c227b917-a6a4-=
+40ce-8950-d3e165357871
+[24] https://www.linkedin.com/feed/update/urn:li:a=
+ctivity:7401699691039830016/
+[25] https://www.linkedin.com/in/rachitakuma=
+r/
+[26] https://www.linkedin.com/in/cheungmatt/
+[27] https://www.linked=
+in.com/in/gabrielsundaram/
+[28] https://tldr.tech/fintech/manage?email=3D=
+mike.mcconigley%40gmail.com
+[29] https://a.tldrnewsletter.com/unsubscribe=
+?ep=3D1&l=3Da9f58246-0e2a-11ef-8572-09f6f474b7ba&lc=3D6b0d1e24-a670-11f0-9f=
+0f-0bad7bf21fba&p=3Da7a7d556-df2b-11f0-9426-113526ffe887&pt=3Dcampaign&pv=
+=3D4&spa=3D1766412162&t=3D1766413501&s=3D310076770fcaac862550d3ba93ca34363d=
+6314a351d7b6c11e3a37ab3a46fa47
+--wFHC4xwQ
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html charset=3DUTF-8"><meta charset=3D"UTF-8"><meta name=3D"v=
+iewport" content=3D"width=3Ddevice-width"><meta name=3D"x-apple-disable-mes=
+sage-reformatting"><title>TLDR Fintech</title><meta name=3D"color-scheme" c=
+ontent=3D"light dark"><meta name=3D"supported-color-schemes" content=3D"lig=
+ht dark"><style type=3D"text/css">
+=09=09=09:root {
+=09=09=09=09color-scheme: light dark; supported-color-schemes: light dark;
+=09=09=09}
+=09=09=09
+=09=09=09*,
+=09=09=09*:after,
+=09=09=09*:before {
+=09=09=09=09-webkit-box-sizing: border-box; -moz-box-sizing: border-box; bo=
+x-sizing: border-box;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+=09=09=09}
+=09=09=09
+=09=09=09html,
+=09=09=09body,
+=09=09=09.document {
+=09=09=09=09width: 100% !important; height: 100% !important; margin: 0; pad=
+ding: 0;
+=09=09=09}
+=09=09=09
+=09=09=09body {
+=09=09=09=09-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: g=
+rayscale; text-rendering: optimizeLegibility;
+=09=09=09}
+=09=09=09
+=09=09=09div[style*=3D"margin: 16px 0"] {
+=09=09=09=09margin: 0 !important;
+=09=09=09}
+=09=09=09
+=09=09=09table,
+=09=09=09td {
+=09=09=09=09mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+=09=09=09}
+=09=09=09
+=09=09=09table {
+=09=09=09=09border-spacing: 0; border-collapse: collapse; table-layout: fix=
+ed; margin: 0 auto;
+=09=09=09}
+=09=09=09
+=09=09=09img {
+=09=09=09=09-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+=09=09=09}
+=09=09=09
+=09=09=09*[x-apple-data-detectors] {
+=09=09=09=09color: inherit !important; text-decoration: none !important;
+=09=09=09}
+=09=09=09
+=09=09=09.x-gmail-data-detectors,
+=09=09=09.x-gmail-data-detectors *,
+=09=09=09.aBn {
+=09=09=09=09border-bottom: 0 !important; cursor: default !important;
+=09=09=09}
+=09=09=09
+=09=09=09.btn {
+=09=09=09=09-webkit-transition: all 200ms ease; transition: all 200ms ease;
+=09=09=09}
+=09=09=09
+=09=09=09.btn:hover {
+=09=09=09=09background-color: #f67575; border-color: #f67575;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+=09=09=09}
+=09=09=09
+=09=09=09@media screen and (max-width: 600px) {
+=09=09=09=09.container {
+=09=09=09=09=09width: 100%; margin: auto;
+=09=09=09=09}
+=09=09=09=09.stack {
+=09=09=09=09=09display: block!important; width: 100%!important; max-width: =
+100%!important;
+=09=09=09=09}
+=09=09=09=09.btn {
+=09=09=09=09=09display: block; width: 100%; text-align: center;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09body,
+=09=09=09p,
+=09=09=09td,
+=09=09=09tr,
+=09=09=09.body,
+=09=09=09table,
+=09=09=09h1,
+=09=09=09h2,
+=09=09=09h3,
+=09=09=09h4,
+=09=09=09h5,
+=09=09=09h6,
+=09=09=09div,
+=09=09=09span {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09body,
+=09=09=09=09p,
+=09=09=09=09td,
+=09=09=09=09tr,
+=09=09=09=09.body,
+=09=09=09=09table,
+=09=09=09=09h1,
+=09=09=09=09h2,
+=09=09=09=09h3,
+=09=09=09=09h4,
+=09=09=09=09h5,
+=09=09=09=09h6,
+=09=09=09=09div,
+=09=09=09=09span {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09a {
+=09=09=09=09color: inherit !important; text-decoration: underline !importan=
+t;
+=09=09=09}
+
+=09=09</style><!--[if mso | ie]>
+=09=09<style type=3D"text/css">
+=09=09=09a {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09a {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09 </style>
+=09=09=09<![endif]--></head><body class=3D"">
+
+
+
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">Business b=
+anking startup Mercury has applied for a national bank charter, a move that=
+ would let it offer core banking services&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;</div>
+
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align=3D"center" class=3D"document"><tbody><tr><td valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"container" width=3D"600"><tbody><tr class=3D"inner-body"><td>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr class=3D"header"><td bgcolor=3D"" class=3D"containe=
+r">
+
+<table width=3D"100%"><tbody><tr><td class=3D"container">
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"margin-top: 0px;" width=3D"100%"><tbody><tr><td style=
+=3D"padding: 0px;">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div style=3D"text-align: center;">
+<span style=3D"margin-right: 0px;"><a href=3D"https://tracking.tldrnewslett=
+er.com/CL0/https:%2F%2Ftldr.tech%2Ffintech%3Futm_source=3Dtldrfintech/1/010=
+0019b467303da-6ba8808a-c73f-443f-9c3c-9093ae0894f3-000000/F80YTy1YSi-9KU1PW=
+VexJZS-gGIpOIyQy9RAFBAsm1g=3D436" rel=3D"noopener noreferrer" target=3D"_bl=
+ank"><span>Sign Up</span></a>
+|<span style=3D"margin-right: 2px; margin-left: 2px;"><a href=3D"https://tr=
+acking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%3Futm_source=
+=3Dtldrfintech%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertisetopnav/1=
+/0100019b467303da-6ba8808a-c73f-443f-9c3c-9093ae0894f3-000000/1P7sAR0hph9eH=
+Is-5LC_kMyjPuxeXuri5REwc9z4v9s=3D436" rel=3D"noopener noreferrer" target=3D=
+"_blank"><span>Advertise</span></a></span>|<span style=3D"margin-left: 2px;=
+"><a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnews=
+letter.com%2Fweb-version%3Fep=3D1%26lc=3D6b0d1e24-a670-11f0-9f0f-0bad7bf21f=
+ba%26p=3Da7a7d556-df2b-11f0-9426-113526ffe887%26pt=3Dcampaign%26t=3D1766413=
+501%26s=3Dcf602704b3483a2320a79109645338162792b0380bc4ac68642f1304b7a48413/=
+1/0100019b467303da-6ba8808a-c73f-443f-9c3c-9093ae0894f3-000000/po030zal8WmL=
+JWa3fnIMK1pzkCjOPCHS66MFtHTwlK0=3D436"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"text-=
+align: center;"><span data-darkreader-inline-color=3D"" style=3D"--darkread=
+er-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30=
+px;">T</span><span style=3D"font-size: 30px;"><span data-darkreader-inline-=
+color=3D"" style=3D"color: rgb(232, 192, 96) !important; --darkreader-inlin=
+e-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-colo=
+r=3D"" style=3D"color: rgb(101, 195, 173) !important; --darkreader-inline-c=
+olor:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-=
+color=3D"" style=3D"--darkreader-inline-color:#dd6e6e; color: rgb(220, 107,=
+ 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr id=3D"together-with"><td align=3D"cent=
+er" height=3D"20" style=3D"vertical-align:middle !important;" valign=3D"mid=
+dle" width=3D"100%"><strong style=3D"vertical-align:middle !important; heig=
+ht: 100%;">Together With </strong>
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.marqeta.=
+com%2Fcmp%2Fno-compromise%3Futm_source=3Dtldr%26utm_medium=3Dnewsletter%26u=
+tm_campaign=3Dfy25q3_no_compromise%26utm_content=3Dtldr_fintech_primary/1/0=
+100019b467303da-6ba8808a-c73f-443f-9c3c-9093ae0894f3-000000/3qYHErQXCv7LNJ2=
+E8ULJtUk8E4qhK7e11YKSSqPteFE=3D436"><img src=3D"https://images.tldr.tech/ma=
+rqeta.png" valign=3D"middle" style=3D"vertical-align: middle !important; he=
+ight: 100%;" alt=3D"Marqeta"></a></td></tr></tbody></table>
+
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody><tr=
+><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0;=
+">
+<div style=3D"text-align: center;">
+
+<h1><strong>TLDR Fintech <span id=3D"date">2025-12-22</span></strong></h1>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody><tr=
+ id=3D"sponsy-copy"><td class=3D"container" style=3D"padding: 15px 15px;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.marqeta.com%2Fcmp%2Fno-compromise%3Futm_source=3Dtl=
+dr%26utm_medium=3Dnewsletter%26utm_campaign=3Dfy25q3_no_compromise%26utm_co=
+ntent=3Dtldr_fintech_primary/2/0100019b467303da-6ba8808a-c73f-443f-9c3c-909=
+3ae0894f3-000000/xTAoGvkBZlHQSYwFmHxivWb4vukAE_BChb0-kd7ZDXM=3D436">
+                                    <span>
+                                        <strong>Payment programs that scale=
+.&nbsp;Customer experiences that inspire. (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Don't sacrifice one for the other.&nbsp=
+; Choose a payments provider who can deliver on both. <a href=3D"https://tr=
+acking.tldrnewsletter.com/CL0/https:%2F%2Fwww.marqeta.com%2Fcmp%2Fno-compro=
+mise%3Futm_source=3Dtldr%26utm_medium=3Dnewsletter%26utm_campaign=3Dfy25q3_=
+no_compromise%26utm_content=3Dtldr_fintech_primary/3/0100019b467303da-6ba88=
+08a-c73f-443f-9c3c-9093ae0894f3-000000/pplWJJnLjBZpG4Md3LmAJ_TXg1BqV2S23Vyh=
+a-cwhGg=3D436" rel=3D"noopener noreferrer nofollow" target=3D"_blank"><span=
+>Choose Marqeta</span></a>.&nbsp;
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=3D""><td class=3D"container">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td style=3D"padding: 0px;">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=93=B1</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>News &amp; Trends</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FhnwBR5/1/0100019b467303da-6b=
+a8808a-c73f-443f-9c3c-9093ae0894f3-000000/PCjullj6inv2e5GD5KbbfiZPssUKwum0d=
+5QXaCpVdj8=3D436">
+                                    <span>
+                                        <strong>Fintech Firm Mercury Applie=
+s for National Bank Charter (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Business banking startup Mercury has ap=
+plied for a national bank charter, a move that would let it offer core bank=
+ing services directly rather than relying on sponsor banks. The company has=
+ submitted applications to the Office of the Comptroller of the Currency an=
+d the Federal Deposit Insurance Corp., positioning itself to operate like a=
+ traditional lender while retaining software-driven revenue streams. If app=
+roved, Mercury plans to expand into lending and believes the charter would =
+remove a lingering trust hurdle as fintech regulation loosens under the cur=
+rent administration.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2Fx9VU0x/1/0100019b467303da-6b=
+a8808a-c73f-443f-9c3c-9093ae0894f3-000000/ia6seo_vO2VgHOgiPwbI7P8JRXWnghfzm=
+BwRUoYScy4=3D436">
+                                    <span>
+                                        <strong>Visa and Aldar complete end=
+-to-end voice-enabled agentic payment (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Visa and Aldar today announced a strate=
+gic collaboration that marks the first live implementation of Visa Intellig=
+ent Commerce in the region, introducing end-to-end, voice-enabled agentic p=
+ayment experiences.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FegdpMY/1/0100019b467303da-6b=
+a8808a-c73f-443f-9c3c-9093ae0894f3-000000/lxFK48yyxG4lAfr0ULqs7QwOKOumXJWQL=
+7PIZwJD5kk=3D436">
+                                    <span>
+                                        <strong>Blackstone holds early talk=
+s with Revolut on wealth partnership (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Blackstone is exploring a potential par=
+tnership that would make its private-market funds available through Revolut=
+'s emerging private-banking platform. The talks are still preliminary, but =
+they signal Revolut's push upmarket as it hires bankers and private capital=
+ specialists to serve high-net-worth clients. If finalized, the tie-up woul=
+d underscore how firms led by executives like Jon Gray are increasingly usi=
+ng fintech distribution to reach wealthy and retail investors, following si=
+milar moves by players such as Trade Republic, Apollo, and Robinhood.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=9A=80</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Deep Dives &amp; Reports</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.fintechbrainfood.com%2Fp%2Fstate-of-fintech-2026%3F=
+utm_source=3Dtldrfintech/1/0100019b467303da-6ba8808a-c73f-443f-9c3c-9093ae0=
+894f3-000000/uHsSu09iIbSzvyqvJoLsz1ixjs0HZ_E8cgFPb3gsuTo=3D436">
+                                    <span>
+                                        <strong>State of Fintech 2026: The =
+Fintech Compounders (10 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    What a year 2025 has been. The GENIUS A=
+ct passed, Agentic Commerce became a thing, and prediction markets exploded=
+ onto the scene. Banks had another record year, but a handful of neobanks a=
+re now compounding and breathing down their neck. Against all of this, cons=
+umers in the West are still spending but quietly suffering from a cost-of-l=
+iving crisis and the rise of financial nihilism.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.paymentsdive.com%2Fnews%2Fbnpl-connected-to-poor-me=
+ntal-health-study%2F808215%2F%3Futm_source=3Dtldrfintech/1/0100019b467303da=
+-6ba8808a-c73f-443f-9c3c-9093ae0894f3-000000/bh5w4gRqJu22pORxN791hacH1bdO99=
+pnrfweGutdd0Q=3D436">
+                                    <span>
+                                        <strong>BNPL use linked to poorer m=
+ental health, study finds (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    A Johns Hopkins University study found =
+that adults in the US who report symptoms of depression, anxiety, or PTSD w=
+ere significantly more likely to use buy now, pay later loans, raising conc=
+erns that BNPL may be associated with impaired financial decision-making am=
+ong people with mental health challenges.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FoIPPD5/1/0100019b467303da-6b=
+a8808a-c73f-443f-9c3c-9093ae0894f3-000000/j8IRVKpvSG5TZ5lRZtmkC8NrZjo3OSek_=
+Qy2UmVwSdc=3D436">
+                                    <span>
+                                        <strong>How banks learned to stop w=
+orrying and love stablecoins (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Properly regulated stablecoins compleme=
+nt rather than threaten banks by increasing competition, improving efficien=
+cy in payments and settlement, and ultimately strengthening the traditional=
+ banking system instead of draining deposits.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fbetter-tomorrow-ventures.ghost.io%2Ffireside-chat-with-=
+layer%2F%3Futm_source=3Dtldrfintech/1/0100019b467303da-6ba8808a-c73f-443f-9=
+c3c-9093ae0894f3-000000/kkA64-eKJkgCfEk4N0rCdNctoAQkwoX-TREqb7KLRRQ=3D436">
+                                    <span>
+                                        <strong>Fireside chat with Layer on=
+ rebuilding SMB accounting through vertical SaaS (10 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Embedded, AI-native accounting inside v=
+ertical SaaS platforms can replace QuickBooks by owning distribution, autom=
+ating bookkeeping end to end, and turning platforms like POS and invoicing =
+systems into the financial home for small businesses.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=92=BB</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Launches &amp; Products</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.getaleph.com%2Fdemo%3Futm_medium=3Demail-media-news=
+letter%26utm_source=3Dtldr-fintech-cpl%26utm_campaign=3Dreach%26utm_content=
+=3Dpaid%26utm_term=3D12-22-2025/1/0100019b467303da-6ba8808a-c73f-443f-9c3c-=
+9093ae0894f3-000000/gyYbQ9BGrSgujZLaW_L-HAe46hffU3eihavXny3UMVI=3D436">
+                                    <span>
+                                        <strong>Taking months to implement =
+FP&amp;A tools should be illegal=E2=80=A6(Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    There is a new rising star that is sett=
+ing the bar for what =E2=80=9Ctime-to-value=E2=80=9D should be for FP&amp;A=
+&nbsp; software. Hint, it's measured in hours, not months. <a href=3D"https=
+://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.getaleph.com%2Fdemo%3Fut=
+m_medium=3Demail-media-newsletter%26utm_source=3Dtldr-fintech-cpl%26utm_cam=
+paign=3Dreach%26utm_content=3Dpaid%26utm_term=3D12-22-2025/2/0100019b467303=
+da-6ba8808a-c73f-443f-9c3c-9093ae0894f3-000000/55yKa6qc4YNCb_eHlFclOEa1vFwX=
+4F_9kQ9jyBpqzDU=3D436" rel=3D"noopener noreferrer nofollow" target=3D"_blan=
+k"><span>Aleph is an AI-native FP&amp;A platform</span></a> that seamlessly=
+ connects your cross-system data, spreadsheets, and strategy at the speed o=
+f startups with the power to support enterprises.
+
+<p></p>
+
+<p><a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.getal=
+eph.com%2Fdemo%3Futm_medium=3Demail-media-newsletter%26utm_source=3Dtldr-fi=
+ntech-cpl%26utm_campaign=3Dreach%26utm_content=3Dpaid%26utm_term=3D12-22-20=
+25/3/0100019b467303da-6ba8808a-c73f-443f-9c3c-9093ae0894f3-000000/zrKu66tRW=
+hOEARFYSRrJHedzWvpXzz1QGQSNaCVRyU0=3D436" rel=3D"noopener noreferrer nofoll=
+ow" target=3D"_blank"><span>TLDR readers can try out Aleph right now for fr=
+ee</span></a>.
+
+
+</p>
+</span></span></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.coindesk.com%2Fbusiness%2F2025%2F12%2F18%2Fsofi-unv=
+eils-first-bank-issued-stablecoin-for-enterprise-payments%3Futm_source=3Dtl=
+drfintech/1/0100019b467303da-6ba8808a-c73f-443f-9c3c-9093ae0894f3-000000/2I=
+OqSqjw7bdzMsZG2HtMXCznf9B4va91F9PCyPG27Vc=3D436">
+                                    <span>
+                                        <strong>SoFi launches the first ban=
+k-issued stablecoin for enterprise payments (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    SoFiUSD is a US dollar stablecoin issue=
+d by its FDIC-insured national bank and backed 1:1 by cash at the Federal R=
+eserve. It offers faster, lower-cost settlement and white-labeled stablecoi=
+n infrastructure for banks, fintechs, and enterprises.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fthefintechtimes.com%2Fklarna-launches-agentic-product-p=
+rotocol-to-make-100m-products-readable-by-ai%2F%3Futm_source=3Dtldrfintech/=
+1/0100019b467303da-6ba8808a-c73f-443f-9c3c-9093ae0894f3-000000/QscKwGOzbXy3=
+0wD6GMslFvGnP3U9LzetGOefb-53R1I=3D436">
+                                    <span>
+                                        <strong>Klarna Launches =E2=80=98Ag=
+entic Product Protocol' to Make 100m Products Readable by AI (3 minute read=
+)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Klarna has introduced an open standard =
+that structures product data so AI-powered shopping agents can discover, co=
+mpare, and recommend items with live pricing and availability. The new prot=
+ocol gives AI systems access to over 100 million products and hundreds of m=
+illions of price points across multiple markets, while letting merchants in=
+tegrate once using existing catalog formats like Shopify, Google Merchant, =
+or CSV feeds. The move positions Klarna as core infrastructure for agent-dr=
+iven commerce, betting that conversational AI will increasingly replace tra=
+ditional search and ads as the front door to online shopping.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=8E=81</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><strong><h1>Miscellaneous</h1></strong><=
+/div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FGM5Qhv/1/0100019b467303da-6b=
+a8808a-c73f-443f-9c3c-9093ae0894f3-000000/1owAHv9VsZCgmhYKZUTBOpTiGz2ivnL_Y=
+PPe9_04OK4=3D436">
+                                    <span>
+                                        <strong>Digital assets have vanishe=
+d from government =E2=80=9Cvulnerability=E2=80=9D list, officially ending a=
+ three-year regulatory chokehold on US banks (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    The Financial Stability Oversight Counc=
+il quietly removed digital assets from its list of systemic financial vulne=
+rabilities in its 2025 annual report, signaling a decisive shift away from =
+treating crypto as a contagion risk. Instead, digital assets are now framed=
+ as a market development to monitor, reflecting rising institutional partic=
+ipation through spot ETFs, tokenization, and regulated stablecoins.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FojPDsz/1/0100019b467303da-6b=
+a8808a-c73f-443f-9c3c-9093ae0894f3-000000/h8TBSs3KmStjHcp2Rxquhs_zoQdKXovV6=
+yDKlicAYb8=3D436">
+                                    <span>
+                                        <strong>Monzo to acquire digital mo=
+rtgage broker Habito (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Monzo says the acquisition of Habito wi=
+ll turn its app into a fully end-to-end mortgage broking experience, moving=
+ beyond basic tracking into advice and applications. Monzo already supports=
+ more than 450,000 users through its Homeownership feature, which connects =
+any mortgage, shows live balances and estimated home values, and surfaces b=
+etter deals.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Ftechcrunch.com%2F2025%2F12%2F14%2Fmesa-shuts-down-credi=
+t-card-that-rewarded-cardholders-for-paying-their-mortgages%2F%3Futm_source=
+=3Dtldrfintech/1/0100019b467303da-6ba8808a-c73f-443f-9c3c-9093ae0894f3-0000=
+00/ttp-0JbU3zxTYc8OQiq5o35ComLZqkSn6-6MWAdtSTA=3D436">
+                                    <span>
+                                        <strong>Mesa shuts down credit card=
+ that rewarded cardholders for paying their mortgages (3 minute read)</stro=
+ng>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Fintech startup Mesa has abruptly close=
+d its Homeowners Card, ending a short-lived experiment that let users earn =
+points on mortgage payments and everyday home-related spending. Launched in=
+ late 2024 with $9.2 million in funding, the product aimed to reframe credi=
+t card rewards around homeownership rather than travel or dining, but cardh=
+olders began reporting widespread transaction declines before accounts were=
+ fully shut down. The closure highlights how difficult it remains to sustai=
+nably align credit rewards with large, low-margin payments like mortgages, =
+even as competitors like Bilt prepare to enter the space.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=E2=9A=
+=A1</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.newcomer.co%2Fp%2Finside-the-vc-roll-up-craze-that%=
+3Futm_source=3Dtldrfintech/1/0100019b467303da-6ba8808a-c73f-443f-9c3c-9093a=
+e0894f3-000000/bK0jhsaKKkLxKbgawKbYSY3xCTuKfWFm8b5hdqYFsDw=3D436">
+                                    <span>
+                                        <strong>Inside the VC roll-up craze=
+ reshaping Silicon Valley (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Venture firms from General Catalyst to =
+Thrive and Lightspeed are borrowing private equity playbooks to roll up tra=
+ditional service businesses and remake them with AI, betting that automatio=
+n-driven efficiency can unlock outsized returns despite PE-like risk profil=
+es.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FfZQiTX/1/0100019b467303da-6b=
+a8808a-c73f-443f-9c3c-9093ae0894f3-000000/2oUjjUs6G62tJGkUcQZtA-THQjEGZhOiE=
+5sS1eijJYE=3D436">
+                                    <span>
+                                        <strong>Interactive Brokers Applies=
+ for National Trust Bank Charter (1 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    More than 30 companies have filed appli=
+cations to become banks in the US this year, highlighting a broader push by=
+ fintechs and financial platforms to gain tighter control over regulated in=
+frastructure.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FPK9eYF/1/0100019b467303da-6b=
+a8808a-c73f-443f-9c3c-9093ae0894f3-000000/60TZ0UAlpdwQ4Q27dKePdnXRHA3XPvf6z=
+gvxr0z1tME=3D436">
+                                    <span>
+                                        <strong>Informed.IQ raises $63m for=
+ AI-powered fraud prevention and loan verification (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Informed.IQ company's AI agents analyze=
+ billions of lending data points to rapidly confirm borrower information.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"word-break=
+: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to advertise in TLDR? =F0=9F=93=B0
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+If your company is interested in reaching an audience of fintech profession=
+als and decision makers, you may want to <a href=3D"https://tracking.tldrne=
+wsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=3Dtldrfint=
+ech%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertisecta/1/0100019b46730=
+3da-6ba8808a-c73f-443f-9c3c-9093ae0894f3-000000/CvSZlhh-RAmKXsaPf65_ZVn90kO=
+Y6Pp91yiMHjt4hbU=3D436"><strong><span>advertise with us</span></strong></a>=
+.
+</div>
+<br>
+
+<!-- New "Want to work at TLDR?" section -->
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to work at TLDR? =F0=9F=92=BC
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech/1/0100019b467303da-6ba8808a-c73f-443f-9c3c-9093ae0894f3-00=
+0000/1ebWeZRUmTqguBZrI4UWkIWCONvFJ0mY79QI3tw3QeA=3D436" rel=3D"noopener nor=
+eferrer" style=3D"color: #0000EE; text-decoration: underline;" target=3D"_b=
+lank"><strong>Apply here</strong></a>,
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech%2Fc227b917-a6a4-40ce-8950-d3e165357871/1/0100019b467303da-=
+6ba8808a-c73f-443f-9c3c-9093ae0894f3-000000/h1jKuyxCs23LXx7z8FDVBdcwsdjSeFJ=
+e3hUU1T8oBwA=3D436" rel=3D"noopener noreferrer" style=3D"color: #0000EE; te=
+xt-decoration: underline;" target=3D"_blank"><strong>create your own role</=
+strong></a> or send a friend's resume to <a href=3D"mailto:jobs@tldr.tech" =
+style=3D"color: #0000EE; text-decoration: underline;">jobs@tldr.tech</a> an=
+d get $1k if we hire them! TLDR is one of <a href=3D"https://tracking.tldrn=
+ewsletter.com/CL0/https:%2F%2Fwww.linkedin.com%2Ffeed%2Fupdate%2Furn:li:act=
+ivity:7401699691039830016%2F/1/0100019b467303da-6ba8808a-c73f-443f-9c3c-909=
+3ae0894f3-000000/HgB1fQUKT3bhwAEGIuuf_okXu7nyXhRDLSycESNZwuU=3D436" rel=3D"=
+noopener noreferrer" style=3D"color: #0000EE; text-decoration: underline;" =
+target=3D"_blank"><strong>Inc.'s Best Bootstrapped businesses</strong></a> =
+of 2025.
+</div>
+<br>
+
+<div class=3D"text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.linkedin=
+.com%2Fin%2Frachitakumar%2F/1/0100019b467303da-6ba8808a-c73f-443f-9c3c-9093=
+ae0894f3-000000/PXjFXX-6Vge4z6LPlSclaoK58a0bSVnF_RvYyhtLxY8=3D436"><span>Ra=
+chita Kumar</span></a>, <a href=3D"https://tracking.tldrnewsletter.com/CL0/=
+https:%2F%2Fwww.linkedin.com%2Fin%2Fcheungmatt%2F/1/0100019b467303da-6ba880=
+8a-c73f-443f-9c3c-9093ae0894f3-000000/6qi2VaUji5Pq_sqt9MAzXzhkQ5_Zb8CfLyr2c=
+LBnPqY=3D436"><span>Matt Cheung</span></a> &amp; <a href=3D"https://trackin=
+g.tldrnewsletter.com/CL0/https:%2F%2Fwww.linkedin.com%2Fin%2Fgabrielsundara=
+m%2F/1/0100019b467303da-6ba8808a-c73f-443f-9c3c-9093ae0894f3-000000/xL9cGAH=
+LLW5xgFx5h5Aa9Hpzgc0ZvsLPTSeC7wlRk-0=3D436"><span>Gabriel Sundaram</span></=
+a>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div class=3D"text-block" id=3D"testing-id">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2F=
+fintech%2Fmanage%3Femail=3Dmike.mcconigley%2540gmail.com/1/0100019b467303da=
+-6ba8808a-c73f-443f-9c3c-9093ae0894f3-000000/mqEf9aqB_azhBSrAwGJDIDR-ljqbLD=
+UoI9eGzRC-G1s=3D436">Manage your subscriptions</a> to our other newsletters=
+ on tech, startups, and programming. Or if TLDR Fintech isn't for you, plea=
+se <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnew=
+sletter.com%2Funsubscribe%3Fep=3D1%26l=3Da9f58246-0e2a-11ef-8572-09f6f474b7=
+ba%26lc=3D6b0d1e24-a670-11f0-9f0f-0bad7bf21fba%26p=3Da7a7d556-df2b-11f0-942=
+6-113526ffe887%26pt=3Dcampaign%26pv=3D4%26spa=3D1766412162%26t=3D1766413501=
+%26s=3D310076770fcaac862550d3ba93ca34363d6314a351d7b6c11e3a37ab3a46fa47/1/0=
+100019b467303da-6ba8808a-c73f-443f-9c3c-9093ae0894f3-000000/tDHp63JamgPWJPG=
+f9WgTMCc-u7o_JxrdiStEdhzZBY8=3D436">unsubscribe</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+<img alt=3D"" src=3D"http://tracking.tldrnewsletter.com/CI0/0100019b467303d=
+a-6ba8808a-c73f-443f-9c3c-9093ae0894f3-000000/Q8qnl9QVC3ZC0HuqPLiVIRVXK2ttv=
+0SqvPUx-JCahoQ=3D436" style=3D"display: none; width: 1px; height: 1px;">
+</body></html>
+--wFHC4xwQ--

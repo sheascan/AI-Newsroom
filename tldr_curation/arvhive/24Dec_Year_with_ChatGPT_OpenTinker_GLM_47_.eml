@@ -1,0 +1,1630 @@
+Delivered-To: mike.mcconigley@gmail.com
+Received: by 2002:ac9:40c9:0:b0:605:93f6:5e02 with SMTP id y9csp2622322ocg;
+        Tue, 23 Dec 2025 06:25:26 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IEailrNGXhCwPCNVXUIkSNlcgao2EgyyiR99isfP8P5lwndGaQNIGHeVknZVX6I0N4hST0O
+X-Received: by 2002:ad4:4dc4:0:b0:882:37bf:919a with SMTP id 6a1803df08f44-88d8442febfmr166442546d6.65.1766499925962;
+        Tue, 23 Dec 2025 06:25:25 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1766499925; cv=none;
+        d=google.com; s=arc-20240605;
+        b=a6s7jSEVJMr6s2Cmw8d+Iy9W/Ddj2M1KnGekWzTk5E9FpKSGafDBFt1JJBY7cHSpVv
+         g77vxG1birXuStN/BmaQbYZkaeP5hiC1iFUrJdnQ+sv7zyTgiO/8Yt5b8hJmX487VUJ8
+         gwI07BMqOhR1B/zmJsYajxo1T37/NSK52IHX5f0f5Gjute6BU9oLqO0bPIQVzB+p54Ng
+         +HCNHmG5JpUuLZguihTXCalNequ9nuVe5HZorWfSjGSsN52XSRyV10Pnb93flC3wv1Sb
+         5LaLeVTZu81m3SHP6I6LTdY8gVB1BVp0qmT+wc8ceWaF8qv/vi4/DIVgoV1Hr7U6Ue0S
+         4Yyg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:date:mime-version:list-unsubscribe-post
+         :list-unsubscribe:subject:to:from:dkim-signature:dkim-signature;
+        bh=7Ap+r5iXI9cOCUc3DwkKvkcy4YNrYbGZFV2+gFgZgnM=;
+        fh=tUTYCbTOUI69DxYKXGXRz08XnPP7jEKRU6E5rS0DFR4=;
+        b=CD7bv1yclP1aQs5i1XI4jfM2pvltcGcXxVgkq7dQ/aYBAAXvmmD2XHchVAmPUQU3+b
+         FBUakhYsqQ+ANWyvrtq4g5eGiqOQ/L+X37sBuAcw3R1hnSfggT6kpkD9gbdtJNFSNdrj
+         EWPOUe6kWWuPaKcj5X8FLNS3S9WfDdy2aViGI62UjxhG5R+Y41m4eJZBl71Bei8qk9gl
+         HdB5MP3b2zz2rH17M6vaOoVRAMXhKR38eMojgED8zEpdqahVZi6y+IVS0tmV7nCltNnU
+         ujLkSTVTlFYpqYGQzFCBt3x5oKYGh0nzvXf8plPGrt9W6Y+KbHokhN1s0dWQBl3mGN3p
+         VKOA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=Fx64o6t2;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=mYEimqJ1;
+       spf=pass (google.com: domain of 0100019b4b99be3d-3b87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000@dailyupdate.tldrnewsletter.com designates 54.240.38.253 as permitted sender) smtp.mailfrom=0100019b4b99be3d-3b87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+Return-Path: <0100019b4b99be3d-3b87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000@dailyupdate.tldrnewsletter.com>
+Received: from a38-253.smtp-out.amazonses.com (a38-253.smtp-out.amazonses.com. [54.240.38.253])
+        by mx.google.com with ESMTPS id 6a1803df08f44-88d99a94437si141121666d6.615.2025.12.23.06.25.25
+        for <mike.mcconigley@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Tue, 23 Dec 2025 06:25:25 -0800 (PST)
+Received-SPF: pass (google.com: domain of 0100019b4b99be3d-3b87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000@dailyupdate.tldrnewsletter.com designates 54.240.38.253 as permitted sender) client-ip=54.240.38.253;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=Fx64o6t2;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=mYEimqJ1;
+       spf=pass (google.com: domain of 0100019b4b99be3d-3b87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000@dailyupdate.tldrnewsletter.com designates 54.240.38.253 as permitted sender) smtp.mailfrom=0100019b4b99be3d-3b87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ygiuxamnxevikrd5dtfwanslhs6b24mt; d=tldrnewsletter.com;
+	t=1766499925;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type;
+	bh=FejLYg2cKJZGCsiHIdYpcJRsnebwDOEG6z1KtCPQPgw=;
+	b=Fx64o6t23xRtRAI20HpLjYywwSdA+LgCLl7L+fV8FURfIB2ec0ej4hYmIIiapWc5
+	SQ5hqWeBLcoB+giXWxLbvpdHkkTYE7juiRrOfhYYWkhdPN8XnZY0WbCY9Lmj51mPRek
+	nkQtQS4puhspPSZZh1ylYPPXWqrH83jgP2KiKjqo=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1766499925;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type:Feedback-ID;
+	bh=FejLYg2cKJZGCsiHIdYpcJRsnebwDOEG6z1KtCPQPgw=;
+	b=mYEimqJ1nlxHdEoSSBecz5Cn516w/X0lNimDvCIQJAHpglL3rktHmMc9uHxp1DVD
+	Pqf5MzleEyrlqEAlRMHEBhtt+hDcHq/vqb7PhgUWkqpt4sXG/7teO/F8eLF9Up4D6ff
+	Frzxc4BQHH7f7AomUXtBfyoPg8NqQGZ3+fq3YU0Q=
+From: TLDR AI <dan@tldrnewsletter.com>
+To: mike.mcconigley@gmail.com
+Subject: Year with ChatGPT =?utf-8?Q?=F0=9F=93=85=2C?= OpenTinker
+ =?utf-8?Q?=F0=9F=94=A8=2C?= GLM 4.7 =?utf-8?Q?=F0=9F=A4=96?=
+X-Entity-Ref-Id: bb71cf14-8ed6-43db-b4cd-a3916be9f96e
+X-EmailOctopus-Parent-Id: c3ac5b5e-dffe-11f0-a8f7-5b94468b7651
+X-EmailOctopus-Parent-Type-Id: campaign
+X-EmailOctopus-List-Id: eedf6b14-3de3-11ed-9a32-0241b9615763
+X-EmailOctopus-List-Contact-Id: 6b0cc672-a670-11f0-8911-056565896460
+X-EmailOctopus-Started-Preparing-At: 2025-12-23T14:02:22+00:00
+X-EmailOctopus-Sent-At: 2025-12-23T14:25:25+00:00
+X-EmailOctopus-Team-Id: 66987ef2-4f4c-11e9-a3c9-06b79b628af2
+X-EmailOctopus-Version: 4
+List-Unsubscribe: <https://a.tldrnewsletter.com/unsubscribe?ep=1&l=eedf6b14-3de3-11ed-9a32-0241b9615763&lc=6b0cc672-a670-11f0-8911-056565896460&p=c3ac5b5e-dffe-11f0-a8f7-5b94468b7651&pt=campaign&pv=4&spa=1766498542&t=1766499925&s=597ad94d2a969a626ca2e742e249a123a84f902d83dd944ba28e671d7822698e>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-EmailOctopus-Ses-Configuration-Set-Name: emailoctopus-a9f7b12f74f3c968d9408897fb35539c
+MIME-Version: 1.0
+Date: Tue, 23 Dec 2025 14:25:25 +0000
+Message-ID: <0100019b4b99be3d-3b87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000@email.amazonses.com>
+Content-Type: multipart/alternative; boundary=Me7mWVYu
+Feedback-ID: ::1.us-east-1.Dj5/7DYmgk+n1sSGGXSQSLIthSjNQ0MGtV5Dro1Tr8U=:AmazonSES
+X-SES-Outgoing: 2025.12.23-54.240.38.253
+
+--Me7mWVYu
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+OpenAI introduced a personalized year-in-review feature called "Your
+Year=
+ with ChatGPT," available to eligible users in select
+regions=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0
+
+
+ Sign Up [1] |Advertise [2]|View Online [3]=20
+
+=09=09TLDR =
+
+
+=09=09TOGETHER WITH [Delve] [4]
+
+TLDR AI 2025-12-23
+
+ DELVE S=
+HIPMAS DAY 2: AI VENDOR RISK MANAGEMENT (SPONSOR) [4]=20
+
+ Welcome to Del=
+ve Shipmas. Every day this week, Delve is launching a
+new AI feature to m=
+ake compliance more modern than ever. Yesterday, we
+launched Delve's AI C=
+opilot that can help on any compliance task or
+question. Today, we're lau=
+nching... AI VENDOR RISK MANAGEMENT
+
+Vendor risk management is _painful=
+_. Dozens of vendors, endless
+questionnaires, and unclear risk levels. De=
+lve's AI VRM handles this
+automatically by auto-gathering security eviden=
+ce from each vendor,
+creating creating findings, and giving you a clear v=
+iew of your risk
+posture. Leave spreadsheets and legacy platforms in the =
+past and enter
+the future of risk with Delve AI.
+Join companies like 11=
+x, micro1, Bland, Wisprflow and more.
+
+Book a demo [5] to see Delve in =
+action and get $1,500 OFF with code
+DELVEXMAS2.=20
+
+=F0=9F=9A=80=20
+
+=
+HEADLINES & LAUNCHES
+
+ YOUR YEAR WITH CHATGPT (2 MINUTE READ) [6]=20
+=
+
+ OpenAI introduced a personalized year-in-review feature called "Your
+=
+Year with ChatGPT," available to eligible users in select regions.
+Inspir=
+ed by Spotify Wrapped, the feature highlights individual usage
+trends fro=
+m the past year.=20
+
+ Z.AI LAUNCHES GLM-4.7, NEW SOTA OPEN-SOURCE MODEL F=
+OR CODING (2
+MINUTE READ) [7]=20
+
+ GLM-4.7 is the latest release in Z.A=
+I's General Language Model line.
+The high-end foundation model is aimed a=
+t advanced reasoning, coding,
+and multimodal workloads. The late update e=
+xpands context handling and
+reasoning depth compared to earlier versions.=
+ It introduced upgraded
+reasoning pipelines and broader multimodal suppor=
+t.=20
+
+ MINIMAX M2.1 IS LIVE IN KILO (3 MINUTE READ) [8]=20
+
+ MiniMax M=
+2.1 is ahead of DeepSeek and Kimi on several benchmarks. It
+is even catch=
+ing up to state-of-the-art models in some areas. The
+model is super-fast =
+and efficient. It is now available to all Kilo
+Code users.=20
+
+ INTRODU=
+CING MANUS DESIGN VIEW (3 MINUTE READ) [9]=20
+
+ Manus Design View is an e=
+xtension of the Manus agent for seamless AI
+design workflows. It enables =
+designers to generate concepts with
+simple prompts, make precise edits us=
+ing the Mark Tool, and change
+text easily. The Manus mobile app allows de=
+sign edits on-the-go with
+either text or voice input. It is available to =
+all users today.=20
+
+=F0=9F=A7=A0=20
+
+DEEP DIVES & ANALYSIS
+
+ HARDE=
+NING ATLAS AGAINST PROMPT INJECTION (13 MINUTE READ) [10]=20
+
+ This post =
+details OpenAI's ongoing efforts to secure its AI browser,
+Atlas, against=
+ prompt injection attacks - malicious instructions
+embedded in web conten=
+t that manipulate agent behavior. While
+mitigation techniques are improvi=
+ng, the company acknowledged prompt
+injection remains an unsolved and per=
+sistent threat, particularly as
+agent capabilities expand on the open web=
+.=20
+
+ ASYNC CODING AGENTS "FROM SCRATCH" (10 MINUTE READ) [11]=20
+
+ It=
+'s pretty easy to homebrew your own asynchronous coding agent. This
+means=
+ that businesses selling coding agents can no longer
+differentiate themse=
+lves by only running sandboxed agents in the cloud
+that connect to Slack.=
+ Companies working on coding agents likely
+realize this and are doing eve=
+rything they can to train their own SWE
+agents and auxiliary models to im=
+prove their harnesses.=20
+
+ WHAT (I THINK) MAKES GEMINI 3 FLASH SO GOOD A=
+ND FAST (8 MINUTE READ)
+[12]=20
+
+ Gemini 3 Flash is a lightweight, effi=
+cient model optimized for speed
+and low latency. It is capable of deliver=
+ing performance comparable to
+Gemini 3 Pro at a fraction of the cost. The=
+ model's design brings
+unprecedented power but introduces specific tradeo=
+ffs in token
+efficiency and reliability. This post takes a look at the le=
+aked
+architectural details of the new model.=20
+
+ WE REMOVED 80% OF OUR=
+ AGENT'S TOOLS (4 MINUTE READ) [13]=20
+
+ Vercel spent months building a s=
+ophisticated internal text-to-SQL
+agent with specialized tools, heavy pro=
+mpt engineering, and careful
+context management. It kind of worked, but i=
+t was fragile, slow, and
+required constant maintenance. The team then del=
+eted most of it and
+stripped the agent down to a single tool that execute=
+d arbitrary bash
+commands. Its agent got simpler and better at the same t=
+ime: it had a
+100% success rate instead of 80%.=20
+
+=F0=9F=A7=91=
+=E2=80=8D=F0=9F=92=BB=20
+
+ENGINEERING & RESEARCH
+
+ LLM CODE QUALITY L=
+EADERBOARD: HOW DOES YOUR PREFERRED MODEL SCORE?
+(SPONSOR) [14]=20
+
+ In=
+terested to learn how different LLMs perform for coding? New
+research [15=
+] on models like GPT-5.2 High and Gemini 3.0 Pro reveals
+trade-offs in st=
+ructural quality and security.
+
+Learn more about the reliability, secur=
+ity, and maintainability of
+code written by the latest models with Sonar'=
+s LLM Leaderboard
+[14]=E2=80=94the definitive resource to understand the =
+true quality of
+AI-generated code.
+
+ AGENT SKILLS FOR CONTEXT ENGINEE=
+RING (GITHUB REPO) [16]=20
+
+ This repository contains a comprehensive col=
+lection of Agent Skills
+for building production-grade AI agent systems. T=
+hey are categorized
+into Foundational skills, Architectural skills, and O=
+perational
+skills. Each skill is structured for efficient context use. Th=
+e
+patterns work on any agent platform that supports skills or allows
+cu=
+stom instructions.=20
+
+ OPENTINKER (GITHUB REPO) [17]=20
+
+ OpenTinker i=
+s an RL-as-a-Service infrastructure for foundation
+models. It features se=
+paration of programming and execution,
+separation of environment and trai=
+ning code, and seamless transition
+from training to inference. The platfo=
+rm enables users to perform RL
+training and inference without requiring l=
+ocal GPU resources by
+separating client-side programming from server-side=
+ execution. It
+provides a high-level Python API that abstracts away the c=
+omplexity of
+distributed systems.=20
+
+ SCIENTIFIC INTELLIGENCE BENCHMAR=
+K (GITHUB REPO) [18]=20
+
+ SGI-Bench is a benchmark for assessing Scientif=
+ic General
+Intelligence across the entire research cycle, such as Deliber=
+ation,
+Conception, Action, and Perception. It spans 10 disciplines with o=
+ver
+1,000 expert-curated tasks inspired by major open scientific
+questi=
+ons.=20
+
+=F0=9F=8E=81=20
+
+MISCELLANEOUS
+
+ CURSOR EXPANDS AGENT HOOK=
+S (3 MINUTE READ) [19]=20
+
+ Cursor has announced partnerships to integrat=
+e its agent hook system
+with security and platform vendors. These hooks a=
+llow organizations to
+observe, modify, or block stages of the agent loop,=
+ supporting use
+cases like governance, dependency scanning, secrets manag=
+ement, and
+agent safety.=20
+
+ THE SHAPE OF ARTIFICIAL INTELLIGENCE (33 =
+MINUTE READ) [20]=20
+
+ AI's utility in the coming decade will come from u=
+nderstanding the
+technology's strengths and where it can be used to augme=
+nt human
+ability. It won't replace humans, at least in the short term, be=
+cause
+we are too complex. However, the technology will eventually conquer=
+
+territories we thought were exclusively ours. This will be the first
+t=
+ime we will face true otherness, a new species of being.=20
+
+=E2=9A=A1 =
+
+
+QUICK LINKS
+
+ CHATTERBOX TURBO IS THE FASTEST, MOST EXPRESSIVE TE=
+XT-TO-SPEECH
+(SPONSOR) [21]=20
+
+ The only open-source TTS with built-in=
+ watermarking. Up to 6=C3=97 faster
+than real-time on a GPU. Clone voices=
+ with 5 seconds of audio. Try
+Chatterbox Turbo by Resemble AI [21]=20
+
+=
+ ALPHABET TO ACQUIRE INTERSECT FOR $4.75 BILLION IN CASH (3 MINUTE
+READ) =
+[22]=20
+
+ Alphabet agreed to acquire Intersect, a provider of energy and =
+data
+center infrastructure, for $4.75 billion.=20
+
+ ANNOUNCING ADVANCED=
+ GOVERNANCE CAPABILITIES FOR VERTEX AI AGENT
+BUILDER (5 MINUTE READ) [23]=
+=20
+
+ Google announced advanced governance features for Vertex AI Agent=
+
+Builder, enhancing its Agent Engine to manage both short-term and
+long=
+-term memory.=20
+
+ 2026 PREDICTIONS (8 MINUTE READ) [24]=20
+
+ 2026 may =
+also be the first year the AI trade meaningfully splits into
+AI infra vs =
+AI applications.=20
+
+Love TLDR? Tell your friends and get rewards!
+
+ =
+Share your referral link below with friends to get free TLDR swag!=20
+
+ h=
+ttps://refer.tldr.tech/5f669066/2 [25]=20
+
+=09=09 Track your referrals he=
+re. [26]=20
+
+Want to advertise in TLDR? =F0=9F=93=B0
+
+ If your compan=
+y is interested in reaching an audience of AI
+professionals and decision =
+makers, you may want to ADVERTISE WITH US
+[27].=20
+
+Want to work at TLD=
+R? =F0=9F=92=BC
+
+ APPLY HERE [28], CREATE YOUR OWN ROLE [29] or send a =
+friend's resume
+to jobs@tldr.tech and get $1k if we hire them! TLDR is on=
+e of INC.'S
+BEST BOOTSTRAPPED BUSINESSES [30] of 2025.=20
+
+ If you have=
+ any comments or feedback, just respond to this email!=20
+
+Thanks for rea=
+ding,=20
+Andrew Tan [31], Ali Aminian [32], & Jacob Turner [33]=20
+
+ Mana=
+ge your subscriptions [34] to our other newsletters on tech,
+startups, an=
+d programming. Or if TLDR AI isn't for you, please
+unsubscribe [35].=20
+=
+
+=20
+
+Links:
+------
+[1] https://tldr.tech/ai?utm_source=3Dtldrai
+=
+[2] https://advertise.tldr.tech/?utm_source=3Dtldrai&utm_medium=3Dnewslette=
+r&utm_campaign=3Dadvertisetopnav
+[3] https://a.tldrnewsletter.com/web-ver=
+sion?ep=3D1&lc=3D6b0cc672-a670-11f0-8911-056565896460&p=3Dc3ac5b5e-dffe-11f=
+0-a8f7-5b94468b7651&pt=3Dcampaign&t=3D1766499925&s=3Dddc7098f679d73a776f6f9=
+06f7e8ebc594ae62e15bebf7590363a8acd021be2b
+[4] https://delve.co?utm_sourc=
+e=3Dtldr&utm_medium=3Dnewsletter&utm_campaign=3Dtldr-primary-dec22-25
+[5]=
+ https://delve.co/book-demo?utm_source=3Dtldr&utm_medium=3Dnewsletter&utm_c=
+ampaign=3Dtldr-primary-dec23-25
+[6] https://links.tldrnewsletter.com/3lF8=
+cQ
+[7] https://links.tldrnewsletter.com/kZtPyd
+[8] https://blog.kilo.ai=
+/p/minimax-m21?utm_source=3Dtldrai
+[9] https://manus.im/blog/manus-design=
+-view?utm_source=3Dtldrai
+[10] https://links.tldrnewsletter.com/DEARHN
+=
+[11] https://benanderson.work/blog/async-coding-agents/?utm_source=3Dtldrai=
+
+[12] https://bdtechtalks.substack.com/p/what-i-think-makes-gemini-3-flas=
+h?utm_source=3Dtldrai
+[13] https://vercel.com/blog/we-removed-80-percent-=
+of-our-agents-tools?utm_source=3Dtldrai
+[14] https://www.sonarsource.com/=
+the-coding-personalities-of-leading-llms/leaderboard/?utm_medium=3Dpaid&utm=
+_source=3Dtldr&utm_campaign=3Dss-llm-leaderboard25&utm_content=3Dnewsletter=
+-tldrai-secondary-llmleaderboard-251223-x&utm_term=3Dww-psp-x&s_category=3D=
+Paid&s_source=3DPaid%20Other&s_origin=3Dtldr
+[15] https://www.sonarsource=
+.com/blog/new-data-on-code-quality-gpt-5-2-high-opus-4-5-gemini-3-and-more/=
+?utm_medium=3Dpaid&utm_source=3Dtldr&utm_campaign=3Dss-llm-leaderboard25&ut=
+m_content=3Dnewsletter-tldrai-secondary-llmleaderboard-251223-x&utm_term=3D=
+ww-psp-x&s_category=3DPaid&s_source=3DPaid%20Other&s_origin=3Dtldr
+[16] h=
+ttps://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering?utm_s=
+ource=3Dtldrai
+[17] https://github.com/open-tinker/OpenTinker?utm_source=
+=3Dtldrai
+[18] https://github.com/InternScience/SGI-Bench?utm_source=3Dtl=
+drai
+[19] https://cursor.com/blog/hooks-partners?utm_source=3Dtldrai
+[2=
+0] https://www.thealgorithmicbridge.com/p/the-shape-of-artificial-intellige=
+nce?utm_source=3Dtldrai
+[21] https://www.resemble.ai/chatterbox-turbo/?ut=
+m_source=3Dtldr&utm_medium=3Dnewsletter&utm_campaign=3Dchatterboxturbo&utm_=
+content=3Dai
+[22] https://links.tldrnewsletter.com/9zHjq9
+[23] https://=
+cloud.google.com/blog/products/ai-machine-learning/new-enhanced-tool-govern=
+ance-in-vertex-ai-agent-builder/?utm_source=3Dtldrai
+[24] https://robonom=
+ics.substack.com/p/2026-predictions?utm_source=3Dtldrai
+[25] https://refe=
+r.tldr.tech/5f669066/2
+[26] https://hub.sparklp.co/sub_29edd86e67e7/2
+[=
+27] https://advertise.tldr.tech/?utm_source=3Dtldrai&utm_medium=3Dnewslette=
+r&utm_campaign=3Dadvertisecta
+[28] https://jobs.ashbyhq.com/tldr.tech
+[=
+29] https://jobs.ashbyhq.com/tldr.tech/c227b917-a6a4-40ce-8950-d3e165357871=
+
+[30] https://www.linkedin.com/feed/update/urn:li:activity:74016996910398=
+30016/
+[31] https://twitter.com/andrewztan
+[32] https://www.linkedin.co=
+m/in/aliiaminian/
+[33] https://www.linkedin.com/in/jacob-turner-7521a8198=
+/
+[34] https://tldr.tech/ai/manage?email=3Dmike.mcconigley%40gmail.com
+=
+[35] https://a.tldrnewsletter.com/unsubscribe?ep=3D1&l=3Deedf6b14-3de3-11ed=
+-9a32-0241b9615763&lc=3D6b0cc672-a670-11f0-8911-056565896460&p=3Dc3ac5b5e-d=
+ffe-11f0-a8f7-5b94468b7651&pt=3Dcampaign&pv=3D4&spa=3D1766498542&t=3D176649=
+9925&s=3D597ad94d2a969a626ca2e742e249a123a84f902d83dd944ba28e671d7822698e
+--Me7mWVYu
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html charset=3DUTF-8"><meta charset=3D"UTF-8"><meta name=3D"v=
+iewport" content=3D"width=3Ddevice-width"><meta name=3D"x-apple-disable-mes=
+sage-reformatting"><title>TLDR AI</title><meta name=3D"color-scheme" conten=
+t=3D"light dark"><meta name=3D"supported-color-schemes" content=3D"light da=
+rk"><style type=3D"text/css">
+=09=09=09:root {
+=09=09=09=09color-scheme: light dark; supported-color-schemes: light dark;
+=09=09=09}
+=09=09=09
+=09=09=09*,
+=09=09=09*:after,
+=09=09=09*:before {
+=09=09=09=09-webkit-box-sizing: border-box; -moz-box-sizing: border-box; bo=
+x-sizing: border-box;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+=09=09=09}
+=09=09=09
+=09=09=09html,
+=09=09=09body,
+=09=09=09.document {
+=09=09=09=09width: 100% !important; height: 100% !important; margin: 0; pad=
+ding: 0;
+=09=09=09}
+=09=09=09
+=09=09=09body {
+=09=09=09=09-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: g=
+rayscale; text-rendering: optimizeLegibility;
+=09=09=09}
+=09=09=09
+=09=09=09div[style*=3D"margin: 16px 0"] {
+=09=09=09=09margin: 0 !important;
+=09=09=09}
+=09=09=09
+=09=09=09table,
+=09=09=09td {
+=09=09=09=09mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+=09=09=09}
+=09=09=09
+=09=09=09table {
+=09=09=09=09border-spacing: 0; border-collapse: collapse; table-layout: fix=
+ed; margin: 0 auto;
+=09=09=09}
+=09=09=09
+=09=09=09img {
+=09=09=09=09-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+=09=09=09}
+=09=09=09
+=09=09=09*[x-apple-data-detectors] {
+=09=09=09=09color: inherit !important; text-decoration: none !important;
+=09=09=09}
+=09=09=09
+=09=09=09.x-gmail-data-detectors,
+=09=09=09.x-gmail-data-detectors *,
+=09=09=09.aBn {
+=09=09=09=09border-bottom: 0 !important; cursor: default !important;
+=09=09=09}
+=09=09=09
+=09=09=09.btn {
+=09=09=09=09-webkit-transition: all 200ms ease; transition: all 200ms ease;
+=09=09=09}
+=09=09=09
+=09=09=09.btn:hover {
+=09=09=09=09background-color: #f67575; border-color: #f67575;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+=09=09=09}
+=09=09=09
+=09=09=09@media screen and (max-width: 600px) {
+=09=09=09=09.container {
+=09=09=09=09=09width: 100%; margin: auto;
+=09=09=09=09}
+=09=09=09=09.stack {
+=09=09=09=09=09display: block!important; width: 100%!important; max-width: =
+100%!important;
+=09=09=09=09}
+=09=09=09=09.btn {
+=09=09=09=09=09display: block; width: 100%; text-align: center;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09body,
+=09=09=09p,
+=09=09=09td,
+=09=09=09tr,
+=09=09=09.body,
+=09=09=09table,
+=09=09=09h1,
+=09=09=09h2,
+=09=09=09h3,
+=09=09=09h4,
+=09=09=09h5,
+=09=09=09h6,
+=09=09=09div,
+=09=09=09span {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09body,
+=09=09=09=09p,
+=09=09=09=09td,
+=09=09=09=09tr,
+=09=09=09=09.body,
+=09=09=09=09table,
+=09=09=09=09h1,
+=09=09=09=09h2,
+=09=09=09=09h3,
+=09=09=09=09h4,
+=09=09=09=09h5,
+=09=09=09=09h6,
+=09=09=09=09div,
+=09=09=09=09span {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09a {
+=09=09=09=09color: inherit !important; text-decoration: underline !importan=
+t;
+=09=09=09}
+
+=09=09</style><!--[if mso | ie]>
+=09=09<style type=3D"text/css">
+=09=09=09a {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09a {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09 </style>
+=09=09=09<![endif]--></head><body class=3D"">
+
+
+
+
+
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">OpenAI int=
+roduced a personalized year-in-review feature called &quot;Your Year with C=
+hatGPT,&quot; available to eligible users in select regions&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;</div>
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align=3D"center" class=3D"document"><tbody><tr><td valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"container" width=3D"600"><tbody><tr class=3D"inner-body"><td>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr class=3D"header"><td bgcolor=3D"" class=3D"containe=
+r">
+
+<table width=3D"100%"><tbody><tr><td class=3D"container">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"margin-top: 0px;" width=3D"100%"><tbody><tr><td style=
+=3D"padding: 0px;">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div style=3D"text-align: center;">
+<span style=3D"margin-right: 0px;"><a href=3D"https://tracking.tldrnewslett=
+er.com/CL0/https:%2F%2Ftldr.tech%2Fai%3Futm_source=3Dtldrai/1/0100019b4b99b=
+e3d-3b87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000/n4UFaYwl3EhfzYi3UWXpInm8kIf=
+drc8gl0ZBEKOQ0Sw=3D437" rel=3D"noopener noreferrer" target=3D"_blank"><span=
+>Sign Up</span></a>
+|<span style=3D"margin-right: 2px; margin-left: 2px;"><a href=3D"https://tr=
+acking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_sour=
+ce=3Dtldrai%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertisetopnav/1/01=
+00019b4b99be3d-3b87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000/FJ6NqYf_eFIxHkhj=
+ocaOo4JLunluLj83ELJlU4qTrHM=3D437" rel=3D"noopener noreferrer" target=3D"_b=
+lank"><span>Advertise</span></a></span>|<span style=3D"margin-left: 2px;"><=
+a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewslet=
+ter.com%2Fweb-version%3Fep=3D1%26lc=3D6b0cc672-a670-11f0-8911-056565896460%=
+26p=3Dc3ac5b5e-dffe-11f0-a8f7-5b94468b7651%26pt=3Dcampaign%26t=3D1766499925=
+%26s=3Dddc7098f679d73a776f6f906f7e8ebc594ae62e15bebf7590363a8acd021be2b/1/0=
+100019b4b99be3d-3b87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000/lfWsfOjAsBV--6c=
+mmqRAWkVENUfYKnZBbXB4YHrFSrc=3D437"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"text-=
+align: center;"><span data-darkreader-inline-color=3D"" style=3D"--darkread=
+er-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30=
+px;">T</span><span style=3D"font-size: 30px;"><span data-darkreader-inline-=
+color=3D"" style=3D"color: rgb(232, 192, 96) !important; --darkreader-inlin=
+e-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-colo=
+r=3D"" style=3D"color: rgb(101, 195, 173) !important; --darkreader-inline-c=
+olor:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-=
+color=3D"" style=3D"--darkreader-inline-color:#dd6e6e; color: rgb(220, 107,=
+ 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr id=3D"together-with"><td align=3D"cent=
+er" height=3D"20" style=3D"vertical-align:middle !important;" valign=3D"mid=
+dle" width=3D"100%"><strong style=3D"vertical-align:middle !important; heig=
+ht: 100%;">Together With </strong>
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fdelve.co%3Fu=
+tm_source=3Dtldr%26utm_medium=3Dnewsletter%26utm_campaign=3Dtldr-primary-de=
+c22-25/1/0100019b4b99be3d-3b87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000/H9kGt=
+Vg8a997NjSZ6dCDU7fls21540Exxflr1b-PYDI=3D437"><img src=3D"https://images.tl=
+dr.tech/delve.png" valign=3D"middle" style=3D"vertical-align: middle !impor=
+tant; height: 100%;" alt=3D"Delve"></a></td></tr></tbody></table>
+
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody><tr=
+><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0;=
+">
+<div style=3D"text-align: center;">
+
+<h1><strong>TLDR AI <span id=3D"date">2025-12-23</span></strong></h1>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody><tr=
+ id=3D"sponsy-copy"><td class=3D"container" style=3D"padding: 15px 15px;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fdelve.co%3Futm_source=3Dtldr%26utm_medium=3Dnewsletter%=
+26utm_campaign=3Dtldr-primary-dec22-25/2/0100019b4b99be3d-3b87e2dc-88ea-497=
+2-bcb1-9264ba5fb1ef-000000/rNhURIfgf8kVfDBlXUJ-xiggZH6Q9Ct81T2_-kC452Q=3D43=
+7">
+                                    <span>
+                                        <strong>Delve Shipmas Day 2: AI Ven=
+dor Risk Management (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Welcome to Delve Shipmas. Every day thi=
+s week, Delve is launching a new AI feature to make compliance more modern =
+than ever. Yesterday, we launched Delve's AI Copilot that can help on any c=
+ompliance task or question. Today, we're launching...<strong> AI Vendor Ris=
+k Management</strong><br><br>Vendor risk management is <em>painful</em>. Do=
+zens of vendors, endless questionnaires, and unclear risk levels. Delve's A=
+I VRM handles this automatically by auto-gathering security evidence from e=
+ach vendor, creating creating findings, and giving you a clear view of your=
+ risk posture. Leave spreadsheets and legacy platforms in the past and ente=
+r the future of risk with Delve AI.<br>Join companies like 11x, micro1, Bla=
+nd, Wisprflow and more.<br><br><a class=3D"c-link" href=3D"https://tracking=
+.tldrnewsletter.com/CL0/https:%2F%2Fdelve.co%2Fbook-demo%3Futm_source=3Dtld=
+r%26utm_medium=3Dnewsletter%26utm_campaign=3Dtldr-primary-dec23-25/1/010001=
+9b4b99be3d-3b87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000/iURaLyBj4foG5G8RL9oD=
+jMllkGUO_uCnQQtj4Zt1-r8=3D437" rel=3D"noopener noreferrer" target=3D"_blank=
+"><span>Book a demo</span></a> to see Delve in action and get <strong>$1,50=
+0 off</strong> with code <strong>DELVEXMAS2</strong>.
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=3D""><td class=3D"container">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td style=3D"padding: 0px;">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;"><span s=
+tyle=3D"font-size:36px;">=F0=9F=9A=80</span></span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Headlines &amp; Launches</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2F3lF8cQ/1/0100019b4b99be3d-3b=
+87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000/riC5mf5OHymzneAmryhDs_3yF0h96p7Qr=
+x_zyjca-Hg=3D437">
+                                    <span>
+                                        <strong>Your Year with ChatGPT (2 m=
+inute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    OpenAI introduced a personalized year-i=
+n-review feature called "Your Year with ChatGPT," available to eligible use=
+rs in select regions. Inspired by Spotify Wrapped, the feature highlights i=
+ndividual usage trends from the past year.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FkZtPyd/1/0100019b4b99be3d-3b=
+87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000/O27WAOS-rriDGI2LNy2xWaSpSOL-93LdU=
+9rWgNQbyq0=3D437">
+                                    <span>
+                                        <strong>Z.AI launches GLM-4.7, new =
+SOTA open-source model for coding (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    GLM-4.7 is the latest release in Z.AI's=
+ General Language Model line. The high-end foundation model is aimed at adv=
+anced reasoning, coding, and multimodal workloads. The late update expands =
+context handling and reasoning depth compared to earlier versions. It intro=
+duced upgraded reasoning pipelines and broader multimodal support.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fblog.kilo.ai%2Fp%2Fminimax-m21%3Futm_source=3Dtldrai/1/=
+0100019b4b99be3d-3b87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000/iDjzqhpb9eE9qN=
+6EhQWMIl2oVM4PCybJ03E27xmCIIY=3D437">
+                                    <span>
+                                        <strong>MiniMax M2.1 is live in Kil=
+o (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    MiniMax M2.1 is ahead of DeepSeek and K=
+imi on several benchmarks. It is even catching up to state-of-the-art model=
+s in some areas. The model is super-fast and efficient. It is now available=
+ to all Kilo Code users.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fmanus.im%2Fblog%2Fmanus-design-view%3Futm_source=3Dtldr=
+ai/1/0100019b4b99be3d-3b87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000/HdvNc5jFU=
+RjO6sXoVS3_dLRBMuwxyMtUZszuZow5CTE=3D437">
+                                    <span>
+                                        <strong>Introducing Manus Design Vi=
+ew (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Manus Design View is an extension of th=
+e Manus agent for seamless AI design workflows. It enables designers to gen=
+erate concepts with simple prompts, make precise edits using the Mark Tool,=
+ and change text easily. The Manus mobile app allows design edits on-the-go=
+ with either text or voice input. It is available to all users today.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=A7=A0</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Deep Dives &amp; Analysis</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FDEARHN/1/0100019b4b99be3d-3b=
+87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000/CiDtVP75K2kMpzESpeJb7EO0FbxhsQhJq=
+NcWH5HYjjU=3D437">
+                                    <span>
+                                        <strong>Hardening Atlas Against Pro=
+mpt Injection (13 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    This post details OpenAI's ongoing effo=
+rts to secure its AI browser, Atlas, against prompt injection attacks - mal=
+icious instructions embedded in web content that manipulate agent behavior.=
+ While mitigation techniques are improving, the company acknowledged prompt=
+ injection remains an unsolved and persistent threat, particularly as agent=
+ capabilities expand on the open web.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fbenanderson.work%2Fblog%2Fasync-coding-agents%2F%3Futm_=
+source=3Dtldrai/1/0100019b4b99be3d-3b87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000=
+000/2z4gcC77cFrxORqzY61HOlX3IMgH4vQDIMhz44KUf38=3D437">
+                                    <span>
+                                        <strong>Async Coding Agents "From S=
+cratch" (10 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    It's pretty easy to homebrew your own a=
+synchronous coding agent. This means that businesses selling coding agents =
+can no longer differentiate themselves by only running sandboxed agents in =
+the cloud that connect to Slack. Companies working on coding agents likely =
+realize this and are doing everything they can to train their own SWE agent=
+s and auxiliary models to improve their harnesses.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fbdtechtalks.substack.com%2Fp%2Fwhat-i-think-makes-gemin=
+i-3-flash%3Futm_source=3Dtldrai/1/0100019b4b99be3d-3b87e2dc-88ea-4972-bcb1-=
+9264ba5fb1ef-000000/UkvJ8olFuDwMhEuRe6PRiRkwiZqZnaxxafflmUt000s=3D437">
+                                    <span>
+                                        <strong>What (I think) makes Gemini=
+ 3 Flash so good and fast (8 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Gemini 3 Flash is a lightweight, effici=
+ent model optimized for speed and low latency. It is capable of delivering =
+performance comparable to Gemini 3 Pro at a fraction of the cost. The model=
+'s design brings unprecedented power but introduces specific tradeoffs in t=
+oken efficiency and reliability. This post takes a look at the leaked archi=
+tectural details of the new model.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fvercel.com%2Fblog%2Fwe-removed-80-percent-of-our-agents=
+-tools%3Futm_source=3Dtldrai/1/0100019b4b99be3d-3b87e2dc-88ea-4972-bcb1-926=
+4ba5fb1ef-000000/Tyd2xoiyYWeL034JR2x16R33STDhNVO_3P4qFyFkx5A=3D437">
+                                    <span>
+                                        <strong>We removed 80% of our agent=
+'s tools (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Vercel spent months building a sophisti=
+cated internal text-to-SQL agent with specialized tools, heavy prompt engin=
+eering, and careful context management. It kind of worked, but it was fragi=
+le, slow, and required constant maintenance. The team then deleted most of =
+it and stripped the agent down to a single tool that executed arbitrary bas=
+h commands. Its agent got simpler and better at the same time: it had a 100=
+% success rate instead of 80%.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=A7=91=E2=80=8D=F0=9F=92=BB</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Engineering &amp; Research</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.sonarsource.com%2Fthe-coding-personalities-of-leadi=
+ng-llms%2Fleaderboard%2F%3Futm_medium=3Dpaid%26utm_source=3Dtldr%26utm_camp=
+aign=3Dss-llm-leaderboard25%26utm_content=3Dnewsletter-tldrai-secondary-llm=
+leaderboard-251223-x%26utm_term=3Dww-psp-x%26s_category=3DPaid%26s_source=
+=3DPaid%2520Other%26s_origin=3Dtldr/1/0100019b4b99be3d-3b87e2dc-88ea-4972-b=
+cb1-9264ba5fb1ef-000000/reyUKYOpV115gPaDyBOuKedtbEEt9mT-LLTKgi2YIr8=3D437">
+                                    <span>
+                                        <strong>LLM code quality leaderboar=
+d: How does your preferred model score? (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Interested to learn how different LLMs =
+perform for coding? <a href=3D"https://tracking.tldrnewsletter.com/CL0/http=
+s:%2F%2Fwww.sonarsource.com%2Fblog%2Fnew-data-on-code-quality-gpt-5-2-high-=
+opus-4-5-gemini-3-and-more%2F%3Futm_medium=3Dpaid%26utm_source=3Dtldr%26utm=
+_campaign=3Dss-llm-leaderboard25%26utm_content=3Dnewsletter-tldrai-secondar=
+y-llmleaderboard-251223-x%26utm_term=3Dww-psp-x%26s_category=3DPaid%26s_sou=
+rce=3DPaid%2520Other%26s_origin=3Dtldr/1/0100019b4b99be3d-3b87e2dc-88ea-497=
+2-bcb1-9264ba5fb1ef-000000/RImSW9qnMpS57jUiqI6hwMBjudfmfhpBiSo1WGF-u7o=3D43=
+7" rel=3D"noopener noreferrer nofollow" target=3D"_blank"><span>New researc=
+h</span></a> on models like GPT-5.2 High and Gemini 3.0 Pro reveals trade-o=
+ffs in structural quality and security.
+
+<p></p>
+
+<p>Learn more about the reliability, security, and maintainability of code =
+written by the latest models with <a href=3D"https://tracking.tldrnewslette=
+r.com/CL0/https:%2F%2Fwww.sonarsource.com%2Fthe-coding-personalities-of-lea=
+ding-llms%2Fleaderboard%2F%3Futm_medium=3Dpaid%26utm_source=3Dtldr%26utm_ca=
+mpaign=3Dss-llm-leaderboard25%26utm_content=3Dnewsletter-tldrai-secondary-l=
+lmleaderboard-251223-x%26utm_term=3Dww-psp-x%26s_category=3DPaid%26s_source=
+=3DPaid%2520Other%26s_origin=3Dtldr/2/0100019b4b99be3d-3b87e2dc-88ea-4972-b=
+cb1-9264ba5fb1ef-000000/Jf32PW7Iqsoq8mUFOAyrIh-iRqg_Us8m1fv2L4kn3-A=3D437" =
+rel=3D"noopener noreferrer nofollow" target=3D"_blank"><span>Sonar's LLM Le=
+aderboard</span></a>=E2=80=94the definitive resource to understand the true=
+ quality of AI-generated code.
+
+
+</p>
+</span></span></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgithub.com%2Fmuratcankoylan%2FAgent-Skills-for-Context-=
+Engineering%3Futm_source=3Dtldrai/1/0100019b4b99be3d-3b87e2dc-88ea-4972-bcb=
+1-9264ba5fb1ef-000000/ddehXQgqtWoK41BBzxrg7DQzmRYY0g3edmSlh4mE0b4=3D437">
+                                    <span>
+                                        <strong>Agent Skills for Context En=
+gineering (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    This repository contains a comprehensiv=
+e collection of Agent Skills for building production-grade AI agent systems=
+. They are categorized into Foundational skills, Architectural skills, and =
+Operational skills. Each skill is structured for efficient context use. The=
+ patterns work on any agent platform that supports skills or allows custom =
+instructions.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgithub.com%2Fopen-tinker%2FOpenTinker%3Futm_source=3Dtl=
+drai/1/0100019b4b99be3d-3b87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000/XIo_ITX=
+ecYSJC9op6Bg0K6EieBIDUtbPOv6LFDQ5MBc=3D437">
+                                    <span>
+                                        <strong>OpenTinker (GitHub Repo)</s=
+trong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    OpenTinker is an RL-as-a-Service infras=
+tructure for foundation models. It features separation of programming and e=
+xecution, separation of environment and training code, and seamless transit=
+ion from training to inference. The platform enables users to perform RL tr=
+aining and inference without requiring local GPU resources by separating cl=
+ient-side programming from server-side execution. It provides a high-level =
+Python API that abstracts away the complexity of distributed systems.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgithub.com%2FInternScience%2FSGI-Bench%3Futm_source=3Dt=
+ldrai/1/0100019b4b99be3d-3b87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000/xWvS_E=
+Ku0b5I6o5jWVkP2-N1uRSBrDKVaQbj4SG_eqM=3D437">
+                                    <span>
+                                        <strong>Scientific Intelligence Ben=
+chmark (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    SGI-Bench is a benchmark for assessing =
+Scientific General Intelligence across the entire research cycle, such as D=
+eliberation, Conception, Action, and Perception. It spans 10 disciplines wi=
+th over 1,000 expert-curated tasks inspired by major open scientific questi=
+ons.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=8E=81</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><strong><h1>Miscellaneous</h1></strong><=
+/div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fcursor.com%2Fblog%2Fhooks-partners%3Futm_source=3Dtldra=
+i/1/0100019b4b99be3d-3b87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000/1dmIVijZqp=
+ZdAwlu1TS6VV9CS1jnv9SlD5-OkdlEAms=3D437">
+                                    <span>
+                                        <strong>Cursor Expands Agent Hooks =
+(3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Cursor has announced partnerships to in=
+tegrate its agent hook system with security and platform vendors. These hoo=
+ks allow organizations to observe, modify, or block stages of the agent loo=
+p, supporting use cases like governance, dependency scanning, secrets manag=
+ement, and agent safety.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.thealgorithmicbridge.com%2Fp%2Fthe-shape-of-artific=
+ial-intelligence%3Futm_source=3Dtldrai/1/0100019b4b99be3d-3b87e2dc-88ea-497=
+2-bcb1-9264ba5fb1ef-000000/i18u0gipRhMRI-41d5cM60bTCj7Yw9jePCrNWXtpuqQ=3D43=
+7">
+                                    <span>
+                                        <strong>The Shape of Artificial Int=
+elligence (33 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    AI's utility in the coming decade will =
+come from understanding the technology's strengths and where it can be used=
+ to augment human ability. It won't replace humans, at least in the short t=
+erm, because we are too complex. However, the technology will eventually co=
+nquer territories we thought were exclusively ours. This will be the first =
+time we will face true otherness, a new species of being.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=E2=9A=
+=A1</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.resemble.ai%2Fchatterbox-turbo%2F%3Futm_source=3Dtl=
+dr%26utm_medium=3Dnewsletter%26utm_campaign=3Dchatterboxturbo%26utm_content=
+=3Dai/1/0100019b4b99be3d-3b87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000/zBM82x=
+928Jli0gm3bPceUOc0kbiWPwQOwPaNB7By2Bk=3D437">
+                                    <span>
+                                        <strong>Chatterbox Turbo is the fas=
+test, most expressive text-to-speech (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    The only open-source TTS with built-in =
+watermarking. Up to 6=C3=97 faster than real-time on a GPU. Clone voices wi=
+th 5 seconds of audio. <a href=3D"https://tracking.tldrnewsletter.com/CL0/h=
+ttps:%2F%2Fwww.resemble.ai%2Fchatterbox-turbo%2F%3Futm_source=3Dtldr%26utm_=
+medium=3Dnewsletter%26utm_campaign=3Dchatterboxturbo%26utm_content=3Dai/2/0=
+100019b4b99be3d-3b87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000/laCmQIDP5PEl2jj=
+MaNYNCMFf3Mh6XOkPvfYB9g6ctMs=3D437" rel=3D"noopener noreferrer nofollow" ta=
+rget=3D"_blank"><span>Try Chatterbox Turbo by Resemble AI</span></a>
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2F9zHjq9/1/0100019b4b99be3d-3b=
+87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000/aQrDeMjm4bTQiG879m1SxXGPuums_D4Xr=
+-pYLAFqu0A=3D437">
+                                    <span>
+                                        <strong>Alphabet to Acquire Interse=
+ct for $4.75 Billion in Cash (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Alphabet agreed to acquire Intersect, a=
+ provider of energy and data center infrastructure, for $4.75 billion.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fcloud.google.com%2Fblog%2Fproducts%2Fai-machine-learnin=
+g%2Fnew-enhanced-tool-governance-in-vertex-ai-agent-builder%2F%3Futm_source=
+=3Dtldrai/1/0100019b4b99be3d-3b87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000/wP=
+vK0j2LioXqqRsCtlvWwmGI5pPPtRA9LTe_TdcguDA=3D437">
+                                    <span>
+                                        <strong>Announcing advanced governa=
+nce capabilities for Vertex AI Agent Builder (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Google announced advanced governance fe=
+atures for Vertex AI Agent Builder, enhancing its Agent Engine to manage bo=
+th short-term and long-term memory.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Frobonomics.substack.com%2Fp%2F2026-predictions%3Futm_so=
+urce=3Dtldrai/1/0100019b4b99be3d-3b87e2dc-88ea-4972-bcb1-9264ba5fb1ef-00000=
+0/Xs02JAZ5aEN_U2pUZl3EKhXXyJnQMGd5esF8y9vWOe0=3D437">
+                                    <span>
+                                        <strong>2026 Predictions (8 minute =
+read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    2026 may also be the first year the AI =
+trade meaningfully splits into AI infra vs AI applications.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"word-break=
+: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class=3D"container" style=3D"padding: 0px 10px 15px;">
+<div class=3D"text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align=3D"left" style=3D"padding: 10px;">
+<div class=3D"text-block">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.t=
+ech%2F5f669066%2F2/1/0100019b4b99be3d-3b87e2dc-88ea-4972-bcb1-9264ba5fb1ef-=
+000000/61Vz8W3ZGIteoBKTcJjyy_kcQ6iq4i2vpBQrNFCKIYw=3D437" style=3D"color: #=
+464ba4; text-decoration: underline;">https://refer.tldr.tech/5f669066/2</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align=3D"left" style=3D"padding:5px 10px;">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.=
+co%2Fsub_29edd86e67e7%2F2/1/0100019b4b99be3d-3b87e2dc-88ea-4972-bcb1-9264ba=
+5fb1ef-000000/8Mj31TMvIrISAu_DwRKWDSX7HEGlYsgOIWVrTNYGUSY=3D437" style=3D"f=
+ont-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block; =
+ text-decoration: underline;"><span style=3D"mso-text-raise:13pt; text-deco=
+ration: underline;">Track your referrals here.</span></a>
+</td></tr></tbody></table>
+
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"word-break=
+: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to advertise in TLDR? =F0=9F=93=B0
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+If your company is interested in reaching an audience of AI professionals a=
+nd decision makers, you may want to <a href=3D"https://tracking.tldrnewslet=
+ter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=3Dtldrai%26utm_=
+medium=3Dnewsletter%26utm_campaign=3Dadvertisecta/1/0100019b4b99be3d-3b87e2=
+dc-88ea-4972-bcb1-9264ba5fb1ef-000000/MUlOJDpExmIJdyqmDpPiDymjvZmJwnceanVfE=
+2bSHmE=3D437"><strong><span>advertise with us</span></strong></a>.
+</div>
+<br>
+
+<!-- New "Want to work at TLDR?" section -->
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to work at TLDR? =F0=9F=92=BC
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech/1/0100019b4b99be3d-3b87e2dc-88ea-4972-bcb1-9264ba5fb1ef-00=
+0000/-jnIoIsWi7Xm0T_5-yiLgoJ1Zxz-W7KioYexUjkDUxY=3D437" rel=3D"noopener nor=
+eferrer" style=3D"color: #0000EE; text-decoration: underline;" target=3D"_b=
+lank"><strong>Apply here</strong></a>,
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech%2Fc227b917-a6a4-40ce-8950-d3e165357871/1/0100019b4b99be3d-=
+3b87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000/njqtvTthTCdRSFQpvYExo5YLB9fn4JK=
+0Y81mtMMSDcA=3D437" rel=3D"noopener noreferrer" style=3D"color: #0000EE; te=
+xt-decoration: underline;" target=3D"_blank"><strong>create your own role</=
+strong></a> or send a friend's resume to <a href=3D"mailto:jobs@tldr.tech" =
+style=3D"color: #0000EE; text-decoration: underline;">jobs@tldr.tech</a> an=
+d get $1k if we hire them! TLDR is one of <a href=3D"https://tracking.tldrn=
+ewsletter.com/CL0/https:%2F%2Fwww.linkedin.com%2Ffeed%2Fupdate%2Furn:li:act=
+ivity:7401699691039830016%2F/1/0100019b4b99be3d-3b87e2dc-88ea-4972-bcb1-926=
+4ba5fb1ef-000000/OQEVWTIGuoneIqWJsd8424Oh66Ft3Edj1ONjxZeTSVw=3D437" rel=3D"=
+noopener noreferrer" style=3D"color: #0000EE; text-decoration: underline;" =
+target=3D"_blank"><strong>Inc.'s Best Bootstrapped businesses</strong></a> =
+of 2025.
+</div>
+<br>
+
+<div class=3D"text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftwitter.com%=
+2Fandrewztan/1/0100019b4b99be3d-3b87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000=
+/RKl_zVICruiEjfCsL6Wnh95ksz8Q0S43TZR9rxZHtIU=3D437"><span>Andrew Tan</span>=
+</a>, <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.li=
+nkedin.com%2Fin%2Faliiaminian%2F/1/0100019b4b99be3d-3b87e2dc-88ea-4972-bcb1=
+-9264ba5fb1ef-000000/lQiwrwQmaumDXVKBAadBdfZUl1k-2YQAlNZIoi-5xC0=3D437"><sp=
+an>Ali Aminian</span></a>, &amp; <a href=3D"https://tracking.tldrnewsletter=
+.com/CL0/https:%2F%2Fwww.linkedin.com%2Fin%2Fjacob-turner-7521a8198%2F/1/01=
+00019b4b99be3d-3b87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000/PkzihFLB9H_okXXF=
+IwVQHULbcKvwDhFIsHc74IqKgHA=3D437"><span>Jacob Turner</span></a>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div class=3D"text-block" id=3D"testing-id">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2F=
+ai%2Fmanage%3Femail=3Dmike.mcconigley%2540gmail.com/1/0100019b4b99be3d-3b87=
+e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000/y8yfrBtQldC-44tWbhY00yYlTAKQ-nYHvrp=
+6phZYxHo=3D437">Manage your subscriptions</a> to our other newsletters on t=
+ech, startups, and programming. Or if TLDR AI isn't for you, please <a href=
+=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.co=
+m%2Funsubscribe%3Fep=3D1%26l=3Deedf6b14-3de3-11ed-9a32-0241b9615763%26lc=3D=
+6b0cc672-a670-11f0-8911-056565896460%26p=3Dc3ac5b5e-dffe-11f0-a8f7-5b94468b=
+7651%26pt=3Dcampaign%26pv=3D4%26spa=3D1766498542%26t=3D1766499925%26s=3D597=
+ad94d2a969a626ca2e742e249a123a84f902d83dd944ba28e671d7822698e/1/0100019b4b9=
+9be3d-3b87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000/1y0Ui7tr-74eAKTnR8By9eOTg=
+gRJrljxHLJtFegzFOs=3D437">unsubscribe</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+
+
+
+<img alt=3D"" src=3D"http://tracking.tldrnewsletter.com/CI0/0100019b4b99be3=
+d-3b87e2dc-88ea-4972-bcb1-9264ba5fb1ef-000000/X7IUWx1VvRL5WpihPaSKDz6ZH1MCM=
+xBr4lQMx8Qpges=3D437" style=3D"display: none; width: 1px; height: 1px;">
+</body></html>
+--Me7mWVYu--

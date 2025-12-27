@@ -1,29 +1,51 @@
 import os
 import email
 import email.policy
+from email.utils import parsedate_to_datetime
 from bs4 import BeautifulSoup
-from flask import Flask, render_template, request, send_file
-import datetime
+from flask import Flask, render_template, request
+import datetime # Standard datetime import
 
-# app = Flask(__name__)
-# Force Flask to look in the correct folder, no matter where you run the script from
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
-STATIC_DIR = os.path.join(BASE_DIR, "static") # Good practice to add this too
-
-app = Flask(__name__, template_folder=TEMPLATE_DIR, static_folder=STATIC_DIR)
 # CONFIGURATION
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
+STATIC_DIR = os.path.join(BASE_DIR, "static")
 INPUT_DIR = os.path.join(BASE_DIR, "inputs")
-# We output directly to the MAIN studio input folder for seamless integration
 OUTPUT_DIR = os.path.join(os.path.dirname(BASE_DIR), "data", "inputs") 
+
+# TIME LIMIT (Hours)
+AGE_LIMIT_HOURS = 36
+
+app = Flask(__name__, template_folder=TEMPLATE_DIR, static_folder=STATIC_DIR)
 
 def extract_links_from_eml(filepath):
     links = []
+    email_display_date = "Unknown Date" 
+    
     try:
         with open(filepath, "rb") as f:
             msg = email.message_from_binary_file(f, policy=email.policy.default)
         
+        # --- 1. Extract Date & Check Age ---
+        if msg['Date']:
+            try:
+                dt = parsedate_to_datetime(msg['Date'])
+                
+                # Get current time matching the email's timezone info (if available)
+                # This ensures we compare "apples to apples"
+                now = datetime.datetime.now(dt.tzinfo) if dt.tzinfo else datetime.datetime.now()
+                
+                # AGE CHECK: If older than 36 hours, skip immediately
+                if (now - dt) > datetime.timedelta(hours=AGE_LIMIT_HOURS):
+                    print(f"🚫 Ignoring {os.path.basename(filepath)} (Older than {AGE_LIMIT_HOURS}h)")
+                    return [], None
+
+                # Format for display: "22 Dec 08:30"
+                email_display_date = dt.strftime('%d %b %H:%M') 
+            except Exception as e:
+                print(f"Date parse error in {filepath}: {e}")
+
+        # --- 2. Extract Links ---
         html_content = ""
         if msg.is_multipart():
             for part in msg.walk():
@@ -40,23 +62,26 @@ def extract_links_from_eml(filepath):
                 text = a.get_text(strip=True)
                 href = a['href']
                 
-                # Basic Noise Filter (Skip Unsubscribe, short labels, etc)
+                # Basic Noise Filter
                 if len(text) > 5 and "unsubscribe" not in text.lower() and "http" in href:
-                    # Clean Tracking junk from URL (optional but nice)
                     if "utm_" in href:
                         href = href.split("?")[0]
                     
-                    links.append({"text": text, "url": href})
+                    if " minute read)" in text.lower():
+                        links.append({"text": text, "url": href})
+                        
     except Exception as e:
         print(f"Error parsing {filepath}: {e}")
-    return links
+        
+    return links, email_display_date
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
         selected_urls = request.form.getlist('selected_links')
         if selected_urls:
-            filename = f"TLDR_Selection_{datetime.datetime.now().strftime('%d%b_%H%M')}.txt"
+            timestamp = datetime.datetime.now().strftime('%d%b_%H%M')
+            filename = f"TLDR_Selection_{timestamp}.txt"
             output_path = os.path.join(OUTPUT_DIR, filename)
             
             with open(output_path, "w") as f:
@@ -73,19 +98,26 @@ def index():
             </div>
             """
 
-    # --- GET REQUEST (Show the form) ---
+    # --- GET REQUEST ---
     all_files_data = []
     
     if os.path.exists(INPUT_DIR):
         for f in os.listdir(INPUT_DIR):
             if f.endswith(".eml"):
                 path = os.path.join(INPUT_DIR, f)
-                extracted = extract_links_from_eml(path)
-                if extracted:
-                    all_files_data.append({"filename": f, "links": extracted})
+                extracted_links, email_date = extract_links_from_eml(path)
+                
+                # Only add to list if links exist (age check returns [] if too old)
+                if extracted_links:
+                    all_files_data.append({
+                        "filename": f,
+                        "date": email_date,
+                        "links": extracted_links
+                    })
     
     return render_template('index.html', files=all_files_data)
 
 if __name__ == '__main__':
     print("🚀 TLDR Picker running at: http://127.0.0.1:5000")
+    print(f"🕒 Ignoring emails older than {AGE_LIMIT_HOURS} hours.")
     app.run(debug=True, port=5000)

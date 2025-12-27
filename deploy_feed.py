@@ -16,7 +16,7 @@ DROPBOX_LOCAL_DIR = os.path.expanduser("~/Dropbox/Public/Podcast_Output")
 # 3. The Public URL Prefix (How the internet finds those files)
 #    IMPORTANT: Ensure this ends with a slash '/'
 #    Example: "https://dl.dropboxusercontent.com/u/123456/Podcast_Output/"
-PUBLIC_URL_BASE = "https://dl.dropboxusercontent.com/u/YOUR_ID_HERE/Podcast_Output/" 
+PUBLIC_URL_BASE = "https://dl.dropboxusercontent.com/home/Public/Podcast_Output" 
 
 # 4. Feed Metadata
 FEED_CONFIG = {

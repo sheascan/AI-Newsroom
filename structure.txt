@@ -246,6 +246,45 @@
 │   │   ├── 21Dec_0855_whats_behind_the_trump_administrations_war_on_type.mp3
 │   │   ├── index.html
 │   │   └── manifest.json
+│   ├── 22Dec
+│   │   ├── 22Dec_1017_early_edition_podcast_with_4_stories_under_10_minu.mp3
+│   │   ├── 22Dec_1017_metrocouk_news_sport_showbiz_celebrities_from_metr.mp3
+│   │   ├── 22Dec_1017_news_roundup_various_stories.mp3
+│   │   ├── 22Dec_1204_how_google_leapfrogged_chatgpt_and_why_the_ai_race.mp3
+│   │   ├── 22Dec_1237_whats_new_in_python_315_.mp3
+│   │   ├── index.html
+│   │   └── manifest.json
+│   ├── 23Dec
+│   │   ├── 23Dec_0448_200_courses_on_chatgpt_claude.mp3
+│   │   ├── 23Dec_0448_the_state_of_device_management_2025.mp3
+│   │   ├── index.html
+│   │   └── manifest.json
+│   ├── 24Dec
+│   │   ├── 24Dec_0715_a_year_of_vibes.mp3
+│   │   ├── 24Dec_0715_christmas_in_emergency_housing_no_child_should_eve.mp3
+│   │   ├── 24Dec_0715_gardaí_rejecting_most_cases_of_alleged_sex_assault.mp3
+│   │   ├── 24Dec_0715_news_roundup_various_stories.mp3
+│   │   ├── 24Dec_0715__us_bans_new_foreign_made_drones_and_components.mp3
+│   │   ├── 24Dec_0841_dublin_now_11th_most_congested_city_in_the_world_s.mp3
+│   │   ├── 24Dec_1736_sharing_a_bed_but_says_hes_lucky_international_stu.mp3
+│   │   ├── index.html
+│   │   └── manifest.json
+│   ├── 26Dec
+│   │   ├── 26Dec_1004_captcha_page.mp3
+│   │   ├── 26Dec_1004_irelands_shipwrecks_offer_up_gold_bars_an_abandone.mp3
+│   │   ├── 26Dec_1028_europe_gets_serious_about_cutting_us_digital_umbil.mp3
+│   │   ├── 26Dec_1028_new_boss_was_bad_and_ugly_so_tech_team_pranked_him.mp3
+│   │   ├── 26Dec_1028_unix_v4_tape_successfully_recovered.mp3
+│   │   ├── 26Dec_1049_eight_things_manchester_united_fans_want_for_chris.mp3
+│   │   ├── index.html
+│   │   └── manifest.json
+│   ├── 27Dec
+│   │   ├── 27Dec_0809_major_drug_seizures_lead_to_surge_in_cocaine_price.mp3
+│   │   ├── 27Dec_0809_news_roundup_various_stories.mp3
+│   │   ├── 27Dec_0809_the_html_elements_time_forgot.mp3
+│   │   ├── 27Dec_0809_zelenskiy_doesnt_have_anything_until_i_approve_it_.mp3
+│   │   ├── index.html
+│   │   └── manifest.json
 │   ├── final_victory
 │   │   └── feed.xml
 │   ├── live_feed_v1
@@ -367,11 +406,26 @@
 │   ├── When Irish Eyes - WHISTLE - 2015_5_3.mp3
 │   └── Wild Mountain Thyme on whistle 1.mp3
 ├── tldr_curation
-│   ├── inputs
+│   ├── arvhive
 │   │   ├── 19Dec_HashiCorp_Wrapped_Powering_Dropbox_Dash_2026_Obser.eml
 │   │   ├── 19Dec_OpenAI_eyes_830M_GPT_52_Codex_Anthropic_opens_Agen.eml
 │   │   ├── 19Dec_Pwning_Mintlify_EC2_Instance_Attestation_GPT_52_Co.eml
-│   │   └── 19Dec_TikTok_signs_deal_GPT_52_Codex_2025_tech_salaries_.eml
+│   │   ├── 19Dec_TikTok_signs_deal_GPT_52_Codex_2025_tech_salaries_.eml
+│   │   ├── 22Dec_ChatGPT_tone_control_gaming_the_Metr_plot_Anthropi.eml
+│   │   ├── 22Dec_Googles_performance_hints_AI_reflections_backing_u.eml
+│   │   ├── 22Dec_Grafana_Labs_2025_Python_315_Metas_RCA_Platform.eml
+│   │   ├── 22Dec_Mercury_national_bank_charter_Visa_Aldar_voice_age.eml
+│   │   ├── 22Dec_OpenAIs_plan_Elon_139B_pay_design_beyond_code.eml
+│   │   ├── 22Dec_The_LLM_Data_Engineer_The_Stack_Consolidates_Metri.eml
+│   │   ├── 24Dec_15s_code_test_LLMs_for_large_codebases_Why_logging.eml
+│   │   ├── 24Dec_Instagram_vs_TikTok_2026_predictions_AI_SDK_6.eml
+│   │   ├── 24Dec_JPEG_screenshots_AI_vs_human_code_against_semantic.eml
+│   │   ├── 24Dec_NotebookLM_Data_Tables_OpenAI_WAU_reporting_specul.eml
+│   │   ├── 24Dec_Robot_Olympics_Microsoft_ditches_C_infinite_minds.eml
+│   │   └── 24Dec_Year_with_ChatGPT_OpenTinker_GLM_47_.eml
+│   ├── inputs
+│   │   ├── 26Dec_Nvidias_20B_acquihire_Starlink_accelerates_virtual.eml
+│   │   └── 27Dec_Gmail_address_changes_ChatGPT_formatting_blocks_Ru.eml
 │   ├── templates
 │   │   └── index.html
 │   ├── harvest_tldr.py
@@ -385,11 +439,16 @@
 ├── main_gen139.py
 ├── main_gen140.py
 ├── main_gen201.py
-├── main.py -> main_gen201.py
+├── main_gen202.py
+├── main_gen203.py
+├── main_gen204.py
+├── main_gen205.py
+├── main.py -> main_gen205.py
 ├── podcast
 ├── readme.txt
 ├── requirements.txt
+├── run_daily_show.py
 ├── run_studio.sh
 └── structure.txt
 
-39 directories, 354 files
+45 directories, 407 files

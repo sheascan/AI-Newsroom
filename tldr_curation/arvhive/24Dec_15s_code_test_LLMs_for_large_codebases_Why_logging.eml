@@ -1,0 +1,1584 @@
+Delivered-To: mike.mcconigley@gmail.com
+Received: by 2002:ac9:40c9:0:b0:605:93f6:5e02 with SMTP id y9csp2544821ocg;
+        Tue, 23 Dec 2025 04:13:04 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IEXZJkP1C/mUL9FeVXU1liylh5skyDdnMwJdTMqASEqMARex1UqwOS/Ex/JB2IYlWNUK/s7
+X-Received: by 2002:a05:620a:4729:b0:8a3:2bec:c342 with SMTP id af79cd13be357-8c08faaf50dmr2302944185a.55.1766491983699;
+        Tue, 23 Dec 2025 04:13:03 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1766491983; cv=none;
+        d=google.com; s=arc-20240605;
+        b=NWi1UChl4AbbRogrGZ/y/YFEznbvbYUogOPrB/6ovRJ3QlRw+FXmC9KXKh1nq98xZP
+         JEaO22OSX/HJJlQqo71rVtIA0zzzFrmzExcoRRH7mSO2R9Fi9/H9XCeDkVXWq9mBNdmu
+         Z8h2R8aszGatpNWAQbUAQsDi3gDzj9InwzNEHrUimH8PqtW5gFVH1hzeYE5EmF5ciI4i
+         crSfPCrmq4ysU21fQM3joAASeZKbFxDzGiaE2d0UpIxs0vYwoq9SBurBXdxy7Y3lPTt2
+         d8EMKXp5tpDG9Lekmzx44kojnvVWv9r/NCiXQlMNBeOxqToZc/selOatQ//mMLeKHj4Z
+         SKhg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:date:mime-version:list-unsubscribe-post
+         :list-unsubscribe:subject:to:from:dkim-signature:dkim-signature;
+        bh=ZWQD3TPSaghc7e1ebWoK+LnF7XLhaOFK98wa3TjMXy0=;
+        fh=tUTYCbTOUI69DxYKXGXRz08XnPP7jEKRU6E5rS0DFR4=;
+        b=Zs1ZcV77uj4ngnAVFMsXkdy9BX/K8QLceFllB9b/hYz5nIodkVe6vUpSqnoW0+3RTz
+         WJ1rMBKk2q2awvc/RJ0W1NbsrB6YY+ZW8d3IyJ54oBFZJk0xtlvkjOGOQaWj4sjBUQ7y
+         97i0qBAYCfs5pUbkbkNI9bngnWHWD6R9YdBlhRBL0WeYAQrrN4fABgSI+YD7Vg7YCx2d
+         EAKOpcN3p3bul8iTN0aNZUI5X8X6jiGPonqbvNqDY/wrGNYZHOftdlxLxHkLlAsKdBCT
+         BKsqFAPj2UCnqGkiJaADvQzMbGAGnZEmInq8o67sPbIPyMQ7Wf1VF3Ekq7764grfDXRh
+         Lyhg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b="Gkip/7Xi";
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=gatD85SK;
+       spf=pass (google.com: domain of 0100019b4b208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-000000@dailyupdate.tldrnewsletter.com designates 54.240.123.115 as permitted sender) smtp.mailfrom=0100019b4b208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+Return-Path: <0100019b4b208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-000000@dailyupdate.tldrnewsletter.com>
+Received: from a123-115.smtp-out.amazonses.com (a123-115.smtp-out.amazonses.com. [54.240.123.115])
+        by mx.google.com with ESMTPS id af79cd13be357-8c0ac89faa7si1385100385a.378.2025.12.23.04.13.03
+        for <mike.mcconigley@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Tue, 23 Dec 2025 04:13:03 -0800 (PST)
+Received-SPF: pass (google.com: domain of 0100019b4b208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-000000@dailyupdate.tldrnewsletter.com designates 54.240.123.115 as permitted sender) client-ip=54.240.123.115;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b="Gkip/7Xi";
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=gatD85SK;
+       spf=pass (google.com: domain of 0100019b4b208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-000000@dailyupdate.tldrnewsletter.com designates 54.240.123.115 as permitted sender) smtp.mailfrom=0100019b4b208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ygiuxamnxevikrd5dtfwanslhs6b24mt; d=tldrnewsletter.com;
+	t=1766491983;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type;
+	bh=vYVY9Wp35B1bkzWktClMaupT6jdaklQNt7A1Zjz759s=;
+	b=Gkip/7XiiZtslZdHt8d8Cs6+wBlrnWOhpYHYfNdSpw6aUHleL7BFsGGXSyeZu3Im
+	2JEmoJC1A5ILbJEEgh6HnpBpxC4o5nWl1lfPkuCZVsKj/V/V2vK8iUzkHqm8BtP2wQV
+	WNDG8qZvv5dYFAfGqxyOqAr+QOXMRXEN8wmn373I=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1766491983;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type:Feedback-ID;
+	bh=vYVY9Wp35B1bkzWktClMaupT6jdaklQNt7A1Zjz759s=;
+	b=gatD85SKzc9EA6MCgMoX+gxPgkwFtaZx3Us+XhRy0IU6+x/EgVYQDuvsxhvafqMx
+	LlA0G1rrRIyOsNg71fC0t8XyLG9hyQfYhH+MPAlf/f24qKJB3xpoIQUcJgat8dQpoaS
+	g4giFATaRuPwefabyNvkVHAgl3b9uK4KIECCEZh0=
+From: TLDR Dev <dan@tldrnewsletter.com>
+To: mike.mcconigley@gmail.com
+Subject: 15s code test =?utf-8?Q?=F0=9F=91=A8=E2=80=8D=F0=9F=92=BB=2C?= LLMs
+ for large codebases =?utf-8?Q?=F0=9F=93=88=2C?= Why logging sucks
+ =?utf-8?Q?=F0=9F=93=9D?=
+X-Entity-Ref-Id: 9ac6fce0-d61c-417a-b3a2-1a4180603c3e
+X-EmailOctopus-Parent-Id: 26cbd43c-dfdf-11f0-8d83-17d36d80fa2a
+X-EmailOctopus-Parent-Type-Id: campaign
+X-EmailOctopus-List-Id: e8d201ca-3e93-11ed-9a32-0241b9615763
+X-EmailOctopus-List-Contact-Id: 6b0d84e0-a670-11f0-8b4a-c5e0a2ae1fe1
+X-EmailOctopus-Started-Preparing-At: 2025-12-23T12:01:17+00:00
+X-EmailOctopus-Sent-At: 2025-12-23T12:13:03+00:00
+X-EmailOctopus-Team-Id: 66987ef2-4f4c-11e9-a3c9-06b79b628af2
+X-EmailOctopus-Version: 4
+List-Unsubscribe: <https://a.tldrnewsletter.com/unsubscribe?ep=1&l=e8d201ca-3e93-11ed-9a32-0241b9615763&lc=6b0d84e0-a670-11f0-8b4a-c5e0a2ae1fe1&p=26cbd43c-dfdf-11f0-8d83-17d36d80fa2a&pt=campaign&pv=4&spa=1766491277&t=1766491983&s=484e5dd5dfe618cdf4327ceeeb348b8eed0f586a21e852790565f8856ff369de>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-EmailOctopus-Ses-Configuration-Set-Name: emailoctopus-a9f7b12f74f3c968d9408897fb35539c
+MIME-Version: 1.0
+Date: Tue, 23 Dec 2025 12:13:03 +0000
+Message-ID: <0100019b4b208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-000000@email.amazonses.com>
+Content-Type: multipart/alternative; boundary=ehnujpg4
+Feedback-ID: ::1.us-east-1.Dj5/7DYmgk+n1sSGGXSQSLIthSjNQ0MGtV5Dro1Tr8U=:AmazonSES
+X-SES-Outgoing: 2025.12.23-54.240.123.115
+
+--ehnujpg4
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+A 15-second coding test with a hidden character trick filters out 50%
+of =
+unqualified job applicants, as good candidates would solve the code
+menta=
+lly=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0
+
+
+ Sign Up [1] |Advertise [2]|View Online [3]=20
+
+=
+=09=09TLDR=20
+
+=09=09TOGETHER WITH [QA Wolf] [4]
+
+=C2=A0TLDR DEV 2025=
+-12-23
+
+ GOODBYE, LOW TEST COVERAGE AND SLOW QA CYCLES (SPONSOR) [4] =
+
+
+ Bugs sneak out when less than 80% of user flows are tested before
+=
+shipping. However, getting that kind of coverage (and staying there)
+is h=
+ard and pricey for any team.
+
+QA Wolf's [5] AI-native solution provides=
+ high-volume, high-speed test
+coverage for web and mobile apps, reducing =
+your organization's QA
+cycle to minutes.=C2=A0
+
+They can get you:
+=
+
+ =09* 80% automated E2E test coverage in weeks [6]=E2=80=94not years
+ =
+=09* Unlimited parallel test runs [7]
+ =09* 24-hour maintenance and on-de=
+mand test creation
+ =09* Zero flakes, guaranteed
+
+The benefit? No mor=
+e manual E2E testing. No more slow QA cycles. No
+more bugs reaching produ=
+ction.
+
+With QA Wolf, Drata's team of engineers [8] achieved 4x more te=
+st
+cases and 86% FASTER QA CYCLES.
+
+Schedule a demo to learn more [9]=
+
+
+=F0=9F=A7=91=E2=80=8D=F0=9F=92=BB=20
+
+ARTICLES & TUTORIALS
+
+ LO=
+GGING SUCKS (18 MINUTE READ) [10]=20
+
+ Traditional logging is inadequate =
+for modern, distributed systems,
+usually providing little useful context =
+for debugging issues. A shift
+to "wide events" or canonical log lines, wh=
+ich are single,
+comprehensive log entries emitted per request per service=
+, may solve
+this problem. These events are rich in high-cardinality and=
+
+high-dimensionality data, allowing for powerful queries and analytics
+=
+instead of string searches.=20
+
+ SCALING LLMS TO LARGER CODEBASES (12 MIN=
+UTE READ) [11]=20
+
+ Scaling LLMs within large codebases requires investme=
+nts in both
+guidance and oversight. Guidance focuses on providing LLMs wi=
+th
+high-quality context, such as prompt libraries and well-structured,
+=
+modular codebases, to allow for efficient "one-shot" code generation
+with=
+out needing a lot of rework. Oversight refers to human engineers
+who vali=
+date LLM choices, making sure of architectural integrity and
+aligned solu=
+tions.=20
+
+=F0=9F=A7=A0=20
+
+OPINIONS & ADVICE
+
+ EVERYONE IS A STAFF=
+ ENGINEER NOW (8 MINUTE READ) [12]=20
+
+ AI coding agents have become so g=
+ood that they have fundamentally
+transformed software engineering, making=
+ code implementation
+inexpensive. This means engineers are increasingly e=
+xpected to focus
+on higher-level skills like architectural judgment, syst=
+em-level
+thinking, and managing complex contexts across multiple domains.=
+ Devs
+will need to start adapting their workflows, including planning and=
+
+steering AI agents and developing habits to maintain focus amidst
+asyn=
+chronous work.=20
+
+ A YEAR OF VIBES (12 MINUTE READ) [13]=20
+
+ In 2025,=
+ this dev left Sentry, launched a new company, and shifted
+his programmin=
+g approach to embrace hands-off agentic coding with
+tools like Claude Cod=
+e. He became deeply integrated with AI agents for
+tasks from code generat=
+ion to daily organization. However, he's
+sometimes worried about emergent=
+ human-like tendencies of LLMs,
+questioning terms like "agent.=E2=80=
+=9D=20
+
+=F0=9F=9A=80=20
+
+LAUNCHES & TOOLS
+
+ WHAT IF YOU WENT ALL IN=
+ ON AI FOR 1,000 HOURS? (SPONSOR) [14]=20
+
+ You're already using AI. Agen=
+ts, RAG, fine-tuning are part of your
+workflow. Now, it's time to take th=
+e next step: Gauntlet [14] brings
+cracked engineers into a 10-week, 1,000=
+-hour fellowship. Fully funded
+by companies hiring from the cohort. Gradu=
+ates don't job hunt: they
+leave with $200K+ offers. Apply to Cohort 4 [14=
+].=20
+
+ TAMBO (GITHUB REPO) [15]=20
+
+ Tambo AI is a Generative UI SDK f=
+or React. It allows AI to
+dynamically render components based on natural =
+language conversations.
+Components are defined with Zod schemas, which th=
+e AI then uses to
+generate one-time elements or manage persistent, intera=
+ctable UI.=20
+
+ COCOINDEX (GITHUB REPO) [16]=20
+
+ CocoIndex is a fast d=
+ata transformation framework for AI. It uses a
+dataflow programming model=
+, with plug-and-play building blocks and
+guaranteed data freshness throug=
+h incremental processing and data
+lineage.=20
+
+ SNITCH (GITHUB REPO) [1=
+7]=20
+
+ snitch is a prettier way to inspect network connections. It enabl=
+es
+users to inspect network connections with a clean tui or styled
+tabl=
+es. Examples are available in the repository.=20
+
+=F0=9F=8E=81=20
+
+MISC=
+ELLANEOUS
+
+ I'M A FORMER CTO. HERE IS THE 15 SEC CODING TEST I USED TO =
+INSTANTLY
+FILTER OUT 50% OF UNQUALIFIED APPLICANTS (3 MINUTE READ) [18] =
+
+
+ A 15-second coding test with a hidden character trick filters out 50=
+%
+of unqualified remote job applicants, as good candidates would solve
+=
+the code mentally, while others using interpreters or AI would get an
+inc=
+orrect answer.=20
+
+ YOUR SUPABASE IS PUBLIC (3 MINUTE READ) [19]=20
+
+ T=
+his dev frequently finds Supabase projects with exposed credentials,
+whic=
+h, due to a lack of proper Row Level Security (RLS), grant full
+access to=
+ sensitive user data within the database. This vulnerability
+is surprisin=
+gly common. It allows simple `curl` requests to retrieve
+all user informa=
+tion from unprotected tables. While users are
+responsible for RLS, Supaba=
+se's design could be improved with clearer
+warnings or default secure con=
+figurations to prevent the anon key from
+becoming a master key.=20
+
+=
+=E2=9A=A1=20
+
+QUICK LINKS
+
+ WELL BEING IN TIMES OF ALGORITHMS (12 MIN=
+UTE READ) [20]=20
+
+ Reclaiming well-being from the attention-grabbing alg=
+orithms of big
+tech calls for a return to an open internet and a focus on=
+ fundamental
+life pillars like health, family, and self-contentment.=20
+=
+
+ I PROGRAM ON THE SUBWAY (5 MINUTE READ) [21]=20
+
+ This dev programs o=
+n the subway during their commute to reclaim time
+for side projects, find=
+ing benefits from the focused, distraction-free
+environment.=20
+
+ YOU C=
+AN'T OPT-OUT OF ACCESSIBILITY (11 MINUTE READ) [22]=20
+
+ Web accessibilit=
+y is a fundamental human responsibility that is
+currently neglected and n=
+ot properly addressed by the industry.=20
+
+ THINGS I LEARNT ABOUT PASSKEY=
+S WHEN BUILDING PASSKEYBOT (11 MINUTE
+READ) [23]=20
+
+ passkeybot is a h=
+osted sign-in page that allows developers to add
+passkey auth to their si=
+tes with just a few server-side HTTP handlers.
+
+
+ DEBIAN'S GIT TRANSI=
+TION (15 MINUTE READ) [24]=20
+
+ Debian is actively transitioning its sour=
+ce code management from
+`.dsc` source packages to a git-based workflow. =
+
+
+ YOU DON'T NEED IT (7 MINUTE READ) [25]=20
+
+ Take a step back and e=
+valuate the problems you are trying to solve
+because you may find a bette=
+r alternative.=20
+
+Love TLDR? Tell your friends and get rewards!
+
+ Sh=
+are your referral link below with friends to get free TLDR swag!=20
+
+ htt=
+ps://refer.tldr.tech/19465406/3 [26]=20
+
+=09=09 Track your referrals here=
+. [27]=20
+
+Want to advertise in TLDR? =F0=9F=93=B0
+
+ If your company =
+is interested in reaching an audience of web
+developers and engineering d=
+ecision makers, you may want to ADVERTISE
+WITH US [28].=20
+
+Want to wor=
+k at TLDR? =F0=9F=92=BC
+
+ APPLY HERE [29], CREATE YOUR OWN ROLE [30] or=
+ send a friend's resume
+to jobs@tldr.tech and get $1k if we hire them! TL=
+DR is one of INC.'S
+BEST BOOTSTRAPPED BUSINESSES [31] of 2025.=20
+
+ If =
+you have any comments or feedback, just respond to this email!=20
+
+Thanks=
+ for reading,=20
+Priyam Mohanty, Jenny Xu [32] & Ceora Ford=20
+
+ Manage y=
+our subscriptions [33] to our other newsletters on tech,
+startups, and pr=
+ogramming. Or if TLDR Dev isn't for you, please
+unsubscribe [34].=20
+
+ =
+
+
+Links:
+------
+[1] https://tldr.tech/dev?utm_source=3Dtldrdev
+[2=
+] https://advertise.tldr.tech/?utm_source=3Dtldrdev&utm_medium=3Dnewsletter=
+&utm_campaign=3Dadvertisetopnav
+[3] https://a.tldrnewsletter.com/web-vers=
+ion?ep=3D1&lc=3D6b0d84e0-a670-11f0-8b4a-c5e0a2ae1fe1&p=3D26cbd43c-dfdf-11f0=
+-8d83-17d36d80fa2a&pt=3Dcampaign&t=3D1766491983&s=3Daf6e1c3aff1da603408600f=
+10703f480efddd76cd4afb673e8e9893dc6423514
+[4] https://www.qawolf.com/?utm=
+_source=3Dtldrwebdev&utm_medium=3Dnewsletter&utm_campaign=3DACQ_All_Demo_Co=
+nversions__NewsletterAudience_-_Newsletter_GoodbyeLowTestCoverage_20251223-=
+None_Experiment-FALSE&utm_term=3Dheadline-GoodbyeLowTestCoverageAndSlowQACy=
+cles&utm_content=3DGoodbyeLowTestCoverage_ScheduleADemoToLearnMore_None_Hea=
+dline%3AGoodbyeLowTestCoverageAndSlowQACycles____Newsletter-PrimaryPlacemen=
+t_20251223_v1_
+[5] https://www.qawolf.com/?utm_source=3Dtldrwebdev&utm_me=
+dium=3Dnewsletter&utm_campaign=3DACQ_All_Demo_Conversions__NewsletterAudien=
+ce_-_Newsletter_GoodbyeLowTestCoverage_20251223-None_Experiment-FALSE&utm_t=
+erm=3Dbody-QAWolf&utm_content=3DGoodbyeLowTestCoverage_ScheduleADemoToLearn=
+More_None_Headline%3AGoodbyeLowTestCoverageAndSlowQACycles____Newsletter-Pr=
+imaryPlacement_20251223_v1_
+[6] https://www.qawolf.com/how-it-works?utm_s=
+ource=3Dtldrwebdev&utm_medium=3Dnewsletter&utm_campaign=3DACQ_All_Demo_Conv=
+ersions__NewsletterAudience_-_Newsletter_GoodbyeLowTestCoverage_20251223-No=
+ne_Experiment-FALSE&utm_term=3Dbody-80PercentAutomatedE2ETestCoverageInWeek=
+s&utm_content=3DGoodbyeLowTestCoverage_ScheduleADemoToLearnMore_None_Headli=
+ne%3AGoodbyeLowTestCoverageAndSlowQACycles____Newsletter-PrimaryPlacement_2=
+0251223_v1_
+[7] https://www.qawolf.com/how-it-works?utm_source=3Dtldrwebd=
+ev&utm_medium=3Dnewsletter&utm_campaign=3DACQ_All_Demo_Conversions__Newslet=
+terAudience_-_Newsletter_GoodbyeLowTestCoverage_20251223-None_Experiment-FA=
+LSE&utm_term=3Dbody-UnlimitedParallelTestRuns&utm_content=3DGoodbyeLowTestC=
+overage_ScheduleADemoToLearnMore_None_Headline%3AGoodbyeLowTestCoverageAndS=
+lowQACycles____Newsletter-PrimaryPlacement_20251223_v1_
+[8] https://www.q=
+awolf.com/case-studies/drata?utm_source=3Dtldrwebdev&utm_medium=3Dnewslette=
+r&utm_campaign=3DACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_=
+GoodbyeLowTestCoverage_20251223-None_Experiment-FALSE&utm_term=3Dbody-Drata=
+sTeamOfEngineers&utm_content=3DGoodbyeLowTestCoverage_ScheduleADemoToLearnM=
+ore_None_Headline%3AGoodbyeLowTestCoverageAndSlowQACycles____Newsletter-Pri=
+maryPlacement_20251223_v1_
+[9] https://www.qawolf.com/?utm_source=3Dtldrw=
+ebdev&utm_medium=3Dnewsletter&utm_campaign=3DACQ_All_Demo_Conversions__News=
+letterAudience_-_Newsletter_GoodbyeLowTestCoverage_20251223-None_Experiment=
+-FALSE&utm_term=3Dcta-ScheduleADemoToLearnMore&utm_content=3DGoodbyeLowTest=
+Coverage_ScheduleADemoToLearnMore_None_Headline%3AGoodbyeLowTestCoverageAnd=
+SlowQACycles____Newsletter-PrimaryPlacement_20251223_v1_
+[10] https://log=
+gingsucks.com/?utm_source=3Dtldrdev
+[11] https://blog.kierangill.xyz/over=
+sight-and-guidance?utm_source=3Dtldrdev
+[12] https://read.engineerscodex.=
+com/p/everyone-is-a-staff-engineer-now?utm_source=3Dtldrdev
+[13] https://=
+lucumr.pocoo.org/2025/12/22/a-year-of-vibes/?utm_source=3Dtldrdev
+[14] ht=
+tps://qualify.gauntletai.com/?utm_source=3Dnewsletter&utm_campaign=3Dtldr=
+
+[15] https://github.com/tambo-ai/tambo?utm_source=3Dtldrdev
+[16] https=
+://github.com/cocoindex-io/cocoindex?utm_source=3Dtldrdev
+[17] https://gi=
+thub.com/karol-broda/snitch?utm_source=3Dtldrdev
+[18] https://josezarazua=
+.com/im-a-former-cto-here-is-the-15-sec-coding-test-i-used-to-instantly-fil=
+ter-out-50-of-unqualified-applicants/?utm_source=3Dtldrdev
+[19] https://s=
+killdeliver.com/your-supabase-is-public?utm_source=3Dtldrdev
+[20] https:/=
+/www.ssp.sh/blog/well-being-algorithms/?utm_source=3Dtldrdev
+[21] https:/=
+/www.scd31.com/posts/programming-on-the-subway?utm_source=3Dtldrdev
+[22] =
+https://vale.rocks/posts/accessibility-importance?utm_source=3Dtldrdev
+[2=
+3] https://enzom.dev/b/passkeys/?utm_source=3Dtldrdev
+[24] https://diziet=
+.dreamwidth.org/20436.html?utm_source=3Dtldrdev
+[25] https://moq.dev/blog=
+/you-dont-need-it/?utm_source=3Dtldrdev
+[26] https://refer.tldr.tech/1946=
+5406/3
+[27] https://hub.sparklp.co/sub_aaa8e06944fa/3
+[28] https://adve=
+rtise.tldr.tech/?utm_source=3Dtldrdev&utm_medium=3Dnewsletter&utm_campaign=
+=3Dadvertisecta
+[29] https://jobs.ashbyhq.com/tldr.tech
+[30] https://jo=
+bs.ashbyhq.com/tldr.tech/c227b917-a6a4-40ce-8950-d3e165357871
+[31] https:=
+//www.linkedin.com/feed/update/urn:li:activity:7401699691039830016/
+[32] =
+https://www.linkedin.com/in/xu-jenny/
+[33] https://tldr.tech/dev/manage?e=
+mail=3Dmike.mcconigley%40gmail.com
+[34] https://a.tldrnewsletter.com/unsu=
+bscribe?ep=3D1&l=3De8d201ca-3e93-11ed-9a32-0241b9615763&lc=3D6b0d84e0-a670-=
+11f0-8b4a-c5e0a2ae1fe1&p=3D26cbd43c-dfdf-11f0-8d83-17d36d80fa2a&pt=3Dcampai=
+gn&pv=3D4&spa=3D1766491277&t=3D1766491983&s=3D484e5dd5dfe618cdf4327ceeeb348=
+b8eed0f586a21e852790565f8856ff369de
+--ehnujpg4
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html charset=3DUTF-8"><meta charset=3D"UTF-8"><meta name=3D"v=
+iewport" content=3D"width=3Ddevice-width"><meta name=3D"x-apple-disable-mes=
+sage-reformatting"><title>TLDR Dev</title><meta name=3D"color-scheme" conte=
+nt=3D"light dark"><meta name=3D"supported-color-schemes" content=3D"light d=
+ark"><style type=3D"text/css">
+=09=09=09:root {
+=09=09=09=09color-scheme: light dark; supported-color-schemes: light dark;
+=09=09=09}
+=09=09=09
+=09=09=09*,
+=09=09=09*:after,
+=09=09=09*:before {
+=09=09=09=09-webkit-box-sizing: border-box; -moz-box-sizing: border-box; bo=
+x-sizing: border-box;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+=09=09=09}
+=09=09=09
+=09=09=09html,
+=09=09=09body,
+=09=09=09.document {
+=09=09=09=09width: 100% !important; height: 100% !important; margin: 0; pad=
+ding: 0;
+=09=09=09}
+=09=09=09
+=09=09=09body {
+=09=09=09=09-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: g=
+rayscale; text-rendering: optimizeLegibility;
+=09=09=09}
+=09=09=09
+=09=09=09div[style*=3D"margin: 16px 0"] {
+=09=09=09=09margin: 0 !important;
+=09=09=09}
+=09=09=09
+=09=09=09table,
+=09=09=09td {
+=09=09=09=09mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+=09=09=09}
+=09=09=09
+=09=09=09table {
+=09=09=09=09border-spacing: 0; border-collapse: collapse; table-layout: fix=
+ed; margin: 0 auto;
+=09=09=09}
+=09=09=09
+=09=09=09img {
+=09=09=09=09-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+=09=09=09}
+=09=09=09
+=09=09=09*[x-apple-data-detectors] {
+=09=09=09=09color: inherit !important; text-decoration: none !important;
+=09=09=09}
+=09=09=09
+=09=09=09.x-gmail-data-detectors,
+=09=09=09.x-gmail-data-detectors *,
+=09=09=09.aBn {
+=09=09=09=09border-bottom: 0 !important; cursor: default !important;
+=09=09=09}
+=09=09=09
+=09=09=09.btn {
+=09=09=09=09-webkit-transition: all 200ms ease; transition: all 200ms ease;
+=09=09=09}
+=09=09=09
+=09=09=09.btn:hover {
+=09=09=09=09background-color: #f67575; border-color: #f67575;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+=09=09=09}
+=09=09=09
+=09=09=09@media screen and (max-width: 600px) {
+=09=09=09=09.container {
+=09=09=09=09=09width: 100%; margin: auto;
+=09=09=09=09}
+=09=09=09=09.stack {
+=09=09=09=09=09display: block!important; width: 100%!important; max-width: =
+100%!important;
+=09=09=09=09}
+=09=09=09=09.btn {
+=09=09=09=09=09display: block; width: 100%; text-align: center;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09body,
+=09=09=09p,
+=09=09=09td,
+=09=09=09tr,
+=09=09=09.body,
+=09=09=09table,
+=09=09=09h1,
+=09=09=09h2,
+=09=09=09h3,
+=09=09=09h4,
+=09=09=09h5,
+=09=09=09h6,
+=09=09=09div,
+=09=09=09span {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09body,
+=09=09=09=09p,
+=09=09=09=09td,
+=09=09=09=09tr,
+=09=09=09=09.body,
+=09=09=09=09table,
+=09=09=09=09h1,
+=09=09=09=09h2,
+=09=09=09=09h3,
+=09=09=09=09h4,
+=09=09=09=09h5,
+=09=09=09=09h6,
+=09=09=09=09div,
+=09=09=09=09span {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09a {
+=09=09=09=09color: inherit !important; text-decoration: underline !importan=
+t;
+=09=09=09}
+
+=09=09</style><!--[if mso | ie]>
+=09=09<style type=3D"text/css">
+=09=09=09a {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09a {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09 </style>
+=09=09=09<![endif]--></head><body class=3D"">
+
+
+
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">A 15-secon=
+d coding test with a hidden character trick filters out 50% of unqualified =
+job applicants, as good candidates would solve the code mentally&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;</div>
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align=3D"center" class=3D"document"><tbody><tr><td valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"container" width=3D"600"><tbody><tr class=3D"inner-body"><td>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr class=3D"header"><td bgcolor=3D"" class=3D"containe=
+r">
+
+<table width=3D"100%"><tbody><tr><td class=3D"container">
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"margin-top: 0px;" width=3D"100%"><tbody><tr><td style=
+=3D"padding: 0px;">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div style=3D"text-align: center;">
+<span style=3D"margin-right: 0px;"><a href=3D"https://tracking.tldrnewslett=
+er.com/CL0/https:%2F%2Ftldr.tech%2Fdev%3Futm_source=3Dtldrdev/1/0100019b4b2=
+08d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-000000/McOmGPsxgbBJwRDQ-WtIBxF6G=
+rbUrpbEHJ5DJllnXg4=3D436" rel=3D"noopener noreferrer" target=3D"_blank"><sp=
+an>Sign Up</span></a>
+|<span style=3D"margin-right: 2px; margin-left: 2px;"><a href=3D"https://tr=
+acking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_sour=
+ce=3Dtldrdev%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertisetopnav/1/0=
+100019b4b208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-000000/vm0vAHSUCSPLXdb=
+9F-VNfgMJ4xPxF8cTyq6Dskok5D8=3D436" rel=3D"noopener noreferrer" target=3D"_=
+blank"><span>Advertise</span></a></span>|<span style=3D"margin-left: 2px;">=
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsle=
+tter.com%2Fweb-version%3Fep=3D1%26lc=3D6b0d84e0-a670-11f0-8b4a-c5e0a2ae1fe1=
+%26p=3D26cbd43c-dfdf-11f0-8d83-17d36d80fa2a%26pt=3Dcampaign%26t=3D176649198=
+3%26s=3Daf6e1c3aff1da603408600f10703f480efddd76cd4afb673e8e9893dc6423514/1/=
+0100019b4b208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-000000/_XkGm-RYjXSXJE=
+9GxIOHc2KKyhXAqkIvFl130PCJdkQ=3D436"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"text-=
+align: center;"><span data-darkreader-inline-color=3D"" style=3D"--darkread=
+er-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30=
+px;">T</span><span style=3D"font-size: 30px;"><span data-darkreader-inline-=
+color=3D"" style=3D"color: rgb(232, 192, 96) !important; --darkreader-inlin=
+e-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-colo=
+r=3D"" style=3D"color: rgb(101, 195, 173) !important; --darkreader-inline-c=
+olor:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-=
+color=3D"" style=3D"--darkreader-inline-color:#dd6e6e; color: rgb(220, 107,=
+ 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr id=3D"together-with"><td align=3D"cent=
+er" height=3D"20" style=3D"vertical-align:middle !important;" valign=3D"mid=
+dle" width=3D"100%"><strong style=3D"vertical-align:middle !important; heig=
+ht: 100%;">Together With </strong>
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.qawolf.c=
+om%2F%3Futm_source=3Dtldrwebdev%26utm_medium=3Dnewsletter%26utm_campaign=3D=
+ACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_GoodbyeLowTestCov=
+erage_20251223-None_Experiment-FALSE%26utm_term=3Dheadline-GoodbyeLowTestCo=
+verageAndSlowQACycles%26utm_content=3DGoodbyeLowTestCoverage_ScheduleADemoT=
+oLearnMore_None_Headline%253AGoodbyeLowTestCoverageAndSlowQACycles____Newsl=
+etter-PrimaryPlacement_20251223_v1_/1/0100019b4b208d7c-b307cc03-d9b6-408b-9=
+f21-71171eb1cf7b-000000/VmZxhslRieY1XX-05vpR3Na2KxrmfOSk3_b0fH9ATv4=3D436">=
+<img src=3D"https://images.tldr.tech/qawolf-3.png" valign=3D"middle" style=
+=3D"vertical-align: middle !important; height: 100%;" alt=3D"QA Wolf"></a><=
+/td></tr></tbody></table>
+
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody><tr=
+><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0;=
+">
+<div style=3D"text-align: center;">
+
+<h1><strong>&nbsp;TLDR Dev <span id=3D"date">2025-12-23</span></strong></h1=
+>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody><tr=
+ id=3D"sponsy-copy"><td class=3D"container" style=3D"padding: 15px 15px;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.qawolf.com%2F%3Futm_source=3Dtldrwebdev%26utm_mediu=
+m=3Dnewsletter%26utm_campaign=3DACQ_All_Demo_Conversions__NewsletterAudienc=
+e_-_Newsletter_GoodbyeLowTestCoverage_20251223-None_Experiment-FALSE%26utm_=
+term=3Dheadline-GoodbyeLowTestCoverageAndSlowQACycles%26utm_content=3DGoodb=
+yeLowTestCoverage_ScheduleADemoToLearnMore_None_Headline%253AGoodbyeLowTest=
+CoverageAndSlowQACycles____Newsletter-PrimaryPlacement_20251223_v1_/2/01000=
+19b4b208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-000000/Qok7wbMKNREVHDIvZdm=
+pmbx2F2pwZfQ8iO5iFgNmrYA=3D436">
+                                    <span>
+                                        <strong>Goodbye, low test coverage =
+and slow QA cycles (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Bugs sneak out when less than 80% of us=
+er flows are tested before shipping. However, getting that kind of coverage=
+ (and staying there) is hard and pricey for any team.<p></p><p><a href=3D"h=
+ttps://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.qawolf.com%2F%3Futm_=
+source=3Dtldrwebdev%26utm_medium=3Dnewsletter%26utm_campaign=3DACQ_All_Demo=
+_Conversions__NewsletterAudience_-_Newsletter_GoodbyeLowTestCoverage_202512=
+23-None_Experiment-FALSE%26utm_term=3Dbody-QAWolf%26utm_content=3DGoodbyeLo=
+wTestCoverage_ScheduleADemoToLearnMore_None_Headline%253AGoodbyeLowTestCove=
+rageAndSlowQACycles____Newsletter-PrimaryPlacement_20251223_v1_/1/0100019b4=
+b208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-000000/GRvXRpLVG0_1w7n_2IHlc4U=
+S-05bjokkNaqcszDZMWI=3D436" rel=3D"noopener noreferrer nofollow" target=3D"=
+_blank"><span>QA Wolf's</span></a> AI-native solution provides high-volume,=
+ high-speed test coverage for web and mobile apps, reducing your organizati=
+on's QA cycle to minutes.&nbsp;</p>
+
+<p>They can get you:</p>
+
+<ul>
+<li><a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.qawo=
+lf.com%2Fhow-it-works%3Futm_source=3Dtldrwebdev%26utm_medium=3Dnewsletter%2=
+6utm_campaign=3DACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_G=
+oodbyeLowTestCoverage_20251223-None_Experiment-FALSE%26utm_term=3Dbody-80Pe=
+rcentAutomatedE2ETestCoverageInWeeks%26utm_content=3DGoodbyeLowTestCoverage=
+_ScheduleADemoToLearnMore_None_Headline%253AGoodbyeLowTestCoverageAndSlowQA=
+Cycles____Newsletter-PrimaryPlacement_20251223_v1_/1/0100019b4b208d7c-b307c=
+c03-d9b6-408b-9f21-71171eb1cf7b-000000/XpMe0a-h2gKlz9uhqlbl9-3K2L0yRsMFlwTK=
+GezTG4A=3D436" rel=3D"noopener noreferrer nofollow" target=3D"_blank"><span=
+>80% automated E2E test coverage in weeks</span></a>=E2=80=94not years</li>
+<li><a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.qawo=
+lf.com%2Fhow-it-works%3Futm_source=3Dtldrwebdev%26utm_medium=3Dnewsletter%2=
+6utm_campaign=3DACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_G=
+oodbyeLowTestCoverage_20251223-None_Experiment-FALSE%26utm_term=3Dbody-Unli=
+mitedParallelTestRuns%26utm_content=3DGoodbyeLowTestCoverage_ScheduleADemoT=
+oLearnMore_None_Headline%253AGoodbyeLowTestCoverageAndSlowQACycles____Newsl=
+etter-PrimaryPlacement_20251223_v1_/1/0100019b4b208d7c-b307cc03-d9b6-408b-9=
+f21-71171eb1cf7b-000000/YvNTM2NsPWATB-ybVOVIO265M2vyaALVZJ3_t8jWsIc=3D436" =
+rel=3D"noopener noreferrer nofollow" target=3D"_blank"><span>Unlimited para=
+llel test runs</span></a></li>
+<li>24-hour maintenance and on-demand test creation</li>
+<li>Zero flakes, guaranteed</li>
+</ul>
+
+<p>The benefit? No more manual E2E testing. No more slow QA cycles. No more=
+ bugs reaching production.</p>
+
+<p>With QA Wolf, <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%=
+2F%2Fwww.qawolf.com%2Fcase-studies%2Fdrata%3Futm_source=3Dtldrwebdev%26utm_=
+medium=3Dnewsletter%26utm_campaign=3DACQ_All_Demo_Conversions__NewsletterAu=
+dience_-_Newsletter_GoodbyeLowTestCoverage_20251223-None_Experiment-FALSE%2=
+6utm_term=3Dbody-DratasTeamOfEngineers%26utm_content=3DGoodbyeLowTestCovera=
+ge_ScheduleADemoToLearnMore_None_Headline%253AGoodbyeLowTestCoverageAndSlow=
+QACycles____Newsletter-PrimaryPlacement_20251223_v1_/1/0100019b4b208d7c-b30=
+7cc03-d9b6-408b-9f21-71171eb1cf7b-000000/qeV08Px_Gam22h7mNUnMrtxQ7h5NCmmRiy=
+_P3x31oRY=3D436" rel=3D"noopener noreferrer nofollow" target=3D"_blank"><sp=
+an>Drata's team of engineers</span></a> achieved 4x more test cases and <st=
+rong>86% faster QA cycles</strong>.</p>
+
+<p><a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.qawol=
+f.com%2F%3Futm_source=3Dtldrwebdev%26utm_medium=3Dnewsletter%26utm_campaign=
+=3DACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_GoodbyeLowTest=
+Coverage_20251223-None_Experiment-FALSE%26utm_term=3Dcta-ScheduleADemoToLea=
+rnMore%26utm_content=3DGoodbyeLowTestCoverage_ScheduleADemoToLearnMore_None=
+_Headline%253AGoodbyeLowTestCoverageAndSlowQACycles____Newsletter-PrimaryPl=
+acement_20251223_v1_/1/0100019b4b208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7=
+b-000000/j6HIuf-DM3vStP-gL3c6u8tjqStZFlTIXN0aHMaryog=3D436" rel=3D"noopener=
+ noreferrer nofollow" target=3D"_blank"><span>Schedule a demo to learn more=
+</span></a>
+
+
+</p>
+</span></span></div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=3D""><td class=3D"container">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td style=3D"padding: 0px;">
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=A7=91=E2=80=8D=F0=9F=92=BB</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Articles &amp; Tutorials</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Floggingsucks.com%2F%3Futm_source=3Dtldrdev/1/0100019b4b=
+208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-000000/_dD1WHV6EMHMyUge2H-86TQH=
+qAQtlGFiS1qlq2M0Oqk=3D436">
+                                    <span>
+                                        <strong>Logging Sucks (18 minute re=
+ad)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Traditional logging is inadequate for m=
+odern, distributed systems, usually providing little useful context for deb=
+ugging issues. A shift to "wide events" or canonical log lines, which are s=
+ingle, comprehensive log entries emitted per request per service, may solve=
+ this problem. These events are rich in high-cardinality and high-dimension=
+ality data, allowing for powerful queries and analytics instead of string s=
+earches.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fblog.kierangill.xyz%2Foversight-and-guidance%3Futm_sour=
+ce=3Dtldrdev/1/0100019b4b208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-000000=
+/dP6qjWbYz3p5do0Mn608rry2zpA5OCdHlpfL5LO1e6g=3D436">
+                                    <span>
+                                        <strong>Scaling LLMs to larger code=
+bases (12 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Scaling LLMs within large codebases req=
+uires investments in both guidance and oversight. Guidance focuses on provi=
+ding LLMs with high-quality context, such as prompt libraries and well-stru=
+ctured, modular codebases, to allow for efficient "one-shot" code generatio=
+n without needing a lot of rework. Oversight refers to human engineers who =
+validate LLM choices, making sure of architectural integrity and aligned so=
+lutions.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=A7=A0</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Opinions &amp; Advice</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fread.engineerscodex.com%2Fp%2Feveryone-is-a-staff-engin=
+eer-now%3Futm_source=3Dtldrdev/1/0100019b4b208d7c-b307cc03-d9b6-408b-9f21-7=
+1171eb1cf7b-000000/pU_M5FclmrPWAXq13__6xbXYxjYn5M-ydDSMUIkcp5Q=3D436">
+                                    <span>
+                                        <strong>Everyone is a Staff Enginee=
+r Now (8 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    AI coding agents have become so good th=
+at they have fundamentally transformed software engineering, making code im=
+plementation inexpensive. This means engineers are increasingly expected to=
+ focus on higher-level skills like architectural judgment, system-level thi=
+nking, and managing complex contexts across multiple domains. Devs will nee=
+d to start adapting their workflows, including planning and steering AI age=
+nts and developing habits to maintain focus amidst asynchronous work.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flucumr.pocoo.org%2F2025%2F12%2F22%2Fa-year-of-vibes%2F%=
+3Futm_source=3Dtldrdev/1/0100019b4b208d7c-b307cc03-d9b6-408b-9f21-71171eb1c=
+f7b-000000/VhWxJicP3u0tYkO1GM_tH40Iux3913_zBIF6Fc02QvE=3D436">
+                                    <span>
+                                        <strong>A Year Of Vibes (12 minute =
+read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    In 2025, this dev left Sentry, launched=
+ a new company, and shifted his programming approach to embrace hands-off a=
+gentic coding with tools like Claude Code. He became deeply integrated with=
+ AI agents for tasks from code generation to daily organization. However, h=
+e's sometimes worried about emergent human-like tendencies of LLMs, questio=
+ning terms like "agent.=E2=80=9D
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=9A=80</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Launches &amp; Tools</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fqualify.gauntletai.com%2F%3Futm_source=3Dnewsletter%26u=
+tm_campaign=3Dtldr/1/0100019b4b208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-=
+000000/_9TL2ex7z0bnX651CFL7vwTRCZu4yYkNqnbTSilmdlQ=3D436">
+                                    <span>
+                                        <strong>What if you went all in on =
+AI for 1,000 hours? (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    You're already using AI. Agents, RAG, f=
+ine-tuning are part of your workflow. Now, it's time to take the next step:=
+ <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fqualify.gau=
+ntletai.com%2F%3Futm_source=3Dnewsletter%26utm_campaign=3Dtldr/2/0100019b4b=
+208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-000000/AMoVUV7QZQlBhf4KcBfaPIDh=
+mjSg9RZTJoyR-ph5cks=3D436" rel=3D"noopener noreferrer nofollow" target=3D"_=
+blank"><span>Gauntlet</span></a> brings cracked engineers into a 10-week, 1=
+,000-hour fellowship. Fully funded by companies hiring from the cohort. Gra=
+duates don't job hunt: they leave with $200K+ offers. <a href=3D"https://tr=
+acking.tldrnewsletter.com/CL0/https:%2F%2Fqualify.gauntletai.com%2F%3Futm_s=
+ource=3Dnewsletter%26utm_campaign=3Dtldr/3/0100019b4b208d7c-b307cc03-d9b6-4=
+08b-9f21-71171eb1cf7b-000000/GzdTY4wld31oD8H2rTypy-nFti5qjyxzQ3qvAoPVFYQ=3D=
+436" rel=3D"noopener noreferrer nofollow" target=3D"_blank"><span>Apply to =
+Cohort 4</span></a>.
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgithub.com%2Ftambo-ai%2Ftambo%3Futm_source=3Dtldrdev/1/=
+0100019b4b208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-000000/CvEjvJv4iwiEcs=
+GsRUaDYsDM5cZoIfbbj6ZfhMuXDwY=3D436">
+                                    <span>
+                                        <strong>Tambo (GitHub Repo)</strong=
+>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Tambo AI is a Generative UI SDK for Rea=
+ct. It allows AI to dynamically render components based on natural language=
+ conversations. Components are defined with Zod schemas, which the AI then =
+uses to generate one-time elements or manage persistent, interactable UI.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgithub.com%2Fcocoindex-io%2Fcocoindex%3Futm_source=3Dtl=
+drdev/1/0100019b4b208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-000000/4rGvzv=
+VamS6CYp9mC86CFcPP5u0n338e9lD9vzoc_jk=3D436">
+                                    <span>
+                                        <strong>CocoIndex (GitHub Repo)</st=
+rong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    CocoIndex is a fast data transformation=
+ framework for AI. It uses a dataflow programming model, with plug-and-play=
+ building blocks and guaranteed data freshness through incremental processi=
+ng and data lineage.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgithub.com%2Fkarol-broda%2Fsnitch%3Futm_source=3Dtldrde=
+v/1/0100019b4b208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-000000/604_5Ao93S=
+XV9grSVMEGrnE-Vu-SlhYuaSb_T-k_ZNw=3D436">
+                                    <span>
+                                        <strong>snitch (GitHub Repo)</stron=
+g>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    snitch is a prettier way to inspect net=
+work connections. It enables users to inspect network connections with a cl=
+ean tui or styled tables. Examples are available in the repository.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=8E=81</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><strong><h1>Miscellaneous</h1></strong><=
+/div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fjosezarazua.com%2Fim-a-former-cto-here-is-the-15-sec-co=
+ding-test-i-used-to-instantly-filter-out-50-of-unqualified-applicants%2F%3F=
+utm_source=3Dtldrdev/1/0100019b4b208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7=
+b-000000/OQ8kDv5Ni7h4RL0TK73gCtt32ot-rEb4whjgswyu2yw=3D436">
+                                    <span>
+                                        <strong>I'm a former CTO. Here is t=
+he 15 sec coding test I used to instantly filter out 50% of unqualified app=
+licants (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    A 15-second coding test with a hidden c=
+haracter trick filters out 50% of unqualified remote job applicants, as goo=
+d candidates would solve the code mentally, while others using interpreters=
+ or AI would get an incorrect answer.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fskilldeliver.com%2Fyour-supabase-is-public%3Futm_source=
+=3Dtldrdev/1/0100019b4b208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-000000/M=
+Geq3BlPuPqbcnbmv-HnebzHPI9upBux0Otb1xbwigw=3D436">
+                                    <span>
+                                        <strong>Your Supabase Is Public (3 =
+minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    This dev frequently finds Supabase proj=
+ects with exposed credentials, which, due to a lack of proper Row Level Sec=
+urity (RLS), grant full access to sensitive user data within the database. =
+This vulnerability is surprisingly common. It allows simple `curl` requests=
+ to retrieve all user information from unprotected tables. While users are =
+responsible for RLS, Supabase's design could be improved with clearer warni=
+ngs or default secure configurations to prevent the anon key from becoming =
+a master key.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=E2=9A=
+=A1</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.ssp.sh%2Fblog%2Fwell-being-algorithms%2F%3Futm_sour=
+ce=3Dtldrdev/1/0100019b4b208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-000000=
+/ESWZw6R2NGPFDIMVK7Ho9Doxmmes5s8LzzYPfbBpYdg=3D436">
+                                    <span>
+                                        <strong>Well Being in Times of Algo=
+rithms (12 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Reclaiming well-being from the attentio=
+n-grabbing algorithms of big tech calls for a return to an open internet an=
+d a focus on fundamental life pillars like health, family, and self-content=
+ment.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.scd31.com%2Fposts%2Fprogramming-on-the-subway%3Futm=
+_source=3Dtldrdev/1/0100019b4b208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-0=
+00000/4MbD5IdtZMdG1UizxCOypJ690BDEIG_MaQIXLm6PAcc=3D436">
+                                    <span>
+                                        <strong>I Program on the Subway (5 =
+minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    This dev programs on the subway during =
+their commute to reclaim time for side projects, finding benefits from the =
+focused, distraction-free environment.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fvale.rocks%2Fposts%2Faccessibility-importance%3Futm_sou=
+rce=3Dtldrdev/1/0100019b4b208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-00000=
+0/9zVOIoHmGpNwRMbWxsAgJ_xLxI-8_WyyNqmnb8T58UM=3D436">
+                                    <span>
+                                        <strong>You Can't Opt-Out of Access=
+ibility (11 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Web accessibility is a fundamental huma=
+n responsibility that is currently neglected and not properly addressed by =
+the industry.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fenzom.dev%2Fb%2Fpasskeys%2F%3Futm_source=3Dtldrdev/1/01=
+00019b4b208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-000000/c1jUekPyqTKM2fFp=
+_Zzwyyi-3LsXVFmPS56u2LS6XUk=3D436">
+                                    <span>
+                                        <strong>Things I learnt about passk=
+eys when building passkeybot (11 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    passkeybot is a hosted sign-in page tha=
+t allows developers to add passkey auth to their sites with just a few serv=
+er-side HTTP handlers.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fdiziet.dreamwidth.org%2F20436.html%3Futm_source=3Dtldrd=
+ev/1/0100019b4b208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-000000/SAggcUJ33=
+bD7MPhMqTjcnLtWHWQOFhYw_Y_0hcj5q6U=3D436">
+                                    <span>
+                                        <strong>Debian's git transition (15=
+ minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Debian is actively transitioning its so=
+urce code management from `.dsc` source packages to a git-based workflow.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fmoq.dev%2Fblog%2Fyou-dont-need-it%2F%3Futm_source=3Dtld=
+rdev/1/0100019b4b208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-000000/xdn8-t0=
+5c9YEEVBJSFWrRthh3UubvJcK87mRCtTsQU8=3D436">
+                                    <span>
+                                        <strong>You Don't Need It (7 minute=
+ read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Take a step back and evaluate the probl=
+ems you are trying to solve because you may find a better alternative.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"word-break=
+: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class=3D"container" style=3D"padding: 0px 10px 15px;">
+<div class=3D"text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align=3D"left" style=3D"padding: 10px;">
+<div class=3D"text-block">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.t=
+ech%2F19465406%2F3/1/0100019b4b208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-=
+000000/Y_EVs1dKWeSC5zbHDToTZ3Npgr7z09TUtjkdM65oIq8=3D436" style=3D"color: #=
+464ba4; text-decoration: underline;">https://refer.tldr.tech/19465406/3</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align=3D"left" style=3D"padding:5px 10px;">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.=
+co%2Fsub_aaa8e06944fa%2F3/1/0100019b4b208d7c-b307cc03-d9b6-408b-9f21-71171e=
+b1cf7b-000000/nJQFai6Zr9goNyf1J7TYGUbItkN1tT8r7TuEiq4RNaI=3D436" style=3D"f=
+ont-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block; =
+ text-decoration: underline;"><span style=3D"mso-text-raise:13pt; text-deco=
+ration: underline;">Track your referrals here.</span></a>
+</td></tr></tbody></table>
+
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"word-break=
+: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to advertise in TLDR? =F0=9F=93=B0
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+If your company is interested in reaching an audience of web developers and=
+ engineering decision makers, you may want to <a href=3D"https://tracking.t=
+ldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=3Dtld=
+rdev%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertisecta/1/0100019b4b20=
+8d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-000000/2zouGRdyUiYP2Wuv2PiuehIagi=
+wXX_U3Godyhn5dtAA=3D436"><strong><span>advertise with us</span></strong></a=
+>.
+</div>
+<br>
+
+<!-- New "Want to work at TLDR?" section -->
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to work at TLDR? =F0=9F=92=BC
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech/1/0100019b4b208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-00=
+0000/FG5nAZJ9-umpxrXC4orCocXqpia-gvxC9JQwJ5MKf_o=3D436" rel=3D"noopener nor=
+eferrer" style=3D"color: #0000EE; text-decoration: underline;" target=3D"_b=
+lank"><strong>Apply here</strong></a>,
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech%2Fc227b917-a6a4-40ce-8950-d3e165357871/1/0100019b4b208d7c-=
+b307cc03-d9b6-408b-9f21-71171eb1cf7b-000000/ngxrCamRpPhdL73kQFu3ykPwMagBIqc=
+gva73EfxTqfs=3D436" rel=3D"noopener noreferrer" style=3D"color: #0000EE; te=
+xt-decoration: underline;" target=3D"_blank"><strong>create your own role</=
+strong></a> or send a friend's resume to <a href=3D"mailto:jobs@tldr.tech" =
+style=3D"color: #0000EE; text-decoration: underline;">jobs@tldr.tech</a> an=
+d get $1k if we hire them! TLDR is one of <a href=3D"https://tracking.tldrn=
+ewsletter.com/CL0/https:%2F%2Fwww.linkedin.com%2Ffeed%2Fupdate%2Furn:li:act=
+ivity:7401699691039830016%2F/1/0100019b4b208d7c-b307cc03-d9b6-408b-9f21-711=
+71eb1cf7b-000000/2zT4ka3h-ZTe4PST2p29TQmPpHly1bzKKB2qr558It0=3D436" rel=3D"=
+noopener noreferrer" style=3D"color: #0000EE; text-decoration: underline;" =
+target=3D"_blank"><strong>Inc.'s Best Bootstrapped businesses</strong></a> =
+of 2025.
+</div>
+<br>
+
+<div class=3D"text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<span>Priyam Mohanty</span>, <a href=3D"https://tracking.tldrnewsletter.com=
+/CL0/https:%2F%2Fwww.linkedin.com%2Fin%2Fxu-jenny%2F/1/0100019b4b208d7c-b30=
+7cc03-d9b6-408b-9f21-71171eb1cf7b-000000/X6p_uIuwkAxH5AaESo_owe1HH851M4Qacp=
+lkwe7zQuk=3D436"><span>Jenny Xu</span></a> &amp; <span>Ceora Ford</span>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div class=3D"text-block" id=3D"testing-id">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2F=
+dev%2Fmanage%3Femail=3Dmike.mcconigley%2540gmail.com/1/0100019b4b208d7c-b30=
+7cc03-d9b6-408b-9f21-71171eb1cf7b-000000/9oTueJE-QNal7Rzs66iBuaMvyKrRuXU-NW=
+x1jXcEwgI=3D436">Manage your subscriptions</a> to our other newsletters on =
+tech, startups, and programming. Or if TLDR Dev isn't for you, please <a hr=
+ef=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.=
+com%2Funsubscribe%3Fep=3D1%26l=3De8d201ca-3e93-11ed-9a32-0241b9615763%26lc=
+=3D6b0d84e0-a670-11f0-8b4a-c5e0a2ae1fe1%26p=3D26cbd43c-dfdf-11f0-8d83-17d36=
+d80fa2a%26pt=3Dcampaign%26pv=3D4%26spa=3D1766491277%26t=3D1766491983%26s=3D=
+484e5dd5dfe618cdf4327ceeeb348b8eed0f586a21e852790565f8856ff369de/1/0100019b=
+4b208d7c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-000000/LAiV_roi1jCiHxskV1-AGS=
+sQYY2cykdjTvTOwgCpRAA=3D436">unsubscribe</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+
+
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+
+<img alt=3D"" src=3D"http://tracking.tldrnewsletter.com/CI0/0100019b4b208d7=
+c-b307cc03-d9b6-408b-9f21-71171eb1cf7b-000000/lgO8uo9SuXciPuvgvJsJ8Lft8Ud1x=
+GI4_jqYvdsBsKo=3D436" style=3D"display: none; width: 1px; height: 1px;">
+</body></html>
+--ehnujpg4--

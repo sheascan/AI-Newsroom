@@ -1,0 +1,1213 @@
+Delivered-To: mike.mcconigley@gmail.com
+Received: by 2002:a05:6802:6049:10b0:616:7b0e:67b2 with SMTP id r9-n1csp151922oca;
+        Wed, 24 Dec 2025 06:24:44 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IFUzUHjvt8jhh3JQO/ezEdXIjQhWfEwqHP/aOlEZOJp5sepeQCx1/mBVO4Bph5HeFb4SEO+
+X-Received: by 2002:a05:620a:470e:b0:8b2:1f21:ccdf with SMTP id af79cd13be357-8c08faaf497mr2797987685a.48.1766586283926;
+        Wed, 24 Dec 2025 06:24:43 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1766586283; cv=none;
+        d=google.com; s=arc-20240605;
+        b=k2ypI6CvC0J2CzW8Hr7buw0VHdA5slioTTUYTcRkOr28gcwWj2Jjr0GvSch3tGOLw1
+         gVEgySMR2nusDIfRXDHGQqcGDJDbQM/hVNVbTxdFp+/77eTkIrH19dBDdmWoh5ZPwdf6
+         Tx9EaoMXYH63SPnTQxGu6CrKq71Sc/sHUEufmMzJM33eq4HdaMzZ9gEDKx87Q6o3f7oX
+         rTJ5JGXnXqorPhD6fxOkjk5bNEElEIZV5KBz2O+3uxg66yaW4HawPhZkn82mmbd0nwOl
+         JNQVDNHkxPzGfjiT+aJUdqZnpk42p89aQlCaHvmqxQmo+EM3q+vJRQi2C/ImzvmWDCay
+         teqw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:date:mime-version:list-unsubscribe-post
+         :list-unsubscribe:subject:to:from:dkim-signature:dkim-signature;
+        bh=XlERZZXRLe/3/eCoYBZjGQ0I0cOW38kDcwu52kapmQo=;
+        fh=tUTYCbTOUI69DxYKXGXRz08XnPP7jEKRU6E5rS0DFR4=;
+        b=bPRjjC8K851fkq8xKjphTQJtlYek6E/BXJzpIgj6FNfcKA+QnaWqZXkRlCCQfmDM6t
+         /OrTefui1hHlCgOFDJVZiqM3ACTpn7hne1QpiDmW1ixVIvPa2xEw7wrDx5Gr0myMGi+1
+         7WMG19tW91l5CofeWv+cSvzDJ1vFdkov8ogwnqVK7LHHJzCVz6tzUpYzZPiNN17TS0ii
+         TXlDDGNV7WlTDq6Xq01SJdwgUnyhjfP8XD2LvUJMDZXB+JAXSLNQWNOwmLfec4zZPZ3T
+         MnL3Dr8SDp5/Ox83NyyxZhJAZdFBG/2UgVQUerDkwVKIrGMUR6aXd6aqVcg20YL0PTeK
+         azyw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=fROoTF4l;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=C+3abJGI;
+       spf=pass (google.com: domain of 0100019b50bf7550-fb49e8f8-5b77-4dfb-98ee-3494c3452860-000000@dailyupdate.tldrnewsletter.com designates 54.240.123.116 as permitted sender) smtp.mailfrom=0100019b50bf7550-fb49e8f8-5b77-4dfb-98ee-3494c3452860-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+Return-Path: <0100019b50bf7550-fb49e8f8-5b77-4dfb-98ee-3494c3452860-000000@dailyupdate.tldrnewsletter.com>
+Received: from a123-116.smtp-out.amazonses.com (a123-116.smtp-out.amazonses.com. [54.240.123.116])
+        by mx.google.com with ESMTPS id 6a1803df08f44-88d951bccb6si168542666d6.89.2025.12.24.06.24.43
+        for <mike.mcconigley@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Wed, 24 Dec 2025 06:24:43 -0800 (PST)
+Received-SPF: pass (google.com: domain of 0100019b50bf7550-fb49e8f8-5b77-4dfb-98ee-3494c3452860-000000@dailyupdate.tldrnewsletter.com designates 54.240.123.116 as permitted sender) client-ip=54.240.123.116;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=fROoTF4l;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=C+3abJGI;
+       spf=pass (google.com: domain of 0100019b50bf7550-fb49e8f8-5b77-4dfb-98ee-3494c3452860-000000@dailyupdate.tldrnewsletter.com designates 54.240.123.116 as permitted sender) smtp.mailfrom=0100019b50bf7550-fb49e8f8-5b77-4dfb-98ee-3494c3452860-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ygiuxamnxevikrd5dtfwanslhs6b24mt; d=tldrnewsletter.com;
+	t=1766586283;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type;
+	bh=7vInXiuyC70zcXO43dbPhQTiSv+zG0U/PescLPvhmHk=;
+	b=fROoTF4lpzbgWHEx1VpDA8Mu7SI0WoBnPeEfn/EknAotby5s5sHzY2Zfft/B+U6d
+	GrZeySze3QI8djgKKWI6F+S6/MdqkWm0lYewoWxjsUnL0wCjvAZBGg0A+31TqLAFSzg
+	uG8mlH8hlsLXT2JfOBsdDF8+2cxlrK5seCyD4U04=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1766586283;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type:Feedback-ID;
+	bh=7vInXiuyC70zcXO43dbPhQTiSv+zG0U/PescLPvhmHk=;
+	b=C+3abJGIZa0Zzy02MwsTzQ4MiHHJqLOijC2oKMiw3h8mjKLUXn0gb1yeZXdJk5ZM
+	x/mjnLuSnoFqrCoMpjVRPeMZWwaGCotlz2sSThCAbDIn9E/pj9ecDcNAO97jrTQylgt
+	oF9nq/HsDLbgmi2D7mvSURUQR+MHqY6DaURhJB9U=
+From: TLDR AI <dan@tldrnewsletter.com>
+To: mike.mcconigley@gmail.com
+Subject: NotebookLM Data Tables =?utf-8?Q?=F0=9F=93=8A=2C?= OpenAI WAU
+ reporting =?utf-8?Q?=F0=9F=93=88=2C?= speculative decoding models
+ =?utf-8?Q?=F0=9F=A4=96?=
+X-Entity-Ref-Id: b32cce90-f002-4af1-9af0-fe7f26f5c3c6
+X-EmailOctopus-Parent-Id: 9a19328a-e0bc-11f0-821d-1b12893492df
+X-EmailOctopus-Parent-Type-Id: campaign
+X-EmailOctopus-List-Id: eedf6b14-3de3-11ed-9a32-0241b9615763
+X-EmailOctopus-List-Contact-Id: 6b0cc672-a670-11f0-8911-056565896460
+X-EmailOctopus-Started-Preparing-At: 2025-12-24T14:01:33+00:00
+X-EmailOctopus-Sent-At: 2025-12-24T14:24:43+00:00
+X-EmailOctopus-Team-Id: 66987ef2-4f4c-11e9-a3c9-06b79b628af2
+X-EmailOctopus-Version: 4
+List-Unsubscribe: <https://a.tldrnewsletter.com/unsubscribe?ep=1&l=eedf6b14-3de3-11ed-9a32-0241b9615763&lc=6b0cc672-a670-11f0-8911-056565896460&p=9a19328a-e0bc-11f0-821d-1b12893492df&pt=campaign&pv=4&spa=1766584893&t=1766586283&s=f8b76fa5dfaf205ef9f5d23587af705563352910655ca291dd26749abdd39ddf>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-EmailOctopus-Ses-Configuration-Set-Name: emailoctopus-a9f7b12f74f3c968d9408897fb35539c
+MIME-Version: 1.0
+Date: Wed, 24 Dec 2025 14:24:43 +0000
+Message-ID: <0100019b50bf7550-fb49e8f8-5b77-4dfb-98ee-3494c3452860-000000@email.amazonses.com>
+Content-Type: multipart/alternative; boundary=D8rCUTn7
+Feedback-ID: ::1.us-east-1.Dj5/7DYmgk+n1sSGGXSQSLIthSjNQ0MGtV5Dro1Tr8U=:AmazonSES
+X-SES-Outgoing: 2025.12.24-54.240.123.116
+
+--D8rCUTn7
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+NotebookLM has introduced Data Tables, a new feature that helps users
+org=
+anize and analyze information from sources in a structured
+format=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0
+
+
+ Sign Up [1] |Advertise [2]|View Online [3]=20
+
+=09=09TLDR =
+
+
+TLDR AI 2025-12-24
+
+=F0=9F=9A=80=20
+
+HEADLINES & LAUNCHES
+
+=
+ TRANSFORM SOURCES INTO STRUCTURED DATA TABLES IN NOTEBOOKLM (3 MINUTE
+RE=
+AD) [4]=20
+
+ NotebookLM has introduced Data Tables, a new feature that he=
+lps users
+organize and analyze information from sources in a structured f=
+ormat.
+The feature synthesizes sources into clean, structured tables read=
+y to
+export to Google Sheets. It is now rolling out to all users.
+Scree=
+nshots of the feature are available in the article.=20
+
+ GOOGLE TESTS 30-=
+MINUTE AUDIO LECTURES ON NOTEBOOKLM (2 MINUTE READ)
+[5]=20
+
+ NotebookLM=
+ is testing a new 'Lecture' format for Audio Overviews. The
+feature will =
+generate a comprehensive AI lecture of roughly 30
+minutes. Lectures can b=
+e produced in different languages, depending on
+the user settings. A samp=
+le lecture is available in the article.=20
+
+=F0=9F=A7=A0=20
+
+DEEP DIVES=
+ & ANALYSIS
+
+ CODEX VS. CLAUDE CODE (TODAY) (5 MINUTE READ) [6]=20
+
+ =
+There's no wrong choice when it comes to AI. The tool you choose
+should m=
+atch how you work. Try out both Claude and Codex and see which
+one fits. =
+Every AI tool has its strengths and weaknesses, and the only
+way to disco=
+ver what they are is by using them.=20
+
+ MEMORY: HOW AGENTS LEARN (12 MIN=
+UTE READ) [7]=20
+
+ Agents can follow complex instructions, use tools, and=
+ work
+autonomously for hours. However, ask them the same question twice, =
+and
+they have to start from scratch. We've made agents capable, but
+hav=
+en't yet figured out how to make them learn. This article looks at
+differ=
+ent types of memory and how they could be implemented into
+agents.=20
+
+=
+=F0=9F=A7=91=E2=80=8D=F0=9F=92=BB=20
+
+ENGINEERING & RESEARCH
+
+ SPECUL=
+ATIVE DECODING MODELS (11 MINUTE READ) [8]=20
+
+ SpecBundle Phase 1 is a s=
+et of production-ready EAGLE-3 checkpoints
+trained with industry partners=
+ to improve real-world speculative
+decoding. The release focused on instr=
+uct-tuned models and shipped
+alongside SpecForge v0.2, which added major =
+system refactors and
+multi-backend support.=20
+
+ STIRRUP (GITHUB REPO) =
+[9]=20
+
+ Stirrup is a framework for building agents that lets models choo=
+se
+their own approach to completing tasks. It has best practices and
+to=
+ols built in and is fully customizable. Stirrup features a skills
+system =
+that extends agent capabilities, flexible tool execution,
+context managem=
+ent tools, flexible provider support, and multimodal
+support.=20
+
+ EXEC=
+UTORCH (GITHUB REPO) [10]=20
+
+ ExecuTorch is a solution for deploying AI =
+models on-device. Built by
+PyTorch for privacy, performance, and portabil=
+ity, ExecuTorch powers
+KPWA meta's on-device AI across Instagram, WhatsAp=
+p, Quest 3, Ray-Ban
+Meta Smart Glasses, and more. It allows developers to=
+ deploy LLMs,
+vision, speech, and other multimodal models with familiar P=
+yTorch
+APIs. The tool can accelerate research to production with seamless=
+
+model export, optimization, and deployment.=20
+
+=F0=9F=8E=81=20
+
+MIS=
+CELLANEOUS
+
+ THE WAU EFFECT (7 MINUTE READ) [11]=20
+
+ OpenAI's use of=
+ Weekly Active Users (WAU) rather than Monthly Active
+Users (MAU) renders=
+ its user base scale incomparable to other large
+consumer technology prod=
+ucts. ChatGPT's user retention is likely quite
+low, meaning many users cy=
+cle in and out every month, inflating MAU
+relative to WAU. Dividing MAU w=
+ould reveal relatively weaker unit
+economics that are directly comparable=
+ to other consumer technology
+products.=20
+
+ TEST, DON'T (JUST) VERIFY =
+(13 MINUTE READ) [12]=20
+
+ AI is making formal verification go mainstream=
+. Random testing will
+play an important role in the future of software en=
+gineering. As
+autoformalization tools get better, we will have many more =
+formal
+specifications. Random testing benefits from these formal
+specif=
+ications in different ways than formal verification, but both
+have their =
+places.=20
+
+=E2=9A=A1=20
+
+QUICK LINKS
+
+ FLASH IS A HUGE SUCCESS! (1=
+ MINUTE READ) [13]=20
+
+ Gemini 3 Flash was Arnaud Autef's first release a=
+s distillation TL.=20
+
+ NATURE IS LAUGHING AT THE AI BUILD OUT (7 MINUTE =
+READ) [14]=20
+
+ Mother Nature can host human intelligence using only 20 w=
+atts of
+power in a space equivalent to the space inside your skull.=20
+=
+
+ WE FINALLY HAD A MOMENT TO RUN OUR SYSTEM WITH GPT-5.2 X-HIGH ON
+ARC-=
+AGI-2! (2 MINUTE READ) [15]=20
+
+ Poetiq saw results as high as 75% at und=
+er $8/problem using GPT-5.2
+X-High on the full PUBLIC-EVAL dataset.=20
+=
+
+Love TLDR? Tell your friends and get rewards!
+
+ Share your referral =
+link below with friends to get free TLDR swag!=20
+
+ https://refer.tldr.te=
+ch/5f669066/2 [16]=20
+
+=09=09 Track your referrals here. [17]=20
+
+Want =
+to advertise in TLDR? =F0=9F=93=B0
+
+ If your company is interested in r=
+eaching an audience of AI
+professionals and decision makers, you may want=
+ to ADVERTISE WITH US
+[18].=20
+
+Want to work at TLDR? =F0=9F=92=BC
+=
+
+ APPLY HERE [19], CREATE YOUR OWN ROLE [20] or send a friend's resume
+=
+to jobs@tldr.tech and get $1k if we hire them! TLDR is one of INC.'S
+BEST=
+ BOOTSTRAPPED BUSINESSES [21] of 2025.=20
+
+ If you have any comments or f=
+eedback, just respond to this email!=20
+
+Thanks for reading,=20
+Andrew Ta=
+n [22], Ali Aminian [23], & Jacob Turner [24]=20
+
+ All TLDR newsletters e=
+xcept the original TLDR are on hiatus until the
+new year, happy holidays!=
+
+
+ Manage your subscriptions [25] to our other newsletters on tech,
+s=
+tartups, and programming. Or if TLDR AI isn't for you, please
+unsubscribe=
+ [26].=20
+
+=C2=A0=20
+
+=20
+
+Links:
+------
+[1] https://tldr.tech/ai=
+?utm_source=3Dtldrai
+[2] https://advertise.tldr.tech/?utm_source=3Dtldrai=
+&utm_medium=3Dnewsletter&utm_campaign=3Dadvertisetopnav
+[3] https://a.tld=
+rnewsletter.com/web-version?ep=3D1&lc=3D6b0cc672-a670-11f0-8911-05656589646=
+0&p=3D9a19328a-e0bc-11f0-821d-1b12893492df&pt=3Dcampaign&t=3D1766586283&s=
+=3D8800de0b0c92ae3b877772a3cf7bd3b70aedb0a1e6e44a4d24d805725ca5909b
+[4] h=
+ttps://workspaceupdates.googleblog.com/2025/12/transform-sources-structured=
+-data-tables-notebooklm.html?utm_source=3Dtldrai
+[5] https://www.testingc=
+atalog.com/exclusive-google-tests-30-minute-audio-lectures-on-notebooklm/?u=
+tm_source=3Dtldrai
+[6] https://build.ms/2025/12/22/codex-vs-claude-code-t=
+oday/?utm_source=3Dtldrai
+[7] https://www.ashpreetbedi.com/articles/memor=
+y?utm_source=3Dtldrai
+[8] https://lmsys.org/blog/2025-12-23-spec-bundle-p=
+hase-1/?utm_source=3Dtldrai
+[9] https://github.com/ArtificialAnalysis/Sti=
+rrup?utm_source=3Dtldrai
+[10] https://github.com/pytorch/executorch?utm_s=
+ource=3Dtldrai
+[11] https://mobiledevmemo.com/the-wau-effect/?utm_source=
+=3Dtldrai
+[12] https://alperenkeles.com/posts/test-dont-verify/?utm_sourc=
+e=3Dtldrai
+[13] https://threadreaderapp.com/thread/2001521806528971022.ht=
+ml?utm_source=3Dtldrai
+[14] https://markmaunder.com/2025/nature-is-laughi=
+ng-at-the-ai-build-out/?utm_source=3Dtldrai
+[15] https://threadreaderapp.=
+com/thread/2003546910427361402.html?utm_source=3Dtldrai
+[16] https://refe=
+r.tldr.tech/5f669066/2
+[17] https://hub.sparklp.co/sub_29edd86e67e7/2
+[=
+18] https://advertise.tldr.tech/?utm_source=3Dtldrai&utm_medium=3Dnewslette=
+r&utm_campaign=3Dadvertisecta
+[19] https://jobs.ashbyhq.com/tldr.tech
+[=
+20] https://jobs.ashbyhq.com/tldr.tech/c227b917-a6a4-40ce-8950-d3e165357871=
+
+[21] https://www.linkedin.com/feed/update/urn:li:activity:74016996910398=
+30016/
+[22] https://twitter.com/andrewztan
+[23] https://www.linkedin.co=
+m/in/aliiaminian/
+[24] https://www.linkedin.com/in/jacob-turner-7521a8198=
+/
+[25] https://tldr.tech/ai/manage?email=3Dmike.mcconigley%40gmail.com
+=
+[26] https://a.tldrnewsletter.com/unsubscribe?ep=3D1&l=3Deedf6b14-3de3-11ed=
+-9a32-0241b9615763&lc=3D6b0cc672-a670-11f0-8911-056565896460&p=3D9a19328a-e=
+0bc-11f0-821d-1b12893492df&pt=3Dcampaign&pv=3D4&spa=3D1766584893&t=3D176658=
+6283&s=3Df8b76fa5dfaf205ef9f5d23587af705563352910655ca291dd26749abdd39ddf
+--D8rCUTn7
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html charset=3DUTF-8"><meta charset=3D"UTF-8"><meta name=3D"v=
+iewport" content=3D"width=3Ddevice-width"><meta name=3D"x-apple-disable-mes=
+sage-reformatting"><title>TLDR AI</title><meta name=3D"color-scheme" conten=
+t=3D"light dark"><meta name=3D"supported-color-schemes" content=3D"light da=
+rk"><style type=3D"text/css">
+=09=09=09:root {
+=09=09=09=09color-scheme: light dark; supported-color-schemes: light dark;
+=09=09=09}
+=09=09=09*,
+=09=09=09*:after,
+=09=09=09*:before {
+=09=09=09=09-webkit-box-sizing: border-box; -moz-box-sizing: border-box; bo=
+x-sizing: border-box;
+=09=09=09}
+=09=09=09* {
+=09=09=09=09-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+=09=09=09}
+=09=09=09
+=09=09=09html,
+=09=09=09body,
+=09=09=09.document {
+=09=09=09=09width: 100% !important; height: 100% !important; margin: 0; pad=
+ding: 0;
+=09=09=09}
+=09=09=09
+=09=09=09body {
+=09=09=09=09-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: g=
+rayscale; text-rendering: optimizeLegibility;
+=09=09=09}
+=09=09=09
+=09=09=09div[style*=3D"margin: 16px 0"] {
+=09=09=09=09margin: 0 !important;
+=09=09=09}
+=09=09=09
+=09=09=09table,
+=09=09=09td {
+=09=09=09=09mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+=09=09=09}
+=09=09=09
+=09=09=09table {
+=09=09=09=09border-spacing: 0; border-collapse: collapse; table-layout: fix=
+ed; margin: 0 auto;
+=09=09=09}
+=09=09=09
+=09=09=09img {
+=09=09=09=09-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+=09=09=09}
+=09=09=09
+=09=09=09*[x-apple-data-detectors] {
+=09=09=09=09color: inherit !important; text-decoration: none !important;
+=09=09=09}
+=09=09=09
+=09=09=09.x-gmail-data-detectors,
+=09=09=09.x-gmail-data-detectors *,
+=09=09=09.aBn {
+=09=09=09=09border-bottom: 0 !important; cursor: default !important;
+=09=09=09}
+=09=09=09
+=09=09=09.btn {
+=09=09=09=09-webkit-transition: all 200ms ease; transition: all 200ms ease;
+=09=09=09}
+=09=09=09
+=09=09=09.btn:hover {
+=09=09=09=09background-color: #f67575; border-color: #f67575;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+=09=09=09}
+=09=09=09
+=09=09=09@media screen and (max-width: 600px) {
+=09=09=09=09.container {
+=09=09=09=09=09width: 100%; margin: auto;
+=09=09=09=09}
+=09=09=09=09.stack {
+=09=09=09=09=09display: block!important; width: 100%!important; max-width: =
+100%!important;
+=09=09=09=09}
+=09=09=09=09.btn {
+=09=09=09=09=09display: block; width: 100%; text-align: center;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09body,
+=09=09=09p,
+=09=09=09td,
+=09=09=09tr,
+=09=09=09.body,
+=09=09=09table,
+=09=09=09h1,
+=09=09=09h2,
+=09=09=09h3,
+=09=09=09h4,
+=09=09=09h5,
+=09=09=09h6,
+=09=09=09div,
+=09=09=09span {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09body,
+=09=09=09=09p,
+=09=09=09=09td,
+=09=09=09=09tr,
+=09=09=09=09.body,
+=09=09=09=09table,
+=09=09=09=09h1,
+=09=09=09=09h2,
+=09=09=09=09h3,
+=09=09=09=09h4,
+=09=09=09=09h5,
+=09=09=09=09h6,
+=09=09=09=09div,
+=09=09=09=09span {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09a {
+=09=09=09=09color: inherit !important; text-decoration: underline !importan=
+t;
+=09=09=09}
+
+=09=09</style><!--[if mso | ie]>
+=09=09<style type=3D"text/css">
+=09=09=09a {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09a {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09 </style>
+=09=09=09<![endif]--></head><body class=3D"">
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">NotebookLM=
+ has introduced Data Tables, a new feature that helps users organize and an=
+alyze information from sources in a structured format&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;</div>
+
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align=3D"center" class=3D"document"><tbody><tr><td valign=3D"top">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"container" width=3D"600"><tbody><tr class=3D"inner-body"><td>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr class=3D"header"><td bgcolor=3D"" class=3D"containe=
+r">
+
+<table width=3D"100%"><tbody><tr><td class=3D"container">
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"margin-top: 0px;" width=3D"100%"><tbody><tr><td style=
+=3D"padding: 0px;">
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div style=3D"text-align: center;">
+    <span style=3D"margin-right: 0px;"><a href=3D"https://tracking.tldrnews=
+letter.com/CL0/https:%2F%2Ftldr.tech%2Fai%3Futm_source=3Dtldrai/1/0100019b5=
+0bf7550-fb49e8f8-5b77-4dfb-98ee-3494c3452860-000000/Az_4WyL9seCzz68vE_TTFXy=
+3QhVe0diJhaq3ZhtMShk=3D437" rel=3D"noopener noreferrer" target=3D"_blank"><=
+span>Sign Up</span></a>
+  |<span style=3D"margin-right: 2px; margin-left: 2px;"><a href=3D"https://=
+tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_so=
+urce=3Dtldrai%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertisetopnav/1/=
+0100019b50bf7550-fb49e8f8-5b77-4dfb-98ee-3494c3452860-000000/etJdUFdpo39sOu=
+5KJkEHPj6CDwWqiogxN804s6Ey9jM=3D437" rel=3D"noopener noreferrer" target=3D"=
+_blank"><span>Advertise</span></a></span>|<span style=3D"margin-left: 2px;"=
+><a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsl=
+etter.com%2Fweb-version%3Fep=3D1%26lc=3D6b0cc672-a670-11f0-8911-05656589646=
+0%26p=3D9a19328a-e0bc-11f0-821d-1b12893492df%26pt=3Dcampaign%26t=3D17665862=
+83%26s=3D8800de0b0c92ae3b877772a3cf7bd3b70aedb0a1e6e44a4d24d805725ca5909b/1=
+/0100019b50bf7550-fb49e8f8-5b77-4dfb-98ee-3494c3452860-000000/6s949ZMCc4Fgq=
+AJMKuit61ftlVdo8MN9-ttYH91dID0=3D437"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"text-=
+align: center;"><span data-darkreader-inline-color=3D"" style=3D"--darkread=
+er-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30=
+px;">T</span><span style=3D"font-size: 30px;"><span data-darkreader-inline-=
+color=3D"" style=3D"color: rgb(232, 192, 96) !important; --darkreader-inlin=
+e-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-colo=
+r=3D"" style=3D"color: rgb(101, 195, 173) !important; --darkreader-inline-c=
+olor:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-=
+color=3D"" style=3D"--darkreader-inline-color:#dd6e6e; color: rgb(220, 107,=
+ 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody></tbody></table>
+
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody><tr=
+><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0;=
+">
+<div style=3D"text-align: center;">
+
+<h1><strong>TLDR AI <span id=3D"date">2025-12-24</span></strong></h1>
+</div>
+</td></tr></tbody></table>
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody></t=
+body></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=3D""><td class=3D"container">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td style=3D"padding: 0px;">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;"><span s=
+tyle=3D"font-size:36px;">=F0=9F=9A=80</span></span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Headlines &amp; Launches</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top"><table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"=
+padding: 15px 15px;">=20
+                        <div class=3D"text-block">
+                            <span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fworkspaceupdates.googleblog.com%2F2025%2F12%2Ftransform=
+-sources-structured-data-tables-notebooklm.html%3Futm_source=3Dtldrai/1/010=
+0019b50bf7550-fb49e8f8-5b77-4dfb-98ee-3494c3452860-000000/wMS4X_Ssk4A9Ntri0=
+P6X76IGlxM1tOyzeW0U2yIb4N8=3D437">
+                                    <span>
+                                        <strong>Transform sources into stru=
+ctured Data Tables in NotebookLM (3 minute read)</strong>
+                                    </span>
+                                </a>
+                                <br><br>
+                                <span style=3D"font-family: &quot;Helvetica=
+ Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    NotebookLM has introduced Data Tables, =
+a new feature that helps users organize and analyze information from source=
+s in a structured format. The feature synthesizes sources into clean, struc=
+tured tables ready to export to Google Sheets. It is now rolling out to all=
+ users. Screenshots of the feature are available in the article.
+                                </span>
+                            </span>
+                        </div>=20
+                    </td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">=20
+                        <div class=3D"text-block">
+                            <span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.testingcatalog.com%2Fexclusive-google-tests-30-minu=
+te-audio-lectures-on-notebooklm%2F%3Futm_source=3Dtldrai/1/0100019b50bf7550=
+-fb49e8f8-5b77-4dfb-98ee-3494c3452860-000000/1v_JVCnVfpBXzDw784Jw5aN-DArG4O=
+8wkCnGV5NKhOA=3D437">
+                                    <span>
+                                        <strong>Google tests 30-minute audi=
+o Lectures on NotebookLM (2 minute read)</strong>
+                                    </span>
+                                </a>
+                                <br><br>
+                                <span style=3D"font-family: &quot;Helvetica=
+ Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    NotebookLM is testing a new 'Lecture' f=
+ormat for Audio Overviews. The feature will generate a comprehensive AI lec=
+ture of roughly 30 minutes. Lectures can be produced in different languages=
+, depending on the user settings. A sample lecture is available in the arti=
+cle.
+                                </span>
+                            </span>
+                        </div>=20
+                    </td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=A7=A0</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Deep Dives &amp; Analysis</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top"><table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"=
+padding: 15px 15px;">=20
+                        <div class=3D"text-block">
+                            <span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fbuild.ms%2F2025%2F12%2F22%2Fcodex-vs-claude-code-today%=
+2F%3Futm_source=3Dtldrai/1/0100019b50bf7550-fb49e8f8-5b77-4dfb-98ee-3494c34=
+52860-000000/mGqXzunE3Vl-ZoeGkcPdzD6QRcR4Kc83Qc3cqyOfLrU=3D437">
+                                    <span>
+                                        <strong>Codex vs. Claude Code (Toda=
+y) (5 minute read)</strong>
+                                    </span>
+                                </a>
+                                <br><br>
+                                <span style=3D"font-family: &quot;Helvetica=
+ Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    There's no wrong choice when it comes t=
+o AI. The tool you choose should match how you work. Try out both Claude an=
+d Codex and see which one fits. Every AI tool has its strengths and weaknes=
+ses, and the only way to discover what they are is by using them.
+                                </span>
+                            </span>
+                        </div>=20
+                    </td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">=20
+                        <div class=3D"text-block">
+                            <span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.ashpreetbedi.com%2Farticles%2Fmemory%3Futm_source=
+=3Dtldrai/1/0100019b50bf7550-fb49e8f8-5b77-4dfb-98ee-3494c3452860-000000/XV=
+yyCWi3qj_QDpTVYVHOV9ayni-97QFw8YCwrAe3g1E=3D437">
+                                    <span>
+                                        <strong>Memory: How Agents Learn (1=
+2 minute read)</strong>
+                                    </span>
+                                </a>
+                                <br><br>
+                                <span style=3D"font-family: &quot;Helvetica=
+ Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Agents can follow complex instructions,=
+ use tools, and work autonomously for hours. However, ask them the same que=
+stion twice, and they have to start from scratch. We've made agents capable=
+, but haven't yet figured out how to make them learn. This article looks at=
+ different types of memory and how they could be implemented into agents.
+                                </span>
+                            </span>
+                        </div>=20
+                    </td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=A7=91=E2=80=8D=F0=9F=92=BB</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Engineering &amp; Research</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top"><table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"=
+padding: 15px 15px;">=20
+                        <div class=3D"text-block">
+                            <span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flmsys.org%2Fblog%2F2025-12-23-spec-bundle-phase-1%2F%3F=
+utm_source=3Dtldrai/1/0100019b50bf7550-fb49e8f8-5b77-4dfb-98ee-3494c3452860=
+-000000/XQBD7T-BmqHIEOv0dYT7_sJ_ZS0zsZarf4EsLw1sgrw=3D437">
+                                    <span>
+                                        <strong>Speculative Decoding Models=
+ (11 minute read)</strong>
+                                    </span>
+                                </a>
+                                <br><br>
+                                <span style=3D"font-family: &quot;Helvetica=
+ Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    SpecBundle Phase 1 is a set of producti=
+on-ready EAGLE-3 checkpoints trained with industry partners to improve real=
+-world speculative decoding. The release focused on instruct-tuned models a=
+nd shipped alongside SpecForge v0.2, which added major system refactors and=
+ multi-backend support.
+                                </span>
+                            </span>
+                        </div>=20
+                    </td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">=20
+                        <div class=3D"text-block">
+                            <span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgithub.com%2FArtificialAnalysis%2FStirrup%3Futm_source=
+=3Dtldrai/1/0100019b50bf7550-fb49e8f8-5b77-4dfb-98ee-3494c3452860-000000/B7=
+enNZqfNcp5uTWC_Uf-EFS-NdgulXMQbYxH7jGiFGA=3D437">
+                                    <span>
+                                        <strong>Stirrup (GitHub Repo)</stro=
+ng>
+                                    </span>
+                                </a>
+                                <br><br>
+                                <span style=3D"font-family: &quot;Helvetica=
+ Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Stirrup is a framework for building age=
+nts that lets models choose their own approach to completing tasks. It has =
+best practices and tools built in and is fully customizable. Stirrup featur=
+es a skills system that extends agent capabilities, flexible tool execution=
+, context management tools, flexible provider support, and multimodal suppo=
+rt.
+                                </span>
+                            </span>
+                        </div>=20
+                    </td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">=20
+                        <div class=3D"text-block">
+                            <span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgithub.com%2Fpytorch%2Fexecutorch%3Futm_source=3Dtldrai=
+/1/0100019b50bf7550-fb49e8f8-5b77-4dfb-98ee-3494c3452860-000000/BTR97mHOfZu=
+wvcTR5WLWRsjaAU5hscy86BkEZF76NCE=3D437">
+                                    <span>
+                                        <strong>ExecuTorch (GitHub Repo)</s=
+trong>
+                                    </span>
+                                </a>
+                                <br><br>
+                                <span style=3D"font-family: &quot;Helvetica=
+ Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    ExecuTorch is a solution for deploying =
+AI models on-device. Built by PyTorch for privacy, performance, and portabi=
+lity, ExecuTorch powers KPWA meta's on-device AI across Instagram, WhatsApp=
+, Quest 3, Ray-Ban Meta Smart Glasses, and more. It allows developers to de=
+ploy LLMs, vision, speech, and other multimodal models with familiar PyTorc=
+h APIs. The tool can accelerate research to production with seamless model =
+export, optimization, and deployment.
+                                </span>
+                            </span>
+                        </div>=20
+                    </td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=8E=81</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><strong><h1>Miscellaneous</h1></strong><=
+/div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top"><table align=3D"center" border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"100%"><tbody><tr><td class=3D"contain=
+er" style=3D"padding: 15px 15px;">=20
+                        <div class=3D"text-block">
+                            <span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fmobiledevmemo.com%2Fthe-wau-effect%2F%3Futm_source=3Dtl=
+drai/1/0100019b50bf7550-fb49e8f8-5b77-4dfb-98ee-3494c3452860-000000/2odpru-=
+vMZbBk2ST6qNtxSKJzSqNZyaoys5HD0bTCqk=3D437">
+                                    <span>
+                                        <strong>The WAU effect (7 minute re=
+ad)</strong>
+                                    </span>
+                                </a>
+                                <br><br>
+                                <span style=3D"font-family: &quot;Helvetica=
+ Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    OpenAI's use of Weekly Active Users (WA=
+U) rather than Monthly Active Users (MAU) renders its user base scale incom=
+parable to other large consumer technology products. ChatGPT's user retenti=
+on is likely quite low, meaning many users cycle in and out every month, in=
+flating MAU relative to WAU. Dividing MAU would reveal relatively weaker un=
+it economics that are directly comparable to other consumer technology prod=
+ucts.
+                                </span>
+                            </span>
+                        </div>=20
+                    </td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">=20
+                        <div class=3D"text-block">
+                            <span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Falperenkeles.com%2Fposts%2Ftest-dont-verify%2F%3Futm_so=
+urce=3Dtldrai/1/0100019b50bf7550-fb49e8f8-5b77-4dfb-98ee-3494c3452860-00000=
+0/GGalsVMJClEDEitQJBnKH3veyq5WFRwLMHJZ3kSgaIw=3D437">
+                                    <span>
+                                        <strong>Test, don't (just) verify (=
+13 minute read)</strong>
+                                    </span>
+                                </a>
+                                <br><br>
+                                <span style=3D"font-family: &quot;Helvetica=
+ Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    AI is making formal verification go mai=
+nstream. Random testing will play an important role in the future of softwa=
+re engineering. As autoformalization tools get better, we will have many mo=
+re formal specifications. Random testing benefits from these formal specifi=
+cations in different ways than formal verification, but both have their pla=
+ces.
+                                </span>
+                            </span>
+                        </div>=20
+                    </td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=E2=9A=
+=A1</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top"><table align=3D"center" border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"100%"><tbody><tr><td class=3D"contain=
+er" style=3D"padding: 15px 15px;">=20
+                        <div class=3D"text-block">
+                            <span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fthreadreaderapp.com%2Fthread%2F2001521806528971022.html=
+%3Futm_source=3Dtldrai/1/0100019b50bf7550-fb49e8f8-5b77-4dfb-98ee-3494c3452=
+860-000000/MnHct5ZuTqHXEL_XnHTDW2qZ8nkadnRfa4An7Kq3EOQ=3D437">
+                                    <span>
+                                        <strong>Flash is a huge success! (1=
+ minute read)</strong>
+                                    </span>
+                                </a>
+                                <br><br>
+                                <span style=3D"font-family: &quot;Helvetica=
+ Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Gemini 3 Flash was Arnaud Autef's first=
+ release as distillation TL.
+                                </span>
+                            </span>
+                        </div>=20
+                    </td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">=20
+                        <div class=3D"text-block">
+                            <span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fmarkmaunder.com%2F2025%2Fnature-is-laughing-at-the-ai-b=
+uild-out%2F%3Futm_source=3Dtldrai/1/0100019b50bf7550-fb49e8f8-5b77-4dfb-98e=
+e-3494c3452860-000000/oysfy0Hu_HC-BLCMBsjwhlJRF1UHB6_7jaCtt_hXgqc=3D437">
+                                    <span>
+                                        <strong>Nature is Laughing at the A=
+I Build Out (7 minute read)</strong>
+                                    </span>
+                                </a>
+                                <br><br>
+                                <span style=3D"font-family: &quot;Helvetica=
+ Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Mother Nature can host human intelligen=
+ce using only 20 watts of power in a space equivalent to the space inside y=
+our skull.
+                                </span>
+                            </span>
+                        </div>=20
+                    </td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">=20
+                        <div class=3D"text-block">
+                            <span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fthreadreaderapp.com%2Fthread%2F2003546910427361402.html=
+%3Futm_source=3Dtldrai/1/0100019b50bf7550-fb49e8f8-5b77-4dfb-98ee-3494c3452=
+860-000000/6QnJLg5H-MnNQR_yXtddNGdxcaCqwuC8Di1s4AGzhHI=3D437">
+                                    <span>
+                                        <strong>We finally had a moment to =
+run our system with GPT-5.2 X-High on ARC-AGI-2! (2 minute read)</strong>
+                                    </span>
+                                </a>
+                                <br><br>
+                                <span style=3D"font-family: &quot;Helvetica=
+ Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Poetiq saw results as high as 75% at un=
+der $8/problem using GPT-5.2 X-High on the full PUBLIC-EVAL dataset.
+                                </span>
+                            </span>
+                        </div>=20
+                    </td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+   =20
+    <table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"word-b=
+reak: break-word; vertical-align: top; padding: 5px 10px;">  =20
+                <p style=3D"padding: 0; margin: 0; font-size: 22px; color: =
+#000000; line-height: 1.6; font-weight: bold;">
+                  Love TLDR? Tell your friends and get rewards!
+                </p>
+              </td></tr>
+            <tr><td class=3D"container" style=3D"padding: 0px 10px 15px;">
+               <div class=3D"text-block">
+                  Share your referral link below with friends to get free T=
+LDR swag!
+                </div>
+              </td></tr>
+            <tr><td align=3D"left" style=3D"padding: 10px;">
+                <div class=3D"text-block">
+                  <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:=
+%2F%2Frefer.tldr.tech%2F5f669066%2F2/1/0100019b50bf7550-fb49e8f8-5b77-4dfb-=
+98ee-3494c3452860-000000/sVGQrnt2pcT77vSgOfPpVsVg5I0912ioCjZfRlx0obo=3D437"=
+ style=3D"color: #464ba4; text-decoration: underline;">https://refer.tldr.t=
+ech/5f669066/2</a>
+                </div>
+              </td></tr>
+            <tr></tr>
+            <tr><td align=3D"left" style=3D"padding:5px 10px;">
+                <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2=
+F%2Fhub.sparklp.co%2Fsub_29edd86e67e7%2F2/1/0100019b50bf7550-fb49e8f8-5b77-=
+4dfb-98ee-3494c3452860-000000/pWoB71KtOR4LPQQjPiwppkVmv-MOXEXVQlbSk_6cUcg=
+=3D437" style=3D"font-size: 16px; line-height: 1.6;  padding: 10px 0; displ=
+ay: inline-block;  text-decoration: underline;"><span style=3D"mso-text-rai=
+se:13pt; text-decoration: underline;">Track your referrals here.</span></a>
+        </td></tr></tbody></table>
+
+     =20
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"word-break=
+: break-word; vertical-align: top; padding: 5px 10px;">
+        <p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000;=
+ line-height: 1.6; font-weight: bold;">
+          Want to advertise in TLDR? =F0=9F=93=B0
+        </p>
+        <div class=3D"text-block" style=3D"margin-top: 10px;">
+          If your company is interested in reaching an audience of AI profe=
+ssionals and decision makers, you may want to <a href=3D"https://tracking.t=
+ldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=3Dtld=
+rai%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertisecta/1/0100019b50bf7=
+550-fb49e8f8-5b77-4dfb-98ee-3494c3452860-000000/jaHL26f0K3wpzpjh_HO6ul0_ZJ9=
+R9meuKvq-tZKhf88=3D437"><strong><span>advertise with us</span></strong></a>=
+.
+        </div>
+        <br>
+
+        <!-- New "Want to work at TLDR?" section -->
+        <p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000;=
+ line-height: 1.6; font-weight: bold;">
+          Want to work at TLDR? =F0=9F=92=BC
+        </p>
+        <div class=3D"text-block" style=3D"margin-top: 10px;">
+          <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjo=
+bs.ashbyhq.com%2Ftldr.tech/1/0100019b50bf7550-fb49e8f8-5b77-4dfb-98ee-3494c=
+3452860-000000/y0w10N-ny0mB8LoBOL8YnGO-nHyQpdM7DWkYwImV08o=3D437" rel=3D"no=
+opener noreferrer" style=3D"color: #0000EE; text-decoration: underline;" ta=
+rget=3D"_blank"><strong>Apply here</strong></a>,=20
+          <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjo=
+bs.ashbyhq.com%2Ftldr.tech%2Fc227b917-a6a4-40ce-8950-d3e165357871/1/0100019=
+b50bf7550-fb49e8f8-5b77-4dfb-98ee-3494c3452860-000000/yirmLwt00ZqaZDVmqePpJ=
+z87wEpZiDZjne0Ih79L5ao=3D437" rel=3D"noopener noreferrer" style=3D"color: #=
+0000EE; text-decoration: underline;" target=3D"_blank"><strong>create your =
+own role</strong></a>=20
+          or send a friend's resume to <a href=3D"mailto:jobs@tldr.tech" st=
+yle=3D"color: #0000EE; text-decoration: underline;">jobs@tldr.tech</a>=20
+          and get $1k if we hire them! TLDR is one of <a href=3D"https://tr=
+acking.tldrnewsletter.com/CL0/https:%2F%2Fwww.linkedin.com%2Ffeed%2Fupdate%=
+2Furn:li:activity:7401699691039830016%2F/1/0100019b50bf7550-fb49e8f8-5b77-4=
+dfb-98ee-3494c3452860-000000/jZprFNFPj7uKtc6B-BzvEy5R8yWWD2eG0HsULHW5AQI=3D=
+437" rel=3D"noopener noreferrer" style=3D"color: #0000EE; text-decoration: =
+underline;" target=3D"_blank"><strong>Inc.'s Best Bootstrapped businesses</=
+strong></a> of 2025.
+        </div>
+        <br>
+
+        <div class=3D"text-block">
+          If you have any comments or feedback, just respond to this email!
+          <br>
+          <br>
+          Thanks for reading,
+          <br>
+          <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftw=
+itter.com%2Fandrewztan/1/0100019b50bf7550-fb49e8f8-5b77-4dfb-98ee-3494c3452=
+860-000000/JkPXJrBNWffARjygVSqniNHN0vOp7cEkPYolhT7YWLw=3D437"><span>Andrew =
+Tan</span></a>, <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2=
+F%2Fwww.linkedin.com%2Fin%2Faliiaminian%2F/1/0100019b50bf7550-fb49e8f8-5b77=
+-4dfb-98ee-3494c3452860-000000/LPiJCp6OwSM10CFlEGzOrq33QnweSaLJXicQouo37i0=
+=3D437"><span>Ali Aminian</span></a>, &amp; <a href=3D"https://tracking.tld=
+rnewsletter.com/CL0/https:%2F%2Fwww.linkedin.com%2Fin%2Fjacob-turner-7521a8=
+198%2F/1/0100019b50bf7550-fb49e8f8-5b77-4dfb-98ee-3494c3452860-000000/lEEtQ=
+1zFrLRxsnGNHdHmEZ7wmnmVbP7jdnRNT4wbz1U=3D437"><span>Jacob Turner</span></a>
+          <br>
+          <br>
+        </div>
+        All TLDR newsletters except the original TLDR are on hiatus until t=
+he new year, happy holidays!<br><br><br>
+      </td></tr></tbody></table>
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+            <div class=3D"text-block" id=3D"testing-id">
+              <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%=
+2Ftldr.tech%2Fai%2Fmanage%3Femail=3Dmike.mcconigley%2540gmail.com/1/0100019=
+b50bf7550-fb49e8f8-5b77-4dfb-98ee-3494c3452860-000000/p7OpBauEr4igbY1HLiWGT=
+b2m5wpWuvLYF9b0L9VeoG4=3D437">Manage your subscriptions</a> to our other ne=
+wsletters on tech, startups, and programming.=20
+              Or if TLDR AI isn't for you, please <a href=3D"https://tracki=
+ng.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Funsubscribe%3F=
+ep=3D1%26l=3Deedf6b14-3de3-11ed-9a32-0241b9615763%26lc=3D6b0cc672-a670-11f0=
+-8911-056565896460%26p=3D9a19328a-e0bc-11f0-821d-1b12893492df%26pt=3Dcampai=
+gn%26pv=3D4%26spa=3D1766584893%26t=3D1766586283%26s=3Df8b76fa5dfaf205ef9f5d=
+23587af705563352910655ca291dd26749abdd39ddf/1/0100019b50bf7550-fb49e8f8-5b7=
+7-4dfb-98ee-3494c3452860-000000/Nb_gDxLq99t2RaRkJ36glFrEnYLxDByDWFfDj_1xQPM=
+=3D437">unsubscribe</a>.
+              <br>
+              <br> &nbsp;
+            </div>
+          </td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+
+<img alt=3D"" src=3D"http://tracking.tldrnewsletter.com/CI0/0100019b50bf755=
+0-fb49e8f8-5b77-4dfb-98ee-3494c3452860-000000/dLDHuHpNQ4rBxQ3afmdcJJSjLxdHg=
+VNshYXG_5n3MSg=3D437" style=3D"display: none; width: 1px; height: 1px;">
+</body></html>
+--D8rCUTn7--

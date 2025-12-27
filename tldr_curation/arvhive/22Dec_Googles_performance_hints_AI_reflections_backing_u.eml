@@ -1,0 +1,1658 @@
+Delivered-To: mike.mcconigley@gmail.com
+Received: by 2002:ac9:40c9:0:b0:605:93f6:5e02 with SMTP id y9csp1903715ocg;
+        Mon, 22 Dec 2025 04:17:40 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IEyvWG8C8bPF48qfgmqCVCq4+sMMYgiusIWZlGXUcY03YJhSjZZMNP96LYAQGdyISB/bZ3K
+X-Received: by 2002:a05:6214:252a:b0:87c:2967:fd32 with SMTP id 6a1803df08f44-88d8281226bmr178557446d6.22.1766405860460;
+        Mon, 22 Dec 2025 04:17:40 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1766405860; cv=none;
+        d=google.com; s=arc-20240605;
+        b=SDBQM2mNHwm0Axdfo7KTKqTV7G2PjbviKpRMzVocUq70ugcLqtQpmIGInMIDd6unnU
+         PAmWeQVr5Kd9gr88s5KpjZWmGW9WnWQO1KEhSBLoWjcvSa9ofFEptz55/ImD9BsU7OzV
+         t8MM5WpEmnfEtODApxdnZU8eqWg7gQqmEbZ8Xyjw0B4g1sR9uoPshGM2SR/0VoV2M+7a
+         t9N7YXMrdJWEWcKylVijO+eAiqI5gO3oLj0d0KM8sgbDfiaCyxNjN8AXJhCdIQ9w2VT+
+         EkhuoYYi9AE2pxdB0gP2TGD6kLRxY96kdT9+rYbONG+1ewrXpfbctKbcOR9cyT994Rh1
+         +rpQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:date:mime-version:list-unsubscribe-post
+         :list-unsubscribe:subject:to:from:dkim-signature:dkim-signature;
+        bh=lSyM73YSR6ahnRsklZFxiM9eqnhScqKbfRXFZbxYtzQ=;
+        fh=tUTYCbTOUI69DxYKXGXRz08XnPP7jEKRU6E5rS0DFR4=;
+        b=cO4vUXGssqqWGgPJIJx/DyHpGICo/zPp+DGpNfpt4ru4rzg1bSZWbwtxp0kDmt+sK8
+         YDs22PQnreeCFMc9nUcGTbEttOOEW4h80dhVcHYP6C3PqxqXOZeUgTLbXqZnjFQDxfWy
+         SYL5f2v2+L7udWfpd8hqAqxXAfhqlYYljDZ9jbLr95EhkqRmK6VrLhO1R8oMUtVs9dLy
+         SLITWk31Ea81SHsON3jk/SbUvkRxgdHekZnrVxrJiQFzvQvJqwKEiltNIu5L8YE3mxSb
+         L7jXWph+6vtIqhk0eYgFHQswyc31tkn/WKm2EB+DNNyWadCBU32PKQGN62Fl/LYHgfp3
+         cvjw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=xPJeWRka;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=X+nq2qVZ;
+       spf=pass (google.com: domain of 0100019b45fe6aec-7b86cb70-7886-4a1a-af80-3cfb5432a973-000000@dailyupdate.tldrnewsletter.com designates 54.240.123.115 as permitted sender) smtp.mailfrom=0100019b45fe6aec-7b86cb70-7886-4a1a-af80-3cfb5432a973-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+Return-Path: <0100019b45fe6aec-7b86cb70-7886-4a1a-af80-3cfb5432a973-000000@dailyupdate.tldrnewsletter.com>
+Received: from a123-115.smtp-out.amazonses.com (a123-115.smtp-out.amazonses.com. [54.240.123.115])
+        by mx.google.com with ESMTPS id 6a1803df08f44-88d996b8c37si125498266d6.594.2025.12.22.04.17.40
+        for <mike.mcconigley@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 22 Dec 2025 04:17:40 -0800 (PST)
+Received-SPF: pass (google.com: domain of 0100019b45fe6aec-7b86cb70-7886-4a1a-af80-3cfb5432a973-000000@dailyupdate.tldrnewsletter.com designates 54.240.123.115 as permitted sender) client-ip=54.240.123.115;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=xPJeWRka;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=X+nq2qVZ;
+       spf=pass (google.com: domain of 0100019b45fe6aec-7b86cb70-7886-4a1a-af80-3cfb5432a973-000000@dailyupdate.tldrnewsletter.com designates 54.240.123.115 as permitted sender) smtp.mailfrom=0100019b45fe6aec-7b86cb70-7886-4a1a-af80-3cfb5432a973-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ygiuxamnxevikrd5dtfwanslhs6b24mt; d=tldrnewsletter.com;
+	t=1766405860;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type;
+	bh=PHbC02KRN5xGlBqwWxVgECYYyKUtgLhu1QG2sBL5Jt8=;
+	b=xPJeWRkaKOl/9ypz0hupZomjwhpXv8p2F35NgSF/KvpQHpFp0oGE653aIoJaxhCN
+	wEjvJDXj85xla3NVB1wkhMSZ5JGLYwXGHy+5NJaF5w2y0DdkHLPpDZ8M0/Dj2kI6TYG
+	CjXUmJnGzqs8hICwtqX9ZdfKIq5lpeHbhk0w5bd8=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1766405860;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type:Feedback-ID;
+	bh=PHbC02KRN5xGlBqwWxVgECYYyKUtgLhu1QG2sBL5Jt8=;
+	b=X+nq2qVZPjBzPf6wYcIpTeMqOdc7BZmhXP2fjcCjLM9BHZaa90vepOKxKiVgHznX
+	1ufD4PicYqoCBeEbG+UIDChCKSTXGz6RBXdLyF7q+duLmPkRVR3nRhOyuHlLsyDKOsl
+	fsQoAdoZXF8yZc5YH7FSBVz4cXyLQgKT6G6y9Vw4=
+From: TLDR Dev <dan@tldrnewsletter.com>
+To: mike.mcconigley@gmail.com
+Subject: =?utf-8?Q?Google=E2=80=99s?= performance hints
+ =?utf-8?Q?=E2=9A=A1=EF=B8=8F=2C?= AI reflections
+ =?utf-8?Q?=F0=9F=A4=94=2C?= backing up Spotify =?utf-8?Q?=F0=9F=8E=B5?=
+X-Entity-Ref-Id: 9ae8489f-aebf-4a59-8629-e12f5cb5048e
+X-EmailOctopus-Parent-Id: d1c9bf02-df21-11f0-b6a2-2f6ce300fdd6
+X-EmailOctopus-Parent-Type-Id: campaign
+X-EmailOctopus-List-Id: e8d201ca-3e93-11ed-9a32-0241b9615763
+X-EmailOctopus-List-Contact-Id: 6b0d84e0-a670-11f0-8b4a-c5e0a2ae1fe1
+X-EmailOctopus-Started-Preparing-At: 2025-12-22T12:01:51+00:00
+X-EmailOctopus-Sent-At: 2025-12-22T12:17:40+00:00
+X-EmailOctopus-Team-Id: 66987ef2-4f4c-11e9-a3c9-06b79b628af2
+X-EmailOctopus-Version: 4
+List-Unsubscribe: <https://a.tldrnewsletter.com/unsubscribe?ep=1&l=e8d201ca-3e93-11ed-9a32-0241b9615763&lc=6b0d84e0-a670-11f0-8b4a-c5e0a2ae1fe1&p=d1c9bf02-df21-11f0-b6a2-2f6ce300fdd6&pt=campaign&pv=4&spa=1766404911&t=1766405860&s=d00f46da3cec45e8a45c336c9219a7aa350bda19ea04e30a9d818fa592068caf>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-EmailOctopus-Ses-Configuration-Set-Name: emailoctopus-a9f7b12f74f3c968d9408897fb35539c
+MIME-Version: 1.0
+Date: Mon, 22 Dec 2025 12:17:40 +0000
+Message-ID: <0100019b45fe6aec-7b86cb70-7886-4a1a-af80-3cfb5432a973-000000@email.amazonses.com>
+Content-Type: multipart/alternative; boundary=iL9Tahdf
+Feedback-ID: ::1.us-east-1.Dj5/7DYmgk+n1sSGGXSQSLIthSjNQ0MGtV5Dro1Tr8U=:AmazonSES
+X-SES-Outgoing: 2025.12.22-54.240.123.115
+
+--iL9Tahdf
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Jeff Dean and Sanjay Ghemawat, some of Google=E2=80=99s most important
+en=
+gineers for over 25 years, wrote a guide on optimizing software
+performan=
+ce=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0
+
+
+ Sign Up [1] |Advertise [2]|View Online [3]=20
+
+=
+=09=09TLDR=20
+
+=09=09TOGETHER WITH [QA Wolf] [4]
+
+=C2=A0TLDR DEV 2025=
+-12-22
+
+ CUT YOUR QA CYCLES DOWN FROM HOURS TO MINUTES WITH AUTOMATED T=
+ESTING
+(SPONSOR) [4]=20
+
+ If slow QA processes bottleneck you or your s=
+oftware engineering team
+and you're releasing slower because of it =
+=E2=80=94 you need to check out QA
+Wolf.
+
+They get engineering teams =
+to 80% automated end-to-end test coverage
+[5] and help them SHIP 5X FASTE=
+R by reducing QA cycles from hours to
+minutes.
+
+QA Wolf [6] takes tes=
+ting off your plate. They can get you:
+
+ =09* Unlimited parallel test r=
+uns
+ =09* 24-hour maintenance and on-demand test creation
+ =09* Human-v=
+erified bug reports sent directly to your team
+ =09* Zero flakes, guarant=
+eed
+
+The result? Drata's team of 80+ engineers [7] achieved 4x more tes=
+t
+cases and 86% FASTER QA CYCLES.
+
+No flakes, no delays, just better =
+QA =E2=80=94 that's QA Wolf.
+
+Schedule a demo to learn more [8]
+
+=
+=F0=9F=A7=91=E2=80=8D=F0=9F=92=BB=20
+
+ARTICLES & TUTORIALS
+
+ PERFORMA=
+NCE HINTS (40 MINUTE READ) [9]=20
+
+ Jeff Dean and Sanjay Ghemawat, some o=
+f Google's most important
+engineers for over 25 years, wrote a guide on o=
+ptimizing software
+performance. Performance needs to be considered early =
+in critical code
+paths instead of solely relying on post-development prof=
+iling for
+optimization. The guide also covers algorithmic improvements,=
+
+efficient memory representation, reducing allocations, avoiding
+unnece=
+ssary work, and using parallelization.=20
+
+ INTRODUCING CSS GRID LANES (1=
+0 MINUTE READ) [10]=20
+
+ CSS Grid Lanes is a new web standard to natively=
+ create flexible,
+dynamic masonry-style layouts on the web without JavaSc=
+ript. This
+feature uses `display: grid-lanes` along with existing CSS Gri=
+d
+properties like `grid-template-columns` or `grid-template-rows` to
+de=
+fine the layout's structure. It supports advanced capabilities such
+as va=
+riable lane sizes, item spanning, explicit placement, and
+introduces a "t=
+olerance" property for fine-tuning item packing order.=20
+
+=F0=9F=A7=
+=A0=20
+
+OPINIONS & ADVICE
+
+ CODE REVIEW AS HUMAN ALIGNMENT, IN THE ER=
+A OF LLMS (3 MINUTE READ)
+[11]=20
+
+ Code review within teams should cha=
+nge to be primarily a human
+alignment mechanism. Large language models ha=
+ve no memory and have to
+rediscover everything in the system from first p=
+rinciples every time
+they are run. Humans can collectively maintain a sha=
+red vision of what
+the system should do. Code review should reconfigure i=
+tself around
+this purpose.=20
+
+ MORE DATABASES SHOULD BE SINGLE-THREADE=
+D (8 MINUTE READ) [12]=20
+
+ From a DX perspective, every transaction with=
+in a shard would always
+be serializable and never needs to be retried, ma=
+king it much easier
+to think about. A single-threaded database would be f=
+ully horizontally
+scalable and have extremely high per-thread throughput,=
+ as it wouldn't
+need to sync with other threads. It would be a much more =
+predictable
+system. While more restrictive, there would be no more hidden=
+ race
+conditions.=20
+
+=F0=9F=9A=80=20
+
+LAUNCHES & TOOLS
+
+ 15-MINU=
+TE DEMOS: JIRA + SERVICENOW INTEGRATIONS WITH PLANVIEW
+(SPONSOR) [13]=20
+=
+
+ Planview Hub Bytes is a series of 15-minute expert-led sessions [13]
+=
+covering the most requested integrations. Watch solution architects
+demo =
+Jira + ServiceNow cross-functional workflows, no-code integration
+setup, =
+and connecting custom in-house tools. After the quick demo,
+you'll have a=
+ live Q&A with architects who've deployed these at
+hundreds of organizati=
+ons. Register for the series [13]=20
+
+ CLAUDE'S FRONTEND DESIGN SKILL (2 =
+MINUTE READ) [14]=20
+
+ This gist contains a Claude skill for creating pro=
+duction-grade
+frontend interfaces that avoid generic AI slop aesthetics. =
+The user
+provides frontend requirements, and the AI generates production-=
+grade
+and functional code with visually striking and memorable design. Th=
+e
+skill instructs the agent to never use generic AI-generated
+aesthetic=
+s, to interpret prompts creatively, and to make unexpected
+choices that f=
+eel genuinely designed for the context.=20
+
+ DESTRUCTIVE GIT COMMAND PROT=
+ECTION FOR CLAUDE CODE (17 MINUTE READ)
+[15]=20
+
+ AI agents can execute=
+ destructive commands without understanding the
+consequences. They can do=
+ this even if the AGENTS.md file forbids such
+commands. This post provide=
+s a Claude Code hook that blocks certain
+git commands before they can run=
+. The hook uses regex pattern
+matching, so clever or obfuscated commands =
+may be able to bypass it.=20
+
+ GARAGE (WEBSITE) [16]=20
+
+ Garage is a l=
+ightweight, efficient, and resilient S3 object store
+designed for reliabi=
+lity. Capable of running outside traditional
+datacenters, it guarantees d=
+ata redundancy through 3-zone replication.
+Garage is a self-contained, de=
+pendency-free binary that is fast to
+deploy on various Linux distribution=
+s and machines.=20
+
+ TRON (GITHUB REPO) [17]=20
+
+ Lite=C2=B3 (TRON) is =
+a zero-copy, schemaless binary serialization format
+that organizes data a=
+s a B-tree within a single contiguous buffer.
+This design allows for dire=
+ct, O(log n) access and mutation of data
+fields without traditional parsi=
+ng or serialization steps. It supports
+conversion to/from JSON, but is mu=
+ch more performant.=20
+
+ RUE (WEBSITE) [18]=20
+
+ Rue is a memory-safe l=
+anguage that is higher-level than Rust, but
+lower-level than Go. It featu=
+res a simple syntax inspired by various
+programming languages. Rue compil=
+es directly to native code. It is
+still in early development.=20
+
+=
+=F0=9F=8E=81=20
+
+MISCELLANEOUS
+
+ 2025 LLM YEAR IN REVIEW (9 MINUTE RE=
+AD) [19]=20
+
+ 2025 was an eventful year for LLMs, with paradigm shifts th=
+at
+redefined the field. Reinforcement Learning from Verifiable Rewards
+=
+(RLVR) came up as a new training stage, allowing LLMs to develop
+reasonin=
+g strategies and driving much of the year's capability
+progress. The year=
+ also saw the rise of new application layers, local
+AI agents like Claude=
+ Code, "vibe coding" that democratized
+programming, and early hints of a =
+visual LLM GUI.=20
+
+ BACKING UP SPOTIFY (26 MINUTE READ) [20]=20
+
+ Anna=
+'s Archive has created the world's first preservation archive for
+music b=
+y backing up Spotify's metadata and music files. This massive
+300TB colle=
+ction covers 256 million tracks and 186 million unique
+ISRCs, representin=
+g approximately 99.6% of all Spotify listens. The
+project archives a "lon=
+g tail" of less popular music and makes the
+entire archive openly mirrora=
+ble.=20
+
+=E2=9A=A1=20
+
+QUICK LINKS
+
+ CODE ORANGE: FAIL SMALL =
+=E2=80=94 OUR RESILIENCE PLAN FOLLOWING RECENT
+INCIDENTS (7 MINUTE READ) =
+[21]=20
+
+ A 'Code Orange' at Cloudflare is an incident that requires top=
+
+priority from everyone across the company, with teams working
+cross-fu=
+nctionally as necessary to get the job done while pausing any
+other work.=
+=20
+
+ JSON STRUCTURE: A JSON SCHEMA LANGUAGE YOU'LL LOVE (8 MINUTE READ)=
+
+[22]=20
+
+ JSON Structure is a strictly typed data definition language =
+that
+describes JSON-encoded data so that mapping to and from programming=
+
+languages and databases becomes straightforward.=20
+
+ BIG GPUS DON'T N=
+EED BIG PCS (15 MINUTE READ) [23]=20
+
+ A Raspberry Pi 5 can use powerful =
+GPUs for demanding tasks like AI
+and media transcoding, often achieving p=
+erformance within a few
+percent of a desktop PC.=20
+
+ WHY I DON'T LIKE =
+=E2=80=9CCORRECTION OF ERROR=E2=80=9D (5 MINUTE READ) [24]=20
+
+ Amazon's =
+term for its incident review process, Correction of Error,
+implies that i=
+ncidents occur as a result of errors, which limits the
+benefits available=
+ from the incident review process.=20
+
+ WORDIEST (4 MINUTE READ) [25]=20
+=
+
+ This developer used GPT-5.2 to port an old Android game to iOS - the
+=
+resulting app even got approved on the App Store.=20
+
+Love TLDR? Tell you=
+r friends and get rewards!
+
+ Share your referral link below with friend=
+s to get free TLDR swag!=20
+
+ https://refer.tldr.tech/19465406/3 [26]=20
+=
+
+=09=09 Track your referrals here. [27]=20
+
+Want to advertise in TLDR? =
+=F0=9F=93=B0
+
+ If your company is interested in reaching an audience of=
+ web
+developers and engineering decision makers, you may want to ADVERTIS=
+E
+WITH US [28].=20
+
+Want to work at TLDR? =F0=9F=92=BC
+
+ APPLY HERE=
+ [29], CREATE YOUR OWN ROLE [30] or send a friend's resume
+to jobs@tldr.t=
+ech and get $1k if we hire them! TLDR is one of INC.'S
+BEST BOOTSTRAPPED =
+BUSINESSES [31] of 2025.=20
+
+ If you have any comments or feedback, just =
+respond to this email!=20
+
+Thanks for reading,=20
+Priyam Mohanty, Jenny X=
+u [32] & Ceora Ford=20
+
+ Manage your subscriptions [33] to our other news=
+letters on tech,
+startups, and programming. Or if TLDR Dev isn't for you,=
+ please
+unsubscribe [34].=20
+
+=20
+
+Links:
+------
+[1] https://tldr=
+.tech/dev?utm_source=3Dtldrdev
+[2] https://advertise.tldr.tech/?utm_sourc=
+e=3Dtldrdev&utm_medium=3Dnewsletter&utm_campaign=3Dadvertisetopnav
+[3] ht=
+tps://a.tldrnewsletter.com/web-version?ep=3D1&lc=3D6b0d84e0-a670-11f0-8b4a-=
+c5e0a2ae1fe1&p=3Dd1c9bf02-df21-11f0-b6a2-2f6ce300fdd6&pt=3Dcampaign&t=3D176=
+6405860&s=3Dffcd29403ec4af6dd2e9e6f668713ced8b10a3c1a127ca4a0f87719393ed32c=
+6
+[4] https://www.qawolf.com/?utm_source=3Dtldrwebdev&utm_medium=3Dnewsle=
+tter&utm_campaign=3DACQ_All_Demo_Conversions__NewsletterAudience_-_Newslett=
+er_CutQACycles_20251222-None_Experiment-FALSE&utm_term=3Dheadline-CutYourQA=
+CyclesDownFromHoursToMinutesWithAutomatedTesting&utm_content=3DCutQACycles_=
+ScheduleADemoToLearnMore_None_Headline%3ACutYourQACyclesDownFromHoursToMinu=
+tesWithAutomatedTesting____Newsletter-PrimaryPlacement_20251222_v1_
+[5] h=
+ttps://www.qawolf.com/how-it-works?utm_source=3Dtldrwebdev&utm_medium=3Dnew=
+sletter&utm_campaign=3DACQ_All_Demo_Conversions__NewsletterAudience_-_Newsl=
+etter_CutQACycles_20251222-None_Experiment-FALSE&utm_term=3Dbody-80PercentE=
+ndToEndTestCoverage&utm_content=3DCutQACycles_ScheduleADemoToLearnMore_None=
+_Headline%3ACutYourQACyclesDownFromHoursToMinutesWithAutomatedTesting____Ne=
+wsletter-PrimaryPlacement_20251222_v1_
+[6] https://www.qawolf.com/?utm_so=
+urce=3Dtldrwebdev&utm_medium=3Dnewsletter&utm_campaign=3DACQ_All_Demo_Conve=
+rsions__NewsletterAudience_-_Newsletter_CutQACycles_20251222-None_Experimen=
+t-FALSE&utm_term=3Dbody-QAWolf&utm_content=3DCutQACycles_ScheduleADemoToLea=
+rnMore_None_Headline%3ACutYourQACyclesDownFromHoursToMinutesWithAutomatedTe=
+sting____Newsletter-PrimaryPlacement_20251222_v1_
+[7] https://www.qawolf.=
+com/case-studies/drata?utm_source=3Dtldrwebdev&utm_medium=3Dnewsletter&utm_=
+campaign=3DACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_CutQAC=
+ycles_20251222-None_Experiment-FALSE&utm_term=3Dbody-DratasTeamOf80PlusEngi=
+neers&utm_content=3DCutQACycles_ScheduleADemoToLearnMore_None_Headline%3ACu=
+tYourQACyclesDownFromHoursToMinutesWithAutomatedTesting____Newsletter-Prima=
+ryPlacement_20251222_v1_
+[8] https://www.qawolf.com/?utm_source=3Dtldrweb=
+dev&utm_medium=3Dnewsletter&utm_campaign=3DACQ_All_Demo_Conversions__Newsle=
+tterAudience_-_Newsletter_CutQACycles_20251222-None_Experiment-FALSE&utm_te=
+rm=3Dcta-ScheduleADemoToLearnMore&utm_content=3DCutQACycles_ScheduleADemoTo=
+LearnMore_None_Headline%3ACutYourQACyclesDownFromHoursToMinutesWithAutomate=
+dTesting____Newsletter-PrimaryPlacement_20251222_v1_
+[9] https://abseil.i=
+o/fast/hints.html?utm_source=3Dtldrdev
+[10] https://webkit.org/blog/17660=
+/introducing-css-grid-lanes/?utm_source=3Dtldrdev
+[11] https://blog.ezyan=
+g.com/2025/12/code-review-as-human-alignment-in-the-era-of-llms/?utm_source=
+=3Dtldrdev
+[12] https://blog.konsti.xyz/more-databases-should-be-single-t=
+hreaded/?utm_source=3Dtldrdev
+[13] https://www.planview.com/lp/hub-micro-=
+webinars/?utm_medium=3Dpedm&utm_source=3Dtldr&utm_campaign=3Dhb_stci_dp-off=
+ice-of-the-cto_dgabm_ww_x_us_en&utm_content=3Dintegration-station-micro-ser=
+ies_webinar
+[14] https://gist.github.com/edxeth/c9669f46a04687375fd9150c4=
+874286e?utm_source=3Dtldrdev
+[15] https://github.com/Dicklesworthstone/mi=
+sc_coding_agent_tips_and_scripts/blob/main/DESTRUCTIVE_GIT_COMMAND_CLAUDE_H=
+OOKS_SETUP.md?utm_source=3Dtldrdev
+[16] https://garagehq.deuxfleurs.fr/?u=
+tm_source=3Dtldrdev
+[17] https://github.com/fastserial/lite3?utm_source=
+=3Dtldrdev
+[18] https://rue-lang.dev/?utm_source=3Dtldrdev
+[19] https:/=
+/karpathy.bearblog.dev/year-in-review-2025/?utm_source=3Dtldrdev
+[20] htt=
+ps://annas-archive.li/blog/backing-up-spotify.html?utm_source=3Dtldrdev
+[=
+21] https://blog.cloudflare.com/fail-small-resilience-plan/?utm_source=3Dtl=
+drdev
+[22] https://techcommunity.microsoft.com/blog/messagingonazureblog/=
+json-structure-a-json-schema-language-youll-love/4476852?utm_source=3Dtldrd=
+ev
+[23] https://www.jeffgeerling.com/blog/2025/big-gpus-dont-need-big-pcs=
+?utm_source=3Dtldrdev
+[24] https://surfingcomplexity.blog/2025/12/20/why-=
+i-dont-like-correction-of-error/?utm_source=3Dtldrdev
+[25] https://blog.f=
+sck.com/2025/12/20/wordiest/?utm_source=3Dtldrdev
+[26] https://refer.tldr=
+.tech/19465406/3
+[27] https://hub.sparklp.co/sub_aaa8e06944fa/3
+[28] ht=
+tps://advertise.tldr.tech/?utm_source=3Dtldrdev&utm_medium=3Dnewsletter&utm=
+_campaign=3Dadvertisecta
+[29] https://jobs.ashbyhq.com/tldr.tech
+[30] h=
+ttps://jobs.ashbyhq.com/tldr.tech/c227b917-a6a4-40ce-8950-d3e165357871
+[3=
+1] https://www.linkedin.com/feed/update/urn:li:activity:7401699691039830016=
+/
+[32] https://www.linkedin.com/in/xu-jenny/
+[33] https://tldr.tech/dev=
+/manage?email=3Dmike.mcconigley%40gmail.com
+[34] https://a.tldrnewsletter=
+.com/unsubscribe?ep=3D1&l=3De8d201ca-3e93-11ed-9a32-0241b9615763&lc=3D6b0d8=
+4e0-a670-11f0-8b4a-c5e0a2ae1fe1&p=3Dd1c9bf02-df21-11f0-b6a2-2f6ce300fdd6&pt=
+=3Dcampaign&pv=3D4&spa=3D1766404911&t=3D1766405860&s=3Dd00f46da3cec45e8a45c=
+336c9219a7aa350bda19ea04e30a9d818fa592068caf
+--iL9Tahdf
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html charset=3DUTF-8"><meta charset=3D"UTF-8"><meta name=3D"v=
+iewport" content=3D"width=3Ddevice-width"><meta name=3D"x-apple-disable-mes=
+sage-reformatting"><title>TLDR Dev</title><meta name=3D"color-scheme" conte=
+nt=3D"light dark"><meta name=3D"supported-color-schemes" content=3D"light d=
+ark"><style type=3D"text/css">
+=09=09=09:root {
+=09=09=09=09color-scheme: light dark; supported-color-schemes: light dark;
+=09=09=09}
+=09=09=09
+=09=09=09*,
+=09=09=09*:after,
+=09=09=09*:before {
+=09=09=09=09-webkit-box-sizing: border-box; -moz-box-sizing: border-box; bo=
+x-sizing: border-box;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+=09=09=09}
+=09=09=09
+=09=09=09html,
+=09=09=09body,
+=09=09=09.document {
+=09=09=09=09width: 100% !important; height: 100% !important; margin: 0; pad=
+ding: 0;
+=09=09=09}
+=09=09=09
+=09=09=09body {
+=09=09=09=09-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: g=
+rayscale; text-rendering: optimizeLegibility;
+=09=09=09}
+=09=09=09
+=09=09=09div[style*=3D"margin: 16px 0"] {
+=09=09=09=09margin: 0 !important;
+=09=09=09}
+=09=09=09
+=09=09=09table,
+=09=09=09td {
+=09=09=09=09mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+=09=09=09}
+=09=09=09
+=09=09=09table {
+=09=09=09=09border-spacing: 0; border-collapse: collapse; table-layout: fix=
+ed; margin: 0 auto;
+=09=09=09}
+=09=09=09
+=09=09=09img {
+=09=09=09=09-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+=09=09=09}
+=09=09=09
+=09=09=09*[x-apple-data-detectors] {
+=09=09=09=09color: inherit !important; text-decoration: none !important;
+=09=09=09}
+=09=09=09
+=09=09=09.x-gmail-data-detectors,
+=09=09=09.x-gmail-data-detectors *,
+=09=09=09.aBn {
+=09=09=09=09border-bottom: 0 !important; cursor: default !important;
+=09=09=09}
+=09=09=09
+=09=09=09.btn {
+=09=09=09=09-webkit-transition: all 200ms ease; transition: all 200ms ease;
+=09=09=09}
+=09=09=09
+=09=09=09.btn:hover {
+=09=09=09=09background-color: #f67575; border-color: #f67575;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+=09=09=09}
+=09=09=09
+=09=09=09@media screen and (max-width: 600px) {
+=09=09=09=09.container {
+=09=09=09=09=09width: 100%; margin: auto;
+=09=09=09=09}
+=09=09=09=09.stack {
+=09=09=09=09=09display: block!important; width: 100%!important; max-width: =
+100%!important;
+=09=09=09=09}
+=09=09=09=09.btn {
+=09=09=09=09=09display: block; width: 100%; text-align: center;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09body,
+=09=09=09p,
+=09=09=09td,
+=09=09=09tr,
+=09=09=09.body,
+=09=09=09table,
+=09=09=09h1,
+=09=09=09h2,
+=09=09=09h3,
+=09=09=09h4,
+=09=09=09h5,
+=09=09=09h6,
+=09=09=09div,
+=09=09=09span {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09body,
+=09=09=09=09p,
+=09=09=09=09td,
+=09=09=09=09tr,
+=09=09=09=09.body,
+=09=09=09=09table,
+=09=09=09=09h1,
+=09=09=09=09h2,
+=09=09=09=09h3,
+=09=09=09=09h4,
+=09=09=09=09h5,
+=09=09=09=09h6,
+=09=09=09=09div,
+=09=09=09=09span {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09a {
+=09=09=09=09color: inherit !important; text-decoration: underline !importan=
+t;
+=09=09=09}
+
+=09=09</style><!--[if mso | ie]>
+=09=09<style type=3D"text/css">
+=09=09=09a {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09a {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09 </style>
+=09=09=09<![endif]--></head><body class=3D"">
+
+
+
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">Jeff Dean =
+and Sanjay Ghemawat, some of Google=E2=80=99s most important engineers for =
+over 25 years, wrote a guide on optimizing software performance&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;</div>
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align=3D"center" class=3D"document"><tbody><tr><td valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"container" width=3D"600"><tbody><tr class=3D"inner-body"><td>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr class=3D"header"><td bgcolor=3D"" class=3D"containe=
+r">
+
+<table width=3D"100%"><tbody><tr><td class=3D"container">
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"margin-top: 0px;" width=3D"100%"><tbody><tr><td style=
+=3D"padding: 0px;">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div style=3D"text-align: center;">
+<span style=3D"margin-right: 0px;"><a href=3D"https://tracking.tldrnewslett=
+er.com/CL0/https:%2F%2Ftldr.tech%2Fdev%3Futm_source=3Dtldrdev/1/0100019b45f=
+e6aec-7b86cb70-7886-4a1a-af80-3cfb5432a973-000000/4SmyJsfFBlVlxxK6_dsDZjNHP=
+mbBQhCgm9KTstKWUnw=3D436" rel=3D"noopener noreferrer" target=3D"_blank"><sp=
+an>Sign Up</span></a>
+|<span style=3D"margin-right: 2px; margin-left: 2px;"><a href=3D"https://tr=
+acking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_sour=
+ce=3Dtldrdev%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertisetopnav/1/0=
+100019b45fe6aec-7b86cb70-7886-4a1a-af80-3cfb5432a973-000000/0J6EejuMpGGmA-5=
+hg093MaTx25ODAUWCo1puy0kDL_g=3D436" rel=3D"noopener noreferrer" target=3D"_=
+blank"><span>Advertise</span></a></span>|<span style=3D"margin-left: 2px;">=
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsle=
+tter.com%2Fweb-version%3Fep=3D1%26lc=3D6b0d84e0-a670-11f0-8b4a-c5e0a2ae1fe1=
+%26p=3Dd1c9bf02-df21-11f0-b6a2-2f6ce300fdd6%26pt=3Dcampaign%26t=3D176640586=
+0%26s=3Dffcd29403ec4af6dd2e9e6f668713ced8b10a3c1a127ca4a0f87719393ed32c6/1/=
+0100019b45fe6aec-7b86cb70-7886-4a1a-af80-3cfb5432a973-000000/hL96W7xsG-YRzp=
+Tlc8-AtubP34tqXCF3eDmY9kKBaHs=3D436"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"text-=
+align: center;"><span data-darkreader-inline-color=3D"" style=3D"--darkread=
+er-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30=
+px;">T</span><span style=3D"font-size: 30px;"><span data-darkreader-inline-=
+color=3D"" style=3D"color: rgb(232, 192, 96) !important; --darkreader-inlin=
+e-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-colo=
+r=3D"" style=3D"color: rgb(101, 195, 173) !important; --darkreader-inline-c=
+olor:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-=
+color=3D"" style=3D"--darkreader-inline-color:#dd6e6e; color: rgb(220, 107,=
+ 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr id=3D"together-with"><td align=3D"cent=
+er" height=3D"20" style=3D"vertical-align:middle !important;" valign=3D"mid=
+dle" width=3D"100%"><strong style=3D"vertical-align:middle !important; heig=
+ht: 100%;">Together With </strong>
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.qawolf.c=
+om%2F%3Futm_source=3Dtldrwebdev%26utm_medium=3Dnewsletter%26utm_campaign=3D=
+ACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_CutQACycles_20251=
+222-None_Experiment-FALSE%26utm_term=3Dheadline-CutYourQACyclesDownFromHour=
+sToMinutesWithAutomatedTesting%26utm_content=3DCutQACycles_ScheduleADemoToL=
+earnMore_None_Headline%253ACutYourQACyclesDownFromHoursToMinutesWithAutomat=
+edTesting____Newsletter-PrimaryPlacement_20251222_v1_/1/0100019b45fe6aec-7b=
+86cb70-7886-4a1a-af80-3cfb5432a973-000000/tQl_CIg-RJ4BOMkO65RNP1To4TbG6VhU2=
+Yi54QuJ004=3D436"><img src=3D"https://images.tldr.tech/qawolf-3.png" valign=
+=3D"middle" style=3D"vertical-align: middle !important; height: 100%;" alt=
+=3D"QA Wolf"></a></td></tr></tbody></table>
+
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody><tr=
+><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0;=
+">
+<div style=3D"text-align: center;">
+
+<h1><strong>&nbsp;TLDR Dev <span id=3D"date">2025-12-22</span></strong></h1=
+>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody><tr=
+ id=3D"sponsy-copy"><td class=3D"container" style=3D"padding: 15px 15px;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.qawolf.com%2F%3Futm_source=3Dtldrwebdev%26utm_mediu=
+m=3Dnewsletter%26utm_campaign=3DACQ_All_Demo_Conversions__NewsletterAudienc=
+e_-_Newsletter_CutQACycles_20251222-None_Experiment-FALSE%26utm_term=3Dhead=
+line-CutYourQACyclesDownFromHoursToMinutesWithAutomatedTesting%26utm_conten=
+t=3DCutQACycles_ScheduleADemoToLearnMore_None_Headline%253ACutYourQACyclesD=
+ownFromHoursToMinutesWithAutomatedTesting____Newsletter-PrimaryPlacement_20=
+251222_v1_/2/0100019b45fe6aec-7b86cb70-7886-4a1a-af80-3cfb5432a973-000000/U=
+Pc1jdGe_jSU94W1vQgAGWcAjb5AVxHLzWH_OzTdxfI=3D436">
+                                    <span>
+                                        <strong>Cut your QA cycles down fro=
+m hours to minutes with automated testing (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    If slow QA processes bottleneck you or =
+your software engineering team and you're releasing slower because of it =
+=E2=80=94 you need to check out QA Wolf.<p></p><p>They get engineering team=
+s to <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.qaw=
+olf.com%2Fhow-it-works%3Futm_source=3Dtldrwebdev%26utm_medium=3Dnewsletter%=
+26utm_campaign=3DACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_=
+CutQACycles_20251222-None_Experiment-FALSE%26utm_term=3Dbody-80PercentEndTo=
+EndTestCoverage%26utm_content=3DCutQACycles_ScheduleADemoToLearnMore_None_H=
+eadline%253ACutYourQACyclesDownFromHoursToMinutesWithAutomatedTesting____Ne=
+wsletter-PrimaryPlacement_20251222_v1_/1/0100019b45fe6aec-7b86cb70-7886-4a1=
+a-af80-3cfb5432a973-000000/QohUgOqq5iJLqPk313z-jTBNRdiOpzwdGP6rs5gU7WA=3D43=
+6" rel=3D"noopener noreferrer nofollow" target=3D"_blank"><span>80% automat=
+ed end-to-end test coverage</span></a> and help them <strong>ship 5x faster=
+ </strong>by reducing QA cycles from hours to minutes.</p>
+
+<p><a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.qawol=
+f.com%2F%3Futm_source=3Dtldrwebdev%26utm_medium=3Dnewsletter%26utm_campaign=
+=3DACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_CutQACycles_20=
+251222-None_Experiment-FALSE%26utm_term=3Dbody-QAWolf%26utm_content=3DCutQA=
+Cycles_ScheduleADemoToLearnMore_None_Headline%253ACutYourQACyclesDownFromHo=
+ursToMinutesWithAutomatedTesting____Newsletter-PrimaryPlacement_20251222_v1=
+_/1/0100019b45fe6aec-7b86cb70-7886-4a1a-af80-3cfb5432a973-000000/NG9q7iFfou=
+nzpwiXOsxlSROhx1QxXpHnoesvpsW9m1g=3D436" rel=3D"noopener noreferrer nofollo=
+w" target=3D"_blank"><span>QA Wolf</span></a> takes testing off your plate.=
+ They can get you:</p>
+
+<ul>
+<li>Unlimited parallel test runs</li>
+<li>24-hour maintenance and on-demand test creation</li>
+<li>Human-verified bug reports sent directly to your team</li>
+<li>Zero flakes, guaranteed</li>
+</ul>
+
+<p>The result? <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F=
+%2Fwww.qawolf.com%2Fcase-studies%2Fdrata%3Futm_source=3Dtldrwebdev%26utm_me=
+dium=3Dnewsletter%26utm_campaign=3DACQ_All_Demo_Conversions__NewsletterAudi=
+ence_-_Newsletter_CutQACycles_20251222-None_Experiment-FALSE%26utm_term=3Db=
+ody-DratasTeamOf80PlusEngineers%26utm_content=3DCutQACycles_ScheduleADemoTo=
+LearnMore_None_Headline%253ACutYourQACyclesDownFromHoursToMinutesWithAutoma=
+tedTesting____Newsletter-PrimaryPlacement_20251222_v1_/1/0100019b45fe6aec-7=
+b86cb70-7886-4a1a-af80-3cfb5432a973-000000/5TVsGf9vxSjJaIuJto-g3QXoTCJdYrmi=
+Xn7a4pkxJuM=3D436" rel=3D"noopener noreferrer nofollow" target=3D"_blank"><=
+span>Drata's team of 80+ engineers</span></a> achieved 4x more test cases a=
+nd <strong>86% faster QA cycles</strong>.</p>
+
+<p>No flakes, no delays, just better QA =E2=80=94 that's QA Wolf.</p>
+
+<p><a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.qawol=
+f.com%2F%3Futm_source=3Dtldrwebdev%26utm_medium=3Dnewsletter%26utm_campaign=
+=3DACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_CutQACycles_20=
+251222-None_Experiment-FALSE%26utm_term=3Dcta-ScheduleADemoToLearnMore%26ut=
+m_content=3DCutQACycles_ScheduleADemoToLearnMore_None_Headline%253ACutYourQ=
+ACyclesDownFromHoursToMinutesWithAutomatedTesting____Newsletter-PrimaryPlac=
+ement_20251222_v1_/1/0100019b45fe6aec-7b86cb70-7886-4a1a-af80-3cfb5432a973-=
+000000/sUL9kVAlpficCWoKU5TqBt0CctQ1slPp-RuP2o2QzT0=3D436" rel=3D"noopener n=
+oreferrer nofollow" target=3D"_blank"><span>Schedule a demo to learn more</=
+span></a>
+
+
+</p>
+</span></span></div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=3D""><td class=3D"container">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td style=3D"padding: 0px;">
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=A7=91=E2=80=8D=F0=9F=92=BB</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Articles &amp; Tutorials</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fabseil.io%2Ffast%2Fhints.html%3Futm_source=3Dtldrdev/1/=
+0100019b45fe6aec-7b86cb70-7886-4a1a-af80-3cfb5432a973-000000/QiaQ-RktFtBDnC=
+MtqBjq_hrAtP1B-JBgvJE6xEJXP5E=3D436">
+                                    <span>
+                                        <strong>Performance Hints (40 minut=
+e read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Jeff Dean and Sanjay Ghemawat, some of =
+Google's most important engineers for over 25 years, wrote a guide on optim=
+izing software performance. Performance needs to be considered early in cri=
+tical code paths instead of solely relying on post-development profiling fo=
+r optimization. The guide also covers algorithmic improvements, efficient m=
+emory representation, reducing allocations, avoiding unnecessary work, and =
+using parallelization.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwebkit.org%2Fblog%2F17660%2Fintroducing-css-grid-lanes%=
+2F%3Futm_source=3Dtldrdev/1/0100019b45fe6aec-7b86cb70-7886-4a1a-af80-3cfb54=
+32a973-000000/vybKfaaUyLtunXsQhXAorLLEkbq-IfSuPNAScZmaZto=3D436">
+                                    <span>
+                                        <strong>Introducing CSS Grid Lanes =
+(10 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    CSS Grid Lanes is a new web standard to=
+ natively create flexible, dynamic masonry-style layouts on the web without=
+ JavaScript. This feature uses `display: grid-lanes` along with existing CS=
+S Grid properties like `grid-template-columns` or `grid-template-rows` to d=
+efine the layout's structure. It supports advanced capabilities such as var=
+iable lane sizes, item spanning, explicit placement, and introduces a "tole=
+rance" property for fine-tuning item packing order.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=A7=A0</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Opinions &amp; Advice</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fblog.ezyang.com%2F2025%2F12%2Fcode-review-as-human-alig=
+nment-in-the-era-of-llms%2F%3Futm_source=3Dtldrdev/1/0100019b45fe6aec-7b86c=
+b70-7886-4a1a-af80-3cfb5432a973-000000/5gUBScWS3ioxTKtt5E6pJVftluTOJOgrRKil=
+Z5pkN7o=3D436">
+                                    <span>
+                                        <strong>Code review as human alignm=
+ent, in the era of LLMs (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Code review within teams should change =
+to be primarily a human alignment mechanism. Large language models have no =
+memory and have to rediscover everything in the system from first principle=
+s every time they are run. Humans can collectively maintain a shared vision=
+ of what the system should do. Code review should reconfigure itself around=
+ this purpose.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fblog.konsti.xyz%2Fmore-databases-should-be-single-threa=
+ded%2F%3Futm_source=3Dtldrdev/1/0100019b45fe6aec-7b86cb70-7886-4a1a-af80-3c=
+fb5432a973-000000/kbTTcSh3jO2nEQGBZgCQnFJgs7PJADBdFgP6dScYNmQ=3D436">
+                                    <span>
+                                        <strong>More databases should be si=
+ngle-threaded (8 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    From a DX perspective, every transactio=
+n within a shard would always be serializable and never needs to be retried=
+, making it much easier to think about. A single-threaded database would be=
+ fully horizontally scalable and have extremely high per-thread throughput,=
+ as it wouldn't need to sync with other threads. It would be a much more pr=
+edictable system. While more restrictive, there would be no more hidden rac=
+e conditions.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=9A=80</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Launches &amp; Tools</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.planview.com%2Flp%2Fhub-micro-webinars%2F%3Futm_med=
+ium=3Dpedm%26utm_source=3Dtldr%26utm_campaign=3Dhb_stci_dp-office-of-the-ct=
+o_dgabm_ww_x_us_en%26utm_content=3Dintegration-station-micro-series_webinar=
+/1/0100019b45fe6aec-7b86cb70-7886-4a1a-af80-3cfb5432a973-000000/4cRrjVU7IMA=
+yEvS_P3j_nOW-TgVr5gKM3N5M7tw09g8=3D436">
+                                    <span>
+                                        <strong>15-Minute Demos: Jira + Ser=
+viceNow Integrations With Planview (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Planview Hub Bytes is a series of <a cl=
+ass=3D"underline" href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F=
+%2Fwww.planview.com%2Flp%2Fhub-micro-webinars%2F%3Futm_medium=3Dpedm%26utm_=
+source=3Dtldr%26utm_campaign=3Dhb_stci_dp-office-of-the-cto_dgabm_ww_x_us_e=
+n%26utm_content=3Dintegration-station-micro-series_webinar/2/0100019b45fe6a=
+ec-7b86cb70-7886-4a1a-af80-3cfb5432a973-000000/fw1pkEbsUlymMgH2Mz3_CY_HED2D=
+SvmmjqSjCAPM0SQ=3D436" rel=3D"noopener noreferrer nofollow" target=3D"_blan=
+k"><span>15-minute expert-led sessions</span></a> covering the most request=
+ed integrations. Watch solution architects demo Jira + ServiceNow cross-fun=
+ctional workflows, no-code integration setup, and connecting custom in-hous=
+e tools. After the quick demo, you'll have a live Q&amp;A with architects w=
+ho've deployed these at hundreds of organizations. <a class=3D"underline" h=
+ref=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.planview.com=
+%2Flp%2Fhub-micro-webinars%2F%3Futm_medium=3Dpedm%26utm_source=3Dtldr%26utm=
+_campaign=3Dhb_stci_dp-office-of-the-cto_dgabm_ww_x_us_en%26utm_content=3Di=
+ntegration-station-micro-series_webinar/3/0100019b45fe6aec-7b86cb70-7886-4a=
+1a-af80-3cfb5432a973-000000/Z4KRVZ4AFbvhwrRgPc0csVGRUKYHXXs-Kw1R2VMZGaA=3D4=
+36" rel=3D"noopener noreferrer nofollow" target=3D"_blank"><span>Register f=
+or the series</span></a>
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgist.github.com%2Fedxeth%2Fc9669f46a04687375fd9150c4874=
+286e%3Futm_source=3Dtldrdev/1/0100019b45fe6aec-7b86cb70-7886-4a1a-af80-3cfb=
+5432a973-000000/CXW8QGx8a4NJDvQou0TJw9U5yRKVO4VZKIFdyIL__Ak=3D436">
+                                    <span>
+                                        <strong>Claude's frontend design sk=
+ill (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    This gist contains a Claude skill for c=
+reating production-grade frontend interfaces that avoid generic AI slop aes=
+thetics. The user provides frontend requirements, and the AI generates prod=
+uction-grade and functional code with visually striking and memorable desig=
+n. The skill instructs the agent to never use generic AI-generated aestheti=
+cs, to interpret prompts creatively, and to make unexpected choices that fe=
+el genuinely designed for the context.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgithub.com%2FDicklesworthstone%2Fmisc_coding_agent_tips=
+_and_scripts%2Fblob%2Fmain%2FDESTRUCTIVE_GIT_COMMAND_CLAUDE_HOOKS_SETUP.md%=
+3Futm_source=3Dtldrdev/1/0100019b45fe6aec-7b86cb70-7886-4a1a-af80-3cfb5432a=
+973-000000/bsw7snzpVK-7QrcGye89Efc6QKVJdLBgbpic_BDj12A=3D436">
+                                    <span>
+                                        <strong>Destructive Git Command Pro=
+tection for Claude Code (17 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    AI agents can execute destructive comma=
+nds without understanding the consequences. They can do this even if the AG=
+ENTS.md file forbids such commands. This post provides a Claude Code hook t=
+hat blocks certain git commands before they can run. The hook uses regex pa=
+ttern matching, so clever or obfuscated commands may be able to bypass it.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgaragehq.deuxfleurs.fr%2F%3Futm_source=3Dtldrdev/1/0100=
+019b45fe6aec-7b86cb70-7886-4a1a-af80-3cfb5432a973-000000/uDJuCAWH7_lwtdpWzc=
+36dWnVMHD1xZ316eGvow1_RcI=3D436">
+                                    <span>
+                                        <strong>Garage (Website)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Garage is a lightweight, efficient, and=
+ resilient S3 object store designed for reliability. Capable of running out=
+side traditional datacenters, it guarantees data redundancy through 3-zone =
+replication. Garage is a self-contained, dependency-free binary that is fas=
+t to deploy on various Linux distributions and machines.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgithub.com%2Ffastserial%2Flite3%3Futm_source=3Dtldrdev/=
+1/0100019b45fe6aec-7b86cb70-7886-4a1a-af80-3cfb5432a973-000000/wVTSvQPxMYxW=
+u3M52tfr2Se69WMHSx24qTPkSUdhcEs=3D436">
+                                    <span>
+                                        <strong>TRON (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Lite=C2=B3 (TRON) is a zero-copy, schem=
+aless binary serialization format that organizes data as a B-tree within a =
+single contiguous buffer. This design allows for direct, O(log n) access an=
+d mutation of data fields without traditional parsing or serialization step=
+s. It supports conversion to/from JSON, but is much more performant.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Frue-lang.dev%2F%3Futm_source=3Dtldrdev/1/0100019b45fe6a=
+ec-7b86cb70-7886-4a1a-af80-3cfb5432a973-000000/IhSRm4ZUlLAglJzppZ34egUgqJr_=
+YOkZKPDKOEe9d7Y=3D436">
+                                    <span>
+                                        <strong>Rue (Website)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Rue is a memory-safe language that is h=
+igher-level than Rust, but lower-level than Go. It features a simple syntax=
+ inspired by various programming languages. Rue compiles directly to native=
+ code. It is still in early development.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=8E=81</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><strong><h1>Miscellaneous</h1></strong><=
+/div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fkarpathy.bearblog.dev%2Fyear-in-review-2025%2F%3Futm_so=
+urce=3Dtldrdev/1/0100019b45fe6aec-7b86cb70-7886-4a1a-af80-3cfb5432a973-0000=
+00/ro6IbfVfVIUx4UfeOxrBYHUVJ9fM_QQi2YlUoJZglYc=3D436">
+                                    <span>
+                                        <strong>2025 LLM Year in Review (9 =
+minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    2025 was an eventful year for LLMs, wit=
+h paradigm shifts that redefined the field. Reinforcement Learning from Ver=
+ifiable Rewards (RLVR) came up as a new training stage, allowing LLMs to de=
+velop reasoning strategies and driving much of the year's capability progre=
+ss. The year also saw the rise of new application layers, local AI agents l=
+ike Claude Code, "vibe coding" that democratized programming, and early hin=
+ts of a visual LLM GUI.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fannas-archive.li%2Fblog%2Fbacking-up-spotify.html%3Futm=
+_source=3Dtldrdev/1/0100019b45fe6aec-7b86cb70-7886-4a1a-af80-3cfb5432a973-0=
+00000/ODZS1bLVaBL6A1YEiRyg51v4L3kcM3wPj2Oomko7drk=3D436">
+                                    <span>
+                                        <strong>Backing up Spotify (26 minu=
+te read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Anna's Archive has created the world's =
+first preservation archive for music by backing up Spotify's metadata and m=
+usic files. This massive 300TB collection covers 256 million tracks and 186=
+ million unique ISRCs, representing approximately 99.6% of all Spotify list=
+ens. The project archives a "long tail" of less popular music and makes the=
+ entire archive openly mirrorable.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=E2=9A=
+=A1</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fblog.cloudflare.com%2Ffail-small-resilience-plan%2F%3Fu=
+tm_source=3Dtldrdev/1/0100019b45fe6aec-7b86cb70-7886-4a1a-af80-3cfb5432a973=
+-000000/KsU4_MvJco83m1en_k25POleTpSlHyBQsc1XPb8zm34=3D436">
+                                    <span>
+                                        <strong>Code Orange: Fail Small =E2=
+=80=94 our resilience plan following recent incidents (7 minute read)</stro=
+ng>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    A 'Code Orange' at Cloudflare is an inc=
+ident that requires top priority from everyone across the company, with tea=
+ms working cross-functionally as necessary to get the job done while pausin=
+g any other work.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Ftechcommunity.microsoft.com%2Fblog%2Fmessagingonazurebl=
+og%2Fjson-structure-a-json-schema-language-youll-love%2F4476852%3Futm_sourc=
+e=3Dtldrdev/1/0100019b45fe6aec-7b86cb70-7886-4a1a-af80-3cfb5432a973-000000/=
+In37QkAgpygGnUSvLE2mEmd3EVaPhGnnBzJhYlRjlek=3D436">
+                                    <span>
+                                        <strong>JSON Structure: A JSON sche=
+ma language you'll love (8 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    JSON Structure is a strictly typed data=
+ definition language that describes JSON-encoded data so that mapping to an=
+d from programming languages and databases becomes straightforward.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.jeffgeerling.com%2Fblog%2F2025%2Fbig-gpus-dont-need=
+-big-pcs%3Futm_source=3Dtldrdev/1/0100019b45fe6aec-7b86cb70-7886-4a1a-af80-=
+3cfb5432a973-000000/PPPq298iY2NzZMJXQY6_GP0O7pjF3UySvw4kr_j89Gg=3D436">
+                                    <span>
+                                        <strong>Big GPUs don't need big PCs=
+ (15 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    A Raspberry Pi 5 can use powerful GPUs =
+for demanding tasks like AI and media transcoding, often achieving performa=
+nce within a few percent of a desktop PC.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fsurfingcomplexity.blog%2F2025%2F12%2F20%2Fwhy-i-dont-li=
+ke-correction-of-error%2F%3Futm_source=3Dtldrdev/1/0100019b45fe6aec-7b86cb7=
+0-7886-4a1a-af80-3cfb5432a973-000000/P9TuqJcZ_ceKLhG4oO6A9IHrLHF_sVaa46r2G-=
+39gOI=3D436">
+                                    <span>
+                                        <strong>Why I don't like =E2=80=9CC=
+orrection of Error=E2=80=9D (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Amazon's term for its incident review p=
+rocess, Correction of Error, implies that incidents occur as a result of er=
+rors, which limits the benefits available from the incident review process.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fblog.fsck.com%2F2025%2F12%2F20%2Fwordiest%2F%3Futm_sour=
+ce=3Dtldrdev/1/0100019b45fe6aec-7b86cb70-7886-4a1a-af80-3cfb5432a973-000000=
+/zogCEQHVob8QOOG1_uyR3PMfOoavklIl781MTqL8Dv0=3D436">
+                                    <span>
+                                        <strong>Wordiest (4 minute read)</s=
+trong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    This developer used GPT-5.2 to port an =
+old Android game to iOS - the resulting app even got approved on the App St=
+ore.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"word-break=
+: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class=3D"container" style=3D"padding: 0px 10px 15px;">
+<div class=3D"text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align=3D"left" style=3D"padding: 10px;">
+<div class=3D"text-block">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.t=
+ech%2F19465406%2F3/1/0100019b45fe6aec-7b86cb70-7886-4a1a-af80-3cfb5432a973-=
+000000/K0jZyXYfP_1ZAIpKHpYTaCADUKxWzdjy_a4ilMKdHc4=3D436" style=3D"color: #=
+464ba4; text-decoration: underline;">https://refer.tldr.tech/19465406/3</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align=3D"left" style=3D"padding:5px 10px;">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.=
+co%2Fsub_aaa8e06944fa%2F3/1/0100019b45fe6aec-7b86cb70-7886-4a1a-af80-3cfb54=
+32a973-000000/fVdPnO3irq53Orxbg8zG5tou5Y-nNfVJTrIARuXSbUI=3D436" style=3D"f=
+ont-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block; =
+ text-decoration: underline;"><span style=3D"mso-text-raise:13pt; text-deco=
+ration: underline;">Track your referrals here.</span></a>
+</td></tr></tbody></table>
+
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"word-break=
+: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to advertise in TLDR? =F0=9F=93=B0
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+If your company is interested in reaching an audience of web developers and=
+ engineering decision makers, you may want to <a href=3D"https://tracking.t=
+ldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=3Dtld=
+rdev%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertisecta/1/0100019b45fe=
+6aec-7b86cb70-7886-4a1a-af80-3cfb5432a973-000000/qyUUa5m8uAdXzdi-4s_mhVtOly=
+TF1NaiXFXXTKhJwrY=3D436"><strong><span>advertise with us</span></strong></a=
+>.
+</div>
+<br>
+
+<!-- New "Want to work at TLDR?" section -->
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to work at TLDR? =F0=9F=92=BC
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech/1/0100019b45fe6aec-7b86cb70-7886-4a1a-af80-3cfb5432a973-00=
+0000/MqVFK5tJeq86L3QFteMV9rKJkEhzb7jUUGE0H8R7-XM=3D436" rel=3D"noopener nor=
+eferrer" style=3D"color: #0000EE; text-decoration: underline;" target=3D"_b=
+lank"><strong>Apply here</strong></a>,
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech%2Fc227b917-a6a4-40ce-8950-d3e165357871/1/0100019b45fe6aec-=
+7b86cb70-7886-4a1a-af80-3cfb5432a973-000000/sfCN0YgmornxlxQzA9WqHp52ZHTMw1A=
+cz_10XJuzTrU=3D436" rel=3D"noopener noreferrer" style=3D"color: #0000EE; te=
+xt-decoration: underline;" target=3D"_blank"><strong>create your own role</=
+strong></a> or send a friend's resume to <a href=3D"mailto:jobs@tldr.tech" =
+style=3D"color: #0000EE; text-decoration: underline;">jobs@tldr.tech</a> an=
+d get $1k if we hire them! TLDR is one of <a href=3D"https://tracking.tldrn=
+ewsletter.com/CL0/https:%2F%2Fwww.linkedin.com%2Ffeed%2Fupdate%2Furn:li:act=
+ivity:7401699691039830016%2F/1/0100019b45fe6aec-7b86cb70-7886-4a1a-af80-3cf=
+b5432a973-000000/jhePRsG3CCmruGrrXHVXlKkHVrP1ykT-aHwI49hsKoE=3D436" rel=3D"=
+noopener noreferrer" style=3D"color: #0000EE; text-decoration: underline;" =
+target=3D"_blank"><strong>Inc.'s Best Bootstrapped businesses</strong></a> =
+of 2025.
+</div>
+<br>
+
+<div class=3D"text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<span>Priyam Mohanty</span>, <a href=3D"https://tracking.tldrnewsletter.com=
+/CL0/https:%2F%2Fwww.linkedin.com%2Fin%2Fxu-jenny%2F/1/0100019b45fe6aec-7b8=
+6cb70-7886-4a1a-af80-3cfb5432a973-000000/3Fz40CU5NNfUQVrwmoeRMmCAUVlo1YFh3O=
+dndYQbdIA=3D436"><span>Jenny Xu</span></a> &amp; <span>Ceora Ford</span>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div class=3D"text-block" id=3D"testing-id">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2F=
+dev%2Fmanage%3Femail=3Dmike.mcconigley%2540gmail.com/1/0100019b45fe6aec-7b8=
+6cb70-7886-4a1a-af80-3cfb5432a973-000000/u-A8XlPwDtdjCC-e4JizKYXqJCKO0f9Fz1=
+igi1uk_mo=3D436">Manage your subscriptions</a> to our other newsletters on =
+tech, startups, and programming. Or if TLDR Dev isn't for you, please <a hr=
+ef=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.=
+com%2Funsubscribe%3Fep=3D1%26l=3De8d201ca-3e93-11ed-9a32-0241b9615763%26lc=
+=3D6b0d84e0-a670-11f0-8b4a-c5e0a2ae1fe1%26p=3Dd1c9bf02-df21-11f0-b6a2-2f6ce=
+300fdd6%26pt=3Dcampaign%26pv=3D4%26spa=3D1766404911%26t=3D1766405860%26s=3D=
+d00f46da3cec45e8a45c336c9219a7aa350bda19ea04e30a9d818fa592068caf/1/0100019b=
+45fe6aec-7b86cb70-7886-4a1a-af80-3cfb5432a973-000000/qPfjyk_Q5ZnIglVq-lcLF2=
+ydmLu7i8KkAIbJ5QvMY-o=3D436">unsubscribe</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+
+
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+
+<img alt=3D"" src=3D"http://tracking.tldrnewsletter.com/CI0/0100019b45fe6ae=
+c-7b86cb70-7886-4a1a-af80-3cfb5432a973-000000/IWalQNsT1RvUwkLHPtI9dofV5mh8f=
+YBvhYc2lfIf4Z8=3D436" style=3D"display: none; width: 1px; height: 1px;">
+</body></html>
+--iL9Tahdf--

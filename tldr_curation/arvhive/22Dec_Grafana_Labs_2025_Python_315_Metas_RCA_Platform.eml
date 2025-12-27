@@ -1,0 +1,1448 @@
+Delivered-To: mike.mcconigley@gmail.com
+Received: by 2002:ac9:40c9:0:b0:605:93f6:5e02 with SMTP id y9csp1900941ocg;
+        Mon, 22 Dec 2025 04:12:41 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IGfLPLflMtFu0QeAYa+u0JQBOp42QAC3GfXYs6Tm8NHFHuRu2nq05wEMxjAnx8rytyV22w8
+X-Received: by 2002:a05:620a:372a:b0:862:8fbf:f8e7 with SMTP id af79cd13be357-8c08fabd620mr1545381285a.72.1766405560822;
+        Mon, 22 Dec 2025 04:12:40 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1766405560; cv=none;
+        d=google.com; s=arc-20240605;
+        b=FfUfsHqTFhYYE40sbokgVKDihmhd9O6DXT2M7BztM8NzlPtT6GU+l7oKQl9+ndu/es
+         H8OpeggRIH5VSdtYSkI4EkDvlQ+EnbGUuoj81hR4553PPsHQGPWuPIZ6Zi+1FulpUZIf
+         ZAROGUX6bJDQ9VVtACK6cXSOkSoJjdSUeYVmloXKrvwbqM0sgBPyH5pAXH43Ov3O8m0X
+         xzgEhzU/oasTqM2wbQ6sUZm+WoaqDnP919JB076LZU3lYPGUYmSbLBvrkcu6Btg4g1oh
+         C14wV7LoukHfaTr8wHGfmJSUzWE7UUbmDpboXGQAMYtpIqORBGDHc6lLLkwtVEc6pZF4
+         J0yg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:date:mime-version:list-unsubscribe-post
+         :list-unsubscribe:subject:to:from:dkim-signature:dkim-signature;
+        bh=Mp4Mc0Kuu+kRsdOAOiCDSOQ2oOjaOrASSXr8huSpbrc=;
+        fh=tUTYCbTOUI69DxYKXGXRz08XnPP7jEKRU6E5rS0DFR4=;
+        b=h2xH7n0lzgGnf7zQLG9nkPK8d+R6q8gHIQ24Q39X+WtfPdZzmtCVT6VI1G/ydq9n1M
+         xdpCq2TK8JhbRurwRh1PwD57aTnJ2AD9YpBTp7SBm7cGD7PM7OuQksJJWv+jBaJ1vqVC
+         68NUP71/7uS0KvD+xl3a2tU+tAMmwFnd+Ty4sNCKg7PUqE84XTWC5o5BIWWGHOR9/UwZ
+         q3Kxa543P/koDlTOn5pFl6Uyvxac3Ed9vWGbO337/lLPkjFgvTv3F2QIeZtMmOA1Ob+J
+         NWy3h/1+uYaer5Ix8iapS9rLZhEx8/fzTGne2WhonH/FJJGqZVH/yF97h3/85MvmToGX
+         crhA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b="V/5yKAP5";
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=OgcQRJR8;
+       spf=pass (google.com: domain of 0100019b45f9d845-501e5086-52b0-40e6-8103-fd44ec6ca78d-000000@dailyupdate.tldrnewsletter.com designates 54.240.123.113 as permitted sender) smtp.mailfrom=0100019b45f9d845-501e5086-52b0-40e6-8103-fd44ec6ca78d-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+Return-Path: <0100019b45f9d845-501e5086-52b0-40e6-8103-fd44ec6ca78d-000000@dailyupdate.tldrnewsletter.com>
+Received: from a123-113.smtp-out.amazonses.com (a123-113.smtp-out.amazonses.com. [54.240.123.113])
+        by mx.google.com with ESMTPS id af79cd13be357-8c096685a0fsi1151129585a.79.2025.12.22.04.12.40
+        for <mike.mcconigley@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 22 Dec 2025 04:12:40 -0800 (PST)
+Received-SPF: pass (google.com: domain of 0100019b45f9d845-501e5086-52b0-40e6-8103-fd44ec6ca78d-000000@dailyupdate.tldrnewsletter.com designates 54.240.123.113 as permitted sender) client-ip=54.240.123.113;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b="V/5yKAP5";
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=OgcQRJR8;
+       spf=pass (google.com: domain of 0100019b45f9d845-501e5086-52b0-40e6-8103-fd44ec6ca78d-000000@dailyupdate.tldrnewsletter.com designates 54.240.123.113 as permitted sender) smtp.mailfrom=0100019b45f9d845-501e5086-52b0-40e6-8103-fd44ec6ca78d-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ygiuxamnxevikrd5dtfwanslhs6b24mt; d=tldrnewsletter.com;
+	t=1766405560;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type;
+	bh=8+YG9o5kRU7XlT8GhaTwf9oVEz/LWMEl+SwTi7PDezE=;
+	b=V/5yKAP5OF8t8WleHBUxuKurWpon6/CWLzFOMZ/Flj2HtolhaiJuLkjq26NTHtps
+	D4DVrlj1BDgVvyITSLza7NyHWBcTT8EgRHzcNDfWwczd148aUu3ILx88iQy1r5MuyQ/
+	Mu4PGblSGh4+WjpcCPjUyVdKDe+GRXz6mGV5T8uI=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1766405560;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type:Feedback-ID;
+	bh=8+YG9o5kRU7XlT8GhaTwf9oVEz/LWMEl+SwTi7PDezE=;
+	b=OgcQRJR8A25HOvhsMtBduEsst0AGxXoKOPxPOFUK7VYWvzwkYUERn/1EGaoKaPrh
+	ZZsGkS+lnS38i4mTf/2thBNdDJxTiyYPJY2uWIfi5ZknClDkF/uG/NgGewH19DKYVCH
+	9j58ZKl0HSk3zsvITEkT6Jot4alE49sFx5d5VhC4=
+From: TLDR DevOps <dan@tldrnewsletter.com>
+To: mike.mcconigley@gmail.com
+Subject: Grafana Labs 2025 =?utf-8?Q?=E2=8F=B2=EF=B8=8F=2C?= Python 3.15
+ =?utf-8?Q?=F0=9F=86=95=2C_Meta=E2=80=99s?= RCA Platform
+ =?utf-8?Q?=F0=9F=94=8D?=
+X-Entity-Ref-Id: f96e92f5-a1c0-403e-83ab-4f92c93abdd3
+X-EmailOctopus-Parent-Id: 56c488d6-df13-11f0-b370-1f06066165c0
+X-EmailOctopus-Parent-Type-Id: campaign
+X-EmailOctopus-List-Id: 1c5ddf10-b6dc-11ed-a12f-33c00cd07e37
+X-EmailOctopus-List-Contact-Id: 6b0d473c-a670-11f0-8d7f-0bad7bf21fba
+X-EmailOctopus-Started-Preparing-At: 2025-12-22T12:01:19+00:00
+X-EmailOctopus-Sent-At: 2025-12-22T12:12:40+00:00
+X-EmailOctopus-Team-Id: 66987ef2-4f4c-11e9-a3c9-06b79b628af2
+X-EmailOctopus-Version: 4
+List-Unsubscribe: <https://a.tldrnewsletter.com/unsubscribe?ep=1&l=1c5ddf10-b6dc-11ed-a12f-33c00cd07e37&lc=6b0d473c-a670-11f0-8d7f-0bad7bf21fba&p=56c488d6-df13-11f0-b370-1f06066165c0&pt=campaign&pv=4&spa=1766404879&t=1766405560&s=8e1403d123e15a8d6eccafff6fa590a312028bcf9200e3e61f155def0dfd5d92>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-EmailOctopus-Ses-Configuration-Set-Name: emailoctopus-a9f7b12f74f3c968d9408897fb35539c
+MIME-Version: 1.0
+Date: Mon, 22 Dec 2025 12:12:40 +0000
+Message-ID: <0100019b45f9d845-501e5086-52b0-40e6-8103-fd44ec6ca78d-000000@email.amazonses.com>
+Content-Type: multipart/alternative; boundary=Y3Tm8X8z
+Feedback-ID: ::1.us-east-1.Dj5/7DYmgk+n1sSGGXSQSLIthSjNQ0MGtV5Dro1Tr8U=:AmazonSES
+X-SES-Outgoing: 2025.12.22-54.240.123.113
+
+--Y3Tm8X8z
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Grafana Labs capped 2025 with Grafana 12, major open source
+milestones, A=
+I-powered Grafana Assistant, and expanded Grafana Cloud
+capabilities=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0
+
+
+ Sign Up [1] |Advertise [2]|View Online [3]=20
+
+=09=09TLDR=
+=20
+
+=09=09TOGETHER WITH [Momentic] [4]
+
+TLDR DEVOPS 2025-12-22
+
+=
+ THIS AI TOOL WRITES, RUNS, AND MAINTAINS E2E TESTS AT NOTION,
+WEBFLOW, A=
+ND QUORA (SPONSOR) [4]=20
+
+ How much faster could you ship if you didn't =
+have to babysit brittle
+Playwright tests? With AI, there's no excuse for =
+testing bottlenecks -
+and the most forward-thinking teams have found a be=
+tter way.
+
+Momentic's AI [5] lets you PROMPT IN PLAIN ENGLISH =E2=80=
+=94 and it WRITES,
+RUNS, AND MAINTAINS your entire E2E TEST SUITE. In Mom=
+entic:
+
+=F0=9F=A4=95 Auto-healing locators [5] find elements by descrip=
+tions, not
+XPath.
+
+=F0=9F=8C=A4=EF=B8=8F Cover critical user flows up=
+ to 75% faster with plain English
+tests.
+
+=F0=9F=92=A8 Cut defect esc=
+ape rates by an average of 89%.
+
+See why the best product teams ship ch=
+oose Momentic. [5]
+
+=F0=9F=93=B1=20
+
+NEWS & TRENDS
+
+ GRAFANA LABS=
+: TOP 10 MOMENTS OF 2025 (10 MINUTE READ) [6]=20
+
+ Grafana Labs capped 20=
+25 with Grafana 12, major open source
+milestones, AI-powered Grafana Assi=
+stant, Adaptive Telemetry, and
+expanded Grafana Cloud capabilities, along=
+side strong community
+growth, global expansion into Japan, industry recog=
+nition, and record
+revenue and customer adoption.=20
+
+ SHIFTING LEFT AT=
+ ENTERPRISE SCALE: HOW WE MANAGE CLOUDFLARE WITH
+INFRASTRUCTURE AS CODE (=
+7 MINUTE READ) [7]=20
+
+ Cloudflare transitioned its internal operations t=
+o an Infrastructure
+as Code (IaC) and "shift left" security model, managi=
+ng hundreds of
+production accounts with Terraform and a custom CI/CD pipe=
+line. This
+approach uses the Open Policy Agent (OPA) framework and Rego t=
+o define
+approximately 50 security policies, ensuring automated complianc=
+e
+checks and peer reviews before deployment to minimize human error.=20
+=
+
+ WHAT'S NEW IN PYTHON 3.15 (2 MINUTE READ) [8]=20
+
+ Python 3.15 adds a=
+ unified profiling module (including the new
+Tachyon sampling profiler), =
+makes UTF-8 the default encoding, improves
+error messages, and significan=
+tly upgrades the JIT. It also includes
+many stdlib/C-API tweaks plus a wa=
+ve of removals and deprecations for
+upcoming releases.=20
+
+=F0=9F=9A=
+=80=20
+
+OPINIONS & TUTORIALS
+
+ OPTIMIZING KYVERNO CLI PERFORMANCE: MY=
+ LFX MENTORSHIP JOURNEY (5
+MINUTE READ) [9]=20
+
+ Exploring Kyverno thro=
+ugh the LFX mentorship enabled significant open
+source contributions, inc=
+luding optimizing the CLI to reduce policy
+application time on 3,000+ res=
+ources from 15 minutes to 1=E2=80=932 seconds
+using concurrent loading, n=
+amespace caching, and deferred RestMapper
+discovery.=20
+
+ DRP: META'S R=
+OOT CAUSE ANALYSIS PLATFORM AT SCALE (3 MINUTE READ)
+[10]=20
+
+ Meta des=
+igned DrP, a root cause analysis (RCA) platform, to
+programmatically auto=
+mate incident investigations, significantly
+reducing mean time to resolve=
+ (MTTR) by 20-80%. The platform is
+currently utilized by over 300 teams a=
+t Meta, running 50,000 analyses
+daily. It is slated to evolve into an AI-=
+native system to advance the
+company's AI4Ops vision.=20
+
+ LOGGING SUCK=
+S (12 MINUTE READ) [11]=20
+
+ Traditional logs are noisy, low-context, and=
+ optimized for writing,
+not for answering real debugging questions in dis=
+tributed systems. The
+fix is wide events (canonical log lines): emit one =
+high-cardinality,
+high-dimensional, context-rich event per request (with =
+tail sampling).
+This turns debugging from grep-based archaeology into fas=
+t, analytical
+queries.=20
+
+=F0=9F=A7=91=E2=80=8D=F0=9F=92=BB=20
+
+RESO=
+URCES & TOOLS
+
+ SKEPTICS WELCOME: SETTING THE GOLD STANDARD OF AI SRE (=
+SPONSOR) [12]=20
+
+ Think AI SRE =3D hype? Engineering teams at Coinbase, =
+DoorDash, MSCI,
+and Zscaler are seeing 70% faster MTTR, 30% fewer enginee=
+rs pulled in
+per incident, and thousands of saved engineering hours using=
+ Resolve
+AI. Get the free AI SRE buyers guide [12] to set your benchmarks=
+ or
+join the online session with a Staff Engineer (and ex-skeptic) from=
+
+Coinbase [13] on January 8.=20
+
+ BEOWULF AI CLUSTER (GITHUB REPO) [14]=
+=20
+
+ Beowulf AI Cluster was developed to deploy AI clusters using Ansibl=
+e
+across diverse computers. It provides a flexible framework for testing=
+
+distributed AI clustering tools and running various benchmarks.=20
+
+ E=
+XO (GITHUB REPO) [15]=20
+
+ Exo is a platform that allows users to form an=
+ AI cluster at home by
+connecting everyday devices like phones and laptop=
+s, enabling faster
+execution of larger models with day-0 RDMA over Thunde=
+rbolt support.
+The system provides an API and a dedicated macOS app for m=
+anaging this
+distributed AI processing.=20
+
+=F0=9F=8E=81=20
+
+MISCELLA=
+NEOUS
+
+ YELP PUBLISHES BLUEPRINT FOR MANAGING S3 SERVER-ACCESS LOGS AT=
+
+MASSIVE SCALE (7 MINUTE READ) [16]=20
+
+ Yelp built a scalable, cost-ef=
+ficient pipeline for S3 server-access
+logs by compacting raw logs into Pa=
+rquet files, reducing storage by
+85% and object counts by 99.99%, while e=
+nabling efficient querying for
+debugging, cost analysis, and compliance. =
+
+
+ THE FUTURE OF AI-POWERED SOFTWARE OPTIMIZATION (AND HOW IT CAN HELP=
+
+YOUR TEAM) (7 MINUTE READ) [17]=20
+
+ GitHub's Continuous Efficiency co=
+mbines AI-driven automation and
+green software practices to make codebase=
+s self-optimizing for
+performance, efficiency, and sustainability. Using =
+agentic workflows,
+developers can author natural-language rules that AI a=
+gents apply to
+improve code quality, enforce standards, and iteratively e=
+nhance
+performance across heterogeneous repositories.=20
+
+=E2=9A=A1=20
+=
+
+QUICK LINKS
+
+ PLANVIEW HUB BYTES: 15-MINUTE WEBINARS ON JIRA, SERVIC=
+ENOW, AND
+CUSTOM INTEGRATIONS (SPONSOR) [18]=20
+
+ Watch Planview's solu=
+tion architects walk through the most requested
+integrations =E2=80=94 wi=
+th live Q&A. No hour-long time sink required.
+Register now [19]=20
+
+ 10=
+ YEARS OF LET'S ENCRYPT CERTIFICATES (4 MINUTE READ) [20]=20
+
+ Let's Encr=
+ypt has become the world's largest certificate authority in
+a decade.=20
+=
+
+ WHAT DO PEOPLE LOVE ABOUT RUST? (14 MINUTE READ) [21]=20
+
+ Rust is lo=
+ved because its combination of reliability, performance,
+and strong tooli=
+ng gives developers confidence to tackle problems
+across the entire stack=
+.=20
+
+Love TLDR? Tell your friends and get rewards!
+
+ Share your refe=
+rral link below with friends to get free TLDR swag!=20
+
+ https://refer.tl=
+dr.tech/fa0c1dae/10 [22]=20
+
+=09=09 Track your referrals here. [23]=20
+=
+
+Want to advertise in TLDR? =F0=9F=93=B0
+
+ If your company is interes=
+ted in reaching an audience of devops
+professionals and decision makers, =
+you may want to ADVERTISE WITH US
+[24].=20
+
+Want to work at TLDR? =
+=F0=9F=92=BC
+
+ APPLY HERE [25], CREATE YOUR OWN ROLE [26] or send a fri=
+end's resume
+to jobs@tldr.tech and get $1k if we hire them! TLDR is one o=
+f INC.'S
+BEST BOOTSTRAPPED BUSINESSES [27] of 2025.=20
+
+ If you have an=
+y comments or feedback, just respond to this email!=20
+
+Thanks for readin=
+g,=20
+Kunal Desai [28] & Martin Hauskrecht [29]=20
+
+ Manage your subscrip=
+tions [30] to our other newsletters on tech,
+startups, and programming. O=
+r if TLDR DevOps isn't for you, please
+unsubscribe [31].=20
+
+=20
+
+Lin=
+ks:
+------
+[1] https://tldr.tech/devops?utm_source=3Dtldrdevops
+[2] h=
+ttps://advertise.tldr.tech/?utm_source=3Dtldrdevops&utm_medium=3Dnewsletter=
+&utm_campaign=3Dadvertisetopnav
+[3] https://a.tldrnewsletter.com/web-vers=
+ion?ep=3D1&lc=3D6b0d473c-a670-11f0-8d7f-0bad7bf21fba&p=3D56c488d6-df13-11f0=
+-b370-1f06066165c0&pt=3Dcampaign&t=3D1766405560&s=3D94412f28be1e272a57a61f1=
+94c005a5a2dcaf2bbd676642efd83e9d28fee03fc
+[4] https://go.momentic.ai/tldr=
+web
+[5] https://momentic.ai/?utm_source=3Dtldr&utm_medium=3Dnewsletter&ut=
+m_campaign=3Dtldr12222025
+[6] https://grafana.com/blog/2025/12/11/grafana=
+-labs-top-10-moments-of-2025/?utm_source=3Dtldrdevops
+[7] https://blog.cl=
+oudflare.com/shift-left-enterprise-scale/?utm_source=3Dtldrdevops
+[8] htt=
+ps://docs.python.org/3.15/whatsnew/3.15.html?utm_source=3Dtldrdevops
+[9] =
+https://www.cncf.io/blog/2025/12/10/optimizing-kyverno-cli-performance-my-l=
+fx-mentorship-journey/?utm_source=3Dtldrdevops
+[10] https://engineering.f=
+b.com/2025/12/19/data-infrastructure/drp-metas-root-cause-analysis-platform=
+-at-scale/?utm_source=3Dtldrdevops
+[11] https://loggingsucks.com/?utm_sou=
+rce=3Dtldrdevops
+[12] https://resolve.ai/resources/ebook/ai-sre-buyers-gu=
+ide?utm_source=3Dtldr-devops-2&utm_medium=3D3p-newsletter-dec-18&utm_id=3Da=
+i-sre
+[13] https://luma.com/agu9mak2?utm_source=3Dtldr-devops-2&utm_mediu=
+m=3D3p-newsletter-dec-18&utm_id=3Dcoinbase-online
+[14] https://github.com=
+/geerlingguy/beowulf-ai-cluster?utm_source=3Dtldrdevops
+[15] https://gith=
+ub.com/exo-explore/exo?utm_source=3Dtldrdevops
+[16] https://www.infoq.com=
+/news/2025/12/yelp-s3-server-access-logs/?utm_source=3Dtldrdevops
+[17] ht=
+tps://github.blog/news-insights/policy-news-and-insights/the-future-of-ai-p=
+owered-software-optimization-and-how-it-can-help-your-team/?utm_source=3Dtl=
+drdevops
+[18] https://www.planview.com/lp/hub-micro-webinars/?utm_source=
+=3Dtldrdevops
+[19] https://www.planview.com/lp/hub-micro-webinars/
+[20]=
+ https://letsencrypt.org/2025/12/09/10-years.html?utm_source=3Dtldrdevops=
+
+[21] https://blog.rust-lang.org/2025/12/19/what-do-people-love-about-rus=
+t/?utm_source=3Dtldrdevops
+[22] https://refer.tldr.tech/fa0c1dae/10
+[23=
+] https://hub.sparklp.co/sub_99428dc57e85/10
+[24] https://advertise.tldr.=
+tech/?utm_source=3Dtldrdevops&utm_medium=3Dnewsletter&utm_campaign=3Dadvert=
+isecta
+[25] https://jobs.ashbyhq.com/tldr.tech
+[26] https://jobs.ashbyh=
+q.com/tldr.tech/c227b917-a6a4-40ce-8950-d3e165357871
+[27] https://www.lin=
+kedin.com/feed/update/urn:li:activity:7401699691039830016/
+[28] https://w=
+ww.linkedin.com/in/kunaljaydesai/
+[29] https://www.linkedin.com/in/martin=
+-hauskrecht/
+[30] https://tldr.tech/devops/manage?email=3Dmike.mcconigley=
+%40gmail.com
+[31] https://a.tldrnewsletter.com/unsubscribe?ep=3D1&l=3D1c5=
+ddf10-b6dc-11ed-a12f-33c00cd07e37&lc=3D6b0d473c-a670-11f0-8d7f-0bad7bf21fba=
+&p=3D56c488d6-df13-11f0-b370-1f06066165c0&pt=3Dcampaign&pv=3D4&spa=3D176640=
+4879&t=3D1766405560&s=3D8e1403d123e15a8d6eccafff6fa590a312028bcf9200e3e61f1=
+55def0dfd5d92
+--Y3Tm8X8z
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html charset=3DUTF-8"><meta charset=3D"UTF-8"><meta name=3D"v=
+iewport" content=3D"width=3Ddevice-width"><meta name=3D"x-apple-disable-mes=
+sage-reformatting"><title>TLDR DevOps</title><meta name=3D"color-scheme" co=
+ntent=3D"light dark"><meta name=3D"supported-color-schemes" content=3D"ligh=
+t dark"><style type=3D"text/css">
+=09=09=09:root {
+=09=09=09=09color-scheme: light dark; supported-color-schemes: light dark;
+=09=09=09}
+=09=09=09
+=09=09=09*,
+=09=09=09*:after,
+=09=09=09*:before {
+=09=09=09=09-webkit-box-sizing: border-box; -moz-box-sizing: border-box; bo=
+x-sizing: border-box;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+=09=09=09}
+=09=09=09
+=09=09=09html,
+=09=09=09body,
+=09=09=09.document {
+=09=09=09=09width: 100% !important; height: 100% !important; margin: 0; pad=
+ding: 0;
+=09=09=09}
+=09=09=09
+=09=09=09body {
+=09=09=09=09-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: g=
+rayscale; text-rendering: optimizeLegibility;
+=09=09=09}
+=09=09=09
+=09=09=09div[style*=3D"margin: 16px 0"] {
+=09=09=09=09margin: 0 !important;
+=09=09=09}
+=09=09=09
+=09=09=09table,
+=09=09=09td {
+=09=09=09=09mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+=09=09=09}
+=09=09=09
+=09=09=09table {
+=09=09=09=09border-spacing: 0; border-collapse: collapse; table-layout: fix=
+ed; margin: 0 auto;
+=09=09=09}
+=09=09=09
+=09=09=09img {
+=09=09=09=09-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+=09=09=09}
+=09=09=09
+=09=09=09*[x-apple-data-detectors] {
+=09=09=09=09color: inherit !important; text-decoration: none !important;
+=09=09=09}
+=09=09=09
+=09=09=09.x-gmail-data-detectors,
+=09=09=09.x-gmail-data-detectors *,
+=09=09=09.aBn {
+=09=09=09=09border-bottom: 0 !important; cursor: default !important;
+=09=09=09}
+=09=09=09
+=09=09=09.btn {
+=09=09=09=09-webkit-transition: all 200ms ease; transition: all 200ms ease;
+=09=09=09}
+=09=09=09
+=09=09=09.btn:hover {
+=09=09=09=09background-color: #f67575; border-color: #f67575;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+=09=09=09}
+=09=09=09
+=09=09=09@media screen and (max-width: 600px) {
+=09=09=09=09.container {
+=09=09=09=09=09width: 100%; margin: auto;
+=09=09=09=09}
+=09=09=09=09.stack {
+=09=09=09=09=09display: block!important; width: 100%!important; max-width: =
+100%!important;
+=09=09=09=09}
+=09=09=09=09.btn {
+=09=09=09=09=09display: block; width: 100%; text-align: center;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09body,
+=09=09=09p,
+=09=09=09td,
+=09=09=09tr,
+=09=09=09.body,
+=09=09=09table,
+=09=09=09h1,
+=09=09=09h2,
+=09=09=09h3,
+=09=09=09h4,
+=09=09=09h5,
+=09=09=09h6,
+=09=09=09div,
+=09=09=09span {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09body,
+=09=09=09=09p,
+=09=09=09=09td,
+=09=09=09=09tr,
+=09=09=09=09.body,
+=09=09=09=09table,
+=09=09=09=09h1,
+=09=09=09=09h2,
+=09=09=09=09h3,
+=09=09=09=09h4,
+=09=09=09=09h5,
+=09=09=09=09h6,
+=09=09=09=09div,
+=09=09=09=09span {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09a {
+=09=09=09=09color: inherit !important; text-decoration: underline !importan=
+t;
+=09=09=09}
+
+=09=09</style><!--[if mso | ie]>
+=09=09<style type=3D"text/css">
+=09=09=09a {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09a {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09 </style>
+=09=09=09<![endif]--></head><body class=3D"">
+
+
+
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">Grafana La=
+bs capped 2025 with Grafana 12, major open source milestones, AI-powered Gr=
+afana Assistant, and expanded Grafana Cloud capabilities&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;</div>
+
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align=3D"center" class=3D"document"><tbody><tr><td valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"container" width=3D"600"><tbody><tr class=3D"inner-body"><td>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr class=3D"header"><td bgcolor=3D"" class=3D"containe=
+r">
+
+<table width=3D"100%"><tbody><tr><td class=3D"container">
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"margin-top: 0px;" width=3D"100%"><tbody><tr><td style=
+=3D"padding: 0px;">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div style=3D"text-align: center;">
+<span style=3D"margin-right: 0px;"><a href=3D"https://tracking.tldrnewslett=
+er.com/CL0/https:%2F%2Ftldr.tech%2Fdevops%3Futm_source=3Dtldrdevops/1/01000=
+19b45f9d845-501e5086-52b0-40e6-8103-fd44ec6ca78d-000000/SZ-W2xchPcOcx-N1s0V=
+7Zjbko4lrstqKos8kyjV6aAU=3D436" rel=3D"noopener noreferrer" target=3D"_blan=
+k"><span>Sign Up</span></a>
+|<span style=3D"margin-right: 2px; margin-left: 2px;"><a href=3D"https://tr=
+acking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_sour=
+ce=3Dtldrdevops%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertisetopnav/=
+1/0100019b45f9d845-501e5086-52b0-40e6-8103-fd44ec6ca78d-000000/fztl1M0TYq4t=
+9Wr1y6-CxLwC0HgQsfRmsfpxc8FwzuY=3D436" rel=3D"noopener noreferrer" target=
+=3D"_blank"><span>Advertise</span></a></span>|<span style=3D"margin-left: 2=
+px;"><a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrn=
+ewsletter.com%2Fweb-version%3Fep=3D1%26lc=3D6b0d473c-a670-11f0-8d7f-0bad7bf=
+21fba%26p=3D56c488d6-df13-11f0-b370-1f06066165c0%26pt=3Dcampaign%26t=3D1766=
+405560%26s=3D94412f28be1e272a57a61f194c005a5a2dcaf2bbd676642efd83e9d28fee03=
+fc/1/0100019b45f9d845-501e5086-52b0-40e6-8103-fd44ec6ca78d-000000/Izm86HjpA=
+_TQpnvjg7D-_nS6TZEq6w3qLbif6tDq9nk=3D436"><span>View Online</span></a></spa=
+n>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"text-=
+align: center;"><span data-darkreader-inline-color=3D"" style=3D"--darkread=
+er-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30=
+px;">T</span><span style=3D"font-size: 30px;"><span data-darkreader-inline-=
+color=3D"" style=3D"color: rgb(232, 192, 96) !important; --darkreader-inlin=
+e-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-colo=
+r=3D"" style=3D"color: rgb(101, 195, 173) !important; --darkreader-inline-c=
+olor:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-=
+color=3D"" style=3D"--darkreader-inline-color:#dd6e6e; color: rgb(220, 107,=
+ 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr id=3D"together-with"><td align=3D"cent=
+er" height=3D"20" style=3D"vertical-align:middle !important;" valign=3D"mid=
+dle" width=3D"100%"><strong style=3D"vertical-align:middle !important; heig=
+ht: 100%;">Together With </strong>
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgo.momentic.=
+ai%2Ftldrweb/1/0100019b45f9d845-501e5086-52b0-40e6-8103-fd44ec6ca78d-000000=
+/U1IcRhTT5naQPy79FAqkVuDr6UAk1mYJsI80gMPA_3o=3D436"><img src=3D"https://ima=
+ges.tldr.tech/momentic.png" valign=3D"middle" style=3D"vertical-align: midd=
+le !important; height: 100%;" alt=3D"Momentic"></a></td></tr></tbody></tabl=
+e>
+
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody><tr=
+><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0;=
+">
+<div style=3D"text-align: center;">
+
+<h1><strong>TLDR DevOps <span id=3D"date">2025-12-22</span></strong></h1>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody><tr=
+ id=3D"sponsy-copy"><td class=3D"container" style=3D"padding: 15px 15px;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgo.momentic.ai%2Ftldrweb/2/0100019b45f9d845-501e5086-52=
+b0-40e6-8103-fd44ec6ca78d-000000/FKv0UsJvUWnCBR0QONL7PWcQGPh3Oo2XKF8ucX9dZs=
+s=3D436">
+                                    <span>
+                                        <strong>This AI tool writes, runs, =
+and maintains E2E tests at Notion, Webflow, and Quora (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    How much faster could you ship if you d=
+idn't have to babysit brittle Playwright tests? With AI, there's no excuse =
+for testing bottlenecks - and the most forward-thinking teams have found a =
+better way.<p></p><p><a href=3D"https://tracking.tldrnewsletter.com/CL0/htt=
+ps:%2F%2Fmomentic.ai%2F%3Futm_source=3Dtldr%26utm_medium=3Dnewsletter%26utm=
+_campaign=3Dtldr12222025/1/0100019b45f9d845-501e5086-52b0-40e6-8103-fd44ec6=
+ca78d-000000/wr99XWM_9dpZgNlQMe30iHCa8kqcyIO9v60C6qSkauc=3D436" rel=3D"noop=
+ener noreferrer nofollow" target=3D"_blank"><span>Momentic's AI</span></a> =
+lets you <strong>prompt in plain English</strong> =E2=80=94 and it <strong>=
+writes, runs, and maintains</strong> your entire <strong>E2E test suite</st=
+rong>. In Momentic:</p>
+
+<p>=F0=9F=A4=95 <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2=
+F%2Fmomentic.ai%2F%3Futm_source=3Dtldr%26utm_medium=3Dnewsletter%26utm_camp=
+aign=3Dtldr12222025/2/0100019b45f9d845-501e5086-52b0-40e6-8103-fd44ec6ca78d=
+-000000/7TcraYx1IALGjyMQ-QPsFSa5L_in1NmBEDJ4crm0Rd8=3D436" rel=3D"noopener =
+noreferrer nofollow" target=3D"_blank"><span>Auto-healing locators</span></=
+a> find elements by descriptions, not XPath.</p>
+
+<p>=F0=9F=8C=A4=EF=B8=8F Cover critical user flows up to 75% faster with pl=
+ain English tests.</p>
+
+<p>=F0=9F=92=A8 Cut defect escape rates by an average of 89%.</p>
+
+<p><a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fmomentic.=
+ai%2F%3Futm_source=3Dtldr%26utm_medium=3Dnewsletter%26utm_campaign=3Dtldr12=
+222025/3/0100019b45f9d845-501e5086-52b0-40e6-8103-fd44ec6ca78d-000000/AczJX=
+m-yk2v-q126uaoBRv-E1QPn4eEVx9Ig-dJJaQ0=3D436" rel=3D"noopener noreferrer no=
+follow" target=3D"_blank"><span>See why the best product teams ship choose =
+Momentic.</span></a>
+
+
+</p>
+</span></span></div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=3D""><td class=3D"container">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td style=3D"padding: 0px;">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=93=B1</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>News &amp; Trends</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgrafana.com%2Fblog%2F2025%2F12%2F11%2Fgrafana-labs-top-=
+10-moments-of-2025%2F%3Futm_source=3Dtldrdevops/1/0100019b45f9d845-501e5086=
+-52b0-40e6-8103-fd44ec6ca78d-000000/bflf-c6R8a4F-qiKba-TIdYwgjYEQb1voRlpxUY=
+cK_w=3D436">
+                                    <span>
+                                        <strong>Grafana Labs: Top 10 moment=
+s of 2025 (10 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Grafana Labs capped 2025 with Grafana 1=
+2, major open source milestones, AI-powered Grafana Assistant, Adaptive Tel=
+emetry, and expanded Grafana Cloud capabilities, alongside strong community=
+ growth, global expansion into Japan, industry recognition, and record reve=
+nue and customer adoption.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fblog.cloudflare.com%2Fshift-left-enterprise-scale%2F%3F=
+utm_source=3Dtldrdevops/1/0100019b45f9d845-501e5086-52b0-40e6-8103-fd44ec6c=
+a78d-000000/sw96Eelqt4A5GpziFQ1j1AqY_o6nu8RKTOBajJe18JU=3D436">
+                                    <span>
+                                        <strong>Shifting left at enterprise=
+ scale: how we manage Cloudflare with Infrastructure as Code (7 minute read=
+)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Cloudflare transitioned its internal op=
+erations to an Infrastructure as Code (IaC) and "shift left" security model=
+, managing hundreds of production accounts with Terraform and a custom CI/C=
+D pipeline. This approach uses the Open Policy Agent (OPA) framework and Re=
+go to define approximately 50 security policies, ensuring automated complia=
+nce checks and peer reviews before deployment to minimize human error.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fdocs.python.org%2F3.15%2Fwhatsnew%2F3.15.html%3Futm_sou=
+rce=3Dtldrdevops/1/0100019b45f9d845-501e5086-52b0-40e6-8103-fd44ec6ca78d-00=
+0000/mjavKiB6V7PgWEthiGoGkC9RDjdBKlMzPTbqxDE4ngc=3D436">
+                                    <span>
+                                        <strong>What's new in Python 3.15 (=
+2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Python 3.15 adds a unified profiling mo=
+dule (including the new Tachyon sampling profiler), makes UTF-8 the default=
+ encoding, improves error messages, and significantly upgrades the JIT. It =
+also includes many stdlib/C-API tweaks plus a wave of removals and deprecat=
+ions for upcoming releases.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=9A=80</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Opinions &amp; Tutorials</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.cncf.io%2Fblog%2F2025%2F12%2F10%2Foptimizing-kyvern=
+o-cli-performance-my-lfx-mentorship-journey%2F%3Futm_source=3Dtldrdevops/1/=
+0100019b45f9d845-501e5086-52b0-40e6-8103-fd44ec6ca78d-000000/hSecQTNl1dK1sY=
+IFjMXQCs3FnNKC5RoUNurcR8bdDrQ=3D436">
+                                    <span>
+                                        <strong>Optimizing Kyverno CLI perf=
+ormance: My LFX mentorship journey (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Exploring Kyverno through the LFX mento=
+rship enabled significant open source contributions, including optimizing t=
+he CLI to reduce policy application time on 3,000+ resources from 15 minute=
+s to 1=E2=80=932 seconds using concurrent loading, namespace caching, and d=
+eferred RestMapper discovery.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fengineering.fb.com%2F2025%2F12%2F19%2Fdata-infrastructu=
+re%2Fdrp-metas-root-cause-analysis-platform-at-scale%2F%3Futm_source=3Dtldr=
+devops/1/0100019b45f9d845-501e5086-52b0-40e6-8103-fd44ec6ca78d-000000/eaEfg=
+Z9zCV1uKlvgcU2moNf_6kqvAO5BTduyPE79S7k=3D436">
+                                    <span>
+                                        <strong>DrP: Meta's Root Cause Anal=
+ysis Platform at Scale (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Meta designed DrP, a root cause analysi=
+s (RCA) platform, to programmatically automate incident investigations, sig=
+nificantly reducing mean time to resolve (MTTR) by 20-80%. The platform is =
+currently utilized by over 300 teams at Meta, running 50,000 analyses daily=
+. It is slated to evolve into an AI-native system to advance the company's =
+AI4Ops vision.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Floggingsucks.com%2F%3Futm_source=3Dtldrdevops/1/0100019=
+b45f9d845-501e5086-52b0-40e6-8103-fd44ec6ca78d-000000/fZzLM6NoFC9F9KgXgBlX0=
+JvyxbeupB3BvhpYpmZ_gxg=3D436">
+                                    <span>
+                                        <strong>Logging sucks (12 minute re=
+ad)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Traditional logs are noisy, low-context=
+, and optimized for writing, not for answering real debugging questions in =
+distributed systems. The fix is wide events (canonical log lines): emit one=
+ high-cardinality, high-dimensional, context-rich event per request (with t=
+ail sampling). This turns debugging from grep-based archaeology into fast, =
+analytical queries.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=A7=91=E2=80=8D=F0=9F=92=BB</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Resources &amp; Tools</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fresolve.ai%2Fresources%2Febook%2Fai-sre-buyers-guide%3F=
+utm_source=3Dtldr-devops-2%26utm_medium=3D3p-newsletter-dec-18%26utm_id=3Da=
+i-sre/1/0100019b45f9d845-501e5086-52b0-40e6-8103-fd44ec6ca78d-000000/xiNHYm=
+bT9S5pDuI45z8OOLSluv_ZJ4hPeh81AL41ZtU=3D436">
+                                    <span>
+                                        <strong>Skeptics welcome: Setting t=
+he gold standard of AI SRE (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Think AI SRE =3D hype? Engineering team=
+s at Coinbase, DoorDash, MSCI, and Zscaler are seeing 70% faster MTTR, 30% =
+fewer engineers pulled in per incident, and thousands of saved engineering =
+hours using Resolve AI. Get the <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fresolve.ai%2Fresources%2Febook%2Fai-sre-buyers-guide%3F=
+utm_source=3Dtldr-devops-2%26utm_medium=3D3p-newsletter-dec-18%26utm_id=3Da=
+i-sre/2/0100019b45f9d845-501e5086-52b0-40e6-8103-fd44ec6ca78d-000000/xcWfG3=
+xN2_ss1YBtjBpbBEriGEW9BdqqvciTdrHuBbQ=3D436" rel=3D"noopener noreferrer nof=
+ollow" target=3D"_blank"><span>free AI SRE buyers guide</span></a> to set y=
+our benchmarks or join the <a href=3D"https://tracking.tldrnewsletter.com/C=
+L0/https:%2F%2Fluma.com%2Fagu9mak2%3Futm_source=3Dtldr-devops-2%26utm_mediu=
+m=3D3p-newsletter-dec-18%26utm_id=3Dcoinbase-online/1/0100019b45f9d845-501e=
+5086-52b0-40e6-8103-fd44ec6ca78d-000000/Ymy-iyDaegJVw2t9vxdk--4H5KzmzBya6qD=
+hipz1esE=3D436" rel=3D"noopener noreferrer nofollow" target=3D"_blank"><spa=
+n>online session with a Staff Engineer (and ex-skeptic) from Coinbase</span=
+></a> on January 8.
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgithub.com%2Fgeerlingguy%2Fbeowulf-ai-cluster%3Futm_sou=
+rce=3Dtldrdevops/1/0100019b45f9d845-501e5086-52b0-40e6-8103-fd44ec6ca78d-00=
+0000/fH87GR-CAl935B7Yzo-aEgwNAIYo50CdM6ArEXvZnig=3D436">
+                                    <span>
+                                        <strong>Beowulf AI Cluster (GitHub =
+Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Beowulf AI Cluster was developed to dep=
+loy AI clusters using Ansible across diverse computers. It provides a flexi=
+ble framework for testing distributed AI clustering tools and running vario=
+us benchmarks.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgithub.com%2Fexo-explore%2Fexo%3Futm_source=3Dtldrdevop=
+s/1/0100019b45f9d845-501e5086-52b0-40e6-8103-fd44ec6ca78d-000000/XbE7aIbMQw=
+UVP2ujtcJdJ9zSgAcXXAjKv82XbEKvA-M=3D436">
+                                    <span>
+                                        <strong>Exo (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Exo is a platform that allows users to =
+form an AI cluster at home by connecting everyday devices like phones and l=
+aptops, enabling faster execution of larger models with day-0 RDMA over Thu=
+nderbolt support. The system provides an API and a dedicated macOS app for =
+managing this distributed AI processing.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=8E=81</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><strong><h1>Miscellaneous</h1></strong><=
+/div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.infoq.com%2Fnews%2F2025%2F12%2Fyelp-s3-server-acces=
+s-logs%2F%3Futm_source=3Dtldrdevops/1/0100019b45f9d845-501e5086-52b0-40e6-8=
+103-fd44ec6ca78d-000000/P2zs_Ep-BERBqEa4M7nVzO0x9MADl3Tj9y_ntU3DwG8=3D436">
+                                    <span>
+                                        <strong>Yelp Publishes Blueprint fo=
+r Managing S3 Server-Access Logs at Massive Scale (7 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Yelp built a scalable, cost-efficient p=
+ipeline for S3 server-access logs by compacting raw logs into Parquet files=
+, reducing storage by 85% and object counts by 99.99%, while enabling effic=
+ient querying for debugging, cost analysis, and compliance.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgithub.blog%2Fnews-insights%2Fpolicy-news-and-insights%=
+2Fthe-future-of-ai-powered-software-optimization-and-how-it-can-help-your-t=
+eam%2F%3Futm_source=3Dtldrdevops/1/0100019b45f9d845-501e5086-52b0-40e6-8103=
+-fd44ec6ca78d-000000/2zjsO2iA17Ft-iLzwLVgVlAETyLNQO-8rimXsy11Zh0=3D436">
+                                    <span>
+                                        <strong>The future of AI-powered so=
+ftware optimization (and how it can help your team) (7 minute read)</strong=
+>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    GitHub's Continuous Efficiency combines=
+ AI-driven automation and green software practices to make codebases self-o=
+ptimizing for performance, efficiency, and sustainability. Using agentic wo=
+rkflows, developers can author natural-language rules that AI agents apply =
+to improve code quality, enforce standards, and iteratively enhance perform=
+ance across heterogeneous repositories.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=E2=9A=
+=A1</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.planview.com%2Flp%2Fhub-micro-webinars%2F%3Futm_sou=
+rce=3Dtldrdevops/1/0100019b45f9d845-501e5086-52b0-40e6-8103-fd44ec6ca78d-00=
+0000/62wWo5JJQg1G8DqlDInROZ1ZGt_k79PRsef2Rug_Le0=3D436">
+                                    <span>
+                                        <strong>Planview Hub Bytes: 15-Minu=
+te Webinars on Jira, ServiceNow, and Custom Integrations (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Watch Planview's solution architects wa=
+lk through the most requested integrations =E2=80=94 with live Q&amp;A. No =
+hour-long time sink required. <a class=3D"underline underline underline-off=
+set-2 decoration-1 decoration-current/40 hover:decoration-current focus:dec=
+oration-current" href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%=
+2Fwww.planview.com%2Flp%2Fhub-micro-webinars%2F/1/0100019b45f9d845-501e5086=
+-52b0-40e6-8103-fd44ec6ca78d-000000/Pe6zv96Z0Yb6aUugHg0QBRzPP3Dv7PbyYNYS5-D=
+--cc=3D436" rel=3D"noopener noreferrer nofollow" target=3D"_blank"><span>Re=
+gister now</span></a>
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fletsencrypt.org%2F2025%2F12%2F09%2F10-years.html%3Futm_=
+source=3Dtldrdevops/1/0100019b45f9d845-501e5086-52b0-40e6-8103-fd44ec6ca78d=
+-000000/I3PQKEZI2wlAijiWGL_CEfxGL8392W66jHErRJ24mFM=3D436">
+                                    <span>
+                                        <strong>10 Years of Let's Encrypt C=
+ertificates (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Let's Encrypt has become the world's la=
+rgest certificate authority in a decade.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fblog.rust-lang.org%2F2025%2F12%2F19%2Fwhat-do-people-lo=
+ve-about-rust%2F%3Futm_source=3Dtldrdevops/1/0100019b45f9d845-501e5086-52b0=
+-40e6-8103-fd44ec6ca78d-000000/7Y4d77U35mYRbgP4Ixab2vUr4GMETRpAmIjLUNGRKQU=
+=3D436">
+                                    <span>
+                                        <strong>What do people love about R=
+ust? (14 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Rust is loved because its combination o=
+f reliability, performance, and strong tooling gives developers confidence =
+to tackle problems across the entire stack.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"word-break=
+: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class=3D"container" style=3D"padding: 0px 10px 15px;">
+<div class=3D"text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align=3D"left" style=3D"padding: 10px;">
+<div class=3D"text-block">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.t=
+ech%2Ffa0c1dae%2F10/1/0100019b45f9d845-501e5086-52b0-40e6-8103-fd44ec6ca78d=
+-000000/tBofTV_B999i2OwbOImHUPdHQ226UZnlCi8kCSquQNA=3D436" style=3D"color: =
+#464ba4; text-decoration: underline;">https://refer.tldr.tech/fa0c1dae/10</=
+a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align=3D"left" style=3D"padding:5px 10px;">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.=
+co%2Fsub_99428dc57e85%2F10/1/0100019b45f9d845-501e5086-52b0-40e6-8103-fd44e=
+c6ca78d-000000/x0V1sEmgtRKqS2is2UFrpSPEVVKTGpoweewyfhy3XN8=3D436" style=3D"=
+font-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block;=
+  text-decoration: underline;"><span style=3D"mso-text-raise:13pt; text-dec=
+oration: underline;">Track your referrals here.</span></a>
+</td></tr></tbody></table>
+
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"word-break=
+: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to advertise in TLDR? =F0=9F=93=B0
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+If your company is interested in reaching an audience of devops professiona=
+ls and decision makers, you may want to <a href=3D"https://tracking.tldrnew=
+sletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=3Dtldrdevop=
+s%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertisecta/1/0100019b45f9d84=
+5-501e5086-52b0-40e6-8103-fd44ec6ca78d-000000/XrSKaf0yrsoV17nfeke7hdqpIaKpT=
+cxrZgFwZSTZnZI=3D436"><strong><span>advertise with us</span></strong></a>.
+</div>
+<br>
+
+<!-- New "Want to work at TLDR?" section -->
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to work at TLDR? =F0=9F=92=BC
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech/1/0100019b45f9d845-501e5086-52b0-40e6-8103-fd44ec6ca78d-00=
+0000/kEGSjG7qTFtOv3zU2RPgWa9bPox85GhzvQBVdzqFUAU=3D436" rel=3D"noopener nor=
+eferrer" style=3D"color: #0000EE; text-decoration: underline;" target=3D"_b=
+lank"><strong>Apply here</strong></a>,
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech%2Fc227b917-a6a4-40ce-8950-d3e165357871/1/0100019b45f9d845-=
+501e5086-52b0-40e6-8103-fd44ec6ca78d-000000/F1UKmfJW4bCNDdLhAPn7IVXGSDfmakX=
+O-7efyhIEv0Y=3D436" rel=3D"noopener noreferrer" style=3D"color: #0000EE; te=
+xt-decoration: underline;" target=3D"_blank"><strong>create your own role</=
+strong></a> or send a friend's resume to <a href=3D"mailto:jobs@tldr.tech" =
+style=3D"color: #0000EE; text-decoration: underline;">jobs@tldr.tech</a> an=
+d get $1k if we hire them! TLDR is one of <a href=3D"https://tracking.tldrn=
+ewsletter.com/CL0/https:%2F%2Fwww.linkedin.com%2Ffeed%2Fupdate%2Furn:li:act=
+ivity:7401699691039830016%2F/1/0100019b45f9d845-501e5086-52b0-40e6-8103-fd4=
+4ec6ca78d-000000/Ql7BvAiGTsdQZPk6lkGvWIADT6peZ4s7Lyxxz_w-OpU=3D436" rel=3D"=
+noopener noreferrer" style=3D"color: #0000EE; text-decoration: underline;" =
+target=3D"_blank"><strong>Inc.'s Best Bootstrapped businesses</strong></a> =
+of 2025.
+</div>
+<br>
+
+<div class=3D"text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.linkedin=
+.com%2Fin%2Fkunaljaydesai%2F/1/0100019b45f9d845-501e5086-52b0-40e6-8103-fd4=
+4ec6ca78d-000000/zz67DmcjL23iYPdsYjdkgCHL_9b4pu7KtHDNgqlQ-ak=3D436"><span>K=
+unal Desai</span></a> &amp; <a href=3D"https://tracking.tldrnewsletter.com/=
+CL0/https:%2F%2Fwww.linkedin.com%2Fin%2Fmartin-hauskrecht%2F/1/0100019b45f9=
+d845-501e5086-52b0-40e6-8103-fd44ec6ca78d-000000/polszNmhxHyxq1k1rE0yndU8zi=
+NUo02OzsHKDH_wYpY=3D436"><span>Martin Hauskrecht</span></a>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div class=3D"text-block" id=3D"testing-id">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2F=
+devops%2Fmanage%3Femail=3Dmike.mcconigley%2540gmail.com/1/0100019b45f9d845-=
+501e5086-52b0-40e6-8103-fd44ec6ca78d-000000/oC0YYZEy5iqHjwp-JmBEfonM-eEld4B=
+mIkBtxwFCZzk=3D436">Manage your subscriptions</a> to our other newsletters =
+on tech, startups, and programming. Or if TLDR DevOps isn't for you, please=
+ <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsl=
+etter.com%2Funsubscribe%3Fep=3D1%26l=3D1c5ddf10-b6dc-11ed-a12f-33c00cd07e37=
+%26lc=3D6b0d473c-a670-11f0-8d7f-0bad7bf21fba%26p=3D56c488d6-df13-11f0-b370-=
+1f06066165c0%26pt=3Dcampaign%26pv=3D4%26spa=3D1766404879%26t=3D1766405560%2=
+6s=3D8e1403d123e15a8d6eccafff6fa590a312028bcf9200e3e61f155def0dfd5d92/1/010=
+0019b45f9d845-501e5086-52b0-40e6-8103-fd44ec6ca78d-000000/rY_fi2TLwDlFqv8MM=
+_UhO_gEeskI-9YP76Vl_yB5iys=3D436">unsubscribe</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+<img alt=3D"" src=3D"http://tracking.tldrnewsletter.com/CI0/0100019b45f9d84=
+5-501e5086-52b0-40e6-8103-fd44ec6ca78d-000000/U6yC66GRri84LvXeu933LFAVWeQiG=
+zycW_dH3GdnSmE=3D436" style=3D"display: none; width: 1px; height: 1px;">
+</body></html>
+--Y3Tm8X8z--

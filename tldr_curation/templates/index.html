@@ -31,18 +31,26 @@
             {% endif %}
 
             {% for file in files %}
-                <div class="email-block">
-                    <div class="email-header">📄 {{ file.filename }}</div>
-                    {% for link in file.links %}
-                    <div class="link-item">
+            <div class="email-block">
+                <h3>
+                    📄 {{ file.filename }} 
+                    <span style="font-size: 0.8em; color: #666; margin-left: 10px;">
+                        ({{ file.date }})
+                    </span>
+                </h3>
+                
+                <ul>
+                {% for link in file.links %}
+                    <li class="link-item">
                         <input type="checkbox" id="lnk_{{loop.index}}_{{file.filename}}" name="selected_links" value="{{ link.url }}">
                         <label for="lnk_{{loop.index}}_{{file.filename}}">
                             <span class="link-title">{{ link.text }}</span>
                             <span class="link-url">{{ link.url }}</span>
                         </label>
-                    </div>
-                    {% endfor %}
-                </div>
+                    </li>
+                {% endfor %}
+                </ul>
+            </div>
             {% endfor %}
 
             <div class="fab">

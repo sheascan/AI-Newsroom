@@ -1,0 +1,1352 @@
+Delivered-To: mike.mcconigley@gmail.com
+Received: by 2002:ac9:40c9:0:b0:605:93f6:5e02 with SMTP id y9csp1871477ocg;
+        Mon, 22 Dec 2025 03:10:53 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IFljQn8pEI1WTOZWdrxUJHvtyfVZs5aos36/L0PvR/DgGzzwvH66kD/m+ipF3r32GUCq6YF
+X-Received: by 2002:a05:620a:269b:b0:892:ce2b:f84d with SMTP id af79cd13be357-8c08f675e1cmr1597325685a.33.1766401852891;
+        Mon, 22 Dec 2025 03:10:52 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1766401852; cv=none;
+        d=google.com; s=arc-20240605;
+        b=GQpOcTVFqWTTeA6aNwMBs7Dhiq1aHNyGoMC4JAq3e8TGOUwEwMgB7IjI0B+Rdr42Z2
+         UsiionuTv1aZHsoHkMlktWKKI3zemT0iXCSIep1fzhBg4H3b8wycdbWzHZRyXUC6nhCy
+         9727F0bPn0pi8WmeZd0HBCeeKEL6dQIw76H9kvbQOzY528JnBnatY/c20tce/f5cmoNW
+         N9YR7QMKTSdgs8nFXnT0Dxec4o1M8bSLj0xrNAPVlVIFRD7NQ3qvCFGX8d0JOfkDHPED
+         LwdGkjC2S4RIzgUk6WhwIaXti9PKPdkK1msymGmmKgziPPtLIsKQROS+EnRNLrSQi+Iv
+         nHIg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:date:mime-version:list-unsubscribe-post
+         :list-unsubscribe:subject:to:from:dkim-signature:dkim-signature;
+        bh=oNNF6UOY8GRU26JvuOD5qyNxi4FlahGII809iihkBJ8=;
+        fh=tUTYCbTOUI69DxYKXGXRz08XnPP7jEKRU6E5rS0DFR4=;
+        b=AOK5tBiuxmCund3jHL8V7D4onOcTy3qwrd1okWJU0v3RPJKYO71rlS5d2k5Hhl+YHX
+         y0p8FjKDfNh4gYzgX6YP31VhMK06yaBoA4giL5kjhfJGeUTc7i/RwvH360BEfbxK45BV
+         v7jku9MRGwSYWxe4cb9DrbNE3qlAMhxx5d8eykWuHxl5HlnFE6pCZ3X+lmyoiCfq+tzt
+         XO22YgXX3jKCsQHZxi7Obn+84653BDKz6hgAaTF74fxa9TtF+EIaK/o+BL099hr96Mpu
+         +8JCJXYxREkRCj9HmLMAgcCU96bvjQEQlY4WURP1Bqu1n+tJvUyDFHySs5ALxjzLTLxZ
+         YLBg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=F2QauHNa;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=hg8f5REg;
+       spf=pass (google.com: domain of 0100019b45c14481-4e62740b-5593-4ee9-be49-ee55104bfd8f-000000@dailyupdate.tldrnewsletter.com designates 54.240.38.253 as permitted sender) smtp.mailfrom=0100019b45c14481-4e62740b-5593-4ee9-be49-ee55104bfd8f-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+Return-Path: <0100019b45c14481-4e62740b-5593-4ee9-be49-ee55104bfd8f-000000@dailyupdate.tldrnewsletter.com>
+Received: from a38-253.smtp-out.amazonses.com (a38-253.smtp-out.amazonses.com. [54.240.38.253])
+        by mx.google.com with ESMTPS id af79cd13be357-8c0973fab62si1014069985a.540.2025.12.22.03.10.52
+        for <mike.mcconigley@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 22 Dec 2025 03:10:52 -0800 (PST)
+Received-SPF: pass (google.com: domain of 0100019b45c14481-4e62740b-5593-4ee9-be49-ee55104bfd8f-000000@dailyupdate.tldrnewsletter.com designates 54.240.38.253 as permitted sender) client-ip=54.240.38.253;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=F2QauHNa;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=hg8f5REg;
+       spf=pass (google.com: domain of 0100019b45c14481-4e62740b-5593-4ee9-be49-ee55104bfd8f-000000@dailyupdate.tldrnewsletter.com designates 54.240.38.253 as permitted sender) smtp.mailfrom=0100019b45c14481-4e62740b-5593-4ee9-be49-ee55104bfd8f-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ygiuxamnxevikrd5dtfwanslhs6b24mt; d=tldrnewsletter.com;
+	t=1766401852;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type;
+	bh=wYXoIDRkk6mbqENMAjXYmf4GD3aRvrwIWkSOHGdiOQM=;
+	b=F2QauHNaQH4x7Cf6mnmjP4CMG+usd8SIQ01S5JDLCS2fua8iPbD4v0vkgdXpxZpQ
+	LFffexk+lqrrZYcp4E0He1szGh9km8ccjM5vJ8VpBp4M7DJyrXwFCCkRuGQF4EC5yPi
+	pc3qd2ZFf5tcEitUYWx8K8Go5+5vU1fy5H6VaQmE=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1766401852;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type:Feedback-ID;
+	bh=wYXoIDRkk6mbqENMAjXYmf4GD3aRvrwIWkSOHGdiOQM=;
+	b=hg8f5REgqd5lMd6tgBJCXNX1YkzCluoRjKzgI2Pac7b8y+LwPljirO2G4H9jW+Eq
+	JOmnLnnAr5eoTjQlqjfhL8rOYrZkTdzUvhyZnVUv6r0uUNxYopkDjukWGHQ1fRuEPO6
+	1gHah/gUhaSaIOFisfkhcdxzz/ZGl17CaLwvT0fw=
+From: TLDR Data <dan@tldrnewsletter.com>
+To: mike.mcconigley@gmail.com
+Subject: The LLM Data Engineer =?utf-8?Q?=E2=9A=99=EF=B8=8F=2C?= The Stack
+ Consolidates =?utf-8?Q?=F0=9F=A7=B1=2C?= Metrics Over Dashboards
+ =?utf-8?Q?=F0=9F=A7=A0?=
+X-Entity-Ref-Id: a9af0378-438b-4a57-99a2-fc0bc4b9c619
+X-EmailOctopus-Parent-Id: a33bd4fc-df0f-11f0-bf0d-2f6ce300fdd6
+X-EmailOctopus-Parent-Type-Id: campaign
+X-EmailOctopus-List-Id: 037ede50-92cc-11ee-b0f2-b761aa2217ad
+X-EmailOctopus-List-Contact-Id: 6b0db8d4-a670-11f0-bab1-739170ae6da7
+X-EmailOctopus-Started-Preparing-At: 2025-12-22T11:01:21+00:00
+X-EmailOctopus-Sent-At: 2025-12-22T11:10:52+00:00
+X-EmailOctopus-Team-Id: 66987ef2-4f4c-11e9-a3c9-06b79b628af2
+X-EmailOctopus-Version: 4
+List-Unsubscribe: <https://a.tldrnewsletter.com/unsubscribe?ep=1&l=037ede50-92cc-11ee-b0f2-b761aa2217ad&lc=6b0db8d4-a670-11f0-bab1-739170ae6da7&p=a33bd4fc-df0f-11f0-bf0d-2f6ce300fdd6&pt=campaign&pv=4&spa=1766401281&t=1766401852&s=a7db45002ec465fceec490585558bc4de1eebf53a413c2b3a16dae2f8fd74976>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-EmailOctopus-Ses-Configuration-Set-Name: emailoctopus-a9f7b12f74f3c968d9408897fb35539c
+MIME-Version: 1.0
+Date: Mon, 22 Dec 2025 11:10:52 +0000
+Message-ID: <0100019b45c14481-4e62740b-5593-4ee9-be49-ee55104bfd8f-000000@email.amazonses.com>
+Content-Type: multipart/alternative; boundary=6sXutkYp
+Feedback-ID: ::1.us-east-1.Dj5/7DYmgk+n1sSGGXSQSLIthSjNQ0MGtV5Dro1Tr8U=:AmazonSES
+X-SES-Outgoing: 2025.12.22-54.240.38.253
+
+--6sXutkYp
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Traditional centralized data platforms, reliant on data engineers for
+ETL=
+ and queries, create bottlenecks and slow decision-making for
+business
+=
+users=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0
+
+
+ Sign Up [1] |Advertise [2]|View Online [3]=20
+
+=
+=09=09TLDR=20
+
+TLDR DATA 2025-12-22
+
+=F0=9F=93=B1=20
+
+DEEP DIVES
+=
+
+ INSIDE THE FEATURE STORE POWERING REAL-TIME AI IN DROPBOX DASH (7
+MIN=
+UTE READ) [4]=20
+
+ Dropbox Dash's AI-driven search and ranking system is =
+powered by a
+custom feature store architecture tailored to handle tens of=
+ thousands
+of parallel feature lookups per query and meet strict sub-100m=
+s
+latency requirements. Integrating Feast for orchestration, Spark for
+=
+computation, and an in-house DynamoDB-compatible solution for ~20ms
+onlin=
+e serving, Dropbox overcame Python concurrency bottlenecks by
+rewriting s=
+erving paths in Go, achieving p95 latencies of 25=E2=80=9335ms.
+Intellige=
+nt hybrid ingestion strategies optimize data freshness and
+I/O. This appr=
+oach balances flexibility and performance, scales
+efficiently, and delive=
+rs consistent ranking relevance.=20
+
+ MAXIMIZING THROUGHPUT WITH APACHE H=
+UDI NBCC: STOP RETRYING, START
+SCALING (9 MINUTE READ) [5]=20
+
+ Apache =
+Hudi's traditional Optimistic Concurrency Control (OCC)
+struggles with hi=
+gh-concurrency writes on Merge-on-Read tables.
+Overlapping writes cause f=
+requent conflicts, leading to retries,
+aborted work, and reduced throughp=
+ut when mixing streaming and batch
+jobs. Non-Blocking Concurrency Control=
+, introduced in Hudi 1.0, solves
+this by eliminating conflicts, allowing =
+concurrent writers to append
+to separate log files, ordering commits by c=
+ompletion time with a
+TrueTime-like mechanism, and ensuring every write s=
+ucceeds without
+retries.=20
+
+=F0=9F=9A=80=20
+
+OPINIONS & ADVICE
+
+=
+ 10 CATALOGS, 3 ETLS, 2 POSTGRES, AND A PARTRIDGE IN A PEAR TREE (14
+MINU=
+TE READ) [6]=20
+
+ 2025 reshaped the modern data stack through a wave of m=
+ajor
+acquisitions, most notably Fivetran merging with dbt, Confluent
+jo=
+ining IBM, and both Snowflake and Databricks buying Postgres
+companies, s=
+ignaling consolidation around core infrastructure.
+Independence and openn=
+ess are becoming strategic positioning rather
+than defaults, with vendors=
+ racing to control more of the stack while
+claiming flexibility. Expect t=
+ighter integration, cultural friction in
+open source communities, and inc=
+reasing pressure to choose platforms
+deliberately rather than assuming to=
+day's =E2=80=9Cmodern=E2=80=9D stack will stay
+modular tomorrow.=20
+
+ D=
+ATA TESTING LIKE IT'S NOT 1997 (12 MINUTE READ) [7]=20
+
+ Treat data quali=
+ty like software quality: define what =E2=80=9Cgood=E2=80=9D
+means, desig=
+n layered tests, and automate them across the pipeline.
+This cuts rework =
+and incidents by shifting quality left while using
+production observabili=
+ty for what can't be caught earlier. Durable
+data quality comes from disc=
+iplined processes and ownership, not a
+single tool.=20
+
+ ALERT FATIGUE =
+IS KILLING YOUR DATA QUALITY STRATEGY. HERE'S HOW TO
+FIX IT (5 MINUTE REA=
+D) [8]=20
+
+ Alert fatigue in data observability occurs when teams are ove=
+rwhelmed
+by excessive, often false-positive alerts from overly rigid or=
+
+unprioritized monitoring, leading to ignored notifications and stalled=
+
+data quality improvements. To combat this, adopt strategies like
+machi=
+ne learning-based monitors that learn normal data patterns to
+reduce nois=
+e, focus monitoring on critical tables and data products,
+align alert own=
+ership with domain teams, and implement intelligent
+prioritization and ro=
+uting based on alert type, location, and
+downstream impact.=20
+
+=
+=F0=9F=92=BB=20
+
+LAUNCHES & TOOLS
+
+ WHY YOUR NEXT BI RENEWAL SHOULD B=
+E YOUR LAST (16 MINUTE READ) [9]=20
+
+ Legacy BI tools are being squeezed =
+from all sides: AI-native
+analytics can answer questions directly, data p=
+latforms are moving up
+the stack, and purpose-built tools are out-innovat=
+ing dashboards,
+while incumbents respond mainly with price hikes and weak=
+ AI bolt-ons.
+For data engineers and leaders, the real value is shifting =
+from
+dashboards to governed, machine-readable metrics and semantic layers=
+
+that can power many interfaces, including agents and custom apps. Stop=
+
+renewing BI on autopilot and instead invest in agentic coding,
+flexibl=
+e metric foundations, and tools that let teams build faster and
+deliver i=
+nsights directly into workflows.=20
+
+ ANNOUNCING SUPPORT FOR GROUP BY, SU=
+M, AND OTHER AGGREGATION QUERIES
+IN R2 SQL (8 MINUTE READ) [10]=20
+
+ Cl=
+oudflare has added full SQL aggregation, enabling distributed
+analytics d=
+irectly over data stored in R2 Data Catalog. Leveraging
+scatter-gather an=
+d shuffling techniques, aggregations efficiently
+scale out computation, m=
+inimize coordinator bottlenecks, and support
+high-cardinality queries wit=
+h deterministic hash partitioning. This
+release brings R2 SQL closer to a=
+ full-fledged serverless OLAP
+solution, empowering data teams to analyze =
+data at scale without
+additional infrastructure.=20
+
+ DA2A: THE FUTURE =
+OF DATA PLATFORMS IS AGENTIC, DISTRIBUTED, AND
+COLLABORATIVE (6 MINUTE RE=
+AD) [11]=20
+
+ Traditional centralized data platforms, reliant on data eng=
+ineers for
+ETL and queries, create bottlenecks and slow decision-making f=
+or
+business users. DA2A is a future paradigm of agentic, distributed, and=
+
+collaborative data platforms where specialized AI agents autonomously
+=
+manage domain-specific data, communicate via an Agent-to-Agent
+protocol, =
+and collaborate through an orchestrator to answer complex
+business questi=
+ons efficiently without monolithic architectures.=20
+
+=F0=9F=8E=81=20
+
+=
+MISCELLANEOUS
+
+ THE RISE OF THE=E2=80=AFLLM=E2=80=AFDATA=E2=80=AFENGINE=
+ER (60 MINUTE READ) [12]=20
+
+ The real shift is not LLMs replacing data e=
+ngineers, but data teams
+becoming LLM-native by redesigning workflows so =
+humans guide,
+validate, and own outcomes while models automate routine EL=
+T and
+transformation work. For data leaders, the value moves from writing=
+
+SQL and pipelines to platform engineering, governance, and
+operational=
+izing AI safely at scale, with LLMs accelerating delivery
+rather than act=
+ing autonomously. Teams that learn to structure
+context, rules, and human=
+-in-the-loop workflows will move faster and
+cheaper, while those chasing =
+one-shot automation or fearing
+displacement will fall behind.=20
+
+ SNOW=
+FLAKE SOFTWARE UPDATE CAUSED 13-HOUR OUTAGE ACROSS 10 REGIONS (4
+MINUTE R=
+EAD) [13]=20
+
+ A breaking schema change in Snowflake's control plane caus=
+ed a
+13-hour outage across many regions, stopping queries and data
+inge=
+stion for affected customers. The incident showed that
+multi-region setup=
+s do not protect against control plane logic errors,
+because shared globa=
+l metadata can fail everywhere at once.=20
+
+ WHAT DOES A DATABASE FOR SSD=
+S LOOK LIKE? (6 MINUTE READ) [14]=20
+
+ Databases like Postgres and MySQL =
+were built for old hard-drive
+limits, where slow disk access required hea=
+vy logging, large pages,
+and complex single-node recovery. With fast SSDs=
+, cloud replication,
+and reliable networks, many of these designs are no =
+longer needed. A
+modern database should push durability and availability =
+to distributed
+systems, optimize for small, fast transfers, use versionin=
+g for reads,
+and simplify recovery by dropping legacy single-node mechani=
+sms.=20
+
+=E2=9A=A1=20
+
+QUICK LINKS
+
+ THE SEVEN PILLARS OF A PRODUCT=
+ION-GRADE AGENT ARCHITECTURE (12 MINUTE
+READ) [15]=20
+
+ Enterprise-grad=
+e agentic AI needs a strong, well-designed foundation.
+
+
+ AWS EXPANDS=
+ WELL-ARCHITECTED FRAMEWORK WITH RESPONSIBLE AI LENS (4
+MINUTE READ) [16]=
+=20
+
+ Responsible-AI and updated GenAI lenses give architects prescriptiv=
+e
+blueprints for safe, compliant machine-learning deployments.=20
+
+Want=
+ to advertise in TLDR? =F0=9F=93=B0
+
+ If your company is interested in =
+reaching an audience of data
+engineering professionals and decision maker=
+s, you may want to
+ADVERTISE WITH US [17].=20
+
+Want to work at TLDR? =
+=F0=9F=92=BC
+
+ APPLY HERE [18], CREATE YOUR OWN ROLE [19] or send a fri=
+end's resume
+to jobs@tldr.tech and get $1k if we hire them! TLDR is one o=
+f INC.'S
+BEST BOOTSTRAPPED BUSINESSES [20] of 2025.=20
+
+ If you have an=
+y comments or feedback, just respond to this email!=20
+
+Thanks for readin=
+g,=20
+Joel Van Veluwen [21], Tzu-Ruey Ching [22] & Remi Turpaud [23]=20
+
+=
+ Manage your subscriptions [24] to our other newsletters on tech,
+startup=
+s, and programming. Or if TLDR Data isn't for you, please
+unsubscribe [25=
+].=20
+
+=20
+
+Links:
+------
+[1] https://tldr.tech/data?utm_source=3Dt=
+ldrdata
+[2] https://advertise.tldr.tech?utm_source=3Dtldrdata&utm_medium=
+=3Dnewsletter&utm_campaign=3Dadvertisetopnav
+[3] https://a.tldrnewsletter=
+.com/web-version?ep=3D1&lc=3D6b0db8d4-a670-11f0-bab1-739170ae6da7&p=3Da33bd=
+4fc-df0f-11f0-bf0d-2f6ce300fdd6&pt=3Dcampaign&t=3D1766401852&s=3Dff17b55065=
+81fe667c914ec75eae3860cbbd2edd8610f479a65416ddcd5a7aa4
+[4] https://dropbo=
+x.tech/machine-learning/feature-store-powering-realtime-ai-in-dropbox-dash?=
+utm_source=3Dtldrdata
+[5] https://hudi.apache.org/blog/2025/12/16/maximiz=
+ing-throughput-nbcc?utm_source=3Dtldrdata
+[6] https://streamkap.substack.=
+com/p/10-catalogs-3-etls-2-postgres-and?utm_source=3Dtldrdata
+[7] https:/=
+/links.tldrnewsletter.com/kDTDiX
+[8] https://www.montecarlodata.com/blog-=
+alert-fatigue-monitoring-strategy?utm_source=3Dtldrdata
+[9] https://www.c=
+onvivialtools.org/field-notes/whyyournextbirenewalshouldbeyourlast?utm_sour=
+ce=3Dtldrdata
+[10] https://blog.cloudflare.com/r2-sql-aggregations/?utm_s=
+ource=3Dtldrdata
+[11] https://mlops.community/da2a-the-future-of-data-pla=
+tforms-is-agentic-distributed-and-collaborative/?utm_source=3Dtldrdata
+[1=
+2] https://docs.google.com/presentation/d/1MGJS-reSPNMubnADYFhrZYS5L0B1zExc=
+2YkMjVuOm9A/edit?usp=3Dsharing&utm_source=3Dtldrdata
+[13] https://www.inf=
+oworld.com/article/4109586/snowflake-software-update-caused-13-hour-outage-=
+across-10-regions.html?utm_source=3Dtldrdata
+[14] http://brooker.co.za/bl=
+og/2025/12/15/database-for-ssd.html?utm_source=3Dtldrdata
+[15] https://ha=
+ckernoon.com/the-seven-pillars-of-a-production-grade-agent-architecture?utm=
+_source=3Dtldrdata
+[16] https://www.infoq.com/news/2025/12/aws-expands-we=
+ll-architected/?utm_source=3Dtldrdata
+[17] https://advertise.tldr.tech/?u=
+tm_source=3Dtldrdata&utm_medium=3Dnewsletter&utm_campaign=3Dadvertisecta
+=
+[18] https://jobs.ashbyhq.com/tldr.tech
+[19] https://jobs.ashbyhq.com/tld=
+r.tech/c227b917-a6a4-40ce-8950-d3e165357871
+[20] https://www.linkedin.com=
+/feed/update/urn:li:activity:7401699691039830016/
+[21] https://www.linked=
+in.com/in/joelvanveluwen/
+[22] https://www.linkedin.com/in/jennytzurueych=
+ing/
+[23] https://www.linkedin.com/in/remi-turpaud/
+[24] https://tldr.t=
+ech/data/manage?email=3Dmike.mcconigley%40gmail.com
+[25] https://a.tldrne=
+wsletter.com/unsubscribe?ep=3D1&l=3D037ede50-92cc-11ee-b0f2-b761aa2217ad&lc=
+=3D6b0db8d4-a670-11f0-bab1-739170ae6da7&p=3Da33bd4fc-df0f-11f0-bf0d-2f6ce30=
+0fdd6&pt=3Dcampaign&pv=3D4&spa=3D1766401281&t=3D1766401852&s=3Da7db45002ec4=
+65fceec490585558bc4de1eebf53a413c2b3a16dae2f8fd74976
+--6sXutkYp
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html charset=3DUTF-8"><meta charset=3D"UTF-8"><meta name=3D"v=
+iewport" content=3D"width=3Ddevice-width"><meta name=3D"x-apple-disable-mes=
+sage-reformatting"><title>TLDR Data</title><meta name=3D"color-scheme" cont=
+ent=3D"light dark"><meta name=3D"supported-color-schemes" content=3D"light =
+dark"><style type=3D"text/css">
+=09=09=09:root {
+=09=09=09=09color-scheme: light dark; supported-color-schemes: light dark;
+=09=09=09}
+=09=09=09
+=09=09=09*,
+=09=09=09*:after,
+=09=09=09*:before {
+=09=09=09=09-webkit-box-sizing: border-box; -moz-box-sizing: border-box; bo=
+x-sizing: border-box;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+=09=09=09}
+=09=09=09
+=09=09=09html,
+=09=09=09body,
+=09=09=09.document {
+=09=09=09=09width: 100% !important; height: 100% !important; margin: 0; pad=
+ding: 0;
+=09=09=09}
+=09=09=09
+=09=09=09body {
+=09=09=09=09-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: g=
+rayscale; text-rendering: optimizeLegibility;
+=09=09=09}
+=09=09=09
+=09=09=09div[style*=3D"margin: 16px 0"] {
+=09=09=09=09margin: 0 !important;
+=09=09=09}
+=09=09=09
+=09=09=09table,
+=09=09=09td {
+=09=09=09=09mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+=09=09=09}
+=09=09=09
+=09=09=09table {
+=09=09=09=09border-spacing: 0; border-collapse: collapse; table-layout: fix=
+ed; margin: 0 auto;
+=09=09=09}
+=09=09=09
+=09=09=09img {
+=09=09=09=09-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+=09=09=09}
+=09=09=09
+=09=09=09*[x-apple-data-detectors] {
+=09=09=09=09color: inherit !important; text-decoration: none !important;
+=09=09=09}
+=09=09=09
+=09=09=09.x-gmail-data-detectors,
+=09=09=09.x-gmail-data-detectors *,
+=09=09=09.aBn {
+=09=09=09=09border-bottom: 0 !important; cursor: default !important;
+=09=09=09}
+=09=09=09
+=09=09=09.btn {
+=09=09=09=09-webkit-transition: all 200ms ease; transition: all 200ms ease;
+=09=09=09}
+=09=09=09
+=09=09=09.btn:hover {
+=09=09=09=09background-color: #f67575; border-color: #f67575;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+=09=09=09}
+=09=09=09
+=09=09=09@media screen and (max-width: 600px) {
+=09=09=09=09.container {
+=09=09=09=09=09width: 100%; margin: auto;
+=09=09=09=09}
+=09=09=09=09.stack {
+=09=09=09=09=09display: block!important; width: 100%!important; max-width: =
+100%!important;
+=09=09=09=09}
+=09=09=09=09.btn {
+=09=09=09=09=09display: block; width: 100%; text-align: center;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09body,
+=09=09=09p,
+=09=09=09td,
+=09=09=09tr,
+=09=09=09.body,
+=09=09=09table,
+=09=09=09h1,
+=09=09=09h2,
+=09=09=09h3,
+=09=09=09h4,
+=09=09=09h5,
+=09=09=09h6,
+=09=09=09div,
+=09=09=09span {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09body,
+=09=09=09=09p,
+=09=09=09=09td,
+=09=09=09=09tr,
+=09=09=09=09.body,
+=09=09=09=09table,
+=09=09=09=09h1,
+=09=09=09=09h2,
+=09=09=09=09h3,
+=09=09=09=09h4,
+=09=09=09=09h5,
+=09=09=09=09h6,
+=09=09=09=09div,
+=09=09=09=09span {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09a {
+=09=09=09=09color: inherit !important; text-decoration: underline !importan=
+t;
+=09=09=09}
+
+=09=09</style><!--[if mso | ie]>
+=09=09<style type=3D"text/css">
+=09=09=09a {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09a {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09 </style>
+=09=09=09<![endif]--></head><body class=3D"">
+
+
+
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">Traditiona=
+l centralized data platforms, reliant on data engineers for ETL and queries=
+, create bottlenecks and slow decision-making for business users&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;</div>
+
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align=3D"center" class=3D"document"><tbody><tr><td valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"container" width=3D"600"><tbody><tr class=3D"inner-body"><td>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr class=3D"header"><td bgcolor=3D"" class=3D"containe=
+r">
+
+<table width=3D"100%"><tbody><tr><td class=3D"container">
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"margin-top: 0px;" width=3D"100%"><tbody><tr><td style=
+=3D"padding: 0px;">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div style=3D"text-align: center;">
+<span style=3D"margin-right: 0px;"><a href=3D"https://tracking.tldrnewslett=
+er.com/CL0/https:%2F%2Ftldr.tech%2Fdata%3Futm_source=3Dtldrdata/1/0100019b4=
+5c14481-4e62740b-5593-4ee9-be49-ee55104bfd8f-000000/RU0QvjIhwrywp7i-co97MK2=
+hwliYMg_OEM2N-w81akQ=3D436" rel=3D"noopener noreferrer" target=3D"_blank"><=
+span>Sign Up</span></a>
+|<span style=3D"margin-right: 2px; margin-left: 2px;"><a href=3D"https://tr=
+acking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%3Futm_source=
+=3Dtldrdata%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertisetopnav/1/01=
+00019b45c14481-4e62740b-5593-4ee9-be49-ee55104bfd8f-000000/1GaCjGUJVKpsmZZ-=
+l9asPur8UFs8EwViZCC5iMjXFgQ=3D436" rel=3D"noopener noreferrer" target=3D"_b=
+lank"><span>Advertise</span></a></span>|<span style=3D"margin-left: 2px;"><=
+a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewslet=
+ter.com%2Fweb-version%3Fep=3D1%26lc=3D6b0db8d4-a670-11f0-bab1-739170ae6da7%=
+26p=3Da33bd4fc-df0f-11f0-bf0d-2f6ce300fdd6%26pt=3Dcampaign%26t=3D1766401852=
+%26s=3Dff17b5506581fe667c914ec75eae3860cbbd2edd8610f479a65416ddcd5a7aa4/1/0=
+100019b45c14481-4e62740b-5593-4ee9-be49-ee55104bfd8f-000000/jNTo-QLiYuR8M-F=
+BxecSuGWUHqcqaqn2exB1IUSnoJQ=3D436"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"text-=
+align: center;"><span data-darkreader-inline-color=3D"" style=3D"--darkread=
+er-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30=
+px;">T</span><span style=3D"font-size: 30px;"><span data-darkreader-inline-=
+color=3D"" style=3D"color: rgb(232, 192, 96) !important; --darkreader-inlin=
+e-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-colo=
+r=3D"" style=3D"color: rgb(101, 195, 173) !important; --darkreader-inline-c=
+olor:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-=
+color=3D"" style=3D"--darkreader-inline-color:#dd6e6e; color: rgb(220, 107,=
+ 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody></tbody></table>
+
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody><tr=
+><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0;=
+">
+<div style=3D"text-align: center;">
+
+<h1><strong>TLDR Data <span id=3D"date">2025-12-22</span></strong></h1>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody></t=
+body></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=3D""><td class=3D"container">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td style=3D"padding: 0px;">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=93=B1</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Deep Dives</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fdropbox.tech%2Fmachine-learning%2Ffeature-store-powerin=
+g-realtime-ai-in-dropbox-dash%3Futm_source=3Dtldrdata/1/0100019b45c14481-4e=
+62740b-5593-4ee9-be49-ee55104bfd8f-000000/_O_jH0P66jeyP_DIjU3PukItX9zZdOYpn=
+etlISIXSb0=3D436">
+                                    <span>
+                                        <strong>Inside the Feature Store Po=
+wering Real-Time AI in Dropbox Dash (7 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Dropbox Dash's AI-driven search and ran=
+king system is powered by a custom feature store architecture tailored to h=
+andle tens of thousands of parallel feature lookups per query and meet stri=
+ct sub-100ms latency requirements. Integrating Feast for orchestration, Spa=
+rk for computation, and an in-house DynamoDB-compatible solution for ~20ms =
+online serving, Dropbox overcame Python concurrency bottlenecks by rewritin=
+g serving paths in Go, achieving p95 latencies of 25=E2=80=9335ms. Intellig=
+ent hybrid ingestion strategies optimize data freshness and I/O. This appro=
+ach balances flexibility and performance, scales efficiently, and delivers =
+consistent ranking relevance.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fhudi.apache.org%2Fblog%2F2025%2F12%2F16%2Fmaximizing-th=
+roughput-nbcc%3Futm_source=3Dtldrdata/1/0100019b45c14481-4e62740b-5593-4ee9=
+-be49-ee55104bfd8f-000000/aZEuSy-rAnyKQ9q-dhBhIEXF7RBH0Mmd0LtrGjSjikg=3D436=
+">
+                                    <span>
+                                        <strong>Maximizing Throughput with =
+Apache Hudi NBCC: Stop Retrying, Start Scaling (9 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Apache Hudi's traditional Optimistic Co=
+ncurrency Control (OCC) struggles with high-concurrency writes on Merge-on-=
+Read tables. Overlapping writes cause frequent conflicts, leading to retrie=
+s, aborted work, and reduced throughput when mixing streaming and batch job=
+s. Non-Blocking Concurrency Control, introduced in Hudi 1.0, solves this by=
+ eliminating conflicts, allowing concurrent writers to append to separate l=
+og files, ordering commits by completion time with a TrueTime-like mechanis=
+m, and ensuring every write succeeds without retries.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=9A=80</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Opinions &amp; Advice</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fstreamkap.substack.com%2Fp%2F10-catalogs-3-etls-2-postg=
+res-and%3Futm_source=3Dtldrdata/1/0100019b45c14481-4e62740b-5593-4ee9-be49-=
+ee55104bfd8f-000000/F7i6idGvFlydFzYxZuMjGyZtW0oTbjYLt2BmJVNihlI=3D436">
+                                    <span>
+                                        <strong>10 Catalogs, 3 ETLs, 2 Post=
+gres, and a Partridge in a Pear Tree (14 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    2025 reshaped the modern data stack thr=
+ough a wave of major acquisitions, most notably Fivetran merging with dbt, =
+Confluent joining IBM, and both Snowflake and Databricks buying Postgres co=
+mpanies, signaling consolidation around core infrastructure. Independence a=
+nd openness are becoming strategic positioning rather than defaults, with v=
+endors racing to control more of the stack while claiming flexibility. Expe=
+ct tighter integration, cultural friction in open source communities, and i=
+ncreasing pressure to choose platforms deliberately rather than assuming to=
+day's =E2=80=9Cmodern=E2=80=9D stack will stay modular tomorrow.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FkDTDiX/1/0100019b45c14481-4e=
+62740b-5593-4ee9-be49-ee55104bfd8f-000000/uSHNwUqF0n8cAgoElDtom26GbHO8P_oX4=
+akXb7Uubyw=3D436">
+                                    <span>
+                                        <strong>Data Testing like it's not =
+1997 (12 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Treat data quality like software qualit=
+y: define what =E2=80=9Cgood=E2=80=9D means, design layered tests, and auto=
+mate them across the pipeline. This cuts rework and incidents by shifting q=
+uality left while using production observability for what can't be caught e=
+arlier. Durable data quality comes from disciplined processes and ownership=
+, not a single tool.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.montecarlodata.com%2Fblog-alert-fatigue-monitoring-=
+strategy%3Futm_source=3Dtldrdata/1/0100019b45c14481-4e62740b-5593-4ee9-be49=
+-ee55104bfd8f-000000/j7hypR-idxE13aihorDXIhltyCF5vumM5JHuYBPILPo=3D436">
+                                    <span>
+                                        <strong>Alert Fatigue Is Killing Yo=
+ur Data Quality Strategy. Here's How to Fix It (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Alert fatigue in data observability occ=
+urs when teams are overwhelmed by excessive, often false-positive alerts fr=
+om overly rigid or unprioritized monitoring, leading to ignored notificatio=
+ns and stalled data quality improvements. To combat this, adopt strategies =
+like machine learning-based monitors that learn normal data patterns to red=
+uce noise, focus monitoring on critical tables and data products, align ale=
+rt ownership with domain teams, and implement intelligent prioritization an=
+d routing based on alert type, location, and downstream impact.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=92=BB</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Launches &amp; Tools</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.convivialtools.org%2Ffield-notes%2Fwhyyournextbiren=
+ewalshouldbeyourlast%3Futm_source=3Dtldrdata/1/0100019b45c14481-4e62740b-55=
+93-4ee9-be49-ee55104bfd8f-000000/kPG7gp66oPsT2pNm49kCk-7xXMukUXeZ_1GMcTA1M5=
+Y=3D436">
+                                    <span>
+                                        <strong>Why Your Next BI Renewal Sh=
+ould Be Your Last (16 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Legacy BI tools are being squeezed from=
+ all sides: AI-native analytics can answer questions directly, data platfor=
+ms are moving up the stack, and purpose-built tools are out-innovating dash=
+boards, while incumbents respond mainly with price hikes and weak AI bolt-o=
+ns. For data engineers and leaders, the real value is shifting from dashboa=
+rds to governed, machine-readable metrics and semantic layers that can powe=
+r many interfaces, including agents and custom apps. Stop renewing BI on au=
+topilot and instead invest in agentic coding, flexible metric foundations, =
+and tools that let teams build faster and deliver insights directly into wo=
+rkflows.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fblog.cloudflare.com%2Fr2-sql-aggregations%2F%3Futm_sour=
+ce=3Dtldrdata/1/0100019b45c14481-4e62740b-5593-4ee9-be49-ee55104bfd8f-00000=
+0/oy21AT3FqLz-pFZ5wL5itFTv1HlZSHYH2U24hqqI2Ng=3D436">
+                                    <span>
+                                        <strong>Announcing Support for GROU=
+P BY, SUM, and Other Aggregation Queries in R2 SQL (8 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Cloudflare has added full SQL aggregati=
+on, enabling distributed analytics directly over data stored in R2 Data Cat=
+alog. Leveraging scatter-gather and shuffling techniques, aggregations effi=
+ciently scale out computation, minimize coordinator bottlenecks, and suppor=
+t high-cardinality queries with deterministic hash partitioning. This relea=
+se brings R2 SQL closer to a full-fledged serverless OLAP solution, empower=
+ing data teams to analyze data at scale without additional infrastructure.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fmlops.community%2Fda2a-the-future-of-data-platforms-is-=
+agentic-distributed-and-collaborative%2F%3Futm_source=3Dtldrdata/1/0100019b=
+45c14481-4e62740b-5593-4ee9-be49-ee55104bfd8f-000000/wGSRwB-A0Sy6wqkGzBMJiG=
+B2z1Nb-MOdrPA101Xgxbc=3D436">
+                                    <span>
+                                        <strong>Da2a: The Future of Data Pl=
+atforms is Agentic, Distributed, and Collaborative (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Traditional centralized data platforms,=
+ reliant on data engineers for ETL and queries, create bottlenecks and slow=
+ decision-making for business users. DA2A is a future paradigm of agentic, =
+distributed, and collaborative data platforms where specialized AI agents a=
+utonomously manage domain-specific data, communicate via an Agent-to-Agent =
+protocol, and collaborate through an orchestrator to answer complex busines=
+s questions efficiently without monolithic architectures.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=8E=81</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><strong><h1>Miscellaneous</h1></strong><=
+/div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fdocs.google.com%2Fpresentation%2Fd%2F1MGJS-reSPNMubnADY=
+FhrZYS5L0B1zExc2YkMjVuOm9A%2Fedit%3Fusp=3Dsharing%26utm_source=3Dtldrdata/1=
+/0100019b45c14481-4e62740b-5593-4ee9-be49-ee55104bfd8f-000000/F-EPLqPr8X7R-=
+JzNGK0rlXF4HaGBnnQRiayYpF0PEnI=3D436">
+                                    <span>
+                                        <strong>The Rise of the=E2=80=AFLLM=
+=E2=80=AFData=E2=80=AFEngineer (60 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    The real shift is not LLMs replacing da=
+ta engineers, but data teams becoming LLM-native by redesigning workflows s=
+o humans guide, validate, and own outcomes while models automate routine EL=
+T and transformation work. For data leaders, the value moves from writing S=
+QL and pipelines to platform engineering, governance, and operationalizing =
+AI safely at scale, with LLMs accelerating delivery rather than acting auto=
+nomously. Teams that learn to structure context, rules, and human-in-the-lo=
+op workflows will move faster and cheaper, while those chasing one-shot aut=
+omation or fearing displacement will fall behind.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.infoworld.com%2Farticle%2F4109586%2Fsnowflake-softw=
+are-update-caused-13-hour-outage-across-10-regions.html%3Futm_source=3Dtldr=
+data/1/0100019b45c14481-4e62740b-5593-4ee9-be49-ee55104bfd8f-000000/UgbvRvA=
+tQhcYFR_RwaX7fn6_O1J8htpaL1rqXg4lmNE=3D436">
+                                    <span>
+                                        <strong>Snowflake Software Update C=
+aused 13-hour Outage Across 10 Regions (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    A breaking schema change in Snowflake's=
+ control plane caused a 13-hour outage across many regions, stopping querie=
+s and data ingestion for affected customers. The incident showed that multi=
+-region setups do not protect against control plane logic errors, because s=
+hared global metadata can fail everywhere at once.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"http://tracking.tldrnewsletter.c=
+om/CL0/http:%2F%2Fbrooker.co.za%2Fblog%2F2025%2F12%2F15%2Fdatabase-for-ssd.=
+html%3Futm_source=3Dtldrdata/1/0100019b45c14481-4e62740b-5593-4ee9-be49-ee5=
+5104bfd8f-000000/XmAukL-1yROkWS7Er-QMH-zXwKwKCPpt0fUzjJQaO6k=3D436">
+                                    <span>
+                                        <strong>What Does a Database for SS=
+Ds Look Like? (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Databases like Postgres and MySQL were =
+built for old hard-drive limits, where slow disk access required heavy logg=
+ing, large pages, and complex single-node recovery. With fast SSDs, cloud r=
+eplication, and reliable networks, many of these designs are no longer need=
+ed. A modern database should push durability and availability to distribute=
+d systems, optimize for small, fast transfers, use versioning for reads, an=
+d simplify recovery by dropping legacy single-node mechanisms.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=E2=9A=
+=A1</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fhackernoon.com%2Fthe-seven-pillars-of-a-production-grad=
+e-agent-architecture%3Futm_source=3Dtldrdata/1/0100019b45c14481-4e62740b-55=
+93-4ee9-be49-ee55104bfd8f-000000/holNjhg0tLPk8Xsj1HqOqrWIA7oM8OHAIxVHaHYysc=
+8=3D436">
+                                    <span>
+                                        <strong>The Seven Pillars of a Prod=
+uction-Grade Agent Architecture (12 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Enterprise-grade agentic AI needs a str=
+ong, well-designed foundation.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.infoq.com%2Fnews%2F2025%2F12%2Faws-expands-well-arc=
+hitected%2F%3Futm_source=3Dtldrdata/1/0100019b45c14481-4e62740b-5593-4ee9-b=
+e49-ee55104bfd8f-000000/aDMQummcnml9AIR1XTP-nanPa2PZAMGhr-jOGIb7uBs=3D436">
+                                    <span>
+                                        <strong>AWS Expands Well-Architecte=
+d Framework with Responsible AI Lens (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Responsible-AI and updated GenAI lenses=
+ give architects prescriptive blueprints for safe, compliant machine-learni=
+ng deployments.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"word-break=
+: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to advertise in TLDR? =F0=9F=93=B0
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+If your company is interested in reaching an audience of data engineering p=
+rofessionals and decision makers, you may want to <a href=3D"https://tracki=
+ng.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=
+=3Dtldrdata%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertisecta/1/01000=
+19b45c14481-4e62740b-5593-4ee9-be49-ee55104bfd8f-000000/qvAOIQ_PJQxAGpLpQpT=
+ALwKeW-J4sqNPiGNu5mDeyIc=3D436"><strong><span>advertise with us</span></str=
+ong></a>.
+</div>
+<br>
+
+<!-- New "Want to work at TLDR?" section -->
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to work at TLDR? =F0=9F=92=BC
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech/1/0100019b45c14481-4e62740b-5593-4ee9-be49-ee55104bfd8f-00=
+0000/w-IUwnRCl8pbpCm4fxDlK-ZFdt6QOLObHM1SKQnmJQ4=3D436" rel=3D"noopener nor=
+eferrer" style=3D"color: #0000EE; text-decoration: underline;" target=3D"_b=
+lank"><strong>Apply here</strong></a>,
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech%2Fc227b917-a6a4-40ce-8950-d3e165357871/1/0100019b45c14481-=
+4e62740b-5593-4ee9-be49-ee55104bfd8f-000000/L30ARObJclRlrS-OFJycP1fp3jihxUW=
+p193BGCO8ls8=3D436" rel=3D"noopener noreferrer" style=3D"color: #0000EE; te=
+xt-decoration: underline;" target=3D"_blank"><strong>create your own role</=
+strong></a> or send a friend's resume to <a href=3D"mailto:jobs@tldr.tech" =
+style=3D"color: #0000EE; text-decoration: underline;">jobs@tldr.tech</a> an=
+d get $1k if we hire them! TLDR is one of <a href=3D"https://tracking.tldrn=
+ewsletter.com/CL0/https:%2F%2Fwww.linkedin.com%2Ffeed%2Fupdate%2Furn:li:act=
+ivity:7401699691039830016%2F/1/0100019b45c14481-4e62740b-5593-4ee9-be49-ee5=
+5104bfd8f-000000/7so_EOfOT3qV76xFknw8e1WKH4zV5yAwg0slrOg6N18=3D436" rel=3D"=
+noopener noreferrer" style=3D"color: #0000EE; text-decoration: underline;" =
+target=3D"_blank"><strong>Inc.'s Best Bootstrapped businesses</strong></a> =
+of 2025.
+</div>
+<br>
+
+<div class=3D"text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.linkedin=
+.com%2Fin%2Fjoelvanveluwen%2F/1/0100019b45c14481-4e62740b-5593-4ee9-be49-ee=
+55104bfd8f-000000/-FjCxMny2XKQqW22tXpI2dNHReocfsRxJnXnCozKxFs=3D436"><span>=
+Joel Van Veluwen</span></a>, <a href=3D"https://tracking.tldrnewsletter.com=
+/CL0/https:%2F%2Fwww.linkedin.com%2Fin%2Fjennytzurueyching%2F/1/0100019b45c=
+14481-4e62740b-5593-4ee9-be49-ee55104bfd8f-000000/WM3013XEr3MLbx2ute8me0sSY=
+Dyve6WDu53NqjD6QWs=3D436"><span>Tzu-Ruey Ching</span></a> &amp; <a href=3D"=
+https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.linkedin.com%2Fin%2=
+Fremi-turpaud%2F/1/0100019b45c14481-4e62740b-5593-4ee9-be49-ee55104bfd8f-00=
+0000/0PSKoJBFFE_UOy9AfDmwfbC8NY-93sRE1S0f3NrC5gA=3D436"><span>Remi Turpaud<=
+/span></a>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div class=3D"text-block" id=3D"testing-id">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2F=
+data%2Fmanage%3Femail=3Dmike.mcconigley%2540gmail.com/1/0100019b45c14481-4e=
+62740b-5593-4ee9-be49-ee55104bfd8f-000000/mxLJN-m9Pk8ARDNrEMZj9u4JuS9mEfz_V=
+a9k0FWwNyE=3D436">Manage your subscriptions</a> to our other newsletters on=
+ tech, startups, and programming. Or if TLDR Data isn't for you, please <a =
+href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewslette=
+r.com%2Funsubscribe%3Fep=3D1%26l=3D037ede50-92cc-11ee-b0f2-b761aa2217ad%26l=
+c=3D6b0db8d4-a670-11f0-bab1-739170ae6da7%26p=3Da33bd4fc-df0f-11f0-bf0d-2f6c=
+e300fdd6%26pt=3Dcampaign%26pv=3D4%26spa=3D1766401281%26t=3D1766401852%26s=
+=3Da7db45002ec465fceec490585558bc4de1eebf53a413c2b3a16dae2f8fd74976/1/01000=
+19b45c14481-4e62740b-5593-4ee9-be49-ee55104bfd8f-000000/8TWqHg-fFP5NDv-dpRo=
+I8QnSVmSwbfFSTF_9HGonCSI=3D436">unsubscribe</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+<img alt=3D"" src=3D"http://tracking.tldrnewsletter.com/CI0/0100019b45c1448=
+1-4e62740b-5593-4ee9-be49-ee55104bfd8f-000000/QKm2TfeUpCnFiYXb865724q1muRwX=
+KuV0uuPuKNWe-I=3D436" style=3D"display: none; width: 1px; height: 1px;">
+</body></html>
+--6sXutkYp--
