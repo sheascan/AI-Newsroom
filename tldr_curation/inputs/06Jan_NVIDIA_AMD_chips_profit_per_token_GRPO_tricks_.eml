@@ -1,0 +1,1518 @@
+Delivered-To: mike.mcconigley@gmail.com
+Received: by 2002:a05:6802:60c6:20b0:617:3adb:9ab9 with SMTP id t6-n2csp1266194oca;
+        Tue, 6 Jan 2026 06:26:44 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IEpsqCKLWdqk5KPMBE4Y2UpKLlTCGV0OzodshWsxmNzA9S2CscfFmqp2J9gDmjZj2b7j9Yw
+X-Received: by 2002:a05:620a:1aa4:b0:8a3:f8c2:5f03 with SMTP id af79cd13be357-8c37ec05553mr423726085a.83.1767709603922;
+        Tue, 06 Jan 2026 06:26:43 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1767709603; cv=none;
+        d=google.com; s=arc-20240605;
+        b=U6qjaId8mMuB61Jq2lis7BugCD4naPJEhzaZUULIlYO32r/SdUEpOkddZAj3lH9wYV
+         wxJ9DE+ZkNHo49nFWjQzwro0+3oz4oGlm0/i7LYuxWibCGM+KPXo8thtx1iUShOTRj41
+         Vv/FGqwe0Q06jYqzcvgZyGxIlif1UoASrLQctSbqX4imCyAhXwicgOmlSuHq5I7ukOHG
+         K23nxASo7es6nDIhuLToMXDI3Z7oB0hL/4zCo/o6wWIIz67kCE4NtUhROllBEwHWZRPz
+         csk5MIvzGRCplc90idkxb4/YnLE0wf4y2Dcn9Uh1vHaFG8MnTJMFGgFKB/uKPNepOp6v
+         GzdQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:date:mime-version:list-unsubscribe-post
+         :list-unsubscribe:subject:to:from:dkim-signature:dkim-signature;
+        bh=xzPFMxIsreT0PkfSeeX9m/tHmIfkktzLdFySUoIv/lE=;
+        fh=tUTYCbTOUI69DxYKXGXRz08XnPP7jEKRU6E5rS0DFR4=;
+        b=ifMJzq467R/oImO1Ajf0UurQpOYt8ZV/JQSz3NIJ4hT/AwwmwPF8zWcn57OM8ZFFSB
+         1SBCJWAtNZKo4doW3aM9S2yKDC3gn7m0sPqHmrJ3zAUf0+rJHwwwdWojCECRn3ZlCJyU
+         KzReSALZzkyeNsrvFLRR6yYw08COg/XxDIQrlyiqiX/RsW1CfvqHrTLOPIb/Y2QB+8mj
+         xwSn/HEytHBPe5Hsvtgug+8a8an/6Iw3uw5u+Of1Kw+tXq26o5YHwkGANAAnWMtvY/KA
+         f6MOhDWm22xKydgJqKWSolYf7RlvxkEly+eLcKMiQpq1MN0MDsbFZnReKkR1vzF5ELH4
+         z9pQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=R8uOtzsA;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=Urf8NjSZ;
+       spf=pass (google.com: domain of 0100019b93b3f675-49f76140-851b-461b-a156-8d32474ac25c-000000@dailyupdate.tldrnewsletter.com designates 54.240.77.23 as permitted sender) smtp.mailfrom=0100019b93b3f675-49f76140-851b-461b-a156-8d32474ac25c-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+Return-Path: <0100019b93b3f675-49f76140-851b-461b-a156-8d32474ac25c-000000@dailyupdate.tldrnewsletter.com>
+Received: from a77-23.smtp-out.amazonses.com (a77-23.smtp-out.amazonses.com. [54.240.77.23])
+        by mx.google.com with ESMTPS id af79cd13be357-8c37f488aabsi236239985a.39.2026.01.06.06.26.43
+        for <mike.mcconigley@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Tue, 06 Jan 2026 06:26:43 -0800 (PST)
+Received-SPF: pass (google.com: domain of 0100019b93b3f675-49f76140-851b-461b-a156-8d32474ac25c-000000@dailyupdate.tldrnewsletter.com designates 54.240.77.23 as permitted sender) client-ip=54.240.77.23;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=R8uOtzsA;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=Urf8NjSZ;
+       spf=pass (google.com: domain of 0100019b93b3f675-49f76140-851b-461b-a156-8d32474ac25c-000000@dailyupdate.tldrnewsletter.com designates 54.240.77.23 as permitted sender) smtp.mailfrom=0100019b93b3f675-49f76140-851b-461b-a156-8d32474ac25c-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ygiuxamnxevikrd5dtfwanslhs6b24mt; d=tldrnewsletter.com;
+	t=1767709603;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type;
+	bh=X2mmtbTdbq6zRhjMMuqSpsY1XQbNiR2OaIQy7ZOrVWk=;
+	b=R8uOtzsAZ8TxKSdSjSB8HDiyHstyTOA9hg4eCbjsBxXOpQ5erkbi+bdGy97arLH+
+	RyHctsGYfnLQBWduRd94X28OsmEvZLECEklV0CrSECKNdaCQ83f+gc1175fec8yHN7p
+	h31BsNEnJZ+PANZjo9pDWVUhG/47Pa9ldTsqynI4=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1767709603;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type:Feedback-ID;
+	bh=X2mmtbTdbq6zRhjMMuqSpsY1XQbNiR2OaIQy7ZOrVWk=;
+	b=Urf8NjSZPflaleY74UT9mVG+8tGnAYC/jLpoZMHDTSqyObXOHz33T/1y19A7xwAc
+	6/4ml8hSp2W9/vQVBYAQMPUZpq+GhlkFpJ7W19mqehefoaHM74/r/qnNfGRedQaZful
+	VfBgBf1B43rfeT5mIA+kRoKjOyH5NMhmnDsEZ35Y=
+From: TLDR AI <dan@tldrnewsletter.com>
+To: mike.mcconigley@gmail.com
+Subject: NVIDIA & AMD chips =?utf-8?Q?=E2=9A=A1=2C?= profit per token
+ =?utf-8?Q?=F0=9F=92=B0=2C?= GRPO tricks
+ =?utf-8?Q?=F0=9F=92=A1=C2=A0_=C2=A0?=
+X-Entity-Ref-Id: a65147bc-e92c-4b2a-a9e9-7540f8767015
+X-EmailOctopus-Parent-Id: 3326470a-eaf0-11f0-9e07-2f325675f724
+X-EmailOctopus-Parent-Type-Id: campaign
+X-EmailOctopus-List-Id: eedf6b14-3de3-11ed-9a32-0241b9615763
+X-EmailOctopus-List-Contact-Id: 6b0cc672-a670-11f0-8911-056565896460
+X-EmailOctopus-Started-Preparing-At: 2026-01-06T14:01:21+00:00
+X-EmailOctopus-Sent-At: 2026-01-06T14:26:43+00:00
+X-EmailOctopus-Team-Id: 66987ef2-4f4c-11e9-a3c9-06b79b628af2
+X-EmailOctopus-Version: 4
+List-Unsubscribe: <https://a.tldrnewsletter.com/unsubscribe?ep=1&l=eedf6b14-3de3-11ed-9a32-0241b9615763&lc=6b0cc672-a670-11f0-8911-056565896460&p=3326470a-eaf0-11f0-9e07-2f325675f724&pt=campaign&pv=4&spa=1767708081&t=1767709603&s=4c3169200a91f51df10db920e333a90285de9f38ccdc19fff914adbc44a1d9f3>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-EmailOctopus-Ses-Configuration-Set-Name: emailoctopus-a9f7b12f74f3c968d9408897fb35539c
+MIME-Version: 1.0
+Date: Tue, 6 Jan 2026 14:26:43 +0000
+Message-ID: <0100019b93b3f675-49f76140-851b-461b-a156-8d32474ac25c-000000@email.amazonses.com>
+Content-Type: multipart/alternative; boundary=WKWuZLLP
+Feedback-ID: ::1.us-east-1.Dj5/7DYmgk+n1sSGGXSQSLIthSjNQ0MGtV5Dro1Tr8U=:AmazonSES
+X-SES-Outgoing: 2026.01.06-54.240.77.23
+
+--WKWuZLLP
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Nvidia has revealed its latest AI server systems. The Vera Rubin chips
+ar=
+e set to go on sale in the second half of this
+year=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0
+
+
+ Sign =
+Up [1] |Advertise [2]|View Online [3]=20
+
+=09=09TLDR=20
+
+=09=09TOGETHER=
+ WITH [You.com] [4]
+
+TLDR AI 2026-01-06
+
+ STOP WINGING AI ROLLOUTS.=
+ START PROVING VALUE BY THE END OF Q1
+(SPONSOR) [4]=20
+
+ Without a clea=
+r roadmap, AI adoption often fizzles, leaving ROI
+unproven and teams frus=
+trated. The 90-Day AI Adoption Playbook from
+You.com [4] gives you an eff=
+ective, phased roadmap to move from pilot
+to real, measurable ROI=
+=E2=80=94in only 90 days.
+
+What you'll get:
+
+ =09* A week-by-week r=
+ollout plan for secure, scalable AI adoption
+ =09* Key actions to build u=
+ser skills, certify competency, and drive
+consistent usage
+ =09* Certif=
+ication steps to ensure every user delivers impact
+
+Make your first 90 =
+days count. Download the playbook. [4]
+
+=F0=9F=9A=80=20
+
+HEADLINES & =
+LAUNCHES
+
+ NVIDIA UNVEILS FASTER AI CHIPS SOONER THAN EXPECTED (5 MINUT=
+E READ)
+[5]=20
+
+ Nvidia revealed its latest AI server systems at the Co=
+nsumer
+Electronics Show in Las Vegas. The Vera Rubin chips are set to go =
+on
+sale in the second half of this year. They are designed to handle the=
+
+enormous computing loads needed to create simulations of reality for
+u=
+se in model training. Rubin delivers a 10-fold reduction in cost
+compared=
+ with Blackwell chips.=20
+
+ AMD UNVEILS NEW CHIP FOR CORPORATE DATA CENTE=
+RS, TALKS UP DEMAND (3
+MINUTE READ) [6]=20
+
+ AMD's new MI440X chip is d=
+esigned for use in smaller corporate data
+centers. The company's new Heli=
+os system, based on the new chip, will
+go on sale later this year. AMD's =
+MI500 series of processors will
+debut in 2027. Those chips will deliver u=
+p to 1,000 times the
+performance of the MI300 series, which was first rol=
+led out in 2023.=20
+
+ NVIDIA INTRODUCES ALPAMAYO (4 MINUTE READ) [7]=20
+=
+
+ NVIDIA launched the Alpamayo family of open AI models, datasets, and
+=
+simulators to address long-tail challenges in autonomous driving. The
+mod=
+els use reasoning-based vision-language-action architectures to
+support s=
+afer, end-to-end AV systems that generalize to rare
+scenarios.=20
+
+=
+=F0=9F=A7=A0=20
+
+DEEP DIVES & ANALYSIS
+
+ GROSS PROFIT PER TOKEN (2 MI=
+NUTE READ) [8]=20
+
+ Meta's $2 billion acquisition of Manus highlights the=
+ importance of
+gross profit per token, with Manus showing 40x GP multiple=
+. DeepSeek
+and Together AI have the lowest multiples because they resell=
+
+inference, unlike Perplexity, which achieves the highest at 222x as an=
+
+application. Investors prioritize token monetization over raw volume,
+=
+as indicated by a 0.71 correlation between gross profit per token and
+val=
+uation.=20
+
+ AI CAPEX: BUILT ON OPTIONS, PRICED AS CERTAINTY (6 MINUTE RE=
+AD) [9]=20
+
+ Letters of intents are real options that move markets, guide=
+
+counterparties, and shape capex decisions before obligations harden.
+O=
+ptions can be enough to pull forward tens of billions in irreversible
+inv=
+estment. If the option doesn't convert, the stranded capital
+becomes a re=
+structuring problem.=20
+
+=F0=9F=A7=91=E2=80=8D=F0=9F=92=BB=20
+
+ENGINEER=
+ING & RESEARCH
+
+ GRPO++: TRICKS FOR MAKING RL ACTUALLY WORK (72 MINUTE =
+READ) [10]=20
+
+ Group Relative Policy Optimization (GRPO) is the RL optim=
+izer used to
+train most open-source reasoning models. It is popular due t=
+o its
+conceptual simplicity and practical efficiency. The vanilla GRPO
+=
+algorithm has subtle issues that can hinder the RL training process,
+espe=
+cially at scale. This post provides an overview of the work done
+to solve=
+ the shortcomings of GRPO.=20
+
+ M2.1: MULTILINGUAL AND MULTI-TASK CODING =
+WITH STRONG GENERALIZATION
+(17 MINUTE READ) [11]=20
+
+ MiniMax-M2.1 matc=
+hes or surpasses the level of global top-tier models
+on multiple internal=
+ and external benchmarks. The open source model
+has exceptional performan=
+ce in code generation, tool usage,
+instruction following, and long-range =
+planning. This post discusses
+how the model was trained and shares insigh=
+ts gained during the
+process.=20
+
+ DEEP DELTA LEARNING (2 MINUTE READ) =
+[12]=20
+
+ A new approach to neural architecture, Deep Delta Learning
+ge=
+neralizes residual networks using a single scalar gate that
+interpolates =
+between identity, projection, and reflection.=20
+
+ TENCENT'S YOUTU-AGENT =
+FRAMEWORK FOR AUTONOMOUS AGENTS (2 MINUTE READ)
+[13]=20
+
+ Tencent's You=
+tu-Agent offers a modular framework for building and
+evaluating AI agents=
+ with open-source models. It emphasizes clean
+abstractions for tools, env=
+ironments, and agent logic to support
+extensibility and robust deployment=
+.=20
+
+ KERNELEVOLVE: SCALING AGENTIC KERNEL CODING FOR HETEROGENEOUS AI=
+
+ACCELERATORS AT META (1 MINUTE READ) [14]=20
+
+ Making deep learning re=
+commendation model (DLRM) training and
+inference fast and efficient prese=
+nts three key system challenges:
+model architecture diversity, kernel pri=
+mitive diversity, and hardware
+generation and architecture heterogeneity.=
+ KernelEvolve is an agentic
+kernel coding framework that tackles heteroge=
+neity at scale for DLRM.
+It is designed to take kernel specifications as =
+input and automate the
+process of kernel generation and optimization for =
+a recommendation
+model across heterogeneous hardware architectures. Kerne=
+lEvolve is
+designed to optimize a wide variety of production recommendati=
+on
+models across generations of Nvidia and AMD GPUs, as well as Meta's AI=
+
+accelerators. It significantly mitigates the programmability barrier
+f=
+or new AI hardware.=20
+
+=F0=9F=8E=81=20
+
+MISCELLANEOUS
+
+ OPENAI TO =
+BUY PINTEREST? STRATEGIC ANALYSIS (8 MINUTE READ) [15]=20
+
+ OpenAI may ac=
+quire Pinterest, a visual search app disguised as a
+social platform. Chat=
+GPT is missing Pinterest's level of visual
+efficiency because that is not=
+ a core capability of large language
+models. Pinterest's ability to go fr=
+om intent to product, or from
+inspiration to intent to product, will be v=
+ery important for OpenAI's
+commerce aspirations. ChatGPT must go visual t=
+o create a successful UX
+and user experience for agentic commerce.=20
+
+=
+ GEMINI-POWERED FEATURES COMING TO GOOGLE TV (3 MINUTE READ) [16]=20
+
+ At=
+ CES 2026, Google previewed Gemini integrations for Google TV,
+including =
+visual, interactive topic exploration, natural language
+settings control,=
+ and creative tools like Photos Remix and Veo.=20
+
+=E2=9A=A1=20
+
+QUICK =
+LINKS
+
+ NVIDIA UNVEILS PERSONAL AGENT ROBOTICS AT CES (6 MINUTE READ) [=
+17]=20
+
+ At CES 2026, NVIDIA introduced Reachy Mini, a personal robotic A=
+I
+agent powered by DGX Spark, capable of real-time multimodal
+interacti=
+on.=20
+
+ OPENAI LOSES TOP AI RESEARCHER JERRY TWOREK AFTER SEVEN YEARS (1=
+
+MINUTE READ) [18]=20
+
+ Jerry Tworek was a key player in building GPT-4=
+, ChatGPT, and
+OpenAI's first AI coding models.=20
+
+ THOUGHTS ON CLAUDE=
+ CODE (17 MINUTE READ) [19]=20
+
+ Claude Code is a phenomenal coding compa=
+nion that dramatically
+amplifies the fun side of coding by eliminating th=
+e annoying parts.=20
+
+ IS HALLUCINATION-FREE AI CODE POSSIBLE? (11 MINUTE=
+ READ) [20]=20
+
+ While verification methods will soon be able to pick up =
+almost all
+logical flaws in some fields, and foundational models will get=
+ better,
+they may still struggle to produce 'correct' code.=20
+
+Love TL=
+DR? Tell your friends and get rewards!
+
+ Share your referral link below=
+ with friends to get free TLDR swag!=20
+
+ https://refer.tldr.tech/5f66906=
+6/2 [21]=20
+
+=09=09 Track your referrals here. [22]=20
+
+Want to adverti=
+se in TLDR? =F0=9F=93=B0
+
+ If your company is interested in reaching an=
+ audience of AI
+professionals and decision makers, you may want to ADVERT=
+ISE WITH US
+[23].=20
+
+Want to work at TLDR? =F0=9F=92=BC
+
+ APPLY HE=
+RE [24], CREATE YOUR OWN ROLE [25] or send a friend's resume
+to jobs@tldr=
+.tech and get $1k if we hire them! TLDR is one of INC.'S
+BEST BOOTSTRAPPE=
+D BUSINESSES [26] of 2025.=20
+
+ If you have any comments or feedback, jus=
+t respond to this email!=20
+
+Thanks for reading,=20
+Andrew Tan [27], Ali =
+Aminian [28], & Jacob Turner [29]=20
+
+ Manage your subscriptions [30] to =
+our other newsletters on tech,
+startups, and programming. Or if TLDR AI i=
+sn't for you, please
+unsubscribe [31].=20
+
+=20
+
+Links:
+------
+[1]=
+ https://tldr.tech/ai?utm_source=3Dtldrai
+[2] https://advertise.tldr.tech=
+/?utm_source=3Dtldrai&utm_medium=3Dnewsletter&utm_campaign=3Dadvertisetopna=
+v
+[3] https://a.tldrnewsletter.com/web-version?ep=3D1&lc=3D6b0cc672-a670-=
+11f0-8911-056565896460&p=3D3326470a-eaf0-11f0-9e07-2f325675f724&pt=3Dcampai=
+gn&t=3D1767709603&s=3Dcb18c22816e5e20b73ed70b4a87201e78e31c95879afe6c9bb052=
+87133b87517
+[4] https://about.you.com/90-day-ai-playbook?utm_campaign=3D3=
+2665521-TLDR_AI_Q1&utm_source=3Dexternal-newsletter&utm_medium=3Demail&utm_=
+term=3Dtldrai_primary_1.6&utm_content=3Dtldrai_primary_1.6
+[5] https://li=
+nks.tldrnewsletter.com/6t8ztV
+[6] https://links.tldrnewsletter.com/umCzhY=
+
+[7] https://nvidianews.nvidia.com/news/alpamayo-autonomous-vehicle-devel=
+opment?utm_source=3Dtldrai
+[8] https://tomtunguz.com/gross-profit-per-tok=
+en/?utm_source=3Dtldrai
+[9] https://davefriedman.substack.com/p/ai-capex-=
+built-on-options-priced?utm_source=3Dtldrai
+[10] https://cameronrwolfe.su=
+bstack.com/p/grpo-tricks?utm_source=3Dtldrai
+[11] https://www.minimaxi.co=
+m/news/m21-multilingual-and-multi-task-coding-with-strong-general?utm_sourc=
+e=3Dtldrai
+[12] https://yifanzhang-pro.github.io/deep-delta-learning/?utm=
+_source=3Dtldrai
+[13] https://tencentcloudadp.github.io/youtu-agent/?utm_=
+source=3Dtldrai
+[14] https://arxiv.org/abs/2512.23236?utm_source=3Dtldrai=
+
+[15] https://nekuda.substack.com/p/openai-to-buy-pinterest-heres-what?ut=
+m_source=3Dtldrai
+[16] https://blog.google/products/google-tv/ces-2026/?u=
+tm_source=3Dtldrai
+[17] https://blogs.nvidia.com/blog/dgx-spark-and-stati=
+on-open-source-frontier-models/?utm_source=3Dtldrai
+[18] https://the-deco=
+der.com/openai-loses-top-ai-researcher-jerry-tworek-after-seven-years/?utm_=
+source=3Dtldrai
+[19] https://www.spakhm.com/claude-code?utm_source=3Dtldr=
+ai
+[20] https://kucharski.substack.com/p/is-hallucination-free-ai-code-po=
+ssible?utm_source=3Dtldrai
+[21] https://refer.tldr.tech/5f669066/2
+[22]=
+ https://hub.sparklp.co/sub_29edd86e67e7/2
+[23] https://advertise.tldr.te=
+ch/?utm_source=3Dtldrai&utm_medium=3Dnewsletter&utm_campaign=3Dadvertisecta=
+
+[24] https://jobs.ashbyhq.com/tldr.tech
+[25] https://jobs.ashbyhq.com/=
+tldr.tech/c227b917-a6a4-40ce-8950-d3e165357871
+[26] https://www.linkedin.=
+com/feed/update/urn:li:activity:7401699691039830016/
+[27] https://twitter=
+.com/andrewztan
+[28] https://www.linkedin.com/in/aliiaminian/
+[29] http=
+s://www.linkedin.com/in/jacob-turner-7521a8198/
+[30] https://tldr.tech/ai=
+/manage?email=3Dmike.mcconigley%40gmail.com
+[31] https://a.tldrnewsletter=
+.com/unsubscribe?ep=3D1&l=3Deedf6b14-3de3-11ed-9a32-0241b9615763&lc=3D6b0cc=
+672-a670-11f0-8911-056565896460&p=3D3326470a-eaf0-11f0-9e07-2f325675f724&pt=
+=3Dcampaign&pv=3D4&spa=3D1767708081&t=3D1767709603&s=3D4c3169200a91f51df10d=
+b920e333a90285de9f38ccdc19fff914adbc44a1d9f3
+--WKWuZLLP
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html charset=3DUTF-8"><meta charset=3D"UTF-8"><meta name=3D"v=
+iewport" content=3D"width=3Ddevice-width"><meta name=3D"x-apple-disable-mes=
+sage-reformatting"><title>TLDR AI</title><meta name=3D"color-scheme" conten=
+t=3D"light dark"><meta name=3D"supported-color-schemes" content=3D"light da=
+rk"><style type=3D"text/css">
+=09=09=09:root {
+=09=09=09=09color-scheme: light dark; supported-color-schemes: light dark;
+=09=09=09}
+=09=09=09
+=09=09=09*,
+=09=09=09*:after,
+=09=09=09*:before {
+=09=09=09=09-webkit-box-sizing: border-box; -moz-box-sizing: border-box; bo=
+x-sizing: border-box;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+=09=09=09}
+=09=09=09
+=09=09=09html,
+=09=09=09body,
+=09=09=09.document {
+=09=09=09=09width: 100% !important; height: 100% !important; margin: 0; pad=
+ding: 0;
+=09=09=09}
+=09=09=09
+=09=09=09body {
+=09=09=09=09-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: g=
+rayscale; text-rendering: optimizeLegibility;
+=09=09=09}
+=09=09=09
+=09=09=09div[style*=3D"margin: 16px 0"] {
+=09=09=09=09margin: 0 !important;
+=09=09=09}
+=09=09=09
+=09=09=09table,
+=09=09=09td {
+=09=09=09=09mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+=09=09=09}
+=09=09=09
+=09=09=09table {
+=09=09=09=09border-spacing: 0; border-collapse: collapse; table-layout: fix=
+ed; margin: 0 auto;
+=09=09=09}
+=09=09=09
+=09=09=09img {
+=09=09=09=09-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+=09=09=09}
+=09=09=09
+=09=09=09*[x-apple-data-detectors] {
+=09=09=09=09color: inherit !important; text-decoration: none !important;
+=09=09=09}
+=09=09=09
+=09=09=09.x-gmail-data-detectors,
+=09=09=09.x-gmail-data-detectors *,
+=09=09=09.aBn {
+=09=09=09=09border-bottom: 0 !important; cursor: default !important;
+=09=09=09}
+=09=09=09
+=09=09=09.btn {
+=09=09=09=09-webkit-transition: all 200ms ease; transition: all 200ms ease;
+=09=09=09}
+=09=09=09
+=09=09=09.btn:hover {
+=09=09=09=09background-color: #f67575; border-color: #f67575;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+=09=09=09}
+=09=09=09
+=09=09=09@media screen and (max-width: 600px) {
+=09=09=09=09.container {
+=09=09=09=09=09width: 100%; margin: auto;
+=09=09=09=09}
+=09=09=09=09.stack {
+=09=09=09=09=09display: block!important; width: 100%!important; max-width: =
+100%!important;
+=09=09=09=09}
+=09=09=09=09.btn {
+=09=09=09=09=09display: block; width: 100%; text-align: center;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09body,
+=09=09=09p,
+=09=09=09td,
+=09=09=09tr,
+=09=09=09.body,
+=09=09=09table,
+=09=09=09h1,
+=09=09=09h2,
+=09=09=09h3,
+=09=09=09h4,
+=09=09=09h5,
+=09=09=09h6,
+=09=09=09div,
+=09=09=09span {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09body,
+=09=09=09=09p,
+=09=09=09=09td,
+=09=09=09=09tr,
+=09=09=09=09.body,
+=09=09=09=09table,
+=09=09=09=09h1,
+=09=09=09=09h2,
+=09=09=09=09h3,
+=09=09=09=09h4,
+=09=09=09=09h5,
+=09=09=09=09h6,
+=09=09=09=09div,
+=09=09=09=09span {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09a {
+=09=09=09=09color: inherit !important; text-decoration: underline !importan=
+t;
+=09=09=09}
+
+=09=09</style><!--[if mso | ie]>
+=09=09<style type=3D"text/css">
+=09=09=09a {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09a {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09 </style>
+=09=09=09<![endif]--></head><body class=3D"">
+
+
+
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">Nvidia has=
+ revealed its latest AI server systems. The Vera Rubin chips are set to go =
+on sale in the second half of this year&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;</div>
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align=3D"center" class=3D"document"><tbody><tr><td valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"container" width=3D"600"><tbody><tr class=3D"inner-body"><td>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr class=3D"header"><td bgcolor=3D"" class=3D"containe=
+r">
+
+<table width=3D"100%"><tbody><tr><td class=3D"container">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"margin-top: 0px;" width=3D"100%"><tbody><tr><td style=
+=3D"padding: 0px;">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div style=3D"text-align: center;">
+<span style=3D"margin-right: 0px;"><a href=3D"https://tracking.tldrnewslett=
+er.com/CL0/https:%2F%2Ftldr.tech%2Fai%3Futm_source=3Dtldrai/1/0100019b93b3f=
+675-49f76140-851b-461b-a156-8d32474ac25c-000000/F2zN9wMFcHGr9spJSavtgmSlCvz=
+QYBhYQhK5AdKQrNM=3D439" rel=3D"noopener noreferrer" target=3D"_blank"><span=
+>Sign Up</span></a>
+|<span style=3D"margin-right: 2px; margin-left: 2px;"><a href=3D"https://tr=
+acking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_sour=
+ce=3Dtldrai%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertisetopnav/1/01=
+00019b93b3f675-49f76140-851b-461b-a156-8d32474ac25c-000000/bRKREMLFHux7L_yI=
+LKCAgWIeLQ97j3vFll06gddX20k=3D439" rel=3D"noopener noreferrer" target=3D"_b=
+lank"><span>Advertise</span></a></span>|<span style=3D"margin-left: 2px;"><=
+a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewslet=
+ter.com%2Fweb-version%3Fep=3D1%26lc=3D6b0cc672-a670-11f0-8911-056565896460%=
+26p=3D3326470a-eaf0-11f0-9e07-2f325675f724%26pt=3Dcampaign%26t=3D1767709603=
+%26s=3Dcb18c22816e5e20b73ed70b4a87201e78e31c95879afe6c9bb05287133b87517/1/0=
+100019b93b3f675-49f76140-851b-461b-a156-8d32474ac25c-000000/u1naHllJrySxffs=
+MWjd9bnPfE_uUoUB1NBbu4AP-lPk=3D439"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"text-=
+align: center;"><span data-darkreader-inline-color=3D"" style=3D"--darkread=
+er-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30=
+px;">T</span><span style=3D"font-size: 30px;"><span data-darkreader-inline-=
+color=3D"" style=3D"color: rgb(232, 192, 96) !important; --darkreader-inlin=
+e-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-colo=
+r=3D"" style=3D"color: rgb(101, 195, 173) !important; --darkreader-inline-c=
+olor:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-=
+color=3D"" style=3D"--darkreader-inline-color:#dd6e6e; color: rgb(220, 107,=
+ 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr id=3D"together-with"><td align=3D"cent=
+er" height=3D"20" style=3D"vertical-align:middle !important;" valign=3D"mid=
+dle" width=3D"100%"><strong style=3D"vertical-align:middle !important; heig=
+ht: 100%;">Together With </strong>
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fabout.you.co=
+m%2F90-day-ai-playbook%3Futm_campaign=3D32665521-TLDR_AI_Q1%26utm_source=3D=
+external-newsletter%26utm_medium=3Demail%26utm_term=3Dtldrai_primary_1.6%26=
+utm_content=3Dtldrai_primary_1.6/1/0100019b93b3f675-49f76140-851b-461b-a156=
+-8d32474ac25c-000000/prQtFgApxoI_WumQ-hsI6JsOeXdwg2tdgVFeaaqTdx0=3D439"><im=
+g src=3D"https://images.tldr.tech/you.com.png" valign=3D"middle" style=3D"v=
+ertical-align: middle !important; height: 100%;" alt=3D"You.com"></a></td><=
+/tr></tbody></table>
+
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody><tr=
+><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0;=
+">
+<div style=3D"text-align: center;">
+
+<h1><strong>TLDR AI <span id=3D"date">2026-01-06</span></strong></h1>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody><tr=
+ id=3D"sponsy-copy"><td class=3D"container" style=3D"padding: 15px 15px;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fabout.you.com%2F90-day-ai-playbook%3Futm_campaign=3D326=
+65521-TLDR_AI_Q1%26utm_source=3Dexternal-newsletter%26utm_medium=3Demail%26=
+utm_term=3Dtldrai_primary_1.6%26utm_content=3Dtldrai_primary_1.6/2/0100019b=
+93b3f675-49f76140-851b-461b-a156-8d32474ac25c-000000/raKBb3fn0Xh2pOrFJsApD_=
+lPAXRSQC04TPZx-NAR5B8=3D439">
+                                    <span>
+                                        <strong>Stop Winging AI Rollouts. S=
+tart Proving Value by the End of Q1 (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Without a clear roadmap, AI adoption of=
+ten fizzles, leaving ROI unproven and teams frustrated. <a href=3D"https://=
+tracking.tldrnewsletter.com/CL0/https:%2F%2Fabout.you.com%2F90-day-ai-playb=
+ook%3Futm_campaign=3D32665521-TLDR_AI_Q1%26utm_source=3Dexternal-newsletter=
+%26utm_medium=3Demail%26utm_term=3Dtldrai_primary_1.6%26utm_content=3Dtldra=
+i_primary_1.6/3/0100019b93b3f675-49f76140-851b-461b-a156-8d32474ac25c-00000=
+0/d-p3f8oIgCTgQVi6Qy3pU7zPSC_-o_zCRM30trN2JDA=3D439" rel=3D"noopener norefe=
+rrer nofollow" target=3D"_blank"><span>The 90-Day AI Adoption Playbook from=
+ You.com</span></a> gives you an effective, phased roadmap to move from pil=
+ot to real, measurable ROI=E2=80=94in only 90 days.
+
+<p></p>
+
+<p>What you'll get:</p>
+
+<ul>
+<li>A week-by-week rollout plan for secure, scalable AI adoption</li>
+<li>Key actions to build user skills, certify competency, and drive consist=
+ent usage</li>
+<li>Certification steps to ensure every user delivers impact</li>
+</ul>
+
+<p>Make your first 90 days count. <a href=3D"https://tracking.tldrnewslette=
+r.com/CL0/https:%2F%2Fabout.you.com%2F90-day-ai-playbook%3Futm_campaign=3D3=
+2665521-TLDR_AI_Q1%26utm_source=3Dexternal-newsletter%26utm_medium=3Demail%=
+26utm_term=3Dtldrai_primary_1.6%26utm_content=3Dtldrai_primary_1.6/4/010001=
+9b93b3f675-49f76140-851b-461b-a156-8d32474ac25c-000000/cCAvofV3KOdXQvHdLOXZ=
+aDYWV9r05IRu5W0tHBP2YT8=3D439" rel=3D"noopener noreferrer nofollow" target=
+=3D"_blank"><span>Download the playbook.</span></a>
+
+
+</p>
+</span></span></div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=3D""><td class=3D"container">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td style=3D"padding: 0px;">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;"><span s=
+tyle=3D"font-size:36px;">=F0=9F=9A=80</span></span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Headlines &amp; Launches</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2F6t8ztV/1/0100019b93b3f675-49=
+f76140-851b-461b-a156-8d32474ac25c-000000/aFSDYDdHKlTREPrZQbXUPBckQALqPV8D0=
+bMF9pPBRcI=3D439">
+                                    <span>
+                                        <strong>Nvidia Unveils Faster AI Ch=
+ips Sooner Than Expected (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Nvidia revealed its latest AI server sy=
+stems at the Consumer Electronics Show in Las Vegas. The Vera Rubin chips a=
+re set to go on sale in the second half of this year. They are designed to =
+handle the enormous computing loads needed to create simulations of reality=
+ for use in model training. Rubin delivers a 10-fold reduction in cost comp=
+ared with Blackwell chips.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FumCzhY/1/0100019b93b3f675-49=
+f76140-851b-461b-a156-8d32474ac25c-000000/TCY9KbPvlMP8CsYyqAr20dxRnuti9Z2NQ=
+9HTPGK6qyg=3D439">
+                                    <span>
+                                        <strong>AMD Unveils New Chip For Co=
+rporate Data Centers, Talks Up Demand (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    AMD's new MI440X chip is designed for u=
+se in smaller corporate data centers. The company's new Helios system, base=
+d on the new chip, will go on sale later this year. AMD's MI500 series of p=
+rocessors will debut in 2027. Those chips will deliver up to 1,000 times th=
+e performance of the MI300 series, which was first rolled out in 2023.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fnvidianews.nvidia.com%2Fnews%2Falpamayo-autonomous-vehi=
+cle-development%3Futm_source=3Dtldrai/1/0100019b93b3f675-49f76140-851b-461b=
+-a156-8d32474ac25c-000000/ZiuxaQ9XJlPy89L2EtfswY7K-gA0qIPq7rVu78VxwMA=3D439=
+">
+                                    <span>
+                                        <strong>NVIDIA introduces Alpamayo =
+(4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    NVIDIA launched the Alpamayo family of =
+open AI models, datasets, and simulators to address long-tail challenges in=
+ autonomous driving. The models use reasoning-based vision-language-action =
+architectures to support safer, end-to-end AV systems that generalize to ra=
+re scenarios.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=A7=A0</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Deep Dives &amp; Analysis</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Ftomtunguz.com%2Fgross-profit-per-token%2F%3Futm_source=
+=3Dtldrai/1/0100019b93b3f675-49f76140-851b-461b-a156-8d32474ac25c-000000/cO=
+7_5D5AbAomkBeJEsGLqwJAsJWMdfWOXPHZnLmQOuI=3D439">
+                                    <span>
+                                        <strong>Gross Profit per Token (2 m=
+inute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Meta's $2 billion acquisition of Manus =
+highlights the importance of gross profit per token, with Manus showing 40x=
+ GP multiple. DeepSeek and Together AI have the lowest multiples because th=
+ey resell inference, unlike Perplexity, which achieves the highest at 222x =
+as an application. Investors prioritize token monetization over raw volume,=
+ as indicated by a 0.71 correlation between gross profit per token and valu=
+ation.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fdavefriedman.substack.com%2Fp%2Fai-capex-built-on-optio=
+ns-priced%3Futm_source=3Dtldrai/1/0100019b93b3f675-49f76140-851b-461b-a156-=
+8d32474ac25c-000000/69xH_9Se_3oGxb3fU9LRfBlR1SJLHa2X60PGbcv8LCc=3D439">
+                                    <span>
+                                        <strong>AI Capex: Built on Options,=
+ Priced as Certainty (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Letters of intents are real options tha=
+t move markets, guide counterparties, and shape capex decisions before obli=
+gations harden. Options can be enough to pull forward tens of billions in i=
+rreversible investment. If the option doesn't convert, the stranded capital=
+ becomes a restructuring problem.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=A7=91=E2=80=8D=F0=9F=92=BB</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Engineering &amp; Research</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fcameronrwolfe.substack.com%2Fp%2Fgrpo-tricks%3Futm_sour=
+ce=3Dtldrai/1/0100019b93b3f675-49f76140-851b-461b-a156-8d32474ac25c-000000/=
+znXiy1GCuJLUQo_UHXadbA6P60b6SCglnCgHlvbl5k8=3D439">
+                                    <span>
+                                        <strong>GRPO++: Tricks for Making R=
+L Actually Work (72 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Group Relative Policy Optimization (GRP=
+O) is the RL optimizer used to train most open-source reasoning models. It =
+is popular due to its conceptual simplicity and practical efficiency. The v=
+anilla GRPO algorithm has subtle issues that can hinder the RL training pro=
+cess, especially at scale. This post provides an overview of the work done =
+to solve the shortcomings of GRPO.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.minimaxi.com%2Fnews%2Fm21-multilingual-and-multi-ta=
+sk-coding-with-strong-general%3Futm_source=3Dtldrai/1/0100019b93b3f675-49f7=
+6140-851b-461b-a156-8d32474ac25c-000000/fw890YtPezz4zcYVt0Vd_rk15Yei9J0qBt3=
+K6UXJAs4=3D439">
+                                    <span>
+                                        <strong>M2.1: Multilingual and Mult=
+i-Task Coding with Strong Generalization (17 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    MiniMax-M2.1 matches or surpasses the l=
+evel of global top-tier models on multiple internal and external benchmarks=
+. The open source model has exceptional performance in code generation, too=
+l usage, instruction following, and long-range planning. This post discusse=
+s how the model was trained and shares insights gained during the process.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fyifanzhang-pro.github.io%2Fdeep-delta-learning%2F%3Futm=
+_source=3Dtldrai/1/0100019b93b3f675-49f76140-851b-461b-a156-8d32474ac25c-00=
+0000/mVqAjxeZnJLUOzCy17Kvpr80GNZ8suYdLy_NuO3-xgw=3D439">
+                                    <span>
+                                        <strong>Deep Delta Learning (2 minu=
+te read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    A new approach to neural architecture, =
+Deep Delta Learning generalizes residual networks using a single scalar gat=
+e that interpolates between identity, projection, and reflection.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Ftencentcloudadp.github.io%2Fyoutu-agent%2F%3Futm_source=
+=3Dtldrai/1/0100019b93b3f675-49f76140-851b-461b-a156-8d32474ac25c-000000/DF=
+hOGTa3k4CwTVTjYAhMYNl1oBwK1blUI_MMxdPFaVk=3D439">
+                                    <span>
+                                        <strong>Tencent's Youtu-Agent Frame=
+work for Autonomous Agents (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Tencent's Youtu-Agent offers a modular =
+framework for building and evaluating AI agents with open-source models. It=
+ emphasizes clean abstractions for tools, environments, and agent logic to =
+support extensibility and robust deployment.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Farxiv.org%2Fabs%2F2512.23236%3Futm_source=3Dtldrai/1/01=
+00019b93b3f675-49f76140-851b-461b-a156-8d32474ac25c-000000/i669VprpnwW3JiLf=
+yY3onmqZHIeUea-ml8FVsdFqIss=3D439">
+                                    <span>
+                                        <strong>KernelEvolve: Scaling Agent=
+ic Kernel Coding for Heterogeneous AI Accelerators at Meta (1 minute read)<=
+/strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Making deep learning recommendation mod=
+el (DLRM) training and inference fast and efficient presents three key syst=
+em challenges: model architecture diversity, kernel primitive diversity, an=
+d hardware generation and architecture heterogeneity. KernelEvolve is an ag=
+entic kernel coding framework that tackles heterogeneity at scale for DLRM.=
+ It is designed to take kernel specifications as input and automate the pro=
+cess of kernel generation and optimization for a recommendation model acros=
+s heterogeneous hardware architectures. KernelEvolve is designed to optimiz=
+e a wide variety of production recommendation models across generations of =
+Nvidia and AMD GPUs, as well as Meta's AI accelerators. It significantly mi=
+tigates the programmability barrier for new AI hardware.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=8E=81</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><strong><h1>Miscellaneous</h1></strong><=
+/div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fnekuda.substack.com%2Fp%2Fopenai-to-buy-pinterest-heres=
+-what%3Futm_source=3Dtldrai/1/0100019b93b3f675-49f76140-851b-461b-a156-8d32=
+474ac25c-000000/O7ZOAndCLZ72g-QW7ulZnKHhZvW54gjfneOaCV-BmY8=3D439">
+                                    <span>
+                                        <strong>OpenAI to Buy Pinterest? St=
+rategic Analysis (8 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    OpenAI may acquire Pinterest, a visual =
+search app disguised as a social platform. ChatGPT is missing Pinterest's l=
+evel of visual efficiency because that is not a core capability of large la=
+nguage models. Pinterest's ability to go from intent to product, or from in=
+spiration to intent to product, will be very important for OpenAI's commerc=
+e aspirations. ChatGPT must go visual to create a successful UX and user ex=
+perience for agentic commerce.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fblog.google%2Fproducts%2Fgoogle-tv%2Fces-2026%2F%3Futm_=
+source=3Dtldrai/1/0100019b93b3f675-49f76140-851b-461b-a156-8d32474ac25c-000=
+000/aV-1CxGGgFzuUy1a1Ie41IU0hNmNa9Q02KMbLMT5TW8=3D439">
+                                    <span>
+                                        <strong>Gemini-Powered Features Com=
+ing to Google TV (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    At CES 2026, Google previewed Gemini in=
+tegrations for Google TV, including visual, interactive topic exploration, =
+natural language settings control, and creative tools like Photos Remix and=
+ Veo.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=E2=9A=
+=A1</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fblogs.nvidia.com%2Fblog%2Fdgx-spark-and-station-open-so=
+urce-frontier-models%2F%3Futm_source=3Dtldrai/1/0100019b93b3f675-49f76140-8=
+51b-461b-a156-8d32474ac25c-000000/opWL2NtbeJEtOfWsnxAz_XG7rlhCkepLjYVDtZraI=
+24=3D439">
+                                    <span>
+                                        <strong>NVIDIA Unveils Personal Age=
+nt Robotics at CES (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    At CES 2026, NVIDIA introduced Reachy M=
+ini, a personal robotic AI agent powered by DGX Spark, capable of real-time=
+ multimodal interaction.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fthe-decoder.com%2Fopenai-loses-top-ai-researcher-jerry-=
+tworek-after-seven-years%2F%3Futm_source=3Dtldrai/1/0100019b93b3f675-49f761=
+40-851b-461b-a156-8d32474ac25c-000000/AxJKsEhCyiT57aINiskK35nExYKNyrw2idmw9=
+EqrRX4=3D439">
+                                    <span>
+                                        <strong>OpenAI loses top AI researc=
+her Jerry Tworek after seven years (1 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Jerry Tworek was a key player in buildi=
+ng GPT-4, ChatGPT, and OpenAI's first AI coding models.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.spakhm.com%2Fclaude-code%3Futm_source=3Dtldrai/1/01=
+00019b93b3f675-49f76140-851b-461b-a156-8d32474ac25c-000000/mfKY9puq_ZIBlpsx=
+kwoGPs5IgelLV5Razys12pl-wgk=3D439">
+                                    <span>
+                                        <strong>Thoughts on Claude Code (17=
+ minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Claude Code is a phenomenal coding comp=
+anion that dramatically amplifies the fun side of coding by eliminating the=
+ annoying parts.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fkucharski.substack.com%2Fp%2Fis-hallucination-free-ai-c=
+ode-possible%3Futm_source=3Dtldrai/1/0100019b93b3f675-49f76140-851b-461b-a1=
+56-8d32474ac25c-000000/zWKZYWI-r-a0HiVDi9fd_Yh6H8K--IFp0wavQ0ee10g=3D439">
+                                    <span>
+                                        <strong>Is hallucination-free AI co=
+de possible? (11 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    While verification methods will soon be=
+ able to pick up almost all logical flaws in some fields, and foundational =
+models will get better, they may still struggle to produce 'correct' code.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"word-break=
+: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class=3D"container" style=3D"padding: 0px 10px 15px;">
+<div class=3D"text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align=3D"left" style=3D"padding: 10px;">
+<div class=3D"text-block">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.t=
+ech%2F5f669066%2F2/1/0100019b93b3f675-49f76140-851b-461b-a156-8d32474ac25c-=
+000000/mY7erq4VvIE5TUWEE4N6TYC_9-RNnSTM3G1w0sMMllI=3D439" style=3D"color: #=
+464ba4; text-decoration: underline;">https://refer.tldr.tech/5f669066/2</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align=3D"left" style=3D"padding:5px 10px;">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.=
+co%2Fsub_29edd86e67e7%2F2/1/0100019b93b3f675-49f76140-851b-461b-a156-8d3247=
+4ac25c-000000/ydEiTP_aDps4QTH_O2AQo-ip1rOnFMrWlshL6OJNNeg=3D439" style=3D"f=
+ont-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block; =
+ text-decoration: underline;"><span style=3D"mso-text-raise:13pt; text-deco=
+ration: underline;">Track your referrals here.</span></a>
+</td></tr></tbody></table>
+
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"word-break=
+: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to advertise in TLDR? =F0=9F=93=B0
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+If your company is interested in reaching an audience of AI professionals a=
+nd decision makers, you may want to <a href=3D"https://tracking.tldrnewslet=
+ter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=3Dtldrai%26utm_=
+medium=3Dnewsletter%26utm_campaign=3Dadvertisecta/1/0100019b93b3f675-49f761=
+40-851b-461b-a156-8d32474ac25c-000000/IPzQbaaHEwE0GgR7-AZEGXu_yUkTgXwLgYHWU=
+x_U9yw=3D439"><strong><span>advertise with us</span></strong></a>.
+</div>
+<br>
+
+<!-- New "Want to work at TLDR?" section -->
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to work at TLDR? =F0=9F=92=BC
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech/1/0100019b93b3f675-49f76140-851b-461b-a156-8d32474ac25c-00=
+0000/Dz-utAIUg3oyl-0FSJKJcm4Ua-Rpw48YyxMceg6yT_c=3D439" rel=3D"noopener nor=
+eferrer" style=3D"color: #0000EE; text-decoration: underline;" target=3D"_b=
+lank"><strong>Apply here</strong></a>,
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech%2Fc227b917-a6a4-40ce-8950-d3e165357871/1/0100019b93b3f675-=
+49f76140-851b-461b-a156-8d32474ac25c-000000/7UTlu4oiaRAE7iBznLXBBp5ZZVImrOz=
+H14eUCLrzAZ0=3D439" rel=3D"noopener noreferrer" style=3D"color: #0000EE; te=
+xt-decoration: underline;" target=3D"_blank"><strong>create your own role</=
+strong></a> or send a friend's resume to <a href=3D"mailto:jobs@tldr.tech" =
+style=3D"color: #0000EE; text-decoration: underline;">jobs@tldr.tech</a> an=
+d get $1k if we hire them! TLDR is one of <a href=3D"https://tracking.tldrn=
+ewsletter.com/CL0/https:%2F%2Fwww.linkedin.com%2Ffeed%2Fupdate%2Furn:li:act=
+ivity:7401699691039830016%2F/1/0100019b93b3f675-49f76140-851b-461b-a156-8d3=
+2474ac25c-000000/U0py2qEBNLDs7hMBmia-IbCKdVz-Auxar9YIw0EDIMA=3D439" rel=3D"=
+noopener noreferrer" style=3D"color: #0000EE; text-decoration: underline;" =
+target=3D"_blank"><strong>Inc.'s Best Bootstrapped businesses</strong></a> =
+of 2025.
+</div>
+<br>
+
+<div class=3D"text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftwitter.com%=
+2Fandrewztan/1/0100019b93b3f675-49f76140-851b-461b-a156-8d32474ac25c-000000=
+/rGRyXR4nzRydTe2rl_gKazY1N49uarlalJkCdfGLU6s=3D439"><span>Andrew Tan</span>=
+</a>, <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.li=
+nkedin.com%2Fin%2Faliiaminian%2F/1/0100019b93b3f675-49f76140-851b-461b-a156=
+-8d32474ac25c-000000/Z7_lMLpy3LNAMZA96g-STLQy5U5W_iKOeIteFGUL8jk=3D439"><sp=
+an>Ali Aminian</span></a>, &amp; <a href=3D"https://tracking.tldrnewsletter=
+.com/CL0/https:%2F%2Fwww.linkedin.com%2Fin%2Fjacob-turner-7521a8198%2F/1/01=
+00019b93b3f675-49f76140-851b-461b-a156-8d32474ac25c-000000/RQ8FGXzkf7Weuw7i=
+DqYs_cd_Qepo43HNKZYYhU2AcBY=3D439"><span>Jacob Turner</span></a>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div class=3D"text-block" id=3D"testing-id">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2F=
+ai%2Fmanage%3Femail=3Dmike.mcconigley%2540gmail.com/1/0100019b93b3f675-49f7=
+6140-851b-461b-a156-8d32474ac25c-000000/lyERtb44EP0_tvDEorZWZhtVIcAbQisAH2q=
+XFWoKv18=3D439">Manage your subscriptions</a> to our other newsletters on t=
+ech, startups, and programming. Or if TLDR AI isn't for you, please <a href=
+=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.co=
+m%2Funsubscribe%3Fep=3D1%26l=3Deedf6b14-3de3-11ed-9a32-0241b9615763%26lc=3D=
+6b0cc672-a670-11f0-8911-056565896460%26p=3D3326470a-eaf0-11f0-9e07-2f325675=
+f724%26pt=3Dcampaign%26pv=3D4%26spa=3D1767708081%26t=3D1767709603%26s=3D4c3=
+169200a91f51df10db920e333a90285de9f38ccdc19fff914adbc44a1d9f3/1/0100019b93b=
+3f675-49f76140-851b-461b-a156-8d32474ac25c-000000/nEnI4L-tyyI7hyvrcrhyxHLe3=
+z8PbuCZRMEerXOeRwE=3D439">unsubscribe</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+
+<img alt=3D"" src=3D"http://tracking.tldrnewsletter.com/CI0/0100019b93b3f67=
+5-49f76140-851b-461b-a156-8d32474ac25c-000000/-Ev-KUJhazt4JiHvCd6cTBcRQuCEk=
+95LfESKGzxi07Q=3D439" style=3D"display: none; width: 1px; height: 1px;">
+</body></html>
+--WKWuZLLP--

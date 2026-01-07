@@ -1,0 +1,1326 @@
+Delivered-To: mike.mcconigley@gmail.com
+Received: by 2002:a05:6802:4e01:b0:617:3adb:9ab9 with SMTP id 1csp156749oco;
+        Wed, 7 Jan 2026 04:13:08 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IFVraNDJ7kiY/qYunnsEJVLZvzAxERMnr3JMgaZGyEka2FZEDPGHbWSpphW/2HXH33Mrx8H
+X-Received: by 2002:a05:620a:298c:b0:8b2:213a:e2e4 with SMTP id af79cd13be357-8c389416f98mr254704585a.84.1767787988326;
+        Wed, 07 Jan 2026 04:13:08 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1767787988; cv=none;
+        d=google.com; s=arc-20240605;
+        b=TCjxE9cAiuybyolaubrUmc69vUMPWeFuMVkUclx9CZw2ijpsxnUu7fBtAIok5SbIy8
+         VS6osWlLbqfEnQwjdefqfM/DcTSPZ8JOtBDM8qYbXPq4x666yjPsLuYLGU7Ngeji2s83
+         triy/7cVedF0QsxTYPDNeJn4aqZxNHVK2i0SPVOu4rcJIhV7k+OGVcXumpyVyXYbHtMO
+         2C8ykHMDk7lwHVVXO6IYUFMJYCo7sfeTEwRVi0ClOuuPAOwVDxZPACYmovVRiGv4jTVi
+         8FBmdxfVD2VkW2jQ4/+SLp2lcSaI9ZQFcskkq2HCo06qPxFhNEqOCQ+uQYIxy4TEE/WT
+         L/Ww==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:date:mime-version:list-unsubscribe-post
+         :list-unsubscribe:subject:to:from:dkim-signature:dkim-signature;
+        bh=sFy+cRlcl+rqvsCES45vV9C2ME0Y+MnGwg00uUKPQJ4=;
+        fh=tUTYCbTOUI69DxYKXGXRz08XnPP7jEKRU6E5rS0DFR4=;
+        b=kncuQS6UA51sd3K8cIRcX/ncVVNIW1QUBKYzrEtACX1i5ul5RADLSWaBIyxy8r1q40
+         6IgU6/jgVzZFc66WXjj0tqO5Wqirqt/y5aV88rKhgv2zrFxbon8Niy7PLWSVwsVBPiaX
+         MIQa34calOVZ6i3YYkjCADkZBnIQS+fIAVsaSVVc+czK6Zbk3dC9QHTPrEKvzOyCmid0
+         p89ylw7WoLzpKBWT0Tpzvn0igKFCcQ5q7VA6FnnwfNvdNEH7o5KlaB4O7aURAynf5VBk
+         PzD1HL/ddN0mv9A5CPXWHErT46IBxLisFkmKAd4zlU9+yBPvCUmAeQYkWjPbu8OEV3cf
+         l2hg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=iWtHlfWG;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=aY5WLqm8;
+       spf=pass (google.com: domain of 0100019b986003ae-5e3e2210-a12e-460c-b72c-15f9d4d8f327-000000@dailyupdate.tldrnewsletter.com designates 54.240.38.252 as permitted sender) smtp.mailfrom=0100019b986003ae-5e3e2210-a12e-460c-b72c-15f9d4d8f327-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+Return-Path: <0100019b986003ae-5e3e2210-a12e-460c-b72c-15f9d4d8f327-000000@dailyupdate.tldrnewsletter.com>
+Received: from a38-252.smtp-out.amazonses.com (a38-252.smtp-out.amazonses.com. [54.240.38.252])
+        by mx.google.com with ESMTPS id af79cd13be357-8c37f5291c1si496307085a.223.2026.01.07.04.13.08
+        for <mike.mcconigley@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Wed, 07 Jan 2026 04:13:08 -0800 (PST)
+Received-SPF: pass (google.com: domain of 0100019b986003ae-5e3e2210-a12e-460c-b72c-15f9d4d8f327-000000@dailyupdate.tldrnewsletter.com designates 54.240.38.252 as permitted sender) client-ip=54.240.38.252;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=iWtHlfWG;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=aY5WLqm8;
+       spf=pass (google.com: domain of 0100019b986003ae-5e3e2210-a12e-460c-b72c-15f9d4d8f327-000000@dailyupdate.tldrnewsletter.com designates 54.240.38.252 as permitted sender) smtp.mailfrom=0100019b986003ae-5e3e2210-a12e-460c-b72c-15f9d4d8f327-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ygiuxamnxevikrd5dtfwanslhs6b24mt; d=tldrnewsletter.com;
+	t=1767787988;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type;
+	bh=i5sTlCdfwqmM0xKVbNyRzsc4cu/DKlTYXwKHVOVJQlQ=;
+	b=iWtHlfWGH55qMOXkFpKsMZgt/rGWn8YXo3DuDINdgavF6W1Eg1zuwzpl5nheOMYZ
+	UoIOqYaWtpWk0QWk6wFQ4d59u5r2AfzTXtFG6Gm6noOivMEhRFCDKbw+baKtJsDt136
+	02+Hc5TZvykp1bo3xgG4r092aT6vJ8VdTeLUKju0=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1767787988;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type:Feedback-ID;
+	bh=i5sTlCdfwqmM0xKVbNyRzsc4cu/DKlTYXwKHVOVJQlQ=;
+	b=aY5WLqm8Z/+zBsbHcinuGgWWcPwLRoQ4KTlEeiVR7PuoSZhvnoV2rSpwGmteB662
+	+Bg5Ynp4AYTMDry5LA450w8J03rurbVUIuXcQ9EN+FTzDas2PDDGOdwphr0dXIyipk8
+	RuxSNOMPdTwqZ9RFahsGBMsBdVgFYRfMz2F9+Ntg=
+From: TLDR DevOps <dan@tldrnewsletter.com>
+To: mike.mcconigley@gmail.com
+Subject: Ironies of Automation =?utf-8?Q?=E2=9C=A8=2C?= FinOps Tooling
+ =?utf-8?Q?=F0=9F=92=B0=2C?= Tetragon 2025 Recap =?utf-8?Q?=E2=8C=9B?=
+X-Entity-Ref-Id: 48dfdb4e-79b7-44f7-8605-b38144a40518
+X-EmailOctopus-Parent-Id: f457c7fa-eb7c-11f0-92a8-2dc3ac741a83
+X-EmailOctopus-Parent-Type-Id: campaign
+X-EmailOctopus-List-Id: 1c5ddf10-b6dc-11ed-a12f-33c00cd07e37
+X-EmailOctopus-List-Contact-Id: 6b0d473c-a670-11f0-8d7f-0bad7bf21fba
+X-EmailOctopus-Started-Preparing-At: 2026-01-07T12:01:32+00:00
+X-EmailOctopus-Sent-At: 2026-01-07T12:13:07+00:00
+X-EmailOctopus-Team-Id: 66987ef2-4f4c-11e9-a3c9-06b79b628af2
+X-EmailOctopus-Version: 4
+List-Unsubscribe: <https://a.tldrnewsletter.com/unsubscribe?ep=1&l=1c5ddf10-b6dc-11ed-a12f-33c00cd07e37&lc=6b0d473c-a670-11f0-8d7f-0bad7bf21fba&p=f457c7fa-eb7c-11f0-92a8-2dc3ac741a83&pt=campaign&pv=4&spa=1767787292&t=1767787987&s=7f6f57f44685ce2703137349d368b74b007877a19cd332eab0b24dfbc52f7a54>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-EmailOctopus-Ses-Configuration-Set-Name: emailoctopus-a9f7b12f74f3c968d9408897fb35539c
+MIME-Version: 1.0
+Date: Wed, 7 Jan 2026 12:13:07 +0000
+Message-ID: <0100019b986003ae-5e3e2210-a12e-460c-b72c-15f9d4d8f327-000000@email.amazonses.com>
+Content-Type: multipart/alternative; boundary=FhzUYUVi
+Feedback-ID: ::1.us-east-1.Dj5/7DYmgk+n1sSGGXSQSLIthSjNQ0MGtV5Dro1Tr8U=:AmazonSES
+X-SES-Outgoing: 2026.01.07-54.240.38.252
+
+--FhzUYUVi
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Bainbridge's 1983 paper on automation ironies applies to AI agent
+supervi=
+sion, revealing that effective human oversight requires better
+UI
+desig=
+n=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0
+
+
+ Sign Up [1] |Advertise [2]|View Online [3]=20
+
+=
+=09=09TLDR=20
+
+TLDR DEVOPS 2026-01-07
+
+=F0=9F=93=B1=20
+
+NEWS & TREN=
+DS
+
+ KUBERNETES V1.35: EXTENDED TOLERATION OPERATORS TO SUPPORT NUMERIC=
+
+COMPARISONS (ALPHA) (4 MINUTE READ) [4]=20
+
+ Kubernetes v1.35 introduc=
+es Extended Toleration Operators as an alpha
+feature, adding Gt (Greater =
+Than) and Lt (Less Than) operators to
+`spec.tolerations`. This enhancemen=
+t enables threshold-based
+scheduling, unlocking new possibilities for SLA=
+-based placement, cost
+optimization, and performance-aware workload distr=
+ibution in
+Kubernetes clusters.=20
+
+ 10 FINOPS TOOLS PLATFORM ENGINEERS=
+ SHOULD EVALUATE FOR 2026 (6 MINUTE
+READ) [5]=20
+
+ Platform engineers r=
+equire specialized tools integrated into their
+existing workflows for eff=
+ective cloud cost optimization, diverging
+from traditional FinOps dashboa=
+rds. This article evaluates ten FinOps
+platforms, including IBM's suite, =
+CloudZero, and Datadog, highlighting
+the necessity of Kubernetes-native v=
+isibility, API-first architecture,
+and GitOps compatibility to address co=
+mplex challenges like container
+cost attribution.=20
+
+=F0=9F=9A=80=20
+=
+
+OPINIONS & TUTORIALS
+
+ AI AND THE IRONIES OF AUTOMATION (15 MINUTE R=
+EAD) [6]=20
+
+ Lisanne Bainbridge's 1983 paper on automation ironies appli=
+es to AI
+agent supervision, revealing that effective human oversight requ=
+ires
+better UI design, continuous training for rare interventions, and
+=
+leadership skills to direct agent fleets. The paradox intensifies as
+AI a=
+gents improve because successful automation demands greater
+investment in=
+ human operator training and interface design to handle
+exceptional situa=
+tions under time pressure.=20
+
+ USING ISTIO TO MANAGE HIGH-TRAFFIC SERVIC=
+ES (3 MINUTE READ) [7]=20
+
+ STCLab implemented Istio to manage its high-t=
+raffic SaaS platforms,
+achieving real-time traffic control and bot mitiga=
+tion. The deployment
+utilized features like Proxy Protocol for client IP =
+preservation,
+AuthorizationPolicy for access control, and automated Outli=
+er
+Detection for enhanced resilience.=20
+
+ CHANGE IS THE ROOT OF ALL (E=
+VIL) BUGS (3 MINUTE READ) [8]=20
+
+ Bugs usually don't come from =E2=80=
+=9Cbad code,=E2=80=9D but from
+change=E2=80=94shifting dependencies, conf=
+igurations, environments,
+assumptions, or system conditions that invalida=
+te what once worked.
+Most good engineering practices exist to limit, isol=
+ate, or make
+change visible, because unmanaged change is what ultimately =
+surprises
+and breaks systems.=20
+
+=F0=9F=A7=91=E2=80=8D=F0=9F=92=BB=20
+=
+
+RESOURCES & TOOLS
+
+ SEE HOW BUZZFEED FIXED MOBILE CI AND CUT QA TIME=
+ BY 95% (SPONSOR) [9]
+
+
+ Mobile breaks standard DevOps patterns: code=
+ signing complexity,
+simulator sprawl, toolchains that fight your infrast=
+ructure. Learn
+from BuzzFeed's principal engineer and see how they ditche=
+d costly
+anti-patterns, scaled to 1,000+ builds a month, and made release=
+s
+reliable and see how you can do the same. Watch for free =E2=86=92 [9] =
+
+
+ CLAUDE-MEM (GITHUB REPO) [10]=20
+
+ Claude-Mem automatically captur=
+es and AI-compresses Claude's coding
+session activities, seamlessly injec=
+ting relevant context into future
+sessions for improved knowledge continu=
+ity. This plugin features
+intelligent memory search via four MCP tools an=
+d offers a beta channel
+for experimental features like "Endless Mode." =
+
+
+ BEADS (GITHUB REPO) [11]=20
+
+ Beads is a distributed, git-backed g=
+raph issue tracker that provides
+AI coding agents with a persistent, stru=
+ctured, and dependency-aware
+memory. It aims to improve agents' ability t=
+o handle long-horizon
+tasks without losing context. Beads supports featur=
+es like
+hierarchical IDs and a local "stealth mode."=20
+
+=F0=9F=8E=
+=81=20
+
+MISCELLANEOUS
+
+ TETRAGON: AN END-OF-YEAR 2025 REFLECTION (3 M=
+INUTE READ) [12]=20
+
+ Tetragon closed the year by highlighting community =
+growth, major
+features like Windows preview support, persistent enforceme=
+nt,
+flexible policy modes, attribute resolution, and userspace hooks,
+w=
+hile reinforcing its role as a high-performance runtime security
+standard=
+ built on eBPF.=20
+
+ HOW TO USE AI TO ANALYZE AND VISUALIZE CAN DATA WITH=
+ GRAFANA
+ASSISTANT (9 MINUTE READ) [13]=20
+
+ CSS Electronics uses Grafa=
+na Assistant to analyze CAN bus data from
+vehicles and machinery, enablin=
+g engineers to explore terabytes of
+data through natural language prompts=
+ and generate customized
+dashboards without SQL knowledge. The tool integ=
+rates seamlessly with
+existing cloud data sources, drastically reducing a=
+nalysis time
+compared to manual methods or ChatGPT's file size limitation=
+s.=20
+
+=E2=9A=A1=20
+
+QUICK LINKS
+
+ CAST AI REPORT SURFACES MASSIVE =
+KUBERNETES CLOUD INFRASTRUCTURE WASTE
+(4 MINUTE READ) [14]=20
+
+ CAST AI=
+'s analysis of 4,000 cloud Kubernetes clusters found severe
+overprovision=
+ing, with average CPU use near 13% and memory around 20%.
+
+
+ TOP 13 O=
+PEN-SOURCE AUTOMATION TOOLS FOR 2026 (23 MINUTE READ) [15]=20
+
+ Spacelift=
+ Intent, OpenTofu, Pulumi, Ansible, Jenkins, Puppet, Chef,
+Salt, CFEngine=
+, Rudder, Argo CD, Prometheus, and Apache Airflow.=20
+
+ LEAGUE OF LEGENDS=
+ PLAYERS WORLDWIDE COULDN'T LOGIN FOR HOURS BECAUSE
+RIOT FORGOT TO RENEW =
+THE CLIENT'S SSL CERTIFICATE=E2=80=94JUST LIKE IT DID
+10 YEARS AGO (3 MIN=
+UTE READ) [16]=20
+
+ Riot Games' popular game, League of Legends, became u=
+nplayable for
+millions of players globally after the company neglected to=
+ renew an
+SSL encryption certificate for the game client, a mishap that h=
+ad
+previously occurred in 2016.=20
+
+Love TLDR? Tell your friends and ge=
+t rewards!
+
+ Share your referral link below with friends to get free TL=
+DR swag!=20
+
+ https://refer.tldr.tech/fa0c1dae/10 [17]=20
+
+=09=09 Track=
+ your referrals here. [18]=20
+
+Want to advertise in TLDR? =F0=9F=93=B0
+=
+
+ If your company is interested in reaching an audience of devops
+profe=
+ssionals and decision makers, you may want to ADVERTISE WITH US
+[19].=20
+=
+
+Want to work at TLDR? =F0=9F=92=BC
+
+ APPLY HERE [20], CREATE YOUR OW=
+N ROLE [21] or send a friend's resume
+to jobs@tldr.tech and get $1k if we=
+ hire them! TLDR is one of INC.'S
+BEST BOOTSTRAPPED BUSINESSES [22] of 20=
+25.=20
+
+ If you have any comments or feedback, just respond to this email=
+!=20
+
+Thanks for reading,=20
+Kunal Desai [23] & Martin Hauskrecht [24] =
+
+
+ Manage your subscriptions [25] to our other newsletters on tech,
+s=
+tartups, and programming. Or if TLDR DevOps isn't for you, please
+unsubsc=
+ribe [26].=20
+
+=20
+
+Links:
+------
+[1] https://tldr.tech/devops?utm_=
+source=3Dtldrdevops
+[2] https://advertise.tldr.tech/?utm_source=3Dtldrdev=
+ops&utm_medium=3Dnewsletter&utm_campaign=3Dadvertisetopnav
+[3] https://a.=
+tldrnewsletter.com/web-version?ep=3D1&lc=3D6b0d473c-a670-11f0-8d7f-0bad7bf2=
+1fba&p=3Df457c7fa-eb7c-11f0-92a8-2dc3ac741a83&pt=3Dcampaign&t=3D1767787987&=
+s=3D0756210435721a53fe79eeec2de322b2852e519511062d0cab4949c3ccd4b4ca
+[4] =
+https://kubernetes.io/blog/2026/01/05/kubernetes-v1-35-numeric-toleration-o=
+perators/?utm_source=3Dtldrdevops
+[5] https://platformengineering.org/blo=
+g/10-finops-tools-platform-engineers-should-evaluate-for-2026?utm_source=3D=
+tldrdevops
+[6] https://www.ufried.com/blog/ironies_of_ai_2/?utm_source=3D=
+tldrdevops
+[7] https://www.cncf.io/blog/2026/01/06/using-istio-to-manage-=
+high-traffic-services/?utm_source=3Dtldrdevops
+[8] https://fhur.me/posts/=
+2026/change-is-the-root-of-all-evil-bugs?utm_source=3Dtldrdevops
+[9] http=
+s://watch.getcontrast.io/register/bitrise-bringing-devops-to-mobile-avoidin=
+g-pitfalls-and-unlocking-velocity?utm_medium=3Dpaid_other&utm_source=3Dtldr=
+&utm_campaign=3Dall_webinar_bringing-devops-to-mobile_all_2025-06-30&utm_co=
+ntent=3Dsecondary-placement-sponsorship
+[10] https://github.com/thedotmac=
+k/claude-mem?utm_source=3Dtldrdevops
+[11] https://github.com/steveyegge/b=
+eads?utm_source=3Dtldrdevops
+[12] https://cilium.io/blog/2025/12/31/tetra=
+gon-2025-review/?utm_source=3Dtldrdevops
+[13] https://grafana.com/blog/ho=
+w-to-use-ai-to-analyze-and-visualize-can-data-with-grafana-assistant/?utm_s=
+ource=3Dtldrdevops
+[14] https://cloudnativenow.com/editorial-calendar/bes=
+t-of-2025/cast-ai-report-surfaces-massive-kubernetes-cloud-infrastructure-w=
+aste-2/?utm_source=3Dtldrdevops
+[15] https://spacelift.io/blog/open-sourc=
+e-automation-tools?utm_source=3Dtldrdevops
+[16] https://www.pcgamer.com/g=
+ames/moba/league-of-legends-players-worldwide-couldnt-login-for-hours-becau=
+se-riot-forgot-to-renew-the-clients-ssl-certificate-just-like-it-did-10-yea=
+rs-ago/?utm_source=3Dtldrdevops
+[17] https://refer.tldr.tech/fa0c1dae/10=
+
+[18] https://hub.sparklp.co/sub_99428dc57e85/10
+[19] https://advertise=
+.tldr.tech/?utm_source=3Dtldrdevops&utm_medium=3Dnewsletter&utm_campaign=3D=
+advertisecta
+[20] https://jobs.ashbyhq.com/tldr.tech
+[21] https://jobs.=
+ashbyhq.com/tldr.tech/c227b917-a6a4-40ce-8950-d3e165357871
+[22] https://w=
+ww.linkedin.com/feed/update/urn:li:activity:7401699691039830016/
+[23] htt=
+ps://www.linkedin.com/in/kunaljaydesai/
+[24] https://www.linkedin.com/in/=
+martin-hauskrecht/
+[25] https://tldr.tech/devops/manage?email=3Dmike.mcco=
+nigley%40gmail.com
+[26] https://a.tldrnewsletter.com/unsubscribe?ep=3D1&l=
+=3D1c5ddf10-b6dc-11ed-a12f-33c00cd07e37&lc=3D6b0d473c-a670-11f0-8d7f-0bad7b=
+f21fba&p=3Df457c7fa-eb7c-11f0-92a8-2dc3ac741a83&pt=3Dcampaign&pv=3D4&spa=3D=
+1767787292&t=3D1767787987&s=3D7f6f57f44685ce2703137349d368b74b007877a19cd33=
+2eab0b24dfbc52f7a54
+--FhzUYUVi
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html charset=3DUTF-8"><meta charset=3D"UTF-8"><meta name=3D"v=
+iewport" content=3D"width=3Ddevice-width"><meta name=3D"x-apple-disable-mes=
+sage-reformatting"><title>TLDR DevOps</title><meta name=3D"color-scheme" co=
+ntent=3D"light dark"><meta name=3D"supported-color-schemes" content=3D"ligh=
+t dark"><style type=3D"text/css">
+=09=09=09:root {
+=09=09=09=09color-scheme: light dark; supported-color-schemes: light dark;
+=09=09=09}
+=09=09=09
+=09=09=09*,
+=09=09=09*:after,
+=09=09=09*:before {
+=09=09=09=09-webkit-box-sizing: border-box; -moz-box-sizing: border-box; bo=
+x-sizing: border-box;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+=09=09=09}
+=09=09=09
+=09=09=09html,
+=09=09=09body,
+=09=09=09.document {
+=09=09=09=09width: 100% !important; height: 100% !important; margin: 0; pad=
+ding: 0;
+=09=09=09}
+=09=09=09
+=09=09=09body {
+=09=09=09=09-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: g=
+rayscale; text-rendering: optimizeLegibility;
+=09=09=09}
+=09=09=09
+=09=09=09div[style*=3D"margin: 16px 0"] {
+=09=09=09=09margin: 0 !important;
+=09=09=09}
+=09=09=09
+=09=09=09table,
+=09=09=09td {
+=09=09=09=09mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+=09=09=09}
+=09=09=09
+=09=09=09table {
+=09=09=09=09border-spacing: 0; border-collapse: collapse; table-layout: fix=
+ed; margin: 0 auto;
+=09=09=09}
+=09=09=09
+=09=09=09img {
+=09=09=09=09-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+=09=09=09}
+=09=09=09
+=09=09=09*[x-apple-data-detectors] {
+=09=09=09=09color: inherit !important; text-decoration: none !important;
+=09=09=09}
+=09=09=09
+=09=09=09.x-gmail-data-detectors,
+=09=09=09.x-gmail-data-detectors *,
+=09=09=09.aBn {
+=09=09=09=09border-bottom: 0 !important; cursor: default !important;
+=09=09=09}
+=09=09=09
+=09=09=09.btn {
+=09=09=09=09-webkit-transition: all 200ms ease; transition: all 200ms ease;
+=09=09=09}
+=09=09=09
+=09=09=09.btn:hover {
+=09=09=09=09background-color: #f67575; border-color: #f67575;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+=09=09=09}
+=09=09=09
+=09=09=09@media screen and (max-width: 600px) {
+=09=09=09=09.container {
+=09=09=09=09=09width: 100%; margin: auto;
+=09=09=09=09}
+=09=09=09=09.stack {
+=09=09=09=09=09display: block!important; width: 100%!important; max-width: =
+100%!important;
+=09=09=09=09}
+=09=09=09=09.btn {
+=09=09=09=09=09display: block; width: 100%; text-align: center;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09body,
+=09=09=09p,
+=09=09=09td,
+=09=09=09tr,
+=09=09=09.body,
+=09=09=09table,
+=09=09=09h1,
+=09=09=09h2,
+=09=09=09h3,
+=09=09=09h4,
+=09=09=09h5,
+=09=09=09h6,
+=09=09=09div,
+=09=09=09span {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09body,
+=09=09=09=09p,
+=09=09=09=09td,
+=09=09=09=09tr,
+=09=09=09=09.body,
+=09=09=09=09table,
+=09=09=09=09h1,
+=09=09=09=09h2,
+=09=09=09=09h3,
+=09=09=09=09h4,
+=09=09=09=09h5,
+=09=09=09=09h6,
+=09=09=09=09div,
+=09=09=09=09span {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09a {
+=09=09=09=09color: inherit !important; text-decoration: underline !importan=
+t;
+=09=09=09}
+
+=09=09</style><!--[if mso | ie]>
+=09=09<style type=3D"text/css">
+=09=09=09a {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09a {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09 </style>
+=09=09=09<![endif]--></head><body class=3D"">
+
+
+
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">Bainbridge=
+&#039;s 1983 paper on automation ironies applies to AI agent supervision, r=
+evealing that effective human oversight requires better UI design&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;</div>
+
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align=3D"center" class=3D"document"><tbody><tr><td valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"container" width=3D"600"><tbody><tr class=3D"inner-body"><td>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr class=3D"header"><td bgcolor=3D"" class=3D"containe=
+r">
+
+<table width=3D"100%"><tbody><tr><td class=3D"container">
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"margin-top: 0px;" width=3D"100%"><tbody><tr><td style=
+=3D"padding: 0px;">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div style=3D"text-align: center;">
+<span style=3D"margin-right: 0px;"><a href=3D"https://tracking.tldrnewslett=
+er.com/CL0/https:%2F%2Ftldr.tech%2Fdevops%3Futm_source=3Dtldrdevops/1/01000=
+19b986003ae-5e3e2210-a12e-460c-b72c-15f9d4d8f327-000000/3mbzVx7_1bZoB2s0NOm=
+pYG1rO9R94lxAvkm_xpfrBfg=3D439" rel=3D"noopener noreferrer" target=3D"_blan=
+k"><span>Sign Up</span></a>
+|<span style=3D"margin-right: 2px; margin-left: 2px;"><a href=3D"https://tr=
+acking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_sour=
+ce=3Dtldrdevops%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertisetopnav/=
+1/0100019b986003ae-5e3e2210-a12e-460c-b72c-15f9d4d8f327-000000/DzhlvftqBLEp=
+od4VB-9mchH2EqyAHv4MGaNeh9dUeN8=3D439" rel=3D"noopener noreferrer" target=
+=3D"_blank"><span>Advertise</span></a></span>|<span style=3D"margin-left: 2=
+px;"><a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrn=
+ewsletter.com%2Fweb-version%3Fep=3D1%26lc=3D6b0d473c-a670-11f0-8d7f-0bad7bf=
+21fba%26p=3Df457c7fa-eb7c-11f0-92a8-2dc3ac741a83%26pt=3Dcampaign%26t=3D1767=
+787987%26s=3D0756210435721a53fe79eeec2de322b2852e519511062d0cab4949c3ccd4b4=
+ca/1/0100019b986003ae-5e3e2210-a12e-460c-b72c-15f9d4d8f327-000000/RspBEwS61=
+u8pV2YS9m6rBKtVY_Kl4Z_Y1fDWDQrM_kk=3D439"><span>View Online</span></a></spa=
+n>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"text-=
+align: center;"><span data-darkreader-inline-color=3D"" style=3D"--darkread=
+er-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30=
+px;">T</span><span style=3D"font-size: 30px;"><span data-darkreader-inline-=
+color=3D"" style=3D"color: rgb(232, 192, 96) !important; --darkreader-inlin=
+e-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-colo=
+r=3D"" style=3D"color: rgb(101, 195, 173) !important; --darkreader-inline-c=
+olor:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-=
+color=3D"" style=3D"--darkreader-inline-color:#dd6e6e; color: rgb(220, 107,=
+ 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody></tbody></table>
+
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody><tr=
+><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0;=
+">
+<div style=3D"text-align: center;">
+
+<h1><strong>TLDR DevOps <span id=3D"date">2026-01-07</span></strong></h1>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody></t=
+body></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=3D""><td class=3D"container">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td style=3D"padding: 0px;">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=93=B1</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>News &amp; Trends</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fkubernetes.io%2Fblog%2F2026%2F01%2F05%2Fkubernetes-v1-3=
+5-numeric-toleration-operators%2F%3Futm_source=3Dtldrdevops/1/0100019b98600=
+3ae-5e3e2210-a12e-460c-b72c-15f9d4d8f327-000000/KYBNqCfoLqoq8i9bQVzrU9b89WW=
+C0lXO3223HlNngFE=3D439">
+                                    <span>
+                                        <strong>Kubernetes v1.35: Extended =
+Toleration Operators to Support Numeric Comparisons (Alpha) (4 minute read)=
+</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Kubernetes v1.35 introduces Extended To=
+leration Operators as an alpha feature, adding Gt (Greater Than) and Lt (Le=
+ss Than) operators to `spec.tolerations`. This enhancement enables threshol=
+d-based scheduling, unlocking new possibilities for SLA-based placement, co=
+st optimization, and performance-aware workload distribution in Kubernetes =
+clusters.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fplatformengineering.org%2Fblog%2F10-finops-tools-platfo=
+rm-engineers-should-evaluate-for-2026%3Futm_source=3Dtldrdevops/1/0100019b9=
+86003ae-5e3e2210-a12e-460c-b72c-15f9d4d8f327-000000/ptSOMYu__fPe08k8Yh5I0wH=
+gPmdkT2pPvgtl_gdqup4=3D439">
+                                    <span>
+                                        <strong>10 FinOps tools platform en=
+gineers should evaluate for 2026 (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Platform engineers require specialized =
+tools integrated into their existing workflows for effective cloud cost opt=
+imization, diverging from traditional FinOps dashboards. This article evalu=
+ates ten FinOps platforms, including IBM's suite, CloudZero, and Datadog, h=
+ighlighting the necessity of Kubernetes-native visibility, API-first archit=
+ecture, and GitOps compatibility to address complex challenges like contain=
+er cost attribution.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=9A=80</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Opinions &amp; Tutorials</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.ufried.com%2Fblog%2Fironies_of_ai_2%2F%3Futm_source=
+=3Dtldrdevops/1/0100019b986003ae-5e3e2210-a12e-460c-b72c-15f9d4d8f327-00000=
+0/UzjD1JSr-SM69BZQYAm7BxX_1SFRcbW1367hpKuP8Ew=3D439">
+                                    <span>
+                                        <strong>AI and the ironies of autom=
+ation (15 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Lisanne Bainbridge's 1983 paper on auto=
+mation ironies applies to AI agent supervision, revealing that effective hu=
+man oversight requires better UI design, continuous training for rare inter=
+ventions, and leadership skills to direct agent fleets. The paradox intensi=
+fies as AI agents improve because successful automation demands greater inv=
+estment in human operator training and interface design to handle exception=
+al situations under time pressure.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.cncf.io%2Fblog%2F2026%2F01%2F06%2Fusing-istio-to-ma=
+nage-high-traffic-services%2F%3Futm_source=3Dtldrdevops/1/0100019b986003ae-=
+5e3e2210-a12e-460c-b72c-15f9d4d8f327-000000/BOmMxT5kAyca56DQG9DwD6xn_LobbwD=
+206J1b_cxRNc=3D439">
+                                    <span>
+                                        <strong>Using Istio to manage high-=
+traffic services (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    STCLab implemented Istio to manage its =
+high-traffic SaaS platforms, achieving real-time traffic control and bot mi=
+tigation. The deployment utilized features like Proxy Protocol for client I=
+P preservation, AuthorizationPolicy for access control, and automated Outli=
+er Detection for enhanced resilience.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Ffhur.me%2Fposts%2F2026%2Fchange-is-the-root-of-all-evil=
+-bugs%3Futm_source=3Dtldrdevops/1/0100019b986003ae-5e3e2210-a12e-460c-b72c-=
+15f9d4d8f327-000000/KrEy9i2CIpA0OQtuXatJNDs9K7YfxyZcBO1Uncp5Bvw=3D439">
+                                    <span>
+                                        <strong>Change is the root of all (=
+evil) bugs (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Bugs usually don't come from =E2=80=9Cb=
+ad code,=E2=80=9D but from change=E2=80=94shifting dependencies, configurat=
+ions, environments, assumptions, or system conditions that invalidate what =
+once worked. Most good engineering practices exist to limit, isolate, or ma=
+ke change visible, because unmanaged change is what ultimately surprises an=
+d breaks systems.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=A7=91=E2=80=8D=F0=9F=92=BB</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Resources &amp; Tools</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwatch.getcontrast.io%2Fregister%2Fbitrise-bringing-devo=
+ps-to-mobile-avoiding-pitfalls-and-unlocking-velocity%3Futm_medium=3Dpaid_o=
+ther%26utm_source=3Dtldr%26utm_campaign=3Dall_webinar_bringing-devops-to-mo=
+bile_all_2025-06-30%26utm_content=3Dsecondary-placement-sponsorship/1/01000=
+19b986003ae-5e3e2210-a12e-460c-b72c-15f9d4d8f327-000000/vxanRC999EailJqe_h3=
+wj5EREMpVRtewG2O6YZ8ca4I=3D439">
+                                    <span>
+                                        <strong>See how BuzzFeed fixed mobi=
+le CI and cut QA time by 95% (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Mobile breaks standard DevOps patterns:=
+ code signing complexity, simulator sprawl, toolchains that fight your infr=
+astructure. Learn from BuzzFeed's principal engineer and see how they ditch=
+ed costly anti-patterns, scaled to 1,000+ builds a month, and made releases=
+ reliable and see how you can do the same. <a href=3D"https://tracking.tldr=
+newsletter.com/CL0/https:%2F%2Fwatch.getcontrast.io%2Fregister%2Fbitrise-br=
+inging-devops-to-mobile-avoiding-pitfalls-and-unlocking-velocity%3Futm_medi=
+um=3Dpaid_other%26utm_source=3Dtldr%26utm_campaign=3Dall_webinar_bringing-d=
+evops-to-mobile_all_2025-06-30%26utm_content=3Dsecondary-placement-sponsors=
+hip/2/0100019b986003ae-5e3e2210-a12e-460c-b72c-15f9d4d8f327-000000/QF4RpBfx=
+NvnNtYUX3ETAUU3Rd_SSpBiJDQ4EZsl65_8=3D439" rel=3D"noopener noreferrer nofol=
+low" target=3D"_blank"><span>Watch for free =E2=86=92</span></a>
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgithub.com%2Fthedotmack%2Fclaude-mem%3Futm_source=3Dtld=
+rdevops/1/0100019b986003ae-5e3e2210-a12e-460c-b72c-15f9d4d8f327-000000/WfqW=
+K2z1sjY4xo5yNQmnSsseK-TvWLfAcAR3y547B-o=3D439">
+                                    <span>
+                                        <strong>Claude-Mem (GitHub Repo)</s=
+trong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Claude-Mem automatically captures and A=
+I-compresses Claude's coding session activities, seamlessly injecting relev=
+ant context into future sessions for improved knowledge continuity. This pl=
+ugin features intelligent memory search via four MCP tools and offers a bet=
+a channel for experimental features like "Endless Mode."
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgithub.com%2Fsteveyegge%2Fbeads%3Futm_source=3Dtldrdevo=
+ps/1/0100019b986003ae-5e3e2210-a12e-460c-b72c-15f9d4d8f327-000000/rBUrowOUb=
+ctGl-WmuA7Boi0Wg3zmZa3Ur89epO6sq5o=3D439">
+                                    <span>
+                                        <strong>Beads (GitHub Repo)</strong=
+>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Beads is a distributed, git-backed grap=
+h issue tracker that provides AI coding agents with a persistent, structure=
+d, and dependency-aware memory. It aims to improve agents' ability to handl=
+e long-horizon tasks without losing context. Beads supports features like h=
+ierarchical IDs and a local "stealth mode."
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=8E=81</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><strong><h1>Miscellaneous</h1></strong><=
+/div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fcilium.io%2Fblog%2F2025%2F12%2F31%2Ftetragon-2025-revie=
+w%2F%3Futm_source=3Dtldrdevops/1/0100019b986003ae-5e3e2210-a12e-460c-b72c-1=
+5f9d4d8f327-000000/ckPu3fpFHrZrtcIjqBwvHHhxXNAI0tnMHLAKHfQ1iK4=3D439">
+                                    <span>
+                                        <strong>Tetragon: An End-of-Year 20=
+25 Reflection (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Tetragon closed the year by highlightin=
+g community growth, major features like Windows preview support, persistent=
+ enforcement, flexible policy modes, attribute resolution, and userspace ho=
+oks, while reinforcing its role as a high-performance runtime security stan=
+dard built on eBPF.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgrafana.com%2Fblog%2Fhow-to-use-ai-to-analyze-and-visua=
+lize-can-data-with-grafana-assistant%2F%3Futm_source=3Dtldrdevops/1/0100019=
+b986003ae-5e3e2210-a12e-460c-b72c-15f9d4d8f327-000000/MWEZGse5u5uBSm1yGOImI=
+YkO36wyJ-5VRmF955SYHAM=3D439">
+                                    <span>
+                                        <strong>How to use AI to analyze an=
+d visualize CAN data with Grafana Assistant (9 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    CSS Electronics uses Grafana Assistant =
+to analyze CAN bus data from vehicles and machinery, enabling engineers to =
+explore terabytes of data through natural language prompts and generate cus=
+tomized dashboards without SQL knowledge. The tool integrates seamlessly wi=
+th existing cloud data sources, drastically reducing analysis time compared=
+ to manual methods or ChatGPT's file size limitations.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=E2=9A=
+=A1</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fcloudnativenow.com%2Feditorial-calendar%2Fbest-of-2025%=
+2Fcast-ai-report-surfaces-massive-kubernetes-cloud-infrastructure-waste-2%2=
+F%3Futm_source=3Dtldrdevops/1/0100019b986003ae-5e3e2210-a12e-460c-b72c-15f9=
+d4d8f327-000000/m4ovCe1QJTGowExEjTOP562NId2kHsx4nMa8Uj8cZY8=3D439">
+                                    <span>
+                                        <strong>CAST AI Report Surfaces Mas=
+sive Kubernetes Cloud Infrastructure Waste (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    CAST AI's analysis of 4,000 cloud Kuber=
+netes clusters found severe overprovisioning, with average CPU use near 13%=
+ and memory around 20%.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fspacelift.io%2Fblog%2Fopen-source-automation-tools%3Fut=
+m_source=3Dtldrdevops/1/0100019b986003ae-5e3e2210-a12e-460c-b72c-15f9d4d8f3=
+27-000000/ftWKsHz59mZbuUeRthCy5Pt6oQKbBNX0ZgFZXmd5_Aw=3D439">
+                                    <span>
+                                        <strong>Top 13 Open-Source Automati=
+on Tools for 2026 (23 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Spacelift Intent, OpenTofu, Pulumi, Ans=
+ible, Jenkins, Puppet, Chef, Salt, CFEngine, Rudder, Argo CD, Prometheus, a=
+nd Apache Airflow.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.pcgamer.com%2Fgames%2Fmoba%2Fleague-of-legends-play=
+ers-worldwide-couldnt-login-for-hours-because-riot-forgot-to-renew-the-clie=
+nts-ssl-certificate-just-like-it-did-10-years-ago%2F%3Futm_source=3Dtldrdev=
+ops/1/0100019b986003ae-5e3e2210-a12e-460c-b72c-15f9d4d8f327-000000/joaqrA7Z=
+b9DrxPF5DIcqff3xq5RFQ1Mu3LwspWOhqvY=3D439">
+                                    <span>
+                                        <strong>League of Legends players w=
+orldwide couldn't login for hours because Riot forgot to renew the client's=
+ SSL certificate=E2=80=94just like it did 10 years ago (3 minute read)</str=
+ong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Riot Games' popular game, League of Leg=
+ends, became unplayable for millions of players globally after the company =
+neglected to renew an SSL encryption certificate for the game client, a mis=
+hap that had previously occurred in 2016.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"word-break=
+: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class=3D"container" style=3D"padding: 0px 10px 15px;">
+<div class=3D"text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align=3D"left" style=3D"padding: 10px;">
+<div class=3D"text-block">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.t=
+ech%2Ffa0c1dae%2F10/1/0100019b986003ae-5e3e2210-a12e-460c-b72c-15f9d4d8f327=
+-000000/Qrdzc9n50aFaJf9v2eQ9ZnMT5AqGy_-UZvcX5FB0WX0=3D439" style=3D"color: =
+#464ba4; text-decoration: underline;">https://refer.tldr.tech/fa0c1dae/10</=
+a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align=3D"left" style=3D"padding:5px 10px;">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.=
+co%2Fsub_99428dc57e85%2F10/1/0100019b986003ae-5e3e2210-a12e-460c-b72c-15f9d=
+4d8f327-000000/suBbG8T5KC9AMn-9kRyAJ0yFkAyGcR0Fx2zTs2fNQFI=3D439" style=3D"=
+font-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block;=
+  text-decoration: underline;"><span style=3D"mso-text-raise:13pt; text-dec=
+oration: underline;">Track your referrals here.</span></a>
+</td></tr></tbody></table>
+
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"word-break=
+: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to advertise in TLDR? =F0=9F=93=B0
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+If your company is interested in reaching an audience of devops professiona=
+ls and decision makers, you may want to <a href=3D"https://tracking.tldrnew=
+sletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=3Dtldrdevop=
+s%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertisecta/1/0100019b986003a=
+e-5e3e2210-a12e-460c-b72c-15f9d4d8f327-000000/-ifUtEhWYBymgIRjene7UOmh1nTfd=
+E3UOlLpdpGFxeM=3D439"><strong><span>advertise with us</span></strong></a>.
+</div>
+<br>
+
+<!-- New "Want to work at TLDR?" section -->
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to work at TLDR? =F0=9F=92=BC
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech/1/0100019b986003ae-5e3e2210-a12e-460c-b72c-15f9d4d8f327-00=
+0000/TrWrvMyZfmoxjDmSb2aJtfWF5wjYecI8PPI-8jiSdMg=3D439" rel=3D"noopener nor=
+eferrer" style=3D"color: #0000EE; text-decoration: underline;" target=3D"_b=
+lank"><strong>Apply here</strong></a>,
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech%2Fc227b917-a6a4-40ce-8950-d3e165357871/1/0100019b986003ae-=
+5e3e2210-a12e-460c-b72c-15f9d4d8f327-000000/UGLvuDZ0VyHoM_wfuko8TK1tdWUlbMM=
+7O_zVCijy-pc=3D439" rel=3D"noopener noreferrer" style=3D"color: #0000EE; te=
+xt-decoration: underline;" target=3D"_blank"><strong>create your own role</=
+strong></a> or send a friend's resume to <a href=3D"mailto:jobs@tldr.tech" =
+style=3D"color: #0000EE; text-decoration: underline;">jobs@tldr.tech</a> an=
+d get $1k if we hire them! TLDR is one of <a href=3D"https://tracking.tldrn=
+ewsletter.com/CL0/https:%2F%2Fwww.linkedin.com%2Ffeed%2Fupdate%2Furn:li:act=
+ivity:7401699691039830016%2F/1/0100019b986003ae-5e3e2210-a12e-460c-b72c-15f=
+9d4d8f327-000000/WM0Odplfa6RO3JS2F1uU6vWROUp4sBngbOnm3MzJAEo=3D439" rel=3D"=
+noopener noreferrer" style=3D"color: #0000EE; text-decoration: underline;" =
+target=3D"_blank"><strong>Inc.'s Best Bootstrapped businesses</strong></a> =
+of 2025.
+</div>
+<br>
+
+<div class=3D"text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.linkedin=
+.com%2Fin%2Fkunaljaydesai%2F/1/0100019b986003ae-5e3e2210-a12e-460c-b72c-15f=
+9d4d8f327-000000/f28q7R_jxJwBS4Rz_2x6UzJLLR0XxjSKdn5MgTfdwzs=3D439"><span>K=
+unal Desai</span></a> &amp; <a href=3D"https://tracking.tldrnewsletter.com/=
+CL0/https:%2F%2Fwww.linkedin.com%2Fin%2Fmartin-hauskrecht%2F/1/0100019b9860=
+03ae-5e3e2210-a12e-460c-b72c-15f9d4d8f327-000000/ndVRIFYrY8CtyRwEn53fvNMEeA=
+u9Glz2Lvf4oQohotM=3D439"><span>Martin Hauskrecht</span></a>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div class=3D"text-block" id=3D"testing-id">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2F=
+devops%2Fmanage%3Femail=3Dmike.mcconigley%2540gmail.com/1/0100019b986003ae-=
+5e3e2210-a12e-460c-b72c-15f9d4d8f327-000000/6PjqvFq8LQBhcN-P_9TOpWjc9mbekAY=
+FcY1oJASo0T0=3D439">Manage your subscriptions</a> to our other newsletters =
+on tech, startups, and programming. Or if TLDR DevOps isn't for you, please=
+ <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsl=
+etter.com%2Funsubscribe%3Fep=3D1%26l=3D1c5ddf10-b6dc-11ed-a12f-33c00cd07e37=
+%26lc=3D6b0d473c-a670-11f0-8d7f-0bad7bf21fba%26p=3Df457c7fa-eb7c-11f0-92a8-=
+2dc3ac741a83%26pt=3Dcampaign%26pv=3D4%26spa=3D1767787292%26t=3D1767787987%2=
+6s=3D7f6f57f44685ce2703137349d368b74b007877a19cd332eab0b24dfbc52f7a54/1/010=
+0019b986003ae-5e3e2210-a12e-460c-b72c-15f9d4d8f327-000000/GZblk99a44ALdw2c8=
+BfCQwMs_Zz3z3548kbJTVu5uFM=3D439">unsubscribe</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+<img alt=3D"" src=3D"http://tracking.tldrnewsletter.com/CI0/0100019b986003a=
+e-5e3e2210-a12e-460c-b72c-15f9d4d8f327-000000/k8e7_X83MjBAL6-Rl9x4WjHmWijSm=
+K-qQwxgrCAP06U=3D439" style=3D"display: none; width: 1px; height: 1px;">
+</body></html>
+--FhzUYUVi--

@@ -1,0 +1,1468 @@
+Delivered-To: mike.mcconigley@gmail.com
+Received: by 2002:a05:6802:60c6:20b0:617:3adb:9ab9 with SMTP id t6-n2csp623137oca;
+        Mon, 5 Jan 2026 06:12:13 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IHAnnbNwdboCgIXUN5xA1Piw6vnI/Jcunt2/60r5AMkGb35yxLEXFBU33PXXJ5vJ3EYkFII
+X-Received: by 2002:a05:622a:2b46:b0:4d0:ac40:fab8 with SMTP id d75a77b69052e-4f4abcb609amr720900401cf.7.1767622333502;
+        Mon, 05 Jan 2026 06:12:13 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1767622333; cv=none;
+        d=google.com; s=arc-20240605;
+        b=CaqcPtNfd0yehEXW0/yM5GjzRFcPq5TDIqrULZFvXGeLZqipvHT1foPlK4JuiVgiH+
+         bwW2DfaTbstPtozzoV3p/Aiu5hOJurPhm+xNaPmdjT7NNej3YKYl/CdGFt4lfvilC91x
+         AoNDOQLP2bTC4z7mpzDeLCEtQGQz58VcUTW13VmPq2O4hBNpQ85puMDj6OFqrkG33gIb
+         ugaDi7HURUBamoqHQT9mwBEe6Qr+kwY70aG/uXQLgW2sbTQz7F2CLwUtIynZJdk0NC2z
+         dOEwV+1mCXUrM1GMhTcvUuyyqb2AM/M7SecXe4PB5q+YQUqND5jGmSQHYNbMJUKQkcMU
+         S+7Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:date:mime-version:list-unsubscribe-post
+         :list-unsubscribe:subject:to:from:dkim-signature:dkim-signature;
+        bh=epvXCUYfTFDZyLpMV5Oa0YuZcOwDUMbtfqLioZnxEvI=;
+        fh=tUTYCbTOUI69DxYKXGXRz08XnPP7jEKRU6E5rS0DFR4=;
+        b=iR09DM6yXSASGfinF0hnJCY+POj6SwbNBPwG9YJXb8sBCxu8S0w1MHf8y7iZ7925cd
+         Cb+45TGdylgjp251oMt9/f6HCAh0DRqSt+m5MwY0xEcK0NHArn2uJ2j59URbT+X3kZa6
+         F0CGHzHm294SbCPAx6LvwlDIxyMAxiz/elMvh2OrfYc600obQoMrZN9gEI3XxXDHGsdW
+         KXmfagYwDXVCY8Y8N2UQcvsCcFA4SfYaF1IWu+G1ZUVu8OaXHK6xKF6oeHIx1K6q5Npl
+         S6iELj2U4MlYIdR/yomm0Shq25QcpTPu+/TxlsdcFwNP7pOcWogJYaAV2imD9qn1bwZj
+         3bgA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=XANQatwR;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=CukUkYr6;
+       spf=pass (google.com: domain of 0100019b8e80528d-1b55c202-a68a-4897-a500-f5d392fbb2fd-000000@dailyupdate.tldrnewsletter.com designates 54.240.38.251 as permitted sender) smtp.mailfrom=0100019b8e80528d-1b55c202-a68a-4897-a500-f5d392fbb2fd-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+Return-Path: <0100019b8e80528d-1b55c202-a68a-4897-a500-f5d392fbb2fd-000000@dailyupdate.tldrnewsletter.com>
+Received: from a38-251.smtp-out.amazonses.com (a38-251.smtp-out.amazonses.com. [54.240.38.251])
+        by mx.google.com with ESMTPS id d75a77b69052e-4f4ac6979b3si565313241cf.330.2026.01.05.06.12.13
+        for <mike.mcconigley@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 05 Jan 2026 06:12:13 -0800 (PST)
+Received-SPF: pass (google.com: domain of 0100019b8e80528d-1b55c202-a68a-4897-a500-f5d392fbb2fd-000000@dailyupdate.tldrnewsletter.com designates 54.240.38.251 as permitted sender) client-ip=54.240.38.251;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=XANQatwR;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=CukUkYr6;
+       spf=pass (google.com: domain of 0100019b8e80528d-1b55c202-a68a-4897-a500-f5d392fbb2fd-000000@dailyupdate.tldrnewsletter.com designates 54.240.38.251 as permitted sender) smtp.mailfrom=0100019b8e80528d-1b55c202-a68a-4897-a500-f5d392fbb2fd-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ygiuxamnxevikrd5dtfwanslhs6b24mt; d=tldrnewsletter.com;
+	t=1767622333;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type;
+	bh=MhvipsQdcwax03baIuf/TWu7d0b5wCsSr01zoaJwLd4=;
+	b=XANQatwReXUONtRzUFHgyNIiYw1ftftWRPzGm82PaWq6FLAl9znXjTizCvk+dtTB
+	eRFjZ/oCf0n0/IN79ufa+OMEYkBHk4/wpApjojufeIvzp5mNlJvYSODpAJlMXBHo9ny
+	1pmWhn+QSxgNTU3zDlhD56/yQ3y31rXrS17qd43s=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1767622333;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type:Feedback-ID;
+	bh=MhvipsQdcwax03baIuf/TWu7d0b5wCsSr01zoaJwLd4=;
+	b=CukUkYr6X45ixlkIpTeWFtbAycRedBwO4rLRzyxyCvO1Y/gr9WZjjthfxSRmf5+7
+	ek56h9SqkNkiKL07BjObXp1BD0mtJbrQ3ImbuXIuDlLZAB6ICfJ1smNzOmrosBPLaca
+	16JXKlNA1xz9AVPChbjPc2Z3F9Zaaiji1X7Pusag=
+From: TLDR Fintech <dan@tldrnewsletter.com>
+To: mike.mcconigley@gmail.com
+Subject: Polymarket and Kalshi hit it big =?utf-8?Q?=F0=9F=9A=80=2C=C2=A0?=
+ Predictions for 2026 =?utf-8?Q?=F0=9F=94=AE=2C?= Mercury applies for OCC
+ bank charter =?utf-8?Q?=F0=9F=8F=A6?=
+X-Entity-Ref-Id: e2189bcf-83de-4589-981e-a28a6fa502e9
+X-EmailOctopus-Parent-Id: cbe6e4f0-ea36-11f0-9810-410fd734bbc8
+X-EmailOctopus-Parent-Type-Id: campaign
+X-EmailOctopus-List-Id: a9f58246-0e2a-11ef-8572-09f6f474b7ba
+X-EmailOctopus-List-Contact-Id: 6b0d1e24-a670-11f0-9f0f-0bad7bf21fba
+X-EmailOctopus-Started-Preparing-At: 2026-01-05T14:01:58+00:00
+X-EmailOctopus-Sent-At: 2026-01-05T14:12:13+00:00
+X-EmailOctopus-Team-Id: 66987ef2-4f4c-11e9-a3c9-06b79b628af2
+X-EmailOctopus-Version: 4
+List-Unsubscribe: <https://a.tldrnewsletter.com/unsubscribe?ep=1&l=a9f58246-0e2a-11ef-8572-09f6f474b7ba&lc=6b0d1e24-a670-11f0-9f0f-0bad7bf21fba&p=cbe6e4f0-ea36-11f0-9810-410fd734bbc8&pt=campaign&pv=4&spa=1767621718&t=1767622333&s=25a4b38f5c6eaa52c72f9f865d692cbaacb2d6948c0bf19df494b83c6918cd9d>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-EmailOctopus-Ses-Configuration-Set-Name: emailoctopus-a9f7b12f74f3c968d9408897fb35539c
+MIME-Version: 1.0
+Date: Mon, 5 Jan 2026 14:12:13 +0000
+Message-ID: <0100019b8e80528d-1b55c202-a68a-4897-a500-f5d392fbb2fd-000000@email.amazonses.com>
+Content-Type: multipart/alternative; boundary=MFEslPGv
+Feedback-ID: ::1.us-east-1.Dj5/7DYmgk+n1sSGGXSQSLIthSjNQ0MGtV5Dro1Tr8U=:AmazonSES
+X-SES-Outgoing: 2026.01.05-54.240.38.251
+
+--MFEslPGv
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Venture investment into fintech rebounded in 2025 after a four-year
+slump=
+, driven largely by a surge of capital flowing into prediction
+markets=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0
+
+
+ Sign Up [1] |Advertise [2]|View Online [3]=20
+
+=09=09TLDR=
+=20
+
+TLDR FINTECH 2026-01-05
+
+=F0=9F=93=B1=20
+
+NEWS & TRENDS
+
+ =
+POLYMARKET AND KALSHI HIT IT BIG ON 2025 FINTECH FUNDING SURGE (5
+MINUTE =
+READ) [4]=20
+
+ Venture investment into fintech rebounded in 2025 after a =
+four-year
+slump, driven largely by a surge of capital flowing into predic=
+tion
+markets amid growing interest in regulated online wagering. Polymark=
+et
+and Kalshi alone raised $3.7 billion, securing two of the largest US=
+
+fintech rounds of the year and signaling a sharp concentration of
+fund=
+ing among perceived category leaders. The trend reflects a broader
+shift =
+in venture behavior, with investors favoring scaled winners like
+Ramp as =
+fintech funding remains far below its 2021 peak despite
+improving regulat=
+ory tailwinds.=20
+
+ HOW BOTS, BANKING, AND STABLECOINS WILL DOMINATE FINT=
+ECH IN 2026 (5
+MINUTE READ) [5]=20
+
+ Fintech leaders expect 2026 to mar=
+k a shift as more companies pursue
+bank charters, expand stablecoin-based=
+ payments, and deploy AI agents
+that can complete purchases on consumers'=
+ behalf. With a more
+permissive regulatory backdrop in the US, firms like=
+ Coinbase, Stripe,
+Mercury, Visa, and Mastercard are positioning for a fu=
+ture where
+fintechs operate closer to the core banking system while stabl=
+ecoins
+and agentic commerce move into the mainstream.=20
+
+ CATHIE WOOD'=
+S ARK FINTECH ETF GAINS 30% IN 2025 BY LEANING INTO AI (4
+MINUTE READ) [6=
+]=20
+
+ Cathie Wood's ARK Blockchain & Fintech Innovation ETF returned abo=
+ut
+29% in 2025 by broadening its definition of fintech and adding
+AI-li=
+nked stocks such as Palantir and Roku, while traditional payments
+and cry=
+pto names lagged. The strategy helped ARK outperform rival
+fintech ETFs d=
+uring a down year for payments and digital assets,
+though investor flows =
+into the fund remained largely flat despite the
+strong performance.=20
+=
+
+=F0=9F=9A=80=20
+
+DEEP DIVES & REPORTS
+
+ FINTECH GROWS UP: THE GREA=
+T RACE TO BECOME A BANK (7 MINUTE READ) [7]
+
+
+ Fintech's surge in OCC=
+ charter applications marks a coming-of-age
+moment as companies like Merc=
+ury, Stripe, and Circle move from
+sponsor-bank dependency to owning the r=
+ails for better economics,
+control, and legitimacy. At the same time, oth=
+ers like Ramp, Brex, and
+Navan are opting out, betting that the real valu=
+e sits in software and
+workflow layers, creating a sharp split between ve=
+rtically integrated
+financial institutions and asset-light =E2=80=9Csoftw=
+are wrappers=E2=80=9D that
+risk turning banks into commoditized pipes. =
+
+
+ QED INVESTORS SHARES AI AND FINTECH OUTLOOK FOR 2026 (4 MINUTE READ)=
+
+[8]=20
+
+ QED Investors sees 2026 as a turning point where AI shifts fr=
+om
+experimentation to execution across fintech, with dynamic credit
+sco=
+ring, workflow automation, and disciplined growth moving to the
+forefront=
+. The firm expects alternative data and continuously updated
+underwriting=
+ models to expand access to credit, while warning that
+early AI traction =
+is often mistaken for defensible advantage as
+competition rapidly compres=
+ses margins. Looking ahead, QED believes
+valuations will normalize as AI =
+unit economics become clearer,
+rewarding companies that own deep workflow=
+s, integrations, and trust
+rather than those relying on =E2=80=9CAI magic=
+=E2=80=9D alone.=20
+
+ SIX FINTECH STARTUP PREDICTIONS FOR 2026 (6 MINUTE =
+READ) [9]=20
+
+ Alex Lazarow argues that fintech's next phase will be defi=
+ned less by
+hype and faster scaling, and more by depth, discipline, and h=
+ard
+trade-offs. He predicts slower global expansion but faster copycat
+=
+replication, rising AI-driven capital efficiency that reshapes
+early-stag=
+e funding norms, and an overdue reckoning as AI churn
+exposes fragile rev=
+enue models and inflated valuations. Looking ahead
+to 2026, winners are l=
+ikely to be companies that prioritize local
+execution, valuation restrain=
+t, M&A-led growth, and hybrid
+tech-plus-services models over noisy growth=
+-at-all-costs strategies.=20
+
+ OPEN STANDARDS WILL UNLOCK AGENTIC AI'S NE=
+XT BREAKTHROUGH IN FINTECH
+(7 MINUTE READ) [10]=20
+
+ Agentic AI has beg=
+un reshaping fintech operations, but the industry's
+fragmentation with di=
+vergent APIs and data formats risks locking in
+siloed solutions unless st=
+akeholders adopt open standards that let AI
+agents work across systems. T=
+he formation of the Agentic AI Foundation
+(AAIF) and growing protocols li=
+ke the Model Context Protocol (MCP) are
+early steps toward interoperabili=
+ty that could unlock richer
+cross-platform workflows and more meaningful =
+automation. With shared
+schemas and governance frameworks, next-generatio=
+n agentic systems
+could orchestrate tasks across payroll, banking, paymen=
+ts, and
+forecasting, leveling the playing field for smaller fintechs and=
+
+enabling innovation beyond proprietary stacks.=20
+
+=F0=9F=92=BB=20
+
+=
+LAUNCHES & PRODUCTS
+
+ CARF ACTIVATES GLOBAL CRYPTO TAX REPORTING ACROSS=
+ 48 COUNTRIES (3
+MINUTE READ) [11]=20
+
+ As of January 1, the OECD's Cry=
+pto-Asset Reporting Framework (CARF)
+requires crypto service providers to=
+ report user transaction data
+annually, bringing crypto under a coordinat=
+ed global tax transparency
+regime. Starting in 2027, participating jurisd=
+ictions will
+automatically exchange this data cross-border, significantly=
+ reducing
+the ability to hide assets in crypto and aligning digital asset=
+s with
+traditional financial reporting standards.=20
+
+ MERCURY APPLIES =
+FOR OCC BANK CHARTER AS FINTECH PUSHES DEEPER INTO
+REGULATED BANKING (3 M=
+INUTE READ) [12]=20
+
+ Mercury has applied for a national bank charter wit=
+h the OCC and
+appointed former SoFi Bank CFO Jon Auxier as CEO of the pro=
+posed bank,
+signaling a major step toward becoming a fully regulated fina=
+ncial
+institution. If approved, the charter would allow Mercury to hold=
+
+deposits directly, operate as an FDIC-insured bank, and expand product=
+
+innovation while reducing reliance on partner banks.=20
+
+=F0=9F=8E=
+=81=20
+
+MISCELLANEOUS
+
+ AI WILL DEMOLISH 200,000 JOBS ACCORDING TO EX=
+PERT (3 MINUTE READ)
+[13]=20
+
+ Morgan Stanley estimates that the adopti=
+on of artificial intelligence
+could eliminate about 200,000 banking jobs =
+across the European Union
+by 2030, especially in back-office, middle-offi=
+ce, compliance, and
+risk roles, highlighting AI's potential to reshape wo=
+rk in established
+sectors. While some leaders stress that AI will also cr=
+eate new
+opportunities and support work-life improvements like shorter wo=
+rk
+weeks, the looming cuts underscore broader debates over automation's=
+
+dual impact on job displacement and economic productivity.=20
+
+ SOVERE=
+IGN FUNDS PUSH INTO TECH AS ASSETS SWELL TO $15 TRILLION (3
+MINUTE READ) =
+[14]=20
+
+ Global sovereign wealth funds grew assets to a record $15 trill=
+ion in
+2025 as strong markets and a heavier push into technology and AI=
+
+boosted returns. Funds collectively invested $66 billion into AI and
+d=
+igital initiatives. The US emerged as the top destination for
+state-backe=
+d capital, drawing $131.8 billion, underscoring how
+sovereign investors a=
+re becoming increasingly influential backers of
+American tech and innovat=
+ion ecosystems.=20
+
+ THE BIGGEST FINTECH TRENDS OF 2025 (8 MINUTE READ) [=
+15]=20
+
+ With the advantage of hindsight, the financial landscape of 2025=
+ can
+be characterised by the enforcement of transformative payment
+regu=
+lations, the rise in support for stablecoins, and the moment the
+rubber h=
+it the road for artificial intelligence.=20
+
+=E2=9A=A1=20
+
+QUICK LINKS=
+
+
+ AMERICA STOPPED MAKING BANKS FOR 15 YEARS, THAT JUST CHANGED (2
+MI=
+NUTE READ) [16]=20
+
+ For nearly 15 years, the US effectively stopped crea=
+ting new banks -
+now fintechs are rushing back to bank charters.=20
+
+ A=
+I'S TRILLION-DOLLAR OPPORTUNITY: CONTEXT GRAPHS (5 MINUTE READ) [17]
+
+=
+
+ AI agents won't replace systems of record but will create a new, more=
+
+valuable category by capturing decision traces, the exceptions,
+approv=
+als, and precedents that live outside databases today.=20
+
+ CRYPTO IS DEA=
+D, AND THAT'S WHY IT FINALLY WINS (8 MINUTE READ) [18]=20
+
+ Blockchains, =
+stablecoins, and on-chain rails will succeed precisely
+by becoming invisi=
+ble infrastructure behind real products in payments,
+markets, and commerc=
+e.=20
+
+ WHEN PAYMENTS BECAME INFRASTRUCTURE: THE IRREVERSIBLE SHIFT OF 20=
+25
+(8 MINUTE READ) [19]=20
+
+ By the end of 2025, what changed was not t=
+he availability of
+technology but the cost of absence.=20
+
+Want to adve=
+rtise in TLDR? =F0=9F=93=B0
+
+ If your company is interested in reaching=
+ an audience of fintech
+professionals and decision makers, you may want t=
+o ADVERTISE WITH US
+[20].=20
+
+Want to work at TLDR? =F0=9F=92=BC
+
+ =
+APPLY HERE [21], CREATE YOUR OWN ROLE [22] or send a friend's resume
+to j=
+obs@tldr.tech and get $1k if we hire them! TLDR is one of INC.'S
+BEST BOO=
+TSTRAPPED BUSINESSES [23] of 2025.=20
+
+ If you have any comments or feedb=
+ack, just respond to this email!=20
+
+Thanks for reading,=20
+Rachita Kumar=
+ [24], Matt Cheung [25] & Gabriel Sundaram [26]=20
+
+ Manage your subscrip=
+tions [27] to our other newsletters on tech,
+startups, and programming. O=
+r if TLDR Fintech isn't for you, please
+unsubscribe [28].=20
+
+=20
+
+Li=
+nks:
+------
+[1] https://tldr.tech/fintech?utm_source=3Dtldrfintech
+[2=
+] https://advertise.tldr.tech?utm_source=3Dtldrfintech&utm_medium=3Dnewslet=
+ter&utm_campaign=3Dadvertisetopnav
+[3] https://a.tldrnewsletter.com/web-v=
+ersion?ep=3D1&lc=3D6b0d1e24-a670-11f0-9f0f-0bad7bf21fba&p=3Dcbe6e4f0-ea36-1=
+1f0-9810-410fd734bbc8&pt=3Dcampaign&t=3D1767622333&s=3D9c47635753ede6cbec5d=
+cbc4233e9f75c536da0b41038b67b74fcc8fb682658e
+[4] https://links.tldrnewsle=
+tter.com/XC5xwS
+[5] https://links.tldrnewsletter.com/yvcAs9
+[6] https:/=
+/links.tldrnewsletter.com/lPueOT
+[7] https://www.fintechbrainfood.com/p/e=
+veryone-wants-to-be-a-bank?utm_source=3Dtldrfintech
+[8] https://www.crowd=
+fundinsider.com/2025/12/256939-qed-investors-shares-ai-and-fintech-focused-=
+outlook-for-2026/?utm_source=3Dtldrfintech
+[9] https://links.tldrnewslett=
+er.com/fQ4BrL
+[10] https://www.fintechweekly.com/magazine/articles/open-s=
+tandards-agentic-ai-fintech-interoperability?utm_source=3Dtldrfintech
+[11=
+] https://links.tldrnewsletter.com/Y9y4e3
+[12] https://www.paymentsdive.c=
+om/news/fintech-mercury-apply-occ-national-bank-charter-fdic-fed-jon-auxier=
+-sofi/808491/?utm_source=3Dtldrfintech
+[13] https://finance.yahoo.com/new=
+s/ai-demolish-200-000-jobs-141534116.html?utm_source=3Dtldrfintech
+[14] h=
+ttps://links.tldrnewsletter.com/9c8FTt
+[15] https://links.tldrnewsletter.=
+com/R85dYY
+[16] https://www.linkedin.com/posts/sytaylor_america-stopped-m=
+aking-banks-for-15-years-activity-7413226760596516864-9fvP/?utm_source=3Dtl=
+drfintech
+[17] https://links.tldrnewsletter.com/KTa7iG
+[18] https://lin=
+ks.tldrnewsletter.com/1zbNve
+[19] https://links.tldrnewsletter.com/JiK2Dl=
+
+[20] https://advertise.tldr.tech/?utm_source=3Dtldrfintech&utm_medium=3D=
+newsletter&utm_campaign=3Dadvertisecta
+[21] https://jobs.ashbyhq.com/tldr=
+.tech
+[22] https://jobs.ashbyhq.com/tldr.tech/c227b917-a6a4-40ce-8950-d3e=
+165357871
+[23] https://www.linkedin.com/feed/update/urn:li:activity:74016=
+99691039830016/
+[24] https://www.linkedin.com/in/rachitakumar/
+[25] htt=
+ps://www.linkedin.com/in/cheungmatt/
+[26] https://www.linkedin.com/in/gab=
+rielsundaram/
+[27] https://tldr.tech/fintech/manage?email=3Dmike.mcconigl=
+ey%40gmail.com
+[28] https://a.tldrnewsletter.com/unsubscribe?ep=3D1&l=3Da=
+9f58246-0e2a-11ef-8572-09f6f474b7ba&lc=3D6b0d1e24-a670-11f0-9f0f-0bad7bf21f=
+ba&p=3Dcbe6e4f0-ea36-11f0-9810-410fd734bbc8&pt=3Dcampaign&pv=3D4&spa=3D1767=
+621718&t=3D1767622333&s=3D25a4b38f5c6eaa52c72f9f865d692cbaacb2d6948c0bf19df=
+494b83c6918cd9d
+--MFEslPGv
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html charset=3DUTF-8"><meta charset=3D"UTF-8"><meta name=3D"v=
+iewport" content=3D"width=3Ddevice-width"><meta name=3D"x-apple-disable-mes=
+sage-reformatting"><title>TLDR Fintech</title><meta name=3D"color-scheme" c=
+ontent=3D"light dark"><meta name=3D"supported-color-schemes" content=3D"lig=
+ht dark"><style type=3D"text/css">
+=09=09=09:root {
+=09=09=09=09color-scheme: light dark; supported-color-schemes: light dark;
+=09=09=09}
+=09=09=09
+=09=09=09*,
+=09=09=09*:after,
+=09=09=09*:before {
+=09=09=09=09-webkit-box-sizing: border-box; -moz-box-sizing: border-box; bo=
+x-sizing: border-box;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+=09=09=09}
+=09=09=09
+=09=09=09html,
+=09=09=09body,
+=09=09=09.document {
+=09=09=09=09width: 100% !important; height: 100% !important; margin: 0; pad=
+ding: 0;
+=09=09=09}
+=09=09=09
+=09=09=09body {
+=09=09=09=09-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: g=
+rayscale; text-rendering: optimizeLegibility;
+=09=09=09}
+=09=09=09
+=09=09=09div[style*=3D"margin: 16px 0"] {
+=09=09=09=09margin: 0 !important;
+=09=09=09}
+=09=09=09
+=09=09=09table,
+=09=09=09td {
+=09=09=09=09mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+=09=09=09}
+=09=09=09
+=09=09=09table {
+=09=09=09=09border-spacing: 0; border-collapse: collapse; table-layout: fix=
+ed; margin: 0 auto;
+=09=09=09}
+=09=09=09
+=09=09=09img {
+=09=09=09=09-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+=09=09=09}
+=09=09=09
+=09=09=09*[x-apple-data-detectors] {
+=09=09=09=09color: inherit !important; text-decoration: none !important;
+=09=09=09}
+=09=09=09
+=09=09=09.x-gmail-data-detectors,
+=09=09=09.x-gmail-data-detectors *,
+=09=09=09.aBn {
+=09=09=09=09border-bottom: 0 !important; cursor: default !important;
+=09=09=09}
+=09=09=09
+=09=09=09.btn {
+=09=09=09=09-webkit-transition: all 200ms ease; transition: all 200ms ease;
+=09=09=09}
+=09=09=09
+=09=09=09.btn:hover {
+=09=09=09=09background-color: #f67575; border-color: #f67575;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+=09=09=09}
+=09=09=09
+=09=09=09@media screen and (max-width: 600px) {
+=09=09=09=09.container {
+=09=09=09=09=09width: 100%; margin: auto;
+=09=09=09=09}
+=09=09=09=09.stack {
+=09=09=09=09=09display: block!important; width: 100%!important; max-width: =
+100%!important;
+=09=09=09=09}
+=09=09=09=09.btn {
+=09=09=09=09=09display: block; width: 100%; text-align: center;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09body,
+=09=09=09p,
+=09=09=09td,
+=09=09=09tr,
+=09=09=09.body,
+=09=09=09table,
+=09=09=09h1,
+=09=09=09h2,
+=09=09=09h3,
+=09=09=09h4,
+=09=09=09h5,
+=09=09=09h6,
+=09=09=09div,
+=09=09=09span {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09body,
+=09=09=09=09p,
+=09=09=09=09td,
+=09=09=09=09tr,
+=09=09=09=09.body,
+=09=09=09=09table,
+=09=09=09=09h1,
+=09=09=09=09h2,
+=09=09=09=09h3,
+=09=09=09=09h4,
+=09=09=09=09h5,
+=09=09=09=09h6,
+=09=09=09=09div,
+=09=09=09=09span {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09a {
+=09=09=09=09color: inherit !important; text-decoration: underline !importan=
+t;
+=09=09=09}
+
+=09=09</style><!--[if mso | ie]>
+=09=09<style type=3D"text/css">
+=09=09=09a {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09a {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09 </style>
+=09=09=09<![endif]--></head><body class=3D"">
+
+
+
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">Venture in=
+vestment into fintech rebounded in 2025 after a four-year slump, driven lar=
+gely by a surge of capital flowing into prediction markets&nbsp;=E2=80=8C&n=
+bsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&n=
+bsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&n=
+bsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&n=
+bsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&n=
+bsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&n=
+bsp;&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;</div>
+
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align=3D"center" class=3D"document"><tbody><tr><td valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"container" width=3D"600"><tbody><tr class=3D"inner-body"><td>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr class=3D"header"><td bgcolor=3D"" class=3D"containe=
+r">
+
+<table width=3D"100%"><tbody><tr><td class=3D"container">
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"margin-top: 0px;" width=3D"100%"><tbody><tr><td style=
+=3D"padding: 0px;">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div style=3D"text-align: center;">
+<span style=3D"margin-right: 0px;"><a href=3D"https://tracking.tldrnewslett=
+er.com/CL0/https:%2F%2Ftldr.tech%2Ffintech%3Futm_source=3Dtldrfintech/1/010=
+0019b8e80528d-1b55c202-a68a-4897-a500-f5d392fbb2fd-000000/8Cpcz1gLzxjvR0grK=
+rjUQOxbkNJu1kDio3c96M4EIaI=3D438" rel=3D"noopener noreferrer" target=3D"_bl=
+ank"><span>Sign Up</span></a>
+|<span style=3D"margin-right: 2px; margin-left: 2px;"><a href=3D"https://tr=
+acking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%3Futm_source=
+=3Dtldrfintech%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertisetopnav/1=
+/0100019b8e80528d-1b55c202-a68a-4897-a500-f5d392fbb2fd-000000/k3EY0J3ZGILS7=
+rGTuokxLvfJD0GwvZlB_pnsWa5QiGE=3D438" rel=3D"noopener noreferrer" target=3D=
+"_blank"><span>Advertise</span></a></span>|<span style=3D"margin-left: 2px;=
+"><a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnews=
+letter.com%2Fweb-version%3Fep=3D1%26lc=3D6b0d1e24-a670-11f0-9f0f-0bad7bf21f=
+ba%26p=3Dcbe6e4f0-ea36-11f0-9810-410fd734bbc8%26pt=3Dcampaign%26t=3D1767622=
+333%26s=3D9c47635753ede6cbec5dcbc4233e9f75c536da0b41038b67b74fcc8fb682658e/=
+1/0100019b8e80528d-1b55c202-a68a-4897-a500-f5d392fbb2fd-000000/7rP9zp3kbO4b=
+tuSxmgszkF09duFLg7IoUvMbEZkSP_o=3D438"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"text-=
+align: center;"><span data-darkreader-inline-color=3D"" style=3D"--darkread=
+er-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30=
+px;">T</span><span style=3D"font-size: 30px;"><span data-darkreader-inline-=
+color=3D"" style=3D"color: rgb(232, 192, 96) !important; --darkreader-inlin=
+e-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-colo=
+r=3D"" style=3D"color: rgb(101, 195, 173) !important; --darkreader-inline-c=
+olor:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-=
+color=3D"" style=3D"--darkreader-inline-color:#dd6e6e; color: rgb(220, 107,=
+ 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody></tbody></table>
+
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody><tr=
+><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0;=
+">
+<div style=3D"text-align: center;">
+
+<h1><strong>TLDR Fintech <span id=3D"date">2026-01-05</span></strong></h1>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody></t=
+body></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=3D""><td class=3D"container">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td style=3D"padding: 0px;">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=93=B1</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>News &amp; Trends</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FXC5xwS/1/0100019b8e80528d-1b=
+55c202-a68a-4897-a500-f5d392fbb2fd-000000/nj71mw3uVpmQkib9p2tIXrvBHlXFKdFXr=
+49U5hndvDM=3D438">
+                                    <span>
+                                        <strong>Polymarket and Kalshi hit i=
+t big on 2025 fintech funding surge (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Venture investment into fintech rebound=
+ed in 2025 after a four-year slump, driven largely by a surge of capital fl=
+owing into prediction markets amid growing interest in regulated online wag=
+ering. Polymarket and Kalshi alone raised $3.7 billion, securing two of the=
+ largest US fintech rounds of the year and signaling a sharp concentration =
+of funding among perceived category leaders. The trend reflects a broader s=
+hift in venture behavior, with investors favoring scaled winners like Ramp =
+as fintech funding remains far below its 2021 peak despite improving regula=
+tory tailwinds.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FyvcAs9/1/0100019b8e80528d-1b=
+55c202-a68a-4897-a500-f5d392fbb2fd-000000/ifmbPSnYO4aAccb_sEFiwro60L5phUDOp=
+0H7eDYhS2M=3D438">
+                                    <span>
+                                        <strong>How bots, banking, and stab=
+lecoins will dominate fintech in 2026 (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Fintech leaders expect 2026 to mark a s=
+hift as more companies pursue bank charters, expand stablecoin-based paymen=
+ts, and deploy AI agents that can complete purchases on consumers' behalf. =
+With a more permissive regulatory backdrop in the US, firms like Coinbase, =
+Stripe, Mercury, Visa, and Mastercard are positioning for a future where fi=
+ntechs operate closer to the core banking system while stablecoins and agen=
+tic commerce move into the mainstream.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FlPueOT/1/0100019b8e80528d-1b=
+55c202-a68a-4897-a500-f5d392fbb2fd-000000/X_83BgFVBDvsqe8u0Veb2Ql7OuoPKum7n=
+MEOtOlW5qA=3D438">
+                                    <span>
+                                        <strong>Cathie Wood's ARK fintech E=
+TF gains 30% in 2025 by leaning into AI (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Cathie Wood's ARK Blockchain &amp; Fint=
+ech Innovation ETF returned about 29% in 2025 by broadening its definition =
+of fintech and adding AI-linked stocks such as Palantir and Roku, while tra=
+ditional payments and crypto names lagged. The strategy helped ARK outperfo=
+rm rival fintech ETFs during a down year for payments and digital assets, t=
+hough investor flows into the fund remained largely flat despite the strong=
+ performance.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=9A=80</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Deep Dives &amp; Reports</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.fintechbrainfood.com%2Fp%2Feveryone-wants-to-be-a-b=
+ank%3Futm_source=3Dtldrfintech/1/0100019b8e80528d-1b55c202-a68a-4897-a500-f=
+5d392fbb2fd-000000/Elm_wYcC_N9oPj2TjaILWCDy8pHX8QzISxE4_JgC8T8=3D438">
+                                    <span>
+                                        <strong>Fintech grows up: The great=
+ race to become a bank (7 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Fintech's surge in OCC charter applicat=
+ions marks a coming-of-age moment as companies like Mercury, Stripe, and Ci=
+rcle move from sponsor-bank dependency to owning the rails for better econo=
+mics, control, and legitimacy. At the same time, others like Ramp, Brex, an=
+d Navan are opting out, betting that the real value sits in software and wo=
+rkflow layers, creating a sharp split between vertically integrated financi=
+al institutions and asset-light =E2=80=9Csoftware wrappers=E2=80=9D that ri=
+sk turning banks into commoditized pipes.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.crowdfundinsider.com%2F2025%2F12%2F256939-qed-inves=
+tors-shares-ai-and-fintech-focused-outlook-for-2026%2F%3Futm_source=3Dtldrf=
+intech/1/0100019b8e80528d-1b55c202-a68a-4897-a500-f5d392fbb2fd-000000/0YWZh=
+ifU1qmeBfvNGyF5USKbgflGwY2YPc_44IMiSTE=3D438">
+                                    <span>
+                                        <strong>QED investors shares AI and=
+ fintech outlook for 2026 (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    QED Investors sees 2026 as a turning po=
+int where AI shifts from experimentation to execution across fintech, with =
+dynamic credit scoring, workflow automation, and disciplined growth moving =
+to the forefront. The firm expects alternative data and continuously update=
+d underwriting models to expand access to credit, while warning that early =
+AI traction is often mistaken for defensible advantage as competition rapid=
+ly compresses margins. Looking ahead, QED believes valuations will normaliz=
+e as AI unit economics become clearer, rewarding companies that own deep wo=
+rkflows, integrations, and trust rather than those relying on =E2=80=9CAI m=
+agic=E2=80=9D alone.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FfQ4BrL/1/0100019b8e80528d-1b=
+55c202-a68a-4897-a500-f5d392fbb2fd-000000/8I8_WeVQodSRbEWDsQRIYi0_1RUQ3ba0f=
+mk6F6aWYog=3D438">
+                                    <span>
+                                        <strong>Six fintech startup predict=
+ions for 2026 (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Alex Lazarow argues that fintech's next=
+ phase will be defined less by hype and faster scaling, and more by depth, =
+discipline, and hard trade-offs. He predicts slower global expansion but fa=
+ster copycat replication, rising AI-driven capital efficiency that reshapes=
+ early-stage funding norms, and an overdue reckoning as AI churn exposes fr=
+agile revenue models and inflated valuations. Looking ahead to 2026, winner=
+s are likely to be companies that prioritize local execution, valuation res=
+traint, M&amp;A-led growth, and hybrid tech-plus-services models over noisy=
+ growth-at-all-costs strategies.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.fintechweekly.com%2Fmagazine%2Farticles%2Fopen-stan=
+dards-agentic-ai-fintech-interoperability%3Futm_source=3Dtldrfintech/1/0100=
+019b8e80528d-1b55c202-a68a-4897-a500-f5d392fbb2fd-000000/TqIT202UHHXEnfv71b=
+mUs2yMA-0DrKjDEiHlWaQQW7o=3D438">
+                                    <span>
+                                        <strong>Open standards will unlock =
+agentic AI's next breakthrough in fintech (7 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Agentic AI has begun reshaping fintech =
+operations, but the industry's fragmentation with divergent APIs and data f=
+ormats risks locking in siloed solutions unless stakeholders adopt open sta=
+ndards that let AI agents work across systems. The formation of the Agentic=
+ AI Foundation (AAIF) and growing protocols like the Model Context Protocol=
+ (MCP) are early steps toward interoperability that could unlock richer cro=
+ss-platform workflows and more meaningful automation. With shared schemas a=
+nd governance frameworks, next-generation agentic systems could orchestrate=
+ tasks across payroll, banking, payments, and forecasting, leveling the pla=
+ying field for smaller fintechs and enabling innovation beyond proprietary =
+stacks.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=92=BB</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Launches &amp; Products</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FY9y4e3/1/0100019b8e80528d-1b=
+55c202-a68a-4897-a500-f5d392fbb2fd-000000/kAYs3aJDALRs6nxmNwfy5EY031XXZhhMr=
+MsFRvN1EEY=3D438">
+                                    <span>
+                                        <strong>CARF activates global crypt=
+o tax reporting across 48 countries (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    As of January 1, the OECD's Crypto-Asse=
+t Reporting Framework (CARF) requires crypto service providers to report us=
+er transaction data annually, bringing crypto under a coordinated global ta=
+x transparency regime. Starting in 2027, participating jurisdictions will a=
+utomatically exchange this data cross-border, significantly reducing the ab=
+ility to hide assets in crypto and aligning digital assets with traditional=
+ financial reporting standards.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.paymentsdive.com%2Fnews%2Ffintech-mercury-apply-occ=
+-national-bank-charter-fdic-fed-jon-auxier-sofi%2F808491%2F%3Futm_source=3D=
+tldrfintech/1/0100019b8e80528d-1b55c202-a68a-4897-a500-f5d392fbb2fd-000000/=
+iVOf13HexqnrBt2_JKrkf9IUdlEAc3SN9UXbBOf7UYM=3D438">
+                                    <span>
+                                        <strong>Mercury applies for OCC ban=
+k charter as fintech pushes deeper into regulated banking (3 minute read)</=
+strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Mercury has applied for a national bank=
+ charter with the OCC and appointed former SoFi Bank CFO Jon Auxier as CEO =
+of the proposed bank, signaling a major step toward becoming a fully regula=
+ted financial institution. If approved, the charter would allow Mercury to =
+hold deposits directly, operate as an FDIC-insured bank, and expand product=
+ innovation while reducing reliance on partner banks.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=8E=81</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><strong><h1>Miscellaneous</h1></strong><=
+/div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Ffinance.yahoo.com%2Fnews%2Fai-demolish-200-000-jobs-141=
+534116.html%3Futm_source=3Dtldrfintech/1/0100019b8e80528d-1b55c202-a68a-489=
+7-a500-f5d392fbb2fd-000000/vcoVjdgDV4yPQIiGP6xrHYRXVctzzpwilJDaBSYq_vc=3D43=
+8">
+                                    <span>
+                                        <strong>AI will demolish 200,000 jo=
+bs according to expert (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Morgan Stanley estimates that the adopt=
+ion of artificial intelligence could eliminate about 200,000 banking jobs a=
+cross the European Union by 2030, especially in back-office, middle-office,=
+ compliance, and risk roles, highlighting AI's potential to reshape work in=
+ established sectors. While some leaders stress that AI will also create ne=
+w opportunities and support work-life improvements like shorter work weeks,=
+ the looming cuts underscore broader debates over automation's dual impact =
+on job displacement and economic productivity.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2F9c8FTt/1/0100019b8e80528d-1b=
+55c202-a68a-4897-a500-f5d392fbb2fd-000000/UCcXDSFx5MZVuusaQXgDKi5xjo7O0GCoj=
+0BGEcrDuTA=3D438">
+                                    <span>
+                                        <strong>Sovereign funds push into t=
+ech as assets swell to $15 Trillion (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Global sovereign wealth funds grew asse=
+ts to a record $15 trillion in 2025 as strong markets and a heavier push in=
+to technology and AI boosted returns. Funds collectively invested $66 billi=
+on into AI and digital initiatives. The US emerged as the top destination f=
+or state-backed capital, drawing $131.8 billion, underscoring how sovereign=
+ investors are becoming increasingly influential backers of American tech a=
+nd innovation ecosystems.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FR85dYY/1/0100019b8e80528d-1b=
+55c202-a68a-4897-a500-f5d392fbb2fd-000000/9pmlRLjfHMAlq-sMwHXoaW3MUXFcPdTbX=
+O0LIVIgflU=3D438">
+                                    <span>
+                                        <strong>The biggest fintech trends =
+of 2025 (8 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    With the advantage of hindsight, the fi=
+nancial landscape of 2025 can be characterised by the enforcement of transf=
+ormative payment regulations, the rise in support for stablecoins, and the =
+moment the rubber hit the road for artificial intelligence.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=E2=9A=
+=A1</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.linkedin.com%2Fposts%2Fsytaylor_america-stopped-mak=
+ing-banks-for-15-years-activity-7413226760596516864-9fvP%2F%3Futm_source=3D=
+tldrfintech/1/0100019b8e80528d-1b55c202-a68a-4897-a500-f5d392fbb2fd-000000/=
+aMlrFf0dWKp2bsp0jG1ArnWLf-cHu3fNqs8Ur7ecbf4=3D438">
+                                    <span>
+                                        <strong>America stopped making bank=
+s for 15 years, that just changed (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    For nearly 15 years, the US effectively=
+ stopped creating new banks - now fintechs are rushing back to bank charter=
+s.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FKTa7iG/1/0100019b8e80528d-1b=
+55c202-a68a-4897-a500-f5d392fbb2fd-000000/jezB55NRkkhxutUdQ-Hjd6W480ZpoV4lS=
+2-DM4Z07WE=3D438">
+                                    <span>
+                                        <strong>AI's trillion-dollar opport=
+unity: Context graphs (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    AI agents won't replace systems of reco=
+rd but will create a new, more valuable category by capturing decision trac=
+es, the exceptions, approvals, and precedents that live outside databases t=
+oday.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2F1zbNve/1/0100019b8e80528d-1b=
+55c202-a68a-4897-a500-f5d392fbb2fd-000000/_T5zKB3LEdGSCXb_Y03onmiitb54IaPtF=
+LwV0iuERLE=3D438">
+                                    <span>
+                                        <strong>Crypto is dead, and that's =
+why it finally wins (8 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Blockchains, stablecoins, and on-chain =
+rails will succeed precisely by becoming invisible infrastructure behind re=
+al products in payments, markets, and commerce.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FJiK2Dl/1/0100019b8e80528d-1b=
+55c202-a68a-4897-a500-f5d392fbb2fd-000000/989GlXl1SKXNxbB5V9M2GiaMn4h1Nte0O=
+pQgLnJx5U0=3D438">
+                                    <span>
+                                        <strong>When Payments Became Infras=
+tructure: The Irreversible Shift of 2025 (8 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    By the end of 2025, what changed was no=
+t the availability of technology but the cost of absence.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"word-break=
+: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to advertise in TLDR? =F0=9F=93=B0
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+If your company is interested in reaching an audience of fintech profession=
+als and decision makers, you may want to <a href=3D"https://tracking.tldrne=
+wsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=3Dtldrfint=
+ech%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertisecta/1/0100019b8e805=
+28d-1b55c202-a68a-4897-a500-f5d392fbb2fd-000000/8OS-zLLqgRCZ_2RbDa60sLJ6U73=
+LwEINKDS27O12_ZA=3D438"><strong><span>advertise with us</span></strong></a>=
+.
+</div>
+<br>
+
+<!-- New "Want to work at TLDR?" section -->
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to work at TLDR? =F0=9F=92=BC
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech/1/0100019b8e80528d-1b55c202-a68a-4897-a500-f5d392fbb2fd-00=
+0000/-J5o7IRP4UNVSQV8_XB-iWwUl9njnb2B69_k848_wWc=3D438" rel=3D"noopener nor=
+eferrer" style=3D"color: #0000EE; text-decoration: underline;" target=3D"_b=
+lank"><strong>Apply here</strong></a>,
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech%2Fc227b917-a6a4-40ce-8950-d3e165357871/1/0100019b8e80528d-=
+1b55c202-a68a-4897-a500-f5d392fbb2fd-000000/HAgq3L-ofW_5e7GrVSLCSnjuVdhYFbu=
+nMc5e7lysqEk=3D438" rel=3D"noopener noreferrer" style=3D"color: #0000EE; te=
+xt-decoration: underline;" target=3D"_blank"><strong>create your own role</=
+strong></a> or send a friend's resume to <a href=3D"mailto:jobs@tldr.tech" =
+style=3D"color: #0000EE; text-decoration: underline;">jobs@tldr.tech</a> an=
+d get $1k if we hire them! TLDR is one of <a href=3D"https://tracking.tldrn=
+ewsletter.com/CL0/https:%2F%2Fwww.linkedin.com%2Ffeed%2Fupdate%2Furn:li:act=
+ivity:7401699691039830016%2F/1/0100019b8e80528d-1b55c202-a68a-4897-a500-f5d=
+392fbb2fd-000000/u76fayU6EAl6dqkiyPdJA_I1SKHYgLCINOvwhbgfB9A=3D438" rel=3D"=
+noopener noreferrer" style=3D"color: #0000EE; text-decoration: underline;" =
+target=3D"_blank"><strong>Inc.'s Best Bootstrapped businesses</strong></a> =
+of 2025.
+</div>
+<br>
+
+<div class=3D"text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.linkedin=
+.com%2Fin%2Frachitakumar%2F/1/0100019b8e80528d-1b55c202-a68a-4897-a500-f5d3=
+92fbb2fd-000000/kq5lxFNec2pFTW1CVTWTKvhhG0HfECkECMSslHL9UU4=3D438"><span>Ra=
+chita Kumar</span></a>, <a href=3D"https://tracking.tldrnewsletter.com/CL0/=
+https:%2F%2Fwww.linkedin.com%2Fin%2Fcheungmatt%2F/1/0100019b8e80528d-1b55c2=
+02-a68a-4897-a500-f5d392fbb2fd-000000/iLVEDnLykrs3P59A8rlWQ3p739hCbnZOTWmrc=
+tCJYtQ=3D438"><span>Matt Cheung</span></a> &amp; <a href=3D"https://trackin=
+g.tldrnewsletter.com/CL0/https:%2F%2Fwww.linkedin.com%2Fin%2Fgabrielsundara=
+m%2F/1/0100019b8e80528d-1b55c202-a68a-4897-a500-f5d392fbb2fd-000000/GYtC3Gp=
+zWQpi3RUqvTpqSJ2orSEgW0H9xqLiLtGXkZQ=3D438"><span>Gabriel Sundaram</span></=
+a>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div class=3D"text-block" id=3D"testing-id">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2F=
+fintech%2Fmanage%3Femail=3Dmike.mcconigley%2540gmail.com/1/0100019b8e80528d=
+-1b55c202-a68a-4897-a500-f5d392fbb2fd-000000/g7C8PLaQ1UZWgUigy_H3RxJUccU0vb=
+AAQXiT_ipwM9A=3D438">Manage your subscriptions</a> to our other newsletters=
+ on tech, startups, and programming. Or if TLDR Fintech isn't for you, plea=
+se <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnew=
+sletter.com%2Funsubscribe%3Fep=3D1%26l=3Da9f58246-0e2a-11ef-8572-09f6f474b7=
+ba%26lc=3D6b0d1e24-a670-11f0-9f0f-0bad7bf21fba%26p=3Dcbe6e4f0-ea36-11f0-981=
+0-410fd734bbc8%26pt=3Dcampaign%26pv=3D4%26spa=3D1767621718%26t=3D1767622333=
+%26s=3D25a4b38f5c6eaa52c72f9f865d692cbaacb2d6948c0bf19df494b83c6918cd9d/1/0=
+100019b8e80528d-1b55c202-a68a-4897-a500-f5d392fbb2fd-000000/XDluFgdeLOb31QJ=
+yVSMUu3qMYe0Xxwg_DmuQ-MGY6us=3D438">unsubscribe</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+<img alt=3D"" src=3D"http://tracking.tldrnewsletter.com/CI0/0100019b8e80528=
+d-1b55c202-a68a-4897-a500-f5d392fbb2fd-000000/X3meuB8aZUwCHVxV9PE1jl-juJZnj=
+PJLBFLui4N89x4=3D438" style=3D"display: none; width: 1px; height: 1px;">
+</body></html>
+--MFEslPGv--

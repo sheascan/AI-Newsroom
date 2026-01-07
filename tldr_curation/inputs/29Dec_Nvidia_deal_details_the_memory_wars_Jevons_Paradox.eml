@@ -1,0 +1,1957 @@
+Delivered-To: mike.mcconigley@gmail.com
+Received: by 2002:a05:6802:6049:10b0:616:7b0e:67b2 with SMTP id r9-n1csp2549480oca;
+        Mon, 29 Dec 2025 03:26:25 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IF+jFlleSMH0hQBkyN+gJ2f8AHDLRFmw10GTU2bNFExMHjznfA6jyxsJTWXGsyX+0DrMKh2
+X-Received: by 2002:a05:6214:3f8c:b0:882:36bc:da5c with SMTP id 6a1803df08f44-88d84f0308fmr452482476d6.26.1767007585134;
+        Mon, 29 Dec 2025 03:26:25 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1767007585; cv=none;
+        d=google.com; s=arc-20240605;
+        b=TzBRpG+jU5V3TuxbmG5tRVarSkdzGflnX0/pamXZnU8LYGIO1sBqymzuyIsWXSTY5u
+         reFQhHAV4P/uF2yUGESQJDnIwb/4JD4yTkTf+DQaKnXsndTO5nSZQaG01et45M5XqVdr
+         bPHjKFq/QFnquMloHNxEnxdi74z4lEeTonXVMADH8R42ccbeg9kreelIU3SNd1f/gVIz
+         CT61UfvCFdvux3pY1joMknFYAkjkOR27JV30jCRuovLsvLmaSTnVMFc5gI3H2ouR/1aB
+         Us3FZFhhOJwZf2IdEmFQBb9ghj5zKIPjiIpN0jQm6TQBxOsPwlnoqZw9rdmD/+Gba/dl
+         QAlg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:date:mime-version:list-unsubscribe-post
+         :list-unsubscribe:subject:to:from:dkim-signature:dkim-signature;
+        bh=Iz5uhQk/hoBrmlEstoxwQSoxstZIeuyvVCM0JbCjddI=;
+        fh=tUTYCbTOUI69DxYKXGXRz08XnPP7jEKRU6E5rS0DFR4=;
+        b=lW1S3zMxdogqxAdSwOK9LLirB2ikRSWGXDHJtodAFqvQxvCcKHYsZ0hPS90h6KaP9h
+         R0VRaXFtfqpwTFgIudPYO3e087AFpa7DdfdQAcOchT339Lcz/PqClFvSdWalnzSz6Vc0
+         ncwvotWljhjShNYQrciSkLZdl+CX+rRx/i845dC4BEUdR0T/8rqlus7AQbWzQAppu/rL
+         0eFQN6qkrpEvtwBcBIjp7DvxAwyscTHf1Y19FDp0YLjNKJlxdQqF8o0mGNFUEpQ7MIzq
+         QqQWjeRLBN8X7g3g9AM5VfT85+aZk4YxHuikV9yOC73525YKhsgUaSj3lOjcSKp3Wq56
+         gfBg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=NEQ4ilBJ;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=p6Nl8WaS;
+       spf=pass (google.com: domain of 0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000@dailyupdate.tldrnewsletter.com designates 54.240.77.24 as permitted sender) smtp.mailfrom=0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+Return-Path: <0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000@dailyupdate.tldrnewsletter.com>
+Received: from a77-24.smtp-out.amazonses.com (a77-24.smtp-out.amazonses.com. [54.240.77.24])
+        by mx.google.com with ESMTPS id 6a1803df08f44-89004a88ccfsi101195376d6.735.2025.12.29.03.26.24
+        for <mike.mcconigley@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 29 Dec 2025 03:26:25 -0800 (PST)
+Received-SPF: pass (google.com: domain of 0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000@dailyupdate.tldrnewsletter.com designates 54.240.77.24 as permitted sender) client-ip=54.240.77.24;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=NEQ4ilBJ;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=p6Nl8WaS;
+       spf=pass (google.com: domain of 0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000@dailyupdate.tldrnewsletter.com designates 54.240.77.24 as permitted sender) smtp.mailfrom=0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ygiuxamnxevikrd5dtfwanslhs6b24mt; d=tldrnewsletter.com;
+	t=1767007584;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type;
+	bh=t1PMRyQBXHYaDG+cXfk06tA2hyqr6lS08cxs75tkEB0=;
+	b=NEQ4ilBJ7v51Qu0ySz11Jl001QWmWbNyxAsQ0Lv617Ozm2u6uKeW2fYeuiUsfw7h
+	WZ4aqNmiT5AoWqZE1kCUsfOuQ1P6Qor0uxuOTW/oFq78zwr8tuNlcVXd/BfGZASJs+j
+	elZZNAEIOl0TQTzWrQIlt1JSJ51xYif0pC18lR0k=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1767007584;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type:Feedback-ID;
+	bh=t1PMRyQBXHYaDG+cXfk06tA2hyqr6lS08cxs75tkEB0=;
+	b=p6Nl8WaSFiSpJm+TMAuYAcTiuHnM1Vx4OIzxeMJOHgOyl8ZAsRuqg9iiSrkHbAZ1
+	fKJOB47iL/93PS9ND0p7/0JlA3BX4wqTd/i1kPkLlU1jCNP9IIaZ8AHeq3T6vOXlTGY
+	s9a+W6gmX2sG7vbG+LrrI41vuuSHMxvhoClaE8HI=
+From: TLDR <dan@tldrnewsletter.com>
+To: mike.mcconigley@gmail.com
+Subject: Nvidia deal details =?utf-8?Q?=F0=9F=92=B0=2C?= the memory wars
+ =?utf-8?Q?=F0=9F=92=BE=2C?= Jevons Paradox for knowledge work
+ =?utf-8?Q?=F0=9F=92=BC=C2=A0?=
+X-Entity-Ref-Id: d87899fe-fa77-4319-85b6-df9a6e2228f2
+X-EmailOctopus-Parent-Id: 0667d53a-e492-11f0-845d-db6078c94199
+X-EmailOctopus-Parent-Type-Id: campaign
+X-EmailOctopus-List-Id: cfa2d55a-b7be-11e8-a3c9-06b79b628af2
+X-EmailOctopus-List-Contact-Id: 46c4c580-a670-11f0-ad93-1f8c13b87d10
+X-EmailOctopus-Started-Preparing-At: 2025-12-29T11:01:03+00:00
+X-EmailOctopus-Sent-At: 2025-12-29T11:26:24+00:00
+X-EmailOctopus-Team-Id: 66987ef2-4f4c-11e9-a3c9-06b79b628af2
+X-EmailOctopus-Version: 4
+List-Unsubscribe: <https://a.tldrnewsletter.com/unsubscribe?ep=1&l=cfa2d55a-b7be-11e8-a3c9-06b79b628af2&lc=46c4c580-a670-11f0-ad93-1f8c13b87d10&p=0667d53a-e492-11f0-845d-db6078c94199&pt=campaign&pv=4&spa=1767006063&t=1767007584&s=7a871694544b48a9bcec621ac7882c3880a790edb4b2854ef7566a624a80dacb>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-EmailOctopus-Ses-Configuration-Set-Name: emailoctopus-a9f7b12f74f3c968d9408897fb35539c
+MIME-Version: 1.0
+Date: Mon, 29 Dec 2025 11:26:24 +0000
+Message-ID: <0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000@email.amazonses.com>
+Content-Type: multipart/alternative; boundary=tDMSEXRP
+Feedback-ID: ::1.us-east-1.Dj5/7DYmgk+n1sSGGXSQSLIthSjNQ0MGtV5Dro1Tr8U=:AmazonSES
+X-SES-Outgoing: 2025.12.29-54.240.77.24
+
+--tDMSEXRP
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+The buildout happening right now may be a sign that the AI chip
+competiti=
+on may already be over. Nvidia recently requested 16-Hi HBM
+deliveries=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0
+
+
+ Sign Up [1] |Advertise [2]|View Online [3]=20
+
+ =09=09TLD=
+R=20
+
+TLDR 2025-12-29
+
+=F0=9F=93=B1=20
+
+BIG TECH & STARTUPS
+
+ T=
+HE MEMORY WARS: WHY THE FUTURE KARPATHY, MUSK, AND JIM FAN SEE
+REQUIRES 1=
+6-HI HBM (15 MINUTE READ) [4]=20
+
+ The infrastructure buildout happening =
+right now may be a sign that
+the AI chip competition may already be over.=
+ Nvidia recently requested
+16-Hi HBM deliveries from Samsung, SK Hynix, a=
+nd Micron by Q4 2026.
+This infrastructure layer could make AI inference e=
+ffectively infinite
+and nearly free at the margin. The rollout of capabil=
+ity is arriving
+faster than our ability to conceptualize what to do with =
+it.=20
+
+ NVIDIA GROQ UPDATE: EVERYONE GETS RICH, PATENT WARFARE BEGINS (7=
+
+MINUTE READ) [5]=20
+
+ All of Groq's VCs, employees, founders, and the =
+whole cap table will
+get paid from the recent acquisition by Nvidia. 85% =
+of the payment
+will be up front, with the rest coming by the end of 2026.=
+ Nvidia will
+likely weaponize the patents it gained from the acquisition =
+to create
+a 'scorched-earth zone' around SRAM-based inference. GroqCloud =
+has
+become a shell of its former self with no IP and no technical
+leade=
+rship.=20
+
+=F0=9F=9A=80=20
+
+SCIENCE & FUTURISTIC TECHNOLOGY
+
+ ALZHE=
+IMER'S: FROM CAUSES AND RISK FACTORS TO MODELS AND INTERVENTIONS
+(14 MINU=
+TE READ) [6]=20
+
+ Alzheimer's Disease (AD) is caused by multiple factors.=
+ Each
+individual factor doesn't necessarily guarantee an AD diagnosis in=
+
+every situation, but it increases the odds of it all else being equal.=
+
+Preventing AD and reversing or stopping the disease are two separate
+a=
+reas of research. Attempting to modify risk factors of the disease
+once i=
+t has already started is unlikely to lead to a cure. Targeting
+the underl=
+ying dynamics of the disease is a more likely pathway to a
+treatment.=20
+=
+
+ PROPOSED SPACE STATION COULD BE DEPLOYED IN A SINGLE LAUNCH (2 MINUTE=
+
+READ) [7]=20
+
+ Max Space's Thunderbird is designed to host four astron=
+auts in an
+expandable interior structure that can be reconfigured by the =
+crew to
+support different activities. It can be used for research as well=
+ as
+orbital manufacturing of pharmaceuticals and other materials. The
+s=
+pace station can be launched on a medium-lift vehicle such as the
+Falcon =
+9 rocket. The Thunderbird space station is set to launch as
+early as 2029=
+.=20
+
+=F0=9F=92=BB=20
+
+PROGRAMMING, DESIGN & DATA SCIENCE
+
+ REACH M=
+ILLIONS OF TECH PROFESSIONALS AT SCALE (SPONSOR) [8]=20
+
+ Over 6 million =
+tech professionals read TLDR including developers,
+product managers, mark=
+eters, designers and executives. Get in front of
+your target audience wit=
+h an ad placement just like this one! Learn
+more [8] about running a test=
+ campaign.=20
+
+ A GUIDE TO CLAUDE CODE 2.0 AND GETTING BETTER AT USING CO=
+DING AGENTS
+(55 MINUTE READ) [9]=20
+
+ Claude Code dominated the CLI cod=
+ing product experience this year.
+This guide shows readers the thought pr=
+ocesses and simple things to
+keep in mind to get the most out of Claude C=
+ode. Learning how things
+work in Claude Code directly transfers to other =
+tools, both in terms
+of personal usage and production-grade engineering. =
+The post will help
+users keep up with coding agents in general.=20
+
+ HO=
+W I THINK ABOUT KUBERNETES (6 MINUTE READ) [10]=20
+
+ Kubernetes is often =
+described as a container orchestration tool, but
+that mental model isn't =
+always the most useful way to think about
+what's happening. It is more li=
+ke a platform where developers declare
+the desired state of their infrast=
+ructure and let the system
+continuously work to match that intent. In tha=
+t way, Kubernetes is
+more like a runtime for declarative infrastructure w=
+ith a type system.
+Thinking this way results in very practical approaches=
+ to operating
+clusters.=20
+
+=F0=9F=8E=81=20
+
+MISCELLANEOUS
+
+ 12 O=
+UTLOOKS FOR THE FUTURE: 2026+ (9 MINUTE READ) [11]=20
+
+ 2026 will hopeful=
+ly be full of surprises and developments that give
+us hope for healthier =
+and more fulfilling work and lives. The AI hype
+cycle will die down, allo=
+wing the most meaningful innovations to
+become clear. This post takes a l=
+ook at what we should expect in the
+coming year and beyond, and what the =
+implications of that will be.=20
+
+ JEVONS PARADOX FOR KNOWLEDGE WORK (7 M=
+INUTE READ) [12]=20
+
+ Tech-driven efficiency improvements tend to lead to=
+ massive growth
+because there are more use cases for the resources than p=
+reviously
+contemplated. AI is going to lead to a lot more knowledge work =
+by
+making it cheaper, as that allows people to take on tasks previously=
+
+unimaginable. The vast majority of AI tokens in the future will be
+use=
+d on things that we don't even do today. AI will enable work that
+previou=
+sly wouldn't have been considered, as it would have been too
+expensive or=
+ impractical.=20
+
+=E2=9A=A1=20
+
+QUICK LINKS
+
+ WHY DID THE MEMORY CH=
+ICKEN GAME KEEP REPEATING=E2=80=94AND WHO ULTIMATELY
+SURVIVED? (22 MINUTE=
+ READ) [13]=20
+
+ Both an escape from the commoditization of memory and th=
+e
+'foundry-ization' of memory will happen within the next two years.=20
+=
+
+ MY ROLE AS A FOUNDER CTO: YEAR EIGHT (16 MINUTE READ) [14]=20
+
+ Migue=
+l Carranza is the founder of RevenueCat, a service that helps
+developers =
+grow and manage in-app purchases.=20
+
+ PUBLISHING YOUR WORK INCREASES YOU=
+R LUCK (11 MINUTE READ) [15]=20
+
+ You increase your luck by making yourse=
+lf more visible to the world.=20
+
+ CONTINUOUS CLAUDE (GITHUB REPO) [16] =
+
+
+ Continuous Claude is a framework that saves state to a ledger, wipes=
+
+context, and resumes fresh.=20
+
+ THE HIDDEN COST OF MAKING WORK CHEAP =
+(3 MINUTE READ) [17]=20
+
+ Trust becomes harder to earn when work becomes =
+cheap.=20
+
+ WHAT AN UNPROCESSED PHOTO LOOKS LIKE (4 MINUTE READ) [18]=20
+=
+
+ A look at what camera sensors see and what photo processing actually
+=
+does.=20
+
+Love TLDR? Tell your friends and get rewards!
+
+ Share your =
+referral link below with friends to get free TLDR swag!=20
+
+ https://refe=
+r.tldr.tech/95f8de32/ [19]=20
+
+ =09=09 Track your referrals here. [20] =
+
+
+Want to advertise in TLDR? =F0=9F=93=B0
+
+ If your company is inte=
+rested in reaching an audience of tech
+executives, decision-makers and en=
+gineers, you may want to ADVERTISE
+WITH US [21].=20
+
+Want to work at TL=
+DR? =F0=9F=92=BC
+
+ APPLY HERE [22], CREATE YOUR OWN ROLE [23] or send a=
+ friend's resume
+to jobs@tldr.tech and get $1k if we hire them! TLDR is o=
+ne of INC.'S
+BEST BOOTSTRAPPED BUSINESSES [24] of 2025.=20
+
+ If you hav=
+e any comments or feedback, just respond to this email!=20
+
+Thanks for re=
+ading,=20
+Dan Ni [25] & Stephen Flanders [26]=20
+
+ Manage your subscripti=
+ons [27] to our other newsletters on tech,
+startups, and programming. Or =
+if TLDR isn't for you, please
+unsubscribe [28].=20
+
+=20
+
+Links:
+---=
+---
+[1] https://tldr.tech/signup?utm_source=3Dtldr
+[2] https://advertis=
+e.tldr.tech/?utm_source=3Dtldr&utm_medium=3Dnewsletter&utm_campaign=3Dadver=
+tisetopnav
+[3] https://a.tldrnewsletter.com/web-version?ep=3D1&lc=3D46c4c=
+580-a670-11f0-ad93-1f8c13b87d10&p=3D0667d53a-e492-11f0-845d-db6078c94199&pt=
+=3Dcampaign&t=3D1767007584&s=3Dffebc711df7895594ecd19ce1e3711064cc3b2a86ee1=
+97b7fab46e085a7424ac
+[4] https://links.tldrnewsletter.com/Dr22ln
+[5] ht=
+tps://ossa-ma.github.io/blog/groq-update?utm_source=3Dtldrnewsletter
+[6] =
+https://nintil.com/alzheimers-cause?utm_source=3Dtldrnewsletter
+[7] https=
+://gizmodo.com/proposed-space-station-could-be-deployed-in-a-single-launch-=
+2000701443?utm_source=3Dtldrnewsletter
+[8] https://advertise.tldr.tech/?u=
+tm_source=3Dtldr&utm_medium=3Dnewsletter&utm_campaign=3Dsecondary12292025=
+
+[9] https://sankalp.bearblog.dev/my-experience-with-claude-code-20-and-h=
+ow-to-get-better-at-using-coding-agents/?utm_source=3Dtldrnewsletter
+[10]=
+ https://garnaudov.com/writings/how-i-think-about-kubernetes/?utm_source=3D=
+tldrnewsletter
+[11] https://www.implications.com/p/12-outlooks-for-the-fu=
+ture-2026?utm_source=3Dtldrnewsletter
+[12] https://links.tldrnewsletter.c=
+om/1r308Z
+[13] https://www.semiconsam.com/p/why-did-the-memory-chicken-ga=
+me-keep?utm_source=3Dtldrnewsletter
+[14] https://miguelcarranza.es/cto-ye=
+ar-8?utm_source=3Dtldrnewsletter
+[15] https://github.com/readme/guides/pu=
+blishing-your-work?utm_source=3Dtldrnewsletter
+[16] https://github.com/pa=
+rcadei/Continuous-Claude-v2?utm_source=3Dtldrnewsletter
+[17] https://link=
+s.tldrnewsletter.com/DVBLiC
+[18] https://maurycyz.com/misc/raw_photo/?utm=
+_source=3Dtldrnewsletter
+[19] https://refer.tldr.tech/95f8de32/
+[20] ht=
+tps://hub.sparklp.co/sub_47fb527d7973/1
+[21] https://advertise.tldr.tech/=
+?utm_source=3Dtldr&utm_medium=3Dnewsletter&utm_campaign=3Dadvertisecta
+[2=
+2] https://jobs.ashbyhq.com/tldr.tech
+[23] https://jobs.ashbyhq.com/tldr.=
+tech/c227b917-a6a4-40ce-8950-d3e165357871
+[24] https://www.linkedin.com/f=
+eed/update/urn:li:activity:7401699691039830016/
+[25] https://twitter.com/=
+tldrdan
+[26] https://twitter.com/SteveFlanders22
+[27] https://tldr.tech=
+/tech/manage?email=3Dmike.mcconigley%40gmail.com
+[28] https://a.tldrnewsl=
+etter.com/unsubscribe?ep=3D1&l=3Dcfa2d55a-b7be-11e8-a3c9-06b79b628af2&lc=3D=
+46c4c580-a670-11f0-ad93-1f8c13b87d10&p=3D0667d53a-e492-11f0-845d-db6078c941=
+99&pt=3Dcampaign&pv=3D4&spa=3D1767006063&t=3D1767007584&s=3D7a871694544b48a=
+9bcec621ac7882c3880a790edb4b2854ef7566a624a80dacb
+--tDMSEXRP
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en"><head>
+=09=09<meta http-equiv=3D"Content-Type" content=3D"text/html charset=3DUTF-=
+8">
+=09=09<meta charset=3D"UTF-8">
+=09=09<meta name=3D"viewport" content=3D"width=3Ddevice-width">
+=09=09<meta name=3D"x-apple-disable-message-reformatting">
+=09=09<title>TLDR</title>
+=09=09<meta name=3D"color-scheme" content=3D"light dark">
+=09=09<meta name=3D"supported-color-schemes" content=3D"light dark">
+=09=09<style type=3D"text/css">
+=09=09=09:root {
+=09=09=09=09color-scheme: light dark; supported-color-schemes: light dark;
+=09=09=09}
+=09=09=09
+=09=09=09*,
+=09=09=09*:after,
+=09=09=09*:before {
+=09=09=09=09-webkit-box-sizing: border-box; -moz-box-sizing: border-box; bo=
+x-sizing: border-box;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+=09=09=09}
+=09=09=09
+=09=09=09html,
+=09=09=09body,
+=09=09=09.document {
+=09=09=09=09width: 100% !important; height: 100% !important; margin: 0; pad=
+ding: 0;
+=09=09=09}
+=09=09=09
+=09=09=09body {
+=09=09=09=09-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: g=
+rayscale; text-rendering: optimizeLegibility;
+=09=09=09}
+=09=09=09
+=09=09=09div[style*=3D"margin: 16px 0"] {
+=09=09=09=09margin: 0 !important;
+=09=09=09}
+=09=09=09
+=09=09=09table,
+=09=09=09td {
+=09=09=09=09mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+=09=09=09}
+=09=09=09
+=09=09=09table {
+=09=09=09=09border-spacing: 0; border-collapse: collapse; table-layout: fix=
+ed; margin: 0 auto;
+=09=09=09}
+=09=09=09
+=09=09=09img {
+=09=09=09=09-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+=09=09=09}
+=09=09=09
+=09=09=09*[x-apple-data-detectors] {
+=09=09=09=09color: inherit !important; text-decoration: none !important;
+=09=09=09}
+=09=09=09
+=09=09=09.x-gmail-data-detectors,
+=09=09=09.x-gmail-data-detectors *,
+=09=09=09.aBn {
+=09=09=09=09border-bottom: 0 !important; cursor: default !important;
+=09=09=09}
+=09=09=09
+=09=09=09.btn {
+=09=09=09=09-webkit-transition: all 200ms ease; transition: all 200ms ease;
+=09=09=09}
+=09=09=09
+=09=09=09.btn:hover {
+=09=09=09=09background-color: #f67575; border-color: #f67575;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+=09=09=09}
+=09=09=09
+=09=09=09@media screen and (max-width: 600px) {
+=09=09=09=09.container {
+=09=09=09=09=09width: 100%; margin: auto;
+=09=09=09=09}
+=09=09=09=09.stack {
+=09=09=09=09=09display: block!important; width: 100%!important; max-width: =
+100%!important;
+=09=09=09=09}
+=09=09=09=09.btn {
+=09=09=09=09=09display: block; width: 100%; text-align: center;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09body,
+=09=09=09p,
+=09=09=09td,
+=09=09=09tr,
+=09=09=09.body,
+=09=09=09table,
+=09=09=09h1,
+=09=09=09h2,
+=09=09=09h3,
+=09=09=09h4,
+=09=09=09h5,
+=09=09=09h6,
+=09=09=09div,
+=09=09=09span {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09body,
+=09=09=09=09p,
+=09=09=09=09td,
+=09=09=09=09tr,
+=09=09=09=09.body,
+=09=09=09=09table,
+=09=09=09=09h1,
+=09=09=09=09h2,
+=09=09=09=09h3,
+=09=09=09=09h4,
+=09=09=09=09h5,
+=09=09=09=09h6,
+=09=09=09=09div,
+=09=09=09=09span {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09a {
+=09=09=09=09color: inherit !important; text-decoration: underline !importan=
+t;
+=09=09=09}
+
+=09=09</style>
+=09=09<!--[if mso | ie]>
+=09=09<style type=3D"text/css">
+=09=09=09a {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09a {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09 </style>
+=09=09=09<![endif]-->
+=09</head>
+=09<body class=3D"">
+
+
+=09=09<div style=3D"display: none; max-height: 0px; overflow: hidden;">The =
+buildout happening right now may be a sign that the AI chip competition may=
+ already be over. Nvidia recently requested 16-Hi HBM deliveries&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;</div>
+
+=09=09<div style=3D"display: none; max-height: 0px; overflow: hidden;">
+=09=09=09<br>
+=09=09</div>
+
+=09=09<table align=3D"center" class=3D"document">
+=09=09=09<tbody>
+=09=09=09=09<tr>
+=09=09=09=09=09<td valign=3D"top">
+
+=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" class=3D"container" width=3D"600">
+=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09<tr class=3D"inner-body">
+=09=09=09=09=09=09=09=09=09<td>
+
+=09=09=09=09=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" width=3D"100%">
+=09=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09<tr class=3D"header">
+=09=09=09=09=09=09=09=09=09=09=09=09=09<td bgcolor=3D"" class=3D"container"=
+>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table width=3D"100%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td class=3D"container">
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table align=3D"cente=
+r" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"m=
+argin-top: 0px;" width=3D"100%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D=
+"padding: 0px;">
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table al=
+ign=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+<td class=3D"container" style=3D"padding: 15px 15px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09<div style=3D"text-align: center;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span style=3D"margin-right: 0px;"><a href=3D"https://tracking.tldrne=
+wsletter.com/CL0/https:%2F%2Ftldr.tech%2Fsignup%3Futm_source=3Dtldr/1/01000=
+19b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000/J6LgttetgUyiyzJu4Gx=
+VLoAMdLXyJ7WnXDbqqPkD6qo=3D437" rel=3D"noopener noreferrer" target=3D"_blan=
+k"><span>Sign Up</span></a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span>|</span><span style=3D"margin-right: 2px; margin-left: 2px;"><a=
+ href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr=
+.tech%2F%3Futm_source=3Dtldr%26utm_medium=3Dnewsletter%26utm_campaign=3Dadv=
+ertisetopnav/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000=
+/cw7mP28_tLusoW-RomtuGJ4OysUcfeWxRw7664ZNBpI=3D437" rel=3D"noopener norefer=
+rer" target=3D"_blank"><span>Advertise</span></a></span><span>|</span><span=
+ style=3D"margin-left: 2px;"><a href=3D"https://tracking.tldrnewsletter.com=
+/CL0/https:%2F%2Fa.tldrnewsletter.com%2Fweb-version%3Fep=3D1%26lc=3D46c4c58=
+0-a670-11f0-ad93-1f8c13b87d10%26p=3D0667d53a-e492-11f0-845d-db6078c94199%26=
+pt=3Dcampaign%26t=3D1767007584%26s=3Dffebc711df7895594ecd19ce1e3711064cc3b2=
+a86ee197b7fab46e085a7424ac/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7a=
+e278ef0-000000/UuDREoErX_I7QyRC3JHqbiumRplVGjzgl5Linw_g84s=3D437"><span>Vie=
+w Online</span></a></span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</span></div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</t=
+r>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbod=
+y>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table al=
+ign=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+<td class=3D"container" style=3D"text-align: center;"><span data-darkreader=
+-inline-color=3D"" style=3D"--darkreader-inline-color:#3db3ff; color: rgb(5=
+1, 175, 255) !important; font-size: 30px;">T</span><span style=3D"font-size=
+: 30px;"><span data-darkreader-inline-color=3D"" style=3D"color: rgb(232, 1=
+92, 96) !important; --darkreader-inline-color:#e8c163; font-size:30px;">L</=
+span><span data-darkreader-inline-color=3D"" style=3D"color: rgb(101, 195, =
+173) !important; --darkreader-inline-color:#6ec7b2; font-size:30px;">D</spa=
+n></span><span data-darkreader-inline-color=3D"" style=3D"--darkreader-inli=
+ne-color:#dd6e6e; color: rgb(220, 107, 107) !important; font-size: 30px;">R=
+</span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</t=
+r>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbod=
+y>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<br>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table al=
+ign=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody=
+></tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table st=
+yle=3D"table-layout: fixed; width:100%;" width=3D"100%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+<td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0;"=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09<div style=3D"text-align: center;">
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<h1><strong>TLDR <span id=3D"date">2025-12-29</span></strong></h1>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</t=
+r>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbod=
+y>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table st=
+yle=3D"table-layout: fixed; width:100%;" width=3D"100%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody=
+></tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<tr bgcolor=3D"">
+=09=09=09=09=09=09=09=09=09=09=09=09=09<td class=3D"container">
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table align=3D"center" bgcolor=
+=3D"" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"padding: 0p=
+x;">
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table align=3D"cente=
+r" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td class=3D=
+"container" style=3D"padding-top: 0px; padding-bottom: 0px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div clas=
+s=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div s=
+tyle=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=93=B1<=
+/span></div></div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table align=3D"cente=
+r" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td class=3D=
+"container" style=3D"padding-top: 0px; padding-bottom: 0px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div clas=
+s=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div s=
+tyle=3D"text-align: center;">
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<h1=
+><strong>Big Tech &amp; Startups</strong></h1>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table style=3D"table=
+-layout: fixed; width: 100%;" width=3D"100%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D=
+"padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign=3D"t=
+op">
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table al=
+ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
+0%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+<td class=3D"container" style=3D"padding: 15px 15px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09<div class=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FDr22ln/1/0100019b69dc018a-3e=
+c15f1a-23ae-4974-833e-e1a7ae278ef0-000000/i-LaKxOHvE_8l5xb9OopiHXuO01MuX0bc=
+pWWgTf9aIk=3D437">
+                                    <span>
+                                        <strong>The Memory Wars: Why the Fu=
+ture Karpathy, Musk, and Jim Fan See Requires 16-Hi HBM (15 minute read)</s=
+trong>
+                                    </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
+ial, Verdana, sans-serif;">
+                                    The infrastructure buildout happening r=
+ight now may be a sign that the AI chip competition may already be over. Nv=
+idia recently requested 16-Hi HBM deliveries from Samsung, SK Hynix, and Mi=
+cron by Q4 2026. This infrastructure layer could make AI inference effectiv=
+ely infinite and nearly free at the margin. The rollout of capability is ar=
+riving faster than our ability to conceptualize what to do with it.
+                                </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</t=
+r>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbod=
+y>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table al=
+ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
+0%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+<td class=3D"container" style=3D"padding: 15px 15px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09<div class=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fossa-ma.github.io%2Fblog%2Fgroq-update%3Futm_source=3Dt=
+ldrnewsletter/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-00000=
+0/CUkZXOqQ6psSIrQONGxfzf0W5wBwZw9EXU5uVkTeE7Q=3D437">
+                                    <span>
+                                        <strong>Nvidia Groq Update: Everyon=
+e Gets Rich, Patent Warfare Begins (7 minute read)</strong>
+                                    </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
+ial, Verdana, sans-serif;">
+                                    All of Groq's VCs, employees, founders,=
+ and the whole cap table will get paid from the recent acquisition by Nvidi=
+a. 85% of the payment will be up front, with the rest coming by the end of =
+2026. Nvidia will likely weaponize the patents it gained from the acquisiti=
+on to create a 'scorched-earth zone' around SRAM-based inference. GroqCloud=
+ has become a shell of its former self with no IP and no technical leadersh=
+ip.
+                                </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</t=
+r>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbod=
+y>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table align=3D"cente=
+r" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td class=3D=
+"container" style=3D"padding-top: 0px; padding-bottom: 0px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div clas=
+s=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div s=
+tyle=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=9A=80<=
+/span></div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table align=3D"cente=
+r" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td class=3D=
+"container" style=3D"padding-top: 0px; padding-bottom: 0px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div clas=
+s=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div s=
+tyle=3D"text-align: center;">
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<h1=
+><strong>Science &amp; Futuristic Technology</strong></h1>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table style=3D"table=
+-layout: fixed; width: 100%;" width=3D"100%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D=
+"padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign=3D"t=
+op">
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table al=
+ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
+0%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+<td class=3D"container" style=3D"padding: 15px 15px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09<div class=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fnintil.com%2Falzheimers-cause%3Futm_source=3Dtldrnewsle=
+tter/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000/lxW7b56=
+GBWzHV9BI-7mNk0GC16sZKAcC9EgrVX0xgMw=3D437">
+                                    <span>
+                                        <strong>Alzheimer's: from causes an=
+d risk factors to models and interventions (14 minute read)</strong>
+                                    </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
+ial, Verdana, sans-serif;">
+                                    Alzheimer's Disease (AD) is caused by m=
+ultiple factors. Each individual factor doesn't necessarily guarantee an AD=
+ diagnosis in every situation, but it increases the odds of it all else bei=
+ng equal. Preventing AD and reversing or stopping the disease are two separ=
+ate areas of research. Attempting to modify risk factors of the disease onc=
+e it has already started is unlikely to lead to a cure. Targeting the under=
+lying dynamics of the disease is a more likely pathway to a treatment.
+                                </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</t=
+r>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbod=
+y>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table al=
+ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
+0%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+<td class=3D"container" style=3D"padding: 15px 15px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09<div class=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgizmodo.com%2Fproposed-space-station-could-be-deployed-=
+in-a-single-launch-2000701443%3Futm_source=3Dtldrnewsletter/1/0100019b69dc0=
+18a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000/SMsB1pXsX5fkJqNyQtWjJzsKomC=
+EkYLOjHFsb_5WEn4=3D437">
+                                    <span>
+                                        <strong>Proposed Space Station Coul=
+d Be Deployed in a Single Launch (2 minute read)</strong>
+                                    </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
+ial, Verdana, sans-serif;">
+                                    Max Space's Thunderbird is designed to =
+host four astronauts in an expandable interior structure that can be reconf=
+igured by the crew to support different activities. It can be used for rese=
+arch as well as orbital manufacturing of pharmaceuticals and other material=
+s. The space station can be launched on a medium-lift vehicle such as the F=
+alcon 9 rocket. The Thunderbird space station is set to launch as early as =
+2029.
+                                </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</t=
+r>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbod=
+y>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table align=3D"cente=
+r" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td class=3D=
+"container" style=3D"padding-top: 0px; padding-bottom: 0px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div clas=
+s=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div s=
+tyle=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=92=BB<=
+/span></div></div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table align=3D"cente=
+r" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td class=3D=
+"container" style=3D"padding-top: 0px; padding-bottom: 0px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div clas=
+s=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div s=
+tyle=3D"text-align: center;">
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<h1=
+><strong>Programming, Design &amp; Data Science</strong></h1>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table style=3D"table=
+-layout: fixed; width: 100%;" width=3D"100%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D=
+"padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign=3D"t=
+op">
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table al=
+ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
+0%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+<td class=3D"container" style=3D"padding: 15px 15px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09<div class=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=3Dtldr%26utm_medium=
+=3Dnewsletter%26utm_campaign=3Dsecondary12292025/1/0100019b69dc018a-3ec15f1=
+a-23ae-4974-833e-e1a7ae278ef0-000000/MwfieW3N1Imr36HFPQjGlgKCQlzFvbigwiz679=
+sosGQ=3D437">
+                                    <span>
+                                        <strong>Reach millions of tech prof=
+essionals at scale (Sponsor)</strong>
+                                    </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
+ial, Verdana, sans-serif;">
+                                    Over 6 million tech professionals read =
+TLDR including developers, product managers, marketers, designers and execu=
+tives. Get in front of your target audience with an ad placement just like =
+this one! <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fad=
+vertise.tldr.tech%2F%3Futm_source=3Dtldr%26utm_medium=3Dnewsletter%26utm_ca=
+mpaign=3Dsecondary12292025/2/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7a=
+e278ef0-000000/82L5XiQEzxolF8LnQYCArDNj_7Ymb7gZwEgsvB816aU=3D437" rel=3D"no=
+opener noreferrer nofollow" target=3D"_blank"><span>Learn more</span></a> a=
+bout running a test campaign.
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</t=
+r>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbod=
+y>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table al=
+ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
+0%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+<td class=3D"container" style=3D"padding: 15px 15px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09<div class=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fsankalp.bearblog.dev%2Fmy-experience-with-claude-code-2=
+0-and-how-to-get-better-at-using-coding-agents%2F%3Futm_source=3Dtldrnewsle=
+tter/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000/mCDnFl0=
+oKRuSPXI_R9UsIaueONjrOJ7Gpd-sjHt80Dk=3D437">
+                                    <span>
+                                        <strong>A Guide to Claude Code 2.0 =
+and Getting Better at Using Coding Agents (55 minute read)</strong>
+                                    </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
+ial, Verdana, sans-serif;">
+                                    Claude Code dominated the CLI coding pr=
+oduct experience this year. This guide shows readers the thought processes =
+and simple things to keep in mind to get the most out of Claude Code. Learn=
+ing how things work in Claude Code directly transfers to other tools, both =
+in terms of personal usage and production-grade engineering. The post will =
+help users keep up with coding agents in general.
+                                </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</t=
+r>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbod=
+y>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table al=
+ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
+0%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+<td class=3D"container" style=3D"padding: 15px 15px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09<div class=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgarnaudov.com%2Fwritings%2Fhow-i-think-about-kubernetes=
+%2F%3Futm_source=3Dtldrnewsletter/1/0100019b69dc018a-3ec15f1a-23ae-4974-833=
+e-e1a7ae278ef0-000000/fhmZL-bFlvHXVByJnBP--_3K5An2QYvJ7a8wH44IqMw=3D437">
+                                    <span>
+                                        <strong>How I think about Kubernete=
+s (6 minute read)</strong>
+                                    </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
+ial, Verdana, sans-serif;">
+                                    Kubernetes is often described as a cont=
+ainer orchestration tool, but that mental model isn't always the most usefu=
+l way to think about what's happening. It is more like a platform where dev=
+elopers declare the desired state of their infrastructure and let the syste=
+m continuously work to match that intent. In that way, Kubernetes is more l=
+ike a runtime for declarative infrastructure with a type system. Thinking t=
+his way results in very practical approaches to operating clusters.
+                                </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</t=
+r>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbod=
+y>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table align=3D"cente=
+r" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td class=3D=
+"container" style=3D"padding-top: 0px; padding-bottom: 0px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div clas=
+s=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div s=
+tyle=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=8E=81<=
+/span></div></div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table align=3D"cente=
+r" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td class=3D=
+"container" style=3D"padding-top: 0px; padding-bottom: 0px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div clas=
+s=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div s=
+tyle=3D"text-align: center;"><strong><h1>Miscellaneous</h1></strong></div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table bgcolor=3D"" s=
+tyle=3D"table-layout: fixed; width: 100%;" width=3D"100%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D=
+"padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign=3D"t=
+op">
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table al=
+ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
+0%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+<td class=3D"container" style=3D"padding: 15px 15px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09<div class=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.implications.com%2Fp%2F12-outlooks-for-the-future-2=
+026%3Futm_source=3Dtldrnewsletter/1/0100019b69dc018a-3ec15f1a-23ae-4974-833=
+e-e1a7ae278ef0-000000/9szFwz-SSrM_IPMFkl_5-kEWjYi25fkJUFMTkDl_mEI=3D437">
+                                    <span>
+                                        <strong>12 Outlooks for the Future:=
+ 2026+ (9 minute read)</strong>
+                                    </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
+ial, Verdana, sans-serif;">
+                                    2026 will hopefully be full of surprise=
+s and developments that give us hope for healthier and more fulfilling work=
+ and lives. The AI hype cycle will die down, allowing the most meaningful i=
+nnovations to become clear. This post takes a look at what we should expect=
+ in the coming year and beyond, and what the implications of that will be.
+                                </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</t=
+r>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbod=
+y>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table al=
+ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
+0%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+<td class=3D"container" style=3D"padding: 15px 15px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09<div class=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2F1r308Z/1/0100019b69dc018a-3e=
+c15f1a-23ae-4974-833e-e1a7ae278ef0-000000/yajkvdIddS0-WibmTrjgUSuM26gcUi55d=
+MDyYKL3YGw=3D437">
+                                    <span>
+                                        <strong>Jevons Paradox for Knowledg=
+e Work (7 minute read)</strong>
+                                    </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
+ial, Verdana, sans-serif;">
+                                    Tech-driven efficiency improvements ten=
+d to lead to massive growth because there are more use cases for the resour=
+ces than previously contemplated. AI is going to lead to a lot more knowled=
+ge work by making it cheaper, as that allows people to take on tasks previo=
+usly unimaginable. The vast majority of AI tokens in the future will be use=
+d on things that we don't even do today. AI will enable work that previousl=
+y wouldn't have been considered, as it would have been too expensive or imp=
+ractical.
+                                </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</t=
+r>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbod=
+y>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table align=3D"cente=
+r" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td class=3D=
+"container" style=3D"padding-top: 0px; padding-bottom: 0px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div clas=
+s=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div s=
+tyle=3D"text-align: center;"><span style=3D"font-size: 36px;">=E2=9A=A1</sp=
+an></div></div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table align=3D"cente=
+r" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td class=3D=
+"container" style=3D"padding-top: 0px; padding-bottom: 0px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div clas=
+s=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div s=
+tyle=3D"text-align: center;">
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<h1=
+><strong>Quick Links</strong></h1>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table bgcolor=3D"" s=
+tyle=3D"table-layout: fixed; width: 100%;" width=3D"100%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D=
+"padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign=3D"t=
+op">
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table al=
+ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
+0%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+<td class=3D"container" style=3D"padding: 15px 15px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09<div class=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.semiconsam.com%2Fp%2Fwhy-did-the-memory-chicken-gam=
+e-keep%3Futm_source=3Dtldrnewsletter/1/0100019b69dc018a-3ec15f1a-23ae-4974-=
+833e-e1a7ae278ef0-000000/dc0_y-zraSyboZIV-Aov1jko0_ZSMfmSmMPTGg7aQJU=3D437"=
+>
+                                    <span>
+                                        <strong>Why did the memory chicken =
+game keep repeating=E2=80=94and who ultimately survived? (22 minute read)</=
+strong>
+                                    </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
+ial, Verdana, sans-serif;">
+                                    Both an escape from the commoditization=
+ of memory and the 'foundry-ization' of memory will happen within the next =
+two years.
+                                </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</t=
+r>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbod=
+y>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table al=
+ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
+0%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+<td class=3D"container" style=3D"padding: 15px 15px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09<div class=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fmiguelcarranza.es%2Fcto-year-8%3Futm_source=3Dtldrnewsl=
+etter/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000/FBgi2S=
+OFLEEHjEjACUDMSdmd6DhaJvf_r_CPhS8WZmM=3D437">
+                                    <span>
+                                        <strong>My role as a founder CTO: Y=
+ear Eight (16 minute read)</strong>
+                                    </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
+ial, Verdana, sans-serif;">
+                                    Miguel Carranza is the founder of Reven=
+ueCat, a service that helps developers grow and manage in-app purchases.
+                                </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</t=
+r>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbod=
+y>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table al=
+ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
+0%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+<td class=3D"container" style=3D"padding: 15px 15px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09<div class=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgithub.com%2Freadme%2Fguides%2Fpublishing-your-work%3Fu=
+tm_source=3Dtldrnewsletter/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7a=
+e278ef0-000000/m4oq8siaBeGjV4LO5_Ni3BFL03659iXv_vpPubyIzUA=3D437">
+                                    <span>
+                                        <strong>Publishing your work increa=
+ses your luck (11 minute read)</strong>
+                                    </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
+ial, Verdana, sans-serif;">
+                                    You increase your luck by making yourse=
+lf more visible to the world.
+                                </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</t=
+r>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbod=
+y>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table al=
+ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
+0%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+<td class=3D"container" style=3D"padding: 15px 15px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09<div class=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgithub.com%2Fparcadei%2FContinuous-Claude-v2%3Futm_sour=
+ce=3Dtldrnewsletter/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0=
+-000000/wHYDKUHFHkU1HpHahGcc7v439IxQ8HZtRswTeSyYSyc=3D437">
+                                    <span>
+                                        <strong>Continuous Claude (GitHub R=
+epo)</strong>
+                                    </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
+ial, Verdana, sans-serif;">
+                                    Continuous Claude is a framework that s=
+aves state to a ledger, wipes context, and resumes fresh.
+                                </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</t=
+r>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbod=
+y>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table al=
+ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
+0%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+<td class=3D"container" style=3D"padding: 15px 15px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09<div class=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FDVBLiC/1/0100019b69dc018a-3e=
+c15f1a-23ae-4974-833e-e1a7ae278ef0-000000/u0_qgqUtef0W1mB_r0bViSe0wJotlbjbZ=
+FXrXxGHkzs=3D437">
+                                    <span>
+                                        <strong>The Hidden Cost of Making W=
+ork Cheap (3 minute read)</strong>
+                                    </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
+ial, Verdana, sans-serif;">
+                                    Trust becomes harder to earn when work =
+becomes cheap.
+                                </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</t=
+r>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbod=
+y>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table al=
+ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
+0%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+<td class=3D"container" style=3D"padding: 15px 15px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09<div class=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fmaurycyz.com%2Fmisc%2Fraw_photo%2F%3Futm_source=3Dtldrn=
+ewsletter/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000/Lj=
+Ca9Z0jyDzXiZY_A3EfyQhYeYq5zSfKL_EnkZhNVJA=3D437">
+                                    <span>
+                                        <strong>What an unprocessed photo l=
+ooks like (4 minute read)</strong>
+                                    </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
+ial, Verdana, sans-serif;">
+                                    A look at what camera sensors see and w=
+hat photo processing actually does.
+                                </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</t=
+r>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbod=
+y>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table align=3D"cente=
+r" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D=
+"left" style=3D"word-break: break-word; vertical-align: top; padding: 5px 1=
+0px;">
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=
+=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.=
+6; font-weight: bold;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Love T=
+LDR? Tell your friends and get rewards!
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td class=3D=
+"container" style=3D"padding: 0px 10px 15px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div clas=
+s=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Share =
+your referral link below with friends to get free TLDR swag!
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D=
+"left" style=3D"padding: 10px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div clas=
+s=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a hre=
+f=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.tech%2F=
+95f8de32%2F/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000/=
+0bpxg0Egk8cGahH2LJWYzV4y4fBkh4dfsBYHye9rorY=3D437" style=3D"color: #464ba4;=
+ text-decoration: underline;">https://refer.tldr.tech/95f8de32/</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr></tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D=
+"left" style=3D"padding:5px 10px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=
+=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.co%2Fsu=
+b_47fb527d7973%2F1/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-=
+000000/S6J6NnFpy7KPNTD3uShJaEtW4S8ht9nDs7t4EMiShnk=3D437" style=3D"font-siz=
+e: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block;  text-d=
+ecoration: underline;"><span style=3D"mso-text-raise:13pt; text-decoration:=
+ underline;">Track your referrals here.</span></a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table align=3D"cente=
+r" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D=
+"left" style=3D"word-break: break-word; vertical-align: top; padding: 5px 1=
+0px;">
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=
+=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.=
+6; font-weight: bold;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Want t=
+o advertise in TLDR? =F0=9F=93=B0
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div clas=
+s=3D"text-block" style=3D"margin-top: 10px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09If you=
+r company is interested in reaching an audience of tech executives, decisio=
+n-makers and engineers, you may want to <a href=3D"https://tracking.tldrnew=
+sletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=3Dtldr%26ut=
+m_medium=3Dnewsletter%26utm_campaign=3Dadvertisecta/1/0100019b69dc018a-3ec1=
+5f1a-23ae-4974-833e-e1a7ae278ef0-000000/drSG-n15Zo5pssGDlMLSkgZ2vdn2teCKZl0=
+Rm3sRWDg=3D437"><strong><span>advertise with us</span></strong></a>.
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<br>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<!-- New =
+"Want to work at TLDR?" section -->
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=
+=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.=
+6; font-weight: bold;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Want t=
+o work at TLDR? =F0=9F=92=BC
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div clas=
+s=3D"text-block" style=3D"margin-top: 10px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a hre=
+f=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq.com%2=
+Ftldr.tech/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000/7=
+IbUZOZP6CwWxtrRg8SDlBdmutLbAPl9UbD7rpcVYWk=3D437" rel=3D"noopener noreferre=
+r" style=3D"color: #0000EE; text-decoration: underline;" target=3D"_blank">=
+<strong>Apply here</strong></a>,
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a hre=
+f=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq.com%2=
+Ftldr.tech%2Fc227b917-a6a4-40ce-8950-d3e165357871/1/0100019b69dc018a-3ec15f=
+1a-23ae-4974-833e-e1a7ae278ef0-000000/Tayw5StH_OCLHtTp5VQKaessoU98lCwXnQ4Ed=
+yXb_FA=3D437" rel=3D"noopener noreferrer" style=3D"color: #0000EE; text-dec=
+oration: underline;" target=3D"_blank"><strong>create your own role</strong=
+></a> or send a friend's resume to <a href=3D"mailto:jobs@tldr.tech" style=
+=3D"color: #0000EE; text-decoration: underline;">jobs@tldr.tech</a> and get=
+ $1k if we hire them! TLDR is one of <a href=3D"https://tracking.tldrnewsle=
+tter.com/CL0/https:%2F%2Fwww.linkedin.com%2Ffeed%2Fupdate%2Furn:li:activity=
+:7401699691039830016%2F/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae27=
+8ef0-000000/4NIas45EFiyCu9KKfrJx1nEyyXhMiigcb5y2HIrZZ8g=3D437" rel=3D"noope=
+ner noreferrer" style=3D"color: #0000EE; text-decoration: underline;" targe=
+t=3D"_blank"><strong>Inc.'s Best Bootstrapped businesses</strong></a> of 20=
+25.
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<br>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div clas=
+s=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09If you=
+ have any comments or feedback, just respond to this email!
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<br> T=
+hanks for reading,
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a hre=
+f=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftwitter.com%2Ftldr=
+dan/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000/NTy8dEEH=
+Qa3k02vJkosJn7ntItkMlO7uZXBVNWXGg50=3D437"><span>Dan Ni</span></a> &amp; <a=
+ href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftwitter.com%2F=
+SteveFlanders22/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000=
+000/2Jj2PXaE6iUUAgx9mXvEMClI1ByIy2ihXMJyQVEodIQ=3D437"><span>Stephen Flande=
+rs</span></a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table align=3D"cente=
+r" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td class=3D=
+"container" style=3D"padding: 15px 15px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<div clas=
+s=3D"text-block" id=3D"testing-id">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a hre=
+f=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Ftech%2=
+Fmanage%3Femail=3Dmike.mcconigley%2540gmail.com/1/0100019b69dc018a-3ec15f1a=
+-23ae-4974-833e-e1a7ae278ef0-000000/1_zuD6ZbJ7VMjT438gVKhdBedR2Zl5dRKHkRlf4=
+DxzU=3D437">Manage your subscriptions</a> to our other newsletters on tech,=
+ startups, and programming. Or if TLDR isn't for you, please <a href=3D"htt=
+ps://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Funs=
+ubscribe%3Fep=3D1%26l=3Dcfa2d55a-b7be-11e8-a3c9-06b79b628af2%26lc=3D46c4c58=
+0-a670-11f0-ad93-1f8c13b87d10%26p=3D0667d53a-e492-11f0-845d-db6078c94199%26=
+pt=3Dcampaign%26pv=3D4%26spa=3D1767006063%26t=3D1767007584%26s=3D7a87169454=
+4b48a9bcec621ac7882c3880a790edb4b2854ef7566a624a80dacb/1/0100019b69dc018a-3=
+ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000/xQbB6P63jxUGGS_qZvPShfD8LlzcEhbx=
+YseIFnhbuxI=3D437">unsubscribe</a>.
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09</table>
+=09=09=09=09=09</td>
+=09=09=09=09</tr>
+=09=09=09</tbody>
+=09=09</table>
+
+
+
+=09
+
+<img alt=3D"" src=3D"http://tracking.tldrnewsletter.com/CI0/0100019b69dc018=
+a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000/ztw3D-fce908oW9YpkC1BS383CXw9=
+_R5XM4o7Ji6YrQ=3D437" style=3D"display: none; width: 1px; height: 1px;">
+</body></html>
+--tDMSEXRP--

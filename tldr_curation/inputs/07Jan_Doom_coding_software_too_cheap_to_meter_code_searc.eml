@@ -1,0 +1,1450 @@
+Delivered-To: mike.mcconigley@gmail.com
+Received: by 2002:a05:6802:4e01:b0:617:3adb:9ab9 with SMTP id 1csp158969oco;
+        Wed, 7 Jan 2026 04:17:04 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IGHmnSHZBajz5ygpnKCMirReR600Ea3wwpBIKiA1jwyBVOCFjIVi3sY2vdcJetOLl0Df1r/
+X-Received: by 2002:a05:622a:4a:b0:4e8:abbc:a7d7 with SMTP id d75a77b69052e-4ffb4b07f84mr25798411cf.84.1767788223685;
+        Wed, 07 Jan 2026 04:17:03 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1767788223; cv=none;
+        d=google.com; s=arc-20240605;
+        b=Qsbve7M/2Eqi4twPVx8+o/3Qk+JGGXUeHay7aLbAjITGjf0p5vZMSlaHFcvAYs750+
+         qP/uCEG58DlaaI90NIdDHrxBmmzZlWfvoTu9ntjlNd3tGyACF+3BoHXh4tDOOzVsSzLj
+         7o1jSfyhLfRSWbhmFLigm7QlFefOtPNR/7ohrnIHgTZGNvPfbaXqISzXn/7AOpBLzGYD
+         3x9QkdMwRk9A6hRHSH+x48vuKO6KX/bTKsvTo5u9shsZCEAEPE8DzhfA3+4k85ZaqNyd
+         YYxoS8uHHK+yNNbt5bgKsTt5sQsHFdEAFYQkxAfJYwLVKcwiqmDf3BHDPzu5pXsnGHwV
+         GCgg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:date:mime-version:list-unsubscribe-post
+         :list-unsubscribe:subject:to:from:dkim-signature:dkim-signature;
+        bh=h4aespx0xcuw97vQLiIyEBBr/R9gBgiNXLWlGI83gwU=;
+        fh=tUTYCbTOUI69DxYKXGXRz08XnPP7jEKRU6E5rS0DFR4=;
+        b=I5vPVFzjU5LjU7gIvtZ15P4lVMRWKt79yojs6yVxlK3pZ4d4HjCUur+szYFQYPeE7x
+         TokW6BaqXo29GUOx6AhGHq8+eoK4DJBg0jANtoDmak+SS6WaDXuo099O4gESQQHYgl6o
+         Yrf0eivpcuTGnFmSWI/TJraS+qYvdHfG4tRE3Gc3FiXXJLl6PGRGGh9syojdk2g+BKia
+         V9i8REvT+I4XyWYO3AmYhlKnzLnGEJZNq7YT+HdWlEUzt+cdmXLNc1fi5kwSl1ms1vxu
+         33U1aTe77RisyKOhawZpXMJH78V/0p2kIZscNKEKJ7z2nF2vxeD14684C+kj/bgvprZa
+         Kjzw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=eQEITx90;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=Cr8kGQHN;
+       spf=pass (google.com: domain of 0100019b98639b13-256c99bd-6bbb-4333-933c-e78f480ff31f-000000@dailyupdate.tldrnewsletter.com designates 54.240.77.27 as permitted sender) smtp.mailfrom=0100019b98639b13-256c99bd-6bbb-4333-933c-e78f480ff31f-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+Return-Path: <0100019b98639b13-256c99bd-6bbb-4333-933c-e78f480ff31f-000000@dailyupdate.tldrnewsletter.com>
+Received: from a77-27.smtp-out.amazonses.com (a77-27.smtp-out.amazonses.com. [54.240.77.27])
+        by mx.google.com with ESMTPS id d75a77b69052e-4ffa8d49f27si50173751cf.67.2026.01.07.04.17.03
+        for <mike.mcconigley@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Wed, 07 Jan 2026 04:17:03 -0800 (PST)
+Received-SPF: pass (google.com: domain of 0100019b98639b13-256c99bd-6bbb-4333-933c-e78f480ff31f-000000@dailyupdate.tldrnewsletter.com designates 54.240.77.27 as permitted sender) client-ip=54.240.77.27;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=eQEITx90;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=Cr8kGQHN;
+       spf=pass (google.com: domain of 0100019b98639b13-256c99bd-6bbb-4333-933c-e78f480ff31f-000000@dailyupdate.tldrnewsletter.com designates 54.240.77.27 as permitted sender) smtp.mailfrom=0100019b98639b13-256c99bd-6bbb-4333-933c-e78f480ff31f-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ygiuxamnxevikrd5dtfwanslhs6b24mt; d=tldrnewsletter.com;
+	t=1767788223;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type;
+	bh=jUkTxMdKoHp5YQVoZhKTwu1duIkGf95R2aF9WQrCWSw=;
+	b=eQEITx90FXbXBRbau/K04m+pQlXQ27L5hTnBRH7PufCJEZBg63ttljf1Fx44zAVx
+	tFRxUSq+BZ27Hz+xQx1Q/rlUA8LVw8hSNjfJnPaxwZNRRZA1zY3N2rGn1w2cCZAcEtB
+	25PWAYAeJ/cv4RJPZBJVAUAFZpYIEQkcHgkpvWpY=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1767788223;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type:Feedback-ID;
+	bh=jUkTxMdKoHp5YQVoZhKTwu1duIkGf95R2aF9WQrCWSw=;
+	b=Cr8kGQHN9KTN6xD0ymO67aPIfLLTMuiYbNjdO8AinlSGa1AKAv0hFrte7e5nMJ1D
+	YHwIt/nVWDJ9dgtNc4dld5U+YCJYXQb8z79ydV4Tj5X40cQwM/wGCFWVlFOXXp6z1GX
+	KpnkVNwMNLzZlGd14PtmwdLJg6v9nFk8b6tZBBeE=
+From: TLDR Dev <dan@tldrnewsletter.com>
+To: mike.mcconigley@gmail.com
+Subject: Doom coding =?utf-8?Q?=F0=9F=93=B1=2C?= software too cheap to meter
+ =?utf-8?Q?=F0=9F=92=B2=2C?= code search for AI agents
+ =?utf-8?Q?=F0=9F=94=8D?=
+X-Entity-Ref-Id: 868c05ca-c1e0-4d4b-aaa6-cf533d6de0bd
+X-EmailOctopus-Parent-Id: 8c1b449a-ebb4-11f0-8789-2dc3ac741a83
+X-EmailOctopus-Parent-Type-Id: campaign
+X-EmailOctopus-List-Id: e8d201ca-3e93-11ed-9a32-0241b9615763
+X-EmailOctopus-List-Contact-Id: 6b0d84e0-a670-11f0-8b4a-c5e0a2ae1fe1
+X-EmailOctopus-Started-Preparing-At: 2026-01-07T12:01:41+00:00
+X-EmailOctopus-Sent-At: 2026-01-07T12:17:03+00:00
+X-EmailOctopus-Team-Id: 66987ef2-4f4c-11e9-a3c9-06b79b628af2
+X-EmailOctopus-Version: 4
+List-Unsubscribe: <https://a.tldrnewsletter.com/unsubscribe?ep=1&l=e8d201ca-3e93-11ed-9a32-0241b9615763&lc=6b0d84e0-a670-11f0-8b4a-c5e0a2ae1fe1&p=8c1b449a-ebb4-11f0-8789-2dc3ac741a83&pt=campaign&pv=4&spa=1767787301&t=1767788223&s=c05b5d95bb99d6885f3574f536680537de43bd5298f690869f9b75af27795f81>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-EmailOctopus-Ses-Configuration-Set-Name: emailoctopus-a9f7b12f74f3c968d9408897fb35539c
+MIME-Version: 1.0
+Date: Wed, 7 Jan 2026 12:17:03 +0000
+Message-ID: <0100019b98639b13-256c99bd-6bbb-4333-933c-e78f480ff31f-000000@email.amazonses.com>
+Content-Type: multipart/alternative; boundary=aRa74ZzN
+Feedback-ID: ::1.us-east-1.Dj5/7DYmgk+n1sSGGXSQSLIthSjNQ0MGtV5Dro1Tr8U=:AmazonSES
+X-SES-Outgoing: 2026.01.07-54.240.77.27
+
+--aRa74ZzN
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+AI doesn=E2=80=99t make decisions for you, but it makes exploring ideas muc=
+h
+cheaper. AI can generate options, prototypes, and directions much
+fas=
+ter
+now=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0
+
+
+ Sign Up [1] |Advertise [2]|View Online [3]=20
+=
+
+=09=09TLDR=20
+
+=09=09TOGETHER WITH [Ring] [4]
+
+=C2=A0TLDR DEV 2026=
+-01-07
+
+ THE RING APPSTORE IS HERE! REQUEST EARLY ACCESS TO CREATE APPS=
+
+AVAILABLE TO MILLIONS OF RING CUSTOMERS (SPONSOR) [4]=20
+
+ Ring just a=
+nnounced the Ring Appstore, opening the door for
+developers to build Al-p=
+owered apps using Ring camera data [4]and
+reach millions of users.
+
+=
+=E2=9C=85 Al-assisted tools
+
+=E2=9C=85 Self-serve sandbox environments=
+
+
+=E2=9C=85 Streamlined certification process
+
+=E2=9C=85 Built for =
+rapid iteration and big distribution.
+
+Third-party developers are alrea=
+dy building in beta.
+
+Now it's your turn.
+
+=F0=9F=91=89 Request ear=
+ly access to the developer portal [4] to invent with
+Ring and explore mon=
+etization opportunities for your application.
+
+=F0=9F=A7=91=E2=80=8D=
+=F0=9F=92=BB=20
+
+ARTICLES & TUTORIALS
+
+ BUILDING A TOAST COMPONENT (1=
+1 MINUTE READ) [5]=20
+
+ Sonner was a library released in 2023 that quickl=
+y became the default
+toast component for shadcn/ui, despite a crowded mar=
+ket. Its success
+was due to its well-implemented stacking animations achi=
+eved with
+interruptible CSS transitions, and intuitive functionalities li=
+ke
+momentum-based swipe-to-dismiss and expandable toast displays. The
+d=
+eveloper experience was also unique, with interactive documentation,
+a si=
+mple, hook-free API using the Observer Pattern, and a promise API
+for man=
+aging toast states.=20
+
+ REPRESENTING HIERARCHIES (3 MINUTE READ) [6]=20
+=
+
+ There are two common methods for representing hierarchical data
+struc=
+tures, like HTML elements or file systems. The "obvious way" uses
+an arra=
+y of pointers to child nodes, which allows for convenient
+indexed access =
+but introduces dynamic memory allocations and potential
+cache misses. The=
+ "allocation-free way" uses first-child and
+next-sibling pointers, removi=
+ng the need for dynamic memory management
+for child relationships and imp=
+roving cache efficiency.=20
+
+=F0=9F=A7=A0=20
+
+OPINIONS & ADVICE
+
+ A=
+I MAKES EXPLORATION CHEAP, NOT DECISIONS EASY (6 MINUTE READ) [7]=20
+
+ AI=
+ doesn't make decisions for you, but it makes exploring ideas much
+cheape=
+r. While AI can generate options, prototypes, and directions
+much faster =
+now, the hard part is still using judgment to pick what
+actually works we=
+ll, both engineering-wise and product-wise.=20
+
+ VIBE CODING WITHOUT SYST=
+EM DESIGN IS A TRAP (18 MINUTE READ) [8]=20
+
+ AI tools primarily optimize=
+ for immediate functionality rather than
+proper, evolvable system design.=
+ This often results in "accidental
+architecture," which has hardcoded val=
+ues, little-to-no testing, and a
+wide range of edge cases, making product=
+s fragile and expensive to
+maintain or change over time. To counteract th=
+is, devs must apply
+systems thinking and product management discipline be=
+fore using AI by
+consciously designing for future changes and dependencie=
+s.=20
+
+ WHY DEVS NEED DEVOPS (13 MINUTE READ) [9]=20
+
+ The software eng=
+ineering industry is at risk of knowledge
+deterioration, where the founda=
+tional thinking behind successful
+practices like DevOps is lost. The core=
+ of DevOps includes optimizing
+the entire flow of value, establishing sho=
+rt feedback loops to
+identify issues early, and ensuring continuous learn=
+ing across the
+team. Internalizing these principles grants developers pre=
+dictive
+power.=20
+
+=F0=9F=9A=80=20
+
+LAUNCHES & TOOLS
+
+ MANTIC (GI=
+THUB REPO) [10]=20
+
+ Mantic is a structural code search engine for AI age=
+nts. It provides
+sub-500ms file ranking across massive codebases without =
+relying on
+embeddings or external dependencies. Mantic infers intent from=
+ file
+structure and metadata, reducing token usage and running entirely=
+
+locally.=20
+
+ PI CODING AGENT (GITHUB REPO) [11]=20
+
+ The Pi Coding =
+Agent is a terminal-based coding agent for headless
+coding tasks that run=
+s on macOS, Linux, and Windows and supports
+multiple model providers with=
+ mid-session model switching. It has
+slash-command workflows, session sav=
+ing + branching, context
+compaction, bash/tool execution, and customizati=
+on via settings. It
+also has SDK/RPC modes for programmatic use.=20
+
+=
+=F0=9F=8E=81=20
+
+MISCELLANEOUS
+
+ DOOM CODING (4 MINUTE READ) [12]=20
+=
+
+ This is a guide on how to code on a smartphone from anywhere by
+remot=
+ely accessing a home computer. The method relies on a 24/7
+running comput=
+er, Tailscale for secure networking, Termius as a mobile
+terminal, and Cl=
+aude Code for AI assistance. The setup involves
+enabling SSH, installing =
+Tailscale and Claude Code on the computer,
+then installing Tailscale and =
+Termius on the phone to connect via the
+computer's MagicDNS.=20
+
+ A FIE=
+LD GUIDE TO SANDBOXES FOR AI (36 MINUTE READ) [13]=20
+
+ AI agents often n=
+eed to execute untrusted code, so they use
+sandboxes. Effective sandboxin=
+g requires consideration of three
+distinct aspects: the isolation boundar=
+y, access policy, and execution
+lifecycle. There are various types of san=
+dboxes, like containers
+(sharing the host kernel, insufficient for hostil=
+e code), gVisor
+(userspace kernel interposition), microVMs (guest kernel =
+via hardware
+virtualization), and runtime sandboxes (no direct syscall ac=
+cess).=20
+
+ HACKING DLOPEN TO STATICALLY LINK PIPEWIRE (11 MINUTE READ) [=
+14]=20
+
+ Tuple is a pair programming app that wanted to create a fully st=
+atic
+Linux executable, but had a big challenge with PipeWire, which it us=
+es
+for screen capture. PipeWire's core functionality relies on `dlopen`=
+
+for internal plugin systems (modules and Spa plugins), making
+traditio=
+nal static linking impossible. It solved this by developing a
+"fake dynam=
+ic linker" using Zig, which reimplements `dlopen`, `dlsym`,
+and `stat` to=
+ statically link PipeWire's plugins into an internal
+symbol table.=20
+
+=
+=E2=9A=A1=20
+
+QUICK LINKS
+
+ SOFTWARE TOO CHEAP TO METER (7 MINUTE REA=
+D) [15]=20
+
+ Thanks to AI coding agents, software creation is becoming so=
+ easy and
+affordable that personalized, bespoke applications will increas=
+ingly
+replace one-size-fits-all solutions.=20
+
+ WHY MOST WEBSITES DON'T=
+ NEED COOKIE CONSENT BANNERS (7 MINUTE READ)
+[16]=20
+
+ Most websites un=
+necessarily display cookie consent banners due to
+their overreliance on i=
+nvasive third-party tracking tools.=20
+
+ PRISM.TOOLS (WEBSITE) [17]=20
+=
+
+ A suite of free, online dev tools or tasks like formatting, security,=
+
+design, content generation, and data transformation.=20
+
+ CODE IS A LI=
+ABILITY (NOT AN ASSET) (22 MINUTE READ) [18]=20
+
+ Code, especially when g=
+enerated by AI, is a liability rather than an
+asset, as code requires mai=
+ntainability to last long-term.=20
+
+Love TLDR? Tell your friends and get =
+rewards!
+
+ Share your referral link below with friends to get free TLDR=
+ swag!=20
+
+ https://refer.tldr.tech/19465406/3 [19]=20
+
+=09=09 Track yo=
+ur referrals here. [20]=20
+
+Want to advertise in TLDR? =F0=9F=93=B0
+
+=
+ If your company is interested in reaching an audience of web
+developers =
+and engineering decision makers, you may want to ADVERTISE
+WITH US [21]. =
+
+
+Want to work at TLDR? =F0=9F=92=BC
+
+ APPLY HERE [22], CREATE YOUR=
+ OWN ROLE [23] or send a friend's resume
+to jobs@tldr.tech and get $1k if=
+ we hire them! TLDR is one of INC.'S
+BEST BOOTSTRAPPED BUSINESSES [24] of=
+ 2025.=20
+
+ If you have any comments or feedback, just respond to this em=
+ail!=20
+
+Thanks for reading,=20
+Priyam Mohanty, Jenny Xu [25] & Ceora For=
+d=20
+
+ Manage your subscriptions [26] to our other newsletters on tech,=
+
+startups, and programming. Or if TLDR Dev isn't for you, please
+unsubs=
+cribe [27].=20
+
+=20
+
+Links:
+------
+[1] https://tldr.tech/dev?utm_so=
+urce=3Dtldrdev
+[2] https://advertise.tldr.tech/?utm_source=3Dtldrdev&utm_=
+medium=3Dnewsletter&utm_campaign=3Dadvertisetopnav
+[3] https://a.tldrnews=
+letter.com/web-version?ep=3D1&lc=3D6b0d84e0-a670-11f0-8b4a-c5e0a2ae1fe1&p=
+=3D8c1b449a-ebb4-11f0-8789-2dc3ac741a83&pt=3Dcampaign&t=3D1767788223&s=3Df9=
+3021f2adab7c08483d74660dc96ac4b09b160086185ea4f7a4393f0208432f
+[4] https:=
+//developer.amazon.com/ring?sc_category=3DPAI&sc_channel=3D3P&sc_publisher=
+=3DRD-TLDR&sc_campaign=3DCES
+[5] https://emilkowal.ski/ui/building-a-toas=
+t-component?utm_source=3Dtldrdev
+[6] https://gpfault.net/posts/first-chil=
+d-next-sibling.html?utm_source=3Dtldrdev
+[7] https://www.nucleate.dev/blo=
+g/ai-makes-exploration-cheap-not-decisions-easy?utm_source=3Dtldrdev
+[8] =
+https://www.focusedchaos.co/p/vibe-coding-without-system-design-is-a-trap?u=
+tm_source=3Dtldrdev
+[9] https://ravestar.dev/blog/why-devs-need-devops/?u=
+tm_source=3Dtldrdev
+[10] https://github.com/marcoaapfortes/Mantic.sh?utm_=
+source=3Dtldrdev
+[11] https://github.com/badlogic/pi-mono/tree/main/packa=
+ges/coding-agent?utm_source=3Dtldrdev
+[12] https://github.com/rberg27/doo=
+m-coding?utm_source=3Dtldrdev
+[13] https://www.luiscardoso.dev/blog/sandb=
+oxes-for-ai?utm_source=3Dtldrdev
+[14] https://tuple.app/blog/hacking-dlop=
+en-to-statically-link-pipewire?utm_source=3Dtldrdev
+[15] https://secondth=
+oughts.ai/p/software-too-cheap-to-meter?utm_source=3Dtldrdev
+[16] https:/=
+/block81.com/blog/why-most-websites-dont-actually-need-cookie-consent-banne=
+rs?utm_source=3Dtldrdev
+[17] https://blgardner.github.io/prism.tools/?utm=
+_source=3Dtldrdev
+[18] https://pluralistic.net/2026/01/06/1000x-liability=
+/#graceful-failure-modes?utm_source=3Dtldrdev
+[19] https://refer.tldr.tec=
+h/19465406/3
+[20] https://hub.sparklp.co/sub_aaa8e06944fa/3
+[21] https:=
+//advertise.tldr.tech/?utm_source=3Dtldrdev&utm_medium=3Dnewsletter&utm_cam=
+paign=3Dadvertisecta
+[22] https://jobs.ashbyhq.com/tldr.tech
+[23] https=
+://jobs.ashbyhq.com/tldr.tech/c227b917-a6a4-40ce-8950-d3e165357871
+[24] h=
+ttps://www.linkedin.com/feed/update/urn:li:activity:7401699691039830016/
+=
+[25] https://www.linkedin.com/in/xu-jenny/
+[26] https://tldr.tech/dev/man=
+age?email=3Dmike.mcconigley%40gmail.com
+[27] https://a.tldrnewsletter.com=
+/unsubscribe?ep=3D1&l=3De8d201ca-3e93-11ed-9a32-0241b9615763&lc=3D6b0d84e0-=
+a670-11f0-8b4a-c5e0a2ae1fe1&p=3D8c1b449a-ebb4-11f0-8789-2dc3ac741a83&pt=3Dc=
+ampaign&pv=3D4&spa=3D1767787301&t=3D1767788223&s=3Dc05b5d95bb99d6885f3574f5=
+36680537de43bd5298f690869f9b75af27795f81
+--aRa74ZzN
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html charset=3DUTF-8"><meta charset=3D"UTF-8"><meta name=3D"v=
+iewport" content=3D"width=3Ddevice-width"><meta name=3D"x-apple-disable-mes=
+sage-reformatting"><title>TLDR Dev</title><meta name=3D"color-scheme" conte=
+nt=3D"light dark"><meta name=3D"supported-color-schemes" content=3D"light d=
+ark"><style type=3D"text/css">
+=09=09=09:root {
+=09=09=09=09color-scheme: light dark; supported-color-schemes: light dark;
+=09=09=09}
+=09=09=09
+=09=09=09*,
+=09=09=09*:after,
+=09=09=09*:before {
+=09=09=09=09-webkit-box-sizing: border-box; -moz-box-sizing: border-box; bo=
+x-sizing: border-box;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+=09=09=09}
+=09=09=09
+=09=09=09html,
+=09=09=09body,
+=09=09=09.document {
+=09=09=09=09width: 100% !important; height: 100% !important; margin: 0; pad=
+ding: 0;
+=09=09=09}
+=09=09=09
+=09=09=09body {
+=09=09=09=09-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: g=
+rayscale; text-rendering: optimizeLegibility;
+=09=09=09}
+=09=09=09
+=09=09=09div[style*=3D"margin: 16px 0"] {
+=09=09=09=09margin: 0 !important;
+=09=09=09}
+=09=09=09
+=09=09=09table,
+=09=09=09td {
+=09=09=09=09mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+=09=09=09}
+=09=09=09
+=09=09=09table {
+=09=09=09=09border-spacing: 0; border-collapse: collapse; table-layout: fix=
+ed; margin: 0 auto;
+=09=09=09}
+=09=09=09
+=09=09=09img {
+=09=09=09=09-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+=09=09=09}
+=09=09=09
+=09=09=09*[x-apple-data-detectors] {
+=09=09=09=09color: inherit !important; text-decoration: none !important;
+=09=09=09}
+=09=09=09
+=09=09=09.x-gmail-data-detectors,
+=09=09=09.x-gmail-data-detectors *,
+=09=09=09.aBn {
+=09=09=09=09border-bottom: 0 !important; cursor: default !important;
+=09=09=09}
+=09=09=09
+=09=09=09.btn {
+=09=09=09=09-webkit-transition: all 200ms ease; transition: all 200ms ease;
+=09=09=09}
+=09=09=09
+=09=09=09.btn:hover {
+=09=09=09=09background-color: #f67575; border-color: #f67575;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+=09=09=09}
+=09=09=09
+=09=09=09@media screen and (max-width: 600px) {
+=09=09=09=09.container {
+=09=09=09=09=09width: 100%; margin: auto;
+=09=09=09=09}
+=09=09=09=09.stack {
+=09=09=09=09=09display: block!important; width: 100%!important; max-width: =
+100%!important;
+=09=09=09=09}
+=09=09=09=09.btn {
+=09=09=09=09=09display: block; width: 100%; text-align: center;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09body,
+=09=09=09p,
+=09=09=09td,
+=09=09=09tr,
+=09=09=09.body,
+=09=09=09table,
+=09=09=09h1,
+=09=09=09h2,
+=09=09=09h3,
+=09=09=09h4,
+=09=09=09h5,
+=09=09=09h6,
+=09=09=09div,
+=09=09=09span {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09body,
+=09=09=09=09p,
+=09=09=09=09td,
+=09=09=09=09tr,
+=09=09=09=09.body,
+=09=09=09=09table,
+=09=09=09=09h1,
+=09=09=09=09h2,
+=09=09=09=09h3,
+=09=09=09=09h4,
+=09=09=09=09h5,
+=09=09=09=09h6,
+=09=09=09=09div,
+=09=09=09=09span {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09a {
+=09=09=09=09color: inherit !important; text-decoration: underline !importan=
+t;
+=09=09=09}
+
+=09=09</style><!--[if mso | ie]>
+=09=09<style type=3D"text/css">
+=09=09=09a {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09a {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09 </style>
+=09=09=09<![endif]--></head><body class=3D"">
+
+
+
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">AI doesn=
+=E2=80=99t make decisions for you, but it makes exploring ideas much cheape=
+r. AI can generate options, prototypes, and directions much faster now&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;</div>
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align=3D"center" class=3D"document"><tbody><tr><td valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"container" width=3D"600"><tbody><tr class=3D"inner-body"><td>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr class=3D"header"><td bgcolor=3D"" class=3D"containe=
+r">
+
+<table width=3D"100%"><tbody><tr><td class=3D"container">
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"margin-top: 0px;" width=3D"100%"><tbody><tr><td style=
+=3D"padding: 0px;">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div style=3D"text-align: center;">
+<span style=3D"margin-right: 0px;"><a href=3D"https://tracking.tldrnewslett=
+er.com/CL0/https:%2F%2Ftldr.tech%2Fdev%3Futm_source=3Dtldrdev/1/0100019b986=
+39b13-256c99bd-6bbb-4333-933c-e78f480ff31f-000000/5XWEE1SaMoDzprujL9wXEgaLj=
+HyPCcWv8llFYD090tM=3D439" rel=3D"noopener noreferrer" target=3D"_blank"><sp=
+an>Sign Up</span></a>
+|<span style=3D"margin-right: 2px; margin-left: 2px;"><a href=3D"https://tr=
+acking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_sour=
+ce=3Dtldrdev%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertisetopnav/1/0=
+100019b98639b13-256c99bd-6bbb-4333-933c-e78f480ff31f-000000/d7LsrPBKR3g6g3U=
+rvPZmjbq9w1gXqpRFHIwVDAdM7T0=3D439" rel=3D"noopener noreferrer" target=3D"_=
+blank"><span>Advertise</span></a></span>|<span style=3D"margin-left: 2px;">=
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsle=
+tter.com%2Fweb-version%3Fep=3D1%26lc=3D6b0d84e0-a670-11f0-8b4a-c5e0a2ae1fe1=
+%26p=3D8c1b449a-ebb4-11f0-8789-2dc3ac741a83%26pt=3Dcampaign%26t=3D176778822=
+3%26s=3Df93021f2adab7c08483d74660dc96ac4b09b160086185ea4f7a4393f0208432f/1/=
+0100019b98639b13-256c99bd-6bbb-4333-933c-e78f480ff31f-000000/Ns2juUrSoItbYp=
+YFkza5fBOR2xzYgd5IThHH2Ff5WDY=3D439"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"text-=
+align: center;"><span data-darkreader-inline-color=3D"" style=3D"--darkread=
+er-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30=
+px;">T</span><span style=3D"font-size: 30px;"><span data-darkreader-inline-=
+color=3D"" style=3D"color: rgb(232, 192, 96) !important; --darkreader-inlin=
+e-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-colo=
+r=3D"" style=3D"color: rgb(101, 195, 173) !important; --darkreader-inline-c=
+olor:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-=
+color=3D"" style=3D"--darkreader-inline-color:#dd6e6e; color: rgb(220, 107,=
+ 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr id=3D"together-with"><td align=3D"cent=
+er" height=3D"20" style=3D"vertical-align:middle !important;" valign=3D"mid=
+dle" width=3D"100%"><strong style=3D"vertical-align:middle !important; heig=
+ht: 100%;">Together With </strong>
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fdeveloper.am=
+azon.com%2Fring%3Fsc_category=3DPAI%26sc_channel=3D3P%26sc_publisher=3DRD-T=
+LDR%26sc_campaign=3DCES/1/0100019b98639b13-256c99bd-6bbb-4333-933c-e78f480f=
+f31f-000000/s2BzF_C8uMJCX_QyoLN9LQgC1xgV81Aw85nkZNM-STk=3D439"><img src=3D"=
+https://images.tldr.tech/ring.png" valign=3D"middle" style=3D"vertical-alig=
+n: middle !important; height: 100%;" alt=3D"Ring"></a></td></tr></tbody></t=
+able>
+
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody><tr=
+><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0;=
+">
+<div style=3D"text-align: center;">
+
+<h1><strong>&nbsp;TLDR Dev <span id=3D"date">2026-01-07</span></strong></h1=
+>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody><tr=
+ id=3D"sponsy-copy"><td class=3D"container" style=3D"padding: 15px 15px;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fdeveloper.amazon.com%2Fring%3Fsc_category=3DPAI%26sc_ch=
+annel=3D3P%26sc_publisher=3DRD-TLDR%26sc_campaign=3DCES/2/0100019b98639b13-=
+256c99bd-6bbb-4333-933c-e78f480ff31f-000000/JY39i9IZrHbmsT0GMvgklvHtH9AHWXH=
+MvCv_yd7joFU=3D439">
+                                    <span>
+                                        <strong>The Ring Appstore is here! =
+Request early access to create apps available to millions of Ring customers=
+ (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Ring just announced the Ring Appstore, =
+opening the door for developers to <a href=3D"https://tracking.tldrnewslett=
+er.com/CL0/https:%2F%2Fdeveloper.amazon.com%2Fring%3Fsc_category=3DPAI%26sc=
+_channel=3D3P%26sc_publisher=3DRD-TLDR%26sc_campaign=3DCES/3/0100019b98639b=
+13-256c99bd-6bbb-4333-933c-e78f480ff31f-000000/ivixJa0DH9nU-qmo_1BxFni5jBFL=
+_9auTGicsUXDU0s=3D439" rel=3D"noopener noreferrer nofollow" target=3D"_blan=
+k"><span>build Al-powered apps using Ring camera data </span></a>and reach =
+millions of users.
+
+<p></p>
+
+<p>=E2=9C=85 Al-assisted tools</p>
+
+<p>=E2=9C=85 Self-serve sandbox environments</p>
+
+<p>=E2=9C=85 Streamlined certification process</p>
+
+<p>=E2=9C=85 Built for rapid iteration and big distribution.</p>
+
+<p>Third-party developers are already building in beta.</p>
+
+<p>Now it's your turn.</p>
+
+<p>=F0=9F=91=89 <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2=
+F%2Fdeveloper.amazon.com%2Fring%3Fsc_category=3DPAI%26sc_channel=3D3P%26sc_=
+publisher=3DRD-TLDR%26sc_campaign=3DCES/4/0100019b98639b13-256c99bd-6bbb-43=
+33-933c-e78f480ff31f-000000/FA7enfeLULBEkEp4_NQjZzSonYkRUNJQTtua7IXpx5I=3D4=
+39" rel=3D"noopener noreferrer nofollow" target=3D"_blank"><span>Request ea=
+rly access to the developer portal</span></a> to invent with Ring and explo=
+re monetization opportunities for your application.
+
+
+</p>
+</span></span></div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=3D""><td class=3D"container">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td style=3D"padding: 0px;">
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=A7=91=E2=80=8D=F0=9F=92=BB</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Articles &amp; Tutorials</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Femilkowal.ski%2Fui%2Fbuilding-a-toast-component%3Futm_s=
+ource=3Dtldrdev/1/0100019b98639b13-256c99bd-6bbb-4333-933c-e78f480ff31f-000=
+000/jMKISYKv8TXkXUVCtDRmgOQdzIYzo29ZzA3gdPtT_4w=3D439">
+                                    <span>
+                                        <strong>Building a toast component =
+(11 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Sonner was a library released in 2023 t=
+hat quickly became the default toast component for shadcn/ui, despite a cro=
+wded market. Its success was due to its well-implemented stacking animation=
+s achieved with interruptible CSS transitions, and intuitive functionalitie=
+s like momentum-based swipe-to-dismiss and expandable toast displays. The d=
+eveloper experience was also unique, with interactive documentation, a simp=
+le, hook-free API using the Observer Pattern, and a promise API for managin=
+g toast states.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgpfault.net%2Fposts%2Ffirst-child-next-sibling.html%3Fu=
+tm_source=3Dtldrdev/1/0100019b98639b13-256c99bd-6bbb-4333-933c-e78f480ff31f=
+-000000/2rAz7oOpndiaKnA-Kjau4lZMs4Ays7Ds97usF9CnM9s=3D439">
+                                    <span>
+                                        <strong>Representing Hierarchies (3=
+ minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    There are two common methods for repres=
+enting hierarchical data structures, like HTML elements or file systems. Th=
+e "obvious way" uses an array of pointers to child nodes, which allows for =
+convenient indexed access but introduces dynamic memory allocations and pot=
+ential cache misses. The "allocation-free way" uses first-child and next-si=
+bling pointers, removing the need for dynamic memory management for child r=
+elationships and improving cache efficiency.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=A7=A0</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Opinions &amp; Advice</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.nucleate.dev%2Fblog%2Fai-makes-exploration-cheap-no=
+t-decisions-easy%3Futm_source=3Dtldrdev/1/0100019b98639b13-256c99bd-6bbb-43=
+33-933c-e78f480ff31f-000000/HX-ac0qqw2XJu8P4aJoCjxVU8uEJgfdsbgRV_604dQk=3D4=
+39">
+                                    <span>
+                                        <strong>AI Makes Exploration Cheap,=
+ Not Decisions Easy (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    AI doesn't make decisions for you, but =
+it makes exploring ideas much cheaper. While AI can generate options, proto=
+types, and directions much faster now, the hard part is still using judgmen=
+t to pick what actually works well, both engineering-wise and product-wise.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.focusedchaos.co%2Fp%2Fvibe-coding-without-system-de=
+sign-is-a-trap%3Futm_source=3Dtldrdev/1/0100019b98639b13-256c99bd-6bbb-4333=
+-933c-e78f480ff31f-000000/T9bkD9BJumDwsUhZfKQfd2zfTjZIbGNOT1PyrrQKr8s=3D439=
+">
+                                    <span>
+                                        <strong>Vibe Coding Without System =
+Design is a Trap (18 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    AI tools primarily optimize for immedia=
+te functionality rather than proper, evolvable system design. This often re=
+sults in "accidental architecture," which has hardcoded values, little-to-n=
+o testing, and a wide range of edge cases, making products fragile and expe=
+nsive to maintain or change over time. To counteract this, devs must apply =
+systems thinking and product management discipline before using AI by consc=
+iously designing for future changes and dependencies.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fravestar.dev%2Fblog%2Fwhy-devs-need-devops%2F%3Futm_sou=
+rce=3Dtldrdev/1/0100019b98639b13-256c99bd-6bbb-4333-933c-e78f480ff31f-00000=
+0/5JdY6ltdfOYkvD8hQ7jrts8F_23IPhCnCV4B0Timlm4=3D439">
+                                    <span>
+                                        <strong>Why devs need DevOps (13 mi=
+nute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    The software engineering industry is at=
+ risk of knowledge deterioration, where the foundational thinking behind su=
+ccessful practices like DevOps is lost. The core of DevOps includes optimiz=
+ing the entire flow of value, establishing short feedback loops to identify=
+ issues early, and ensuring continuous learning across the team. Internaliz=
+ing these principles grants developers predictive power.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=9A=80</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Launches &amp; Tools</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgithub.com%2Fmarcoaapfortes%2FMantic.sh%3Futm_source=3D=
+tldrdev/1/0100019b98639b13-256c99bd-6bbb-4333-933c-e78f480ff31f-000000/FA7z=
+My7bDFn1dyaY4kTkfC1awwlQI7pScBNQHXahfY4=3D439">
+                                    <span>
+                                        <strong>Mantic (GitHub Repo)</stron=
+g>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Mantic is a structural code search engi=
+ne for AI agents. It provides sub-500ms file ranking across massive codebas=
+es without relying on embeddings or external dependencies. Mantic infers in=
+tent from file structure and metadata, reducing token usage and running ent=
+irely locally.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgithub.com%2Fbadlogic%2Fpi-mono%2Ftree%2Fmain%2Fpackage=
+s%2Fcoding-agent%3Futm_source=3Dtldrdev/1/0100019b98639b13-256c99bd-6bbb-43=
+33-933c-e78f480ff31f-000000/gXXC1bja9OLepoHjc3x_oU15NrjpQBSw4ZTDq4AG8Q8=3D4=
+39">
+                                    <span>
+                                        <strong>Pi Coding Agent (GitHub Rep=
+o)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    The Pi Coding Agent is a terminal-based=
+ coding agent for headless coding tasks that runs on macOS, Linux, and Wind=
+ows and supports multiple model providers with mid-session model switching.=
+ It has slash-command workflows, session saving + branching, context compac=
+tion, bash/tool execution, and customization via settings. It also has SDK/=
+RPC modes for programmatic use.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=8E=81</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><strong><h1>Miscellaneous</h1></strong><=
+/div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgithub.com%2Frberg27%2Fdoom-coding%3Futm_source=3Dtldrd=
+ev/1/0100019b98639b13-256c99bd-6bbb-4333-933c-e78f480ff31f-000000/8auFyzR6N=
+Ucmw3oLteTYPw3UtKVewT5mkgtypnMutIc=3D439">
+                                    <span>
+                                        <strong>Doom Coding (4 minute read)=
+</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    This is a guide on how to code on a sma=
+rtphone from anywhere by remotely accessing a home computer. The method rel=
+ies on a 24/7 running computer, Tailscale for secure networking, Termius as=
+ a mobile terminal, and Claude Code for AI assistance. The setup involves e=
+nabling SSH, installing Tailscale and Claude Code on the computer, then ins=
+talling Tailscale and Termius on the phone to connect via the computer's Ma=
+gicDNS.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.luiscardoso.dev%2Fblog%2Fsandboxes-for-ai%3Futm_sou=
+rce=3Dtldrdev/1/0100019b98639b13-256c99bd-6bbb-4333-933c-e78f480ff31f-00000=
+0/dWCRj90ov0NIVbC5pwQhUJTdW893oUFjqvwmUnBY_iM=3D439">
+                                    <span>
+                                        <strong>A field guide to sandboxes =
+for AI (36 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    AI agents often need to execute untrust=
+ed code, so they use sandboxes. Effective sandboxing requires consideration=
+ of three distinct aspects: the isolation boundary, access policy, and exec=
+ution lifecycle. There are various types of sandboxes, like containers (sha=
+ring the host kernel, insufficient for hostile code), gVisor (userspace ker=
+nel interposition), microVMs (guest kernel via hardware virtualization), an=
+d runtime sandboxes (no direct syscall access).
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Ftuple.app%2Fblog%2Fhacking-dlopen-to-statically-link-pi=
+pewire%3Futm_source=3Dtldrdev/1/0100019b98639b13-256c99bd-6bbb-4333-933c-e7=
+8f480ff31f-000000/V2FI_7vVvRw1CR_ATCgLehamJYMfaXZCWs9HxO-CQf4=3D439">
+                                    <span>
+                                        <strong>Hacking dlopen to staticall=
+y link Pipewire (11 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Tuple is a pair programming app that wa=
+nted to create a fully static Linux executable, but had a big challenge wit=
+h PipeWire, which it uses for screen capture. PipeWire's core functionality=
+ relies on `dlopen` for internal plugin systems (modules and Spa plugins), =
+making traditional static linking impossible. It solved this by developing =
+a "fake dynamic linker" using Zig, which reimplements `dlopen`, `dlsym`, an=
+d `stat` to statically link PipeWire's plugins into an internal symbol tabl=
+e.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=E2=9A=
+=A1</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fsecondthoughts.ai%2Fp%2Fsoftware-too-cheap-to-meter%3Fu=
+tm_source=3Dtldrdev/1/0100019b98639b13-256c99bd-6bbb-4333-933c-e78f480ff31f=
+-000000/LlUrUI-k3ajMYP8vKU7_iVXlyoE2O2PuNit3t-B5D4g=3D439">
+                                    <span>
+                                        <strong>Software Too Cheap to Meter=
+ (7 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Thanks to AI coding agents, software cr=
+eation is becoming so easy and affordable that personalized, bespoke applic=
+ations will increasingly replace one-size-fits-all solutions.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fblock81.com%2Fblog%2Fwhy-most-websites-dont-actually-ne=
+ed-cookie-consent-banners%3Futm_source=3Dtldrdev/1/0100019b98639b13-256c99b=
+d-6bbb-4333-933c-e78f480ff31f-000000/fFNH7TXfP55_HTuHjLlg8bViQ3vrkoFf4znNMG=
+YR-mY=3D439">
+                                    <span>
+                                        <strong>Why Most Websites Don't Nee=
+d Cookie Consent Banners (7 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Most websites unnecessarily display coo=
+kie consent banners due to their overreliance on invasive third-party track=
+ing tools.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fblgardner.github.io%2Fprism.tools%2F%3Futm_source=3Dtld=
+rdev/1/0100019b98639b13-256c99bd-6bbb-4333-933c-e78f480ff31f-000000/4fc1yjR=
+X3bZCWoFJijGDjoPTKDboDBRD7TnCHPdb2Qk=3D439">
+                                    <span>
+                                        <strong>Prism.Tools (Website)</stro=
+ng>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    A suite of free, online dev tools or ta=
+sks like formatting, security, design, content generation, and data transfo=
+rmation.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fpluralistic.net%2F2026%2F01%2F06%2F1000x-liability%2F%2=
+3graceful-failure-modes%3Futm_source=3Dtldrdev/1/0100019b98639b13-256c99bd-=
+6bbb-4333-933c-e78f480ff31f-000000/MBbC6VFJXcxV1SoaTx79IMdm2l7w-jESph4mR7mX=
+Ofk=3D439">
+                                    <span>
+                                        <strong>Code is a liability (not an=
+ asset) (22 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Code, especially when generated by AI, =
+is a liability rather than an asset, as code requires maintainability to la=
+st long-term.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"word-break=
+: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class=3D"container" style=3D"padding: 0px 10px 15px;">
+<div class=3D"text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align=3D"left" style=3D"padding: 10px;">
+<div class=3D"text-block">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.t=
+ech%2F19465406%2F3/1/0100019b98639b13-256c99bd-6bbb-4333-933c-e78f480ff31f-=
+000000/ZiHbTxZk6w7zeEEOEsNxJk3dhBR9PTLIEbNDuTUVw_I=3D439" style=3D"color: #=
+464ba4; text-decoration: underline;">https://refer.tldr.tech/19465406/3</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align=3D"left" style=3D"padding:5px 10px;">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.=
+co%2Fsub_aaa8e06944fa%2F3/1/0100019b98639b13-256c99bd-6bbb-4333-933c-e78f48=
+0ff31f-000000/t0nb8JqQDSyQlfNnYvokM0cfDd_8n_kjzG60PobMkIY=3D439" style=3D"f=
+ont-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block; =
+ text-decoration: underline;"><span style=3D"mso-text-raise:13pt; text-deco=
+ration: underline;">Track your referrals here.</span></a>
+</td></tr></tbody></table>
+
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"word-break=
+: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to advertise in TLDR? =F0=9F=93=B0
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+If your company is interested in reaching an audience of web developers and=
+ engineering decision makers, you may want to <a href=3D"https://tracking.t=
+ldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=3Dtld=
+rdev%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertisecta/1/0100019b9863=
+9b13-256c99bd-6bbb-4333-933c-e78f480ff31f-000000/kn7d4NS10f-mQ-Hw1mSxjmYJJH=
+0zs4H1hogt3cxAeu0=3D439"><strong><span>advertise with us</span></strong></a=
+>.
+</div>
+<br>
+
+<!-- New "Want to work at TLDR?" section -->
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to work at TLDR? =F0=9F=92=BC
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech/1/0100019b98639b13-256c99bd-6bbb-4333-933c-e78f480ff31f-00=
+0000/oTxLqSP_N-8uaIWtsA1mmFjPorX18XyWr1TJLhBsyTM=3D439" rel=3D"noopener nor=
+eferrer" style=3D"color: #0000EE; text-decoration: underline;" target=3D"_b=
+lank"><strong>Apply here</strong></a>,
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech%2Fc227b917-a6a4-40ce-8950-d3e165357871/1/0100019b98639b13-=
+256c99bd-6bbb-4333-933c-e78f480ff31f-000000/DLL7Tw_06Pp_LfyWaAAUsj2Xf6ZQPkX=
+4u3E3mxKZmsU=3D439" rel=3D"noopener noreferrer" style=3D"color: #0000EE; te=
+xt-decoration: underline;" target=3D"_blank"><strong>create your own role</=
+strong></a> or send a friend's resume to <a href=3D"mailto:jobs@tldr.tech" =
+style=3D"color: #0000EE; text-decoration: underline;">jobs@tldr.tech</a> an=
+d get $1k if we hire them! TLDR is one of <a href=3D"https://tracking.tldrn=
+ewsletter.com/CL0/https:%2F%2Fwww.linkedin.com%2Ffeed%2Fupdate%2Furn:li:act=
+ivity:7401699691039830016%2F/1/0100019b98639b13-256c99bd-6bbb-4333-933c-e78=
+f480ff31f-000000/kETIF9EUoNUbIEqhbbxPW_V-bKMPLwHwkbC2Z7EgmcE=3D439" rel=3D"=
+noopener noreferrer" style=3D"color: #0000EE; text-decoration: underline;" =
+target=3D"_blank"><strong>Inc.'s Best Bootstrapped businesses</strong></a> =
+of 2025.
+</div>
+<br>
+
+<div class=3D"text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<span>Priyam Mohanty</span>, <a href=3D"https://tracking.tldrnewsletter.com=
+/CL0/https:%2F%2Fwww.linkedin.com%2Fin%2Fxu-jenny%2F/1/0100019b98639b13-256=
+c99bd-6bbb-4333-933c-e78f480ff31f-000000/peJEXPDCnakGrf0j7KWqseX8-7VJCpTBmK=
+nw1V1PlLU=3D439"><span>Jenny Xu</span></a> &amp; <span>Ceora Ford</span>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div class=3D"text-block" id=3D"testing-id">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2F=
+dev%2Fmanage%3Femail=3Dmike.mcconigley%2540gmail.com/1/0100019b98639b13-256=
+c99bd-6bbb-4333-933c-e78f480ff31f-000000/71RNLFp5d_87yDTdxKMXZVpk_xMawAoiyx=
+IWWIH4MwI=3D439">Manage your subscriptions</a> to our other newsletters on =
+tech, startups, and programming. Or if TLDR Dev isn't for you, please <a hr=
+ef=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.=
+com%2Funsubscribe%3Fep=3D1%26l=3De8d201ca-3e93-11ed-9a32-0241b9615763%26lc=
+=3D6b0d84e0-a670-11f0-8b4a-c5e0a2ae1fe1%26p=3D8c1b449a-ebb4-11f0-8789-2dc3a=
+c741a83%26pt=3Dcampaign%26pv=3D4%26spa=3D1767787301%26t=3D1767788223%26s=3D=
+c05b5d95bb99d6885f3574f536680537de43bd5298f690869f9b75af27795f81/1/0100019b=
+98639b13-256c99bd-6bbb-4333-933c-e78f480ff31f-000000/yRUFtmqbEyJy1WCYtqoGgt=
+5O4LJy1oyCSBu71dqYc9c=3D439">unsubscribe</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+
+
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+
+<img alt=3D"" src=3D"http://tracking.tldrnewsletter.com/CI0/0100019b98639b1=
+3-256c99bd-6bbb-4333-933c-e78f480ff31f-000000/BJWvEHmozdA-28yMspX2TNuG3Qoi8=
+YwHmh5POG19OnQ=3D439" style=3D"display: none; width: 1px; height: 1px;">
+</body></html>
+--aRa74ZzN--
