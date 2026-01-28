@@ -1,0 +1,1454 @@
+Delivered-To: mike.mcconigley@gmail.com
+Received: by 2002:a05:6802:4e01:b0:617:3adb:9ab9 with SMTP id 1csp3719426oco;
+        Tue, 13 Jan 2026 04:23:44 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IGnd+PheN7KdJsMkccYdqe9njErdvse0hP8G+Xkw/q73mPF1C2FRkjMqdbhwTifUWjCK3fa
+X-Received: by 2002:ac8:5d0c:0:b0:4f3:5346:5d54 with SMTP id d75a77b69052e-4ffb4a3ead1mr263980431cf.50.1768307023790;
+        Tue, 13 Jan 2026 04:23:43 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1768307023; cv=none;
+        d=google.com; s=arc-20240605;
+        b=goYidpRbXhSYXggeBlbkq8IQDnpsPweTs6+JW+UldALHX639fDiIN23j7O3OuYETY8
+         B+UoFWS8VGx89o1vSEN0GSEsaLvdm6VC/h5mm+DCCoIOfC3mVvjsBkGsISdveoQITLMA
+         LB/HHmUnqjRkRpr6FcPlqVyg04S7W9x2LMLg8yCPefIltaN55McpFBUH7ZK3f66pf0SK
+         Obo4V/Ss/yS+v7Tcn1wwWpJwwBd8SCVF8ag2x80GaSEuPc1CDdQBw0nI//6XT3VobCvC
+         stAGBQacWPD9Pk+cYl8KRCG9bHzO96idpBdEx/PNXhH3gJ87eL6iLHQplh5GL7x31Y3N
+         4SOg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:date:mime-version:list-unsubscribe-post
+         :list-unsubscribe:subject:to:from:dkim-signature:dkim-signature;
+        bh=sUdAOU0OsYjMM967iINtN6xtvADcZeyMhU5yejnph0A=;
+        fh=tUTYCbTOUI69DxYKXGXRz08XnPP7jEKRU6E5rS0DFR4=;
+        b=kH/scuoax5ertY7NB8cjIYPVtMYakPqcweyl9SVeVb2u9xowLoob9ivSnZR7DhWNTE
+         JPvcRkBU1OYGJ3DZ0MxIiVf52U/OiknTtTV5XElDjm1tIhvu1lcjY3k0kjmexibpvoI0
+         Kevg3L8j6vxEHFy2Guum1INUfSxDmhNAGsOcumzmUSGSdqkBS/fsk6XPxluVpmbLApmH
+         C0ORQI6GLUGZJ4RX1PECOCLWhFLpUX9ByR3W5sckeWB8pFXRhDRdZ/vbJzQ1H8TfRT3h
+         Rg2hGVmd6TFRxYXJlS938FLDIotNsORCM8HOTGbzMBD0ckmxoAGw8i3hF56YA5dH//Pi
+         AzRQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=d+2+4xdc;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=P6xQuQHk;
+       spf=pass (google.com: domain of 0100019bb74fddcc-85afbd28-e9d4-4777-bb39-811f9ddf7195-000000@dailyupdate.tldrnewsletter.com designates 54.240.123.112 as permitted sender) smtp.mailfrom=0100019bb74fddcc-85afbd28-e9d4-4777-bb39-811f9ddf7195-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+Return-Path: <0100019bb74fddcc-85afbd28-e9d4-4777-bb39-811f9ddf7195-000000@dailyupdate.tldrnewsletter.com>
+Received: from a123-112.smtp-out.amazonses.com (a123-112.smtp-out.amazonses.com. [54.240.123.112])
+        by mx.google.com with ESMTPS id d75a77b69052e-4ffbd72f54bsi169159771cf.434.2026.01.13.04.23.43
+        for <mike.mcconigley@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Tue, 13 Jan 2026 04:23:43 -0800 (PST)
+Received-SPF: pass (google.com: domain of 0100019bb74fddcc-85afbd28-e9d4-4777-bb39-811f9ddf7195-000000@dailyupdate.tldrnewsletter.com designates 54.240.123.112 as permitted sender) client-ip=54.240.123.112;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=d+2+4xdc;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=P6xQuQHk;
+       spf=pass (google.com: domain of 0100019bb74fddcc-85afbd28-e9d4-4777-bb39-811f9ddf7195-000000@dailyupdate.tldrnewsletter.com designates 54.240.123.112 as permitted sender) smtp.mailfrom=0100019bb74fddcc-85afbd28-e9d4-4777-bb39-811f9ddf7195-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ygiuxamnxevikrd5dtfwanslhs6b24mt; d=tldrnewsletter.com;
+	t=1768307023;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type;
+	bh=eopf5a8ypKa+KoKCOGJ9hX1IJOMzOrip5Wj1xEcHalY=;
+	b=d+2+4xdcTdZGNx6TmV6v4xqBqkWUQThoEyWnsK85fw7bGtLIYugtFSjx5rLPAjwW
+	It6sMrapfzOuagqO+qfKam4cll2jx9qB2bIB2Lp0Wcwq8lyubvxZ6NlsKlj9amW0tS2
+	K1UUQ1zU8J1RWnnbBPePNNG5rUgHNtH787ZMtwtA=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1768307023;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type:Feedback-ID;
+	bh=eopf5a8ypKa+KoKCOGJ9hX1IJOMzOrip5Wj1xEcHalY=;
+	b=P6xQuQHkqzErxKTMBjJx09rcXP4m+MfqoAH+tVyexbGKQ8IcFWKvz+VR7Izn6/cu
+	Vz/aGxdUfOYMAIvwuNl8cWiNGjma4xCknFby1BLFrotOdNlZ2QjgcRxdc00EJGYCKfT
+	UOiE8k/7obCy8oak6so+QENokODQjZK81aJkvCoE=
+From: TLDR Dev <dan@tldrnewsletter.com>
+To: mike.mcconigley@gmail.com
+Subject: Stealing React components =?utf-8?Q?=F0=9F=8E=A8=2C?= Manufacturing
+ as Code =?utf-8?Q?=F0=9F=94=A8=2C?= give agents filesystems
+ =?utf-8?Q?=F0=9F=93=81?=
+X-Entity-Ref-Id: 751ab2b5-667e-4730-89c4-e38305860a82
+X-EmailOctopus-Parent-Id: 4bcd0dfc-f063-11f0-b48e-4b957e92d9fa
+X-EmailOctopus-Parent-Type-Id: campaign
+X-EmailOctopus-List-Id: e8d201ca-3e93-11ed-9a32-0241b9615763
+X-EmailOctopus-List-Contact-Id: 6b0d84e0-a670-11f0-8b4a-c5e0a2ae1fe1
+X-EmailOctopus-Started-Preparing-At: 2026-01-13T12:01:13+00:00
+X-EmailOctopus-Sent-At: 2026-01-13T12:23:43+00:00
+X-EmailOctopus-Team-Id: 66987ef2-4f4c-11e9-a3c9-06b79b628af2
+X-EmailOctopus-Version: 4
+List-Unsubscribe: <https://a.tldrnewsletter.com/unsubscribe?ep=1&l=e8d201ca-3e93-11ed-9a32-0241b9615763&lc=6b0d84e0-a670-11f0-8b4a-c5e0a2ae1fe1&p=4bcd0dfc-f063-11f0-b48e-4b957e92d9fa&pt=campaign&pv=4&spa=1768305673&t=1768307023&s=335b1f3f32172ca9e9ed64e4c90e5b58a268085822534d08ae277cd10f55d020>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-EmailOctopus-Ses-Configuration-Set-Name: emailoctopus-a9f7b12f74f3c968d9408897fb35539c
+MIME-Version: 1.0
+Date: Tue, 13 Jan 2026 12:23:43 +0000
+Message-ID: <0100019bb74fddcc-85afbd28-e9d4-4777-bb39-811f9ddf7195-000000@email.amazonses.com>
+Content-Type: multipart/alternative; boundary=UlofB9uB
+Feedback-ID: ::1.us-east-1.Dj5/7DYmgk+n1sSGGXSQSLIthSjNQ0MGtV5Dro1Tr8U=:AmazonSES
+X-SES-Outgoing: 2026.01.13-54.240.123.112
+
+--UlofB9uB
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+It=E2=80=99s possible to "steal" or reconstruct any React component from a=
+
+production website, even without access to its source
+code=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0
+
+
+ Sign Up [1] |Advertise [2]|View Online [3]=20
+
+=09=09TLDR =
+
+
+=09=09TOGETHER WITH [Docusign] [4]
+
+=C2=A0TLDR DEV 2026-01-13
+=
+
+ DOCUSIGN FOR DEVELOPERS: APIS, SDKS, AND EXTENSIBILITY BEYOND
+ESIGNAT=
+URE (SPONSOR) [4]=20
+
+ Many developers know Docusign as "the signature th=
+ing." But under the
+hood, there's a complete platform [4] for building in=
+telligent
+agreement workflows.
+
+The Docusign Developer Center [4] giv=
+es access to 400+ API endpoints
+across eSignature, workflow automation (M=
+aestro), AI-extracted
+agreement data (Navigator), web forms, and more. SD=
+Ks are available in
+C#, Java, Node.js, PHP, Python, and Ruby.
+
+The pl=
+atform also supports extensions =E2=80=93 custom apps that plug
+directly =
+into Docusign to verify data, sync with external systems, or
+connect to c=
+loud storage.
+
+Adding contract management to a SaaS product? Automating=
+ document
+flows for an internal tool? Whatever you're building, the APIs =
+and
+tooling are already there.
+
+Get a free developer account =
+=E2=86=92 [4]
+
+=F0=9F=A7=91=E2=80=8D=F0=9F=92=BB=20
+
+ARTICLES & TUTOR=
+IALS
+
+ HOW TO STEAL ANY REACT COMPONENT (6 MINUTE READ) [5]=20
+
+ It's=
+ possible to "steal" or reconstruct any React component from a
+production=
+ website, even without access to its source code. React
+Fiber is an inter=
+nal tree structure in the browser that exposes which
+components create sp=
+ecific DOM elements and what props they receive.
+You can generate a compo=
+nent's code by collecting multiple examples of
+a component's props and it=
+s resulting HTML and feeding it into an LLM.
+
+
+ HOW TO BUILD AGENTS W=
+ITH FILESYSTEMS AND BASH (3 MINUTE READ) [6]=20
+
+ A simple, effective arc=
+hitecture for AI agents is a standard
+filesystem and Bash tools. Since LL=
+Ms have a native understanding of
+code and Unix commands, agents can easi=
+ly navigate and retrieve
+information from data structured as files, much =
+like exploring a
+codebase. This approach overcomes the limitations of pro=
+mpt stuffing
+and imprecise vector search by offering natural data hierarc=
+hies,
+exact retrieval, and minimal context loading.=20
+
+ REPLACING LLM =
+DATE MATH WITH DETERMINISTIC SCRIPTS TO IMPROVE
+CALENDAR ACCURACY (3 MINU=
+TE READ) [7]=20
+
+ LLMs like Claude frequently fail at date math, causing =
+calendar
+errors in tools like gcalcli. Offloading calculations to determi=
+nistic
+scripts ensures accuracy. Developers can eliminate hallucinations =
+and
+create reliable, repeatable AI workflows by updating CLAUDE.md
+inst=
+ructions to execute code instead of manual reasoning.=20
+
+=F0=9F=A7=A0 =
+
+
+OPINIONS & ADVICE
+
+ ANTHROPIC MADE A BIG MISTAKE (6 MINUTE READ) =
+[8]=20
+
+ Anthropic recently made a business blunder by closing a loophole=
+ that
+allowed customers to use their cheaper subscription models with
+p=
+opular third-party coding agents like OpenCode. This move alienated
+many =
+paying customers who felt they were unjustly restricted from
+using a serv=
+ice they already purchased. OpenAI capitalized on this by
+officially supp=
+orting its own subscriptions within these same
+third-party agents.=20
+
+=
+ THE GREAT FILTER (OR WHY HIGH PERFORMANCE STILL ELUDES MOST DEV
+TEAMS, E=
+VEN WITH AI) (7 MINUTE READ) [9]=20
+
+ Despite the rise of AI-assisted cod=
+ing, there's no widespread
+evidence of increased developer productivity o=
+r business value. DORA
+data shows that only already high-performing teams=
+ see benefits, while
+AI often slows down inefficient ones. The key differ=
+entiator for
+high-performing teams is addressing development process bott=
+lenecks by
+adopting continuous, small-batch software work with tight feed=
+back
+loops.=20
+
+=F0=9F=9A=80=20
+
+LAUNCHES & TOOLS
+
+ BUILD API KEY=
+ AUTHENTICATION FOR YOUR SAAS WITH CLERK (SPONSOR) [10]=20
+
+ Step-by-step=
+ guide to adding API key support using Clerk's new public
+beta. Covers ge=
+nerating cryptographically secure keys, hashing and
+storing them safely, =
+validating requests in your Next.js API routes,
+and building a key manage=
+ment UI with rotation and revocation. Full
+code examples [11] included. =
+
+
+ INTRODUCING COWORK (5 MINUTE READ) [12]=20
+
+ Claude Cowork is a ne=
+w feature that extends Claude Code to allow
+anyone, not just developers, =
+to interact with Claude by giving it
+direct access to files on their comp=
+uter. This allows Claude to read,
+edit, or create files within a designat=
+ed folder, completing tasks
+like organizing documents or drafting reports=
+ with enhanced agency.=20
+
+ AGENT OF EMPIRES (GITHUB REPO) [13]=20
+
+ Ag=
+ent of Empires is a Rust-written terminal session manager for Linux
+and m=
+acOS. It functions as a wrapper around tmux, creating a separate
+tmux ses=
+sion for each AI coding project and ensuring sessions persist
+reliably. T=
+he tool has a TUI dashboard for visual session management,
+including crea=
+tion, attachment, detachment, deletion, and group
+organization.=20
+
+=
+=F0=9F=8E=81=20
+
+MISCELLANEOUS
+
+ COST OF BUILDING AN MVP (WITH AI) (7=
+ MINUTE READ) [14]=20
+
+ The actual costs of building the AI-powered MVP f=
+or a new product,
+Lazyweb.com, was $19,100. This included a $13,000 domai=
+n name and over
+$3,000 spent on various AI models and services like OpenA=
+I.=20
+
+ THE KEY TO AGENTIC SUCCESS? BASH IS ALL YOU NEED (7 MINUTE READ) =
+[15]
+
+
+ Minimalist AI agent architectures using simple BASH shells an=
+d
+modular Unix tools are proving more effective than complex,
+over-engi=
+neered systems. Vercel, for example, improved its internal
+data agent, d0=
+, by simplifying its design to use basic BASH commands
+for direct file in=
+terrogation, resulting in faster, more accurate, and
+easier-to-manage ope=
+rations.=20
+
+=E2=9A=A1=20
+
+QUICK LINKS
+
+ MANUFACTURING AS CODE IS T=
+HE FUTURE, AND THE FUTURE IS NOW (19 MINUTE
+READ) [16]=20
+
+ Traditional=
+ CAD design is inefficient due to issues with version
+control, collaborat=
+ion, customization, and automation.=20
+
+ BRING BACK OPINIONATED ARCHITECT=
+URE (8 MINUTE READ) [17]=20
+
+ Opinionated architecture is better than ind=
+ecisive "it depends" and
+"just-in-case" approaches because opinionated ar=
+chitecture is clearer
+long-term.=20
+
+ LLVM: THE BAD PARTS (20 MINUTE RE=
+AD) [18]=20
+
+ The LLVM project has various long-standing issues like insu=
+fficient
+review capacity, significant code churn, lengthy build times, an=
+d
+fundamental IR design flaws.=20
+
+ YAML? THAT'S NORWAY PROBLEM (17 MIN=
+UTE READ) [19]=20
+
+ The "Norway problem" in YAML, where the country code =
+"NO" is
+incorrectly parsed as `false`, comes from implicit boolean typing=
+ in
+older v1.1 specifications that was removed in v1.2, but remains
+pre=
+valent in 2026 because many popular libraries still adhere to the
+older s=
+tandard.=20
+
+Love TLDR? Tell your friends and get rewards!
+
+ Share yo=
+ur referral link below with friends to get free TLDR swag!=20
+
+ https://r=
+efer.tldr.tech/19465406/3 [20]=20
+
+=09=09 Track your referrals here. [21]=
+=20
+
+Want to advertise in TLDR? =F0=9F=93=B0
+
+ If your company is int=
+erested in reaching an audience of web
+developers and engineering decisio=
+n makers, you may want to ADVERTISE
+WITH US [22].=20
+
+Want to work at T=
+LDR? =F0=9F=92=BC
+
+ APPLY HERE [23], CREATE YOUR OWN ROLE [24] or send =
+a friend's resume
+to jobs@tldr.tech and get $1k if we hire them! TLDR is =
+one of INC.'S
+BEST BOOTSTRAPPED BUSINESSES [25] of 2025.=20
+
+ If you ha=
+ve any comments or feedback, just respond to this email!=20
+
+Thanks for r=
+eading,=20
+Priyam Mohanty, Jenny Xu [26] & Ceora Ford=20
+
+ Manage your su=
+bscriptions [27] to our other newsletters on tech,
+startups, and programm=
+ing. Or if TLDR Dev isn't for you, please
+unsubscribe [28].=20
+
+=20
+
+=
+Links:
+------
+[1] https://tldr.tech/dev?utm_source=3Dtldrdev
+[2] http=
+s://advertise.tldr.tech/?utm_source=3Dtldrdev&utm_medium=3Dnewsletter&utm_c=
+ampaign=3Dadvertisetopnav
+[3] https://a.tldrnewsletter.com/web-version?ep=
+=3D1&lc=3D6b0d84e0-a670-11f0-8b4a-c5e0a2ae1fe1&p=3D4bcd0dfc-f063-11f0-b48e-=
+4b957e92d9fa&pt=3Dcampaign&t=3D1768307023&s=3Dcb6f56cfa615d29a83f556a00c0e2=
+03498deb1556e36ffc263df4d776eecbc8e
+[4] https://developers.docusign.com/?=
+utm_campaign=3DAWA_FY26Q4&utm_medium=3Dnewsletter&utm_source=3Dtldr-web-dev=
+
+[5] https://fant.io/react/?utm_source=3Dtldrdev
+[6] https://vercel.com=
+/blog/how-to-build-agents-with-filesystems-and-bash?utm_source=3Dtldrdev
+=
+[7] https://jessitron.com/2026/01/12/making-ai-do-things-right-introduce-de=
+terminism/?utm_source=3Dtldrdev
+[8] https://archaeologist.dev/artifacts/a=
+nthropic?utm_source=3Dtldrdev
+[9] https://codemanship.wordpress.com/2026/=
+01/12/the-great-filter-or-why-high-performance-still-eludes-most-dev-teams-=
+even-with-ai/?utm_source=3Dtldrdev
+[10] https://go.clerk.com/We3fqGq?utm_=
+source=3Dtldrdev
+[11] https://go.clerk.com/htEDkOd
+[12] https://claude.=
+com/blog/cowork-research-preview?utm_source=3Dtldrdev
+[13] https://github=
+.com/njbrake/agent-of-empires?utm_source=3Dtldrdev
+[14] https://read.firs=
+t1000.co/p/cost-of-building-an-mvp-with-ai?utm_source=3Dtldrdev
+[15] http=
+s://thenewstack.io/the-key-to-agentic-success-let-unix-bash-lead-the-way/?u=
+tm_source=3Dtldrdev
+[16] https://fangpenlin.com/posts/2026/01/12/manufact=
+uring-as-code-is-the-future/?utm_source=3Dtldrdev
+[17] https://frederickv=
+anbrabant.com/blog/2026-01-09-bring-back-opinionated-architecture/?utm_sour=
+ce=3Dtldrdev
+[18] https://www.npopov.com/2026/01/11/LLVM-The-bad-parts.ht=
+ml?utm_source=3Dtldrdev
+[19] https://lab174.com/blog/202601-yaml-norway/?=
+utm_source=3Dtldrdev
+[20] https://refer.tldr.tech/19465406/3
+[21] https=
+://hub.sparklp.co/sub_aaa8e06944fa/3
+[22] https://advertise.tldr.tech/?ut=
+m_source=3Dtldrdev&utm_medium=3Dnewsletter&utm_campaign=3Dadvertisecta
+[2=
+3] https://jobs.ashbyhq.com/tldr.tech
+[24] https://jobs.ashbyhq.com/tldr.=
+tech/c227b917-a6a4-40ce-8950-d3e165357871
+[25] https://www.linkedin.com/f=
+eed/update/urn:li:activity:7401699691039830016/
+[26] https://www.linkedin=
+.com/in/xu-jenny/
+[27] https://tldr.tech/dev/manage?email=3Dmike.mcconigl=
+ey%40gmail.com
+[28] https://a.tldrnewsletter.com/unsubscribe?ep=3D1&l=3De=
+8d201ca-3e93-11ed-9a32-0241b9615763&lc=3D6b0d84e0-a670-11f0-8b4a-c5e0a2ae1f=
+e1&p=3D4bcd0dfc-f063-11f0-b48e-4b957e92d9fa&pt=3Dcampaign&pv=3D4&spa=3D1768=
+305673&t=3D1768307023&s=3D335b1f3f32172ca9e9ed64e4c90e5b58a268085822534d08a=
+e277cd10f55d020
+--UlofB9uB
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html charset=3DUTF-8"><meta charset=3D"UTF-8"><meta name=3D"v=
+iewport" content=3D"width=3Ddevice-width"><meta name=3D"x-apple-disable-mes=
+sage-reformatting"><title>TLDR Dev</title><meta name=3D"color-scheme" conte=
+nt=3D"light dark"><meta name=3D"supported-color-schemes" content=3D"light d=
+ark"><style type=3D"text/css">
+=09=09=09:root {
+=09=09=09=09color-scheme: light dark; supported-color-schemes: light dark;
+=09=09=09}
+=09=09=09
+=09=09=09*,
+=09=09=09*:after,
+=09=09=09*:before {
+=09=09=09=09-webkit-box-sizing: border-box; -moz-box-sizing: border-box; bo=
+x-sizing: border-box;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+=09=09=09}
+=09=09=09
+=09=09=09html,
+=09=09=09body,
+=09=09=09.document {
+=09=09=09=09width: 100% !important; height: 100% !important; margin: 0; pad=
+ding: 0;
+=09=09=09}
+=09=09=09
+=09=09=09body {
+=09=09=09=09-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: g=
+rayscale; text-rendering: optimizeLegibility;
+=09=09=09}
+=09=09=09
+=09=09=09div[style*=3D"margin: 16px 0"] {
+=09=09=09=09margin: 0 !important;
+=09=09=09}
+=09=09=09
+=09=09=09table,
+=09=09=09td {
+=09=09=09=09mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+=09=09=09}
+=09=09=09
+=09=09=09table {
+=09=09=09=09border-spacing: 0; border-collapse: collapse; table-layout: fix=
+ed; margin: 0 auto;
+=09=09=09}
+=09=09=09
+=09=09=09img {
+=09=09=09=09-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+=09=09=09}
+=09=09=09
+=09=09=09*[x-apple-data-detectors] {
+=09=09=09=09color: inherit !important; text-decoration: none !important;
+=09=09=09}
+=09=09=09
+=09=09=09.x-gmail-data-detectors,
+=09=09=09.x-gmail-data-detectors *,
+=09=09=09.aBn {
+=09=09=09=09border-bottom: 0 !important; cursor: default !important;
+=09=09=09}
+=09=09=09
+=09=09=09.btn {
+=09=09=09=09-webkit-transition: all 200ms ease; transition: all 200ms ease;
+=09=09=09}
+=09=09=09
+=09=09=09.btn:hover {
+=09=09=09=09background-color: #f67575; border-color: #f67575;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+=09=09=09}
+=09=09=09
+=09=09=09@media screen and (max-width: 600px) {
+=09=09=09=09.container {
+=09=09=09=09=09width: 100%; margin: auto;
+=09=09=09=09}
+=09=09=09=09.stack {
+=09=09=09=09=09display: block!important; width: 100%!important; max-width: =
+100%!important;
+=09=09=09=09}
+=09=09=09=09.btn {
+=09=09=09=09=09display: block; width: 100%; text-align: center;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09body,
+=09=09=09p,
+=09=09=09td,
+=09=09=09tr,
+=09=09=09.body,
+=09=09=09table,
+=09=09=09h1,
+=09=09=09h2,
+=09=09=09h3,
+=09=09=09h4,
+=09=09=09h5,
+=09=09=09h6,
+=09=09=09div,
+=09=09=09span {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09body,
+=09=09=09=09p,
+=09=09=09=09td,
+=09=09=09=09tr,
+=09=09=09=09.body,
+=09=09=09=09table,
+=09=09=09=09h1,
+=09=09=09=09h2,
+=09=09=09=09h3,
+=09=09=09=09h4,
+=09=09=09=09h5,
+=09=09=09=09h6,
+=09=09=09=09div,
+=09=09=09=09span {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09a {
+=09=09=09=09color: inherit !important; text-decoration: underline !importan=
+t;
+=09=09=09}
+
+=09=09</style><!--[if mso | ie]>
+=09=09<style type=3D"text/css">
+=09=09=09a {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09a {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09 </style>
+=09=09=09<![endif]--></head><body class=3D"">
+
+
+
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">It=E2=80=
+=99s possible to &quot;steal&quot; or reconstruct any React component from =
+a production website, even without access to its source code&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;</div>
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align=3D"center" class=3D"document"><tbody><tr><td valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"container" width=3D"600"><tbody><tr class=3D"inner-body"><td>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr class=3D"header"><td bgcolor=3D"" class=3D"containe=
+r">
+
+<table width=3D"100%"><tbody><tr><td class=3D"container">
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"margin-top: 0px;" width=3D"100%"><tbody><tr><td style=
+=3D"padding: 0px;">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div style=3D"text-align: center;">
+<span style=3D"margin-right: 0px;"><a href=3D"https://tracking.tldrnewslett=
+er.com/CL0/https:%2F%2Ftldr.tech%2Fdev%3Futm_source=3Dtldrdev/1/0100019bb74=
+fddcc-85afbd28-e9d4-4777-bb39-811f9ddf7195-000000/6vjeQo0Vk-VA_n1oVTulwl9r4=
+bXtJc6hW-8TiEneoHE=3D440" rel=3D"noopener noreferrer" target=3D"_blank"><sp=
+an>Sign Up</span></a>
+|<span style=3D"margin-right: 2px; margin-left: 2px;"><a href=3D"https://tr=
+acking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_sour=
+ce=3Dtldrdev%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertisetopnav/1/0=
+100019bb74fddcc-85afbd28-e9d4-4777-bb39-811f9ddf7195-000000/9zSSWy8fTh-nOly=
+57nXhjjuoGe6hkJeV_SjuP2ZIl40=3D440" rel=3D"noopener noreferrer" target=3D"_=
+blank"><span>Advertise</span></a></span>|<span style=3D"margin-left: 2px;">=
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsle=
+tter.com%2Fweb-version%3Fep=3D1%26lc=3D6b0d84e0-a670-11f0-8b4a-c5e0a2ae1fe1=
+%26p=3D4bcd0dfc-f063-11f0-b48e-4b957e92d9fa%26pt=3Dcampaign%26t=3D176830702=
+3%26s=3Dcb6f56cfa615d29a83f556a00c0e203498deb1556e36ffc263df4d776eecbc8e/1/=
+0100019bb74fddcc-85afbd28-e9d4-4777-bb39-811f9ddf7195-000000/kUtD1Nv_m6ksj8=
+vacTN1quXhtEjpHyOCsjhes1WiaKU=3D440"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"text-=
+align: center;"><span data-darkreader-inline-color=3D"" style=3D"--darkread=
+er-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30=
+px;">T</span><span style=3D"font-size: 30px;"><span data-darkreader-inline-=
+color=3D"" style=3D"color: rgb(232, 192, 96) !important; --darkreader-inlin=
+e-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-colo=
+r=3D"" style=3D"color: rgb(101, 195, 173) !important; --darkreader-inline-c=
+olor:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-=
+color=3D"" style=3D"--darkreader-inline-color:#dd6e6e; color: rgb(220, 107,=
+ 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr id=3D"together-with"><td align=3D"cent=
+er" height=3D"20" style=3D"vertical-align:middle !important;" valign=3D"mid=
+dle" width=3D"100%"><strong style=3D"vertical-align:middle !important; heig=
+ht: 100%;">Together With </strong>
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fdevelopers.d=
+ocusign.com%2F%3Futm_campaign=3DAWA_FY26Q4%26utm_medium=3Dnewsletter%26utm_=
+source=3Dtldr-web-dev/1/0100019bb74fddcc-85afbd28-e9d4-4777-bb39-811f9ddf71=
+95-000000/PDunWrO9QEZSY92mNVDmjspFA3FRHf2ivRqK0xPbYU8=3D440"><img src=3D"ht=
+tps://images.tldr.tech/docusign-2.png" valign=3D"middle" style=3D"vertical-=
+align: middle !important; height: 100%;" alt=3D"Docusign"></a></td></tr></t=
+body></table>
+
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody><tr=
+><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0;=
+">
+<div style=3D"text-align: center;">
+
+<h1><strong>&nbsp;TLDR Dev <span id=3D"date">2026-01-13</span></strong></h1=
+>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody><tr=
+ id=3D"sponsy-copy"><td class=3D"container" style=3D"padding: 15px 15px;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fdevelopers.docusign.com%2F%3Futm_campaign=3DAWA_FY26Q4%=
+26utm_medium=3Dnewsletter%26utm_source=3Dtldr-web-dev/2/0100019bb74fddcc-85=
+afbd28-e9d4-4777-bb39-811f9ddf7195-000000/r8AqJE2bdnhBycYwCcPkdJihb50KGNqax=
+G9N3n6xYLI=3D440">
+                                    <span>
+                                        <strong>Docusign for Developers: AP=
+Is, SDKs, and Extensibility Beyond eSignature (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Many developers know Docusign as "the s=
+ignature thing." But under the hood, there's a <a href=3D"https://tracking.=
+tldrnewsletter.com/CL0/https:%2F%2Fdevelopers.docusign.com%2F%3Futm_campaig=
+n=3DAWA_FY26Q4%26utm_medium=3Dnewsletter%26utm_source=3Dtldr-web-dev/3/0100=
+019bb74fddcc-85afbd28-e9d4-4777-bb39-811f9ddf7195-000000/vQJaOxU7UJDGPSRXn_=
+qq1noMvis_bzuQKHphADOgNKU=3D440" rel=3D"noopener noreferrer nofollow" targe=
+t=3D"_blank"><span>complete platform</span></a> for building intelligent ag=
+reement workflows.
+
+<p></p>
+
+<p>The <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fdevel=
+opers.docusign.com%2F%3Futm_campaign=3DAWA_FY26Q4%26utm_medium=3Dnewsletter=
+%26utm_source=3Dtldr-web-dev/4/0100019bb74fddcc-85afbd28-e9d4-4777-bb39-811=
+f9ddf7195-000000/QIWbHhpBAwG4LRotgVdK1UDbEt5aHEpULr7Ygb2cBow=3D440" rel=3D"=
+noopener noreferrer nofollow" target=3D"_blank"><span>Docusign Developer Ce=
+nter</span></a> gives access to 400+ API endpoints across eSignature, workf=
+low automation (Maestro), AI-extracted agreement data (Navigator), web form=
+s, and more. SDKs are available in C#, Java, Node.js, PHP, Python, and Ruby=
+.</p>
+
+<p>The platform also supports extensions =E2=80=93 custom apps that plug di=
+rectly into Docusign to verify data, sync with external systems, or connect=
+ to cloud storage.</p>
+
+<p>Adding contract management to a SaaS product? Automating document flows =
+for an internal tool? Whatever you're building, the APIs and tooling are al=
+ready there.</p>
+
+<p><a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fdeveloper=
+s.docusign.com%2F%3Futm_campaign=3DAWA_FY26Q4%26utm_medium=3Dnewsletter%26u=
+tm_source=3Dtldr-web-dev/5/0100019bb74fddcc-85afbd28-e9d4-4777-bb39-811f9dd=
+f7195-000000/pa0vodhqQgv68a71ZMd-S_4DSHkJz0WzaX_tMbfTOHw=3D440" rel=3D"noop=
+ener noreferrer nofollow" target=3D"_blank"><span>Get a free developer acco=
+unt =E2=86=92</span></a>
+
+
+</p>
+</span></span></div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=3D""><td class=3D"container">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td style=3D"padding: 0px;">
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=A7=91=E2=80=8D=F0=9F=92=BB</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Articles &amp; Tutorials</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Ffant.io%2Freact%2F%3Futm_source=3Dtldrdev/1/0100019bb74=
+fddcc-85afbd28-e9d4-4777-bb39-811f9ddf7195-000000/Lp3oblMmf5Q8f-nJugCgDFsCj=
+ELB8wqP_pU3irW2WLM=3D440">
+                                    <span>
+                                        <strong>How to Steal Any React Comp=
+onent (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    It's possible to "steal" or reconstruct=
+ any React component from a production website, even without access to its =
+source code. React Fiber is an internal tree structure in the browser that =
+exposes which components create specific DOM elements and what props they r=
+eceive. You can generate a component's code by collecting multiple examples=
+ of a component's props and its resulting HTML and feeding it into an LLM.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fvercel.com%2Fblog%2Fhow-to-build-agents-with-filesystem=
+s-and-bash%3Futm_source=3Dtldrdev/1/0100019bb74fddcc-85afbd28-e9d4-4777-bb3=
+9-811f9ddf7195-000000/tyutXOrSmNyrzHlaQdNyLK5pzb0w2AyXNesexq7eVHQ=3D440">
+                                    <span>
+                                        <strong>How to build agents with fi=
+lesystems and bash (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    A simple, effective architecture for AI=
+ agents is a standard filesystem and Bash tools. Since LLMs have a native u=
+nderstanding of code and Unix commands, agents can easily navigate and retr=
+ieve information from data structured as files, much like exploring a codeb=
+ase. This approach overcomes the limitations of prompt stuffing and impreci=
+se vector search by offering natural data hierarchies, exact retrieval, and=
+ minimal context loading.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fjessitron.com%2F2026%2F01%2F12%2Fmaking-ai-do-things-ri=
+ght-introduce-determinism%2F%3Futm_source=3Dtldrdev/1/0100019bb74fddcc-85af=
+bd28-e9d4-4777-bb39-811f9ddf7195-000000/E0x0sDpnJajdqa1QqoY355FA7T8OdTl3EK4=
+5t22FeLI=3D440">
+                                    <span>
+                                        <strong>Replacing LLM date math wit=
+h deterministic scripts to improve calendar accuracy (3 minute read)</stron=
+g>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    LLMs like Claude frequently fail at dat=
+e math, causing calendar errors in tools like gcalcli. Offloading calculati=
+ons to deterministic scripts ensures accuracy. Developers can eliminate hal=
+lucinations and create reliable, repeatable AI workflows by updating CLAUDE=
+.md instructions to execute code instead of manual reasoning.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=A7=A0</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Opinions &amp; Advice</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Farchaeologist.dev%2Fartifacts%2Fanthropic%3Futm_source=
+=3Dtldrdev/1/0100019bb74fddcc-85afbd28-e9d4-4777-bb39-811f9ddf7195-000000/0=
+ZXBijQvZYfdpUbUm7wOKIuBxFu3eszYxS97dLzfaL4=3D440">
+                                    <span>
+                                        <strong>Anthropic made a big mistak=
+e (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Anthropic recently made a business blun=
+der by closing a loophole that allowed customers to use their cheaper subsc=
+ription models with popular third-party coding agents like OpenCode. This m=
+ove alienated many paying customers who felt they were unjustly restricted =
+from using a service they already purchased. OpenAI capitalized on this by =
+officially supporting its own subscriptions within these same third-party a=
+gents.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fcodemanship.wordpress.com%2F2026%2F01%2F12%2Fthe-great-=
+filter-or-why-high-performance-still-eludes-most-dev-teams-even-with-ai%2F%=
+3Futm_source=3Dtldrdev/1/0100019bb74fddcc-85afbd28-e9d4-4777-bb39-811f9ddf7=
+195-000000/PCsx1xVrpsRw6SVQTtWHKT4PI2nDdL6ioNnIXobdWJg=3D440">
+                                    <span>
+                                        <strong>The Great Filter (Or Why Hi=
+gh Performance Still Eludes Most Dev Teams, Even With AI) (7 minute read)</=
+strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Despite the rise of AI-assisted coding,=
+ there's no widespread evidence of increased developer productivity or busi=
+ness value. DORA data shows that only already high-performing teams see ben=
+efits, while AI often slows down inefficient ones. The key differentiator f=
+or high-performing teams is addressing development process bottlenecks by a=
+dopting continuous, small-batch software work with tight feedback loops.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=9A=80</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Launches &amp; Tools</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgo.clerk.com%2FWe3fqGq%3Futm_source=3Dtldrdev/1/0100019=
+bb74fddcc-85afbd28-e9d4-4777-bb39-811f9ddf7195-000000/b0465xZr0mLioDUH5CM2r=
+WI_IHaqQBn_jzJLp95g0y0=3D440">
+                                    <span>
+                                        <strong>Build API key authenticatio=
+n for your SaaS with Clerk (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Step-by-step guide to adding API key su=
+pport using Clerk's new public beta. Covers generating cryptographically se=
+cure keys, hashing and storing them safely, validating requests in your Nex=
+t.js API routes, and building a key management UI with rotation and revocat=
+ion. <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgo.cler=
+k.com%2FhtEDkOd/1/0100019bb74fddcc-85afbd28-e9d4-4777-bb39-811f9ddf7195-000=
+000/G5HdZfSEqbXvfxfefqyW3kFIyRzNRAPewZvkaIr5OHk=3D440" rel=3D"noopener nore=
+ferrer nofollow" target=3D"_blank"><span>Full code examples</span></a> incl=
+uded.
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fclaude.com%2Fblog%2Fcowork-research-preview%3Futm_sourc=
+e=3Dtldrdev/1/0100019bb74fddcc-85afbd28-e9d4-4777-bb39-811f9ddf7195-000000/=
+XPgCyeYuQYHBLc3V7pT4EG1mNwLLTTBUdKk2imhUHaQ=3D440">
+                                    <span>
+                                        <strong>Introducing Cowork (5 minut=
+e read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Claude Cowork is a new feature that ext=
+ends Claude Code to allow anyone, not just developers, to interact with Cla=
+ude by giving it direct access to files on their computer. This allows Clau=
+de to read, edit, or create files within a designated folder, completing ta=
+sks like organizing documents or drafting reports with enhanced agency.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgithub.com%2Fnjbrake%2Fagent-of-empires%3Futm_source=3D=
+tldrdev/1/0100019bb74fddcc-85afbd28-e9d4-4777-bb39-811f9ddf7195-000000/9QCg=
+7lC1gAfcU9orwyValeMjPpQjkR3euDYstQx3Mts=3D440">
+                                    <span>
+                                        <strong>Agent of Empires (GitHub Re=
+po)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Agent of Empires is a Rust-written term=
+inal session manager for Linux and macOS. It functions as a wrapper around =
+tmux, creating a separate tmux session for each AI coding project and ensur=
+ing sessions persist reliably. The tool has a TUI dashboard for visual sess=
+ion management, including creation, attachment, detachment, deletion, and g=
+roup organization.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=8E=81</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><strong><h1>Miscellaneous</h1></strong><=
+/div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fread.first1000.co%2Fp%2Fcost-of-building-an-mvp-with-ai=
+%3Futm_source=3Dtldrdev/1/0100019bb74fddcc-85afbd28-e9d4-4777-bb39-811f9ddf=
+7195-000000/ogqsMlyMv2j9UdciuWuXhDJM_otuhjJKbeVVPRAE6_A=3D440">
+                                    <span>
+                                        <strong>Cost of building an MVP (wi=
+th AI) (7 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    The actual costs of building the AI-pow=
+ered MVP for a new product, Lazyweb.com, was $19,100. This included a $13,0=
+00 domain name and over $3,000 spent on various AI models and services like=
+ OpenAI.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fthenewstack.io%2Fthe-key-to-agentic-success-let-unix-ba=
+sh-lead-the-way%2F%3Futm_source=3Dtldrdev/1/0100019bb74fddcc-85afbd28-e9d4-=
+4777-bb39-811f9ddf7195-000000/nroy5u_H9gmh0W2YceXdNY-kT9Mj5abUejLdJgU_8b8=
+=3D440">
+                                    <span>
+                                        <strong>The Key to Agentic Success?=
+ BASH Is All You Need (7 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Minimalist AI agent architectures using=
+ simple BASH shells and modular Unix tools are proving more effective than =
+complex, over-engineered systems. Vercel, for example, improved its interna=
+l data agent, d0, by simplifying its design to use basic BASH commands for =
+direct file interrogation, resulting in faster, more accurate, and easier-t=
+o-manage operations.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=E2=9A=
+=A1</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Ffangpenlin.com%2Fposts%2F2026%2F01%2F12%2Fmanufacturing=
+-as-code-is-the-future%2F%3Futm_source=3Dtldrdev/1/0100019bb74fddcc-85afbd2=
+8-e9d4-4777-bb39-811f9ddf7195-000000/asxMdtgOVj5j5hmoNmELi_H0gB8ogv5bFMDOUD=
+8WbDA=3D440">
+                                    <span>
+                                        <strong>Manufacturing as Code is th=
+e Future, and the Future is Now (19 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Traditional CAD design is inefficient d=
+ue to issues with version control, collaboration, customization, and automa=
+tion.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Ffrederickvanbrabant.com%2Fblog%2F2026-01-09-bring-back-=
+opinionated-architecture%2F%3Futm_source=3Dtldrdev/1/0100019bb74fddcc-85afb=
+d28-e9d4-4777-bb39-811f9ddf7195-000000/9gexKBfrwj56w-GDKpUgYjlvPqctcScerFFe=
+74A1rao=3D440">
+                                    <span>
+                                        <strong>Bring back opinionated arch=
+itecture (8 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Opinionated architecture is better than=
+ indecisive "it depends" and "just-in-case" approaches because opinionated =
+architecture is clearer long-term.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.npopov.com%2F2026%2F01%2F11%2FLLVM-The-bad-parts.ht=
+ml%3Futm_source=3Dtldrdev/1/0100019bb74fddcc-85afbd28-e9d4-4777-bb39-811f9d=
+df7195-000000/vyRsJipdGtwzbClZGnhG5SOcfGa3s-HTjgMvqTN03k8=3D440">
+                                    <span>
+                                        <strong>LLVM: The bad parts (20 min=
+ute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    The LLVM project has various long-stand=
+ing issues like insufficient review capacity, significant code churn, lengt=
+hy build times, and fundamental IR design flaws.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flab174.com%2Fblog%2F202601-yaml-norway%2F%3Futm_source=
+=3Dtldrdev/1/0100019bb74fddcc-85afbd28-e9d4-4777-bb39-811f9ddf7195-000000/s=
+enXYqKZoIKRlbq7S8wzL770YgtKpNMG3JgRClqDEBM=3D440">
+                                    <span>
+                                        <strong>YAML? That's Norway problem=
+ (17 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    The "Norway problem" in YAML, where the=
+ country code "NO" is incorrectly parsed as `false`, comes from implicit bo=
+olean typing in older v1.1 specifications that was removed in v1.2, but rem=
+ains prevalent in 2026 because many popular libraries still adhere to the o=
+lder standard.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"word-break=
+: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class=3D"container" style=3D"padding: 0px 10px 15px;">
+<div class=3D"text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align=3D"left" style=3D"padding: 10px;">
+<div class=3D"text-block">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.t=
+ech%2F19465406%2F3/1/0100019bb74fddcc-85afbd28-e9d4-4777-bb39-811f9ddf7195-=
+000000/6GeC_nvCpUvvM6D4D38mllTWjaZAAvcLTq0qeQ0JHwI=3D440" style=3D"color: #=
+464ba4; text-decoration: underline;">https://refer.tldr.tech/19465406/3</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align=3D"left" style=3D"padding:5px 10px;">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.=
+co%2Fsub_aaa8e06944fa%2F3/1/0100019bb74fddcc-85afbd28-e9d4-4777-bb39-811f9d=
+df7195-000000/ITxSBtxwmK6fcxrSqzywKjHEW6FjIMNKy8emr86yFsQ=3D440" style=3D"f=
+ont-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block; =
+ text-decoration: underline;"><span style=3D"mso-text-raise:13pt; text-deco=
+ration: underline;">Track your referrals here.</span></a>
+</td></tr></tbody></table>
+
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"word-break=
+: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to advertise in TLDR? =F0=9F=93=B0
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+If your company is interested in reaching an audience of web developers and=
+ engineering decision makers, you may want to <a href=3D"https://tracking.t=
+ldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=3Dtld=
+rdev%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertisecta/1/0100019bb74f=
+ddcc-85afbd28-e9d4-4777-bb39-811f9ddf7195-000000/snfJYRq6OnKvp0vMHw41ptF6ce=
+pCZAyE5vWVFYNtHo0=3D440"><strong><span>advertise with us</span></strong></a=
+>.
+</div>
+<br>
+
+<!-- New "Want to work at TLDR?" section -->
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to work at TLDR? =F0=9F=92=BC
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech/1/0100019bb74fddcc-85afbd28-e9d4-4777-bb39-811f9ddf7195-00=
+0000/iUiKPwf5K8wCQGlSC8wswIzzUxi6HKf5Fykf993nnk4=3D440" rel=3D"noopener nor=
+eferrer" style=3D"color: #0000EE; text-decoration: underline;" target=3D"_b=
+lank"><strong>Apply here</strong></a>,
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech%2Fc227b917-a6a4-40ce-8950-d3e165357871/1/0100019bb74fddcc-=
+85afbd28-e9d4-4777-bb39-811f9ddf7195-000000/ozFTwfvYtrma8lTQMdHZdDzDadVXM-r=
+xdesH1ZhnCEw=3D440" rel=3D"noopener noreferrer" style=3D"color: #0000EE; te=
+xt-decoration: underline;" target=3D"_blank"><strong>create your own role</=
+strong></a> or send a friend's resume to <a href=3D"mailto:jobs@tldr.tech" =
+style=3D"color: #0000EE; text-decoration: underline;">jobs@tldr.tech</a> an=
+d get $1k if we hire them! TLDR is one of <a href=3D"https://tracking.tldrn=
+ewsletter.com/CL0/https:%2F%2Fwww.linkedin.com%2Ffeed%2Fupdate%2Furn:li:act=
+ivity:7401699691039830016%2F/1/0100019bb74fddcc-85afbd28-e9d4-4777-bb39-811=
+f9ddf7195-000000/ZBnQ2Cph1aUmhnJCQYeR9jRsKfXma2kMCNWyI1hB8gI=3D440" rel=3D"=
+noopener noreferrer" style=3D"color: #0000EE; text-decoration: underline;" =
+target=3D"_blank"><strong>Inc.'s Best Bootstrapped businesses</strong></a> =
+of 2025.
+</div>
+<br>
+
+<div class=3D"text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<span>Priyam Mohanty</span>, <a href=3D"https://tracking.tldrnewsletter.com=
+/CL0/https:%2F%2Fwww.linkedin.com%2Fin%2Fxu-jenny%2F/1/0100019bb74fddcc-85a=
+fbd28-e9d4-4777-bb39-811f9ddf7195-000000/zxW8_rxJ-lslfQ28p1soSyTrsmrvUo8SO7=
+1ZiLmAQvE=3D440"><span>Jenny Xu</span></a> &amp; <span>Ceora Ford</span>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div class=3D"text-block" id=3D"testing-id">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2F=
+dev%2Fmanage%3Femail=3Dmike.mcconigley%2540gmail.com/1/0100019bb74fddcc-85a=
+fbd28-e9d4-4777-bb39-811f9ddf7195-000000/IX6KRDoX8YwLEBijYvtFj-A3n960N_kPU1=
+EgDGcy5S4=3D440">Manage your subscriptions</a> to our other newsletters on =
+tech, startups, and programming. Or if TLDR Dev isn't for you, please <a hr=
+ef=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.=
+com%2Funsubscribe%3Fep=3D1%26l=3De8d201ca-3e93-11ed-9a32-0241b9615763%26lc=
+=3D6b0d84e0-a670-11f0-8b4a-c5e0a2ae1fe1%26p=3D4bcd0dfc-f063-11f0-b48e-4b957=
+e92d9fa%26pt=3Dcampaign%26pv=3D4%26spa=3D1768305673%26t=3D1768307023%26s=3D=
+335b1f3f32172ca9e9ed64e4c90e5b58a268085822534d08ae277cd10f55d020/1/0100019b=
+b74fddcc-85afbd28-e9d4-4777-bb39-811f9ddf7195-000000/DVvEe9AbLEuX86npfynDP1=
+tnzsVu-BCaKyAkZdDmzeM=3D440">unsubscribe</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+
+
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+
+<img alt=3D"" src=3D"http://tracking.tldrnewsletter.com/CI0/0100019bb74fddc=
+c-85afbd28-e9d4-4777-bb39-811f9ddf7195-000000/eQ9G3ibDUOv_ckWlb4qOzSs2wPRXI=
+Ml813AwFLiqy48=3D440" style=3D"display: none; width: 1px; height: 1px;">
+</body></html>
+--UlofB9uB--

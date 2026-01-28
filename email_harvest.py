@@ -31,6 +31,7 @@ TARGETS = [
     {"sender": "nytdirect@nytimes.com","subject":None},
     {"sender": "newsletter@givemesport.com","subject":None},
     {"sender": "thecounterrucktheirishtimes@comms.irishtimes.com","subject":None},
+    {"sender": "newsletter@unitedinfocus.com","subject":None},
 ]
 
 def clean_filename(subject):

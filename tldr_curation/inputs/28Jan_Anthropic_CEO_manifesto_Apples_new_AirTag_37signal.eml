@@ -1,0 +1,1482 @@
+Delivered-To: mike.mcconigley@gmail.com
+Received: by 2002:a8a:106:0:b0:617:3adb:9ab9 with SMTP id u6csp1933292ocq;
+        Tue, 27 Jan 2026 03:28:56 -0800 (PST)
+X-Received: by 2002:a05:620a:1a82:b0:8c5:3045:3e7b with SMTP id af79cd13be357-8c70b847208mr149049085a.26.1769513336565;
+        Tue, 27 Jan 2026 03:28:56 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1769513336; cv=none;
+        d=google.com; s=arc-20240605;
+        b=EAsTEZaJPQhb7OQyG2ijcJZ4LPk6U9Jg2rScf8onZE8Uro8G+vdXBUpRHD9nEDeaWk
+         nr5eZTxFszSVey50hWpuHUunLalO3u0cC70qzktgTFkNLvqeW17WPbzlej/l/gOvtdXY
+         5EW2vC75xm8N+mG79x6x7IXNLbaPV9aqZKpmYpFUk2reJWq4z0V03LnBwqDQ7Cd40Rly
+         gEHsgTN6qUddN0ej5iXw4ToWFzD3Bby+TsG/t+UoNQ899jJKSlvXlfxev1IrRpJff2QS
+         6v1M+ZDqmImPp2ChuOCHikP7oHAvIAlhcChRLkGEwwlzC+iS7z3w2rG92Rb5qQwAvy1q
+         d0kQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:date:mime-version:list-unsubscribe-post
+         :list-unsubscribe:subject:to:from:dkim-signature:dkim-signature;
+        bh=WxnYzggCeRLhFcq1KTgXeo2fzuSANwOELt0S5lU91ng=;
+        fh=tUTYCbTOUI69DxYKXGXRz08XnPP7jEKRU6E5rS0DFR4=;
+        b=SzhGTxu+DW7/SsotoJSe5Lrltrgq3E4CnbuY966VYkFRnzDItIHRFFk22VHJX0uN9l
+         8ktlrdA1VtvRoLxf3dZnroQxjxoWlRM/AGch9yrgTeZUC5CSo8HuwbVSGR6tVSfMI3IH
+         WJqGDV+Cc/mpRMAS5VFou/tFicB4fTFsx9pJkbsBKA2b916UtWCideqFnkkKwCHK+oQK
+         9E/Sfi2NLkF1GthW4hhF2ILetKiiawv5bVhoWV2P51o7V93JAyjbiOpo9VneeFQNd9oL
+         noEBVRqpMrM13KxImKBXoSBS1wOsv3/H+HCbn8/Wv59mpn3vcer/7bDQJS2pIVP4x5U6
+         X5SQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b="k/JREeAm";
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=Z3d0ii0q;
+       spf=pass (google.com: domain of 0100019bff36bd38-f25f0f1e-db2b-4435-8c26-8aa532bc027f-000000@dailyupdate.tldrnewsletter.com designates 54.240.77.26 as permitted sender) smtp.mailfrom=0100019bff36bd38-f25f0f1e-db2b-4435-8c26-8aa532bc027f-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+Return-Path: <0100019bff36bd38-f25f0f1e-db2b-4435-8c26-8aa532bc027f-000000@dailyupdate.tldrnewsletter.com>
+Received: from a77-26.smtp-out.amazonses.com (a77-26.smtp-out.amazonses.com. [54.240.77.26])
+        by mx.google.com with ESMTPS id af79cd13be357-8c6e37ccb65si1157565785a.111.2026.01.27.03.28.56
+        for <mike.mcconigley@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Tue, 27 Jan 2026 03:28:56 -0800 (PST)
+Received-SPF: pass (google.com: domain of 0100019bff36bd38-f25f0f1e-db2b-4435-8c26-8aa532bc027f-000000@dailyupdate.tldrnewsletter.com designates 54.240.77.26 as permitted sender) client-ip=54.240.77.26;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b="k/JREeAm";
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=Z3d0ii0q;
+       spf=pass (google.com: domain of 0100019bff36bd38-f25f0f1e-db2b-4435-8c26-8aa532bc027f-000000@dailyupdate.tldrnewsletter.com designates 54.240.77.26 as permitted sender) smtp.mailfrom=0100019bff36bd38-f25f0f1e-db2b-4435-8c26-8aa532bc027f-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ygiuxamnxevikrd5dtfwanslhs6b24mt; d=tldrnewsletter.com;
+	t=1769513336;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type;
+	bh=7QnvjmHebme4lzeVTZIZQV6LnIXnOsQws7XWv10OXSQ=;
+	b=k/JREeAmh4XxieAx5EdlZfCQdK03rrnI7LU/YdGWWen9A+h5TVhCDU2C9uWG4QjD
+	AMGv7FHqD9h0oR3LWeXGOyCMOeVhuU36gBIQtwiTF9aPWoS7wQPhFAiX7zY4SrX2shX
+	ecZIbl+tJ7cbfz658qy29jUv1/+QqqxPq1Jcs/So=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1769513336;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type:Feedback-ID;
+	bh=7QnvjmHebme4lzeVTZIZQV6LnIXnOsQws7XWv10OXSQ=;
+	b=Z3d0ii0q7awAi8B7YekcxbmsARBfloLhdyZlPuNUoOq+ifC917tSCXHPyrloqzXf
+	gb1zZ6aB5lzmrTQqmsbS/zxzquFpBD0KLrzaP53AtUJAtu8mQCSJvrlRER1nYR7GOZa
+	cK6XyAXz3ySwnqZS4qYmKCj7U0OKvjIAgqTNl6T4=
+From: TLDR <dan@tldrnewsletter.com>
+To: mike.mcconigley@gmail.com
+Subject: Anthropic CEO manifesto =?utf-8?Q?=F0=9F=93=9C=2C?= Apple's new
+ AirTag =?utf-8?Q?=F0=9F=8F=B7=EF=B8=8F=2C?= 37signals' codebase
+ =?utf-8?Q?=F0=9F=91=A8=E2=80=8D=F0=9F=92=BB?=
+X-Entity-Ref-Id: b7efde63-c65d-4843-b3f3-657a4169e7a2
+X-EmailOctopus-Parent-Id: 33242360-fb5a-11f0-a256-0bb2bfc1c155
+X-EmailOctopus-Parent-Type-Id: campaign
+X-EmailOctopus-List-Id: cfa2d55a-b7be-11e8-a3c9-06b79b628af2
+X-EmailOctopus-List-Contact-Id: 46c4c580-a670-11f0-ad93-1f8c13b87d10
+X-EmailOctopus-Started-Preparing-At: 2026-01-27T11:01:15+00:00
+X-EmailOctopus-Sent-At: 2026-01-27T11:28:55+00:00
+X-EmailOctopus-Team-Id: 66987ef2-4f4c-11e9-a3c9-06b79b628af2
+X-EmailOctopus-Version: 4
+List-Unsubscribe: <https://a.tldrnewsletter.com/unsubscribe?ep=1&l=cfa2d55a-b7be-11e8-a3c9-06b79b628af2&lc=46c4c580-a670-11f0-ad93-1f8c13b87d10&p=33242360-fb5a-11f0-a256-0bb2bfc1c155&pt=campaign&pv=4&spa=1769511675&t=1769513335&s=9aac0178d5ef73d0520712ac061fe26e79fd1e655569bfd3a7623de5e6b71386>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-EmailOctopus-Ses-Configuration-Set-Name: emailoctopus-a9f7b12f74f3c968d9408897fb35539c
+MIME-Version: 1.0
+Date: Tue, 27 Jan 2026 11:28:56 +0000
+Message-ID: <0100019bff36bd38-f25f0f1e-db2b-4435-8c26-8aa532bc027f-000000@email.amazonses.com>
+Content-Type: multipart/alternative; boundary=6wHS3bgX
+Feedback-ID: ::1.us-east-1.Dj5/7DYmgk+n1sSGGXSQSLIthSjNQ0MGtV5Dro1Tr8U=:AmazonSES
+X-SES-Outgoing: 2026.01.27-54.240.77.26
+
+--6wHS3bgX
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+AI models are now beginning to make progress in solving unsolved
+problems=
+. It is so good that strong engineers are now handing their
+coding to
+A=
+I=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0
+
+
+ Sign Up [1] |Advertise [2]|View Online [3]=20
+
+=
+=09=09TLDR=20
+
+=09=09TOGETHER WITH [TLDR] [4]
+
+TLDR 2026-01-27
+
+ =
+REACH REAL BUYERS IN TLDR INSTEAD OF FIGHTING FOR ATTENTION ON SOCIAL
+(SP=
+ONSOR) [4]=20
+
+ TLDR puts you in front of your target audience with almos=
+t no
+competition. Each issue features only three advertisers max, giving=
+
+your message the space it needs to stand out. Millions of developers,
+=
+product managers, CEOs, and other tech decision makers actually see
+what =
+you have to say. Learn more [4] about running a test campaign.=20
+
+=
+=F0=9F=93=B1=20
+
+BIG TECH & STARTUPS
+
+ APPLE'S AIRTAG 2 IS EASIER TO =
+FIND THANKS TO NEW CHIP (2 MINUTE READ)
+[5]=20
+
+ Apple's new AirTag, si=
+mply dubbed 'the new AirTag', features a new
+Bluetooth chip that offers s=
+ubstantial improvements. It can work with
+the Precision Finding feature i=
+n the Find My app to find items up to
+50% farther away. The speaker is al=
+so 50% louder. The new AirTag
+doesn't introduce any major new features, o=
+nly updates to the device's
+accuracy, volume, and range.=20
+
+ MICROSOFT=
+ INTRODUCES NEWEST IN-HOUSE AI CHIP (5 MINUTE READ) [6]=20
+
+ The Microsof=
+t Azure Maia 200 is a new in-house AI server chip
+designed for inferencin=
+g AI models with ludicrous speeds. It is the
+most efficient inference sys=
+tem Microsoft has ever deployed. The chip
+gives 30% more performance per =
+dollar and 50% higher TDP than the
+first-gen Maia 100. It can hit up to 1=
+0 petaflops of FP4 compute,
+three times higher than Amazon's Trainium3. =
+
+
+=F0=9F=9A=80=20
+
+SCIENCE & FUTURISTIC TECHNOLOGY
+
+ BUILDING BRA=
+INS ON A COMPUTER (40 MINUTE READ) [7]=20
+
+ Before we simulate human brai=
+ns, we first need to demonstrate mastery
+at the sub-million-neuron-brain =
+level. Achieving this goal will depend
+primarily on more and better data,=
+ which is bottlenecked by funding
+and the achievement of some key technol=
+ogical breakthroughs. It will
+soon be feasible thanks to a couple of rece=
+nt advances. We are nearly
+capable of overcoming such bottlenecks at the =
+scale of insect-sized
+organisms.=20
+
+ SEEING LIKE A SEDAN (40 MINUTE RE=
+AD) [8]=20
+
+ Tesla robotaxis navigate using an array of cameras, while Wa=
+ymos uses
+LIDAR technology along with a suite of complementary sensors. T=
+esla
+challenged convention, but it has quietly reintroduced radar, and it=
+
+is possible it may bring in other modalities. The paths for the two
+co=
+mpanies seem likely to converge in the future. This means that
+instead of=
+ debating whether cameras or LIDAR is better, regulators
+should be asking=
+ whether robotaxis in general are as safe as human
+drivers.=20
+
+=
+=F0=9F=92=BB=20
+
+PROGRAMMING, DESIGN & DATA SCIENCE
+
+ [DATADOG EBOOK]=
+ 6 STEPS TO DIAGRAM YOUR CLOUD ARCHITECTURE (SPONSOR)
+[9]=20
+
+ If you c=
+an't see how traffic moves, you can't truly calculate cost or
+detect late=
+ncy issues =E2=80=94 especially if you use dozens of services. In
+this eB=
+ook, Datadog & AWS Solutions Architects provide 6 steps to
+diagramming yo=
+ur cloud architecture [9] at the infra and traffic
+levels. Download your =
+copy [9]=20
+
+ A FEW RANDOM NOTES FROM CLAUDE CODING QUITE A BIT LAST FEW =
+WEEKS (7
+MINUTE READ) [10]=20
+
+ AI agent capabilities crossed a thresho=
+ld at the end of last year.
+This has caused a phase shift in software eng=
+ineering. The
+intelligence part is a bit ahead of integration, so there i=
+s a need
+for new organizational workflows and processes. This year will b=
+e a
+high-energy year as the industry digests the new capability.=20
+
+ 3=
+7SIGNALS ISN'T SMARTER THAN YOU, BUT THEY ARE DIFFERENT (3 MINUTE
+READ) [=
+11]=20
+
+ 37signals' engineering strategy results in good code. The compan=
+y
+stays small, cuts scope ruthlessly, and hires well. Its strategy
+crea=
+tes a flywheel where developers maintain less code, allowing them
+to appl=
+y more fixup/review cycles, creating a cleaner code base, which
+helps to =
+reduce headcount. Most companies can't adopt the strategy
+because they th=
+ink more features equals more money.=20
+
+=F0=9F=8E=81=20
+
+MISCELLANEOUS=
+
+
+ THE ADOLESCENCE OF TECHNOLOGY (142 MINUTE READ) [12]=20
+
+ AI model=
+s are now beginning to make progress in solving unsolved
+mathematical pro=
+blems. It is so good that strong engineers are now
+handing their coding t=
+o AI. Similar improvements are occurring across
+biological science, finan=
+ce, physics, and a variety of agentic tasks.
+If progress continues, it wi=
+ll only be a few years before AI is better
+than humans at essentially eve=
+rything. This could result in a serious
+civilizational challenge that wil=
+l require decisive and careful
+action.=20
+
+ THE BEHAVIORAL COST OF PERS=
+ONALIZED PRICING (7 MINUTE READ) [13]=20
+
+ Today's personalized pricing i=
+s different. The average person
+probably doesn't even know that haggling =
+is an option or the factors
+that contribute to personalized pricing. In t=
+he future, people will
+cultivate their digital representations so they ca=
+n get the lowest
+prices and best treatment. This access could even be sol=
+d to others
+who aren't so careful.=20
+
+=E2=9A=A1=20
+
+QUICK LINKS
+=
+
+ TLDR IS HIRING A CURATOR FOR TLDR IT! (TLDR CURATOR, ~5 HRS/WEEK)=20
+=
+
+ We are launching a brand new newsletter covering IT and enterprise
+te=
+ch.
+If you are an IT leader interested in writing for us, please send you=
+r
+resume or LinkedIn to=C2=A0itcurator@tldr.tech!=20
+
+ CLOSING THE SOFT=
+WARE LOOP (5 MINUTE READ) [14]=20
+
+ The Holy Grail of software developmen=
+t is full self-improvement, and
+the key to building this is a system that=
+ can autonomously generate
+bug reports and understand features that users=
+ will want.=20
+
+ PERFORMANCE HINTS (58 MINUTE READ) [15]=20
+
+ This post=
+ is a review of a blog post written by Jeff Dean and Sanjay
+Ghemawat, the=
+ power duo who arguably made Google what it is today.=20
+
+ SPACEX STARSHI=
+P V3 GETS LAUNCH DATE UPDATE FROM ELON MUSK (1 MINUTE
+READ) [16]=20
+
+ S=
+tarship Flight 12 will launch in six weeks.=20
+
+ SAAS, WIDELY MISUNDERSTO=
+OD (15 MINUTE READ) [17]=20
+
+ Replacing SaaS with AI would cost more and =
+deliver a lower-quality
+product in almost all scenarios, so it makes no s=
+ense from an economic
+or product perspective.=20
+
+ TSMC RISK (16 MINUTE=
+ READ) [18]=20
+
+ The only way to actually meet demand in 2028 and beyond =
+is to have
+competition in the foundry space.=20
+
+ LIFE ON CLAUDE NINE (=
+26 MINUTE READ) [19]=20
+
+ Claude makes problems that used to take hours t=
+ake minutes,
+automating every tedious task away.=20
+
+Love TLDR? Tell yo=
+ur friends and get rewards!
+
+ Share your referral link below with frien=
+ds to get free TLDR swag!=20
+
+ https://refer.tldr.tech/95f8de32/ [20]=20
+=
+
+=09=09 Track your referrals here. [21]=20
+
+Want to advertise in TLDR? =
+=F0=9F=93=B0
+
+ If your company is interested in reaching an audience of=
+ tech
+executives, decision-makers and engineers, you may want to ADVERTIS=
+E
+WITH US [22].=20
+
+Want to work at TLDR? =F0=9F=92=BC
+
+ APPLY HERE=
+ [23], CREATE YOUR OWN ROLE [24] or send a friend's resume
+to jobs@tldr.t=
+ech and get $1k if we hire them! TLDR is one of INC.'S
+BEST BOOTSTRAPPED =
+BUSINESSES [25] of 2025.=20
+
+ If you have any comments or feedback, just =
+respond to this email!=20
+
+Thanks for reading,=20
+Dan Ni [26] & Stephen F=
+landers [27]=20
+
+ Manage your subscriptions [28] to our other newsletters=
+ on tech,
+startups, and programming. Or if TLDR isn't for you, please
+u=
+nsubscribe [29].=20
+
+=20
+
+Links:
+------
+[1] https://tldr.tech/signu=
+p?utm_source=3Dtldr
+[2] https://advertise.tldr.tech/?utm_source=3Dtldr&ut=
+m_medium=3Dnewsletter&utm_campaign=3Dadvertisetopnav
+[3] https://a.tldrne=
+wsletter.com/web-version?ep=3D1&lc=3D46c4c580-a670-11f0-ad93-1f8c13b87d10&p=
+=3D33242360-fb5a-11f0-a256-0bb2bfc1c155&pt=3Dcampaign&t=3D1769513335&s=3Daa=
+d20cb3360986fa95faa2a919f0c816011129d0696cf359bdf74910721994eb
+[4] https:=
+//advertise.tldr.tech/?utm_source=3Dtldr&utm_medium=3Dnewsletter&utm_campai=
+gn=3Dprimary01222026
+[5] https://arstechnica.com/gadgets/2026/01/apple-in=
+troduces-new-airtag-with-better-range-and-a-louder-speaker/?utm_source=3Dtl=
+drnewsletter
+[6] https://www.tomshardware.com/pc-components/cpus/microsof=
+t-introduces-newest-in-house-ai-chip-maia-200-is-faster-than-other-bespoke-=
+nvidia-competitors-built-on-tsmc-3nm-with-216gb-of-hbm3e?utm_source=3Dtldrn=
+ewsletter
+[7] https://www.asimov.press/p/brains?utm_source=3Dtldrnewslett=
+er
+[8] https://asteriskmag.com/issues/13/seeing-like-a-sedan?utm_source=
+=3Dtldrnewsletter
+[9] https://www.datadoghq.com/resources/designing-cloud=
+-architecture/?utm_source=3Dtldrnewsletter&utm_medium=3Dnewsletter&utm_camp=
+aign=3Ddg-coreplatform-ww-cloud-architecture-tldr
+[10] https://xcancel.co=
+m/karpathy/status/2015883857489522876?utm_source=3Dtldrnewsletter
+[11] ht=
+tps://www.nateberkopec.com/blog/37signals-is-not-smarter-than-you/?utm_sour=
+ce=3Dtldrnewsletter
+[12] https://www.darioamodei.com/essay/the-adolescenc=
+e-of-technology?utm_source=3Dtldrnewsletter
+[13] https://digitalseams.com=
+/blog/the-behavioral-cost-of-personalized-pricing?utm_source=3Dtldrnewslett=
+er
+[14] https://www.benedict.dev/closing-the-software-loop?utm_source=3Dt=
+ldrnewsletter
+[15] https://maknee.github.io/blog/2026/Performance-Hints/?=
+utm_source=3Dtldrnewsletter
+[16] https://www.teslarati.com/spacex-starshi=
+p-v3-gets-launch-date-update-from-elon-musk/?utm_source=3Dtldrnewsletter
+=
+[17] https://buffettsdisciple.substack.com/p/saas-widely-misunderstood-csut=
+o-toiv?utm_campaign=3Dpost&utm_medium=3Dweb&triedRedirect=3Dtrue&utm_source=
+=3Dtldrnewsletter
+[18] https://stratechery.com/2026/tsmc-risk/?utm_source=
+=3Dtldrnewsletter
+[19] https://babuschk.in/posts/2026-01-25-life-on-claud=
+e-nine.html?utm_source=3Dtldrnewsletter
+[20] https://refer.tldr.tech/95f8=
+de32/
+[21] https://hub.sparklp.co/sub_47fb527d7973/1
+[22] https://adver=
+tise.tldr.tech/?utm_source=3Dtldr&utm_medium=3Dnewsletter&utm_campaign=3Dad=
+vertisecta
+[23] https://jobs.ashbyhq.com/tldr.tech
+[24] https://jobs.as=
+hbyhq.com/tldr.tech/c227b917-a6a4-40ce-8950-d3e165357871
+[25] https://www=
+.linkedin.com/feed/update/urn:li:activity:7401699691039830016/
+[26] https=
+://twitter.com/tldrdan
+[27] https://twitter.com/SteveFlanders22
+[28] ht=
+tps://tldr.tech/tech/manage?email=3Dmike.mcconigley%40gmail.com
+[29] http=
+s://a.tldrnewsletter.com/unsubscribe?ep=3D1&l=3Dcfa2d55a-b7be-11e8-a3c9-06b=
+79b628af2&lc=3D46c4c580-a670-11f0-ad93-1f8c13b87d10&p=3D33242360-fb5a-11f0-=
+a256-0bb2bfc1c155&pt=3Dcampaign&pv=3D4&spa=3D1769511675&t=3D1769513335&s=3D=
+9aac0178d5ef73d0520712ac061fe26e79fd1e655569bfd3a7623de5e6b71386
+--6wHS3bgX
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html charset=3DUTF-8"><meta charset=3D"UTF-8"><meta name=3D"v=
+iewport" content=3D"width=3Ddevice-width"><meta name=3D"x-apple-disable-mes=
+sage-reformatting"><title>TLDR</title><meta name=3D"color-scheme" content=
+=3D"light dark"><meta name=3D"supported-color-schemes" content=3D"light dar=
+k"><style type=3D"text/css">
+=09=09=09:root {
+=09=09=09=09color-scheme: light dark; supported-color-schemes: light dark;
+=09=09=09}
+=09=09=09
+=09=09=09*,
+=09=09=09*:after,
+=09=09=09*:before {
+=09=09=09=09-webkit-box-sizing: border-box; -moz-box-sizing: border-box; bo=
+x-sizing: border-box;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+=09=09=09}
+=09=09=09
+=09=09=09html,
+=09=09=09body,
+=09=09=09.document {
+=09=09=09=09width: 100% !important; height: 100% !important; margin: 0; pad=
+ding: 0;
+=09=09=09}
+=09=09=09
+=09=09=09body {
+=09=09=09=09-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: g=
+rayscale; text-rendering: optimizeLegibility;
+=09=09=09}
+=09=09=09
+=09=09=09div[style*=3D"margin: 16px 0"] {
+=09=09=09=09margin: 0 !important;
+=09=09=09}
+=09=09=09
+=09=09=09table,
+=09=09=09td {
+=09=09=09=09mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+=09=09=09}
+=09=09=09
+=09=09=09table {
+=09=09=09=09border-spacing: 0; border-collapse: collapse; table-layout: fix=
+ed; margin: 0 auto;
+=09=09=09}
+=09=09=09
+=09=09=09img {
+=09=09=09=09-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+=09=09=09}
+=09=09=09
+=09=09=09*[x-apple-data-detectors] {
+=09=09=09=09color: inherit !important; text-decoration: none !important;
+=09=09=09}
+=09=09=09
+=09=09=09.x-gmail-data-detectors,
+=09=09=09.x-gmail-data-detectors *,
+=09=09=09.aBn {
+=09=09=09=09border-bottom: 0 !important; cursor: default !important;
+=09=09=09}
+=09=09=09
+=09=09=09.btn {
+=09=09=09=09-webkit-transition: all 200ms ease; transition: all 200ms ease;
+=09=09=09}
+=09=09=09
+=09=09=09.btn:hover {
+=09=09=09=09background-color: #f67575; border-color: #f67575;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+=09=09=09}
+=09=09=09
+=09=09=09@media screen and (max-width: 600px) {
+=09=09=09=09.container {
+=09=09=09=09=09width: 100%; margin: auto;
+=09=09=09=09}
+=09=09=09=09.stack {
+=09=09=09=09=09display: block!important; width: 100%!important; max-width: =
+100%!important;
+=09=09=09=09}
+=09=09=09=09.btn {
+=09=09=09=09=09display: block; width: 100%; text-align: center;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09body,
+=09=09=09p,
+=09=09=09td,
+=09=09=09tr,
+=09=09=09.body,
+=09=09=09table,
+=09=09=09h1,
+=09=09=09h2,
+=09=09=09h3,
+=09=09=09h4,
+=09=09=09h5,
+=09=09=09h6,
+=09=09=09div,
+=09=09=09span {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09body,
+=09=09=09=09p,
+=09=09=09=09td,
+=09=09=09=09tr,
+=09=09=09=09.body,
+=09=09=09=09table,
+=09=09=09=09h1,
+=09=09=09=09h2,
+=09=09=09=09h3,
+=09=09=09=09h4,
+=09=09=09=09h5,
+=09=09=09=09h6,
+=09=09=09=09div,
+=09=09=09=09span {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09a {
+=09=09=09=09color: inherit !important; text-decoration: underline !importan=
+t;
+=09=09=09}
+
+=09=09</style><!--[if mso | ie]>
+=09=09<style type=3D"text/css">
+=09=09=09a {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09a {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09 </style>
+=09=09=09<![endif]--></head><body class=3D"">
+
+
+
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">AI models =
+are now beginning to make progress in solving unsolved problems. It is so g=
+ood that strong engineers are now handing their coding to AI&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;</div>
+
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align=3D"center" class=3D"document"><tbody><tr><td valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"container" width=3D"600"><tbody><tr class=3D"inner-body"><td>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr class=3D"header"><td bgcolor=3D"" class=3D"containe=
+r">
+
+<table width=3D"100%"><tbody><tr><td class=3D"container">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"margin-top: 0px;" width=3D"100%"><tbody><tr><td style=
+=3D"padding: 0px;">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div style=3D"text-align: center;">
+<span style=3D"margin-right: 0px;"><a href=3D"https://tracking.tldrnewslett=
+er.com/CL0/https:%2F%2Ftldr.tech%2Fsignup%3Futm_source=3Dtldr/1/0100019bff3=
+6bd38-f25f0f1e-db2b-4435-8c26-8aa532bc027f-000000/BZea_QG8Sad0dY8QKEaQnb1SL=
+k2kGtSTE3Fvx3vpUG8=3D441" rel=3D"noopener noreferrer" target=3D"_blank"><sp=
+an>Sign Up</span></a>
+<span>|</span><span style=3D"margin-right: 2px; margin-left: 2px;"><a href=
+=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech=
+%2F%3Futm_source=3Dtldr%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertis=
+etopnav/1/0100019bff36bd38-f25f0f1e-db2b-4435-8c26-8aa532bc027f-000000/gA0T=
+1YXtAIpG-FHBgF4-0egWBGj1E5wh1L0YyEZnqaY=3D441" rel=3D"noopener noreferrer" =
+target=3D"_blank"><span>Advertise</span></a></span><span>|</span><span styl=
+e=3D"margin-left: 2px;"><a href=3D"https://tracking.tldrnewsletter.com/CL0/=
+https:%2F%2Fa.tldrnewsletter.com%2Fweb-version%3Fep=3D1%26lc=3D46c4c580-a67=
+0-11f0-ad93-1f8c13b87d10%26p=3D33242360-fb5a-11f0-a256-0bb2bfc1c155%26pt=3D=
+campaign%26t=3D1769513335%26s=3Daad20cb3360986fa95faa2a919f0c816011129d0696=
+cf359bdf74910721994eb/1/0100019bff36bd38-f25f0f1e-db2b-4435-8c26-8aa532bc02=
+7f-000000/EjNn76tenR4_l0OfCgaUP7a_5K2jLsQQS3SIa1Tbm-s=3D441"><span>View Onl=
+ine</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"text-=
+align: center;"><span data-darkreader-inline-color=3D"" style=3D"--darkread=
+er-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30=
+px;">T</span><span style=3D"font-size: 30px;"><span data-darkreader-inline-=
+color=3D"" style=3D"color: rgb(232, 192, 96) !important; --darkreader-inlin=
+e-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-colo=
+r=3D"" style=3D"color: rgb(101, 195, 173) !important; --darkreader-inline-c=
+olor:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-=
+color=3D"" style=3D"--darkreader-inline-color:#dd6e6e; color: rgb(220, 107,=
+ 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr id=3D"together-with"><td align=3D"cent=
+er" height=3D"20" style=3D"vertical-align:middle !important;" valign=3D"mid=
+dle" width=3D"100%"><strong style=3D"vertical-align:middle !important; heig=
+ht: 100%;">Together With </strong>
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tl=
+dr.tech%2F%3Futm_source=3Dtldr%26utm_medium=3Dnewsletter%26utm_campaign=3Dp=
+rimary01222026/1/0100019bff36bd38-f25f0f1e-db2b-4435-8c26-8aa532bc027f-0000=
+00/1K3WbqEU_ZzzecsvAC--4t8zW1GUByBqMvU4hZe_6ho=3D441"><img src=3D"https://i=
+mages.tldr.tech/tldr50.png" valign=3D"middle" style=3D"vertical-align: midd=
+le !important; height: 100%;" alt=3D"TLDR"></a></td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody><tr=
+><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0;=
+">
+<div style=3D"text-align: center;">
+
+<h1><strong>TLDR <span id=3D"date">2026-01-27</span></strong></h1>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody><tr=
+ id=3D"sponsy-copy"><td class=3D"container" style=3D"padding: 15px 15px;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=3Dtldr%26utm_medium=
+=3Dnewsletter%26utm_campaign=3Dprimary01222026/2/0100019bff36bd38-f25f0f1e-=
+db2b-4435-8c26-8aa532bc027f-000000/LzS4VUTMljZPFKDkzhA7Yg7-rmrzFF-FkGZINbrq=
+zpw=3D441">
+                                    <span>
+                                        <strong>Reach real buyers in TLDR i=
+nstead of fighting for attention on social (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    TLDR puts you in front of your target a=
+udience with almost no competition. Each issue features only three advertis=
+ers max, giving your message the space it needs to stand out. Millions of d=
+evelopers, product managers, CEOs, and other tech decision makers actually =
+see what you have to say. <a href=3D"https://tracking.tldrnewsletter.com/CL=
+0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=3Dtldr%26utm_medium=3Dnew=
+sletter%26utm_campaign=3Dprimary01222026/3/0100019bff36bd38-f25f0f1e-db2b-4=
+435-8c26-8aa532bc027f-000000/u8BMnh-cLFod9h-lfk2Cmve6uYJ79xkiDlBqubjDuRY=3D=
+441" rel=3D"noopener noreferrer nofollow" target=3D"_blank"><span>Learn mor=
+e</span></a> about running a test campaign.
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=3D""><td class=3D"container">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td style=3D"padding: 0px;">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=93=B1</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Big Tech &amp; Startups</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Farstechnica.com%2Fgadgets%2F2026%2F01%2Fapple-introduce=
+s-new-airtag-with-better-range-and-a-louder-speaker%2F%3Futm_source=3Dtldrn=
+ewsletter/1/0100019bff36bd38-f25f0f1e-db2b-4435-8c26-8aa532bc027f-000000/_f=
+gt-6JxHe-UtYgABJk39gHUmKjVSRI3JOMDqGxZXek=3D441">
+                                    <span>
+                                        <strong>Apple's AirTag 2 is easier =
+to find thanks to new chip (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Apple's new AirTag, simply dubbed 'the =
+new AirTag', features a new Bluetooth chip that offers substantial improvem=
+ents. It can work with the Precision Finding feature in the Find My app to =
+find items up to 50% farther away. The speaker is also 50% louder. The new =
+AirTag doesn't introduce any major new features, only updates to the device=
+'s accuracy, volume, and range.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.tomshardware.com%2Fpc-components%2Fcpus%2Fmicrosoft=
+-introduces-newest-in-house-ai-chip-maia-200-is-faster-than-other-bespoke-n=
+vidia-competitors-built-on-tsmc-3nm-with-216gb-of-hbm3e%3Futm_source=3Dtldr=
+newsletter/1/0100019bff36bd38-f25f0f1e-db2b-4435-8c26-8aa532bc027f-000000/p=
+sYSsDYukqKTHQoR2QqQahSzoMDMZaB4udvpjPG0_Ak=3D441">
+                                    <span>
+                                        <strong>Microsoft introduces newest=
+ in-house AI chip (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    The Microsoft Azure Maia 200 is a new i=
+n-house AI server chip designed for inferencing AI models with ludicrous sp=
+eeds. It is the most efficient inference system Microsoft has ever deployed=
+. The chip gives 30% more performance per dollar and 50% higher TDP than th=
+e first-gen Maia 100. It can hit up to 10 petaflops of FP4 compute, three t=
+imes higher than Amazon's Trainium3.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=9A=80</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Science &amp; Futuristic Technology</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.asimov.press%2Fp%2Fbrains%3Futm_source=3Dtldrnewsle=
+tter/1/0100019bff36bd38-f25f0f1e-db2b-4435-8c26-8aa532bc027f-000000/Ud9ZS4y=
+VELRnqhIprnNWcm8Yh89i8NY1t9TfGIaI-K4=3D441">
+                                    <span>
+                                        <strong>Building Brains on a Comput=
+er (40 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Before we simulate human brains, we fir=
+st need to demonstrate mastery at the sub-million-neuron-brain level. Achie=
+ving this goal will depend primarily on more and better data, which is bott=
+lenecked by funding and the achievement of some key technological breakthro=
+ughs. It will soon be feasible thanks to a couple of recent advances. We ar=
+e nearly capable of overcoming such bottlenecks at the scale of insect-size=
+d organisms.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fasteriskmag.com%2Fissues%2F13%2Fseeing-like-a-sedan%3Fu=
+tm_source=3Dtldrnewsletter/1/0100019bff36bd38-f25f0f1e-db2b-4435-8c26-8aa53=
+2bc027f-000000/lTpZrYWMhaWRus0Cal8we1qVpJoATOz4HlJb3UZLVvk=3D441">
+                                    <span>
+                                        <strong>Seeing Like a Sedan (40 min=
+ute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Tesla robotaxis navigate using an array=
+ of cameras, while Waymos uses LIDAR technology along with a suite of compl=
+ementary sensors. Tesla challenged convention, but it has quietly reintrodu=
+ced radar, and it is possible it may bring in other modalities. The paths f=
+or the two companies seem likely to converge in the future. This means that=
+ instead of debating whether cameras or LIDAR is better, regulators should =
+be asking whether robotaxis in general are as safe as human drivers.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=92=BB</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Programming, Design &amp; Data Science</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.datadoghq.com%2Fresources%2Fdesigning-cloud-archite=
+cture%2F%3Futm_source=3Dtldrnewsletter%26utm_medium=3Dnewsletter%26utm_camp=
+aign=3Ddg-coreplatform-ww-cloud-architecture-tldr/1/0100019bff36bd38-f25f0f=
+1e-db2b-4435-8c26-8aa532bc027f-000000/D-IYoIJIvtAKuaKfsobjamkEGoQzFeHwLay_o=
+W4O33k=3D441">
+                                    <span>
+                                        <strong>[Datadog eBook] 6 steps to =
+diagram your cloud architecture (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    If you can't see how traffic moves, you=
+ can't truly calculate cost or detect latency issues =E2=80=94 especially i=
+f you use dozens of services. In this eBook, Datadog &amp; AWS Solutions Ar=
+chitects provide <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%=
+2F%2Fwww.datadoghq.com%2Fresources%2Fdesigning-cloud-architecture%2F%3Futm_=
+source=3Dtldrnewsletter%26utm_medium=3Dnewsletter%26utm_campaign=3Ddg-corep=
+latform-ww-cloud-architecture-tldr/2/0100019bff36bd38-f25f0f1e-db2b-4435-8c=
+26-8aa532bc027f-000000/2N_d9lsqnDDNXdbtl_akTaOzLZz_dkSTOxUL5Yee2y0=3D441" r=
+el=3D"noopener noreferrer nofollow" target=3D"_blank"><span>6 steps to diag=
+ramming your cloud architecture</span></a> at the infra and traffic levels.=
+ <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.datadog=
+hq.com%2Fresources%2Fdesigning-cloud-architecture%2F%3Futm_source=3Dtldrnew=
+sletter%26utm_medium=3Dnewsletter%26utm_campaign=3Ddg-coreplatform-ww-cloud=
+-architecture-tldr/3/0100019bff36bd38-f25f0f1e-db2b-4435-8c26-8aa532bc027f-=
+000000/DxWOielRsg__cHErfztu1w8hY5szVlakP1dKGCEcqEA=3D441" rel=3D"noopener n=
+oreferrer nofollow" target=3D"_blank"><span>Download your copy</span></a>
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fxcancel.com%2Fkarpathy%2Fstatus%2F2015883857489522876%3=
+Futm_source=3Dtldrnewsletter/1/0100019bff36bd38-f25f0f1e-db2b-4435-8c26-8aa=
+532bc027f-000000/4AvoYMt2KArVqba8F7tSdt03NOCKHhErYCCD11D-iio=3D441">
+                                    <span>
+                                        <strong>A few random notes from Cla=
+ude coding quite a bit last few weeks (7 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    AI agent capabilities crossed a thresho=
+ld at the end of last year. This has caused a phase shift in software engin=
+eering. The intelligence part is a bit ahead of integration, so there is a =
+need for new organizational workflows and processes. This year will be a hi=
+gh-energy year as the industry digests the new capability.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.nateberkopec.com%2Fblog%2F37signals-is-not-smarter-=
+than-you%2F%3Futm_source=3Dtldrnewsletter/1/0100019bff36bd38-f25f0f1e-db2b-=
+4435-8c26-8aa532bc027f-000000/HKItzLN4TVG72V9_niW6UmRwVOQxsFGZ4MEJp05-bfs=
+=3D441">
+                                    <span>
+                                        <strong>37signals Isn't Smarter Tha=
+n You, But They Are Different (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    37signals' engineering strategy results=
+ in good code. The company stays small, cuts scope ruthlessly, and hires we=
+ll. Its strategy creates a flywheel where developers maintain less code, al=
+lowing them to apply more fixup/review cycles, creating a cleaner code base=
+, which helps to reduce headcount. Most companies can't adopt the strategy =
+because they think more features equals more money.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=8E=81</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><strong><h1>Miscellaneous</h1></strong><=
+/div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.darioamodei.com%2Fessay%2Fthe-adolescence-of-techno=
+logy%3Futm_source=3Dtldrnewsletter/1/0100019bff36bd38-f25f0f1e-db2b-4435-8c=
+26-8aa532bc027f-000000/skTZQxVOdY4xc3VxLFbIC257w77gwsUXQKEZrMnSHsU=3D441">
+                                    <span>
+                                        <strong>The Adolescence of Technolo=
+gy (142 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    AI models are now beginning to make pro=
+gress in solving unsolved mathematical problems. It is so good that strong =
+engineers are now handing their coding to AI. Similar improvements are occu=
+rring across biological science, finance, physics, and a variety of agentic=
+ tasks. If progress continues, it will only be a few years before AI is bet=
+ter than humans at essentially everything. This could result in a serious c=
+ivilizational challenge that will require decisive and careful action.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fdigitalseams.com%2Fblog%2Fthe-behavioral-cost-of-person=
+alized-pricing%3Futm_source=3Dtldrnewsletter/1/0100019bff36bd38-f25f0f1e-db=
+2b-4435-8c26-8aa532bc027f-000000/5MNybhxpEcZYvTM5mncOUSwH81TJwgSowDwiCqGUoz=
+k=3D441">
+                                    <span>
+                                        <strong>The behavioral cost of pers=
+onalized pricing (7 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Today's personalized pricing is differe=
+nt. The average person probably doesn't even know that haggling is an optio=
+n or the factors that contribute to personalized pricing. In the future, pe=
+ople will cultivate their digital representations so they can get the lowes=
+t prices and best treatment. This access could even be sold to others who a=
+ren't so careful.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=E2=9A=
+=A1</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"mailto:itcurator@tldr.tech?utm_s=
+ource=3Dtldrnewsletter">
+                                    <span>
+                                        <strong>TLDR is hiring a Curator fo=
+r TLDR IT! (TLDR Curator, ~5 hrs/week)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    We are launching a brand new newsletter=
+ covering IT and enterprise tech.<br>If you are an IT leader interested in =
+writing for us, please send your resume or LinkedIn to&nbsp;<a class=3D"c-l=
+ink" href=3D"mailto:itcurator@tldr.tech" rel=3D"noopener noreferrer" target=
+=3D"_blank"><span>itcurator@tldr.tech</span></a>!
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.benedict.dev%2Fclosing-the-software-loop%3Futm_sour=
+ce=3Dtldrnewsletter/1/0100019bff36bd38-f25f0f1e-db2b-4435-8c26-8aa532bc027f=
+-000000/y_iaCvgANWKJrtkKpzOTe7kQ0d8BLXZxCywdLGYVFYU=3D441">
+                                    <span>
+                                        <strong>Closing the Software Loop (=
+5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    The Holy Grail of software development =
+is full self-improvement, and the key to building this is a system that can=
+ autonomously generate bug reports and understand features that users will =
+want.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fmaknee.github.io%2Fblog%2F2026%2FPerformance-Hints%2F%3=
+Futm_source=3Dtldrnewsletter/1/0100019bff36bd38-f25f0f1e-db2b-4435-8c26-8aa=
+532bc027f-000000/H2rE3fhIKu9H6ExWvZSVvScCCdxOkCAWNyvcqmS_SQg=3D441">
+                                    <span>
+                                        <strong>Performance Hints (58 minut=
+e read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    This post is a review of a blog post wr=
+itten by Jeff Dean and Sanjay Ghemawat, the power duo who arguably made Goo=
+gle what it is today.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.teslarati.com%2Fspacex-starship-v3-gets-launch-date=
+-update-from-elon-musk%2F%3Futm_source=3Dtldrnewsletter/1/0100019bff36bd38-=
+f25f0f1e-db2b-4435-8c26-8aa532bc027f-000000/BWItE4nqCk-_IKpTHCIIAOyn21YCJTI=
+fDHN_fkTWcKI=3D441">
+                                    <span>
+                                        <strong>SpaceX Starship V3 gets lau=
+nch date update from Elon Musk (1 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Starship Flight 12 will launch in six w=
+eeks.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fbuffettsdisciple.substack.com%2Fp%2Fsaas-widely-misunde=
+rstood-csuto-toiv%3Futm_campaign=3Dpost%26utm_medium=3Dweb%26triedRedirect=
+=3Dtrue%26utm_source=3Dtldrnewsletter/1/0100019bff36bd38-f25f0f1e-db2b-4435=
+-8c26-8aa532bc027f-000000/26PvZ-E5A8mRR_3xPvVCTP7u78yn0RxQcWCG_IyfsCo=3D441=
+">
+                                    <span>
+                                        <strong>SaaS, widely misunderstood =
+(15 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Replacing SaaS with AI would cost more =
+and deliver a lower-quality product in almost all scenarios, so it makes no=
+ sense from an economic or product perspective.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fstratechery.com%2F2026%2Ftsmc-risk%2F%3Futm_source=3Dtl=
+drnewsletter/1/0100019bff36bd38-f25f0f1e-db2b-4435-8c26-8aa532bc027f-000000=
+/FHBGQUemFai6cqFtz0xCLkFcheT97yGHnHeAtZLEfAs=3D441">
+                                    <span>
+                                        <strong>TSMC Risk (16 minute read)<=
+/strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    The only way to actually meet demand in=
+ 2028 and beyond is to have competition in the foundry space.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fbabuschk.in%2Fposts%2F2026-01-25-life-on-claude-nine.ht=
+ml%3Futm_source=3Dtldrnewsletter/1/0100019bff36bd38-f25f0f1e-db2b-4435-8c26=
+-8aa532bc027f-000000/c5nzMnfl1re2c2LcTVYSmzc6L9bf8D_dpXJJGlnvElE=3D441">
+                                    <span>
+                                        <strong>Life on Claude Nine (26 min=
+ute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Claude makes problems that used to take=
+ hours take minutes, automating every tedious task away.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"word-break=
+: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class=3D"container" style=3D"padding: 0px 10px 15px;">
+<div class=3D"text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align=3D"left" style=3D"padding: 10px;">
+<div class=3D"text-block">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.t=
+ech%2F95f8de32%2F/1/0100019bff36bd38-f25f0f1e-db2b-4435-8c26-8aa532bc027f-0=
+00000/5enDCB-DaNS3qLktksfKRv1IPcvgPE8hxkCNrAscZJ8=3D441" style=3D"color: #4=
+64ba4; text-decoration: underline;">https://refer.tldr.tech/95f8de32/</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align=3D"left" style=3D"padding:5px 10px;">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.=
+co%2Fsub_47fb527d7973%2F1/1/0100019bff36bd38-f25f0f1e-db2b-4435-8c26-8aa532=
+bc027f-000000/gHFN4N0v0yxGiEtUMnHVoEK07mlfiCS2LBCVNDfqU48=3D441" style=3D"f=
+ont-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block; =
+ text-decoration: underline;"><span style=3D"mso-text-raise:13pt; text-deco=
+ration: underline;">Track your referrals here.</span></a>
+</td></tr></tbody></table>
+
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"word-break=
+: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to advertise in TLDR? =F0=9F=93=B0
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+If your company is interested in reaching an audience of tech executives, d=
+ecision-makers and engineers, you may want to <a href=3D"https://tracking.t=
+ldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=3Dtld=
+r%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertisecta/1/0100019bff36bd3=
+8-f25f0f1e-db2b-4435-8c26-8aa532bc027f-000000/X5w0gvcCUgq2-AxoQhIkm36hN6AdZ=
+0DjSyWPgDPreKE=3D441"><strong><span>advertise with us</span></strong></a>.
+</div>
+<br>
+
+<!-- New "Want to work at TLDR?" section -->
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to work at TLDR? =F0=9F=92=BC
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech/1/0100019bff36bd38-f25f0f1e-db2b-4435-8c26-8aa532bc027f-00=
+0000/dhdguLUnHdsCXbOiBaHvfRM5EIG2GDVvfZnjjyVo_hY=3D441" rel=3D"noopener nor=
+eferrer" style=3D"color: #0000EE; text-decoration: underline;" target=3D"_b=
+lank"><strong>Apply here</strong></a>,
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech%2Fc227b917-a6a4-40ce-8950-d3e165357871/1/0100019bff36bd38-=
+f25f0f1e-db2b-4435-8c26-8aa532bc027f-000000/PHEm2rXRELqdd6lA1566Mmuhzu2fyw3=
+TnpkRTb_4-Lk=3D441" rel=3D"noopener noreferrer" style=3D"color: #0000EE; te=
+xt-decoration: underline;" target=3D"_blank"><strong>create your own role</=
+strong></a> or send a friend's resume to <a href=3D"mailto:jobs@tldr.tech" =
+style=3D"color: #0000EE; text-decoration: underline;">jobs@tldr.tech</a> an=
+d get $1k if we hire them! TLDR is one of <a href=3D"https://tracking.tldrn=
+ewsletter.com/CL0/https:%2F%2Fwww.linkedin.com%2Ffeed%2Fupdate%2Furn:li:act=
+ivity:7401699691039830016%2F/1/0100019bff36bd38-f25f0f1e-db2b-4435-8c26-8aa=
+532bc027f-000000/aacMrJ7CTaJVkLE1RuW3JCXCCPoh_favBcpYPBdnTQA=3D441" rel=3D"=
+noopener noreferrer" style=3D"color: #0000EE; text-decoration: underline;" =
+target=3D"_blank"><strong>Inc.'s Best Bootstrapped businesses</strong></a> =
+of 2025.
+</div>
+<br>
+
+<div class=3D"text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftwitter.com%=
+2Ftldrdan/1/0100019bff36bd38-f25f0f1e-db2b-4435-8c26-8aa532bc027f-000000/MD=
+sQYVHT1ilHpnEdNskaZ9Rmx86451bUcTNlwuJd3_s=3D441"><span>Dan Ni</span></a> &a=
+mp; <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftwitter.=
+com%2FSteveFlanders22/1/0100019bff36bd38-f25f0f1e-db2b-4435-8c26-8aa532bc02=
+7f-000000/hwFDAF1yXOPZfjTFaGGI9rIYeMRxQvd95Z1dndbVVsQ=3D441"><span>Stephen =
+Flanders</span></a>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div class=3D"text-block" id=3D"testing-id">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2F=
+tech%2Fmanage%3Femail=3Dmike.mcconigley%2540gmail.com/1/0100019bff36bd38-f2=
+5f0f1e-db2b-4435-8c26-8aa532bc027f-000000/Xn0lSvGgOQrcrYB4BOFj-mhhf1EemYrfp=
+7q_YX32YiA=3D441">Manage your subscriptions</a> to our other newsletters on=
+ tech, startups, and programming. Or if TLDR isn't for you, please <a href=
+=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.co=
+m%2Funsubscribe%3Fep=3D1%26l=3Dcfa2d55a-b7be-11e8-a3c9-06b79b628af2%26lc=3D=
+46c4c580-a670-11f0-ad93-1f8c13b87d10%26p=3D33242360-fb5a-11f0-a256-0bb2bfc1=
+c155%26pt=3Dcampaign%26pv=3D4%26spa=3D1769511675%26t=3D1769513335%26s=3D9aa=
+c0178d5ef73d0520712ac061fe26e79fd1e655569bfd3a7623de5e6b71386/1/0100019bff3=
+6bd38-f25f0f1e-db2b-4435-8c26-8aa532bc027f-000000/vIggHx6ZuoSbjpUA6W3aLHCqB=
+pXoZHUxtRc5yPn-ajM=3D441">unsubscribe</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+
+<img alt=3D"" src=3D"http://tracking.tldrnewsletter.com/CI0/0100019bff36bd3=
+8-f25f0f1e-db2b-4435-8c26-8aa532bc027f-000000/uKDQXRB7PLQdabKAZSJJZOBlrW1TU=
+k4apdN4DyXXFdo=3D441" style=3D"display: none; width: 1px; height: 1px;">
+</body></html>
+--6wHS3bgX--

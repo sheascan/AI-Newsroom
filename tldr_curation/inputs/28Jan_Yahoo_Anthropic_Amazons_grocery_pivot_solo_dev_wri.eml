@@ -1,0 +1,1491 @@
+Delivered-To: mike.mcconigley@gmail.com
+Received: by 2002:a8a:106:0:b0:617:3adb:9ab9 with SMTP id u6csp2616444ocq;
+        Wed, 28 Jan 2026 03:29:19 -0800 (PST)
+X-Received: by 2002:ac8:5816:0:b0:501:5284:c49b with SMTP id d75a77b69052e-5032f8f1758mr59348021cf.39.1769599758849;
+        Wed, 28 Jan 2026 03:29:18 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1769599758; cv=none;
+        d=google.com; s=arc-20240605;
+        b=RnvWFV3RATPuEbt1cIsqGW988QTC2Dsb2t9u3G5Iwk6fu8u9ZWyDn7Y2IbO4bO6A6y
+         +59otahdTyZAvWe0LF2Z0PJ+vr46xy2o6LhZAJ48EflEYL68hPRcjkvmTPCMOUsF1yST
+         LWTCc9n8cE8oJFRO5Qrgdx6R5lP4X9aN9aez/eItG+8bJqUs/zi/8m27T+VEwMgy/bUH
+         WX+ALsIqL5t6S8e9AVmmLX33KEkBvOf0HoPcCQQqOqipcoZKvdlKOaz1A+3ujINvQ2AB
+         L+yCfK8n3SI5x9Tx/6jgpQ599XQyvF+dOd+lfhmHOkZOvF9SPETZ/hrfhiQGrJNpi5E8
+         58FA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:date:mime-version:list-unsubscribe-post
+         :list-unsubscribe:subject:to:from:dkim-signature:dkim-signature;
+        bh=VI1l4qUN0Wq2RFtV4TVTcwNdxgwKtMXMw6ryItCopuk=;
+        fh=tUTYCbTOUI69DxYKXGXRz08XnPP7jEKRU6E5rS0DFR4=;
+        b=GRuzzEhLqodBs/2iyyMfpeHa3SpbOLB+1/HFx0sA59UsS2r6xesdrXX1CcFoFlc4DV
+         daRtZ8Xmtu7HWr8GHQ0fHPWjibeuwYoWKT633BWn+OtHSVPd+YbMYRDkF/ls94mALkXn
+         b+eSwX9t+AGJ2f/zA/t8d3lVELDoa8NboaHfCvS9PRiaI8IPEUD16Onp4PmhrP5yew29
+         fkv0Oiaibw4NqK4MP+BW1lhkByHw4zHsp/XkBOGTjRTucOEfr6xi17CNR2GnrQp5sXCU
+         dLAslxtAqRxBXqK9qfkuSwn7Gcfz59/pv2MGO35bmE5dORHEOhdi8kKf1e97c2FB5IFA
+         P2gQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=Z1nDffB7;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=bZbRmRzt;
+       spf=pass (google.com: domain of 0100019c045d6fe2-9953f544-37ee-42d6-bfe7-79e066b07fc2-000000@dailyupdate.tldrnewsletter.com designates 54.240.123.117 as permitted sender) smtp.mailfrom=0100019c045d6fe2-9953f544-37ee-42d6-bfe7-79e066b07fc2-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+Return-Path: <0100019c045d6fe2-9953f544-37ee-42d6-bfe7-79e066b07fc2-000000@dailyupdate.tldrnewsletter.com>
+Received: from a123-117.smtp-out.amazonses.com (a123-117.smtp-out.amazonses.com. [54.240.123.117])
+        by mx.google.com with ESMTPS id d75a77b69052e-5033745d61esi20994221cf.73.2026.01.28.03.29.18
+        for <mike.mcconigley@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Wed, 28 Jan 2026 03:29:18 -0800 (PST)
+Received-SPF: pass (google.com: domain of 0100019c045d6fe2-9953f544-37ee-42d6-bfe7-79e066b07fc2-000000@dailyupdate.tldrnewsletter.com designates 54.240.123.117 as permitted sender) client-ip=54.240.123.117;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=Z1nDffB7;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=bZbRmRzt;
+       spf=pass (google.com: domain of 0100019c045d6fe2-9953f544-37ee-42d6-bfe7-79e066b07fc2-000000@dailyupdate.tldrnewsletter.com designates 54.240.123.117 as permitted sender) smtp.mailfrom=0100019c045d6fe2-9953f544-37ee-42d6-bfe7-79e066b07fc2-000000@dailyupdate.tldrnewsletter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ygiuxamnxevikrd5dtfwanslhs6b24mt; d=tldrnewsletter.com;
+	t=1769599758;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type;
+	bh=phBPKm/tyr7HhyGUDieozkyN6YA+Gp9rbO2xvd/JgUc=;
+	b=Z1nDffB71jNag96I4q/zc6fh3wyDu0mnHoUtyqLlO8KD+Q2bydhY6XmFTmAtKb2n
+	Yd5ZEExZTRbL6ZvMsoLF03kC3jmglYImkPoqaBKqjvx6wTelIuPComXLEzvHy5wSKms
+	ztzueECZl9SplUtTYTiHrko4NIr+Lt+tlqSU1eyY=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1769599758;
+	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type:Feedback-ID;
+	bh=phBPKm/tyr7HhyGUDieozkyN6YA+Gp9rbO2xvd/JgUc=;
+	b=bZbRmRzt2xPBunowcylJLpAgLKpTJ0vyW3l5Xrt3xuAL8shDVjdryIrFKMsV6k7T
+	2IoDCNLpaFcCEFaiQ56cH6OrtRRJb99BtcvARPBoY433PWdbpYLWNU0VQVvhFuAkCTW
+	ahmyExZ6WMKVbhZ+SxskGtP9zz15gzZd4Q3NQplY=
+From: TLDR <dan@tldrnewsletter.com>
+To: mike.mcconigley@gmail.com
+Subject: Yahoo + Anthropic =?utf-8?Q?=F0=9F=A4=96=2C?= Amazon's grocery
+ pivot =?utf-8?Q?=F0=9F=9B=92=2C?= solo dev writes browser
+ =?utf-8?Q?=F0=9F=91=A8=E2=80=8D=F0=9F=92=BB?=
+X-Entity-Ref-Id: 962e356c-8347-4458-b507-c6ec760e991a
+X-EmailOctopus-Parent-Id: b15e8732-fc24-11f0-bc22-3d95a36bc826
+X-EmailOctopus-Parent-Type-Id: campaign
+X-EmailOctopus-List-Id: cfa2d55a-b7be-11e8-a3c9-06b79b628af2
+X-EmailOctopus-List-Contact-Id: 46c4c580-a670-11f0-ad93-1f8c13b87d10
+X-EmailOctopus-Started-Preparing-At: 2026-01-28T11:01:33+00:00
+X-EmailOctopus-Sent-At: 2026-01-28T11:29:18+00:00
+X-EmailOctopus-Team-Id: 66987ef2-4f4c-11e9-a3c9-06b79b628af2
+X-EmailOctopus-Version: 4
+List-Unsubscribe: <https://a.tldrnewsletter.com/unsubscribe?ep=1&l=cfa2d55a-b7be-11e8-a3c9-06b79b628af2&lc=46c4c580-a670-11f0-ad93-1f8c13b87d10&p=b15e8732-fc24-11f0-bc22-3d95a36bc826&pt=campaign&pv=4&spa=1769598093&t=1769599758&s=96e9e63619a8003f4d21cdc20e11e80ac9a0ac59c06111067135c63e546bd044>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-EmailOctopus-Ses-Configuration-Set-Name: emailoctopus-a9f7b12f74f3c968d9408897fb35539c
+MIME-Version: 1.0
+Date: Wed, 28 Jan 2026 11:29:18 +0000
+Message-ID: <0100019c045d6fe2-9953f544-37ee-42d6-bfe7-79e066b07fc2-000000@email.amazonses.com>
+Content-Type: multipart/alternative; boundary=W8xRb7Gi
+Feedback-ID: ::1.us-east-1.Dj5/7DYmgk+n1sSGGXSQSLIthSjNQ0MGtV5Dro1Tr8U=:AmazonSES
+X-SES-Outgoing: 2026.01.28-54.240.123.117
+
+--W8xRb7Gi
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Yahoo Scout is a new AI-powered 'answer engine' powered by Anthropic's
+Cl=
+aude. It synthesizes information from the web and Yahoo's own
+data=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0
+
+
+ Sign Up [1] |Advertise [2]|View Online [3]=20
+
+=09=09TLDR =
+
+
+=09=09TOGETHER WITH [TLDR]
+
+TLDR 2026-01-28
+
+ TLDR IS HIRING =
+A CURATOR FOR TLDR IT! (TLDR CURATOR, ~5 HRS/WEEK)=20
+
+ We are launching =
+a brand new newsletter covering IT and enterprise
+tech. We already have=
+=C2=A0500,000+ SUBSCRIBERS=C2=A0waiting for the first
+edition.
+We need =
+a domain expert to curate and write the daily summaries. If
+you want to b=
+e the voice of the IT industry, please send your resume
+or LinkedIn to=
+=C2=A0itcurator@tldr.tech!=20
+
+=F0=9F=93=B1=20
+
+BIG TECH & STARTUPS
+=
+
+ YAHOO IS ADDING GENERATIVE AI TO ITS SEARCH ENGINE (1 MINUTE READ)
+[4=
+]=20
+
+ Yahoo Scout is a new AI-powered 'answer engine' powered by
+Anthr=
+opic's Claude. It synthesizes information from the web and
+Yahoo's own da=
+ta when constructing responses to natural language
+queries. The interface=
+ includes visible source links aimed at making
+answers easier to verify. =
+The engine behind Scout will become more
+personalized as time goes on. =
+
+
+ AMAZON TO SHUT DOWN ALL AMAZON GO AND AMAZON FRESH STORES (2 MINUTE=
+
+READ) [5]=20
+
+ Amazon is closing all Amazon Go and Amazon Fresh physic=
+al stores and
+will shift its focus to online same-day delivery and expand=
+ its Whole
+Foods market business. The Go and Fresh stores failed to deliv=
+er a
+distinctive customer experience and couldn't be scaled up. Some of t=
+he
+shuttered stores will be converted into Whole Foods stores. Amazon
+p=
+lans to open 100 new Whole Foods stores in the coming years.=20
+
+=
+=F0=9F=9A=80=20
+
+SCIENCE & FUTURISTIC TECHNOLOGY
+
+ AUTOMATING BIOLOGY=
+ (22 MINUTE READ) [6]=20
+
+ Biology is wildly complex, and our understandi=
+ng of biological
+systems is just scratching the surface. Automating biolo=
+gy will
+require significant investment to achieve exit velocity. However,=
+ once
+we achieve it, we'll be able to explore the galaxies of genes,
+pr=
+oteins, and microbes living all around us. These developments will
+pave t=
+he way for novel therapeutics that will improve health and
+longevity, boo=
+st biomanufacturing, and more.=20
+
+ INTRODUCING HELIX 02: FULL-BODY AUTON=
+OMY (11 MINUTE READ) [7]=20
+
+ Helix 2 is a single neural system that can =
+control a full humanoid
+robot body directly from pixels. It enables conti=
+nuous, room-scale
+autonomy that seamlessly blends walking and manipulatio=
+n. This article
+details what Helix 2 is capable of. It contains several c=
+lips of the
+Figure 03 robot performing tasks while running on the new sys=
+tem.=20
+
+=F0=9F=92=BB=20
+
+PROGRAMMING, DESIGN & DATA SCIENCE
+
+ STOP=
+ VIBE MESSING AND START VIBE SHIPPING WITH V0 BY VERCEL (SPONSOR)
+[8]=20
+=
+
+ Let's face it: vibe coding has resulted in a lot of demos, but not a
+=
+lot of software. With v0 by Vercel [8], that's no longer the case. v0
+is =
+built for production apps and agents, including enterprise-grade
+security=
+ and integrations that enable teams to reliably ship real
+software, not j=
+ust spin up demos. Start shipping with v0. [8]=20
+
+ TRY TEXT SCALING SUPP=
+ORT IN CHROME CANARY (7 MINUTE READ) [9]=20
+
+ The new 'meta name=3Dtext-s=
+cale' HTML tag informs browsers that
+websites are designed to still work =
+if users increase their OS text
+size. To support text scaling, developers=
+ should avoid overriding the
+initial font size, only use font-relative un=
+its for content, and test
+on devices to quickly figure out problem areas =
+and think about how to
+adapt their layouts. The tag is currently supporte=
+d in Chrome Canary
+with the 'Experimental Web Platform features' flag ena=
+bled. Support in
+other browsers will hopefully come later this year.=20
+=
+
+ ONE HUMAN + ONE AGENT =3D ONE BROWSER FROM SCRATCH (2 MINUTE READ) [10]=
+
+
+
+ one-agent-one-browser is a web browser built in three days with a=
+
+single Codex CLI agent. It contains 20,000 lines of Rust with no Rust
+=
+crate dependencies at all, with only OS system frameworks for image
+and t=
+ext rendering. The browser successfully renders HTML and CSS and
+can even=
+ display SVGs and PNGs. The project proves that an agent
+driven by a tale=
+nted engineer is enough to get a very solid basic
+renderer working.=20
+=
+
+=F0=9F=8E=81=20
+
+MISCELLANEOUS
+
+ AMAZON INADVERTENTLY ANNOUNCES CL=
+OUD UNIT LAYOFFS IN EMAIL TO
+EMPLOYEES (2 MINUTE READ) [11]=20
+
+ Amazon=
+ erroneously sent out a notice to cloud staffers on Tuesday
+acknowledging=
+ organizational changes at the company. The company is
+expected to announ=
+ce widespread layoffs across its corporate workforce
+as soon as this week=
+. The layoffs are meant to reduce management
+layers and bureaucracy insid=
+e the company. The efficiency gains from
+AI will likely further shrink Am=
+azon's corporate staff count in the
+coming years.=20
+
+ =E2=80=9CIG IS A=
+ DRUG=E2=80=9D: INTERNAL MESSAGES MAY DOOM META AT SOCIAL MEDIA
+ADDICTION=
+ TRIAL (7 MINUTE READ) [12]=20
+
+ A high-profile lawsuit against Meta and =
+YouTube that alleges the
+companies caused psychological harm by designing=
+ features like
+infinite scroll and autoplay is set to begin this week. Th=
+e case could
+set a meaningful precedent for hundreds of other complaints.=
+ TikTok
+and Snapchat were also targeted by the lawsuit, but both have set=
+tled.
+The lawsuit seeks untold damages, including potentially punitive
+=
+damages, to help the plaintiff's family recoup losses and to punish
+socia=
+l media companies and deter them from promoting harmful features
+to kids.=
+=20
+
+=E2=9A=A1=20
+
+QUICK LINKS
+
+ MAKE YOUR RAW MEETING NOTES AWESOM=
+E WITH GRANOLA. NO AWKWARD MEETING
+BOT REQUIRED (SPONSOR) [13]=20
+
+ Gra=
+nola takes your raw call notes and enriches them in the exact
+format your=
+ team needs. You then share or prompt it to draft follow
+ups =E2=80=94 ev=
+en on iPhone. Get Granola [14]=20
+
+ META TO TEST PREMIUM SUBSCRIPTION PLA=
+NS FOR INSTAGRAM, FACEBOOK, AND
+WHATSAPP (2 MINUTE READ) [15]=20
+
+ The =
+subscriptions will give paid users access to more features and
+extended A=
+I capabilities.=20
+
+ CLAUDE CODE MADE ME LOVE MEETINGS AGAIN (3 MINUTE RE=
+AD) [16]=20
+
+ Claude frees up mental capacity and increases your capacity=
+ for
+getting interrupted.=20
+
+ PINTEREST LAYING OFF 15% OF WORKFORCE AS=
+ PART OF AI PUSH; STOCK
+PLUMMETS (2 MINUTE READ) [17]=20
+
+ Pinterest ex=
+pects the cuts to be complete by late September.=20
+
+ BLOCKING CLAUDE (2 =
+MINUTE READ) [18]=20
+
+ Claude will refuse to answer questions about pages=
+ if they contain a
+specific string.=20
+
+ MOZILLA IS BUILDING AN AI =
+=E2=80=98REBEL ALLIANCE' TO TAKE ON INDUSTRY
+HEAVYWEIGHTS OPENAI, ANTHROP=
+IC (13 MINUTE READ) [19]=20
+
+ Mozilla will deploy roughly $1.4 billion wo=
+rth of reserves to support
+startups that are working on safety and govern=
+ance issues in AI.=20
+
+ CRYPTO GIANT TETHER PUSHES INTO THE US WITH USAT =
+STABLECOIN TO
+CHALLENGE CIRCLE (2 MINUTE READ) [20]=20
+
+ Tether's to US=
+AT is a stablecoin designed to be compliant with US
+regulations.=20
+
+Lo=
+ve TLDR? Tell your friends and get rewards!
+
+ Share your referral link =
+below with friends to get free TLDR swag!=20
+
+ https://refer.tldr.tech/95=
+f8de32/ [21]=20
+
+=09=09 Track your referrals here. [22]=20
+
+Want to adv=
+ertise in TLDR? =F0=9F=93=B0
+
+ If your company is interested in reachin=
+g an audience of tech
+executives, decision-makers and engineers, you may =
+want to ADVERTISE
+WITH US [23].=20
+
+Want to work at TLDR? =F0=9F=92=
+=BC
+
+ APPLY HERE [24], CREATE YOUR OWN ROLE [25] or send a friend's res=
+ume
+to jobs@tldr.tech and get $1k if we hire them! TLDR is one of INC.'S=
+
+BEST BOOTSTRAPPED BUSINESSES [26] of 2025.=20
+
+ If you have any commen=
+ts or feedback, just respond to this email!=20
+
+Thanks for reading,=20
+Da=
+n Ni [27] & Stephen Flanders [28]=20
+
+ Manage your subscriptions [29] to =
+our other newsletters on tech,
+startups, and programming. Or if TLDR isn'=
+t for you, please
+unsubscribe [30].=20
+
+=20
+
+Links:
+------
+[1] ht=
+tps://tldr.tech/signup?utm_source=3Dtldr
+[2] https://advertise.tldr.tech/=
+?utm_source=3Dtldr&utm_medium=3Dnewsletter&utm_campaign=3Dadvertisetopnav=
+
+[3] https://a.tldrnewsletter.com/web-version?ep=3D1&lc=3D46c4c580-a670-1=
+1f0-ad93-1f8c13b87d10&p=3Db15e8732-fc24-11f0-bc22-3d95a36bc826&pt=3Dcampaig=
+n&t=3D1769599758&s=3D953f62a801de8fde8a46f55e3ce41d97f49bb1c7753c87c0d6aef9=
+03218f4bb4
+[4] https://www.engadget.com/ai/yahoo-is-adding-generative-ai-=
+to-its-search-engine-172706249.html?utm_source=3Dtldrnewsletter
+[5] https=
+://links.tldrnewsletter.com/kjD1bG
+[6] https://alexwasburne.substack.com/=
+p/automating-biology?r=3D11v5xs&utm_medium=3Dios&shareImageVariant=3Doverla=
+y&triedRedirect=3Dtrue&utm_source=3Dtldrnewsletter
+[7] https://www.figure=
+.ai/news/helix-02?utm_source=3Dtldrnewsletter
+[8] https://v0.app/?utm_med=
+ium=3Demail&utm_source=3Dtldr&utm_campaign=3Dtldrnl20250128
+[9] https://w=
+ww.joshtumath.uk/posts/2026-01-27-try-text-scaling-support-in-chrome-canary=
+/?utm_source=3Dtldrnewsletter
+[10] https://simonwillison.net/2026/Jan/27/=
+one-human-one-agent-one-browser/#atom-everything?utm_source=3Dtldrnewslette=
+r
+[11] https://www.cnbc.com/2026/01/27/amazon-inadvertently-sends-email-t=
+o-employees-confirming-wednesday-layoffs.html?utm_source=3Dtldrnewsletter=
+
+[12] https://arstechnica.com/tech-policy/2026/01/tiktok-settles-hours-be=
+fore-landmark-social-media-addiction-trial-starts/?utm_source=3Dtldrnewslet=
+ter
+[13] https://go.granola.ai/adops-tldr-tech?utm_source=3Dtldrnewslette=
+r
+[14] https://go.granola.ai/adops-tldr-tech
+[15] https://www.cnbc.com/=
+2026/01/27/meta-to-test-premium-subscription-plans-for-instagram-facebook-a=
+nd-whatsapp.html?utm_source=3Dtldrnewsletter
+[16] https://tn1ck.com/blog/=
+claude-code-made-me-love-meetings-again?utm_source=3Dtldrnewsletter
+[17] =
+https://www.cnbc.com/2026/01/27/pinterest-layoffs-stock-ai.html?utm_source=
+=3Dtldrnewsletter
+[18] https://aphyr.com/posts/403-blocking-claude?utm_so=
+urce=3Dtldrnewsletter
+[19] https://www.cnbc.com/2026/01/27/mozilla-buildi=
+ng-an-ai-rebel-alliance-to-take-on-openai-anthropic-.html?utm_source=3Dtldr=
+newsletter
+[20] https://ca.finance.yahoo.com/news/crypto-giant-tether-pus=
+hes-u-211909640.html?utm_source=3Dtldrnewsletter
+[21] https://refer.tldr.=
+tech/95f8de32/
+[22] https://hub.sparklp.co/sub_47fb527d7973/1
+[23] http=
+s://advertise.tldr.tech/?utm_source=3Dtldr&utm_medium=3Dnewsletter&utm_camp=
+aign=3Dadvertisecta
+[24] https://jobs.ashbyhq.com/tldr.tech
+[25] https:=
+//jobs.ashbyhq.com/tldr.tech/c227b917-a6a4-40ce-8950-d3e165357871
+[26] ht=
+tps://www.linkedin.com/feed/update/urn:li:activity:7401699691039830016/
+[=
+27] https://twitter.com/tldrdan
+[28] https://twitter.com/SteveFlanders22=
+
+[29] https://tldr.tech/tech/manage?email=3Dmike.mcconigley%40gmail.com=
+
+[30] https://a.tldrnewsletter.com/unsubscribe?ep=3D1&l=3Dcfa2d55a-b7be-1=
+1e8-a3c9-06b79b628af2&lc=3D46c4c580-a670-11f0-ad93-1f8c13b87d10&p=3Db15e873=
+2-fc24-11f0-bc22-3d95a36bc826&pt=3Dcampaign&pv=3D4&spa=3D1769598093&t=3D176=
+9599758&s=3D96e9e63619a8003f4d21cdc20e11e80ac9a0ac59c06111067135c63e546bd04=
+4
+--W8xRb7Gi
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html charset=3DUTF-8"><meta charset=3D"UTF-8"><meta name=3D"v=
+iewport" content=3D"width=3Ddevice-width"><meta name=3D"x-apple-disable-mes=
+sage-reformatting"><title>TLDR</title><meta name=3D"color-scheme" content=
+=3D"light dark"><meta name=3D"supported-color-schemes" content=3D"light dar=
+k"><style type=3D"text/css">
+=09=09=09:root {
+=09=09=09=09color-scheme: light dark; supported-color-schemes: light dark;
+=09=09=09}
+=09=09=09
+=09=09=09*,
+=09=09=09*:after,
+=09=09=09*:before {
+=09=09=09=09-webkit-box-sizing: border-box; -moz-box-sizing: border-box; bo=
+x-sizing: border-box;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+=09=09=09}
+=09=09=09
+=09=09=09html,
+=09=09=09body,
+=09=09=09.document {
+=09=09=09=09width: 100% !important; height: 100% !important; margin: 0; pad=
+ding: 0;
+=09=09=09}
+=09=09=09
+=09=09=09body {
+=09=09=09=09-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: g=
+rayscale; text-rendering: optimizeLegibility;
+=09=09=09}
+=09=09=09
+=09=09=09div[style*=3D"margin: 16px 0"] {
+=09=09=09=09margin: 0 !important;
+=09=09=09}
+=09=09=09
+=09=09=09table,
+=09=09=09td {
+=09=09=09=09mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+=09=09=09}
+=09=09=09
+=09=09=09table {
+=09=09=09=09border-spacing: 0; border-collapse: collapse; table-layout: fix=
+ed; margin: 0 auto;
+=09=09=09}
+=09=09=09
+=09=09=09img {
+=09=09=09=09-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+=09=09=09}
+=09=09=09
+=09=09=09*[x-apple-data-detectors] {
+=09=09=09=09color: inherit !important; text-decoration: none !important;
+=09=09=09}
+=09=09=09
+=09=09=09.x-gmail-data-detectors,
+=09=09=09.x-gmail-data-detectors *,
+=09=09=09.aBn {
+=09=09=09=09border-bottom: 0 !important; cursor: default !important;
+=09=09=09}
+=09=09=09
+=09=09=09.btn {
+=09=09=09=09-webkit-transition: all 200ms ease; transition: all 200ms ease;
+=09=09=09}
+=09=09=09
+=09=09=09.btn:hover {
+=09=09=09=09background-color: #f67575; border-color: #f67575;
+=09=09=09}
+=09=09=09
+=09=09=09* {
+=09=09=09=09font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+=09=09=09}
+=09=09=09
+=09=09=09@media screen and (max-width: 600px) {
+=09=09=09=09.container {
+=09=09=09=09=09width: 100%; margin: auto;
+=09=09=09=09}
+=09=09=09=09.stack {
+=09=09=09=09=09display: block!important; width: 100%!important; max-width: =
+100%!important;
+=09=09=09=09}
+=09=09=09=09.btn {
+=09=09=09=09=09display: block; width: 100%; text-align: center;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09body,
+=09=09=09p,
+=09=09=09td,
+=09=09=09tr,
+=09=09=09.body,
+=09=09=09table,
+=09=09=09h1,
+=09=09=09h2,
+=09=09=09h3,
+=09=09=09h4,
+=09=09=09h5,
+=09=09=09h6,
+=09=09=09div,
+=09=09=09span {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09body,
+=09=09=09=09p,
+=09=09=09=09td,
+=09=09=09=09tr,
+=09=09=09=09.body,
+=09=09=09=09table,
+=09=09=09=09h1,
+=09=09=09=09h2,
+=09=09=09=09h3,
+=09=09=09=09h4,
+=09=09=09=09h5,
+=09=09=09=09h6,
+=09=09=09=09div,
+=09=09=09=09span {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09=09=09
+=09=09=09a {
+=09=09=09=09color: inherit !important; text-decoration: underline !importan=
+t;
+=09=09=09}
+
+=09=09</style><!--[if mso | ie]>
+=09=09<style type=3D"text/css">
+=09=09=09a {
+=09=09=09=09background-color: #FEFEFE !important; color: #010101 !important=
+;
+=09=09=09}
+=09=09=09@media (prefers-color-scheme: dark) {
+=09=09=09=09a {
+=09=09=09=09=09background-color: #27292D !important; color: #FEFEFE !import=
+ant;
+=09=09=09=09}
+=09=09=09}
+=09 </style>
+=09=09=09<![endif]--></head><body class=3D"">
+
+
+
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">Yahoo Scou=
+t is a new AI-powered &#039;answer engine&#039; powered by Anthropic&#039;s=
+ Claude. It synthesizes information from the web and Yahoo&#039;s own data&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&=
+nbsp;=E2=80=8C&nbsp;&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;</div>
+
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align=3D"center" class=3D"document"><tbody><tr><td valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"container" width=3D"600"><tbody><tr class=3D"inner-body"><td>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr class=3D"header"><td bgcolor=3D"" class=3D"containe=
+r">
+
+<table width=3D"100%"><tbody><tr><td class=3D"container">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"margin-top: 0px;" width=3D"100%"><tbody><tr><td style=
+=3D"padding: 0px;">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div style=3D"text-align: center;">
+<span style=3D"margin-right: 0px;"><a href=3D"https://tracking.tldrnewslett=
+er.com/CL0/https:%2F%2Ftldr.tech%2Fsignup%3Futm_source=3Dtldr/1/0100019c045=
+d6fe2-9953f544-37ee-42d6-bfe7-79e066b07fc2-000000/VGHtS_i5k2ZK1TxndpbMjVR3z=
+JMnc5D-JEt6fHK1M50=3D442" rel=3D"noopener noreferrer" target=3D"_blank"><sp=
+an>Sign Up</span></a>
+<span>|</span><span style=3D"margin-right: 2px; margin-left: 2px;"><a href=
+=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech=
+%2F%3Futm_source=3Dtldr%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertis=
+etopnav/1/0100019c045d6fe2-9953f544-37ee-42d6-bfe7-79e066b07fc2-000000/xkdQ=
+fbgVl0aVdXTy9qJ0nV4r3gStINwL3Z75LA-ANAo=3D442" rel=3D"noopener noreferrer" =
+target=3D"_blank"><span>Advertise</span></a></span><span>|</span><span styl=
+e=3D"margin-left: 2px;"><a href=3D"https://tracking.tldrnewsletter.com/CL0/=
+https:%2F%2Fa.tldrnewsletter.com%2Fweb-version%3Fep=3D1%26lc=3D46c4c580-a67=
+0-11f0-ad93-1f8c13b87d10%26p=3Db15e8732-fc24-11f0-bc22-3d95a36bc826%26pt=3D=
+campaign%26t=3D1769599758%26s=3D953f62a801de8fde8a46f55e3ce41d97f49bb1c7753=
+c87c0d6aef903218f4bb4/1/0100019c045d6fe2-9953f544-37ee-42d6-bfe7-79e066b07f=
+c2-000000/a_ThV-0VZi8SaLRlFNU-Vstd8ZiuNT9AG39c1ErjcG8=3D442"><span>View Onl=
+ine</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"text-=
+align: center;"><span data-darkreader-inline-color=3D"" style=3D"--darkread=
+er-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30=
+px;">T</span><span style=3D"font-size: 30px;"><span data-darkreader-inline-=
+color=3D"" style=3D"color: rgb(232, 192, 96) !important; --darkreader-inlin=
+e-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-colo=
+r=3D"" style=3D"color: rgb(101, 195, 173) !important; --darkreader-inline-c=
+olor:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-=
+color=3D"" style=3D"--darkreader-inline-color:#dd6e6e; color: rgb(220, 107,=
+ 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr id=3D"together-with"><td align=3D"cent=
+er" height=3D"20" style=3D"vertical-align:middle !important;" valign=3D"mid=
+dle" width=3D"100%"><strong style=3D"vertical-align:middle !important; heig=
+ht: 100%;">Together With </strong>
+<a href=3D"mailto:itcurator@tldr.tech"><img src=3D"https://images.tldr.tech=
+/tldr50.png" valign=3D"middle" style=3D"vertical-align: middle !important; =
+height: 100%;" alt=3D"TLDR"></a></td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody><tr=
+><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0;=
+">
+<div style=3D"text-align: center;">
+
+<h1><strong>TLDR <span id=3D"date">2026-01-28</span></strong></h1>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width:100%;" width=3D"100%"><tbody><tr=
+ id=3D"sponsy-copy"><td class=3D"container" style=3D"padding: 15px 15px;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"mailto:itcurator@tldr.tech">
+                                    <span>
+                                        <strong>TLDR is hiring a Curator fo=
+r TLDR IT! (TLDR Curator, ~5 hrs/week)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    We are launching a brand new newsletter=
+ covering IT and enterprise tech. We already have&nbsp;<strong>500,000+ sub=
+scribers</strong>&nbsp;waiting for the first edition.<br>We need a domain e=
+xpert to curate and write the daily summaries. If you want to be the voice =
+of the IT industry, please send your resume or LinkedIn to&nbsp;<a class=3D=
+"c-link" href=3D"mailto:itcurator@tldr.tech" rel=3D"noopener noreferrer" ta=
+rget=3D"_blank"><span>itcurator@tldr.tech</span></a>!
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=3D""><td class=3D"container">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td style=3D"padding: 0px;">
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=93=B1</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Big Tech &amp; Startups</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.engadget.com%2Fai%2Fyahoo-is-adding-generative-ai-t=
+o-its-search-engine-172706249.html%3Futm_source=3Dtldrnewsletter/1/0100019c=
+045d6fe2-9953f544-37ee-42d6-bfe7-79e066b07fc2-000000/QakVisZbuKoLSbsfTscWFX=
+mzaZZBflTfTfsHdBtoPWI=3D442">
+                                    <span>
+                                        <strong>Yahoo is adding generative =
+AI to its search engine (1 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Yahoo Scout is a new AI-powered 'answer=
+ engine' powered by Anthropic's Claude. It synthesizes information from the=
+ web and Yahoo's own data when constructing responses to natural language q=
+ueries. The interface includes visible source links aimed at making answers=
+ easier to verify. The engine behind Scout will become more personalized as=
+ time goes on.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FkjD1bG/1/0100019c045d6fe2-99=
+53f544-37ee-42d6-bfe7-79e066b07fc2-000000/sV6nGGp-zvjH0oRV17cVzMbTmccVuJ7sV=
+rBuL7yJyf4=3D442">
+                                    <span>
+                                        <strong>Amazon to Shut Down All Ama=
+zon Go and Amazon Fresh Stores (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Amazon is closing all Amazon Go and Ama=
+zon Fresh physical stores and will shift its focus to online same-day deliv=
+ery and expand its Whole Foods market business. The Go and Fresh stores fai=
+led to deliver a distinctive customer experience and couldn't be scaled up.=
+ Some of the shuttered stores will be converted into Whole Foods stores. Am=
+azon plans to open 100 new Whole Foods stores in the coming years.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=9A=80</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Science &amp; Futuristic Technology</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Falexwasburne.substack.com%2Fp%2Fautomating-biology%3Fr=
+=3D11v5xs%26utm_medium=3Dios%26shareImageVariant=3Doverlay%26triedRedirect=
+=3Dtrue%26utm_source=3Dtldrnewsletter/1/0100019c045d6fe2-9953f544-37ee-42d6=
+-bfe7-79e066b07fc2-000000/17o3-WTio25_GDYeK4HgV7gndPeWLrk1BhYxRnWcR2w=3D442=
+">
+                                    <span>
+                                        <strong>Automating Biology (22 minu=
+te read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Biology is wildly complex, and our unde=
+rstanding of biological systems is just scratching the surface. Automating =
+biology will require significant investment to achieve exit velocity. Howev=
+er, once we achieve it, we'll be able to explore the galaxies of genes, pro=
+teins, and microbes living all around us. These developments will pave the =
+way for novel therapeutics that will improve health and longevity, boost bi=
+omanufacturing, and more.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.figure.ai%2Fnews%2Fhelix-02%3Futm_source=3Dtldrnews=
+letter/1/0100019c045d6fe2-9953f544-37ee-42d6-bfe7-79e066b07fc2-000000/umoI4=
+byylGaPMNCmzn6tCx_0pOdsX6bN3ToMKveZttI=3D442">
+                                    <span>
+                                        <strong>Introducing Helix 02: Full-=
+Body Autonomy (11 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Helix 2 is a single neural system that =
+can control a full humanoid robot body directly from pixels. It enables con=
+tinuous, room-scale autonomy that seamlessly blends walking and manipulatio=
+n. This article details what Helix 2 is capable of. It contains several cli=
+ps of the Figure 03 robot performing tasks while running on the new system.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=92=BB</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Programming, Design &amp; Data Science</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style=3D"table-layout: fixed; width: 100%;" width=3D"100%"><tbody><t=
+r><td style=3D"padding:0;border-collapse:collapse;border-spacing:0;margin:0=
+;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fv0.app%2F%3Futm_medium=3Demail%26utm_source=3Dtldr%26ut=
+m_campaign=3Dtldrnl20250128/1/0100019c045d6fe2-9953f544-37ee-42d6-bfe7-79e0=
+66b07fc2-000000/WvL5Cz-apfDAHpMg_GENsE3v8BYQgra3iyE6W_vhhoo=3D442">
+                                    <span>
+                                        <strong>Stop vibe messing and start=
+ vibe shipping with v0 by Vercel (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Let's face it: vibe coding has resulted=
+ in a lot of demos, but not a lot of software. With <a href=3D"https://trac=
+king.tldrnewsletter.com/CL0/https:%2F%2Fv0.app%2F%3Futm_medium=3Demail%26ut=
+m_source=3Dtldr%26utm_campaign=3Dtldrnl20250128/2/0100019c045d6fe2-9953f544=
+-37ee-42d6-bfe7-79e066b07fc2-000000/noE7heAedDL3CjRvdLz8fc1ImvM1xxXxv8POXxb=
+3wzY=3D442" rel=3D"noopener noreferrer nofollow" target=3D"_blank"><span>v0=
+ by Vercel</span></a>, that's no longer the case. v0 is built for productio=
+n apps and agents, including enterprise-grade security and integrations tha=
+t enable teams to reliably ship real software, not just spin up demos. <a h=
+ref=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fv0.app%2F%3Futm_=
+medium=3Demail%26utm_source=3Dtldr%26utm_campaign=3Dtldrnl20250128/3/010001=
+9c045d6fe2-9953f544-37ee-42d6-bfe7-79e066b07fc2-000000/tkt7eIf6aeAI-2JVU6Vo=
+asMbPkaHTLpogRy6Wcx0bLE=3D442" rel=3D"noopener noreferrer nofollow" target=
+=3D"_blank"><span>Start shipping with v0.</span></a>
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.joshtumath.uk%2Fposts%2F2026-01-27-try-text-scaling=
+-support-in-chrome-canary%2F%3Futm_source=3Dtldrnewsletter/1/0100019c045d6f=
+e2-9953f544-37ee-42d6-bfe7-79e066b07fc2-000000/NK3D0Bp5H8lIAvCbbu5fEmhE-X8K=
+Ajg9KV6NQ9uubKM=3D442">
+                                    <span>
+                                        <strong>Try text scaling support in=
+ Chrome Canary (7 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    The new 'meta name=3Dtext-scale' HTML t=
+ag informs browsers that websites are designed to still work if users incre=
+ase their OS text size. To support text scaling, developers should avoid ov=
+erriding the initial font size, only use font-relative units for content, a=
+nd test on devices to quickly figure out problem areas and think about how =
+to adapt their layouts. The tag is currently supported in Chrome Canary wit=
+h the 'Experimental Web Platform features' flag enabled. Support in other b=
+rowsers will hopefully come later this year.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fsimonwillison.net%2F2026%2FJan%2F27%2Fone-human-one-age=
+nt-one-browser%2F%23atom-everything%3Futm_source=3Dtldrnewsletter/1/0100019=
+c045d6fe2-9953f544-37ee-42d6-bfe7-79e066b07fc2-000000/6WyLvA2SP-JkaTvH9wm4S=
+FDbcWKT5zXhdO9D7dZhxKs=3D442">
+                                    <span>
+                                        <strong>One Human + One Agent =3D O=
+ne Browser From Scratch (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    one-agent-one-browser is a web browser =
+built in three days with a single Codex CLI agent. It contains 20,000 lines=
+ of Rust with no Rust crate dependencies at all, with only OS system framew=
+orks for image and text rendering. The browser successfully renders HTML an=
+d CSS and can even display SVGs and PNGs. The project proves that an agent =
+driven by a talented engineer is enough to get a very solid basic renderer =
+working.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=F0=9F=
+=8E=81</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><strong><h1>Miscellaneous</h1></strong><=
+/div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.cnbc.com%2F2026%2F01%2F27%2Famazon-inadvertently-se=
+nds-email-to-employees-confirming-wednesday-layoffs.html%3Futm_source=3Dtld=
+rnewsletter/1/0100019c045d6fe2-9953f544-37ee-42d6-bfe7-79e066b07fc2-000000/=
+Q0BSmyAz3n-n2lOlq9eNOgKavqDYzBPsQ0f4kfNAHEw=3D442">
+                                    <span>
+                                        <strong>Amazon inadvertently announ=
+ces cloud unit layoffs in email to employees (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Amazon erroneously sent out a notice to=
+ cloud staffers on Tuesday acknowledging organizational changes at the comp=
+any. The company is expected to announce widespread layoffs across its corp=
+orate workforce as soon as this week. The layoffs are meant to reduce manag=
+ement layers and bureaucracy inside the company. The efficiency gains from =
+AI will likely further shrink Amazon's corporate staff count in the coming =
+years.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Farstechnica.com%2Ftech-policy%2F2026%2F01%2Ftiktok-sett=
+les-hours-before-landmark-social-media-addiction-trial-starts%2F%3Futm_sour=
+ce=3Dtldrnewsletter/1/0100019c045d6fe2-9953f544-37ee-42d6-bfe7-79e066b07fc2=
+-000000/603nkJOLOOesitz9TjOjUwlWuQYcFK9vmtdKgvJldMY=3D442">
+                                    <span>
+                                        <strong>=E2=80=9CIG is a drug=E2=80=
+=9D: Internal messages may doom Meta at social media addiction trial (7 min=
+ute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    A high-profile lawsuit against Meta and=
+ YouTube that alleges the companies caused psychological harm by designing =
+features like infinite scroll and autoplay is set to begin this week. The c=
+ase could set a meaningful precedent for hundreds of other complaints. TikT=
+ok and Snapchat were also targeted by the lawsuit, but both have settled. T=
+he lawsuit seeks untold damages, including potentially punitive damages, to=
+ help the plaintiff's family recoup losses and to punish social media compa=
+nies and deter them from promoting harmful features to kids.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;"><span style=3D"font-size: 36px;">=E2=9A=
+=A1</span></div></div>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng-top: 0px; padding-bottom: 0px;">
+<div class=3D"text-block">
+<div style=3D"text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor=3D"" style=3D"table-layout: fixed; width: 100%;" width=3D"10=
+0%"><tbody><tr><td style=3D"padding:0;border-collapse:collapse;border-spaci=
+ng:0;margin:0;" valign=3D"top">
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgo.granola.ai%2Fadops-tldr-tech%3Futm_source=3Dtldrnews=
+letter/1/0100019c045d6fe2-9953f544-37ee-42d6-bfe7-79e066b07fc2-000000/UX7eF=
+xfSioYoV_YHymm_YyrszCkr1ik1NDivF41PbsA=3D442">
+                                    <span>
+                                        <strong>Make your raw meeting notes=
+ awesome with Granola. No awkward meeting bot required (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Granola takes your raw call notes and e=
+nriches them in the exact format your team needs. You then share or prompt =
+it to draft follow ups =E2=80=94 even on iPhone. <a href=3D"https://trackin=
+g.tldrnewsletter.com/CL0/https:%2F%2Fgo.granola.ai%2Fadops-tldr-tech/1/0100=
+019c045d6fe2-9953f544-37ee-42d6-bfe7-79e066b07fc2-000000/eKspHkVNUUqbptE7zJ=
+uurHYI2kPua0Q8ArtuRMhXKrI=3D442" rel=3D"noopener noreferrer nofollow" targe=
+t=3D"_blank"><span>Get Granola</span></a>
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.cnbc.com%2F2026%2F01%2F27%2Fmeta-to-test-premium-su=
+bscription-plans-for-instagram-facebook-and-whatsapp.html%3Futm_source=3Dtl=
+drnewsletter/1/0100019c045d6fe2-9953f544-37ee-42d6-bfe7-79e066b07fc2-000000=
+/Bd6XjOAtemtevR5OBY_JLYfZzNG3Re4RR22uMg9qC9Y=3D442">
+                                    <span>
+                                        <strong>Meta to test premium subscr=
+iption plans for Instagram, Facebook, and WhatsApp (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    The subscriptions will give paid users =
+access to more features and extended AI capabilities.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Ftn1ck.com%2Fblog%2Fclaude-code-made-me-love-meetings-ag=
+ain%3Futm_source=3Dtldrnewsletter/1/0100019c045d6fe2-9953f544-37ee-42d6-bfe=
+7-79e066b07fc2-000000/PtRBzc2KcFwZ845Gd7yVzHzYKY5hMoQETbZdoaXW32w=3D442">
+                                    <span>
+                                        <strong>Claude Code made me love me=
+etings again (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Claude frees up mental capacity and inc=
+reases your capacity for getting interrupted.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.cnbc.com%2F2026%2F01%2F27%2Fpinterest-layoffs-stock=
+-ai.html%3Futm_source=3Dtldrnewsletter/1/0100019c045d6fe2-9953f544-37ee-42d=
+6-bfe7-79e066b07fc2-000000/q3z7CL9XKHsuNq7ZXslhzPB2_UELHCilyPENB3PmbJw=3D44=
+2">
+                                    <span>
+                                        <strong>Pinterest laying off 15% of=
+ workforce as part of AI push; stock plummets (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Pinterest expects the cuts to be comple=
+te by late September.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Faphyr.com%2Fposts%2F403-blocking-claude%3Futm_source=3D=
+tldrnewsletter/1/0100019c045d6fe2-9953f544-37ee-42d6-bfe7-79e066b07fc2-0000=
+00/aPi3j8ijbtT50ysQbefqMIMGXYvW0C3Sg99aH9IjmU0=3D442">
+                                    <span>
+                                        <strong>Blocking Claude (2 minute r=
+ead)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Claude will refuse to answer questions =
+about pages if they contain a specific string.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fwww.cnbc.com%2F2026%2F01%2F27%2Fmozilla-building-an-ai-=
+rebel-alliance-to-take-on-openai-anthropic-.html%3Futm_source=3Dtldrnewslet=
+ter/1/0100019c045d6fe2-9953f544-37ee-42d6-bfe7-79e066b07fc2-000000/JlfDPz_d=
+OzLQj2z1iGpM9xhEAa-_lyr-EWXv-j4ofDg=3D442">
+                                    <span>
+                                        <strong>Mozilla is building an AI =
+=E2=80=98rebel alliance' to take on industry heavyweights OpenAI, Anthropic=
+ (13 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Mozilla will deploy roughly $1.4 billio=
+n worth of reserves to support startups that are working on safety and gove=
+rnance issues in AI.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%"><tbody><tr><td class=3D"container" style=3D"padding: 15px 15px=
+;">
+<div class=3D"text-block">
+<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fca.finance.yahoo.com%2Fnews%2Fcrypto-giant-tether-pushe=
+s-u-211909640.html%3Futm_source=3Dtldrnewsletter/1/0100019c045d6fe2-9953f54=
+4-37ee-42d6-bfe7-79e066b07fc2-000000/1vxsKCJ8kc8G0zpKEGBzD-KQclPEBqE_1txCGE=
+uJgsI=3D442">
+                                    <span>
+                                        <strong>Crypto giant Tether pushes =
+into the US with USAT stablecoin to challenge Circle (2 minute read)</stron=
+g>
+                                    </span>
+</a>
+<br>
+<br>
+<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, V=
+erdana, sans-serif;">
+                                    Tether's to USAT is a stablecoin design=
+ed to be compliant with US regulations.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"word-break=
+: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class=3D"container" style=3D"padding: 0px 10px 15px;">
+<div class=3D"text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align=3D"left" style=3D"padding: 10px;">
+<div class=3D"text-block">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.t=
+ech%2F95f8de32%2F/1/0100019c045d6fe2-9953f544-37ee-42d6-bfe7-79e066b07fc2-0=
+00000/533fubg4M2_KPkf_g6bWPVW3NnDDp3W8U2jfj4TR_0A=3D442" style=3D"color: #4=
+64ba4; text-decoration: underline;">https://refer.tldr.tech/95f8de32/</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align=3D"left" style=3D"padding:5px 10px;">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.=
+co%2Fsub_47fb527d7973%2F1/1/0100019c045d6fe2-9953f544-37ee-42d6-bfe7-79e066=
+b07fc2-000000/sFqBmq8rvvBSNsATe4JlqwvruE6e3W0NwdcdQJNJWCo=3D442" style=3D"f=
+ont-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block; =
+ text-decoration: underline;"><span style=3D"mso-text-raise:13pt; text-deco=
+ration: underline;">Track your referrals here.</span></a>
+</td></tr></tbody></table>
+
+
+
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"word-break=
+: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to advertise in TLDR? =F0=9F=93=B0
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+If your company is interested in reaching an audience of tech executives, d=
+ecision-makers and engineers, you may want to <a href=3D"https://tracking.t=
+ldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=3Dtld=
+r%26utm_medium=3Dnewsletter%26utm_campaign=3Dadvertisecta/1/0100019c045d6fe=
+2-9953f544-37ee-42d6-bfe7-79e066b07fc2-000000/cC8-jcjIvspO8oSfW-E1YscxbZ0yE=
+CO9X-CD0ydFQUQ=3D442"><strong><span>advertise with us</span></strong></a>.
+</div>
+<br>
+
+<!-- New "Want to work at TLDR?" section -->
+
+<p style=3D"padding: 0; margin: 0; font-size: 22px; color: #000000; line-he=
+ight: 1.6; font-weight: bold;">
+Want to work at TLDR? =F0=9F=92=BC
+</p>
+<div class=3D"text-block" style=3D"margin-top: 10px;">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech/1/0100019c045d6fe2-9953f544-37ee-42d6-bfe7-79e066b07fc2-00=
+0000/sPZ8hJPZhwfxtz9WNtw0DvaLXWRqndMlsqJZNxzgSh8=3D442" rel=3D"noopener nor=
+eferrer" style=3D"color: #0000EE; text-decoration: underline;" target=3D"_b=
+lank"><strong>Apply here</strong></a>,
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech%2Fc227b917-a6a4-40ce-8950-d3e165357871/1/0100019c045d6fe2-=
+9953f544-37ee-42d6-bfe7-79e066b07fc2-000000/DbEFM5_6YoPuPrFo0RIL2TJ1CA6HEWs=
+NOQ2dKE9BZb0=3D442" rel=3D"noopener noreferrer" style=3D"color: #0000EE; te=
+xt-decoration: underline;" target=3D"_blank"><strong>create your own role</=
+strong></a> or send a friend's resume to <a href=3D"mailto:jobs@tldr.tech" =
+style=3D"color: #0000EE; text-decoration: underline;">jobs@tldr.tech</a> an=
+d get $1k if we hire them! TLDR is one of <a href=3D"https://tracking.tldrn=
+ewsletter.com/CL0/https:%2F%2Fwww.linkedin.com%2Ffeed%2Fupdate%2Furn:li:act=
+ivity:7401699691039830016%2F/1/0100019c045d6fe2-9953f544-37ee-42d6-bfe7-79e=
+066b07fc2-000000/3DKLZBHMDa3q_0pj17lQxWGgbjnrdq20voONlYpH5QU=3D442" rel=3D"=
+noopener noreferrer" style=3D"color: #0000EE; text-decoration: underline;" =
+target=3D"_blank"><strong>Inc.'s Best Bootstrapped businesses</strong></a> =
+of 2025.
+</div>
+<br>
+
+<div class=3D"text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftwitter.com%=
+2Ftldrdan/1/0100019c045d6fe2-9953f544-37ee-42d6-bfe7-79e066b07fc2-000000/TV=
+g0S03LC80SkoSmRKcST9GJCMt4WyKlz4SRZ8Usy_8=3D442"><span>Dan Ni</span></a> &a=
+mp; <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftwitter.=
+com%2FSteveFlanders22/1/0100019c045d6fe2-9953f544-37ee-42d6-bfe7-79e066b07f=
+c2-000000/Ab0T2QjpK-uAcyip97xWZRz8ZO8IPPVmqj70pVvo-G4=3D442"><span>Stephen =
+Flanders</span></a>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tbody><tr><td class=3D"container" style=3D"paddi=
+ng: 15px 15px;">
+<div class=3D"text-block" id=3D"testing-id">
+<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2F=
+tech%2Fmanage%3Femail=3Dmike.mcconigley%2540gmail.com/1/0100019c045d6fe2-99=
+53f544-37ee-42d6-bfe7-79e066b07fc2-000000/HWMhqXyKhfopow2iLJbq8lAWgJOexfvSo=
+I5m1T6tgqc=3D442">Manage your subscriptions</a> to our other newsletters on=
+ tech, startups, and programming. Or if TLDR isn't for you, please <a href=
+=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.co=
+m%2Funsubscribe%3Fep=3D1%26l=3Dcfa2d55a-b7be-11e8-a3c9-06b79b628af2%26lc=3D=
+46c4c580-a670-11f0-ad93-1f8c13b87d10%26p=3Db15e8732-fc24-11f0-bc22-3d95a36b=
+c826%26pt=3Dcampaign%26pv=3D4%26spa=3D1769598093%26t=3D1769599758%26s=3D96e=
+9e63619a8003f4d21cdc20e11e80ac9a0ac59c06111067135c63e546bd044/1/0100019c045=
+d6fe2-9953f544-37ee-42d6-bfe7-79e066b07fc2-000000/v73rxfCsqgKoDpt812gMvV3Wq=
+g70Nx1Mgoc_NRri0AY=3D442">unsubscribe</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+
+<img alt=3D"" src=3D"http://tracking.tldrnewsletter.com/CI0/0100019c045d6fe=
+2-9953f544-37ee-42d6-bfe7-79e066b07fc2-000000/EITgtfWN_btPe1c16SkF0-RYxafxj=
+1rn1tg7Tizn0M4=3D442" style=3D"display: none; width: 1px; height: 1px;">
+</body></html>
+--W8xRb7Gi--

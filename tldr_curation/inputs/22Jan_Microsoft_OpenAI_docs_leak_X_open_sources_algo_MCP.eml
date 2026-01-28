@@ -1,93 +1,92 @@
 Delivered-To: mike.mcconigley@gmail.com
-Received: by 2002:a05:6802:6049:10b0:616:7b0e:67b2 with SMTP id r9-n1csp2549480oca;
-        Mon, 29 Dec 2025 03:26:25 -0800 (PST)
-X-Google-Smtp-Source: AGHT+IF+jFlleSMH0hQBkyN+gJ2f8AHDLRFmw10GTU2bNFExMHjznfA6jyxsJTWXGsyX+0DrMKh2
-X-Received: by 2002:a05:6214:3f8c:b0:882:36bc:da5c with SMTP id 6a1803df08f44-88d84f0308fmr452482476d6.26.1767007585134;
-        Mon, 29 Dec 2025 03:26:25 -0800 (PST)
-ARC-Seal: i=1; a=rsa-sha256; t=1767007585; cv=none;
+Received: by 2002:a8a:5e7:0:b0:617:3adb:9ab9 with SMTP id c7csp1132896ocm;
+        Wed, 21 Jan 2026 03:29:20 -0800 (PST)
+X-Received: by 2002:a05:620a:4155:b0:8b2:e6b1:a9b6 with SMTP id af79cd13be357-8c6a66d0fe8mr2139582785a.2.1768994960482;
+        Wed, 21 Jan 2026 03:29:20 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1768994960; cv=none;
         d=google.com; s=arc-20240605;
-        b=TzBRpG+jU5V3TuxbmG5tRVarSkdzGflnX0/pamXZnU8LYGIO1sBqymzuyIsWXSTY5u
-         reFQhHAV4P/uF2yUGESQJDnIwb/4JD4yTkTf+DQaKnXsndTO5nSZQaG01et45M5XqVdr
-         bPHjKFq/QFnquMloHNxEnxdi74z4lEeTonXVMADH8R42ccbeg9kreelIU3SNd1f/gVIz
-         CT61UfvCFdvux3pY1joMknFYAkjkOR27JV30jCRuovLsvLmaSTnVMFc5gI3H2ouR/1aB
-         Us3FZFhhOJwZf2IdEmFQBb9ghj5zKIPjiIpN0jQm6TQBxOsPwlnoqZw9rdmD/+Gba/dl
-         QAlg==
+        b=jU369Fog+EzpDGI1NpfFEPH673hs1+uSIyx3fJQkC/jSOxZXMdsYmAMu202yZHeSaL
+         bIQObbHAszORVGfrswTrLp/DJxlIehH2hEq3IIZvyRfllW76qLEKgMrYO4CrZwzWaWMW
+         aO4otYrEBLMqoL4nXv+Ui6z2JvfA33dSbCahAXNgngAI6TkoKjGuNGXJE2kASI2uJ/bB
+         0dpjhI13CPomT4JH7WXHUCJAqQh7MFRCVH9GQsc9eA/LBdShx4WF4K0r0KExRHY++Cj2
+         Vb9KnxggvHqXxTR7tmlAqkMqM40DeShQQyu4KvjeYBpzLMqN8Ub446bHpfUh4ecqZ/KF
+         +Bkw==
 ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
         h=feedback-id:message-id:date:mime-version:list-unsubscribe-post
          :list-unsubscribe:subject:to:from:dkim-signature:dkim-signature;
-        bh=Iz5uhQk/hoBrmlEstoxwQSoxstZIeuyvVCM0JbCjddI=;
+        bh=o8PdLifQkxzxgdHAfI6u8wzZf3x+NafSiuwOindih68=;
         fh=tUTYCbTOUI69DxYKXGXRz08XnPP7jEKRU6E5rS0DFR4=;
-        b=lW1S3zMxdogqxAdSwOK9LLirB2ikRSWGXDHJtodAFqvQxvCcKHYsZ0hPS90h6KaP9h
-         R0VRaXFtfqpwTFgIudPYO3e087AFpa7DdfdQAcOchT339Lcz/PqClFvSdWalnzSz6Vc0
-         ncwvotWljhjShNYQrciSkLZdl+CX+rRx/i845dC4BEUdR0T/8rqlus7AQbWzQAppu/rL
-         0eFQN6qkrpEvtwBcBIjp7DvxAwyscTHf1Y19FDp0YLjNKJlxdQqF8o0mGNFUEpQ7MIzq
-         QqQWjeRLBN8X7g3g9AM5VfT85+aZk4YxHuikV9yOC73525YKhsgUaSj3lOjcSKp3Wq56
-         gfBg==;
+        b=OX93Iay0i7Dvn3UbMofqD8Pp1yKFBOoyi4hq4TauRVB5o2uTwWP0G05ZWCRP4e3GK0
+         k4Ee0dq7kbIac07wed4FsStwma85pAzUiTmDRfa0WHslUkTFdTOxgB2ke004F+cQnQBa
+         OlxHTO4DZYfcfEQeiJAbXhr7R9J51ApV1WPcV5vDKejOMNSCoIw2bNfjJobeZ+DHh/34
+         SdiCFhwC810PHXUj0S4PTGK4/Esl5CGQWmNDa5ivP7lF7+phXyeIkCaoLIDhSuAicwfY
+         aA5YDLdGkrd75e1vK6GHaxUAcDvxp8v9yOPGnypA+6S6NmpUieEM535IV4Mg2q8nrlTQ
+         N9aw==;
         dara=google.com
 ARC-Authentication-Results: i=1; mx.google.com;
-       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=NEQ4ilBJ;
-       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=p6Nl8WaS;
-       spf=pass (google.com: domain of 0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000@dailyupdate.tldrnewsletter.com designates 54.240.77.24 as permitted sender) smtp.mailfrom=0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000@dailyupdate.tldrnewsletter.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=OWF0Xd2e;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=P6V+nhTf;
+       spf=pass (google.com: domain of 0100019be050f2bd-d3902004-e034-440d-9414-f028f28381ad-000000@dailyupdate.tldrnewsletter.com designates 54.240.123.116 as permitted sender) smtp.mailfrom=0100019be050f2bd-d3902004-e034-440d-9414-f028f28381ad-000000@dailyupdate.tldrnewsletter.com;
        dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
-Return-Path: <0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000@dailyupdate.tldrnewsletter.com>
-Received: from a77-24.smtp-out.amazonses.com (a77-24.smtp-out.amazonses.com. [54.240.77.24])
-        by mx.google.com with ESMTPS id 6a1803df08f44-89004a88ccfsi101195376d6.735.2025.12.29.03.26.24
+Return-Path: <0100019be050f2bd-d3902004-e034-440d-9414-f028f28381ad-000000@dailyupdate.tldrnewsletter.com>
+Received: from a123-116.smtp-out.amazonses.com (a123-116.smtp-out.amazonses.com. [54.240.123.116])
+        by mx.google.com with ESMTPS id af79cd13be357-8c6a722502asi1547184385a.198.2026.01.21.03.29.20
         for <mike.mcconigley@gmail.com>
         (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
-        Mon, 29 Dec 2025 03:26:25 -0800 (PST)
-Received-SPF: pass (google.com: domain of 0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000@dailyupdate.tldrnewsletter.com designates 54.240.77.24 as permitted sender) client-ip=54.240.77.24;
+        Wed, 21 Jan 2026 03:29:20 -0800 (PST)
+Received-SPF: pass (google.com: domain of 0100019be050f2bd-d3902004-e034-440d-9414-f028f28381ad-000000@dailyupdate.tldrnewsletter.com designates 54.240.123.116 as permitted sender) client-ip=54.240.123.116;
 Authentication-Results: mx.google.com;
-       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=NEQ4ilBJ;
-       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=p6Nl8WaS;
-       spf=pass (google.com: domain of 0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000@dailyupdate.tldrnewsletter.com designates 54.240.77.24 as permitted sender) smtp.mailfrom=0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000@dailyupdate.tldrnewsletter.com;
+       dkim=pass header.i=@tldrnewsletter.com header.s=ygiuxamnxevikrd5dtfwanslhs6b24mt header.b=OWF0Xd2e;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=P6V+nhTf;
+       spf=pass (google.com: domain of 0100019be050f2bd-d3902004-e034-440d-9414-f028f28381ad-000000@dailyupdate.tldrnewsletter.com designates 54.240.123.116 as permitted sender) smtp.mailfrom=0100019be050f2bd-d3902004-e034-440d-9414-f028f28381ad-000000@dailyupdate.tldrnewsletter.com;
        dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=tldrnewsletter.com
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
 	s=ygiuxamnxevikrd5dtfwanslhs6b24mt; d=tldrnewsletter.com;
-	t=1767007584;
+	t=1768994960;
 	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type;
-	bh=t1PMRyQBXHYaDG+cXfk06tA2hyqr6lS08cxs75tkEB0=;
-	b=NEQ4ilBJ7v51Qu0ySz11Jl001QWmWbNyxAsQ0Lv617Ozm2u6uKeW2fYeuiUsfw7h
-	WZ4aqNmiT5AoWqZE1kCUsfOuQ1P6Qor0uxuOTW/oFq78zwr8tuNlcVXd/BfGZASJs+j
-	elZZNAEIOl0TQTzWrQIlt1JSJ51xYif0pC18lR0k=
+	bh=pSq3W5zXrRp5JqwGBdgsbXXxFIOzr1tboQEVrmXayqY=;
+	b=OWF0Xd2eMbFgG8X7moq6+yrDCxP8OLA9i+9oa8l4am02FLPv53hME+Ey1k+/+Nfi
+	Ri0aFUiI+fqbNcFBhzjB7XVslqIV18YoX2KLcqg3ch7aGMYnb9upKeXbJ6dzqqqbZtx
+	PufiWGSkuZwH4sObDT3XNBEyiX1GhzI/x11wMuTA=
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
-	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1767007584;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1768994960;
 	h=From:To:Subject:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:Date:Message-ID:Content-Type:Feedback-ID;
-	bh=t1PMRyQBXHYaDG+cXfk06tA2hyqr6lS08cxs75tkEB0=;
-	b=p6Nl8WaSFiSpJm+TMAuYAcTiuHnM1Vx4OIzxeMJOHgOyl8ZAsRuqg9iiSrkHbAZ1
-	fKJOB47iL/93PS9ND0p7/0JlA3BX4wqTd/i1kPkLlU1jCNP9IIaZ8AHeq3T6vOXlTGY
-	s9a+W6gmX2sG7vbG+LrrI41vuuSHMxvhoClaE8HI=
+	bh=pSq3W5zXrRp5JqwGBdgsbXXxFIOzr1tboQEVrmXayqY=;
+	b=P6V+nhTfUBf/6hfRS+mF27iVkYpjAgkvi1vyXhLcWHAfph8Y87z3BLWX1NJD6ovN
+	EvSBuLnuWZRm+u1cOgpz57rLmuVVhnM68KnwTSnlj/uZAIBY6rQ4Nzc/cQgA6lfqDI7
+	uSlOhyfwyXEkgA1KfMy61MYx/i1uJazzF5Lgbf5k=
 From: TLDR <dan@tldrnewsletter.com>
 To: mike.mcconigley@gmail.com
-Subject: Nvidia deal details =?utf-8?Q?=F0=9F=92=B0=2C?= the memory wars
- =?utf-8?Q?=F0=9F=92=BE=2C?= Jevons Paradox for knowledge work
- =?utf-8?Q?=F0=9F=92=BC=C2=A0?=
-X-Entity-Ref-Id: d87899fe-fa77-4319-85b6-df9a6e2228f2
-X-EmailOctopus-Parent-Id: 0667d53a-e492-11f0-845d-db6078c94199
+Subject: Microsoft OpenAI docs leak =?utf-8?Q?=F0=9F=93=84=2C?= X open
+ sources algo =?utf-8?Q?=F0=9F=91=A8=E2=80=8D=F0=9F=92=BB=2C?= MCP vs Skills
+ vs Agents =?utf-8?Q?=F0=9F=A4=96?=
+X-Entity-Ref-Id: 65df26c5-6b6f-454c-8a37-15391f057764
+X-EmailOctopus-Parent-Id: 73b9ed06-f6aa-11f0-9c4b-db9333cbb606
 X-EmailOctopus-Parent-Type-Id: campaign
 X-EmailOctopus-List-Id: cfa2d55a-b7be-11e8-a3c9-06b79b628af2
 X-EmailOctopus-List-Contact-Id: 46c4c580-a670-11f0-ad93-1f8c13b87d10
-X-EmailOctopus-Started-Preparing-At: 2025-12-29T11:01:03+00:00
-X-EmailOctopus-Sent-At: 2025-12-29T11:26:24+00:00
+X-EmailOctopus-Started-Preparing-At: 2026-01-21T11:01:20+00:00
+X-EmailOctopus-Sent-At: 2026-01-21T11:29:20+00:00
 X-EmailOctopus-Team-Id: 66987ef2-4f4c-11e9-a3c9-06b79b628af2
 X-EmailOctopus-Version: 4
-List-Unsubscribe: <https://a.tldrnewsletter.com/unsubscribe?ep=1&l=cfa2d55a-b7be-11e8-a3c9-06b79b628af2&lc=46c4c580-a670-11f0-ad93-1f8c13b87d10&p=0667d53a-e492-11f0-845d-db6078c94199&pt=campaign&pv=4&spa=1767006063&t=1767007584&s=7a871694544b48a9bcec621ac7882c3880a790edb4b2854ef7566a624a80dacb>
+List-Unsubscribe: <https://a.tldrnewsletter.com/unsubscribe?ep=1&l=cfa2d55a-b7be-11e8-a3c9-06b79b628af2&lc=46c4c580-a670-11f0-ad93-1f8c13b87d10&p=73b9ed06-f6aa-11f0-9c4b-db9333cbb606&pt=campaign&pv=4&spa=1768993280&t=1768994960&s=e71932025d482720df62434ab13796db22e088ba97a15e8cd907905fbb45682f>
 List-Unsubscribe-Post: List-Unsubscribe=One-Click
 X-EmailOctopus-Ses-Configuration-Set-Name: emailoctopus-a9f7b12f74f3c968d9408897fb35539c
 MIME-Version: 1.0
-Date: Mon, 29 Dec 2025 11:26:24 +0000
-Message-ID: <0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000@email.amazonses.com>
-Content-Type: multipart/alternative; boundary=tDMSEXRP
+Date: Wed, 21 Jan 2026 11:29:20 +0000
+Message-ID: <0100019be050f2bd-d3902004-e034-440d-9414-f028f28381ad-000000@email.amazonses.com>
+Content-Type: multipart/alternative; boundary=S0yMjYPf
 Feedback-ID: ::1.us-east-1.Dj5/7DYmgk+n1sSGGXSQSLIthSjNQ0MGtV5Dro1Tr8U=:AmazonSES
-X-SES-Outgoing: 2025.12.29-54.240.77.24
+X-SES-Outgoing: 2026.01.21-54.240.123.116
 
---tDMSEXRP
+--S0yMjYPf
 Content-Type: text/plain; charset=utf-8
 Content-Transfer-Encoding: quoted-printable
 
-The buildout happening right now may be a sign that the AI chip
-competiti=
-on may already be over. Nvidia recently requested 16-Hi HBM
-deliveries=
+Elon Musk's lawsuit against OpenAI has unveiled over 200 documents
+that o=
+ffer an inside look into the relationship between OpenAI and
+Microsoft=
 =C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
 =8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
 =E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
@@ -107,334 +106,404 @@ deliveries=
  =09=09TLD=
 R=20
 
-TLDR 2025-12-29
+ =09=09TOGETHER WITH [Microsoft Azure] [4]
+
+TLDR 2026-01-21
+=
+
+ FEEL LIKE YOUR TABS HAVE TABS? (SPONSOR) [4]=20
+
+ Developer tool spra=
+wl is real. You've got one tab for logs, another
+for metrics, half a doze=
+n for cloud services, and somewhere in there
+is the code you're actually =
+trying to ship.
+
+=F0=9F=AB=A3 Stop playing hide-and-seek with your tool=
+s. Microsoft Azure [4]
+brings together everything you need to build and r=
+un software in a
+single workspace.
+
+Goodbye, hunting for the right da=
+shboard. Hello, one unified
+view=E2=80=94and a faster path to innovation.=
+
+
+Simplify your stack with Azure =E2=86=92 [4]
 
 =F0=9F=93=B1=20
 
+=
 BIG TECH & STARTUPS
 
- T=
-HE MEMORY WARS: WHY THE FUTURE KARPATHY, MUSK, AND JIM FAN SEE
-REQUIRES 1=
-6-HI HBM (15 MINUTE READ) [4]=20
+ THE MICROSOFT-OPENAI FILES: INTERNAL DOCUMENTS RE=
+VEAL THE REALITIES
+OF AI'S DEFINING ALLIANCE (27 MINUTE READ) [5]=20
 
- The infrastructure buildout happening =
-right now may be a sign that
-the AI chip competition may already be over.=
- Nvidia recently requested
-16-Hi HBM deliveries from Samsung, SK Hynix, a=
-nd Micron by Q4 2026.
-This infrastructure layer could make AI inference e=
-ffectively infinite
-and nearly free at the margin. The rollout of capabil=
-ity is arriving
-faster than our ability to conceptualize what to do with =
-it.=20
+ =
+Elon Musk's lawsuit accusing OpenAI and its CEO Sam Altman of
+abandoning =
+the nonprofit mission has unveiled over 200 documents that
+offer an insid=
+e look into the relationship between OpenAI and
+Microsoft. Musk, an OpenA=
+I co-founder, is seeking up to $134 billion
+in damages, with a jury trial=
+ scheduled for this Spring. The files
+reveal how Microsoft pursued, rebuf=
+fed, and backed OpenAI at various
+moments over the past decade. The previ=
+ously undisclosed emails,
+messages, slide decks, reports, and deposition =
+transcripts show how
+Microsoft ultimately shaped the course of the lab th=
+at launched the
+generative AI era.=20
 
- NVIDIA GROQ UPDATE: EVERYONE GETS RICH, PATENT WARFARE BEGINS (7=
+ X OPEN SOURCES ITS ALGORITHM WH=
+ILE FACING A TRANSPARENCY FINE AND
+GROK CONTROVERSIES (6 MINUTE READ) [6]=
+=20
 
-MINUTE READ) [5]=20
-
- All of Groq's VCs, employees, founders, and the =
-whole cap table will
-get paid from the recent acquisition by Nvidia. 85% =
-of the payment
-will be up front, with the rest coming by the end of 2026.=
- Nvidia will
-likely weaponize the patents it gained from the acquisition =
-to create
-a 'scorched-earth zone' around SRAM-based inference. GroqCloud =
-has
-become a shell of its former self with no IP and no technical
-leade=
-rship.=20
+ X has open sourced its algorithm, giving the world a peek behind th=
+e
+company's algorithmic curtain. The site's algorithm considers
+engagem=
+ent history and surveys recent in-network posts when finding
+content for =
+individual users. It conducts a machine-learning-based
+analysis of 'out o=
+f network' posts that it believes the user might
+also find appealing. The=
+ algorithm then filters out certain kinds of
+posts, as well as content de=
+emed too violent or spam-like, and ranks
+the content based on what it thi=
+nks users will find most appealing.=20
 
 =F0=9F=9A=80=20
 
-SCIENCE & FUTURISTIC TECHNOLOGY
+SCIENCE & FUTU=
+RISTIC TECHNOLOGY
 
- ALZHE=
-IMER'S: FROM CAUSES AND RISK FACTORS TO MODELS AND INTERVENTIONS
-(14 MINU=
-TE READ) [6]=20
+ MODERNA, MERCK REPORT POSITIVE RESULTS FROM CANCER-=
+VACCINE STUDY (1
+MINUTE READ) [7]=20
 
- Alzheimer's Disease (AD) is caused by multiple factors.=
- Each
-individual factor doesn't necessarily guarantee an AD diagnosis in=
+ In a Phase 2b trial, Moderna and=
+ Merck's cancer vaccine reduced the
+risk of relapse or death in melanoma =
+patients by 49% when used in
+combination with Merck's immunotherapy Keytr=
+uda, compared to when
+using Keytruda alone. The results illustrate mRNA's=
+ potential in
+cancer care. The treatment continues to demonstrate sustain=
+ed and
+clinically meaningful improvement. The companies are currently run=
+ning
+eight Phase 2 and Phase 3 clinical trials across multiple tumor type=
+s.
 
-every situation, but it increases the odds of it all else being equal.=
 
-Preventing AD and reversing or stopping the disease are two separate
-a=
-reas of research. Attempting to modify risk factors of the disease
-once i=
-t has already started is unlikely to lead to a cure. Targeting
-the underl=
-ying dynamics of the disease is a more likely pathway to a
-treatment.=20
+ THE FIRST COMMERCIAL SPACE STATION, HAVEN-1, IS NOW UNDERGOING=
+
+ASSEMBLY FOR LAUNCH (14 MINUTE READ) [8]=20
+
+ The International Space =
+Station is due to be decommissioned in less
+than five years, but NASA has=
+ yet to formally publish rules and
+requirements for a potential replaceme=
+nt. There are currently four
+main contenders for NASA's commercial space =
+station program: Voyager
+Technologies, Axiom Space, Blue Origin, and Vast=
+ Space. NASA is
+expected to select one or two of these companies for cont=
+racts later
+this year. This article contains an interview with Vast's chi=
+ef
+executive, Max Haot. Vast is currently building a smaller interim
+sp=
+ace station capable of short-duration stays called Haven-1.=20
+
 =
-
- PROPOSED SPACE STATION COULD BE DEPLOYED IN A SINGLE LAUNCH (2 MINUTE=
-
-READ) [7]=20
-
- Max Space's Thunderbird is designed to host four astron=
-auts in an
-expandable interior structure that can be reconfigured by the =
-crew to
-support different activities. It can be used for research as well=
- as
-orbital manufacturing of pharmaceuticals and other materials. The
-s=
-pace station can be launched on a medium-lift vehicle such as the
-Falcon =
-9 rocket. The Thunderbird space station is set to launch as
-early as 2029=
-.=20
-
 =F0=9F=92=BB=20
 
 PROGRAMMING, DESIGN & DATA SCIENCE
 
- REACH M=
-ILLIONS OF TECH PROFESSIONALS AT SCALE (SPONSOR) [8]=20
+ =F0=9F=93=8A HO=
+W MANY DASHBOARDS IS TOO MANY?=C2=A0(SPONSOR) [9]=20
 
- Over 6 million =
-tech professionals read TLDR including developers,
-product managers, mark=
-eters, designers and executives. Get in front of
-your target audience wit=
-h an ad placement just like this one! Learn
-more [8] about running a test=
- campaign.=20
+ Every new monitori=
+ng tool, service, or "quick integration" adds
+another dashboard to the pi=
+le=E2=80=94and before you know it, you're
+spending more time switching be=
+tween tools than actually building.
+With Microsoft Azure [10], your entir=
+e stack lives in one workspace:
+infrastructure, data, AI, and more. See h=
+ow Azure brings it all
+together =E2=86=92 [10]=20
 
- A GUIDE TO CLAUDE CODE 2.0 AND GETTING BETTER AT USING CO=
-DING AGENTS
-(55 MINUTE READ) [9]=20
+ MCP, SKILLS, AND AG=
+ENTS (10 MINUTE READ) [11]=20
 
- Claude Code dominated the CLI cod=
-ing product experience this year.
-This guide shows readers the thought pr=
-ocesses and simple things to
-keep in mind to get the most out of Claude C=
-ode. Learning how things
-work in Claude Code directly transfers to other =
-tools, both in terms
-of personal usage and production-grade engineering. =
-The post will help
-users keep up with coding agents in general.=20
+ Harnesses are constantly improving by ite=
+rating on what works well.
+However, every time someone releases a new beh=
+avior, the thought
+leaders of the internet determine that it has replaced=
+ all previous
+functionality. Developers should try both skills and MCP to=
+ learn the
+fundamentals of how the technology works and what that means f=
+or
+managing the context window. How the technologies shift in the future=
 
- HO=
-W I THINK ABOUT KUBERNETES (6 MINUTE READ) [10]=20
+depends entirely on the workflows they help people solve.=20
 
- Kubernetes is often =
-described as a container orchestration tool, but
-that mental model isn't =
-always the most useful way to think about
-what's happening. It is more li=
-ke a platform where developers declare
-the desired state of their infrast=
-ructure and let the system
-continuously work to match that intent. In tha=
-t way, Kubernetes is
-more like a runtime for declarative infrastructure w=
-ith a type system.
-Thinking this way results in very practical approaches=
- to operating
-clusters.=20
+ SKILLS.=
+SH (WEBSITE) [12]=20
+
+ Skills are reusable capabilities for AI agents. Th=
+is site contains an
+open agent skills ecosystem with a collection of skil=
+ls anyone can
+install with a single command to enhance their agents with =
+access to
+procedural knowledge. The site contains thousands of skills. Th=
+e index
+is searchable and shows how many times each skill has been instal=
+led.=20
 
 =F0=9F=8E=81=20
 
 MISCELLANEOUS
 
- 12 O=
-UTLOOKS FOR THE FUTURE: 2026+ (9 MINUTE READ) [11]=20
+ I'M ADDICTED TO BEING USE=
+FUL (5 MINUTE READ) [13]=20
 
- 2026 will hopeful=
-ly be full of surprises and developments that give
-us hope for healthier =
-and more fulfilling work and lives. The AI hype
-cycle will die down, allo=
-wing the most meaningful innovations to
-become clear. This post takes a l=
-ook at what we should expect in the
-coming year and beyond, and what the =
-implications of that will be.=20
+ People think software engineers are addicte=
+d to being useful, driven
+by an addiction to solving puzzles, or drawn by=
+ power and money. What
+actually motivates software engineers is often mor=
+e of an internal
+compulsion. It's worth figuring out what really motivate=
+s you so that
+you can harness that compulsion most effectively.=20
 
- JEVONS PARADOX FOR KNOWLEDGE WORK (7 M=
-INUTE READ) [12]=20
+ AG=
+ENTIC AI AND THE MYTHICAL AGENT-MONTH (6 MINUTE READ) [14]=20
 
- Tech-driven efficiency improvements tend to lead to=
- massive growth
-because there are more use cases for the resources than p=
-reviously
-contemplated. AI is going to lead to a lot more knowledge work =
-by
-making it cheaper, as that allows people to take on tasks previously=
-
-unimaginable. The vast majority of AI tokens in the future will be
-use=
-d on things that we don't even do today. AI will enable work that
-previou=
-sly wouldn't have been considered, as it would have been too
-expensive or=
- impractical.=20
+ The conce=
+pt of 'Scalable Agency', where a developer could
+theoretically spin up th=
+ousands of agents to complete tasks faster,
+relies on a flawed assumption=
+ that software engineering is an
+embarrassingly parallel task. Context lo=
+ading is not the same as
+common knowledge, and reading tokens is not the =
+same as understanding
+the causal chain of changes across a system. Adding=
+ manpower to a late
+software project makes it later. Multi-agent systems =
+do not escape
+this law, they simply hit the wall of state-space explosion=
+ faster
+than humans do.=20
 
 =E2=9A=A1=20
 
 QUICK LINKS
 
- WHY DID THE MEMORY CH=
-ICKEN GAME KEEP REPEATING=E2=80=94AND WHO ULTIMATELY
-SURVIVED? (22 MINUTE=
- READ) [13]=20
+ TLDR IS H=
+IRING A SENIOR SOFTWARE ENGINEER, APPLIED AI ($200K-$300K,
+FULLY REMOTE) =
+[15]=20
 
- Both an escape from the commoditization of memory and th=
-e
-'foundry-ization' of memory will happen within the next two years.=20
-=
+ As the first engineer on TLDR's new Applied AI team, you'll bui=
+ld AI
+agents and composable Claude Skills to let non-technical teammates=
 
- MY ROLE AS A FOUNDER CTO: YEAR EIGHT (16 MINUTE READ) [14]=20
+create their own AI workflows.=C2=A0Learn more [16].=20
 
- Migue=
-l Carranza is the founder of RevenueCat, a service that helps
-developers =
-grow and manage in-app purchases.=20
+ SYNTUX (GITH=
+UB REPO) [17]=20
 
- PUBLISHING YOUR WORK INCREASES YOU=
-R LUCK (11 MINUTE READ) [15]=20
+ syntux is a generative UI library that is consistent a=
+nd flexible.=20
 
- You increase your luck by making yourse=
-lf more visible to the world.=20
+ THE TRAGEDY OF THE AGENTIC COMMONS (18 MINUTE READ) [18=
+]=20
 
- CONTINUOUS CLAUDE (GITHUB REPO) [16] =
+ AI agents help facilitate better match quality through centralized=
 
+mechanisms in 'thin' markets.=20
 
- Continuous Claude is a framework that saves state to a ledger, wipes=
+ THE MICROSTRUCTURE OF WEALTH TRANSF=
+ER IN PREDICTION MARKETS (26
+MINUTE READ) [19]=20
 
-context, and resumes fresh.=20
+ Prediction markets =
+are creating a systematic wealth transfer, where
+impulsive Takers pay a s=
+tructural premium for affirmative outcomes
+while Makers capture an 'Optim=
+ism Tax' simply by selling into this
+biased flow.=20
 
- THE HIDDEN COST OF MAKING WORK CHEAP =
-(3 MINUTE READ) [17]=20
+ SOFTWARE AS CLAY=
+ ON THE WHEEL (6 MINUTE READ) [20]=20
 
- Trust becomes harder to earn when work becomes =
-cheap.=20
+ Just like when working with clay,=
+ when software doesn't work, you
+throw it back, refine it, and spin again=
+ until it's right.=20
 
- WHAT AN UNPROCESSED PHOTO LOOKS LIKE (4 MINUTE READ) [18]=20
-=
+ NETFLIX TO PAY ALL CASH FOR WARNER BROS. TO FEND =
+OFF PARAMOUNT
+HOSTILE TAKEOVER (8 MINUTE READ) [21]=20
 
- A look at what camera sensors see and what photo processing actually
-=
-does.=20
+ Netflix origin=
+ally planned to buy each Warner Bros. share with $23.25
+in cash and $4.50=
+ in Netflix stock, but it has amended the deal to
+sweeten the offer for s=
+hareholders.=20
+
+ PIPENET (WEBSITE) [22]=20
+
+ pipenet is an alternative=
+ to localtunnel that bundles client and
+server to host self-hosted tunnel=
+ infrastructure for full control over
+security, domains, and availability=
+.=20
 
 Love TLDR? Tell your friends and get rewards!
 
- Share your =
-referral link below with friends to get free TLDR swag!=20
+ Share your refe=
+rral link below with friends to get free TLDR swag!=20
 
- https://refe=
-r.tldr.tech/95f8de32/ [19]=20
+ https://refer.tl=
+dr.tech/95f8de32/ [23]=20
 
- =09=09 Track your referrals here. [20] =
+ =09=09 Track your referrals here. [24]=20
 
-
+=
 Want to advertise in TLDR? =F0=9F=93=B0
 
- If your company is inte=
-rested in reaching an audience of tech
-executives, decision-makers and en=
-gineers, you may want to ADVERTISE
-WITH US [21].=20
+ If your company is interested=
+ in reaching an audience of tech
+executives, decision-makers and engineer=
+s, you may want to ADVERTISE
+WITH US [25].=20
 
-Want to work at TL=
-DR? =F0=9F=92=BC
+Want to work at TLDR? =
+=F0=9F=92=BC
 
- APPLY HERE [22], CREATE YOUR OWN ROLE [23] or send a=
- friend's resume
-to jobs@tldr.tech and get $1k if we hire them! TLDR is o=
-ne of INC.'S
-BEST BOOTSTRAPPED BUSINESSES [24] of 2025.=20
+ APPLY HERE [26], CREATE YOUR OWN ROLE [27] or send a fri=
+end's resume
+to jobs@tldr.tech and get $1k if we hire them! TLDR is one o=
+f INC.'S
+BEST BOOTSTRAPPED BUSINESSES [28] of 2025.=20
 
- If you hav=
-e any comments or feedback, just respond to this email!=20
+ If you have an=
+y comments or feedback, just respond to this email!=20
 
-Thanks for re=
-ading,=20
-Dan Ni [25] & Stephen Flanders [26]=20
+Thanks for readin=
+g,=20
+Dan Ni [29] & Stephen Flanders [30]=20
 
- Manage your subscripti=
-ons [27] to our other newsletters on tech,
-startups, and programming. Or =
-if TLDR isn't for you, please
-unsubscribe [28].=20
+ Manage your subscriptions =
+[31] to our other newsletters on tech,
+startups, and programming. Or if T=
+LDR isn't for you, please
+unsubscribe [32].=20
 
 =20
 
 Links:
----=
----
-[1] https://tldr.tech/signup?utm_source=3Dtldr
-[2] https://advertis=
-e.tldr.tech/?utm_source=3Dtldr&utm_medium=3Dnewsletter&utm_campaign=3Dadver=
-tisetopnav
-[3] https://a.tldrnewsletter.com/web-version?ep=3D1&lc=3D46c4c=
-580-a670-11f0-ad93-1f8c13b87d10&p=3D0667d53a-e492-11f0-845d-db6078c94199&pt=
-=3Dcampaign&t=3D1767007584&s=3Dffebc711df7895594ecd19ce1e3711064cc3b2a86ee1=
-97b7fab46e085a7424ac
-[4] https://links.tldrnewsletter.com/Dr22ln
-[5] ht=
-tps://ossa-ma.github.io/blog/groq-update?utm_source=3Dtldrnewsletter
-[6] =
-https://nintil.com/alzheimers-cause?utm_source=3Dtldrnewsletter
-[7] https=
-://gizmodo.com/proposed-space-station-could-be-deployed-in-a-single-launch-=
-2000701443?utm_source=3Dtldrnewsletter
-[8] https://advertise.tldr.tech/?u=
-tm_source=3Dtldr&utm_medium=3Dnewsletter&utm_campaign=3Dsecondary12292025=
+------=
 
-[9] https://sankalp.bearblog.dev/my-experience-with-claude-code-20-and-h=
-ow-to-get-better-at-using-coding-agents/?utm_source=3Dtldrnewsletter
-[10]=
- https://garnaudov.com/writings/how-i-think-about-kubernetes/?utm_source=3D=
-tldrnewsletter
-[11] https://www.implications.com/p/12-outlooks-for-the-fu=
-ture-2026?utm_source=3Dtldrnewsletter
-[12] https://links.tldrnewsletter.c=
-om/1r308Z
-[13] https://www.semiconsam.com/p/why-did-the-memory-chicken-ga=
-me-keep?utm_source=3Dtldrnewsletter
-[14] https://miguelcarranza.es/cto-ye=
-ar-8?utm_source=3Dtldrnewsletter
-[15] https://github.com/readme/guides/pu=
-blishing-your-work?utm_source=3Dtldrnewsletter
-[16] https://github.com/pa=
-rcadei/Continuous-Claude-v2?utm_source=3Dtldrnewsletter
-[17] https://link=
-s.tldrnewsletter.com/DVBLiC
-[18] https://maurycyz.com/misc/raw_photo/?utm=
-_source=3Dtldrnewsletter
-[19] https://refer.tldr.tech/95f8de32/
-[20] ht=
-tps://hub.sparklp.co/sub_47fb527d7973/1
-[21] https://advertise.tldr.tech/=
-?utm_source=3Dtldr&utm_medium=3Dnewsletter&utm_campaign=3Dadvertisecta
-[2=
-2] https://jobs.ashbyhq.com/tldr.tech
-[23] https://jobs.ashbyhq.com/tldr.=
-tech/c227b917-a6a4-40ce-8950-d3e165357871
-[24] https://www.linkedin.com/f=
-eed/update/urn:li:activity:7401699691039830016/
-[25] https://twitter.com/=
-tldrdan
-[26] https://twitter.com/SteveFlanders22
-[27] https://tldr.tech=
-/tech/manage?email=3Dmike.mcconigley%40gmail.com
-[28] https://a.tldrnewsl=
-etter.com/unsubscribe?ep=3D1&l=3Dcfa2d55a-b7be-11e8-a3c9-06b79b628af2&lc=3D=
-46c4c580-a670-11f0-ad93-1f8c13b87d10&p=3D0667d53a-e492-11f0-845d-db6078c941=
-99&pt=3Dcampaign&pv=3D4&spa=3D1767006063&t=3D1767007584&s=3D7a871694544b48a=
-9bcec621ac7882c3880a790edb4b2854ef7566a624a80dacb
---tDMSEXRP
+[1] https://tldr.tech/signup?utm_source=3Dtldr
+[2] https://advertise.t=
+ldr.tech/?utm_source=3Dtldr&utm_medium=3Dnewsletter&utm_campaign=3Dadvertis=
+etopnav
+[3] https://a.tldrnewsletter.com/web-version?ep=3D1&lc=3D46c4c580=
+-a670-11f0-ad93-1f8c13b87d10&p=3D73b9ed06-f6aa-11f0-9c4b-db9333cbb606&pt=3D=
+campaign&t=3D1768994960&s=3D12c45b27d1a4ef90e91dc7e831a0dce3d9d4ceffcf0f654=
+ecef0868da18d6705
+[4] https://links.tldrnewsletter.com/NEyzgk
+[5] https=
+://links.tldrnewsletter.com/Wf7hlf
+[6] https://techcrunch.com/2026/01/20/=
+x-open-sources-its-algorithm-while-facing-a-transparency-fine-and-grok-cont=
+roversies/?utm_source=3Dtldrnewsletter
+[7] https://links.tldrnewsletter.c=
+om/HQOwBt
+[8] https://arstechnica.com/space/2026/01/the-first-commercial-=
+space-station-haven-1-is-now-undergoing-assembly-for-launch/?utm_source=3Dt=
+ldrnewsletter
+[9] https://links.tldrnewsletter.com/ePhqQc?utm_source=3Dtl=
+drnewsletter
+[10] https://links.tldrnewsletter.com/ePhqQc
+[11] https://=
+cra.mr/mcp-skills-and-agents/?utm_source=3Dtldrnewsletter
+[12] https://sk=
+ills.sh/?utm_source=3Dtldrnewsletter
+[13] https://www.seangoedecke.com/ad=
+dicted-to-being-useful/?utm_source=3Dtldrnewsletter
+[14] https://muratbuf=
+falo.blogspot.com/2026/01/agentic-ai-and-mythical-agent-month.html?utm_sour=
+ce=3Dtldrnewsletter
+[15] https://jobs.ashbyhq.com/tldr.tech/3b21aaf8-dea5=
+-4127-be71-602d30e5001e?utm_source=3Dtldrnewsletter
+[16] https://jobs.ash=
+byhq.com/tldr.tech/3b21aaf8-dea5-4127-be71-602d30e5001e
+[17] https://gith=
+ub.com/puffinsoft/syntux?utm_source=3Dtldrnewsletter
+[18] https://www.str=
+angeloopcanon.com/p/the-tragedy-of-the-agentic-commons?utm_source=3Dtldrnew=
+sletter
+[19] https://www.jbecker.dev/research/prediction-market-microstru=
+cture?utm_source=3Dtldrnewsletter
+[20] https://dri.es/software-as-clay-on=
+-the-wheel?utm_source=3Dtldrnewsletter
+[21] https://arstechnica.com/tech-=
+policy/2026/01/netflix-to-pay-all-cash-for-warner-bros-to-fend-off-paramoun=
+t-hostile-takeover/?utm_source=3Dtldrnewsletter
+[22] https://pipenet.dev/=
+?utm_source=3Dtldrnewsletter
+[23] https://refer.tldr.tech/95f8de32/
+[24=
+] https://hub.sparklp.co/sub_47fb527d7973/1
+[25] https://advertise.tldr.t=
+ech/?utm_source=3Dtldr&utm_medium=3Dnewsletter&utm_campaign=3Dadvertisecta=
+
+[26] https://jobs.ashbyhq.com/tldr.tech
+[27] https://jobs.ashbyhq.com/=
+tldr.tech/c227b917-a6a4-40ce-8950-d3e165357871
+[28] https://www.linkedin.=
+com/feed/update/urn:li:activity:7401699691039830016/
+[29] https://twitter=
+.com/tldrdan
+[30] https://twitter.com/SteveFlanders22
+[31] https://tldr=
+.tech/tech/manage?email=3Dmike.mcconigley%40gmail.com
+[32] https://a.tldr=
+newsletter.com/unsubscribe?ep=3D1&l=3Dcfa2d55a-b7be-11e8-a3c9-06b79b628af2&=
+lc=3D46c4c580-a670-11f0-ad93-1f8c13b87d10&p=3D73b9ed06-f6aa-11f0-9c4b-db933=
+3cbb606&pt=3Dcampaign&pv=3D4&spa=3D1768993280&t=3D1768994960&s=3De71932025d=
+482720df62434ab13796db22e088ba97a15e8cd907905fbb45682f
+--S0yMjYPf
 Content-Type: text/html; charset=utf-8
 Content-Transfer-Encoding: quoted-printable
 
@@ -590,20 +659,20 @@ ant;
 =09<body class=3D"">
 
 
-=09=09<div style=3D"display: none; max-height: 0px; overflow: hidden;">The =
-buildout happening right now may be a sign that the AI chip competition may=
- already be over. Nvidia recently requested 16-Hi HBM deliveries&nbsp;=E2=
-=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
-=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
-=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
-=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
-=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
-=80=8C&nbsp;&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
-sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
-sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
-sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
-sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
-sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;</div>
+=09=09<div style=3D"display: none; max-height: 0px; overflow: hidden;">Elon=
+ Musk&#039;s lawsuit against OpenAI has unveiled over 200 documents that of=
+fer an inside look into the relationship between OpenAI and Microsoft&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;</div>
 
 =09=09<div style=3D"display: none; max-height: 0px; overflow: hidden;">
 =09=09=09<br>
@@ -654,22 +723,22 @@ ign=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span style=3D"margin-right: 0px;"><a href=3D"https://tracking.tldrne=
 wsletter.com/CL0/https:%2F%2Ftldr.tech%2Fsignup%3Futm_source=3Dtldr/1/01000=
-19b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000/J6LgttetgUyiyzJu4Gx=
-VLoAMdLXyJ7WnXDbqqPkD6qo=3D437" rel=3D"noopener noreferrer" target=3D"_blan=
+19be050f2bd-d3902004-e034-440d-9414-f028f28381ad-000000/9Uh28Cb_t3QSwEcNFTT=
+IS9Y3htWOKSa3b-q-VIMWZW8=3D441" rel=3D"noopener noreferrer" target=3D"_blan=
 k"><span>Sign Up</span></a>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span>|</span><span style=3D"margin-right: 2px; margin-left: 2px;"><a=
  href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr=
 .tech%2F%3Futm_source=3Dtldr%26utm_medium=3Dnewsletter%26utm_campaign=3Dadv=
-ertisetopnav/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000=
-/cw7mP28_tLusoW-RomtuGJ4OysUcfeWxRw7664ZNBpI=3D437" rel=3D"noopener norefer=
+ertisetopnav/1/0100019be050f2bd-d3902004-e034-440d-9414-f028f28381ad-000000=
+/_5FfSQDIcO0p-chDCEoV0Gp_SU_mbR2mfC2j5fX5FXU=3D441" rel=3D"noopener norefer=
 rer" target=3D"_blank"><span>Advertise</span></a></span><span>|</span><span=
  style=3D"margin-left: 2px;"><a href=3D"https://tracking.tldrnewsletter.com=
 /CL0/https:%2F%2Fa.tldrnewsletter.com%2Fweb-version%3Fep=3D1%26lc=3D46c4c58=
-0-a670-11f0-ad93-1f8c13b87d10%26p=3D0667d53a-e492-11f0-845d-db6078c94199%26=
-pt=3Dcampaign%26t=3D1767007584%26s=3Dffebc711df7895594ecd19ce1e3711064cc3b2=
-a86ee197b7fab46e085a7424ac/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7a=
-e278ef0-000000/UuDREoErX_I7QyRC3JHqbiumRplVGjzgl5Linw_g84s=3D437"><span>Vie=
+0-a670-11f0-ad93-1f8c13b87d10%26p=3D73b9ed06-f6aa-11f0-9c4b-db9333cbb606%26=
+pt=3Dcampaign%26t=3D1768994960%26s=3D12c45b27d1a4ef90e91dc7e831a0dce3d9d4ce=
+ffcf0f654ecef0868da18d6705/1/0100019be050f2bd-d3902004-e034-440d-9414-f028f=
+28381ad-000000/uRcJAtkyADNr8kopyoI-ytc2fikBPMRAbtAU3w6h9Ss=3D441"><span>Vie=
 w Online</span></a></span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<br>
@@ -717,7 +786,24 @@ y>
 ign=3D"center" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
 " width=3D"100%">
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody=
-></tbody>
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr=
+ id=3D"together-with">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+<td align=3D"center" height=3D"20" style=3D"vertical-align:middle !importan=
+t;" valign=3D"middle" width=3D"100%"><strong style=3D"vertical-align:middle=
+ !important; height: 100%;">Together With </strong>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09<a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tld=
+rnewsletter.com%2FNEyzgk/1/0100019be050f2bd-d3902004-e034-440d-9414-f028f28=
+381ad-000000/a53yNNgeOfKUXysqQXm4-xqM2-of7XMTpn2T5zp2sT0=3D441"><img src=3D=
+"https://images.tldr.tech/microsoftazure.png" valign=3D"middle" style=3D"ve=
+rtical-align: middle !important; height: 100%;" alt=3D"Microsoft Azure"></a=
+></td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</t=
+r>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbod=
+y>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
 
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table st=
@@ -733,7 +819,7 @@ yle=3D"table-layout: fixed; width:100%;" width=3D"100%">
 =09<div style=3D"text-align: center;">
 
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
-=09=09<h1><strong>TLDR <span id=3D"date">2025-12-29</span></strong></h1>
+=09=09<h1><strong>TLDR <span id=3D"date">2026-01-21</span></strong></h1>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09</div>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
@@ -747,7 +833,64 @@ y>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table st=
 yle=3D"table-layout: fixed; width:100%;" width=3D"100%">
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody=
-></tbody>
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr=
+ id=3D"sponsy-copy">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+<td class=3D"container" style=3D"padding: 15px 15px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09<div class=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FNEyzgk/2/0100019be050f2bd-d3=
+902004-e034-440d-9414-f028f28381ad-000000/s3Au849c8hgu8_rYuUwog-PajlxgPycbU=
+6WB4FR1a3o=3D441">
+                                    <span>
+                                        <strong>Feel like your tabs have ta=
+bs? (Sponsor)</strong>
+                                    </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
+ial, Verdana, sans-serif;">
+                                    Developer tool sprawl is real. You've g=
+ot one tab for logs, another for metrics, half a dozen for cloud services, =
+and somewhere in there is the code you're actually trying to ship.<p></p><p=
+>=F0=9F=AB=A3 Stop playing hide-and-seek with your tools. <a href=3D"https:=
+//tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FNE=
+yzgk/3/0100019be050f2bd-d3902004-e034-440d-9414-f028f28381ad-000000/NIKk9r4=
+1cy5ouFAGdDM733jzSfQdcKMUbp1x-6kBuY4=3D441" rel=3D"noopener noreferrer nofo=
+llow" target=3D"_blank"><span>Microsoft Azure</span></a> brings together ev=
+erything you need to build and run software in a single workspace.</p>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<p>Goodbye, hunting for the right dashboard. Hello, one unified view=
+=E2=80=94and a faster path to innovation.</p>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<p><a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flin=
+ks.tldrnewsletter.com%2FNEyzgk/4/0100019be050f2bd-d3902004-e034-440d-9414-f=
+028f28381ad-000000/eKR6o-oOXobqjQ_p59cM0LztNhDxf7ZQefQO43szVB4=3D441" rel=
+=3D"noopener noreferrer nofollow" target=3D"_blank"><span>Simplify your sta=
+ck with Azure =E2=86=92</span></a>
+
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</span></span></div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</t=
+r>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbod=
+y>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
@@ -830,13 +973,13 @@ ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span>
                                 <a href=3D"https://tracking.tldrnewsletter.=
-com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FDr22ln/1/0100019b69dc018a-3e=
-c15f1a-23ae-4974-833e-e1a7ae278ef0-000000/i-LaKxOHvE_8l5xb9OopiHXuO01MuX0bc=
-pWWgTf9aIk=3D437">
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FWf7hlf/1/0100019be050f2bd-d3=
+902004-e034-440d-9414-f028f28381ad-000000/xLpHtCdk_Qp700XH6zMFI4Mcf8H4hL-L3=
+26yTqKuHhs=3D441">
                                     <span>
-                                        <strong>The Memory Wars: Why the Fu=
-ture Karpathy, Musk, and Jim Fan See Requires 16-Hi HBM (15 minute read)</s=
-trong>
+                                        <strong>The Microsoft-OpenAI Files:=
+ Internal documents reveal the realities of AI's defining alliance (27 minu=
+te read)</strong>
                                     </span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</a>
@@ -847,12 +990,15 @@ trong>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
 ial, Verdana, sans-serif;">
-                                    The infrastructure buildout happening r=
-ight now may be a sign that the AI chip competition may already be over. Nv=
-idia recently requested 16-Hi HBM deliveries from Samsung, SK Hynix, and Mi=
-cron by Q4 2026. This infrastructure layer could make AI inference effectiv=
-ely infinite and nearly free at the margin. The rollout of capability is ar=
-riving faster than our ability to conceptualize what to do with it.
+                                    Elon Musk's lawsuit accusing OpenAI and=
+ its CEO Sam Altman of abandoning the nonprofit mission has unveiled over 2=
+00 documents that offer an inside look into the relationship between OpenAI=
+ and Microsoft. Musk, an OpenAI co-founder, is seeking up to $134 billion i=
+n damages, with a jury trial scheduled for this Spring. The files reveal ho=
+w Microsoft pursued, rebuffed, and backed OpenAI at various moments over th=
+e past decade. The previously undisclosed emails, messages, slide decks, re=
+ports, and deposition transcripts show how Microsoft ultimately shaped the =
+course of the lab that launched the generative AI era.
                                 </span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</span>
@@ -880,12 +1026,14 @@ ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span>
                                 <a href=3D"https://tracking.tldrnewsletter.=
-com/CL0/https:%2F%2Fossa-ma.github.io%2Fblog%2Fgroq-update%3Futm_source=3Dt=
-ldrnewsletter/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-00000=
-0/CUkZXOqQ6psSIrQONGxfzf0W5wBwZw9EXU5uVkTeE7Q=3D437">
+com/CL0/https:%2F%2Ftechcrunch.com%2F2026%2F01%2F20%2Fx-open-sources-its-al=
+gorithm-while-facing-a-transparency-fine-and-grok-controversies%2F%3Futm_so=
+urce=3Dtldrnewsletter/1/0100019be050f2bd-d3902004-e034-440d-9414-f028f28381=
+ad-000000/eu7rckOhvKhBapTmXZx-RO4qSWApPnwZGsIstaXnYco=3D441">
                                     <span>
-                                        <strong>Nvidia Groq Update: Everyon=
-e Gets Rich, Patent Warfare Begins (7 minute read)</strong>
+                                        <strong>X open sources its algorith=
+m while facing a transparency fine and Grok controversies (6 minute read)</=
+strong>
                                     </span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</a>
@@ -896,13 +1044,14 @@ e Gets Rich, Patent Warfare Begins (7 minute read)</strong>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
 ial, Verdana, sans-serif;">
-                                    All of Groq's VCs, employees, founders,=
- and the whole cap table will get paid from the recent acquisition by Nvidi=
-a. 85% of the payment will be up front, with the rest coming by the end of =
-2026. Nvidia will likely weaponize the patents it gained from the acquisiti=
-on to create a 'scorched-earth zone' around SRAM-based inference. GroqCloud=
- has become a shell of its former self with no IP and no technical leadersh=
-ip.
+                                    X has open sourced its algorithm, givin=
+g the world a peek behind the company's algorithmic curtain. The site's alg=
+orithm considers engagement history and surveys recent in-network posts whe=
+n finding content for individual users. It conducts a machine-learning-base=
+d analysis of 'out of network' posts that it believes the user might also f=
+ind appealing. The algorithm then filters out certain kinds of posts, as we=
+ll as content deemed too violent or spam-like, and ranks the content based =
+on what it thinks users will find most appealing.
                                 </span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</span>
@@ -983,12 +1132,12 @@ ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span>
                                 <a href=3D"https://tracking.tldrnewsletter.=
-com/CL0/https:%2F%2Fnintil.com%2Falzheimers-cause%3Futm_source=3Dtldrnewsle=
-tter/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000/lxW7b56=
-GBWzHV9BI-7mNk0GC16sZKAcC9EgrVX0xgMw=3D437">
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FHQOwBt/1/0100019be050f2bd-d3=
+902004-e034-440d-9414-f028f28381ad-000000/8mJC_-cO-zuZRgXVhuIotJ6RRsj2suHsW=
+R-crRz0FkM=3D441">
                                     <span>
-                                        <strong>Alzheimer's: from causes an=
-d risk factors to models and interventions (14 minute read)</strong>
+                                        <strong>Moderna, Merck Report Posit=
+ive Results From Cancer-Vaccine Study (1 minute read)</strong>
                                     </span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</a>
@@ -999,13 +1148,13 @@ d risk factors to models and interventions (14 minute read)</strong>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
 ial, Verdana, sans-serif;">
-                                    Alzheimer's Disease (AD) is caused by m=
-ultiple factors. Each individual factor doesn't necessarily guarantee an AD=
- diagnosis in every situation, but it increases the odds of it all else bei=
-ng equal. Preventing AD and reversing or stopping the disease are two separ=
-ate areas of research. Attempting to modify risk factors of the disease onc=
-e it has already started is unlikely to lead to a cure. Targeting the under=
-lying dynamics of the disease is a more likely pathway to a treatment.
+                                    In a Phase 2b trial, Moderna and Merck'=
+s cancer vaccine reduced the risk of relapse or death in melanoma patients =
+by 49% when used in combination with Merck's immunotherapy Keytruda, compar=
+ed to when using Keytruda alone. The results illustrate mRNA's potential in=
+ cancer care. The treatment continues to demonstrate sustained and clinical=
+ly meaningful improvement. The companies are currently running eight Phase =
+2 and Phase 3 clinical trials across multiple tumor types.
                                 </span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</span>
@@ -1033,13 +1182,14 @@ ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span>
                                 <a href=3D"https://tracking.tldrnewsletter.=
-com/CL0/https:%2F%2Fgizmodo.com%2Fproposed-space-station-could-be-deployed-=
-in-a-single-launch-2000701443%3Futm_source=3Dtldrnewsletter/1/0100019b69dc0=
-18a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000/SMsB1pXsX5fkJqNyQtWjJzsKomC=
-EkYLOjHFsb_5WEn4=3D437">
+com/CL0/https:%2F%2Farstechnica.com%2Fspace%2F2026%2F01%2Fthe-first-commerc=
+ial-space-station-haven-1-is-now-undergoing-assembly-for-launch%2F%3Futm_so=
+urce=3Dtldrnewsletter/1/0100019be050f2bd-d3902004-e034-440d-9414-f028f28381=
+ad-000000/BnGPhHq6JGI8Ri56NB3JcOXlXWa7Fhu93ayGdwbeQgA=3D441">
                                     <span>
-                                        <strong>Proposed Space Station Coul=
-d Be Deployed in a Single Launch (2 minute read)</strong>
+                                        <strong>The first commercial space =
+station, Haven-1, is now undergoing assembly for launch (14 minute read)</s=
+trong>
                                     </span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</a>
@@ -1050,13 +1200,15 @@ d Be Deployed in a Single Launch (2 minute read)</strong>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
 ial, Verdana, sans-serif;">
-                                    Max Space's Thunderbird is designed to =
-host four astronauts in an expandable interior structure that can be reconf=
-igured by the crew to support different activities. It can be used for rese=
-arch as well as orbital manufacturing of pharmaceuticals and other material=
-s. The space station can be launched on a medium-lift vehicle such as the F=
-alcon 9 rocket. The Thunderbird space station is set to launch as early as =
-2029.
+                                    The International Space Station is due =
+to be decommissioned in less than five years, but NASA has yet to formally =
+publish rules and requirements for a potential replacement. There are curre=
+ntly four main contenders for NASA's commercial space station program: Voya=
+ger Technologies, Axiom Space, Blue Origin, and Vast Space. NASA is expecte=
+d to select one or two of these companies for contracts later this year. Th=
+is article contains an interview with Vast's chief executive, Max Haot. Vas=
+t is currently building a smaller interim space station capable of short-du=
+ration stays called Haven-1.
                                 </span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</span>
@@ -1136,13 +1288,12 @@ ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span>
                                 <a href=3D"https://tracking.tldrnewsletter.=
-com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=3Dtldr%26utm_medium=
-=3Dnewsletter%26utm_campaign=3Dsecondary12292025/1/0100019b69dc018a-3ec15f1=
-a-23ae-4974-833e-e1a7ae278ef0-000000/MwfieW3N1Imr36HFPQjGlgKCQlzFvbigwiz679=
-sosGQ=3D437">
+com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FePhqQc%3Futm_source=3Dtldrne=
+wsletter/1/0100019be050f2bd-d3902004-e034-440d-9414-f028f28381ad-000000/Ec2=
+hdzXZdS6YTcE9kdI1EXOHg8qTSiT9YDutg7q907s=3D441">
                                     <span>
-                                        <strong>Reach millions of tech prof=
-essionals at scale (Sponsor)</strong>
+                                        <strong>=F0=9F=93=8A How many dashb=
+oards is too many?&nbsp;(Sponsor)</strong>
                                     </span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</a>
@@ -1153,15 +1304,19 @@ essionals at scale (Sponsor)</strong>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
 ial, Verdana, sans-serif;">
-                                    Over 6 million tech professionals read =
-TLDR including developers, product managers, marketers, designers and execu=
-tives. Get in front of your target audience with an ad placement just like =
-this one! <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fad=
-vertise.tldr.tech%2F%3Futm_source=3Dtldr%26utm_medium=3Dnewsletter%26utm_ca=
-mpaign=3Dsecondary12292025/2/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7a=
-e278ef0-000000/82L5XiQEzxolF8LnQYCArDNj_7Ymb7gZwEgsvB816aU=3D437" rel=3D"no=
-opener noreferrer nofollow" target=3D"_blank"><span>Learn more</span></a> a=
-bout running a test campaign.
+                                    Every new monitoring tool, service, or =
+"quick integration" adds another dashboard to the pile=E2=80=94and before y=
+ou know it, you're spending more time switching between tools than actually=
+ building. With <a href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2=
+F%2Flinks.tldrnewsletter.com%2FePhqQc/1/0100019be050f2bd-d3902004-e034-440d=
+-9414-f028f28381ad-000000/sR0cyuo1_MPtwxaFvwRgboQw13bg6lBs3W9kluOEg1A=3D441=
+" rel=3D"noopener noreferrer nofollow" target=3D"_blank"><span>Microsoft Az=
+ure</span></a>, your entire stack lives in one workspace: infrastructure, d=
+ata, AI, and more. <a href=3D"https://tracking.tldrnewsletter.com/CL0/https=
+:%2F%2Flinks.tldrnewsletter.com%2FePhqQc/2/0100019be050f2bd-d3902004-e034-4=
+40d-9414-f028f28381ad-000000/9-w_OYOrHH_VdotSErBrRf30HqP1hvECZXxiBy2frA0=3D=
+441" rel=3D"noopener noreferrer nofollow" target=3D"_blank"><span>See how A=
+zure brings it all together =E2=86=92</span></a>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
@@ -1190,13 +1345,12 @@ ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span>
                                 <a href=3D"https://tracking.tldrnewsletter.=
-com/CL0/https:%2F%2Fsankalp.bearblog.dev%2Fmy-experience-with-claude-code-2=
-0-and-how-to-get-better-at-using-coding-agents%2F%3Futm_source=3Dtldrnewsle=
-tter/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000/mCDnFl0=
-oKRuSPXI_R9UsIaueONjrOJ7Gpd-sjHt80Dk=3D437">
+com/CL0/https:%2F%2Fcra.mr%2Fmcp-skills-and-agents%2F%3Futm_source=3Dtldrne=
+wsletter/1/0100019be050f2bd-d3902004-e034-440d-9414-f028f28381ad-000000/4G0=
+WumBuIhUchiHrl5j6ocEZstwt3jMI4voOHlrE9-g=3D441">
                                     <span>
-                                        <strong>A Guide to Claude Code 2.0 =
-and Getting Better at Using Coding Agents (55 minute read)</strong>
+                                        <strong>MCP, Skills, and Agents (10=
+ minute read)</strong>
                                     </span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</a>
@@ -1207,12 +1361,13 @@ and Getting Better at Using Coding Agents (55 minute read)</strong>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
 ial, Verdana, sans-serif;">
-                                    Claude Code dominated the CLI coding pr=
-oduct experience this year. This guide shows readers the thought processes =
-and simple things to keep in mind to get the most out of Claude Code. Learn=
-ing how things work in Claude Code directly transfers to other tools, both =
-in terms of personal usage and production-grade engineering. The post will =
-help users keep up with coding agents in general.
+                                    Harnesses are constantly improving by i=
+terating on what works well. However, every time someone releases a new beh=
+avior, the thought leaders of the internet determine that it has replaced a=
+ll previous functionality. Developers should try both skills and MCP to lea=
+rn the fundamentals of how the technology works and what that means for man=
+aging the context window. How the technologies shift in the future depends =
+entirely on the workflows they help people solve.
                                 </span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</span>
@@ -1240,12 +1395,12 @@ ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span>
                                 <a href=3D"https://tracking.tldrnewsletter.=
-com/CL0/https:%2F%2Fgarnaudov.com%2Fwritings%2Fhow-i-think-about-kubernetes=
-%2F%3Futm_source=3Dtldrnewsletter/1/0100019b69dc018a-3ec15f1a-23ae-4974-833=
-e-e1a7ae278ef0-000000/fhmZL-bFlvHXVByJnBP--_3K5An2QYvJ7a8wH44IqMw=3D437">
+com/CL0/https:%2F%2Fskills.sh%2F%3Futm_source=3Dtldrnewsletter/1/0100019be0=
+50f2bd-d3902004-e034-440d-9414-f028f28381ad-000000/ZA4j57UXSdjeResjnZ7uF4HA=
+6gg7zx4UgbBduqvHGUY=3D441">
                                     <span>
-                                        <strong>How I think about Kubernete=
-s (6 minute read)</strong>
+                                        <strong>Skills.sh (Website)</strong=
+>
                                     </span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</a>
@@ -1256,13 +1411,12 @@ s (6 minute read)</strong>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
 ial, Verdana, sans-serif;">
-                                    Kubernetes is often described as a cont=
-ainer orchestration tool, but that mental model isn't always the most usefu=
-l way to think about what's happening. It is more like a platform where dev=
-elopers declare the desired state of their infrastructure and let the syste=
-m continuously work to match that intent. In that way, Kubernetes is more l=
-ike a runtime for declarative infrastructure with a type system. Thinking t=
-his way results in very practical approaches to operating clusters.
+                                    Skills are reusable capabilities for AI=
+ agents. This site contains an open agent skills ecosystem with a collectio=
+n of skills anyone can install with a single command to enhance their agent=
+s with access to procedural knowledge. The site contains thousands of skill=
+s. The index is searchable and shows how many times each skill has been ins=
+talled.
                                 </span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</span>
@@ -1339,12 +1493,12 @@ ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span>
                                 <a href=3D"https://tracking.tldrnewsletter.=
-com/CL0/https:%2F%2Fwww.implications.com%2Fp%2F12-outlooks-for-the-future-2=
-026%3Futm_source=3Dtldrnewsletter/1/0100019b69dc018a-3ec15f1a-23ae-4974-833=
-e-e1a7ae278ef0-000000/9szFwz-SSrM_IPMFkl_5-kEWjYi25fkJUFMTkDl_mEI=3D437">
+com/CL0/https:%2F%2Fwww.seangoedecke.com%2Faddicted-to-being-useful%2F%3Fut=
+m_source=3Dtldrnewsletter/1/0100019be050f2bd-d3902004-e034-440d-9414-f028f2=
+8381ad-000000/XosS2v6pB-rXodyLNopFl-RyejQIIpGsAmXYGjzlOxU=3D441">
                                     <span>
-                                        <strong>12 Outlooks for the Future:=
- 2026+ (9 minute read)</strong>
+                                        <strong>I'm addicted to being usefu=
+l (5 minute read)</strong>
                                     </span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</a>
@@ -1355,11 +1509,11 @@ e-e1a7ae278ef0-000000/9szFwz-SSrM_IPMFkl_5-kEWjYi25fkJUFMTkDl_mEI=3D437">
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
 ial, Verdana, sans-serif;">
-                                    2026 will hopefully be full of surprise=
-s and developments that give us hope for healthier and more fulfilling work=
- and lives. The AI hype cycle will die down, allowing the most meaningful i=
-nnovations to become clear. This post takes a look at what we should expect=
- in the coming year and beyond, and what the implications of that will be.
+                                    People think software engineers are add=
+icted to being useful, driven by an addiction to solving puzzles, or drawn =
+by power and money. What actually motivates software engineers is often mor=
+e of an internal compulsion. It's worth figuring out what really motivates =
+you so that you can harness that compulsion most effectively.
                                 </span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</span>
@@ -1387,12 +1541,13 @@ ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span>
                                 <a href=3D"https://tracking.tldrnewsletter.=
-com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2F1r308Z/1/0100019b69dc018a-3e=
-c15f1a-23ae-4974-833e-e1a7ae278ef0-000000/yajkvdIddS0-WibmTrjgUSuM26gcUi55d=
-MDyYKL3YGw=3D437">
+com/CL0/https:%2F%2Fmuratbuffalo.blogspot.com%2F2026%2F01%2Fagentic-ai-and-=
+mythical-agent-month.html%3Futm_source=3Dtldrnewsletter/1/0100019be050f2bd-=
+d3902004-e034-440d-9414-f028f28381ad-000000/ADgyTdidcl285gJXFjqbEmr1iQ3WYC7=
+9VPNYVjGTRaE=3D441">
                                     <span>
-                                        <strong>Jevons Paradox for Knowledg=
-e Work (7 minute read)</strong>
+                                        <strong>Agentic AI and The Mythical=
+ Agent-Month (6 minute read)</strong>
                                     </span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</a>
@@ -1403,14 +1558,14 @@ e Work (7 minute read)</strong>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
 ial, Verdana, sans-serif;">
-                                    Tech-driven efficiency improvements ten=
-d to lead to massive growth because there are more use cases for the resour=
-ces than previously contemplated. AI is going to lead to a lot more knowled=
-ge work by making it cheaper, as that allows people to take on tasks previo=
-usly unimaginable. The vast majority of AI tokens in the future will be use=
-d on things that we don't even do today. AI will enable work that previousl=
-y wouldn't have been considered, as it would have been too expensive or imp=
-ractical.
+                                    The concept of 'Scalable Agency', where=
+ a developer could theoretically spin up thousands of agents to complete ta=
+sks faster, relies on a flawed assumption that software engineering is an e=
+mbarrassingly parallel task. Context loading is not the same as common know=
+ledge, and reading tokens is not the same as understanding the causal chain=
+ of changes across a system. Adding manpower to a late software project mak=
+es it later. Multi-agent systems do not escape this law, they simply hit th=
+e wall of state-space explosion faster than humans do.
                                 </span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</span>
@@ -1490,14 +1645,13 @@ ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span>
                                 <a href=3D"https://tracking.tldrnewsletter.=
-com/CL0/https:%2F%2Fwww.semiconsam.com%2Fp%2Fwhy-did-the-memory-chicken-gam=
-e-keep%3Futm_source=3Dtldrnewsletter/1/0100019b69dc018a-3ec15f1a-23ae-4974-=
-833e-e1a7ae278ef0-000000/dc0_y-zraSyboZIV-Aov1jko0_ZSMfmSmMPTGg7aQJU=3D437"=
->
+com/CL0/https:%2F%2Fjobs.ashbyhq.com%2Ftldr.tech%2F3b21aaf8-dea5-4127-be71-=
+602d30e5001e%3Futm_source=3Dtldrnewsletter/1/0100019be050f2bd-d3902004-e034=
+-440d-9414-f028f28381ad-000000/T3F3Frw5_kq43eJgSCQkZfKJBlOz-5cRvflDyO4TkX8=
+=3D441">
                                     <span>
-                                        <strong>Why did the memory chicken =
-game keep repeating=E2=80=94and who ultimately survived? (22 minute read)</=
-strong>
+                                        <strong>TLDR is hiring a Senior Sof=
+tware Engineer, Applied AI ($200k-$300k, Fully Remote)</strong>
                                     </span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</a>
@@ -1508,9 +1662,60 @@ strong>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
 ial, Verdana, sans-serif;">
-                                    Both an escape from the commoditization=
- of memory and the 'foundry-ization' of memory will happen within the next =
-two years.
+                                    As the first engineer on TLDR's new App=
+lied AI team, you'll build AI agents and composable Claude Skills to let no=
+n-technical teammates create their own AI workflows.&nbsp;<a class=3D"c-lin=
+k" href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq=
+.com%2Ftldr.tech%2F3b21aaf8-dea5-4127-be71-602d30e5001e/1/0100019be050f2bd-=
+d3902004-e034-440d-9414-f028f28381ad-000000/OpznCF-k6P9mTFyrH3IDDc0_8k20SIe=
+2SLFOyuvLmG0=3D441" rel=3D"noopener noreferrer" target=3D"_blank"><span>Lea=
+rn more</span></a>.
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09</div>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</t=
+r>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbod=
+y>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table al=
+ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
+0%">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr=
+>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+<td class=3D"container" style=3D"padding: 15px 15px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09<div class=3D"text-block">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span>
+                                <a href=3D"https://tracking.tldrnewsletter.=
+com/CL0/https:%2F%2Fgithub.com%2Fpuffinsoft%2Fsyntux%3Futm_source=3Dtldrnew=
+sletter/1/0100019be050f2bd-d3902004-e034-440d-9414-f028f28381ad-000000/BMJI=
+Qu4VQVTWKTsPDyadW7yU5f2c2qmg8CjbzLD0u3U=3D441">
+                                    <span>
+                                        <strong>syntux (GitHub Repo)</stron=
+g>
+                                    </span>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
+ial, Verdana, sans-serif;">
+                                    syntux is a generative UI library that =
+is consistent and flexible.
                                 </span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</span>
@@ -1538,12 +1743,13 @@ ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span>
                                 <a href=3D"https://tracking.tldrnewsletter.=
-com/CL0/https:%2F%2Fmiguelcarranza.es%2Fcto-year-8%3Futm_source=3Dtldrnewsl=
-etter/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000/FBgi2S=
-OFLEEHjEjACUDMSdmd6DhaJvf_r_CPhS8WZmM=3D437">
+com/CL0/https:%2F%2Fwww.strangeloopcanon.com%2Fp%2Fthe-tragedy-of-the-agent=
+ic-commons%3Futm_source=3Dtldrnewsletter/1/0100019be050f2bd-d3902004-e034-4=
+40d-9414-f028f28381ad-000000/ingpzGl-6ltCK3FVn2X4yHs861aXlVkKQZoBPVuECeA=3D=
+441">
                                     <span>
-                                        <strong>My role as a founder CTO: Y=
-ear Eight (16 minute read)</strong>
+                                        <strong>The Tragedy of the Agentic =
+Commons (18 minute read)</strong>
                                     </span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</a>
@@ -1554,8 +1760,8 @@ ear Eight (16 minute read)</strong>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
 ial, Verdana, sans-serif;">
-                                    Miguel Carranza is the founder of Reven=
-ueCat, a service that helps developers grow and manage in-app purchases.
+                                    AI agents help facilitate better match =
+quality through centralized mechanisms in 'thin' markets.
                                 </span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</span>
@@ -1583,12 +1789,13 @@ ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span>
                                 <a href=3D"https://tracking.tldrnewsletter.=
-com/CL0/https:%2F%2Fgithub.com%2Freadme%2Fguides%2Fpublishing-your-work%3Fu=
-tm_source=3Dtldrnewsletter/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7a=
-e278ef0-000000/m4oq8siaBeGjV4LO5_Ni3BFL03659iXv_vpPubyIzUA=3D437">
+com/CL0/https:%2F%2Fwww.jbecker.dev%2Fresearch%2Fprediction-market-microstr=
+ucture%3Futm_source=3Dtldrnewsletter/1/0100019be050f2bd-d3902004-e034-440d-=
+9414-f028f28381ad-000000/yXU3AadTrPUWPgVhxd4lcq6JA7U-l8rdD0dl81jac5E=3D441"=
+>
                                     <span>
-                                        <strong>Publishing your work increa=
-ses your luck (11 minute read)</strong>
+                                        <strong>The Microstructure of Wealt=
+h Transfer in Prediction Markets (26 minute read)</strong>
                                     </span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</a>
@@ -1599,8 +1806,10 @@ ses your luck (11 minute read)</strong>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
 ial, Verdana, sans-serif;">
-                                    You increase your luck by making yourse=
-lf more visible to the world.
+                                    Prediction markets are creating a syste=
+matic wealth transfer, where impulsive Takers pay a structural premium for =
+affirmative outcomes while Makers capture an 'Optimism Tax' simply by selli=
+ng into this biased flow.
                                 </span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</span>
@@ -1628,12 +1837,12 @@ ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span>
                                 <a href=3D"https://tracking.tldrnewsletter.=
-com/CL0/https:%2F%2Fgithub.com%2Fparcadei%2FContinuous-Claude-v2%3Futm_sour=
-ce=3Dtldrnewsletter/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0=
--000000/wHYDKUHFHkU1HpHahGcc7v439IxQ8HZtRswTeSyYSyc=3D437">
+com/CL0/https:%2F%2Fdri.es%2Fsoftware-as-clay-on-the-wheel%3Futm_source=3Dt=
+ldrnewsletter/1/0100019be050f2bd-d3902004-e034-440d-9414-f028f28381ad-00000=
+0/EJWGMXvERKQ1vQaLCbmeofVGNbhMH_AdmenCBhTBZ2g=3D441">
                                     <span>
-                                        <strong>Continuous Claude (GitHub R=
-epo)</strong>
+                                        <strong>Software as clay on the whe=
+el (6 minute read)</strong>
                                     </span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</a>
@@ -1644,8 +1853,9 @@ epo)</strong>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
 ial, Verdana, sans-serif;">
-                                    Continuous Claude is a framework that s=
-aves state to a ledger, wipes context, and resumes fresh.
+                                    Just like when working with clay, when =
+software doesn't work, you throw it back, refine it, and spin again until i=
+t's right.
                                 </span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</span>
@@ -1673,12 +1883,14 @@ ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span>
                                 <a href=3D"https://tracking.tldrnewsletter.=
-com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FDVBLiC/1/0100019b69dc018a-3e=
-c15f1a-23ae-4974-833e-e1a7ae278ef0-000000/u0_qgqUtef0W1mB_r0bViSe0wJotlbjbZ=
-FXrXxGHkzs=3D437">
+com/CL0/https:%2F%2Farstechnica.com%2Ftech-policy%2F2026%2F01%2Fnetflix-to-=
+pay-all-cash-for-warner-bros-to-fend-off-paramount-hostile-takeover%2F%3Fut=
+m_source=3Dtldrnewsletter/1/0100019be050f2bd-d3902004-e034-440d-9414-f028f2=
+8381ad-000000/FYo5DR7VKEc8HT1Uh6n8z5RuRS7Qc-lop8f3E2UmjD8=3D441">
                                     <span>
-                                        <strong>The Hidden Cost of Making W=
-ork Cheap (3 minute read)</strong>
+                                        <strong>Netflix to pay all cash for=
+ Warner Bros. to fend off Paramount hostile takeover (8 minute read)</stron=
+g>
                                     </span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</a>
@@ -1689,8 +1901,9 @@ ork Cheap (3 minute read)</strong>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
 ial, Verdana, sans-serif;">
-                                    Trust becomes harder to earn when work =
-becomes cheap.
+                                    Netflix originally planned to buy each =
+Warner Bros. share with $23.25 in cash and $4.50 in Netflix stock, but it h=
+as amended the deal to sweeten the offer for shareholders.
                                 </span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</span>
@@ -1718,12 +1931,11 @@ ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span>
                                 <a href=3D"https://tracking.tldrnewsletter.=
-com/CL0/https:%2F%2Fmaurycyz.com%2Fmisc%2Fraw_photo%2F%3Futm_source=3Dtldrn=
-ewsletter/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000/Lj=
-Ca9Z0jyDzXiZY_A3EfyQhYeYq5zSfKL_EnkZhNVJA=3D437">
+com/CL0/https:%2F%2Fpipenet.dev%2F%3Futm_source=3Dtldrnewsletter/1/0100019b=
+e050f2bd-d3902004-e034-440d-9414-f028f28381ad-000000/WdxAxy8FIZ1W2l_Z4Sf7g4=
+pcqjIWbkoDWlFh2f3VyGA=3D441">
                                     <span>
-                                        <strong>What an unprocessed photo l=
-ooks like (4 minute read)</strong>
+                                        <strong>pipenet (Website)</strong>
                                     </span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</a>
@@ -1734,8 +1946,9 @@ ooks like (4 minute read)</strong>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09<span style=3D"font-family: &quot;Helvetica Neue&quot;, Helvetica, Ar=
 ial, Verdana, sans-serif;">
-                                    A look at what camera sensors see and w=
-hat photo processing actually does.
+                                    pipenet is an alternative to localtunne=
+l that bundles client and server to host self-hosted tunnel infrastructure =
+for full control over security, domains, and availability.
                                 </span>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
 =09=09</span>
@@ -1789,8 +2002,8 @@ your referral link below with friends to get free TLDR swag!
 s=3D"text-block">
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a hre=
 f=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.tech%2F=
-95f8de32%2F/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000/=
-0bpxg0Egk8cGahH2LJWYzV4y4fBkh4dfsBYHye9rorY=3D437" style=3D"color: #464ba4;=
+95f8de32%2F/1/0100019be050f2bd-d3902004-e034-440d-9414-f028f28381ad-000000/=
+dTP7mtaC8o3DHKVppbhg-37sfDTroZhTmlrVJju1DH4=3D441" style=3D"color: #464ba4;=
  text-decoration: underline;">https://refer.tldr.tech/95f8de32/</a>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</div>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
@@ -1801,8 +2014,8 @@ f=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.tech%2F=
 "left" style=3D"padding:5px 10px;">
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=
 =3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.co%2Fsu=
-b_47fb527d7973%2F1/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-=
-000000/S6J6NnFpy7KPNTD3uShJaEtW4S8ht9nDs7t4EMiShnk=3D437" style=3D"font-siz=
+b_47fb527d7973%2F1/1/0100019be050f2bd-d3902004-e034-440d-9414-f028f28381ad-=
+000000/g1sn5KLppYlBbDOk3LC8QRD2KJRxvnifA2iXpkU7UPc=3D441" style=3D"font-siz=
 e: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block;  text-d=
 ecoration: underline;"><span style=3D"mso-text-raise:13pt; text-decoration:=
  underline;">Track your referrals here.</span></a>
@@ -1835,9 +2048,9 @@ s=3D"text-block" style=3D"margin-top: 10px;">
 r company is interested in reaching an audience of tech executives, decisio=
 n-makers and engineers, you may want to <a href=3D"https://tracking.tldrnew=
 sletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=3Dtldr%26ut=
-m_medium=3Dnewsletter%26utm_campaign=3Dadvertisecta/1/0100019b69dc018a-3ec1=
-5f1a-23ae-4974-833e-e1a7ae278ef0-000000/drSG-n15Zo5pssGDlMLSkgZ2vdn2teCKZl0=
-Rm3sRWDg=3D437"><strong><span>advertise with us</span></strong></a>.
+m_medium=3Dnewsletter%26utm_campaign=3Dadvertisecta/1/0100019be050f2bd-d390=
+2004-e034-440d-9414-f028f28381ad-000000/q81Za50Ar2XqfmCdRO8EM88ekRCBcsNiPOX=
+3qZnoCmQ=3D441"><strong><span>advertise with us</span></strong></a>.
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</div>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<br>
 
@@ -1854,22 +2067,22 @@ o work at TLDR? =F0=9F=92=BC
 s=3D"text-block" style=3D"margin-top: 10px;">
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a hre=
 f=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq.com%2=
-Ftldr.tech/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000/7=
-IbUZOZP6CwWxtrRg8SDlBdmutLbAPl9UbD7rpcVYWk=3D437" rel=3D"noopener noreferre=
+Ftldr.tech/1/0100019be050f2bd-d3902004-e034-440d-9414-f028f28381ad-000000/L=
+Tze7Avu-b5bNwjTCedKqlXsA5D0wu4V6ZGUJP88ciI=3D441" rel=3D"noopener noreferre=
 r" style=3D"color: #0000EE; text-decoration: underline;" target=3D"_blank">=
 <strong>Apply here</strong></a>,
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a hre=
 f=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjobs.ashbyhq.com%2=
-Ftldr.tech%2Fc227b917-a6a4-40ce-8950-d3e165357871/1/0100019b69dc018a-3ec15f=
-1a-23ae-4974-833e-e1a7ae278ef0-000000/Tayw5StH_OCLHtTp5VQKaessoU98lCwXnQ4Ed=
-yXb_FA=3D437" rel=3D"noopener noreferrer" style=3D"color: #0000EE; text-dec=
+Ftldr.tech%2Fc227b917-a6a4-40ce-8950-d3e165357871/1/0100019be050f2bd-d39020=
+04-e034-440d-9414-f028f28381ad-000000/ARccQeOL93bKcFLntSeap2wfUulPO91efmpki=
+el_-4M=3D441" rel=3D"noopener noreferrer" style=3D"color: #0000EE; text-dec=
 oration: underline;" target=3D"_blank"><strong>create your own role</strong=
 ></a> or send a friend's resume to <a href=3D"mailto:jobs@tldr.tech" style=
 =3D"color: #0000EE; text-decoration: underline;">jobs@tldr.tech</a> and get=
  $1k if we hire them! TLDR is one of <a href=3D"https://tracking.tldrnewsle=
 tter.com/CL0/https:%2F%2Fwww.linkedin.com%2Ffeed%2Fupdate%2Furn:li:activity=
-:7401699691039830016%2F/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae27=
-8ef0-000000/4NIas45EFiyCu9KKfrJx1nEyyXhMiigcb5y2HIrZZ8g=3D437" rel=3D"noope=
+:7401699691039830016%2F/1/0100019be050f2bd-d3902004-e034-440d-9414-f028f283=
+81ad-000000/zspit8Dau7GAWIZbHNsVJFWcdUD1M_1wUohfflmklqs=3D441" rel=3D"noope=
 ner noreferrer" style=3D"color: #0000EE; text-decoration: underline;" targe=
 t=3D"_blank"><strong>Inc.'s Best Bootstrapped businesses</strong></a> of 20=
 25.
@@ -1886,11 +2099,11 @@ hanks for reading,
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<br>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a hre=
 f=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftwitter.com%2Ftldr=
-dan/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000/NTy8dEEH=
-Qa3k02vJkosJn7ntItkMlO7uZXBVNWXGg50=3D437"><span>Dan Ni</span></a> &amp; <a=
+dan/1/0100019be050f2bd-d3902004-e034-440d-9414-f028f28381ad-000000/treD_HbS=
+jBDjz1Gr6zInysQMtlJ3VKSdhuTxGoRqChA=3D441"><span>Dan Ni</span></a> &amp; <a=
  href=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftwitter.com%2F=
-SteveFlanders22/1/0100019b69dc018a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000=
-000/2Jj2PXaE6iUUAgx9mXvEMClI1ByIy2ihXMJyQVEodIQ=3D437"><span>Stephen Flande=
+SteveFlanders22/1/0100019be050f2bd-d3902004-e034-440d-9414-f028f28381ad-000=
+000/1P_9Ii6hFnuBXx57GegWe5NEEP0gSsytjl5UAqeh7R8=3D441"><span>Stephen Flande=
 rs</span></a>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<br>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<br>
@@ -1912,17 +2125,17 @@ r" bgcolor=3D"" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
 s=3D"text-block" id=3D"testing-id">
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a hre=
 f=3D"https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Ftech%2=
-Fmanage%3Femail=3Dmike.mcconigley%2540gmail.com/1/0100019b69dc018a-3ec15f1a=
--23ae-4974-833e-e1a7ae278ef0-000000/1_zuD6ZbJ7VMjT438gVKhdBedR2Zl5dRKHkRlf4=
-DxzU=3D437">Manage your subscriptions</a> to our other newsletters on tech,=
+Fmanage%3Femail=3Dmike.mcconigley%2540gmail.com/1/0100019be050f2bd-d3902004=
+-e034-440d-9414-f028f28381ad-000000/H_DG2aZY7cayijYdD9lNQOpSpDq5YjZ3xcRPs7c=
+hcHE=3D441">Manage your subscriptions</a> to our other newsletters on tech,=
  startups, and programming. Or if TLDR isn't for you, please <a href=3D"htt=
 ps://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Funs=
 ubscribe%3Fep=3D1%26l=3Dcfa2d55a-b7be-11e8-a3c9-06b79b628af2%26lc=3D46c4c58=
-0-a670-11f0-ad93-1f8c13b87d10%26p=3D0667d53a-e492-11f0-845d-db6078c94199%26=
-pt=3Dcampaign%26pv=3D4%26spa=3D1767006063%26t=3D1767007584%26s=3D7a87169454=
-4b48a9bcec621ac7882c3880a790edb4b2854ef7566a624a80dacb/1/0100019b69dc018a-3=
-ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000/xQbB6P63jxUGGS_qZvPShfD8LlzcEhbx=
-YseIFnhbuxI=3D437">unsubscribe</a>.
+0-a670-11f0-ad93-1f8c13b87d10%26p=3D73b9ed06-f6aa-11f0-9c4b-db9333cbb606%26=
+pt=3Dcampaign%26pv=3D4%26spa=3D1768993280%26t=3D1768994960%26s=3De71932025d=
+482720df62434ab13796db22e088ba97a15e8cd907905fbb45682f/1/0100019be050f2bd-d=
+3902004-e034-440d-9414-f028f28381ad-000000/QM-W7N5f3y5n91eNvX2mlXaUZa6ZU2X4=
+wcpjbQENQ-c=3D441">unsubscribe</a>.
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<br>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</div>
 =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
@@ -1950,8 +2163,8 @@ YseIFnhbuxI=3D437">unsubscribe</a>.
 
 =09
 
-<img alt=3D"" src=3D"http://tracking.tldrnewsletter.com/CI0/0100019b69dc018=
-a-3ec15f1a-23ae-4974-833e-e1a7ae278ef0-000000/ztw3D-fce908oW9YpkC1BS383CXw9=
-_R5XM4o7Ji6YrQ=3D437" style=3D"display: none; width: 1px; height: 1px;">
+<img alt=3D"" src=3D"http://tracking.tldrnewsletter.com/CI0/0100019be050f2b=
+d-d3902004-e034-440d-9414-f028f28381ad-000000/_3lhYhkzmSSx0Svx0lwkKPLFPR_MJ=
+lMpNbcYa7frc5Q=3D441" style=3D"display: none; width: 1px; height: 1px;">
 </body></html>
---tDMSEXRP--
+--S0yMjYPf--
